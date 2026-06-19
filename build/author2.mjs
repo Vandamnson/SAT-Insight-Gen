@@ -43,11 +43,7 @@ export async function authorItem(cell, rationaleText, { model = modelForBand(cel
     ? `Write this as MULTIPLE CHOICE: include "choices" (exactly 4, "A) ".."D) ") and "correct_choice"; exactly one is correct, the other three are plausible near-misses.`
     : `Write this as FREE-RESPONSE (student-produced): OMIT "choices"; put the single value in "answer". Do not include "correct_choice".`;
   const nums = cell.incidentals?.numbers;
-  const numbersDirective = nums ? `
-USE THESE EXACT NUMBERS (drawn by the harness — do NOT pick your own, and do NOT round or "nicen" them):
-- The problem's core equation must be equivalent to:  ${nums.core_equation}
-- The single correct answer is:  ${nums.variable} = ${nums.solution}
-- Realize the radicals as the DISGUISE of this equation (e.g. has_variable_both_sides → put a ${nums.variable}-term on both sides that simplifies back to this; has_distribution → wrap a factor like k(${nums.variable}+p); has_fractions → introduce a fractional coefficient), and wrap it in the given context. The simplified equation and the answer must stay exactly as above.` : "";
+  const numbersDirective = nums?.directive ? `\n${nums.directive}\n` : "";
   const user = `SPECIFICATION:
 ${JSON.stringify(cell, null, 2)}
 

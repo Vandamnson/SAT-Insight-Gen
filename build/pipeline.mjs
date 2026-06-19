@@ -19,9 +19,10 @@ import { drawCell } from "./cell.mjs";
 import { rationale } from "./rationale.mjs";
 import { authorItem } from "./author2.mjs";
 import { verifyAndGate, surfaceDup } from "./selector.mjs";
-import { measureFromRadicals, BANDS, bandIndex } from "../difficulty/lltm.mjs";
+import { measureFromRadicals, radicalsForBand, BANDS, bandIndex } from "../difficulty/lltm.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
+const cellSchema = (dom) => JSON.parse(readFileSync(join(ROOT, "taxonomy", "cells", `${dom === "algebra" ? "algebra" : dom}.json`), "utf8"));
 const OVER = Number(process.env.SIG_OVER || 3);                 // over-generate multiple (§6)
 const CAP = Number(process.env.SIG_POOL || 4);                  // candidate concurrency
 const DOMAIN_CODE = { algebra: "ALG", advanced_math: "ADV", psda: "PSDA", geometry_trig: "GEO" };
@@ -106,33 +107,67 @@ async function generateCell(domain, subdomain, n, bands, ctr) {
   return kept;
 }
 
-/** generateTest(blueprint, {bands, testNum, title}) — blueprint: [[ "domain/subdomain", n ], …]. */
-export async function generateTest(blueprint, { bands = ["B1", "B2", "B3", "B4"], testNum = 90, title } = {}) {
-  const ctr = { i: 0 };
-  let kept = [];
-  for (const [key, n] of blueprint) {
-    const [domain, subdomain] = key.split("/");
-    kept.push(...await generateCell(domain, subdomain, n, bands, ctr));
-  }
-  kept.sort((a, b) => bandIndex(`B${a.cell.band}`) - bandIndex(`B${b.cell.band}`));
+/* ---- assemble survivors → data/test-NN.json (+ report) ---- */
+function assemble(kept, testNum, title) {
+  kept.sort((a, b) => bandIndex(`B${a.cell.band}`) - bandIndex(`B${b.cell.band}`) || (a.cell.subdomain < b.cell.subdomain ? -1 : 1));
   const questions = kept.map((s, i) => toRenderItem(s, i + 1));
   const n = String(testNum).padStart(2, "0");
   const fp = join(ROOT, "data", `test-${n}.json`);
   writeFileSync(fp, JSON.stringify({ number: testNum, title: title || `BUILD_SPEC pipeline — test ${n}`, questions }, null, 2));
-  const by = {}; questions.forEach((q) => (by[q.difficulty.band] = (by[q.difficulty.band] || 0) + 1));
+  const by = {}; questions.forEach((q) => (by[q.target_band] = (by[q.target_band] || 0) + 1));
+  const bySub = {}; questions.forEach((q) => (bySub[q.skill] = (bySub[q.skill] || 0) + 1));
   console.log(`\n✓ ${questions.length} items → ${fp}`);
-  console.log(`  measured bands: ${JSON.stringify(by)}`);
-  console.log(`  render with: node build/render.mjs data/test-${n}.json`);
+  console.log(`  by band:      ${JSON.stringify(by)}`);
+  console.log(`  by subdomain: ${JSON.stringify(bySub)}`);
+  console.log(`  render: node build/render.mjs data/test-${n}.json`);
   return { fp, questions };
 }
 
+/** generateTest(blueprint, …) — blueprint: [[ "domain/subdomain", n ], …]. */
+export async function generateTest(blueprint, { bands = ["B1", "B2", "B3", "B4"], testNum = 90, title } = {}) {
+  const ctr = { i: 0 };
+  const kept = [];
+  for (const [key, n] of blueprint) { const [d, sd] = key.split("/"); kept.push(...await generateCell(d, sd, n, bands, ctr)); }
+  return assemble(kept, testNum, title);
+}
+
+/** generateDomain(domain, perCell, bands) — N items per VALID (subdomain × band)
+ *  cell across B1–B7; cells with no defensible radical combo are skipped (e.g.
+ *  systems at B1–B3). Prints the coverage matrix so the holes are explicit. */
+export async function generateDomain(domain, { perCell = 1, bands = BANDS, testNum = 92, title } = {}) {
+  const subs = Object.keys(cellSchema(domain).subdomains);
+  const ctr = { i: 0 }, kept = [], matrix = {};
+  console.log(`\n=== FULL DOMAIN: ${domain} · ${perCell}/cell · bands ${bands.join(",")} ===`);
+  for (const sub of subs) {
+    matrix[sub] = {};
+    for (const band of bands) {
+      if (!radicalsForBand(domain, sub, band).length) { matrix[sub][band] = "·"; continue; }   // not defensible at this band
+      const got = await generateCell(domain, sub, perCell, [band], ctr);
+      kept.push(...got); matrix[sub][band] = got.length;
+    }
+  }
+  // coverage matrix (rows = subdomains, cols = bands)
+  console.log(`\nCOVERAGE MATRIX (kept / target ${perCell}; · = no defensible cell):`);
+  console.log(`  ${"subdomain".padEnd(34)} ${bands.join("   ")}`);
+  for (const sub of subs) console.log(`  ${sub.padEnd(34)} ${bands.map((b) => String(matrix[sub][b]).padStart(2)).join("  ")}`);
+  return assemble(kept, testNum, title || `BUILD_SPEC · ${domain} (whole domain, B1–B7)`);
+}
+
 async function main() {
-  const sub = process.argv[2] || "linear_equations_one_variable";
-  const n = Number(process.argv[3] || 6);
-  const bands = (process.argv[4] || "B1,B2,B3,B4").split(",");
-  const testNum = Number(process.argv[5] || 90);
   console.log(`BUILD_SPEC four-agent pipeline — over-generate ×${OVER}, concurrency ${CAP}`);
-  await generateTest([[`algebra/${sub}`, n]], { bands, testNum, title: `BUILD_SPEC · ${sub} (band-targeted)` });
+  if (process.argv[2] === "--domain") {
+    const domain = process.argv[3] || "algebra";
+    const perCell = Number(process.argv[4] || 1);
+    const testNum = Number(process.argv[5] || 92);
+    const bands = (process.argv[6] || BANDS.join(",")).split(",");
+    await generateDomain(domain, { perCell, bands, testNum });
+  } else {
+    const sub = process.argv[2] || "linear_equations_one_variable";
+    const n = Number(process.argv[3] || 6);
+    const bands = (process.argv[4] || "B1,B2,B3,B4").split(",");
+    const testNum = Number(process.argv[5] || 90);
+    await generateTest([[`algebra/${sub}`, n]], { bands, testNum, title: `BUILD_SPEC · ${sub} (band-targeted)` });
+  }
 }
 
 export { toRenderItem, pickBalanced, generateCell };

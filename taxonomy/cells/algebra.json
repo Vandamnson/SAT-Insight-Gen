@@ -1,5 +1,5 @@
 {
-  "_note": "CELL SCHEMA for the BUILD_SPEC four-agent pipeline. Per subdomain: RADICALS (difficulty-determining axes the harness pins to a band via the LLTM) vs INCIDENTALS (surface axes the harness draws randomly for variety). The LLTM (additive, hand-set weights — Embretson/Gierl; you FIT these, you don't derive them) maps a radical vector to a 200-800 scale score, bucketed to a band by the official Skills-Insight cut scores. Start: linear_equations_one_variable only (BUILD_SPEC build order step 1).",
+  "_note": "CELL SCHEMA for the BUILD_SPEC four-agent pipeline — WHOLE ALGEBRA domain. Per subdomain: RADICALS (difficulty axes the harness pins to a band via the additive LLTM — a categorical `task` + binary modifiers) vs INCIDENTALS (surface, drawn in code). Each subdomain's LLTM is calibrated to its DEFENSIBLE band span (systems are inherently B4+, inequalities B3+ — they do NOT exist at B1-B2, so those cells stay empty rather than fake easy items). task_tier routes each task to Tier A (PROVE, sympy-verifiable) or Tier B (self-consistency, for interpretive MCQ).",
   "domain": "algebra",
   "tier": "A",
   "band_cuts": { "_note": "lower edge (scale score) of each band; score < first edge => B1", "edges": [370, 420, 470, 550, 610, 680] },
@@ -16,26 +16,55 @@
         "has_fractions": [false, true],
         "answer_type": ["integer", "fraction"]
       },
-      "incidental_axes": {
-        "context": "@contexts",
-        "context_none_weight": 0.35,
-        "var_name": ["x", "n", "t", "p", "w", "h", "k", "m", "r", "s"],
-        "coefficient_range": [2, 12],
-        "constant_range": [1, 40]
-      },
-      "lltm": {
-        "_note": "predicted_difficulty = w0 + n_steps*ws + both_sides + distribution + fractions + answer_is_fraction. Ordered by intuition (fractions and steps weigh most). Refit against measured consistency-difficulty in BUILD_SPEC step 5.",
-        "weights": {
-          "w0": 250,
-          "n_steps": 70,
-          "has_variable_both_sides": 60,
-          "has_distribution": 55,
-          "has_fractions": 90,
-          "answer_is_fraction": 70
-        }
-      },
+      "incidental_axes": { "context": "@contexts", "context_none_weight": 0.35, "var_name": ["x", "n", "t", "p", "w", "h", "k", "m", "r", "s"], "coefficient_range": [2, 12], "constant_range": [1, 40] },
+      "lltm": { "weights": { "w0": 250, "n_steps": 70, "has_variable_both_sides": 60, "has_distribution": 55, "has_fractions": 90, "answer_is_fraction": 70 } },
       "canonical_fingerprint": ["subtract_constant", "divide_coefficient"],
       "op_vocab": ["distribute", "combine_like_terms", "move_variable_term", "subtract_constant", "add_constant", "divide_coefficient", "multiply_both_sides", "clear_fractions", "isolate_variable", "simplify"]
+    },
+    "linear_equations_two_variables": {
+      "label": "Linear equations in two variables & linear functions",
+      "target": "use slope / intercepts / points of a line",
+      "statementByBand": { "B1": "ALG.B2.s1", "B2": "ALG.B2.s1", "B3": "ALG.B3.s2", "B4": "ALG.B4.s2", "B5": "ALG.B4.s2", "B6": "ALG.B6.s1", "B7": "ALG.B7.s2" },
+      "radical_axes": {
+        "task": ["evaluate", "find_slope", "find_intercept", "parallel_perp", "interpret", "connect"],
+        "has_fraction_slope": [false, true],
+        "from_context": [false, true]
+      },
+      "incidental_axes": { "context": "@contexts", "var_name": ["x"], "coefficient_range": [2, 9], "constant_range": [1, 30] },
+      "lltm": { "weights": { "w0": 250, "task": { "evaluate": 70, "find_slope": 130, "find_intercept": 130, "parallel_perp": 230, "interpret": 280, "connect": 360 }, "has_fraction_slope": 60, "from_context": 70 } },
+      "task_tier": { "evaluate": "A", "find_slope": "A", "find_intercept": "A", "parallel_perp": "A", "interpret": "B", "connect": "B" },
+      "canonical_fingerprint": ["compute_slope", "find_intercept"],
+      "op_vocab": ["substitute", "evaluate", "slope_formula", "compute_slope", "find_intercept", "point_slope", "apply_parallel", "apply_perpendicular", "interpret_meaning", "match_representation"]
+    },
+    "systems_of_linear_equations": {
+      "label": "Systems of two linear equations in two variables",
+      "target": "solve or characterize a 2x2 linear system",
+      "statementByBand": { "B4": "ALG.B5.s2", "B5": "ALG.B5.s2", "B6": "ALG.B6.s2", "B7": "ALG.B7.s1" },
+      "radical_axes": {
+        "task": ["solve", "create_solve", "number_of_solutions", "missing_coefficient"],
+        "has_fraction_solution": [false, true],
+        "from_context": [false, true]
+      },
+      "incidental_axes": { "context": "@contexts", "var_name": ["x"], "coefficient_range": [2, 8], "constant_range": [1, 40] },
+      "lltm": { "weights": { "w0": 410, "task": { "solve": 80, "create_solve": 150, "number_of_solutions": 200, "missing_coefficient": 250 }, "has_fraction_solution": 50, "from_context": 60 } },
+      "task_tier": { "solve": "A", "create_solve": "A", "number_of_solutions": "A", "missing_coefficient": "A" },
+      "canonical_fingerprint": ["elimination", "solve_single", "back_substitute"],
+      "op_vocab": ["substitution", "elimination", "scale_equation", "add_equations", "subtract_equations", "solve_single", "back_substitute", "compare_slopes", "determinant", "translate_constraint"]
+    },
+    "linear_inequalities": {
+      "label": "Linear inequalities in one or two variables",
+      "target": "solve or model a linear inequality",
+      "statementByBand": { "B3": "ALG.B3.s1", "B4": "ALG.B3.s1", "B5": "ALG.B5.s1", "B6": "ALG.B5.s1", "B7": "ALG.B7.s2" },
+      "radical_axes": {
+        "task": ["solve_boundary", "max_int", "two_var_model", "variable_constants"],
+        "negative_coefficient": [false, true],
+        "from_context": [false, true]
+      },
+      "incidental_axes": { "context": "@contexts", "var_name": ["x", "n", "t", "p", "w", "k"], "coefficient_range": [2, 9], "constant_range": [1, 40] },
+      "lltm": { "weights": { "w0": 300, "task": { "solve_boundary": 120, "max_int": 170, "two_var_model": 240, "variable_constants": 360 }, "negative_coefficient": 50, "from_context": 60 } },
+      "task_tier": { "solve_boundary": "A", "max_int": "A", "two_var_model": "B", "variable_constants": "B" },
+      "canonical_fingerprint": ["subtract_constant", "divide_coefficient"],
+      "op_vocab": ["subtract_constant", "add_constant", "divide_coefficient", "flip_inequality", "isolate_variable", "apply_floor", "apply_ceiling", "translate_constraint", "test_value"]
     }
   }
 }

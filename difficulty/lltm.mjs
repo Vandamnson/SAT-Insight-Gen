@@ -52,13 +52,19 @@ export function scoreToBand(scale, domain = "algebra") {
 export function predictDifficulty(radicals, domain, subdomain) {
   const { sub } = schemaFor(domain, subdomain);
   const w = sub.lltm.weights;
-  const b01 = (x) => (x === true || x === 1 ? 1 : 0);
-  let s = w.w0
-    + (w.n_steps || 0) * (Number(radicals.n_steps) || 0)
-    + (w.has_variable_both_sides || 0) * b01(radicals.has_variable_both_sides)
-    + (w.has_distribution || 0) * b01(radicals.has_distribution)
-    + (w.has_fractions || 0) * b01(radicals.has_fractions)
-    + (w.answer_is_fraction || 0) * (radicals.answer_type === "fraction" ? 1 : 0);
+  // Data-driven additive model. Each weight entry is interpreted by type:
+  //   number  → numeric feature (n_steps) or boolean flag (has_*): adds w·value / w
+  //   object  → CATEGORICAL feature (task): adds w[value]
+  //   "answer_is_fraction" is an alias for radicals.answer_type === "fraction".
+  let s = w.w0 || 0;
+  for (const [feat, weight] of Object.entries(w)) {
+    if (feat === "w0") continue;
+    if (feat === "answer_is_fraction") { if (radicals.answer_type === "fraction") s += weight; continue; }
+    const val = radicals[feat];
+    if (val === undefined || val === null) continue;
+    if (typeof weight === "number") s += (val === true ? weight : typeof val === "number" ? weight * val : 0);
+    else if (typeof weight === "object") s += Number(weight[String(val)]) || 0;
+  }
   return Math.round(clamp(s, 200, 800));
 }
 
