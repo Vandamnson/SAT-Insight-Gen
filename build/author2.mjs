@@ -44,6 +44,10 @@ export async function authorItem(cell, rationaleText, { model = modelForBand(cel
     : `Write this as FREE-RESPONSE (student-produced): OMIT "choices"; put the single value in "answer". Do not include "correct_choice".`;
   const nums = cell.incidentals?.numbers;
   const numbersDirective = nums?.directive ? `\n${nums.directive}\n` : "";
+  // EMPIRICAL stem-length targets — measured from official College Board items
+  // (Skills-Insight exemplars + practice test #10): median ≈18 words, ~half < 20,
+  // only ~10% > 50 (those are higher-band modeling), hard max ≈ 80.
+  const WBAND = ({ 1: "8–16", 2: "10–20", 3: "15–32", 4: "20–40", 5: "20–42", 6: "25–48", 7: "25–55" })[cell.band] || "15–40";
   const user = `SPECIFICATION:
 ${JSON.stringify(cell, null, 2)}
 
@@ -52,6 +56,12 @@ ${rationaleText}
 ${numbersDirective}
 
 FORMAT: ${fmt}
+
+STYLE (SAT items are tight — follow exactly):
+- LENGTH: this is a Band ${cell.band} item — target a STEM of ${WBAND} words. (Measured from official SAT Math: median ≈18 words, ~half under 20, only ~10% exceed 50 — and those are higher-band modeling items. Never exceed ~60 words unless the math genuinely requires a modeling setup.)
+- Be CONCISE. At MOST one short sentence of context, then the question. No backstory, no scene-setting, no flavor padding (e.g. NOT "A wildlife researcher monitors salmon migration by counting fish as they pass through a river ladder…"). Lower bands (B1–B3) especially terse; an abstract item is just the equation/expression and the ask.
+- Write ALL mathematics as LaTeX wrapped in $...$ — e.g. $3x + 5 = 20$, $\\frac{16}{5}$, $y = \\frac{3}{2}x + 7$, $-3n + 1 > -24$. Use \\frac for fractions, \\le \\ge for ≤ ≥, \\cdot or juxtaposition for multiply. Plain prose stays OUTSIDE the $...$. Put each MCQ choice's math in $...$ too.
+- The "answer" field (free-response) must be the PLAIN griddable value (e.g. -29/2 or 4.5), NOT LaTeX.
 Use op names in solve_path drawn from this vocabulary where they apply: ${JSON.stringify(cell.opVocab || cell.op_vocab || [])}.`;
   const raw = await llmComplete(user, { system: SYSTEM, model });
   try { return parseJson(raw); } catch { return null; }

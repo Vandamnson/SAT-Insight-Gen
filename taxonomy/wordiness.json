@@ -1,0 +1,30 @@
+{
+  "_note": "EMPIRICAL stem-wordiness bounds for SAT Math, measured from official College Board sources to calibrate the author's concision (build/author2.mjs WBAND). 'prose words' = question text up to the final '?' (drops trailing MCQ choices).",
+  "sources": [
+    "taxonomy/exemplars.clean.json — 34 official Skills-Insight items, band-labeled (per-band bounds)",
+    "https://satsuite.collegeboard.org/media/pdf/sat-practice-test-10-digital.pdf — official full practice test (overall corroboration)"
+  ],
+  "official_per_band_prose_words": {
+    "_from": "Skills-Insight exemplars (n=34)",
+    "B1": { "min": 6, "median": 15, "mean": 16, "max": 29 },
+    "B2": { "median": 15, "mean": 30, "max": 66 },
+    "B3": { "median": 35, "mean": 35, "max": 73 },
+    "B4": { "median": 38, "mean": 44, "max": 70 },
+    "B5": { "median": 28, "mean": 30, "max": 70 },
+    "B6": { "median": 46, "mean": 42, "max": 55 },
+    "B7": { "median": 51, "mean": 48, "max": 82 },
+    "ALL": { "min": 6, "median": 29, "mean": 35, "max": 82 }
+  },
+  "official_practice_test_10": {
+    "_from": "Digital SAT Practice Test #10, both Math modules (approx; figure ASCII-noise filtered)",
+    "median": 18, "mean": 25, "p90": 46, "max": 85,
+    "pct_under_20_words": 52, "pct_over_50_words": 9
+  },
+  "takeaways": [
+    "Median SAT Math stem ≈ 18 words; about half are under 20 words.",
+    "Only ~10% of stems exceed 50 words, and those are typically higher-band modeling problems.",
+    "Hard ceiling ≈ 80 words.",
+    "Wordiness rises with band but modestly; low-band items must be terse."
+  ],
+  "author_targets_WBAND": { "B1": "8–16", "B2": "10–20", "B3": "15–32", "B4": "20–40", "B5": "20–42", "B6": "25–48", "B7": "25–55" }
+}

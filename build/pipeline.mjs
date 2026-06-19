@@ -54,23 +54,31 @@ function pickBalanced(survivors, n, bands) {
 
 /* ---- render-schema adapter (new flat author JSON -> the segment item model) ---- */
 const txt = (s) => [{ t: "text", v: String(s) }];
+// split a string on $…$ math delimiters into render segments (render.mjs KaTeX-typesets {t:"math"}).
+function mathSeg(str) {
+  const s = String(str ?? ""); const out = [];
+  for (const p of s.split(/(\$[^$]*\$)/g)) { if (!p) continue; if (p.length >= 2 && p[0] === "$" && p[p.length - 1] === "$") out.push({ t: "math", v: p.slice(1, -1) }); else out.push({ t: "text", v: p }); }
+  return out.length ? out : [{ t: "text", v: s }];
+}
+// plain griddable form for SPR grading (strip $, \frac{a}{b} → a/b).
+const plainAns = (a) => String(a ?? "").replace(/\$/g, "").replace(/\\d?frac\s*\{(-?\d+)\}\s*\{(-?\d+)\}/g, "$1/$2").replace(/\\cdot/g, "").trim();
 function solvePathSegs(sp) {
   if (!Array.isArray(sp) || !sp.length) return txt("See answer.");
-  return sp.flatMap((s, i) => [{ t: "text", v: `${s.step ?? i + 1}. ${s.op ? s.op.replace(/_/g, " ") + ": " : ""}${s.detail || ""}` }, { t: "br" }]);
+  return sp.flatMap((s, i) => [{ t: "text", v: `${s.step ?? i + 1}. ${s.op ? s.op.replace(/_/g, " ") + ": " : ""}` }, ...mathSeg(s.detail || ""), { t: "br" }]);
 }
 function toRenderItem(s, id) {
   const { cand, cell, gate } = s;
   const isMcq = !!cand.choices;
   const used = cand.radicals_used && Object.keys(cand.radicals_used).length ? { ...cell.radicals, ...cand.radicals_used } : cell.radicals;
   const diff = measureFromRadicals(used, cell.domain, cell.subdomain);
-  const opts = isMcq ? cand.choices.map((c, i) => ({ key: "ABCD"[i], seg: txt(String(c).replace(/^[A-D][).]\s*/, "")) })) : undefined;
+  const opts = isMcq ? cand.choices.map((c, i) => ({ key: "ABCD"[i], seg: mathSeg(String(c).replace(/^[A-D][).]\s*/, "")) })) : undefined;
   return {
     id, program: "SAT", domain: cell.domain, band: `B${cell.band}`, target_band: `B${cell.band}`,
     statementId: cell.statementId || `${DOMAIN_CODE[cell.domain]}.B${cell.band}.s1`,
     skill: cell.subdomain, type: isMcq ? "mcq" : "spr",
-    stem: txt(cand.statement),
+    stem: mathSeg(cand.statement),
     options: opts,
-    answer: isMcq ? { correct: cand.correct_choice } : { accept: [String(cand.answer)], tol: 0 },
+    answer: isMcq ? { correct: cand.correct_choice } : { accept: [plainAns(cand.answer)], tol: 0 },
     solution: solvePathSegs(cand.solve_path),
     figure: null,
     difficulty: { scalePoint: diff.scalePoint, band: gate.predictedBand, method: "apriori_v1", feature_vector: diff.feature_vector },
