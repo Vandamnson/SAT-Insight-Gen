@@ -1,9 +1,30 @@
 # HANDOFF — SAT-Insight-Gen
 
-_Last updated: 2026-06-17 · Phases 0–2 complete. Difficulty validated vs College Board's own labels: ±1-band 88%, ρ=0.90._
+_Last updated: 2026-06-19 · Repo is now GIT (`main` = old hybrid baseline; work on branch `build-spec-pipeline`). NEW ARCHITECTURE per `BUILD_SPEC.md` — see below. Prior phases 0–2 (hybrid) still on `main`._
+
+## ⮕ CURRENT: BUILD_SPEC four-agent linear pipeline (2026-06-19)
+The architecture was rebuilt to `BUILD_SPEC.md` — a **linear four-agent producer + deterministic two-tier selector** (PromptCoT rationale→author + PROVE program-verifier). This REPLACES the hybrid grid+open-lane + LLM-judge approach. Diagram #5 in `ARCHITECTURE.md`.
+
+**Modules (all new, on branch `build-spec-pipeline`):**
+- `taxonomy/cells/algebra.json` — per-subdomain RADICAL axes (difficulty-determining) vs INCIDENTAL axes (surface) + hand-set LLTM weights + official band cut scores. Only `linear_equations_one_variable` so far (build order step 1).
+- `difficulty/lltm.mjs` — additive LLTM over radicals → 200-800 scale → band; `radicalsForBand`, asymmetric `bandGate` (reject if harder), `fitWeights` (step-5 refit hook). **Replaces the drifting LLM-judge.**
+- `build/cell.mjs` — `drawCell()`: radicals PINNED to band, incidentals (context, var, **concrete numbers**) DRAWN in code (BUILD_SPEC §8 — never let the model pick them). `drawNumbers()` constructs the core equation backward, band-appropriate.
+- `build/rationale.mjs` (Agent 1, sonnet) + `build/author2.mjs` (Agent 2, sonnet/opus): system prompts verbatim from spec; author emits flat JSON + typed `solve_path`; harness pins the numbers/answer, author only disguises + contextualizes.
+- `verify/prove.mjs` — Tier A: Agent 3 writes a sympy `verify()`, run in an isolated subprocess, 10s hard timeout (sandbox tested). `verify/consistency.mjs` — Tier B: N-solve self-consistency for free domains (also the §5.2 difficulty-measurement signal).
+- `build/selector.mjs` (`verifyAndGate` + `surfaceDup`) + `build/fingerprint.mjs` (op-sequence + structural distance; reskin gate LOG-ONLY until histogram seen).
+- `build/pipeline.mjs` — `generateTest(blueprint)`: draw→rationale→author→selector (parallel) → dedup (sequential) → `pickBalanced` → render-schema adapter.
+
+**Run it:**
+```bash
+SIG_OVER=2 SIG_LLM_CONCURRENCY=4 SIG_POOL=5 node build/pipeline.mjs linear_equations_one_variable 6 B1,B2,B3,B4 91
+node build/render.mjs data/test-91.json
+```
+**Proven (test-91):** 12/12 passed the gate, B1 items distinct (`w+1=4` vs `3h=15`), strong context/structure/answer-type variety, all 6 PROVE-verified, clean B1–B4. `claude` CLI has NO --temperature (variety is harness-drawn; Tier-B varies the prompt per solve). python3 + sympy 1.14 system-wide (no venv).
+
+**Next on this branch:** (1) add cell schemas for the other algebra subdomains, then advanced/psda/geometry (geometry = Tier B consistency); (2) tighten author realization of `has_fractions`/`has_distribution` disguises; (3) BUILD_SPEC step 3 — log the structural-distance histogram, then set per-cell ε reskin floor; (4) step 5 — refit LLTM weights from Tier-B measured difficulty + log the structure-vs-model correlation `anc(d)`; (5) typeset math in the adapter (currently plain-text segments). Old hybrid batch (the held 20×22) lives on `main` if ever wanted.
 
 ## What this is
-A Skills-Insight–indexed SAT Math generator with perfect figures and RP67-quantified difficulty. New repo reusing SAT-Mod2 (figures/site/verify) + SAT-AI (recompute leash/ledger/profiles). Full design plan: `~/.claude/plans/cuddly-dazzling-reef.md`. Source doc: `~/Downloads/skills-insight-digital-sat-suite.pdf`.
+A Skills-Insight–indexed SAT Math generator with perfect figures and RP67-quantified difficulty. New repo reusing SAT-Mod2 (figures/site/verify) + SAT-AI (recompute leash/ledger/profiles). Full design plan: `~/.claude/plans/cuddly-dazzling-reef.md`. Source doc: `~/Downloads/skills-insight-digital-sat-suite.pdf`. Architecture history + diagrams: `ARCHITECTURE.md`.
 
 ## Phase 0 — DONE ✓
 - **Repo scaffolded** at `~/Downloads/SAT-Insight-Gen`; ported verbatim from SAT-Mod2: `figures/figures.js`, `assets/{base,print,theme}.css`, `app.js`, `katex/`, `fonts/`, `build/render.mjs` (only edit: figures import → `../figures/figures.js`). npm `katex` resolves from `build/node_modules`.
