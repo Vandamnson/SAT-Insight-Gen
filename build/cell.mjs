@@ -121,7 +121,7 @@ function drawSystem(rad, { r, band, context }) {
     const which = r() < 0.5 ? "x" : "y"; answer = which === "x" ? x0s : y0s;
     body = `the system  { ${lin2(a1, b1, c1)} ;  ${lin2(a2, b2, c2)} }${task === "create_solve" ? ", which the student must first SET UP from the context," : ""}; ask for the value of ${which}  (answer ${which} = ${answer}).`;
   } else if (task === "number_of_solutions") {
-    const outcome = pick(r, ["one", "none", "infinitely many"]); const k = nz(2, 4), c1 = nz(2, 20);
+    const outcome = pick(r, ["one", "none", "infinitely many"]); const k = nz(2, 4), c1 = nz(2, 20); let c2;
     if (outcome === "one") { do { a2 = nz(1, 6); b2 = nz(1, 6); } while (a1 * b2 - a2 * b1 === 0); c2 = nz(2, 20); }
     else { a2 = k * a1; b2 = k * b1; c2 = outcome === "infinitely many" ? k * c1 : k * c1 + nz(1, 6); }
     answer = outcome; body = `the system  { ${lin2(a1, b1, c1)} ;  ${lin2(a2, b2, c2)} }; ask HOW MANY solutions it has  (answer: ${outcome}).`;
