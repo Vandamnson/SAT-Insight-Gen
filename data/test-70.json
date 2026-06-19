@@ -1,0 +1,3017 @@
+{
+  "number": 70,
+  "title": "Variety grid demo — linear (one item per cell)",
+  "questions": [
+    {
+      "id": 1,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B1",
+      "target_band": "B1",
+      "statementId": "ALG.B1.s2",
+      "skill": "lin_onestep_solve",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "What value of "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": " satisfies the equation "
+        },
+        {
+          "t": "math",
+          "v": "8x = 56"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "The equation "
+        },
+        {
+          "t": "math",
+          "v": "8x = 56"
+        },
+        {
+          "t": "text",
+          "v": " is solved in one step. Divide both sides by "
+        },
+        {
+          "t": "math",
+          "v": "8"
+        },
+        {
+          "t": "text",
+          "v": " to isolate "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "mathblock",
+          "v": "x = \\frac{56}{8} = 7"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "7"
+        ],
+        "tol": 0
+      },
+      "figure": null,
+      "params": {
+        "a": 8,
+        "b": 0,
+        "c": 56
+      },
+      "tier": "band-targeted",
+      "cellId": "cc222a40bc147005",
+      "difficulty": {
+        "scalePoint": 350,
+        "band": "B1",
+        "se_scale": 45,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~350 has ~67% chance correct (Band 1).",
+        "signals": {
+          "judge": {
+            "scale": 350,
+            "se": 45,
+            "perBand": {
+              "B2": 0.8,
+              "B3": 0.9,
+              "B4": 0.95,
+              "B5": 0.97,
+              "B6": 0.98,
+              "B7": 0.99
+            },
+            "rp50Scale": 350,
+            "n": 1
+          }
+        }
+      },
+      "verify": {
+        "leash": "pass",
+        "deepVerdict": "PASS",
+        "independentAnswer": "7",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 2,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B1",
+      "target_band": "B1",
+      "statementId": "ALG.B1.s1",
+      "skill": "lin_onestep_words",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "When a number is multiplied by 6, the result is 42. What is the number?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "Let the number be "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": ". The sentence says the number multiplied by 6 gives 42, so "
+        },
+        {
+          "t": "math",
+          "v": "6x = 42"
+        },
+        {
+          "t": "text",
+          "v": ". Divide both sides by 6:"
+        },
+        {
+          "t": "mathblock",
+          "v": "x = \\frac{42}{6} = 7"
+        },
+        {
+          "t": "text",
+          "v": "The number is 7."
+        }
+      ],
+      "answer": {
+        "accept": [
+          "7"
+        ],
+        "tol": 0
+      },
+      "figure": null,
+      "params": {
+        "a": 6,
+        "b": 0,
+        "c": 42
+      },
+      "tier": "band-targeted",
+      "cellId": "b91a6e187afbccfa",
+      "difficulty": {
+        "scalePoint": 350,
+        "band": "B1",
+        "se_scale": 45,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~350 has ~67% chance correct (Band 1).",
+        "signals": {
+          "judge": {
+            "scale": 350,
+            "se": 45,
+            "perBand": {
+              "B2": 0.9,
+              "B3": 0.95,
+              "B4": 0.97,
+              "B5": 0.98,
+              "B6": 0.99,
+              "B7": 0.99
+            },
+            "rp50Scale": 350,
+            "n": 1
+          }
+        }
+      },
+      "verify": {
+        "leash": "pass",
+        "deepVerdict": "PASS",
+        "independentAnswer": "7",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 3,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B1",
+      "target_band": "B1",
+      "statementId": "ALG.B1.s1",
+      "skill": "lin_onestep_context",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "A gardener measures the height of a bamboo plant in her greenhouse at the end of each week. The plant grows 6 centimeters every week. After "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": " weeks, the plant has grown a total of 48 centimeters, as represented by the equation "
+        },
+        {
+          "t": "math",
+          "v": "6x = 48"
+        },
+        {
+          "t": "text",
+          "v": ". What is the value of "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "The equation "
+        },
+        {
+          "t": "math",
+          "v": "6x = 48"
+        },
+        {
+          "t": "text",
+          "v": " models the total growth. To solve for "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": ", divide both sides by 6."
+        },
+        {
+          "t": "mathblock",
+          "v": "x = \\frac{48}{6} = 8"
+        },
+        {
+          "t": "text",
+          "v": "The gardener measured the bamboo plant for 8 weeks."
+        }
+      ],
+      "answer": {
+        "correct": "B"
+      },
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "6"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "8"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "42"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "54"
+            }
+          ]
+        }
+      ],
+      "figure": null,
+      "params": {
+        "a": 6,
+        "b": 0,
+        "c": 48
+      },
+      "tier": "band-targeted",
+      "cellId": "f0ba4e317b333c86",
+      "difficulty": {
+        "scalePoint": 350,
+        "band": "B1",
+        "se_scale": 45,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~350 has ~67% chance correct (Band 1).",
+        "signals": {
+          "judge": {
+            "scale": 350,
+            "se": 45,
+            "perBand": {
+              "B2": 0.82,
+              "B3": 0.9,
+              "B4": 0.94,
+              "B5": 0.96,
+              "B6": 0.98,
+              "B7": 0.99
+            },
+            "rp50Scale": 350,
+            "n": 1
+          }
+        }
+      },
+      "verify": {
+        "leash": "pass",
+        "deepVerdict": "PASS",
+        "independentAnswer": "B",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 4,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B3",
+      "target_band": "B2",
+      "statementId": "ALG.B2.s1",
+      "skill": "lin_twostep_solve",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "A technician charges a flat service fee of "
+        },
+        {
+          "t": "money",
+          "v": "$12"
+        },
+        {
+          "t": "text",
+          "v": " plus "
+        },
+        {
+          "t": "money",
+          "v": "$7"
+        },
+        {
+          "t": "text",
+          "v": " for each hour of work. For one repair job, the total charge can be modeled by the equation "
+        },
+        {
+          "t": "math",
+          "v": "7x + 12 = 75"
+        },
+        {
+          "t": "text",
+          "v": ", where "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": " is the number of hours worked. What is the value of "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "Start by isolating the variable term. Subtract "
+        },
+        {
+          "t": "math",
+          "v": "12"
+        },
+        {
+          "t": "text",
+          "v": " from both sides of the equation: "
+        },
+        {
+          "t": "mathblock",
+          "v": "7x = 75 - 12 = 63"
+        },
+        {
+          "t": "text",
+          "v": "Then divide both sides by "
+        },
+        {
+          "t": "math",
+          "v": "7"
+        },
+        {
+          "t": "text",
+          "v": " to solve for "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "mathblock",
+          "v": "x = \\dfrac{63}{7} = 9"
+        },
+        {
+          "t": "text",
+          "v": "So the technician worked "
+        },
+        {
+          "t": "math",
+          "v": "9"
+        },
+        {
+          "t": "text",
+          "v": " hours."
+        }
+      ],
+      "answer": {
+        "accept": [
+          "9"
+        ],
+        "tol": 0
+      },
+      "figure": null,
+      "params": {
+        "a": 7,
+        "b": 12,
+        "c": 75
+      },
+      "tier": "band-targeted",
+      "cellId": "e2b9919fab58243b",
+      "difficulty": {
+        "scalePoint": 444,
+        "band": "B3",
+        "se_scale": 45,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~444 has ~67% chance correct (Band 3).",
+        "signals": {
+          "judge": {
+            "scale": 444,
+            "se": 45,
+            "perBand": {
+              "B2": 0.45,
+              "B3": 0.66,
+              "B4": 0.81,
+              "B5": 0.9,
+              "B6": 0.95,
+              "B7": 0.98
+            },
+            "rp50Scale": 402,
+            "n": 1
+          }
+        }
+      },
+      "verify": {
+        "leash": "pass",
+        "deepVerdict": "PASS",
+        "independentAnswer": "9",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 5,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B3",
+      "target_band": "B2",
+      "statementId": "ALG.B2.s1",
+      "skill": "lin_eval_from_2pairs",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "A seedling grows so that its height is a linear function of the number of weeks since it was planted. At the end of week "
+        },
+        {
+          "t": "math",
+          "v": "1"
+        },
+        {
+          "t": "text",
+          "v": ", the seedling's height was "
+        },
+        {
+          "t": "math",
+          "v": "5"
+        },
+        {
+          "t": "text",
+          "v": " centimeters, and at the end of week "
+        },
+        {
+          "t": "math",
+          "v": "4"
+        },
+        {
+          "t": "text",
+          "v": ", its height was "
+        },
+        {
+          "t": "math",
+          "v": "17"
+        },
+        {
+          "t": "text",
+          "v": " centimeters. Based on this relationship, what was the seedling's height, in centimeters, at the end of week "
+        },
+        {
+          "t": "math",
+          "v": "6"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "Find the rate of change (slope) from the two given week-height pairs "
+        },
+        {
+          "t": "math",
+          "v": "(1,5)"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "(4,17)"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "mathblock",
+          "v": "m=\\dfrac{17-5}{4-1}=\\dfrac{12}{3}=4"
+        },
+        {
+          "t": "text",
+          "v": "So the height increases by "
+        },
+        {
+          "t": "math",
+          "v": "4"
+        },
+        {
+          "t": "text",
+          "v": " centimeters each week. Find the starting value "
+        },
+        {
+          "t": "math",
+          "v": "b"
+        },
+        {
+          "t": "text",
+          "v": " using the pair "
+        },
+        {
+          "t": "math",
+          "v": "(1,5)"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "mathblock",
+          "v": "5=4(1)+b \\;\\Rightarrow\\; b=1"
+        },
+        {
+          "t": "text",
+          "v": "The linear equation is "
+        },
+        {
+          "t": "math",
+          "v": "y=4x+1"
+        },
+        {
+          "t": "text",
+          "v": ". Evaluate at week "
+        },
+        {
+          "t": "math",
+          "v": "x=6"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "mathblock",
+          "v": "y=4(6)+1=25"
+        },
+        {
+          "t": "text",
+          "v": "The seedling's height at the end of week "
+        },
+        {
+          "t": "math",
+          "v": "6"
+        },
+        {
+          "t": "text",
+          "v": " was "
+        },
+        {
+          "t": "math",
+          "v": "25"
+        },
+        {
+          "t": "text",
+          "v": " centimeters."
+        }
+      ],
+      "answer": {
+        "correct": "C"
+      },
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "21"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "24"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "25"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "29"
+            }
+          ]
+        }
+      ],
+      "figure": null,
+      "params": {
+        "m": 4,
+        "b": 1,
+        "x0": 6,
+        "report": "value"
+      },
+      "tier": "band-targeted",
+      "cellId": "ec9944926f1f7aa5",
+      "difficulty": {
+        "scalePoint": 469,
+        "band": "B3",
+        "se_scale": 45,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~469 has ~67% chance correct (Band 3).",
+        "signals": {
+          "judge": {
+            "scale": 469,
+            "se": 45,
+            "perBand": {
+              "B2": 0.35,
+              "B3": 0.58,
+              "B4": 0.78,
+              "B5": 0.88,
+              "B6": 0.94,
+              "B7": 0.97
+            },
+            "rp50Scale": 423,
+            "n": 1
+          }
+        }
+      },
+      "verify": {
+        "leash": "pass",
+        "deepVerdict": "PASS",
+        "independentAnswer": "C",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 6,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B1",
+      "target_band": "B2",
+      "statementId": "ALG.B2.s2",
+      "skill": "lin_read_graph_point",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "Line "
+        },
+        {
+          "t": "math",
+          "v": "\\ell"
+        },
+        {
+          "t": "text",
+          "v": " is graphed in the "
+        },
+        {
+          "t": "math",
+          "v": "xy"
+        },
+        {
+          "t": "text",
+          "v": "-plane shown. Point "
+        },
+        {
+          "t": "math",
+          "v": "P"
+        },
+        {
+          "t": "text",
+          "v": " lies on line "
+        },
+        {
+          "t": "math",
+          "v": "\\ell"
+        },
+        {
+          "t": "text",
+          "v": ". What is the "
+        },
+        {
+          "t": "math",
+          "v": "y"
+        },
+        {
+          "t": "text",
+          "v": "-coordinate of point "
+        },
+        {
+          "t": "math",
+          "v": "P"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "Find point "
+        },
+        {
+          "t": "math",
+          "v": "P"
+        },
+        {
+          "t": "text",
+          "v": " on the line. Reading the grid, "
+        },
+        {
+          "t": "math",
+          "v": "P"
+        },
+        {
+          "t": "text",
+          "v": " sits directly above "
+        },
+        {
+          "t": "math",
+          "v": "x=4"
+        },
+        {
+          "t": "text",
+          "v": " at a height of 5, so its coordinates are "
+        },
+        {
+          "t": "math",
+          "v": "(4,\\,5)"
+        },
+        {
+          "t": "text",
+          "v": ". The "
+        },
+        {
+          "t": "math",
+          "v": "y"
+        },
+        {
+          "t": "text",
+          "v": "-coordinate of "
+        },
+        {
+          "t": "math",
+          "v": "P"
+        },
+        {
+          "t": "text",
+          "v": " is 5."
+        }
+      ],
+      "answer": {
+        "accept": [
+          "5"
+        ],
+        "tol": 0
+      },
+      "figure": {
+        "fn": "coordPlane",
+        "spec": {
+          "xRange": [
+            -2,
+            6
+          ],
+          "yRange": [
+            -6,
+            6
+          ],
+          "xStep": 1,
+          "yStep": 1,
+          "origin": true,
+          "curves": [
+            {
+              "type": "line2pt",
+              "p1": [
+                0,
+                -3
+              ],
+              "p2": [
+                4,
+                5
+              ]
+            }
+          ],
+          "points": [
+            {
+              "at": [
+                4,
+                5
+              ],
+              "label": "P"
+            }
+          ]
+        },
+        "caption": "Line ℓ in the xy-plane, with point P marked on the line."
+      },
+      "params": {
+        "m": 2,
+        "b": -3,
+        "x0": 4,
+        "report": "value"
+      },
+      "tier": "band-targeted",
+      "cellId": "b39686ae9850e452",
+      "difficulty": {
+        "scalePoint": 350,
+        "band": "B1",
+        "se_scale": 45,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~350 has ~67% chance correct (Band 1).",
+        "signals": {
+          "judge": {
+            "scale": 350,
+            "se": 45,
+            "perBand": {
+              "B2": 0.86,
+              "B3": 0.91,
+              "B4": 0.94,
+              "B5": 0.96,
+              "B6": 0.97,
+              "B7": 0.99
+            },
+            "rp50Scale": 350,
+            "n": 1
+          }
+        }
+      },
+      "verify": {
+        "leash": "pass",
+        "deepVerdict": "PASS",
+        "independentAnswer": "5",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 7,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B3",
+      "target_band": "B2",
+      "statementId": "ALG.B2.s1",
+      "skill": "lin_xint_from_feature",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "Line "
+        },
+        {
+          "t": "math",
+          "v": "k"
+        },
+        {
+          "t": "text",
+          "v": " is defined by the equation "
+        },
+        {
+          "t": "math",
+          "v": "y = -4x + 28"
+        },
+        {
+          "t": "text",
+          "v": ". At what value of "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": " does the graph of line "
+        },
+        {
+          "t": "math",
+          "v": "k"
+        },
+        {
+          "t": "text",
+          "v": " cross the "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": "-axis?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "A graph crosses the "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": "-axis where "
+        },
+        {
+          "t": "math",
+          "v": "y = 0"
+        },
+        {
+          "t": "text",
+          "v": ". Substitute "
+        },
+        {
+          "t": "math",
+          "v": "y = 0"
+        },
+        {
+          "t": "text",
+          "v": " into the given equation:"
+        },
+        {
+          "t": "mathblock",
+          "v": "0 = -4x + 28"
+        },
+        {
+          "t": "text",
+          "v": "Add "
+        },
+        {
+          "t": "math",
+          "v": "4x"
+        },
+        {
+          "t": "text",
+          "v": " to both sides, then divide by "
+        },
+        {
+          "t": "math",
+          "v": "4"
+        },
+        {
+          "t": "text",
+          "v": ":"
+        },
+        {
+          "t": "mathblock",
+          "v": "4x = 28 \\implies x = 7"
+        },
+        {
+          "t": "text",
+          "v": "So line "
+        },
+        {
+          "t": "math",
+          "v": "k"
+        },
+        {
+          "t": "text",
+          "v": " crosses the "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": "-axis at "
+        },
+        {
+          "t": "math",
+          "v": "x = 7"
+        },
+        {
+          "t": "text",
+          "v": "."
+        }
+      ],
+      "answer": {
+        "accept": [
+          "7"
+        ],
+        "tol": 0
+      },
+      "figure": null,
+      "params": {
+        "a": -4,
+        "b": 28,
+        "c": 0
+      },
+      "tier": "band-targeted",
+      "cellId": "f1b0e667f98dd151",
+      "difficulty": {
+        "scalePoint": 452,
+        "band": "B3",
+        "se_scale": 45,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~452 has ~67% chance correct (Band 3).",
+        "signals": {
+          "judge": {
+            "scale": 452,
+            "se": 45,
+            "perBand": {
+              "B2": 0.45,
+              "B3": 0.64,
+              "B4": 0.8,
+              "B5": 0.89,
+              "B6": 0.94,
+              "B7": 0.97
+            },
+            "rp50Scale": 403,
+            "n": 1
+          }
+        }
+      },
+      "verify": {
+        "leash": "pass",
+        "deepVerdict": "PASS",
+        "independentAnswer": "7",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 8,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B3",
+      "target_band": "B2",
+      "statementId": "ALG.B2.s1",
+      "skill": "lin_identify_equation",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "A savings account is opened with a starting balance of "
+        },
+        {
+          "t": "money",
+          "v": "$35"
+        },
+        {
+          "t": "text",
+          "v": ". Each week, "
+        },
+        {
+          "t": "money",
+          "v": "$15"
+        },
+        {
+          "t": "text",
+          "v": " is deposited into the account, and no money is withdrawn. Which of the following equations gives the account balance "
+        },
+        {
+          "t": "math",
+          "v": "y"
+        },
+        {
+          "t": "text",
+          "v": ", in dollars, after "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": " weeks?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "The starting balance is the account balance when "
+        },
+        {
+          "t": "math",
+          "v": "x = 0"
+        },
+        {
+          "t": "text",
+          "v": ", so the constant term (the "
+        },
+        {
+          "t": "math",
+          "v": "y"
+        },
+        {
+          "t": "text",
+          "v": "-intercept) is "
+        },
+        {
+          "t": "math",
+          "v": "35"
+        },
+        {
+          "t": "text",
+          "v": ". Each week adds a constant "
+        },
+        {
+          "t": "money",
+          "v": "$15"
+        },
+        {
+          "t": "text",
+          "v": ", which is the rate of change, so the slope is "
+        },
+        {
+          "t": "math",
+          "v": "15"
+        },
+        {
+          "t": "text",
+          "v": ". Assembling slope and intercept gives "
+        },
+        {
+          "t": "math",
+          "v": "y = 15x + 35"
+        },
+        {
+          "t": "text",
+          "v": "."
+        }
+      ],
+      "answer": {
+        "correct": "A"
+      },
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "y = 15x + 35"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "y = 35x + 15"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "y = -15x + 35"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "y = 15x - 35"
+            }
+          ]
+        }
+      ],
+      "figure": null,
+      "params": {
+        "m": 15,
+        "b": 35
+      },
+      "tier": "band-targeted",
+      "cellId": "736e11e726e10755",
+      "difficulty": {
+        "scalePoint": 438,
+        "band": "B3",
+        "se_scale": 45,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~438 has ~67% chance correct (Band 3).",
+        "signals": {
+          "judge": {
+            "scale": 438,
+            "se": 45,
+            "perBand": {
+              "B2": 0.45,
+              "B3": 0.68,
+              "B4": 0.82,
+              "B5": 0.9,
+              "B6": 0.95,
+              "B7": 0.98
+            },
+            "rp50Scale": 401,
+            "n": 1
+          }
+        }
+      },
+      "verify": {
+        "leash": "deferred-to-deep-verify",
+        "deepVerdict": "PASS",
+        "independentAnswer": "A",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 9,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B3",
+      "target_band": "B3",
+      "statementId": "ALG.B3.s1",
+      "skill": "lin_create_equation",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "A chemist begins with 250 milliliters of saline solution in a beaker. To dilute the solution, she adds distilled water at a constant rate of 15 milliliters per second. Which equation gives the total volume "
+        },
+        {
+          "t": "math",
+          "v": "V"
+        },
+        {
+          "t": "text",
+          "v": ", in milliliters, of liquid in the beaker "
+        },
+        {
+          "t": "math",
+          "v": "t"
+        },
+        {
+          "t": "text",
+          "v": " seconds after she begins adding water?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "The beaker already holds a fixed 250 milliliters before any water is added, so 250 is the constant (flat) term. "
+        },
+        {
+          "t": "text",
+          "v": "Water is added at 15 milliliters per second, so after "
+        },
+        {
+          "t": "math",
+          "v": "t"
+        },
+        {
+          "t": "text",
+          "v": " seconds the added volume is "
+        },
+        {
+          "t": "math",
+          "v": "15t"
+        },
+        {
+          "t": "text",
+          "v": " milliliters. The total volume equals the starting amount plus the amount added: "
+        },
+        {
+          "t": "mathblock",
+          "v": "V = 15t + 250"
+        },
+        {
+          "t": "text",
+          "v": " This is choice A. The other choices use 250 as the per-second rate, which confuses the fixed starting amount with the rate of change, or subtract the starting amount instead of adding it."
+        }
+      ],
+      "answer": {
+        "correct": "A"
+      },
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "V = 15t + 250"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "V = 250t + 15"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "V = 250t - 15"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "V = 15t - 250"
+            }
+          ]
+        }
+      ],
+      "figure": null,
+      "params": {
+        "m": 15,
+        "b": 250
+      },
+      "tier": "band-targeted",
+      "cellId": "2412a5ad03b045eb",
+      "difficulty": {
+        "scalePoint": 428,
+        "band": "B3",
+        "se_scale": 45,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~428 has ~67% chance correct (Band 3).",
+        "signals": {
+          "judge": {
+            "scale": 428,
+            "se": 45,
+            "perBand": {
+              "B2": 0.52,
+              "B3": 0.72,
+              "B4": 0.85,
+              "B5": 0.92,
+              "B6": 0.96,
+              "B7": 0.98
+            },
+            "rp50Scale": 350,
+            "n": 1
+          }
+        }
+      },
+      "verify": {
+        "leash": "deferred-to-deep-verify",
+        "deepVerdict": "PASS",
+        "independentAnswer": "A",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 10,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B4",
+      "target_band": "B3",
+      "statementId": "ALG.B3.s2",
+      "skill": "lin_invert_context",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "A beekeeper at Clover Hill Apiary models the total amount of honey, in pounds, harvested so far this season by the equation "
+        },
+        {
+          "t": "math",
+          "v": "H = 18w + 24"
+        },
+        {
+          "t": "text",
+          "v": ", where "
+        },
+        {
+          "t": "math",
+          "v": "H"
+        },
+        {
+          "t": "text",
+          "v": " is the total number of pounds of honey and "
+        },
+        {
+          "t": "math",
+          "v": "w"
+        },
+        {
+          "t": "text",
+          "v": " is the number of weeks since the start of the harvest season. After how many weeks will the total amount of honey harvested reach 222 pounds?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "The total honey reaches the target output when "
+        },
+        {
+          "t": "math",
+          "v": "H = 222"
+        },
+        {
+          "t": "text",
+          "v": ", so substitute 222 for "
+        },
+        {
+          "t": "math",
+          "v": "H"
+        },
+        {
+          "t": "text",
+          "v": " and solve for "
+        },
+        {
+          "t": "math",
+          "v": "w"
+        },
+        {
+          "t": "text",
+          "v": ":"
+        },
+        {
+          "t": "mathblock",
+          "v": "18w + 24 = 222"
+        },
+        {
+          "t": "text",
+          "v": "Subtract 24 from both sides: "
+        },
+        {
+          "t": "math",
+          "v": "18w = 198"
+        },
+        {
+          "t": "text",
+          "v": ". Then divide both sides by 18: "
+        },
+        {
+          "t": "math",
+          "v": "w = 11"
+        },
+        {
+          "t": "text",
+          "v": ". So the total amount of honey harvested reaches 222 pounds after 11 weeks."
+        }
+      ],
+      "answer": {
+        "accept": [
+          "11"
+        ],
+        "tol": 0
+      },
+      "figure": null,
+      "params": {
+        "a": 18,
+        "b": 24,
+        "c": 222
+      },
+      "tier": "band-targeted",
+      "cellId": "d7f5877fb095f069",
+      "difficulty": {
+        "scalePoint": 482,
+        "band": "B4",
+        "se_scale": 45,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~482 has ~67% chance correct (Band 4).",
+        "signals": {
+          "judge": {
+            "scale": 482,
+            "se": 45,
+            "perBand": {
+              "B2": 0.35,
+              "B3": 0.56,
+              "B4": 0.73,
+              "B5": 0.85,
+              "B6": 0.92,
+              "B7": 0.97
+            },
+            "rp50Scale": 426,
+            "n": 1
+          }
+        }
+      },
+      "verify": {
+        "leash": "pass",
+        "deepVerdict": "PASS",
+        "independentAnswer": "11",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 11,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B3",
+      "target_band": "B3",
+      "statementId": "ALG.B3.s1",
+      "skill": "lin_combine_solve",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "Each week, a tutor works with "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": " students. For every student, the tutor spends 8 minutes preparing materials and 4 minutes grading work. Including 10 minutes of fixed setup time each week, the tutor spends a total of 94 minutes. This situation is represented by the equation "
+        },
+        {
+          "t": "mathblock",
+          "v": "8x + 10 + 4x = 94."
+        },
+        {
+          "t": "text",
+          "v": " What is the value of "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "First combine the like terms on the left side. Because "
+        },
+        {
+          "t": "math",
+          "v": "8x + 4x = 12x"
+        },
+        {
+          "t": "text",
+          "v": ", the equation becomes "
+        },
+        {
+          "t": "mathblock",
+          "v": "12x + 10 = 94."
+        },
+        {
+          "t": "text",
+          "v": "Subtract 10 from both sides: "
+        },
+        {
+          "t": "mathblock",
+          "v": "12x = 84."
+        },
+        {
+          "t": "text",
+          "v": "Then divide both sides by 12: "
+        },
+        {
+          "t": "mathblock",
+          "v": "x = 7."
+        },
+        {
+          "t": "text",
+          "v": "So the tutor works with 7 students each week."
+        }
+      ],
+      "answer": {
+        "accept": [
+          "7"
+        ],
+        "tol": 0
+      },
+      "figure": null,
+      "params": {
+        "a": 12,
+        "b": 10,
+        "c": 94
+      },
+      "tier": "band-targeted",
+      "cellId": "e44cedfc6c5741e0",
+      "difficulty": {
+        "scalePoint": 453,
+        "band": "B3",
+        "se_scale": 45,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~453 has ~67% chance correct (Band 3).",
+        "signals": {
+          "judge": {
+            "scale": 453,
+            "se": 45,
+            "perBand": {
+              "B2": 0.46,
+              "B3": 0.64,
+              "B4": 0.79,
+              "B5": 0.88,
+              "B6": 0.93,
+              "B7": 0.97
+            },
+            "rp50Scale": 401,
+            "n": 1
+          }
+        }
+      },
+      "verify": {
+        "leash": "pass",
+        "deepVerdict": "PASS",
+        "independentAnswer": "7",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 12,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B4",
+      "target_band": "B3",
+      "statementId": "ALG.B3.s1",
+      "skill": "lin_bothsides_solve",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "A botanist is growing two plants in a greenhouse. Today, Plant A is "
+        },
+        {
+          "t": "math",
+          "v": "14"
+        },
+        {
+          "t": "text",
+          "v": " centimeters tall and grows "
+        },
+        {
+          "t": "math",
+          "v": "8"
+        },
+        {
+          "t": "text",
+          "v": " centimeters each week, while Plant B is "
+        },
+        {
+          "t": "math",
+          "v": "59"
+        },
+        {
+          "t": "text",
+          "v": " centimeters tall and grows "
+        },
+        {
+          "t": "math",
+          "v": "3"
+        },
+        {
+          "t": "text",
+          "v": " centimeters each week. Let "
+        },
+        {
+          "t": "math",
+          "v": "w"
+        },
+        {
+          "t": "text",
+          "v": " represent the number of weeks from today. After how many weeks will the two plants be the same height?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "After "
+        },
+        {
+          "t": "math",
+          "v": "w"
+        },
+        {
+          "t": "text",
+          "v": " weeks, Plant A has height "
+        },
+        {
+          "t": "math",
+          "v": "8w + 14"
+        },
+        {
+          "t": "text",
+          "v": " centimeters and Plant B has height "
+        },
+        {
+          "t": "math",
+          "v": "3w + 59"
+        },
+        {
+          "t": "text",
+          "v": " centimeters. The plants are the same height when these expressions are equal:"
+        },
+        {
+          "t": "mathblock",
+          "v": "8w + 14 = 3w + 59"
+        },
+        {
+          "t": "text",
+          "v": "Subtract "
+        },
+        {
+          "t": "math",
+          "v": "3w"
+        },
+        {
+          "t": "text",
+          "v": " from both sides to gather the variable terms:"
+        },
+        {
+          "t": "mathblock",
+          "v": "5w + 14 = 59"
+        },
+        {
+          "t": "text",
+          "v": "Subtract "
+        },
+        {
+          "t": "math",
+          "v": "14"
+        },
+        {
+          "t": "text",
+          "v": " from both sides, then divide by "
+        },
+        {
+          "t": "math",
+          "v": "5"
+        },
+        {
+          "t": "text",
+          "v": ":"
+        },
+        {
+          "t": "mathblock",
+          "v": "5w = 45 \\implies w = 9"
+        },
+        {
+          "t": "text",
+          "v": "The two plants will be the same height after "
+        },
+        {
+          "t": "math",
+          "v": "9"
+        },
+        {
+          "t": "text",
+          "v": " weeks."
+        }
+      ],
+      "answer": {
+        "accept": [
+          "9"
+        ],
+        "tol": 0
+      },
+      "figure": null,
+      "params": {
+        "a": 5,
+        "b": 14,
+        "c": 59
+      },
+      "tier": "band-targeted",
+      "cellId": "4a3bf93074c1eb3e",
+      "difficulty": {
+        "scalePoint": 527,
+        "band": "B4",
+        "se_scale": 45,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~527 has ~67% chance correct (Band 4).",
+        "signals": {
+          "judge": {
+            "scale": 527,
+            "se": 45,
+            "perBand": {
+              "B2": 0.22,
+              "B3": 0.42,
+              "B4": 0.62,
+              "B5": 0.78,
+              "B6": 0.89,
+              "B7": 0.95
+            },
+            "rp50Scale": 466,
+            "n": 1
+          }
+        }
+      },
+      "verify": {
+        "leash": "pass",
+        "deepVerdict": "PASS",
+        "independentAnswer": "9",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 13,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B4",
+      "target_band": "B3",
+      "statementId": "ALG.B3.s1",
+      "skill": "lin_distribute_solve",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "An online box office sells tickets to a play. Each ticket costs the same base price of "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": " dollars and also carries a "
+        },
+        {
+          "t": "money",
+          "v": "$2"
+        },
+        {
+          "t": "text",
+          "v": " service charge per ticket. A customer buys 4 tickets and pays an additional one-time "
+        },
+        {
+          "t": "money",
+          "v": "$5"
+        },
+        {
+          "t": "text",
+          "v": " processing fee, for a total charge of "
+        },
+        {
+          "t": "money",
+          "v": "$61"
+        },
+        {
+          "t": "text",
+          "v": ". What is the base price, in dollars, of each ticket?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "Each ticket costs the base price plus the service charge, so one ticket costs "
+        },
+        {
+          "t": "math",
+          "v": "x+2"
+        },
+        {
+          "t": "text",
+          "v": " dollars. With 4 tickets and the one-time processing fee, the total charge is:"
+        },
+        {
+          "t": "mathblock",
+          "v": "4(x+2)+5=61"
+        },
+        {
+          "t": "text",
+          "v": "Distribute the 4 and combine the constant terms:"
+        },
+        {
+          "t": "mathblock",
+          "v": "4x+8+5=61"
+        },
+        {
+          "t": "mathblock",
+          "v": "4x+13=61"
+        },
+        {
+          "t": "text",
+          "v": "Subtract 13 from both sides, then divide by 4:"
+        },
+        {
+          "t": "mathblock",
+          "v": "4x=48"
+        },
+        {
+          "t": "mathblock",
+          "v": "x=12"
+        },
+        {
+          "t": "text",
+          "v": "The base price of each ticket is 12 dollars."
+        }
+      ],
+      "answer": {
+        "accept": [
+          "12"
+        ],
+        "tol": 0
+      },
+      "figure": null,
+      "params": {
+        "a": 4,
+        "b": 13,
+        "c": 61
+      },
+      "tier": "band-targeted",
+      "cellId": "331056e192132700",
+      "difficulty": {
+        "scalePoint": 524,
+        "band": "B4",
+        "se_scale": 45,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~524 has ~67% chance correct (Band 4).",
+        "signals": {
+          "judge": {
+            "scale": 524,
+            "se": 45,
+            "perBand": {
+              "B2": 0.15,
+              "B3": 0.4,
+              "B4": 0.63,
+              "B5": 0.78,
+              "B6": 0.88,
+              "B7": 0.94
+            },
+            "rp50Scale": 468,
+            "n": 1
+          }
+        }
+      },
+      "verify": {
+        "leash": "pass",
+        "deepVerdict": "PASS",
+        "independentAnswer": "12",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 14,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B4",
+      "target_band": "B4",
+      "statementId": "ALG.B4.s1",
+      "skill": "lin_interpret_coeff",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "During the endurance set at a swim team's practice, the swimmers swim pool lengths continuously as a group while the coach keeps a running count. The total number of pool lengths "
+        },
+        {
+          "t": "math",
+          "v": "L"
+        },
+        {
+          "t": "text",
+          "v": " the team has swum since practice began is modeled by "
+        },
+        {
+          "t": "math",
+          "v": "L = 24t + 18"
+        },
+        {
+          "t": "text",
+          "v": ", where "
+        },
+        {
+          "t": "math",
+          "v": "t"
+        },
+        {
+          "t": "text",
+          "v": " is the number of minutes since the endurance set started. Which of the following is the best interpretation of the number "
+        },
+        {
+          "t": "math",
+          "v": "24"
+        },
+        {
+          "t": "text",
+          "v": " in this equation?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "The model has the form "
+        },
+        {
+          "t": "math",
+          "v": "L = mt + b"
+        },
+        {
+          "t": "text",
+          "v": ", where the coefficient of "
+        },
+        {
+          "t": "math",
+          "v": "t"
+        },
+        {
+          "t": "text",
+          "v": " is the rate of change. Here that coefficient is "
+        },
+        {
+          "t": "math",
+          "v": "24"
+        },
+        {
+          "t": "text",
+          "v": ", so the team's total count of pool lengths increases by 24 for each additional minute of the endurance set. That is, the team swims 24 pool lengths each minute, which is choice A. The constant "
+        },
+        {
+          "t": "math",
+          "v": "18"
+        },
+        {
+          "t": "text",
+          "v": " is the value of "
+        },
+        {
+          "t": "math",
+          "v": "L"
+        },
+        {
+          "t": "text",
+          "v": " at "
+        },
+        {
+          "t": "math",
+          "v": "t = 0"
+        },
+        {
+          "t": "text",
+          "v": " — the lengths already swum during warm-up when the set started — so choices B and C, which attach a starting amount or a per-minute rate to the wrong number, and choice D, which inverts the rate's units, are all incorrect."
+        }
+      ],
+      "answer": {
+        "correct": "A"
+      },
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "text",
+              "v": "The team swims 24 pool lengths each minute during the endurance set."
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "text",
+              "v": "The team had already swum 24 pool lengths when the endurance set started."
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "text",
+              "v": "The team swims 18 pool lengths each minute during the endurance set."
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "text",
+              "v": "The team swims 1 pool length every 24 minutes during the endurance set."
+            }
+          ]
+        }
+      ],
+      "figure": null,
+      "params": {
+        "m": 24,
+        "b": 18
+      },
+      "tier": "band-targeted",
+      "cellId": "17d806230997c00c",
+      "difficulty": {
+        "scalePoint": 489,
+        "band": "B4",
+        "se_scale": 45,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~489 has ~67% chance correct (Band 4).",
+        "signals": {
+          "judge": {
+            "scale": 489,
+            "se": 45,
+            "perBand": {
+              "B2": 0.38,
+              "B3": 0.55,
+              "B4": 0.71,
+              "B5": 0.83,
+              "B6": 0.91,
+              "B7": 0.96
+            },
+            "rp50Scale": 425,
+            "n": 1
+          }
+        }
+      },
+      "verify": {
+        "leash": "deferred-to-deep-verify",
+        "deepVerdict": "PASS",
+        "independentAnswer": "A",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 15,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B4",
+      "target_band": "B4",
+      "statementId": "ALG.B4.s1",
+      "skill": "lin_interpret_pair",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "A hiker wears a fitness tracker that counts steps continuously throughout the entire day. The total number of steps "
+        },
+        {
+          "t": "math",
+          "v": "S"
+        },
+        {
+          "t": "text",
+          "v": " the tracker has recorded for the day, once the hiker has been walking for "
+        },
+        {
+          "t": "math",
+          "v": "t"
+        },
+        {
+          "t": "text",
+          "v": " minutes along a mountain trail, is modeled by the equation "
+        },
+        {
+          "t": "math",
+          "v": "S = 105t + 3500"
+        },
+        {
+          "t": "text",
+          "v": ". The ordered pair "
+        },
+        {
+          "t": "math",
+          "v": "(40,\\ 7700)"
+        },
+        {
+          "t": "text",
+          "v": " is a solution to this equation. Which of the following is the best interpretation of the ordered pair "
+        },
+        {
+          "t": "math",
+          "v": "(40,\\ 7700)"
+        },
+        {
+          "t": "text",
+          "v": " in this context?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "The model "
+        },
+        {
+          "t": "math",
+          "v": "S = 105t + 3500"
+        },
+        {
+          "t": "text",
+          "v": " gives the total steps recorded for the day after the hiker has been on the trail for "
+        },
+        {
+          "t": "math",
+          "v": "t"
+        },
+        {
+          "t": "text",
+          "v": " minutes. In the ordered pair "
+        },
+        {
+          "t": "math",
+          "v": "(40,\\ 7700)"
+        },
+        {
+          "t": "text",
+          "v": ", the input is the time "
+        },
+        {
+          "t": "math",
+          "v": "t = 40"
+        },
+        {
+          "t": "text",
+          "v": " minutes and the output is the total steps "
+        },
+        {
+          "t": "math",
+          "v": "S = 7700"
+        },
+        {
+          "t": "text",
+          "v": ". Check by substituting: "
+        },
+        {
+          "t": "mathblock",
+          "v": "S = 105(40) + 3500 = 4200 + 3500 = 7700."
+        },
+        {
+          "t": "text",
+          "v": "So after 40 minutes on the trail, the tracker's estimated total for the day is 7,700 steps. (Of these, 4,200 come from the trail and 3,500 were recorded earlier in the day.) This matches choice A. Choice C uses only the trail steps "
+        },
+        {
+          "t": "math",
+          "v": "105(40)=4200"
+        },
+        {
+          "t": "text",
+          "v": " and forgets the 3,500 already recorded; choice B mislabels the day total of 7,700 as steps taken on the trail; choice D treats 7,700 as a per-40-minute rate."
+        }
+      ],
+      "answer": {
+        "correct": "A"
+      },
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "text",
+              "v": "After the hiker has walked along the trail for 40 minutes, the tracker estimates a total of 7,700 steps recorded for the day."
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "text",
+              "v": "After the hiker has walked along the trail for 40 minutes, the tracker shows that 7,700 steps were taken on the trail itself."
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "text",
+              "v": "After the hiker has walked along the trail for 40 minutes, the tracker estimates a total of 4,200 steps recorded for the day."
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "text",
+              "v": "For every 40 minutes the hiker walks along the trail, the tracker records an additional 7,700 steps."
+            }
+          ]
+        }
+      ],
+      "figure": null,
+      "params": {
+        "m": 105,
+        "b": 3500,
+        "x0": 40
+      },
+      "tier": "band-targeted",
+      "cellId": "6528c8c9eca30b4e",
+      "difficulty": {
+        "scalePoint": 525,
+        "band": "B4",
+        "se_scale": 45,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~525 has ~67% chance correct (Band 4).",
+        "signals": {
+          "judge": {
+            "scale": 525,
+            "se": 45,
+            "perBand": {
+              "B2": 0.38,
+              "B3": 0.48,
+              "B4": 0.63,
+              "B5": 0.77,
+              "B6": 0.87,
+              "B7": 0.93
+            },
+            "rp50Scale": 449,
+            "n": 1
+          }
+        }
+      },
+      "verify": {
+        "leash": "deferred-to-deep-verify",
+        "deepVerdict": "PASS",
+        "independentAnswer": "A",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 16,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B4",
+      "target_band": "B4",
+      "statementId": "ALG.B4.s2",
+      "skill": "lin_parallel_perp",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "Line "
+        },
+        {
+          "t": "math",
+          "v": "\\ell"
+        },
+        {
+          "t": "text",
+          "v": " is graphed in the "
+        },
+        {
+          "t": "math",
+          "v": "xy"
+        },
+        {
+          "t": "text",
+          "v": "-plane shown. Line "
+        },
+        {
+          "t": "math",
+          "v": "k"
+        },
+        {
+          "t": "text",
+          "v": " (not shown) is perpendicular to line "
+        },
+        {
+          "t": "math",
+          "v": "\\ell"
+        },
+        {
+          "t": "text",
+          "v": " and passes through the point where line "
+        },
+        {
+          "t": "math",
+          "v": "\\ell"
+        },
+        {
+          "t": "text",
+          "v": " crosses the "
+        },
+        {
+          "t": "math",
+          "v": "y"
+        },
+        {
+          "t": "text",
+          "v": "-axis. Which of the following is an equation of line "
+        },
+        {
+          "t": "math",
+          "v": "k"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "From the graph, line "
+        },
+        {
+          "t": "math",
+          "v": "\\ell"
+        },
+        {
+          "t": "text",
+          "v": " passes through "
+        },
+        {
+          "t": "math",
+          "v": "(0, 3)"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "(1, 1)"
+        },
+        {
+          "t": "text",
+          "v": ", so its slope is "
+        },
+        {
+          "t": "math",
+          "v": "\\frac{1 - 3}{1 - 0} = -2"
+        },
+        {
+          "t": "text",
+          "v": " and it crosses the "
+        },
+        {
+          "t": "math",
+          "v": "y"
+        },
+        {
+          "t": "text",
+          "v": "-axis at "
+        },
+        {
+          "t": "math",
+          "v": "(0, 3)"
+        },
+        {
+          "t": "text",
+          "v": ". A line perpendicular to "
+        },
+        {
+          "t": "math",
+          "v": "\\ell"
+        },
+        {
+          "t": "text",
+          "v": " has slope equal to the negative reciprocal of "
+        },
+        {
+          "t": "math",
+          "v": "-2"
+        },
+        {
+          "t": "text",
+          "v": ", which is "
+        },
+        {
+          "t": "math",
+          "v": "\\frac{1}{2}"
+        },
+        {
+          "t": "text",
+          "v": ". Because line "
+        },
+        {
+          "t": "math",
+          "v": "k"
+        },
+        {
+          "t": "text",
+          "v": " passes through the point where "
+        },
+        {
+          "t": "math",
+          "v": "\\ell"
+        },
+        {
+          "t": "text",
+          "v": " crosses the "
+        },
+        {
+          "t": "math",
+          "v": "y"
+        },
+        {
+          "t": "text",
+          "v": "-axis, line "
+        },
+        {
+          "t": "math",
+          "v": "k"
+        },
+        {
+          "t": "text",
+          "v": " also has "
+        },
+        {
+          "t": "math",
+          "v": "y"
+        },
+        {
+          "t": "text",
+          "v": "-intercept "
+        },
+        {
+          "t": "math",
+          "v": "3"
+        },
+        {
+          "t": "text",
+          "v": ". Therefore an equation of line "
+        },
+        {
+          "t": "math",
+          "v": "k"
+        },
+        {
+          "t": "text",
+          "v": " is "
+        },
+        {
+          "t": "math",
+          "v": "y = \\frac{1}{2}x + 3"
+        },
+        {
+          "t": "text",
+          "v": "."
+        }
+      ],
+      "answer": {
+        "correct": "A"
+      },
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "y = \\frac{1}{2}x + 3"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "y = -2x + 3"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "y = -\\frac{1}{2}x + 3"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "y = \\frac{1}{2}x - 3"
+            }
+          ]
+        }
+      ],
+      "figure": {
+        "fn": "coordPlane",
+        "spec": {
+          "xRange": [
+            -6,
+            6
+          ],
+          "yRange": [
+            -6,
+            6
+          ],
+          "xStep": 1,
+          "yStep": 1,
+          "origin": true,
+          "curves": [
+            {
+              "m": -2,
+              "b": 3
+            }
+          ],
+          "points": [
+            {
+              "at": [
+                0,
+                3
+              ],
+              "label": "(0, 3)"
+            },
+            {
+              "at": [
+                1,
+                1
+              ],
+              "label": "(1, 1)"
+            }
+          ]
+        },
+        "caption": "Line ℓ graphed in the xy-plane."
+      },
+      "params": {
+        "m": -2,
+        "b": 3
+      },
+      "tier": "band-targeted",
+      "cellId": "7c4355ee2005fae7",
+      "difficulty": {
+        "scalePoint": 544,
+        "band": "B4",
+        "se_scale": 45,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~544 has ~67% chance correct (Band 4).",
+        "signals": {
+          "judge": {
+            "scale": 544,
+            "se": 45,
+            "perBand": {
+              "B2": 0.22,
+              "B3": 0.32,
+              "B4": 0.58,
+              "B5": 0.74,
+              "B6": 0.85,
+              "B7": 0.93
+            },
+            "rp50Scale": 485,
+            "n": 1
+          }
+        }
+      },
+      "verify": {
+        "leash": "deferred-to-deep-verify",
+        "deepVerdict": "PASS",
+        "independentAnswer": "A",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 17,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B5",
+      "target_band": "B4",
+      "statementId": "ALG.B4.s2",
+      "skill": "lin_yint_from_slope_pt",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "In the "
+        },
+        {
+          "t": "math",
+          "v": "xy"
+        },
+        {
+          "t": "text",
+          "v": "-plane, line "
+        },
+        {
+          "t": "math",
+          "v": "\\ell"
+        },
+        {
+          "t": "text",
+          "v": " passes through the point "
+        },
+        {
+          "t": "math",
+          "v": "(6,\\ 1)"
+        },
+        {
+          "t": "text",
+          "v": " and is perpendicular to the line with equation "
+        },
+        {
+          "t": "math",
+          "v": "y = -2x + 9"
+        },
+        {
+          "t": "text",
+          "v": ". At what value of "
+        },
+        {
+          "t": "math",
+          "v": "y"
+        },
+        {
+          "t": "text",
+          "v": " does line "
+        },
+        {
+          "t": "math",
+          "v": "\\ell"
+        },
+        {
+          "t": "text",
+          "v": " cross the "
+        },
+        {
+          "t": "math",
+          "v": "y"
+        },
+        {
+          "t": "text",
+          "v": "-axis?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "The given line "
+        },
+        {
+          "t": "math",
+          "v": "y = -2x + 9"
+        },
+        {
+          "t": "text",
+          "v": " has slope "
+        },
+        {
+          "t": "math",
+          "v": "-2"
+        },
+        {
+          "t": "text",
+          "v": ". A line perpendicular to it has slope equal to the negative reciprocal: "
+        },
+        {
+          "t": "math",
+          "v": "m = \\tfrac{1}{2}"
+        },
+        {
+          "t": "text",
+          "v": ". Write line "
+        },
+        {
+          "t": "math",
+          "v": "\\ell"
+        },
+        {
+          "t": "text",
+          "v": " in slope-intercept form "
+        },
+        {
+          "t": "math",
+          "v": "y = \\tfrac{1}{2}x + b"
+        },
+        {
+          "t": "text",
+          "v": ", where "
+        },
+        {
+          "t": "math",
+          "v": "b"
+        },
+        {
+          "t": "text",
+          "v": " is the "
+        },
+        {
+          "t": "math",
+          "v": "y"
+        },
+        {
+          "t": "text",
+          "v": "-intercept. Substituting the point "
+        },
+        {
+          "t": "math",
+          "v": "(6,\\ 1)"
+        },
+        {
+          "t": "text",
+          "v": " gives "
+        },
+        {
+          "t": "mathblock",
+          "v": "1 = \\tfrac{1}{2}(6) + b"
+        },
+        {
+          "t": "text",
+          "v": "so "
+        },
+        {
+          "t": "math",
+          "v": "1 = 3 + b"
+        },
+        {
+          "t": "text",
+          "v": ", which means "
+        },
+        {
+          "t": "math",
+          "v": "b = -2"
+        },
+        {
+          "t": "text",
+          "v": ". Therefore line "
+        },
+        {
+          "t": "math",
+          "v": "\\ell"
+        },
+        {
+          "t": "text",
+          "v": " crosses the "
+        },
+        {
+          "t": "math",
+          "v": "y"
+        },
+        {
+          "t": "text",
+          "v": "-axis at "
+        },
+        {
+          "t": "math",
+          "v": "y = -2"
+        },
+        {
+          "t": "text",
+          "v": "."
+        }
+      ],
+      "answer": {
+        "accept": [
+          "-2"
+        ],
+        "tol": 0
+      },
+      "figure": null,
+      "params": {
+        "a": 1,
+        "b": 0,
+        "c": -2
+      },
+      "tier": "band-targeted",
+      "cellId": "2e3f2a5ecbe9091d",
+      "difficulty": {
+        "scalePoint": 590,
+        "band": "B5",
+        "se_scale": 45,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~590 has ~67% chance correct (Band 5).",
+        "signals": {
+          "judge": {
+            "scale": 590,
+            "se": 45,
+            "perBand": {
+              "B2": 0.05,
+              "B3": 0.12,
+              "B4": 0.42,
+              "B5": 0.63,
+              "B6": 0.8,
+              "B7": 0.92
+            },
+            "rp50Scale": 532,
+            "n": 1
+          }
+        }
+      },
+      "verify": {
+        "leash": "pass",
+        "deepVerdict": "PASS",
+        "independentAnswer": "-2",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    }
+  ]
+}

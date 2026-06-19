@@ -1,0 +1,1085 @@
+{
+  "_note": "Provenance of each generatable template.",
+  "_legend": {
+    "source": "satmod2=SAT-Mod2 author backbone | new=added for finer/low-band coverage",
+    "recomputeSource": "satai=ported SAT-AI recompute branch | deep-verify=qualitative, defers to blinded verifier"
+  },
+  "templates": {
+    "lin_context_one_step": {
+      "source": "new",
+      "recomputeBranch": "alg_linear_eq_1var",
+      "recomputeSource": "satai",
+      "statements": [
+        "ALG.B1.s1"
+      ],
+      "bands": [
+        "B1"
+      ]
+    },
+    "lin_solve_value": {
+      "source": "satmod2",
+      "recomputeBranch": "alg_linear_eq_1var",
+      "recomputeSource": "satai",
+      "statements": [
+        "ALG.B1.s1",
+        "ALG.B1.s2"
+      ],
+      "bands": [
+        "B1"
+      ]
+    },
+    "lin_from_graph": {
+      "source": "new",
+      "recomputeBranch": "alg_linear_eq_2var",
+      "recomputeSource": "satai",
+      "statements": [
+        "ALG.B2.s1"
+      ],
+      "bands": [
+        "B2"
+      ]
+    },
+    "lin_interpret": {
+      "source": "satmod2",
+      "recomputeBranch": "alg_linear_eq_2var",
+      "recomputeSource": "satai",
+      "statements": [
+        "ALG.B2.s1",
+        "ALG.B3.s2"
+      ],
+      "bands": [
+        "B2",
+        "B3"
+      ]
+    },
+    "lin_intercepts": {
+      "source": "satmod2",
+      "recomputeBranch": "alg_linear_eq_2var",
+      "recomputeSource": "satai",
+      "statements": [
+        "ALG.B2.s1",
+        "ALG.B4.s2",
+        "ALG.B6.s1"
+      ],
+      "bands": [
+        "B2",
+        "B4",
+        "B6"
+      ]
+    },
+    "read_graph_point": {
+      "source": "new",
+      "recomputeBranch": "alg_linear_eq_2var",
+      "recomputeSource": "satai",
+      "statements": [
+        "ALG.B2.s2"
+      ],
+      "bands": [
+        "B2"
+      ]
+    },
+    "system_graph_solution": {
+      "source": "new",
+      "recomputeBranch": "alg_linear_systems",
+      "recomputeSource": "satai",
+      "statements": [
+        "ALG.B2.s2"
+      ],
+      "bands": [
+        "B2"
+      ]
+    },
+    "lin_create_1or2var": {
+      "source": "new",
+      "recomputeBranch": "alg_linear_eq_1var",
+      "recomputeSource": "satai",
+      "statements": [
+        "ALG.B3.s1"
+      ],
+      "bands": [
+        "B3"
+      ]
+    },
+    "inequality_model": {
+      "source": "satmod2",
+      "recomputeBranch": "alg_linear_inequalities",
+      "recomputeSource": "satai",
+      "statements": [
+        "ALG.B3.s1"
+      ],
+      "bands": [
+        "B3"
+      ]
+    },
+    "lin_function_model": {
+      "source": "satmod2",
+      "recomputeBranch": "alg_linear_func",
+      "recomputeSource": "satai",
+      "statements": [
+        "ALG.B3.s2"
+      ],
+      "bands": [
+        "B3"
+      ]
+    },
+    "lin_interpret_complex": {
+      "source": "new",
+      "recomputeBranch": "alg_linear_eq_2var",
+      "recomputeSource": "satai",
+      "statements": [
+        "ALG.B4.s1",
+        "ALG.B6.s1"
+      ],
+      "bands": [
+        "B4",
+        "B6"
+      ]
+    },
+    "lin_from_2pt": {
+      "source": "new",
+      "recomputeBranch": "alg_linear_func",
+      "recomputeSource": "satai",
+      "statements": [
+        "ALG.B4.s2",
+        "ALG.B5.s1"
+      ],
+      "bands": [
+        "B4",
+        "B5"
+      ]
+    },
+    "parallel_perp_slope": {
+      "source": "satmod2",
+      "recomputeBranch": "alg_linear_func",
+      "recomputeSource": "satai",
+      "statements": [
+        "ALG.B4.s2"
+      ],
+      "bands": [
+        "B4"
+      ]
+    },
+    "linear_from_data": {
+      "source": "satmod2",
+      "recomputeBranch": "alg_linear_func",
+      "recomputeSource": "satai",
+      "statements": [
+        "ALG.B5.s1"
+      ],
+      "bands": [
+        "B5"
+      ]
+    },
+    "lin_translate": {
+      "source": "new",
+      "recomputeBranch": "alg_linear_func",
+      "recomputeSource": "satai",
+      "statements": [
+        "ALG.B5.s1"
+      ],
+      "bands": [
+        "B5"
+      ]
+    },
+    "system_create": {
+      "source": "new",
+      "recomputeBranch": "alg_linear_systems",
+      "recomputeSource": "satai",
+      "statements": [
+        "ALG.B5.s2",
+        "ALG.B7.s1"
+      ],
+      "bands": [
+        "B5",
+        "B7"
+      ]
+    },
+    "system_solve": {
+      "source": "satmod2",
+      "recomputeBranch": "alg_linear_systems",
+      "recomputeSource": "satai",
+      "statements": [
+        "ALG.B5.s2"
+      ],
+      "bands": [
+        "B5"
+      ]
+    },
+    "number_of_solutions": {
+      "source": "satmod2",
+      "recomputeBranch": "alg_linear_eq_1var",
+      "recomputeSource": "satai",
+      "statements": [
+        "ALG.B6.s2"
+      ],
+      "bands": [
+        "B6"
+      ]
+    },
+    "system_no_solution": {
+      "source": "satmod2",
+      "recomputeBranch": "alg_linear_systems",
+      "recomputeSource": "satai",
+      "statements": [
+        "ALG.B6.s2"
+      ],
+      "bands": [
+        "B6"
+      ]
+    },
+    "system_infinite": {
+      "source": "satmod2",
+      "recomputeBranch": "alg_linear_systems",
+      "recomputeSource": "satai",
+      "statements": [
+        "ALG.B6.s2"
+      ],
+      "bands": [
+        "B6"
+      ]
+    },
+    "system_missing_coeff": {
+      "source": "new",
+      "recomputeBranch": "alg_linear_systems",
+      "recomputeSource": "satai",
+      "statements": [
+        "ALG.B6.s2",
+        "ALG.B7.s1"
+      ],
+      "bands": [
+        "B6",
+        "B7"
+      ]
+    },
+    "lin_representations": {
+      "source": "new",
+      "recomputeBranch": "alg_linear_eq_2var",
+      "recomputeSource": "satai",
+      "statements": [
+        "ALG.B6.s3",
+        "ALG.B7.s2"
+      ],
+      "bands": [
+        "B6",
+        "B7"
+      ]
+    },
+    "system_representations": {
+      "source": "new",
+      "recomputeBranch": "alg_linear_systems",
+      "recomputeSource": "satai",
+      "statements": [
+        "ALG.B6.s3"
+      ],
+      "bands": [
+        "B6"
+      ]
+    },
+    "lin_create_solve": {
+      "source": "new",
+      "recomputeBranch": "alg_linear_eq_1var",
+      "recomputeSource": "satai",
+      "statements": [
+        "ALG.B7.s1"
+      ],
+      "bands": [
+        "B7"
+      ]
+    },
+    "parametric_system": {
+      "source": "satmod2",
+      "recomputeBranch": "alg_linear_systems",
+      "recomputeSource": "satai",
+      "statements": [
+        "ALG.B7.s2"
+      ],
+      "bands": [
+        "B7"
+      ]
+    },
+    "read_graph_intercept": {
+      "source": "new",
+      "recomputeBranch": "adv_quadratic_func",
+      "recomputeSource": "satai",
+      "statements": [
+        "ADV.B1.s1"
+      ],
+      "bands": [
+        "B1"
+      ]
+    },
+    "poly_operations": {
+      "source": "satmod2",
+      "recomputeBranch": "adv_equiv_expressions",
+      "recomputeSource": "satai",
+      "statements": [
+        "ADV.B1.s2",
+        "ADV.B2.s2",
+        "ADV.B3.s2"
+      ],
+      "bands": [
+        "B1",
+        "B2",
+        "B3"
+      ]
+    },
+    "read_nonlinear_feature": {
+      "source": "new",
+      "recomputeBranch": "adv_quadratic_func",
+      "recomputeSource": "satai",
+      "statements": [
+        "ADV.B2.s1"
+      ],
+      "bands": [
+        "B2"
+      ]
+    },
+    "poly_factor": {
+      "source": "satmod2",
+      "recomputeBranch": "adv_polynomial_func",
+      "recomputeSource": "satai",
+      "statements": [
+        "ADV.B2.s2",
+        "ADV.B4.s2",
+        "ADV.B5.s2"
+      ],
+      "bands": [
+        "B2",
+        "B4",
+        "B5"
+      ]
+    },
+    "quad_factored": {
+      "source": "new",
+      "recomputeBranch": "adv_nonlinear_eq",
+      "recomputeSource": "satai",
+      "statements": [
+        "ADV.B3.s1"
+      ],
+      "bands": [
+        "B3"
+      ]
+    },
+    "abs_value": {
+      "source": "satmod2",
+      "recomputeBranch": "adv_radical_rational",
+      "recomputeSource": "satai",
+      "statements": [
+        "ADV.B3.s1"
+      ],
+      "bands": [
+        "B3"
+      ]
+    },
+    "radical_simple": {
+      "source": "new",
+      "recomputeBranch": "adv_radical_rational",
+      "recomputeSource": "satai",
+      "statements": [
+        "ADV.B3.s1"
+      ],
+      "bands": [
+        "B3"
+      ]
+    },
+    "rational_rearrange": {
+      "source": "satmod2",
+      "recomputeBranch": "adv_radical_rational",
+      "recomputeSource": "satai",
+      "statements": [
+        "ADV.B3.s2",
+        "ADV.B7.s2"
+      ],
+      "bands": [
+        "B3",
+        "B7"
+      ]
+    },
+    "quad_use": {
+      "source": "new",
+      "recomputeBranch": "adv_quadratic_func",
+      "recomputeSource": "satai",
+      "statements": [
+        "ADV.B4.s1"
+      ],
+      "bands": [
+        "B4"
+      ]
+    },
+    "exp_model": {
+      "source": "satmod2",
+      "recomputeBranch": "adv_exponential_func",
+      "recomputeSource": "satai",
+      "statements": [
+        "ADV.B4.s1",
+        "ADV.B5.s1",
+        "ADV.B6.s1"
+      ],
+      "bands": [
+        "B4",
+        "B5",
+        "B6"
+      ]
+    },
+    "quad_factor": {
+      "source": "new",
+      "recomputeBranch": "adv_polynomial_func",
+      "recomputeSource": "satai",
+      "statements": [
+        "ADV.B4.s2"
+      ],
+      "bands": [
+        "B4"
+      ]
+    },
+    "radical_rational": {
+      "source": "new",
+      "recomputeBranch": "adv_radical_rational",
+      "recomputeSource": "satai",
+      "statements": [
+        "ADV.B4.s2"
+      ],
+      "bands": [
+        "B4"
+      ]
+    },
+    "nonlinear_system": {
+      "source": "new",
+      "recomputeBranch": "adv_nonlinear_eq",
+      "recomputeSource": "satai",
+      "statements": [
+        "ADV.B4.s2"
+      ],
+      "bands": [
+        "B4"
+      ]
+    },
+    "quad_vertex": {
+      "source": "satmod2",
+      "recomputeBranch": "adv_quadratic_func",
+      "recomputeSource": "satai",
+      "statements": [
+        "ADV.B5.s1"
+      ],
+      "bands": [
+        "B5"
+      ]
+    },
+    "linquad_system": {
+      "source": "new",
+      "recomputeBranch": "adv_nonlinear_eq",
+      "recomputeSource": "satai",
+      "statements": [
+        "ADV.B5.s1"
+      ],
+      "bands": [
+        "B5"
+      ]
+    },
+    "poly_expand": {
+      "source": "new",
+      "recomputeBranch": "adv_equiv_expressions",
+      "recomputeSource": "satai",
+      "statements": [
+        "ADV.B5.s2"
+      ],
+      "bands": [
+        "B5"
+      ]
+    },
+    "quad_from_area": {
+      "source": "satmod2",
+      "recomputeBranch": "adv_quadratic_func",
+      "recomputeSource": "satai",
+      "statements": [
+        "ADV.B6.s1"
+      ],
+      "bands": [
+        "B6"
+      ]
+    },
+    "interpret_nonlinear_feature": {
+      "source": "new",
+      "recomputeBranch": "needs-deep-verify",
+      "recomputeSource": "deep-verify",
+      "statements": [
+        "ADV.B6.s2"
+      ],
+      "bands": [
+        "B6"
+      ]
+    },
+    "nonlinear_representations": {
+      "source": "new",
+      "recomputeBranch": "adv_quadratic_func",
+      "recomputeSource": "satai",
+      "statements": [
+        "ADV.B6.s3"
+      ],
+      "bands": [
+        "B6"
+      ]
+    },
+    "function_translation": {
+      "source": "new",
+      "recomputeBranch": "adv_quadratic_func",
+      "recomputeSource": "satai",
+      "statements": [
+        "ADV.B6.s3"
+      ],
+      "bands": [
+        "B6"
+      ]
+    },
+    "nonlinear_unknown_const": {
+      "source": "new",
+      "recomputeBranch": "adv_nonlinear_eq",
+      "recomputeSource": "satai",
+      "statements": [
+        "ADV.B7.s1"
+      ],
+      "bands": [
+        "B7"
+      ]
+    },
+    "quad_no_xint": {
+      "source": "satmod2",
+      "recomputeBranch": "adv_quadratic_func",
+      "recomputeSource": "satai",
+      "statements": [
+        "ADV.B7.s1"
+      ],
+      "bands": [
+        "B7"
+      ]
+    },
+    "exponent_laws": {
+      "source": "satmod2",
+      "recomputeBranch": "adv_equiv_expressions",
+      "recomputeSource": "satai",
+      "statements": [
+        "ADV.B7.s2"
+      ],
+      "bands": [
+        "B7"
+      ]
+    },
+    "exp_rewrite": {
+      "source": "satmod2",
+      "recomputeBranch": "adv_exponential_func",
+      "recomputeSource": "satai",
+      "statements": [
+        "ADV.B7.s2"
+      ],
+      "bands": [
+        "B7"
+      ]
+    },
+    "poly_rewrite_form": {
+      "source": "new",
+      "recomputeBranch": "adv_equiv_expressions",
+      "recomputeSource": "satai",
+      "statements": [
+        "ADV.B7.s2"
+      ],
+      "bands": [
+        "B7"
+      ]
+    },
+    "percent_simple": {
+      "source": "new",
+      "recomputeBranch": "psda_percentages",
+      "recomputeSource": "satai",
+      "statements": [
+        "PSDA.B1.s1"
+      ],
+      "bands": [
+        "B1"
+      ]
+    },
+    "unit_rate": {
+      "source": "new",
+      "recomputeBranch": "psda_ratios_rates_units",
+      "recomputeSource": "satai",
+      "statements": [
+        "PSDA.B1.s1",
+        "PSDA.B2.s1"
+      ],
+      "bands": [
+        "B1",
+        "B2"
+      ]
+    },
+    "median_ordered": {
+      "source": "new",
+      "recomputeBranch": "psda_one_var_data",
+      "recomputeSource": "satai",
+      "statements": [
+        "PSDA.B1.s2"
+      ],
+      "bands": [
+        "B1"
+      ]
+    },
+    "percent_chain": {
+      "source": "satmod2",
+      "recomputeBranch": "psda_percentages",
+      "recomputeSource": "satai",
+      "statements": [
+        "PSDA.B2.s1",
+        "PSDA.B3.s1",
+        "PSDA.B4.s1",
+        "PSDA.B6.s1"
+      ],
+      "bands": [
+        "B2",
+        "B3",
+        "B4",
+        "B6"
+      ]
+    },
+    "unit_conversion": {
+      "source": "satmod2",
+      "recomputeBranch": "psda_ratios_rates_units",
+      "recomputeSource": "satai",
+      "statements": [
+        "PSDA.B2.s1",
+        "PSDA.B6.s1"
+      ],
+      "bands": [
+        "B2",
+        "B6"
+      ]
+    },
+    "read_bar_freq": {
+      "source": "new",
+      "recomputeBranch": "psda_one_var_data",
+      "recomputeSource": "satai",
+      "statements": [
+        "PSDA.B2.s2"
+      ],
+      "bands": [
+        "B2"
+      ]
+    },
+    "percent_over_100": {
+      "source": "new",
+      "recomputeBranch": "psda_percentages",
+      "recomputeSource": "satai",
+      "statements": [
+        "PSDA.B3.s1"
+      ],
+      "bands": [
+        "B3"
+      ]
+    },
+    "twoway_table": {
+      "source": "satmod2",
+      "recomputeBranch": "psda_probability",
+      "recomputeSource": "satai",
+      "statements": [
+        "PSDA.B3.s2"
+      ],
+      "bands": [
+        "B3"
+      ]
+    },
+    "prob_simple": {
+      "source": "new",
+      "recomputeBranch": "psda_probability",
+      "recomputeSource": "satai",
+      "statements": [
+        "PSDA.B3.s2"
+      ],
+      "bands": [
+        "B3"
+      ]
+    },
+    "ratio_rate": {
+      "source": "satmod2",
+      "recomputeBranch": "psda_ratios_rates_units",
+      "recomputeSource": "satai",
+      "statements": [
+        "PSDA.B4.s1",
+        "PSDA.B6.s1"
+      ],
+      "bands": [
+        "B4",
+        "B6"
+      ]
+    },
+    "center_spread": {
+      "source": "satmod2",
+      "recomputeBranch": "psda_one_var_data",
+      "recomputeSource": "satai",
+      "statements": [
+        "PSDA.B4.s2"
+      ],
+      "bands": [
+        "B4"
+      ]
+    },
+    "scatter_lobf": {
+      "source": "satmod2",
+      "recomputeBranch": "psda_two_var_data",
+      "recomputeSource": "satai",
+      "statements": [
+        "PSDA.B4.s3"
+      ],
+      "bands": [
+        "B4"
+      ]
+    },
+    "margin_error": {
+      "source": "satmod2",
+      "recomputeBranch": "psda_inference_margin",
+      "recomputeSource": "satai",
+      "statements": [
+        "PSDA.B4.s4"
+      ],
+      "bands": [
+        "B4"
+      ]
+    },
+    "growth_factor": {
+      "source": "new",
+      "recomputeBranch": "psda_percentages",
+      "recomputeSource": "satai",
+      "statements": [
+        "PSDA.B5.s1"
+      ],
+      "bands": [
+        "B5"
+      ]
+    },
+    "prob_complement": {
+      "source": "new",
+      "recomputeBranch": "psda_probability",
+      "recomputeSource": "satai",
+      "statements": [
+        "PSDA.B5.s2"
+      ],
+      "bands": [
+        "B5"
+      ]
+    },
+    "avg_rate_of_change": {
+      "source": "new",
+      "recomputeBranch": "psda_two_var_data",
+      "recomputeSource": "satai",
+      "statements": [
+        "PSDA.B6.s2"
+      ],
+      "bands": [
+        "B6"
+      ]
+    },
+    "mean_median_freq": {
+      "source": "new",
+      "recomputeBranch": "psda_one_var_data",
+      "recomputeSource": "satai",
+      "statements": [
+        "PSDA.B6.s2"
+      ],
+      "bands": [
+        "B6"
+      ]
+    },
+    "prob_conditional": {
+      "source": "new",
+      "recomputeBranch": "psda_probability",
+      "recomputeSource": "satai",
+      "statements": [
+        "PSDA.B6.s3"
+      ],
+      "bands": [
+        "B6"
+      ]
+    },
+    "study_population": {
+      "source": "new",
+      "recomputeBranch": "needs-deep-verify",
+      "recomputeSource": "deep-verify",
+      "statements": [
+        "PSDA.B7.s1"
+      ],
+      "bands": [
+        "B7"
+      ]
+    },
+    "data_effect_change": {
+      "source": "new",
+      "recomputeBranch": "psda_one_var_data",
+      "recomputeSource": "satai",
+      "statements": [
+        "PSDA.B7.s2"
+      ],
+      "bands": [
+        "B7"
+      ]
+    },
+    "solid_measure": {
+      "source": "satmod2",
+      "recomputeBranch": "geo_area_volume",
+      "recomputeSource": "satai",
+      "statements": [
+        "GEO.B1.s1",
+        "GEO.B4.s1",
+        "GEO.B6.s1",
+        "GEO.B7.s1"
+      ],
+      "bands": [
+        "B1",
+        "B4",
+        "B6",
+        "B7"
+      ]
+    },
+    "rectangle_area": {
+      "source": "new",
+      "recomputeBranch": "geo_area_volume",
+      "recomputeSource": "satai",
+      "statements": [
+        "GEO.B1.s2"
+      ],
+      "bands": [
+        "B1"
+      ]
+    },
+    "perimeter_sides": {
+      "source": "new",
+      "recomputeBranch": "geo_area_volume",
+      "recomputeSource": "satai",
+      "statements": [
+        "GEO.B2.s1",
+        "GEO.B5.s3"
+      ],
+      "bands": [
+        "B2",
+        "B5"
+      ]
+    },
+    "angles_parallel": {
+      "source": "satmod2",
+      "recomputeBranch": "geo_lines_angles_triangles",
+      "recomputeSource": "satai",
+      "statements": [
+        "GEO.B2.s2"
+      ],
+      "bands": [
+        "B2"
+      ]
+    },
+    "area_sides": {
+      "source": "new",
+      "recomputeBranch": "geo_area_volume",
+      "recomputeSource": "satai",
+      "statements": [
+        "GEO.B3.s1",
+        "GEO.B4.s1",
+        "GEO.B5.s3",
+        "GEO.B7.s1"
+      ],
+      "bands": [
+        "B3",
+        "B4",
+        "B5",
+        "B7"
+      ]
+    },
+    "triangle_angle_sum": {
+      "source": "new",
+      "recomputeBranch": "geo_lines_angles_triangles",
+      "recomputeSource": "satai",
+      "statements": [
+        "GEO.B3.s2",
+        "GEO.B4.s2",
+        "GEO.B6.s2"
+      ],
+      "bands": [
+        "B3",
+        "B4",
+        "B6"
+      ]
+    },
+    "angles_intersecting": {
+      "source": "new",
+      "recomputeBranch": "geo_lines_angles_triangles",
+      "recomputeSource": "satai",
+      "statements": [
+        "GEO.B3.s2"
+      ],
+      "bands": [
+        "B3"
+      ]
+    },
+    "right_triangle": {
+      "source": "satmod2",
+      "recomputeBranch": "geo_right_tri_trig",
+      "recomputeSource": "satai",
+      "statements": [
+        "GEO.B3.s3",
+        "GEO.B4.s3",
+        "GEO.B6.s2"
+      ],
+      "bands": [
+        "B3",
+        "B4",
+        "B6"
+      ]
+    },
+    "scale_factor": {
+      "source": "new",
+      "recomputeBranch": "geo_area_volume",
+      "recomputeSource": "satai",
+      "statements": [
+        "GEO.B4.s2"
+      ],
+      "bands": [
+        "B4"
+      ]
+    },
+    "triangle_similar": {
+      "source": "satmod2",
+      "recomputeBranch": "geo_right_tri_trig",
+      "recomputeSource": "satai",
+      "statements": [
+        "GEO.B4.s2",
+        "GEO.B6.s3",
+        "GEO.B7.s2"
+      ],
+      "bands": [
+        "B4",
+        "B6",
+        "B7"
+      ]
+    },
+    "triangle_congruent": {
+      "source": "satmod2",
+      "recomputeBranch": "geo_right_tri_trig",
+      "recomputeSource": "satai",
+      "statements": [
+        "GEO.B4.s2",
+        "GEO.B7.s2"
+      ],
+      "bands": [
+        "B4",
+        "B7"
+      ]
+    },
+    "special_right_triangle": {
+      "source": "new",
+      "recomputeBranch": "geo_right_tri_trig",
+      "recomputeSource": "satai",
+      "statements": [
+        "GEO.B4.s3"
+      ],
+      "bands": [
+        "B4"
+      ]
+    },
+    "trig_cofunction": {
+      "source": "satmod2",
+      "recomputeBranch": "geo_right_tri_trig",
+      "recomputeSource": "satai",
+      "statements": [
+        "GEO.B5.s1"
+      ],
+      "bands": [
+        "B5"
+      ]
+    },
+    "trig_radians": {
+      "source": "satmod2",
+      "recomputeBranch": "geo_right_tri_trig",
+      "recomputeSource": "satai",
+      "statements": [
+        "GEO.B5.s1"
+      ],
+      "bands": [
+        "B5"
+      ]
+    },
+    "circle_equation": {
+      "source": "satmod2",
+      "recomputeBranch": "geo_circles",
+      "recomputeSource": "satai",
+      "statements": [
+        "GEO.B5.s2",
+        "GEO.B7.s3"
+      ],
+      "bands": [
+        "B5",
+        "B7"
+      ]
+    },
+    "trig_ratio": {
+      "source": "satmod2",
+      "recomputeBranch": "geo_right_tri_trig",
+      "recomputeSource": "satai",
+      "statements": [
+        "GEO.B6.s3",
+        "GEO.B7.s2"
+      ],
+      "bands": [
+        "B6",
+        "B7"
+      ]
+    },
+    "scale_factor_effect": {
+      "source": "new",
+      "recomputeBranch": "geo_area_volume",
+      "recomputeSource": "satai",
+      "statements": [
+        "GEO.B6.s3"
+      ],
+      "bands": [
+        "B6"
+      ]
+    },
+    "trig_similarity": {
+      "source": "new",
+      "recomputeBranch": "geo_right_tri_trig",
+      "recomputeSource": "satai",
+      "statements": [
+        "GEO.B7.s2"
+      ],
+      "bands": [
+        "B7"
+      ]
+    },
+    "circle_chord": {
+      "source": "satmod2",
+      "recomputeBranch": "geo_circles",
+      "recomputeSource": "satai",
+      "statements": [
+        "GEO.B7.s3"
+      ],
+      "bands": [
+        "B7"
+      ]
+    },
+    "circle_arc_sector": {
+      "source": "new",
+      "recomputeBranch": "geo_circles",
+      "recomputeSource": "satai",
+      "statements": [
+        "GEO.B7.s3"
+      ],
+      "bands": [
+        "B7"
+      ]
+    },
+    "circle_tangent": {
+      "source": "new",
+      "recomputeBranch": "geo_circles",
+      "recomputeSource": "satai",
+      "statements": [
+        "GEO.B7.s3"
+      ],
+      "bands": [
+        "B7"
+      ]
+    }
+  }
+}

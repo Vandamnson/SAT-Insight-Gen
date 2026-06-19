@@ -1,0 +1,240 @@
+[
+ {
+  "id": 0,
+  "domain": "algebra",
+  "trueBand": "B1",
+  "trueMid": 340,
+  "judgeRP67": 350
+ },
+ {
+  "id": 1,
+  "domain": "algebra",
+  "trueBand": "B1",
+  "trueMid": 340,
+  "judgeRP67": 350
+ },
+ {
+  "id": 2,
+  "domain": "algebra",
+  "trueBand": "B3",
+  "trueMid": 440,
+  "judgeRP67": 505
+ },
+ {
+  "id": 3,
+  "domain": "algebra",
+  "trueBand": "B3",
+  "trueMid": 440,
+  "judgeRP67": 436
+ },
+ {
+  "id": 4,
+  "domain": "algebra",
+  "trueBand": "B4",
+  "trueMid": 505,
+  "judgeRP67": 598
+ },
+ {
+  "id": 5,
+  "domain": "algebra",
+  "trueBand": "B4",
+  "trueMid": 505,
+  "judgeRP67": 490
+ },
+ {
+  "id": 6,
+  "domain": "algebra",
+  "trueBand": "B5",
+  "trueMid": 575,
+  "judgeRP67": 573
+ },
+ {
+  "id": 7,
+  "domain": "algebra",
+  "trueBand": "B5",
+  "trueMid": 575,
+  "judgeRP67": 483
+ },
+ {
+  "id": 8,
+  "domain": "algebra",
+  "trueBand": "B6",
+  "trueMid": 640,
+  "judgeRP67": 604
+ },
+ {
+  "id": 9,
+  "domain": "algebra",
+  "trueBand": "B6",
+  "trueMid": 640,
+  "judgeRP67": 605
+ },
+ {
+  "id": 10,
+  "domain": "algebra",
+  "trueBand": "B7",
+  "trueMid": 720,
+  "judgeRP67": 618
+ },
+ {
+  "id": 11,
+  "domain": "algebra",
+  "trueBand": "B7",
+  "trueMid": 720,
+  "judgeRP67": 573
+ },
+ {
+  "id": 12,
+  "domain": "advanced_math",
+  "trueBand": "B1",
+  "trueMid": 340,
+  "judgeRP67": 350
+ },
+ {
+  "id": 13,
+  "domain": "advanced_math",
+  "trueBand": "B2",
+  "trueMid": 390,
+  "judgeRP67": 429
+ },
+ {
+  "id": 14,
+  "domain": "advanced_math",
+  "trueBand": "B3",
+  "trueMid": 440,
+  "judgeRP67": 350
+ },
+ {
+  "id": 15,
+  "domain": "advanced_math",
+  "trueBand": "B3",
+  "trueMid": 440,
+  "judgeRP67": 456
+ },
+ {
+  "id": 16,
+  "domain": "advanced_math",
+  "trueBand": "B4",
+  "trueMid": 505,
+  "judgeRP67": 517
+ },
+ {
+  "id": 17,
+  "domain": "advanced_math",
+  "trueBand": "B4",
+  "trueMid": 505,
+  "judgeRP67": 577
+ },
+ {
+  "id": 18,
+  "domain": "advanced_math",
+  "trueBand": "B5",
+  "trueMid": 575,
+  "judgeRP67": 603
+ },
+ {
+  "id": 19,
+  "domain": "advanced_math",
+  "trueBand": "B5",
+  "trueMid": 575,
+  "judgeRP67": 561
+ },
+ {
+  "id": 20,
+  "domain": "advanced_math",
+  "trueBand": "B6",
+  "trueMid": 640,
+  "judgeRP67": 604
+ },
+ {
+  "id": 21,
+  "domain": "advanced_math",
+  "trueBand": "B6",
+  "trueMid": 640,
+  "judgeRP67": 629
+ },
+ {
+  "id": 22,
+  "domain": "advanced_math",
+  "trueBand": "B7",
+  "trueMid": 720,
+  "judgeRP67": 657
+ },
+ {
+  "id": 23,
+  "domain": "advanced_math",
+  "trueBand": "B7",
+  "trueMid": 720,
+  "judgeRP67": 720
+ },
+ {
+  "id": 24,
+  "domain": "psda",
+  "trueBand": "B1",
+  "trueMid": 340,
+  "judgeRP67": 350
+ },
+ {
+  "id": 25,
+  "domain": "psda",
+  "trueBand": "B1",
+  "trueMid": 340,
+  "judgeRP67": 350
+ },
+ {
+  "id": 26,
+  "domain": "psda",
+  "trueBand": "B2",
+  "trueMid": 390,
+  "judgeRP67": 350
+ },
+ {
+  "id": 27,
+  "domain": "psda",
+  "trueBand": "B2",
+  "trueMid": 390,
+  "judgeRP67": 350
+ },
+ {
+  "id": 28,
+  "domain": "psda",
+  "trueBand": "B3",
+  "trueMid": 440,
+  "judgeRP67": 435
+ },
+ {
+  "id": 29,
+  "domain": "psda",
+  "trueBand": "B3",
+  "trueMid": 440,
+  "judgeRP67": 350
+ },
+ {
+  "id": 30,
+  "domain": "psda",
+  "trueBand": "B4",
+  "trueMid": 505,
+  "judgeRP67": 562
+ },
+ {
+  "id": 31,
+  "domain": "psda",
+  "trueBand": "B5",
+  "trueMid": 575,
+  "judgeRP67": 533
+ },
+ {
+  "id": 32,
+  "domain": "psda",
+  "trueBand": "B5",
+  "trueMid": 575,
+  "judgeRP67": 443
+ },
+ {
+  "id": 33,
+  "domain": "psda",
+  "trueBand": "B6",
+  "trueMid": 640,
+  "judgeRP67": 637
+ }
+]

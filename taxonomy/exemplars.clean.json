@@ -1,0 +1,206 @@
+[
+ {
+  "domain": "algebra",
+  "band": "B1",
+  "key": "A",
+  "stem": "A principal used a total of 25 flags that were either blue or yellow for field day. The principal used 20 blue flags. How many yellow flags were used? 5 20 25 30"
+ },
+ {
+  "domain": "algebra",
+  "band": "B1",
+  "key": "A",
+  "stem": "8 x = 88 What value of x is the solution to the given equation? 11 80 96 704"
+ },
+ {
+  "domain": "algebra",
+  "band": "B3",
+  "key": "A",
+  "stem": "A total of 364 paper straws of equal length were used to construct two types of polygons: triangles and rectangles. The triangles and rectangles were constructed so that no two polygons had a common side. The equation 3 x + 4 y = 364 represents this situation, where x is the number of triangles constructed and y is the number of rectangles constructed. What is the best interpretation of x,y=24,73 in this context? If 24 triangles were constructed, then 73 rectangles were constructed. If 24 triangles were constructed, then 73 paper straws were used. If 73 triangles were constructed, then 24 rect"
+ },
+ {
+  "domain": "algebra",
+  "band": "B3",
+  "key": "A",
+  "stem": "y = 70 x + 8 Which table gives three values of x and their corresponding values of y for the given equation? x y 0 8 2 148 4 288 x y 0 70 2 78 4 86 x y 0 70 2 140 4 280 x y 0 8 2 132 4 272"
+ },
+ {
+  "domain": "algebra",
+  "band": "B4",
+  "key": "2",
+  "stem": "2x+16=ax+8 In the given equation, a is a constant. If the equation has infinitely many solutions, what is the value of a ?"
+ },
+ {
+  "domain": "algebra",
+  "band": "B4",
+  "key": "C",
+  "stem": "In the xy-plane, the graph of the linear function f contains the points 0,3 and 7,31 . Which equation defines f , where y=fx ? fx=28x+34 fx=3x+38 fx=4x+3 fx=7x+3"
+ },
+ {
+  "domain": "algebra",
+  "band": "B5",
+  "key": "A",
+  "stem": "Which of the following systems of linear equations has no solution? y = 6 x + 3 y = 6 x + 9 y = 10 y = 10 x + 10 y = 14 x + 14 y = 10 x + 14 x = 3 y = 10"
+ },
+ {
+  "domain": "algebra",
+  "band": "B5",
+  "key": "B",
+  "stem": "A model estimates that whales from the genus Eschrichtius travel 72 to 77 miles in the ocean each day during their migration. Based on this model, which inequality represents the estimated total number of miles, x , a whale from the genus Eschrichtius could travel in 16 days of its migration? 72+16≤x≤77+16 7216≤x≤7716 72≤16+x≤77 72≤16x≤77"
+ },
+ {
+  "domain": "algebra",
+  "band": "B6",
+  "key": "A",
+  "stem": "Fx=95x-273.15+32 The function F gives the temperature, in degrees Fahrenheit, that corresponds to a temperature of x kelvins. If a temperature increased by 9.10 kelvins, by how much did the temperature increase, in degrees Fahrenheit? 16.38 48.38 475.29 507.29"
+ },
+ {
+  "domain": "algebra",
+  "band": "B6",
+  "key": "-12",
+  "stem": "The functions f and g are defined as fx= 1 4 x - 9 and gx= 3 4 x + 21 . If the function h is defined as h(x)=f(x)+g(x) , what is the x-coordinate of the x-intercept of the graph of y=hx in the xy-plane?"
+ },
+ {
+  "domain": "algebra",
+  "band": "B7",
+  "key": "B",
+  "stem": "If x+63=x+613 , the value of x+6 is between which of the following pairs of values? -7 and -3 -2 and 2 2 and 7 8 and 13"
+ },
+ {
+  "domain": "algebra",
+  "band": "B7",
+  "key": "D",
+  "stem": "The cost of renting a backhoe for up to 10 days is $270 for the first day and $135 for each additional day. Which of the following equations gives the cost y , in dollars, of renting the backhoe for x days, where x is a positive integer and x≤10 ? y = 270 x - 135 y = 270 x + 135 y = 135 x + 270 y = 135 x + 135"
+ },
+ {
+  "domain": "advanced_math",
+  "band": "B1",
+  "key": "D",
+  "stem": "Which expression is equivalent to 9x+6x+2y+3y ? 3 x + 5 y 6 x + 8 y 12 x + 8 y 15 x + 5 y"
+ },
+ {
+  "domain": "advanced_math",
+  "band": "B2",
+  "key": "C",
+  "stem": "Which expression is equivalent to 12 x + 27 ? 129x+1 2712x+1 34x+9 39x+24"
+ },
+ {
+  "domain": "advanced_math",
+  "band": "B3",
+  "key": "11",
+  "stem": "x - 2 = 9 What is one possible solution to the given equation?"
+ },
+ {
+  "domain": "advanced_math",
+  "band": "B3",
+  "key": "B",
+  "stem": "The function f is defined by f(x)=4+x . What is the value of f144 ? 0 16 40 76"
+ },
+ {
+  "domain": "advanced_math",
+  "band": "B4",
+  "key": "C",
+  "stem": "The area A, in square centimeters, of a rectangular painting can be represented by the expression ww+29 , where w is the width, in centimeters, of the painting. Which expression represents the length, in centimeters, of the painting? w 29 w+29 ww+29"
+ },
+ {
+  "domain": "advanced_math",
+  "band": "B4",
+  "key": "B",
+  "stem": "Time (years) Total amount (dollars) 0 670.00 1 674.02 2 678.06 Sara opened a savings account at a bank. The table shows the exponential relationship between the time t , in years, since Sara opened the account and the total amount d , in dollars, in the account. If Sara made no additional deposits or withdrawals, which of the following equations best represents the relationship between t and d ? d=0.0061+670t d=6701+0.006t d=1+0.006t d=1+670t"
+ },
+ {
+  "domain": "advanced_math",
+  "band": "B5",
+  "key": "D",
+  "stem": "Which expression represents the product of x-6y3z5 and x4z5+y8z-7 ? x-2z10+y11z-2 x-2z10+x-6z-2 x-2y3z10+y8z-7 x-2y3z10+x-6y11z-2"
+ },
+ {
+  "domain": "advanced_math",
+  "band": "B5",
+  "key": "A",
+  "stem": "fx= x 2 - 18 x - 360 If the given function f is graphed in the xy-plane, where y=fx , what is an x-intercept of the graph? -12,0 -30,0 -360,0 12,0"
+ },
+ {
+  "domain": "advanced_math",
+  "band": "B6",
+  "key": "D",
+  "stem": "fx=9,0000.66x The given function f models the number of advertisements a company sent to its clients each year, where x represents the number of years since 1997 , and 0≤x≤5 . If y=fx is graphed in the xy-plane, which of the following is the best interpretation of the y-intercept of the graph in this context? The minimum estimated number of advertisements the company sent to its clients during the 5 years was 1,708 . The minimum estimated number of advertisements the company sent to its clients during the 5 years was 9,000 . The estimated number of advertisements the company sent to its client"
+ },
+ {
+  "domain": "advanced_math",
+  "band": "B6",
+  "key": "D",
+  "stem": "fx= x - 14 x + 19 The function f is defined by the given equation. For what value of x does fx reach its minimum? -266 -19 - 33 2 - 5 2"
+ },
+ {
+  "domain": "advanced_math",
+  "band": "B7",
+  "key": "C",
+  "stem": "A quadratic function models the height, in feet, of an object above the ground in terms of the time, in seconds, after the object is launched off an elevated surface. The model indicates the object has an initial height of 10 feet above the ground and reaches its maximum height of 1,034 feet above the ground 8 seconds after being launched. Based on the model, what is the height, in feet, of the object above the ground 10 seconds after being launched? 234 778 970 1,014"
+ },
+ {
+  "domain": "advanced_math",
+  "band": "B7",
+  "key": "20",
+  "stem": "Function f is defined by fx=-ax+b , where a and b are constants. In the xy-plane, the graph of y=fx-12 has a y-intercept at 0,-757 . The product of a and b is 320 7 . What is the value of a ?"
+ },
+ {
+  "domain": "psda",
+  "band": "B1",
+  "key": "A",
+  "stem": "A wind turbine completes 900 revolutions in 50 minutes. At this rate, how many revolutions per minute does this turbine complete? 18 850 950 1,400"
+ },
+ {
+  "domain": "psda",
+  "band": "B1",
+  "key": "B",
+  "stem": "What is 10% of 370 ? 27 37 333 360"
+ },
+ {
+  "domain": "psda",
+  "band": "B2",
+  "key": "A",
+  "stem": "A kangaroo has a mass of 28 kilograms. What is the kangaroo's mass, in grams? (1 kilogram=1,000 grams) 28,000 1,028 972 784"
+ },
+ {
+  "domain": "psda",
+  "band": "B2",
+  "key": "30",
+  "stem": "The data for the 10 categories are as follows: Group 1: 30 Group 2: 62 Group 3: 36 Group 4: 50 Group 5: 46 Group 6: 40 Group 7: 54 Group 8: 60 Group 9: 16 Group 10: 20 The bar graph shows the distribution of 414 books collected by 10 different groups for a book drive. How many books were collected by group 1 ?"
+ },
+ {
+  "domain": "psda",
+  "band": "B3",
+  "key": "B",
+  "stem": "Last year, 200 students enrolled in an interior design program. This year, the number of students enrolled is 147% of last year’s number. How many students are enrolled in the interior design program this year? 247 294 347 394"
+ },
+ {
+  "domain": "psda",
+  "band": "B3",
+  "key": "D",
+  "stem": "Each rock in a collection of 70 rocks was classified as either igneous, metamorphic, or sedimentary, as shown in the frequency table. Classification Frequency igneous 10 metamorphic 33 sedimentary 27 If one of these rocks is selected at random, what is the probability of selecting a rock that is igneous? 1027 1033 1060 1070"
+ },
+ {
+  "domain": "psda",
+  "band": "B4",
+  "key": "B",
+  "stem": "A sample consisting of 720 adults who own televisions was selected at random for a study. Based on the sample, it is estimated that 32 % of all adults who own televisions use their televisions to watch nature shows, with an associated margin of error of 3.41 % . Which of the following is the most plausible conclusion about all adults who own televisions? More than 35.41 % of all adults who own televisions use their televisions to watch nature shows. Between 28.59 % and 35.41 % of all adults who own televisions use their televisions to watch nature shows. Since the sample included adults who ow"
+ },
+ {
+  "domain": "psda",
+  "band": "B5",
+  "key": "88",
+  "stem": "At a conference, there are a total of 275 attendees. Each attendee is assigned to either group A, group B, or group C. If one of these attendees is selected at random, the probability of selecting an attendee who is assigned to group A is 0.44 and the probability of selecting an attendee who is assigned to group B is 0.24 . How many attendees are assigned to group C?"
+ },
+ {
+  "domain": "psda",
+  "band": "B5",
+  "key": "143",
+  "stem": "How many tablespoons are equivalent to 14 teaspoons? 3 teaspoons=1 tablespoon"
+ },
+ {
+  "domain": "psda",
+  "band": "B6",
+  "key": "C",
+  "stem": "37 % of the items in a box are green. Of those, 37 % are also rectangular. Of the green rectangular items, 42 % are also metal. Which of the following is closest to the percentage of the items in the box that are not rectangular green metal items? 1.16 % 57.50 % 94.25 % 98.84 %"
+ }
+]

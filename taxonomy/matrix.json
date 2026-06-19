@@ -1,0 +1,152 @@
+{
+  "_source": "College Board, Skills Insight for the Digital SAT Suite (2023), Table 10 — Math Section. Difficulty operationalized by RP67 mapping; exemplars also meet RP50.",
+  "_idScheme": "{DOMAIN}.{BAND}.s{n}  e.g. ALG.B3.s1",
+  "_programs": {
+    "ALL": ["SAT", "PSAT_NMSQT", "PSAT_10", "PSAT_8_9"],
+    "SAT_PSAT": ["SAT", "PSAT_NMSQT", "PSAT_10"],
+    "SAT_ONLY": ["SAT"],
+    "PSAT_1011": ["PSAT_NMSQT", "PSAT_10"]
+  },
+  "bands": [
+    { "id": "B1", "scaleMin": 200, "scaleMax": 369, "label": "<370", "midpoint": 340 },
+    { "id": "B2", "scaleMin": 370, "scaleMax": 410, "label": "370–410", "midpoint": 390 },
+    { "id": "B3", "scaleMin": 420, "scaleMax": 460, "label": "420–460", "midpoint": 440 },
+    { "id": "B4", "scaleMin": 470, "scaleMax": 540, "label": "470–540", "midpoint": 505 },
+    { "id": "B5", "scaleMin": 550, "scaleMax": 600, "label": "550–600", "midpoint": 575 },
+    { "id": "B6", "scaleMin": 610, "scaleMax": 670, "label": "610–670", "midpoint": 640 },
+    { "id": "B7", "scaleMin": 680, "scaleMax": 800, "label": "680–800", "midpoint": 720 }
+  ],
+  "domains": [
+    { "id": "algebra", "label": "Algebra" },
+    { "id": "advanced_math", "label": "Advanced Math" },
+    { "id": "psda", "label": "Problem-Solving and Data Analysis" },
+    { "id": "geometry_trig", "label": "Geometry and Trigonometry", "note": "PSAT 8/9: Geometry only (no Trigonometry)" }
+  ],
+  "cells": [
+    { "domain": "algebra", "band": "B1", "statements": [
+      { "id": "ALG.B1.s1", "text": "Within a context, create and/or solve a simple equation in one variable.", "programs": ["SAT","PSAT_NMSQT","PSAT_10","PSAT_8_9"], "types": ["mcq","spr"], "figureLoad": "none", "templates": ["lin_context_one_step","lin_solve_value"] },
+      { "id": "ALG.B1.s2", "text": "Solve a simple one-step linear equation in one variable.", "programs": ["SAT","PSAT_NMSQT","PSAT_10","PSAT_8_9"], "types": ["mcq","spr"], "figureLoad": "none", "templates": ["lin_solve_value"] }
+    ]},
+    { "domain": "algebra", "band": "B2", "statements": [
+      { "id": "ALG.B2.s1", "text": "Solve problems using a graph or linear equation when given one or more of: slope, intercepts, input-output pairs.", "programs": ["SAT","PSAT_NMSQT","PSAT_10","PSAT_8_9"], "types": ["mcq","spr"], "figureLoad": "opt", "templates": ["lin_from_graph","lin_interpret","lin_intercepts"] },
+      { "id": "ALG.B2.s2", "text": "Identify the coordinates of a solution, point, or intercept when given a graph of a linear equation or a graph of a system of two linear equations.", "programs": ["SAT","PSAT_NMSQT","PSAT_10","PSAT_8_9"], "types": ["mcq","spr"], "figureLoad": "req", "templates": ["read_graph_point","system_graph_solution"] }
+    ]},
+    { "domain": "algebra", "band": "B3", "statements": [
+      { "id": "ALG.B3.s1", "text": "With or without a simple context, create a linear equation or inequality in one or two variables that represents the possible value(s) of the variable.", "programs": ["SAT","PSAT_NMSQT","PSAT_10","PSAT_8_9"], "types": ["mcq","spr"], "figureLoad": "none", "templates": ["lin_create_1or2var","inequality_model"] },
+      { "id": "ALG.B3.s2", "text": "Within a context, use linear equations to find input-output pairs and to interpret input-output pairs or rate of change in terms of a context.", "programs": ["SAT","PSAT_NMSQT","PSAT_10","PSAT_8_9"], "types": ["mcq","spr"], "figureLoad": "opt", "templates": ["lin_function_model","lin_interpret"] }
+    ]},
+    { "domain": "algebra", "band": "B4", "statements": [
+      { "id": "ALG.B4.s1", "text": "Within a complex context, choose the best interpretation of a part of an equation or of an input-output pair when given a linear equation that models the situation.", "programs": ["SAT","PSAT_NMSQT","PSAT_10","PSAT_8_9"], "types": ["mcq"], "figureLoad": "none", "templates": ["lin_interpret_complex"] },
+      { "id": "ALG.B4.s2", "text": "Solve problems about linear relationships, making use of structure when present, that include equations, intercepts, slope, and input-output pairs, including finding equations for parallel and perpendicular lines.", "programs": ["SAT","PSAT_NMSQT","PSAT_10","PSAT_8_9"], "types": ["mcq","spr"], "figureLoad": "opt", "templates": ["lin_from_2pt","parallel_perp_slope","lin_intercepts"] }
+    ]},
+    { "domain": "algebra", "band": "B5", "statements": [
+      { "id": "ALG.B5.s1", "text": "With or without a context, create a linear equation or inequality in two variables when given two input-output pairs, a table of values, or details about a translation of a given function.", "programs": ["SAT","PSAT_NMSQT","PSAT_10","PSAT_8_9"], "types": ["mcq","spr"], "figureLoad": "opt", "templates": ["linear_from_data","lin_from_2pt","lin_translate"] },
+      { "id": "ALG.B5.s2", "text": "With or without a complex context, create one or both of the two linear equations in two variables that model the situation, or find and use the solution to a given system of linear equations.", "programs": ["SAT","PSAT_NMSQT","PSAT_10","PSAT_8_9"], "types": ["mcq","spr"], "figureLoad": "none", "templates": ["system_create","system_solve"] }
+    ]},
+    { "domain": "algebra", "band": "B6", "statements": [
+      { "id": "ALG.B6.s1", "text": "Find and interpret the meaning of intercepts or slope for complex linear equations.", "programs": ["SAT","PSAT_NMSQT","PSAT_10","PSAT_8_9"], "types": ["mcq","spr"], "figureLoad": "none", "templates": ["lin_interpret_complex","lin_intercepts"] },
+      { "id": "ALG.B6.s2", "text": "Find the number of solutions to a complex linear equation; find the number of solutions to a system of two linear equations, or find missing coefficients of a linear equation or a system when the number of solutions is given.", "programs": ["SAT","PSAT_NMSQT","PSAT_10","PSAT_8_9"], "gateNote": "System-of-equations and missing-coefficient variants: SAT, PSAT/NMSQT, and PSAT 10 only.", "types": ["mcq","spr"], "figureLoad": "none", "templates": ["number_of_solutions","system_no_solution","system_infinite","system_missing_coeff"] },
+      { "id": "ALG.B6.s3", "text": "Make connections between a table, an algebraic representation, a graph, a solution, or features of a graph of a complex linear equation or a system of two linear equations.", "programs": ["SAT","PSAT_NMSQT","PSAT_10","PSAT_8_9"], "types": ["mcq","spr"], "figureLoad": "opt", "templates": ["lin_representations","system_representations"] }
+    ]},
+    { "domain": "algebra", "band": "B7", "statements": [
+      { "id": "ALG.B7.s1", "text": "With or without a context, create and/or solve a linear equation or system of linear equations, or identify the correct coefficients or constants in the equation(s) that represent(s) the situation.", "programs": ["SAT","PSAT_NMSQT","PSAT_10","PSAT_8_9"], "types": ["mcq","spr"], "figureLoad": "none", "templates": ["lin_create_solve","system_create","system_missing_coeff"] },
+      { "id": "ALG.B7.s2", "text": "Make connections between different representations of linear equations in one variable, linear functions, linear equations in two variables, systems of two linear equations, and linear inequalities when these representations include symbolic representations that may contain variable constants.", "programs": ["SAT","PSAT_NMSQT","PSAT_10","PSAT_8_9"], "gateNote": "Linear-inequality representations: SAT, PSAT/NMSQT, and PSAT 10 only.", "types": ["mcq","spr"], "figureLoad": "opt", "templates": ["lin_representations","parametric_system"] }
+    ]},
+
+    { "domain": "advanced_math", "band": "B1", "statements": [
+      { "id": "ADV.B1.s1", "text": "Identify the y-intercept when given the graph of a nonlinear function.", "programs": ["SAT","PSAT_NMSQT","PSAT_10","PSAT_8_9"], "types": ["mcq","spr"], "figureLoad": "req", "templates": ["read_graph_intercept"] },
+      { "id": "ADV.B1.s2", "text": "Rewrite an expression by combining like terms through addition.", "programs": ["SAT","PSAT_NMSQT","PSAT_10","PSAT_8_9"], "types": ["mcq","spr"], "figureLoad": "none", "templates": ["poly_operations"] }
+    ]},
+    { "domain": "advanced_math", "band": "B2", "statements": [
+      { "id": "ADV.B2.s1", "text": "Identify a key feature of a graph, such as an intercept, a solution, or a translation, when given the graph of either a nonlinear function or a system consisting of a linear and a nonlinear function.", "programs": ["SAT","PSAT_NMSQT","PSAT_10","PSAT_8_9"], "gateNote": "Translation variant: SAT, PSAT/NMSQT, and PSAT 10 only.", "types": ["mcq","spr"], "figureLoad": "req", "templates": ["read_nonlinear_feature"] },
+      { "id": "ADV.B2.s2", "text": "Rewrite an expression by combining like terms, factoring out a greatest common factor, or applying the distributive property.", "programs": ["SAT","PSAT_NMSQT","PSAT_10","PSAT_8_9"], "types": ["mcq","spr"], "figureLoad": "none", "templates": ["poly_operations","poly_factor"] }
+    ]},
+    { "domain": "advanced_math", "band": "B3", "statements": [
+      { "id": "ADV.B3.s1", "text": "Solve quadratic equations in factored form; solve equations containing absolute value expressions or simple radical expressions.", "programs": ["SAT","PSAT_NMSQT","PSAT_10","PSAT_8_9"], "gateNote": "Absolute-value and simple-radical variants: SAT, PSAT/NMSQT, and PSAT 10 only.", "types": ["mcq","spr"], "figureLoad": "none", "templates": ["quad_factored","abs_value","radical_simple"] },
+      { "id": "ADV.B3.s2", "text": "Rewrite equations by finding the sum of two polynomials or solving for a variable of interest.", "programs": ["SAT","PSAT_NMSQT","PSAT_10","PSAT_8_9"], "types": ["mcq","spr"], "figureLoad": "none", "templates": ["poly_operations","rational_rearrange"] }
+    ]},
+    { "domain": "advanced_math", "band": "B4", "statements": [
+      { "id": "ADV.B4.s1", "text": "With or without a context, use (or create and use) a quadratic or exponential equation that represents the relationship between two variables.", "programs": ["SAT","PSAT_NMSQT","PSAT_10","PSAT_8_9"], "gateNote": "Create-and-use variant: SAT, PSAT/NMSQT, and PSAT 10 only.", "types": ["mcq","spr"], "figureLoad": "opt", "templates": ["quad_use","exp_model"] },
+      { "id": "ADV.B4.s2", "text": "Solve quadratic equations using factoring; solve equations that include radical or rational terms, or solve a system of one linear and one nonlinear equation; solve polynomial equations using factoring.", "programs": ["SAT","PSAT_NMSQT","PSAT_10","PSAT_8_9"], "gateNote": "Polynomial-by-factoring variant: PSAT/NMSQT and PSAT 10 only.", "types": ["mcq","spr"], "figureLoad": "none", "templates": ["quad_factor","radical_rational","nonlinear_system","poly_factor"] }
+    ]},
+    { "domain": "advanced_math", "band": "B5", "statements": [
+      { "id": "ADV.B5.s1", "text": "Use (or create and use) an equation of a quadratic or exponential function or of a system of a linear and a quadratic function, and identify key features of the graph.", "programs": ["SAT","PSAT_NMSQT","PSAT_10","PSAT_8_9"], "gateNote": "Create-and-use variant: SAT, PSAT/NMSQT, and PSAT 10 only.", "types": ["mcq","spr"], "figureLoad": "opt", "templates": ["quad_vertex","exp_model","linquad_system"] },
+      { "id": "ADV.B5.s2", "text": "Rewrite a polynomial expression by finding the product of a monomial and a binomial, by finding the product of two binomials, or by factoring.", "programs": ["SAT","PSAT_NMSQT","PSAT_10","PSAT_8_9"], "types": ["mcq","spr"], "figureLoad": "none", "templates": ["poly_expand","poly_factor"] }
+    ]},
+    { "domain": "advanced_math", "band": "B6", "statements": [
+      { "id": "ADV.B6.s1", "text": "Within a context, create a quadratic or exponential equation that represents the situation, and solve for an unknown value.", "programs": ["SAT","PSAT_NMSQT","PSAT_10"], "gateNote": "SAT, PSAT/NMSQT, and PSAT 10 only.", "types": ["mcq","spr"], "figureLoad": "none", "templates": ["quad_from_area","exp_model"] },
+      { "id": "ADV.B6.s2", "text": "Within a context, interpret a key feature of the graph of an exponential or quadratic equation representing the situation.", "programs": ["SAT","PSAT_NMSQT","PSAT_10"], "gateNote": "SAT, PSAT/NMSQT, and PSAT 10 only.", "types": ["mcq"], "figureLoad": "opt", "templates": ["interpret_nonlinear_feature"] },
+      { "id": "ADV.B6.s3", "text": "Make connections between either the graph of a quadratic or exponential function or points on the graph of a function and its algebraic representation, and understand how a translation of a function affects the graph or the equation.", "programs": ["SAT","PSAT_NMSQT","PSAT_10","PSAT_8_9"], "gateNote": "Translation variant: SAT, PSAT/NMSQT, and PSAT 10 only.", "types": ["mcq","spr"], "figureLoad": "opt", "templates": ["nonlinear_representations","function_translation"] }
+    ]},
+    { "domain": "advanced_math", "band": "B7", "statements": [
+      { "id": "ADV.B7.s1", "text": "Solve problems with or without context involving one or more nonlinear equations to find the value of an unknown constant.", "programs": ["SAT","PSAT_NMSQT","PSAT_10","PSAT_8_9"], "types": ["mcq","spr"], "figureLoad": "none", "templates": ["nonlinear_unknown_const","quad_no_xint"] },
+      { "id": "ADV.B7.s2", "text": "Solve a complex equation or formula for a variable of interest; use properties of exponents and properties of polynomial, rational, and radical expressions to rewrite complex expressions, using structure when present, or determine the most suitable form of an equation to display a certain feature.", "programs": ["SAT","PSAT_NMSQT","PSAT_10","PSAT_8_9"], "gateNote": "Exponent/polynomial/rational/radical rewriting and form-selection: SAT only.", "types": ["mcq","spr"], "figureLoad": "none", "templates": ["rational_rearrange","exponent_laws","exp_rewrite","poly_rewrite_form"] }
+    ]},
+
+    { "domain": "psda", "band": "B1", "statements": [
+      { "id": "PSDA.B1.s1", "text": "Solve simple problems using percents or unit rates.", "programs": ["SAT","PSAT_NMSQT","PSAT_10","PSAT_8_9"], "types": ["mcq","spr"], "figureLoad": "none", "templates": ["percent_simple","unit_rate"] },
+      { "id": "PSDA.B1.s2", "text": "Find the median of a list of values presented in ascending order.", "programs": ["SAT","PSAT_NMSQT","PSAT_10","PSAT_8_9"], "types": ["mcq","spr"], "figureLoad": "none", "templates": ["median_ordered"] }
+    ]},
+    { "domain": "psda", "band": "B2", "statements": [
+      { "id": "PSDA.B2.s1", "text": "Solve problems using percentages, unit rates, and unit conversions.", "programs": ["SAT","PSAT_NMSQT","PSAT_10","PSAT_8_9"], "types": ["mcq","spr"], "figureLoad": "none", "templates": ["percent_chain","unit_rate","unit_conversion"] },
+      { "id": "PSDA.B2.s2", "text": "Read, compare, and interpret data presented in a bar graph or frequency table.", "programs": ["SAT","PSAT_NMSQT","PSAT_10","PSAT_8_9"], "types": ["mcq","spr"], "figureLoad": "req", "templates": ["read_bar_freq"] }
+    ]},
+    { "domain": "psda", "band": "B3", "statements": [
+      { "id": "PSDA.B3.s1", "text": "Solve problems involving percent, including finding percentages and solving problems in which the percentage is greater than 100.", "programs": ["SAT","PSAT_NMSQT","PSAT_10","PSAT_8_9"], "types": ["mcq","spr"], "figureLoad": "none", "templates": ["percent_chain","percent_over_100"] },
+      { "id": "PSDA.B3.s2", "text": "Read and interpret data displayed in a two-way table; calculate the probability of an event from a frequency table or a two-way table.", "programs": ["SAT","PSAT_NMSQT","PSAT_10","PSAT_8_9"], "types": ["mcq","spr"], "figureLoad": "req", "templates": ["twoway_table","prob_simple"] }
+    ]},
+    { "domain": "psda", "band": "B4", "statements": [
+      { "id": "PSDA.B4.s1", "text": "Identify, interpret, and use ratios, proportions, percentages, and rates, expressing them in equivalent forms, to solve problems.", "programs": ["SAT","PSAT_NMSQT","PSAT_10","PSAT_8_9"], "types": ["mcq","spr"], "figureLoad": "none", "templates": ["ratio_rate","percent_chain"] },
+      { "id": "PSDA.B4.s2", "text": "With or without a context, compare and contrast data sets using mean, median, and standard deviation.", "programs": ["SAT","PSAT_NMSQT","PSAT_10","PSAT_8_9"], "gateNote": "Standard-deviation variant: SAT, PSAT/NMSQT, and PSAT 10 only.", "types": ["mcq","spr"], "figureLoad": "opt", "templates": ["center_spread"] },
+      { "id": "PSDA.B4.s3", "text": "Fit a linear model to data displayed in a scatterplot.", "programs": ["SAT","PSAT_NMSQT","PSAT_10","PSAT_8_9"], "types": ["mcq","spr"], "figureLoad": "req", "templates": ["scatter_lobf"] },
+      { "id": "PSDA.B4.s4", "text": "Select plausible values of the population mean or population proportion when given a sample mean or sample proportion and the associated margin of error.", "programs": ["SAT"], "gateNote": "SAT only.", "types": ["mcq","spr"], "figureLoad": "none", "templates": ["margin_error"] }
+    ]},
+    { "domain": "psda", "band": "B5", "statements": [
+      { "id": "PSDA.B5.s1", "text": "With or without a context, solve problems using growth factor expressed as a percent or complex unit.", "programs": ["SAT","PSAT_NMSQT","PSAT_10","PSAT_8_9"], "types": ["mcq","spr"], "figureLoad": "none", "templates": ["growth_factor"] },
+      { "id": "PSDA.B5.s2", "text": "Apply the understanding that the probability of all possible outcomes of an event has a sum of 1.", "programs": ["SAT","PSAT_NMSQT","PSAT_10","PSAT_8_9"], "types": ["mcq","spr"], "figureLoad": "opt", "templates": ["prob_complement"] }
+    ]},
+    { "domain": "psda", "band": "B6", "statements": [
+      { "id": "PSDA.B6.s1", "text": "Solve multistep problems using ratios, rates, percentages, and derived units, including problems that arise from products and quotients.", "programs": ["SAT","PSAT_NMSQT","PSAT_10","PSAT_8_9"], "types": ["mcq","spr"], "figureLoad": "none", "templates": ["ratio_rate","unit_conversion","percent_chain"] },
+      { "id": "PSDA.B6.s2", "text": "Determine the average rate of change for data displayed in a graph; determine the mean and median of a data set presented in a frequency table.", "programs": ["SAT","PSAT_NMSQT","PSAT_10","PSAT_8_9"], "types": ["mcq","spr"], "figureLoad": "req", "templates": ["avg_rate_of_change","mean_median_freq"] },
+      { "id": "PSDA.B6.s3", "text": "Calculate the conditional probability of an event from a two-way table.", "programs": ["SAT","PSAT_NMSQT","PSAT_10","PSAT_8_9"], "types": ["mcq","spr"], "figureLoad": "req", "templates": ["prob_conditional"] }
+    ]},
+    { "domain": "psda", "band": "B7", "statements": [
+      { "id": "PSDA.B7.s1", "text": "Identify or describe the population to which the results of a research study can be extended.", "programs": ["SAT"], "gateNote": "SAT only.", "types": ["mcq"], "figureLoad": "none", "templates": ["study_population"] },
+      { "id": "PSDA.B7.s2", "text": "Determine how the mean, median, and range of a data set are affected by changes in the data set.", "programs": ["SAT","PSAT_NMSQT","PSAT_10","PSAT_8_9"], "types": ["mcq","spr"], "figureLoad": "opt", "templates": ["data_effect_change"] }
+    ]},
+
+    { "domain": "geometry_trig", "band": "B1", "statements": [
+      { "id": "GEO.B1.s1", "text": "Find the volume of a right rectangular prism when given the lengths of the edges and the formula for the volume.", "programs": ["SAT","PSAT_NMSQT","PSAT_10","PSAT_8_9"], "types": ["mcq","spr"], "figureLoad": "opt", "templates": ["solid_measure"] },
+      { "id": "GEO.B1.s2", "text": "Find the area of a rectangle when given the lengths of the sides.", "programs": ["SAT","PSAT_NMSQT","PSAT_10","PSAT_8_9"], "types": ["mcq","spr"], "figureLoad": "opt", "templates": ["rectangle_area"] }
+    ]},
+    { "domain": "geometry_trig", "band": "B2", "statements": [
+      { "id": "GEO.B2.s1", "text": "Solve problems involving the perimeter and side lengths of plane figures.", "programs": ["SAT","PSAT_NMSQT","PSAT_10","PSAT_8_9"], "types": ["mcq","spr"], "figureLoad": "opt", "templates": ["perimeter_sides"] },
+      { "id": "GEO.B2.s2", "text": "Solve problems by applying theorems related to parallel lines cut by a transversal.", "programs": ["SAT","PSAT_NMSQT","PSAT_10"], "gateNote": "SAT, PSAT/NMSQT, and PSAT 10 only.", "types": ["mcq","spr"], "figureLoad": "opt", "templates": ["angles_parallel"] }
+    ]},
+    { "domain": "geometry_trig", "band": "B3", "statements": [
+      { "id": "GEO.B3.s1", "text": "Solve problems involving the area and side lengths of plane figures.", "programs": ["SAT","PSAT_NMSQT","PSAT_10","PSAT_8_9"], "types": ["mcq","spr"], "figureLoad": "opt", "templates": ["area_sides"] },
+      { "id": "GEO.B3.s2", "text": "Find the measure of an angle by applying definitions and theorems about angles, such as the triangle angle sum theorem and theorems related to angles formed by intersecting lines.", "programs": ["SAT","PSAT_NMSQT","PSAT_10","PSAT_8_9"], "gateNote": "Intersecting-lines theorems: SAT, PSAT/NMSQT, and PSAT 10 only.", "types": ["mcq","spr"], "figureLoad": "opt", "templates": ["triangle_angle_sum","angles_intersecting"] },
+      { "id": "GEO.B3.s3", "text": "Use the Pythagorean theorem to find the length of a hypotenuse in a right triangle when given the lengths of the two legs.", "programs": ["SAT","PSAT_NMSQT","PSAT_10","PSAT_8_9"], "types": ["mcq","spr"], "figureLoad": "opt", "templates": ["right_triangle"] }
+    ]},
+    { "domain": "geometry_trig", "band": "B4", "statements": [
+      { "id": "GEO.B4.s1", "text": "Solve problems involving the area of a plane figure or the volume of a cube or pyramid.", "programs": ["SAT","PSAT_NMSQT","PSAT_10","PSAT_8_9"], "types": ["mcq","spr"], "figureLoad": "opt", "templates": ["area_sides","solid_measure"] },
+      { "id": "GEO.B4.s2", "text": "Solve problems using concepts and theorems related to scale factors, the sum of angles of triangles, and congruence and similarity.", "programs": ["SAT","PSAT_NMSQT","PSAT_10","PSAT_8_9"], "gateNote": "Congruence and similarity: SAT, PSAT/NMSQT, and PSAT 10 only.", "types": ["mcq","spr"], "figureLoad": "opt", "templates": ["scale_factor","triangle_angle_sum","triangle_similar","triangle_congruent"] },
+      { "id": "GEO.B4.s3", "text": "Find a side length in a given triangle by applying the Pythagorean theorem; find an angle measure in or a side length of a given triangle using the properties of special right triangles.", "programs": ["SAT","PSAT_NMSQT","PSAT_10","PSAT_8_9"], "gateNote": "Special-right-triangle variant: PSAT/NMSQT and PSAT 10 only.", "types": ["mcq","spr"], "figureLoad": "opt", "templates": ["right_triangle","special_right_triangle"] }
+    ]},
+    { "domain": "geometry_trig", "band": "B5", "statements": [
+      { "id": "GEO.B5.s1", "text": "Solve problems using the relationship between sine and cosine of complementary angles; convert between degree measure and radian measure.", "programs": ["SAT"], "gateNote": "SAT only.", "types": ["mcq","spr"], "figureLoad": "none", "templates": ["trig_cofunction","trig_radians"] },
+      { "id": "GEO.B5.s2", "text": "Write an equation of a circle in the xy-plane when given the center of the circle and a point that lies on the circle.", "programs": ["SAT"], "gateNote": "SAT only.", "types": ["mcq","spr"], "figureLoad": "opt", "templates": ["circle_equation"] },
+      { "id": "GEO.B5.s3", "text": "Solve multistep problems involving area and perimeter of plane figures.", "programs": ["SAT","PSAT_NMSQT","PSAT_10","PSAT_8_9"], "types": ["mcq","spr"], "figureLoad": "opt", "templates": ["area_sides","perimeter_sides"] }
+    ]},
+    { "domain": "geometry_trig", "band": "B6", "statements": [
+      { "id": "GEO.B6.s1", "text": "Calculate the surface area, the volume, or a dimension of a prism when given other information about the prism.", "programs": ["SAT","PSAT_NMSQT","PSAT_10","PSAT_8_9"], "types": ["mcq","spr"], "figureLoad": "opt", "templates": ["solid_measure"] },
+      { "id": "GEO.B6.s2", "text": "Solve complex problems by applying the Pythagorean theorem to find a side length of a rectangle or by applying the triangle angle sum theorem.", "programs": ["SAT","PSAT_NMSQT","PSAT_10","PSAT_8_9"], "types": ["mcq","spr"], "figureLoad": "opt", "templates": ["right_triangle","triangle_angle_sum"] },
+      { "id": "GEO.B6.s3", "text": "Solve complex problems by using concepts and theorems related to congruence and similarity of right triangles, including trigonometric ratios of right triangles, or by identifying the impact of changes by a scale factor on perimeter, area, and volume.", "programs": ["SAT","PSAT_NMSQT","PSAT_10"], "gateNote": "SAT, PSAT/NMSQT, and PSAT 10 only.", "types": ["mcq","spr"], "figureLoad": "opt", "templates": ["triangle_similar","trig_ratio","scale_factor_effect"] }
+    ]},
+    { "domain": "geometry_trig", "band": "B7", "statements": [
+      { "id": "GEO.B7.s1", "text": "Solve for missing values in objects modeled by various 2D and 3D geometric shapes by applying formulas for area, surface area, or volume.", "programs": ["SAT","PSAT_NMSQT","PSAT_10","PSAT_8_9"], "types": ["mcq","spr"], "figureLoad": "opt", "templates": ["area_sides","solid_measure"] },
+      { "id": "GEO.B7.s2", "text": "Solve complex problems by applying properties of similar and congruent triangles, theorems related to angles and triangles, or right triangle trigonometry, or use similarity to calculate values of trigonometric ratios.", "programs": ["SAT","PSAT_NMSQT","PSAT_10"], "gateNote": "Base variants: SAT, PSAT/NMSQT, and PSAT 10 only. Similarity→trig-ratios: SAT only.", "types": ["mcq","spr"], "figureLoad": "opt", "templates": ["triangle_similar","triangle_congruent","trig_ratio","trig_similarity"] },
+      { "id": "GEO.B7.s3", "text": "Solve problems using properties and theorems related to circles and parts of circles, such as radii, diameters, tangents, angles, arcs, arc length, and sectors.", "programs": ["SAT"], "gateNote": "SAT only.", "types": ["mcq","spr"], "figureLoad": "opt", "templates": ["circle_equation","circle_chord","circle_arc_sector","circle_tangent"] }
+    ]}
+  ]
+}

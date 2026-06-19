@@ -1,0 +1,86 @@
+{
+  "_note": "DOMAIN grid: Advanced Math. DOMAIN → SUBDOMAIN → variety cells. Every cell's TARGET is a Skills-Insight attribute the ADV statements name — solution · intercept · 'key feature' (umbrella, realized as vertex/intercept) · translation · factor · sum/product OF EXPRESSIONS (polynomial arithmetic). The leash verifies the numeric ones: adv_nonlinear_eq (solution roots, plus/minus only), adv_quadratic_func (key feature = vertex/intercept), adv_radical_rational, adv_polynomial_func (a zero). NO sum/product-of-roots, NO discriminant — those are not rubric attributes. Factor/expand/combine/translation/interpret/create defer to the blinded deep-verifier.",
+  "domain": "advanced_math",
+  "levers": {
+    "B1": ["one concept", "small integers", "read one value or add two like terms"],
+    "B2": ["one–two steps", "factor a GCF / distribute, or read a graph feature", "standard ask"],
+    "B3": ["solve a factored quadratic, radical, or absolute value; or add polynomials", "clean integer roots"],
+    "B4": ["solve by factoring / radical / rational / a linear-nonlinear system; or use a quadratic/exponential model", "standard ask"],
+    "B5": ["use a quadratic/exponential function and identify a key feature; product of binomials or factoring"],
+    "B6": ["create a quadratic/exponential model in context and solve; interpret a key feature; connect graph↔algebra / translation"],
+    "B7": ["solve for an unknown constant; rewrite complex exponent/polynomial/rational/radical expressions using structure"]
+  },
+  "subdomains": {
+    "equivalent_expressions": {
+      "label": "Equivalent expressions",
+      "attributes": ["combine_sum", "factor", "product_expand", "rewrite_structure"],
+      "statements": ["ADV.B1.s2", "ADV.B2.s2", "ADV.B3.s2", "ADV.B5.s2", "ADV.B7.s2"],
+      "cells": [
+        { "key": "adv_combine_like_terms", "band": "B1", "statementId": "ADV.B1.s2", "type": "mcq", "figure": "none", "rep": "expression", "target": "combine_sum", "form": "combine", "contextual": false,
+          "ask": "Combine like terms through ADDITION of two simple polynomials ((3x²+2x)+(x²+5x)); choose the equivalent.", "recompute": "needs-deep-verify", "contract": "{}  // equivalence → deep-verify" },
+        { "key": "adv_factor_gcf", "band": "B2", "statementId": "ADV.B2.s2", "type": "mcq", "figure": "none", "rep": "expression", "target": "factor", "form": "gcf", "contextual": false,
+          "ask": "Factor out the GREATEST COMMON FACTOR (12x²+18x = 6x(2x+3)); choose the factored form.", "recompute": "needs-deep-verify", "contract": "{}  // equivalence → deep-verify" },
+        { "key": "adv_distribute_expand", "band": "B2", "statementId": "ADV.B2.s2", "type": "both", "figure": "none", "rep": "expression", "target": "product_expand", "form": "distribute", "contextual": false,
+          "ask": "Apply the DISTRIBUTIVE property (2x(3x−4)); ask for a specific coefficient of the result.", "recompute": "needs-deep-verify", "contract": "{}  // coefficient → deep-verify" },
+        { "key": "adv_sum_polynomials", "band": "B3", "statementId": "ADV.B3.s2", "type": "both", "figure": "none", "rep": "expression", "target": "combine_sum", "form": "sum", "contextual": false,
+          "ask": "Find the SUM (or difference) of two polynomials; ask for the simplified result or evaluate it at a value.", "recompute": "needs-deep-verify", "contract": "{}  // polynomial sum → deep-verify" },
+        { "key": "adv_solve_for_variable", "band": "B3", "statementId": "ADV.B3.s2", "type": "mcq", "figure": "none", "rep": "literal_equation", "target": "rewrite_structure", "form": "literal", "contextual": false,
+          "ask": "Solve a literal equation for a variable of interest (A=½bh for h); choose the rearranged form.", "recompute": "needs-deep-verify", "contract": "{}  // rearrangement → deep-verify" },
+        { "key": "adv_product_binomials", "band": "B5", "statementId": "ADV.B5.s2", "type": "both", "figure": "none", "rep": "expression", "target": "product_expand", "form": "binomial_product", "contextual": false,
+          "ask": "Multiply a monomial×binomial or binomial×binomial ((x+3)(x−5)); ask for the result or a coefficient.", "recompute": "needs-deep-verify", "contract": "{}  // product → deep-verify" },
+        { "key": "adv_factor_trinomial", "band": "B5", "statementId": "ADV.B5.s2", "type": "mcq", "figure": "none", "rep": "expression", "target": "factor", "form": "trinomial", "contextual": false,
+          "ask": "Factor a quadratic trinomial (x²+7x+12 = (x+3)(x+4)) or a difference of squares; choose the factored form.", "recompute": "needs-deep-verify", "contract": "{}  // factoring → deep-verify" },
+        { "key": "adv_exponent_rewrite", "band": "B7", "statementId": "ADV.B7.s2", "type": "mcq", "figure": "none", "rep": "expression", "target": "rewrite_structure", "form": "exponents", "contextual": false,
+          "ask": "Use EXPONENT rules to rewrite an expression (product/quotient/power/negative/fractional exponents) in an equivalent form.", "recompute": "needs-deep-verify", "contract": "{}  // exponent identity → deep-verify" },
+        { "key": "adv_structure_form", "band": "B7", "statementId": "ADV.B7.s2", "type": "mcq", "figure": "none", "rep": "expression", "target": "rewrite_structure", "form": "display_feature", "contextual": false,
+          "ask": "Choose the form of an expression (rational/radical/polynomial) that DISPLAYS a certain feature, using structure.", "recompute": "needs-deep-verify", "contract": "{}  // best-form selection → deep-verify" }
+      ]
+    },
+    "nonlinear_equations_systems": {
+      "label": "Nonlinear equations in one variable & systems",
+      "attributes": ["solution", "unknown_constant"],
+      "statements": ["ADV.B3.s1", "ADV.B4.s2", "ADV.B7.s1"],
+      "cells": [
+        { "key": "adv_quad_factored_solve", "band": "B3", "statementId": "ADV.B3.s1", "type": "both", "figure": "none", "rep": "factored_equation", "target": "solution", "form": "quadratic", "contextual": false,
+          "ask": "Solve a quadratic given in FACTORED form a(x−r)(x−s)=0; ask for a solution (the larger/positive one). Put EXPANDED a,b,c in params.", "recompute": "adv_nonlinear_eq", "contract": "{\"a\":num,\"b\":num,\"c\":num,\"root_select\":\"plus\"|\"minus\"}" },
+        { "key": "adv_solve_radical", "band": "B3", "statementId": "ADV.B3.s1", "type": "spr", "figure": "none", "rep": "radical_equation", "target": "solution", "form": "radical", "contextual": false,
+          "ask": "Solve a simple RADICAL equation √(a·x+b)=c (mode 'solve_radical').", "recompute": "adv_radical_rational", "contract": "{\"mode\":\"solve_radical\",\"a\":num,\"b\":num,\"c\":num}" },
+        { "key": "adv_solve_absvalue", "band": "B3", "statementId": "ADV.B3.s1", "type": "mcq", "figure": "none", "rep": "absvalue_equation", "target": "solution", "form": "absolute_value", "contextual": false,
+          "ask": "Solve an ABSOLUTE-VALUE equation |a·x+b|=c for both solutions (note the two-case structure).", "recompute": "needs-deep-verify", "contract": "{\"a\":num,\"b\":num,\"c\":num}" },
+        { "key": "adv_quad_standard_solve", "band": "B4", "statementId": "ADV.B4.s2", "type": "both", "figure": "none", "rep": "standard_equation", "target": "solution", "form": "quadratic", "contextual": false,
+          "ask": "Solve a quadratic in STANDARD form a·x²+b·x+c=0 by FACTORING; ask for a solution.", "recompute": "adv_nonlinear_eq", "contract": "{\"a\":num,\"b\":num,\"c\":num,\"root_select\":\"plus\"|\"minus\"}" },
+        { "key": "adv_rational_solve", "band": "B4", "statementId": "ADV.B4.s2", "type": "spr", "figure": "none", "rep": "rational_equation", "target": "solution", "form": "rational", "contextual": false,
+          "ask": "Solve an equation containing a RATIONAL term for the variable (watch for an excluded value).", "recompute": "needs-deep-verify", "contract": "{}  // rational solve → deep-verify" },
+        { "key": "adv_lin_nonlin_system", "band": "B4", "statementId": "ADV.B4.s2", "type": "mcq", "figure": "opt", "rep": "system", "target": "solution", "form": "linear_nonlinear", "contextual": false,
+          "ask": "Solve a SYSTEM of one LINEAR and one NONLINEAR (quadratic) equation; ask for a solution point or a coordinate.", "recompute": "needs-deep-verify", "contract": "{}  // intersection → deep-verify" },
+        { "key": "adv_poly_factor_solve", "band": "B4", "statementId": "ADV.B4.s2", "type": "both", "figure": "none", "rep": "polynomial", "target": "solution", "form": "polynomial", "contextual": false,
+          "ask": "Solve a POLYNOMIAL equation by FACTORING; ask for a SOLUTION (a zero). Put roots + leading coefficient in params.", "recompute": "adv_polynomial_func", "contract": "{\"roots\":[..],\"leading\":num,\"target\":\"zero\"}" },
+        { "key": "adv_unknown_constant", "band": "B7", "statementId": "ADV.B7.s1", "type": "spr", "figure": "none", "rep": "equation", "target": "unknown_constant", "form": "nonlinear", "contextual": false,
+          "ask": "Find the value of an unknown CONSTANT in a nonlinear equation given a stated solution (substitute and solve).", "recompute": "needs-deep-verify", "contract": "{}  // constant from a condition → deep-verify" }
+      ]
+    },
+    "nonlinear_functions": {
+      "label": "Nonlinear functions",
+      "attributes": ["y_intercept", "key_feature", "translation", "create_use"],
+      "statements": ["ADV.B1.s1", "ADV.B2.s1", "ADV.B4.s1", "ADV.B5.s1", "ADV.B6.s1", "ADV.B6.s2", "ADV.B6.s3"],
+      "cells": [
+        { "key": "adv_yint_from_graph", "band": "B1", "statementId": "ADV.B1.s1", "type": "spr", "figure": "req", "rep": "graph", "target": "y_intercept", "form": "quadratic", "contextual": false,
+          "ask": "Show the graph of a parabola; ask for its Y-INTERCEPT read from the graph. Put a,b,c in params (c = y-intercept).", "recompute": "adv_quadratic_func", "contract": "{\"a\":num,\"b\":num,\"c\":num,\"target\":\"y_intercept\"}" },
+        { "key": "adv_feature_from_graph", "band": "B2", "statementId": "ADV.B2.s1", "type": "mcq", "figure": "req", "rep": "graph", "target": "key_feature", "form": "quadratic", "contextual": false,
+          "ask": "Show a parabola (or line + parabola); ask to identify a KEY FEATURE — the vertex, an x-intercept/solution, or a system solution.", "recompute": "needs-deep-verify", "contract": "{\"a\":num,\"b\":num,\"c\":num}  // drawn parabola, provenance" },
+        { "key": "adv_create_quadratic", "band": "B4", "statementId": "ADV.B4.s1", "type": "both", "figure": "none", "rep": "context", "target": "create_use", "form": "quadratic", "contextual": true,
+          "ask": "Use (or create and use) a QUADRATIC model in context (area, projectile, revenue=price×quantity); solve for a value.", "recompute": "adv_quadratic_func", "contract": "{\"a\":num,\"b\":num,\"c\":num,\"target\":\"vertex_y\"|\"vertex_x\"|\"y_intercept\"}  // or deep-verify the modeled solve" },
+        { "key": "adv_create_exponential", "band": "B4", "statementId": "ADV.B4.s1", "type": "mcq", "figure": "none", "rep": "context", "target": "create_use", "form": "exponential", "contextual": true,
+          "ask": "Use (or create) an EXPONENTIAL model (growth/decay, half-life, interest); choose the equation y=a·b^x or evaluate it.", "recompute": "needs-deep-verify", "contract": "{\"a\":num,\"b\":num}  // y=a·b^x" },
+        { "key": "adv_quad_keyfeature", "band": "B5", "statementId": "ADV.B5.s1", "type": "spr", "figure": "none", "rep": "equation", "target": "key_feature", "form": "quadratic", "contextual": false,
+          "ask": "Use a QUADRATIC function and identify a KEY FEATURE — the vertex's max/min value or its axis of symmetry.", "recompute": "adv_quadratic_func", "contract": "{\"a\":num,\"b\":num,\"c\":num,\"target\":\"vertex_y\"|\"vertex_x\"}" },
+        { "key": "adv_quad_context_solve", "band": "B6", "statementId": "ADV.B6.s1", "type": "spr", "figure": "none", "rep": "context", "target": "create_use", "form": "quadratic", "contextual": true,
+          "ask": "CREATE a quadratic (or exponential) equation in context and SOLVE for an unknown value (a real maximum, a time, a dimension).", "recompute": "adv_quadratic_func", "contract": "{\"a\":num,\"b\":num,\"c\":num,\"target\":\"vertex_y\"|\"vertex_x\"}  // or deep-verify" },
+        { "key": "adv_interpret_feature", "band": "B6", "statementId": "ADV.B6.s2", "type": "mcq", "figure": "none", "rep": "equation_context", "target": "key_feature", "form": "interpret", "contextual": true,
+          "ask": "INTERPRET a key feature (the vertex, an intercept, the base of an exponential) of a model's graph in context.", "recompute": "needs-deep-verify", "contract": "{}  // interpretation → deep-verify" },
+        { "key": "adv_translation", "band": "B6", "statementId": "ADV.B6.s3", "type": "mcq", "figure": "opt", "rep": "graph_or_equation", "target": "translation", "form": "na", "contextual": false,
+          "ask": "Determine how a TRANSLATION (shift) of a quadratic/exponential affects its graph or equation, or connect a graph to its algebra.", "recompute": "needs-deep-verify", "contract": "{}  // translation effect → deep-verify" }
+      ]
+    }
+  }
+}

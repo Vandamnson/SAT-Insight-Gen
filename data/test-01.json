@@ -1,0 +1,3151 @@
+{
+  "number": 1,
+  "title": "Practice Test 01 — Digital SAT Math",
+  "questions": [
+    {
+      "id": 1,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B1",
+      "target_band": "B1",
+      "statementId": "ALG.B1.s2",
+      "skill": "alg1_onestep_solve",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "If "
+        },
+        {
+          "t": "math",
+          "v": "9x = 72"
+        },
+        {
+          "t": "text",
+          "v": ", what is the value of "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "The variable "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": " is multiplied by "
+        },
+        {
+          "t": "math",
+          "v": "9"
+        },
+        {
+          "t": "text",
+          "v": ", so divide both sides of the equation by "
+        },
+        {
+          "t": "math",
+          "v": "9"
+        },
+        {
+          "t": "text",
+          "v": " to isolate it."
+        },
+        {
+          "t": "mathblock",
+          "v": "x = \\frac{72}{9} = 8"
+        },
+        {
+          "t": "text",
+          "v": "So the value of "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": " is "
+        },
+        {
+          "t": "math",
+          "v": "8"
+        },
+        {
+          "t": "text",
+          "v": "."
+        }
+      ],
+      "answer": {
+        "accept": [
+          "8"
+        ],
+        "tol": 0
+      },
+      "figure": null,
+      "params": {
+        "a": 9,
+        "b": 0,
+        "c": 72
+      },
+      "tier": "band-targeted",
+      "cellId": "6167ec45983466b3",
+      "difficulty": {
+        "scalePoint": 350,
+        "band": "B1",
+        "se_scale": 45,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~350 has ~67% chance correct (Band 1).",
+        "signals": {
+          "judge": {
+            "scale": 350,
+            "se": 45,
+            "perBand": {
+              "B2": 0.8,
+              "B3": 0.9,
+              "B4": 0.95,
+              "B5": 0.97,
+              "B6": 0.98,
+              "B7": 0.99
+            },
+            "rp50Scale": 350,
+            "n": 1
+          }
+        }
+      },
+      "verify": {
+        "leash": "pass",
+        "deepVerdict": "PASS",
+        "independentAnswer": "8",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 2,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B1",
+      "target_band": "B1",
+      "statementId": "ALG.B1.s1",
+      "skill": "alg1_onestep_words",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "When a number is multiplied by 7, the result is 63. What is the value of the number?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "Let "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": " represent the number. The statement says that multiplying the number by 7 gives 63, which is the equation "
+        },
+        {
+          "t": "math",
+          "v": "7x = 63"
+        },
+        {
+          "t": "text",
+          "v": ". Undo the multiplication by dividing both sides by 7: "
+        },
+        {
+          "t": "math",
+          "v": "x = \\dfrac{63}{7} = 9"
+        },
+        {
+          "t": "text",
+          "v": ". The number is 9."
+        }
+      ],
+      "answer": {
+        "accept": [
+          "9"
+        ],
+        "tol": 0
+      },
+      "figure": null,
+      "params": {
+        "a": 7,
+        "b": 0,
+        "c": 63
+      },
+      "tier": "band-targeted",
+      "cellId": "9bbc22ab33ade31c",
+      "difficulty": {
+        "scalePoint": 350,
+        "band": "B1",
+        "se_scale": 45,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~350 has ~67% chance correct (Band 1).",
+        "signals": {
+          "judge": {
+            "scale": 350,
+            "se": 45,
+            "perBand": {
+              "B2": 0.82,
+              "B3": 0.91,
+              "B4": 0.95,
+              "B5": 0.97,
+              "B6": 0.98,
+              "B7": 0.99
+            },
+            "rp50Scale": 350,
+            "n": 1
+          }
+        }
+      },
+      "verify": {
+        "leash": "pass",
+        "deepVerdict": "PASS",
+        "independentAnswer": "9",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 3,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B1",
+      "target_band": "B1",
+      "statementId": "ALG.B1.s1",
+      "skill": "open_algebra_102",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "Priya reads 7 pages of her book each night. After several nights, she has read a total of 63 pages. This situation is represented by the equation "
+        },
+        {
+          "t": "math",
+          "v": "7n = 63"
+        },
+        {
+          "t": "text",
+          "v": ", where "
+        },
+        {
+          "t": "math",
+          "v": "n"
+        },
+        {
+          "t": "text",
+          "v": " is the number of nights she has read. What is the value of "
+        },
+        {
+          "t": "math",
+          "v": "n"
+        },
+        {
+          "t": "text",
+          "v": " ?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "To find "
+        },
+        {
+          "t": "math",
+          "v": "n"
+        },
+        {
+          "t": "text",
+          "v": ", divide both sides of "
+        },
+        {
+          "t": "math",
+          "v": "7n = 63"
+        },
+        {
+          "t": "text",
+          "v": " by 7."
+        },
+        {
+          "t": "mathblock",
+          "v": "n = \\frac{63}{7} = 9"
+        },
+        {
+          "t": "text",
+          "v": "So Priya read for 9 nights."
+        }
+      ],
+      "answer": {
+        "correct": "A"
+      },
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "9"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "7"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "56"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "70"
+            }
+          ]
+        }
+      ],
+      "figure": null,
+      "params": {},
+      "tier": "band-targeted",
+      "cellId": "1667ea0b1b474049",
+      "difficulty": {
+        "scalePoint": 350,
+        "band": "B1",
+        "se_scale": 45,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~350 has ~67% chance correct (Band 1).",
+        "signals": {
+          "judge": {
+            "scale": 350,
+            "se": 45,
+            "perBand": {
+              "B2": 0.82,
+              "B3": 0.9,
+              "B4": 0.95,
+              "B5": 0.97,
+              "B6": 0.98,
+              "B7": 0.99
+            },
+            "rp50Scale": 350,
+            "n": 1
+          }
+        }
+      },
+      "verify": {
+        "leash": "deferred-to-deep-verify",
+        "deepVerdict": "PASS",
+        "independentAnswer": "A",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 4,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B1",
+      "target_band": "B2",
+      "statementId": "ALG.B1.s2",
+      "skill": "alg1_twostep_solve",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "A bakery packs the same number of muffins into each of 8 boxes, using 96 muffins in all. The number of muffins in each box, "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": ", satisfies the equation "
+        },
+        {
+          "t": "math",
+          "v": "8x = 96"
+        },
+        {
+          "t": "text",
+          "v": ". What is the value of "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "To solve for "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": ", divide both sides of the equation by 8:"
+        },
+        {
+          "t": "mathblock",
+          "v": "x = \\frac{96}{8} = 12"
+        },
+        {
+          "t": "text",
+          "v": "So each box contains 12 muffins."
+        }
+      ],
+      "answer": {
+        "accept": [
+          "12"
+        ],
+        "tol": 0
+      },
+      "figure": null,
+      "params": {
+        "a": 8,
+        "b": 0,
+        "c": 96
+      },
+      "tier": "band-targeted",
+      "cellId": "ef1812025236cef5",
+      "difficulty": {
+        "scalePoint": 350,
+        "band": "B1",
+        "se_scale": 45,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~350 has ~67% chance correct (Band 1).",
+        "signals": {
+          "judge": {
+            "scale": 350,
+            "se": 45,
+            "perBand": {
+              "B2": 0.82,
+              "B3": 0.92,
+              "B4": 0.96,
+              "B5": 0.98,
+              "B6": 0.99,
+              "B7": 0.99
+            },
+            "rp50Scale": 350,
+            "n": 1
+          }
+        }
+      },
+      "verify": {
+        "leash": "pass",
+        "deepVerdict": "PASS",
+        "independentAnswer": "12",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 5,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B1",
+      "target_band": "B2",
+      "statementId": "ALG.B2.s2",
+      "skill": "alg2_read_graph_point",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The graph of line "
+        },
+        {
+          "t": "math",
+          "v": "\\ell"
+        },
+        {
+          "t": "text",
+          "v": " is shown in the "
+        },
+        {
+          "t": "math",
+          "v": "xy"
+        },
+        {
+          "t": "text",
+          "v": "-plane, where point "
+        },
+        {
+          "t": "math",
+          "v": "P"
+        },
+        {
+          "t": "text",
+          "v": " lies on line "
+        },
+        {
+          "t": "math",
+          "v": "\\ell"
+        },
+        {
+          "t": "text",
+          "v": ". What is the "
+        },
+        {
+          "t": "math",
+          "v": "y"
+        },
+        {
+          "t": "text",
+          "v": "-coordinate of point "
+        },
+        {
+          "t": "math",
+          "v": "P"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "Point "
+        },
+        {
+          "t": "math",
+          "v": "P"
+        },
+        {
+          "t": "text",
+          "v": " lies on line "
+        },
+        {
+          "t": "math",
+          "v": "\\ell"
+        },
+        {
+          "t": "text",
+          "v": ". Reading its position from the graph, "
+        },
+        {
+          "t": "math",
+          "v": "P"
+        },
+        {
+          "t": "text",
+          "v": " is 3 units to the right of the "
+        },
+        {
+          "t": "math",
+          "v": "y"
+        },
+        {
+          "t": "text",
+          "v": "-axis and 2 units above the "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": "-axis, so its coordinates are "
+        },
+        {
+          "t": "math",
+          "v": "(3,\\ 2)"
+        },
+        {
+          "t": "text",
+          "v": ". Therefore the "
+        },
+        {
+          "t": "math",
+          "v": "y"
+        },
+        {
+          "t": "text",
+          "v": "-coordinate of point "
+        },
+        {
+          "t": "math",
+          "v": "P"
+        },
+        {
+          "t": "text",
+          "v": " is "
+        },
+        {
+          "t": "math",
+          "v": "2"
+        },
+        {
+          "t": "text",
+          "v": "."
+        }
+      ],
+      "answer": {
+        "accept": [
+          "2"
+        ],
+        "tol": 0
+      },
+      "figure": {
+        "fn": "coordPlane",
+        "spec": {
+          "xRange": [
+            -1,
+            6
+          ],
+          "yRange": [
+            -1,
+            9
+          ],
+          "xStep": 1,
+          "yStep": 1,
+          "origin": true,
+          "curves": [
+            {
+              "type": "line2pt",
+              "p1": [
+                0,
+                8
+              ],
+              "p2": [
+                4,
+                0
+              ]
+            }
+          ],
+          "points": [
+            {
+              "at": [
+                3,
+                2
+              ],
+              "label": "P"
+            }
+          ]
+        },
+        "caption": "Line ℓ graphed in the xy-plane, with point P marked on the line."
+      },
+      "params": {
+        "m": -2,
+        "b": 8,
+        "x0": 3,
+        "report": "value"
+      },
+      "tier": "band-targeted",
+      "cellId": "6d14509db2e9ed94",
+      "difficulty": {
+        "scalePoint": 350,
+        "band": "B1",
+        "se_scale": 45,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~350 has ~67% chance correct (Band 1).",
+        "signals": {
+          "judge": {
+            "scale": 350,
+            "se": 45,
+            "perBand": {
+              "B2": 0.8,
+              "B3": 0.88,
+              "B4": 0.92,
+              "B5": 0.95,
+              "B6": 0.97,
+              "B7": 0.99
+            },
+            "rp50Scale": 350,
+            "n": 1
+          }
+        }
+      },
+      "verify": {
+        "leash": "pass",
+        "deepVerdict": "PASS",
+        "independentAnswer": "2",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 6,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B1",
+      "target_band": "B1",
+      "statementId": "ALG.B1.s2",
+      "skill": "open_algebra_129",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "What value of "
+        },
+        {
+          "t": "math",
+          "v": "p"
+        },
+        {
+          "t": "text",
+          "v": " satisfies the equation "
+        },
+        {
+          "t": "math",
+          "v": "30 = 6p"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "The variable "
+        },
+        {
+          "t": "math",
+          "v": "p"
+        },
+        {
+          "t": "text",
+          "v": " is multiplied by "
+        },
+        {
+          "t": "math",
+          "v": "6"
+        },
+        {
+          "t": "text",
+          "v": ", so divide both sides of "
+        },
+        {
+          "t": "math",
+          "v": "30 = 6p"
+        },
+        {
+          "t": "text",
+          "v": " by "
+        },
+        {
+          "t": "math",
+          "v": "6"
+        },
+        {
+          "t": "text",
+          "v": " to isolate it."
+        },
+        {
+          "t": "mathblock",
+          "v": "p = \\frac{30}{6} = 5"
+        },
+        {
+          "t": "text",
+          "v": "Therefore "
+        },
+        {
+          "t": "math",
+          "v": "p = 5"
+        },
+        {
+          "t": "text",
+          "v": "."
+        }
+      ],
+      "answer": {
+        "accept": [
+          "5"
+        ],
+        "tol": 0
+      },
+      "figure": null,
+      "params": {},
+      "tier": "band-targeted",
+      "cellId": "952daf59c3e52ab3",
+      "difficulty": {
+        "scalePoint": 350,
+        "band": "B1",
+        "se_scale": 45,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~350 has ~67% chance correct (Band 1).",
+        "signals": {
+          "judge": {
+            "scale": 350,
+            "se": 45,
+            "perBand": {
+              "B2": 0.82,
+              "B3": 0.89,
+              "B4": 0.93,
+              "B5": 0.96,
+              "B6": 0.98,
+              "B7": 0.99
+            },
+            "rp50Scale": 350,
+            "n": 1
+          }
+        }
+      },
+      "verify": {
+        "leash": "deferred-to-deep-verify",
+        "deepVerdict": "PASS",
+        "independentAnswer": "5",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 7,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B1",
+      "target_band": "B1",
+      "statementId": "ALG.B1.s1",
+      "skill": "alg1_onestep_context",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "A bamboo plant in a garden is measured each week. At the start of one week, the plant was "
+        },
+        {
+          "t": "math",
+          "v": "9"
+        },
+        {
+          "t": "text",
+          "v": " centimeters tall. During that week it grew "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": " centimeters, so that by the end of the week it was "
+        },
+        {
+          "t": "math",
+          "v": "17"
+        },
+        {
+          "t": "text",
+          "v": " centimeters tall. This situation is represented by the equation "
+        },
+        {
+          "t": "math",
+          "v": "9 + x = 17"
+        },
+        {
+          "t": "text",
+          "v": ". What is the value of "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "The number of centimeters the plant grew, "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": ", satisfies "
+        },
+        {
+          "t": "math",
+          "v": "9 + x = 17"
+        },
+        {
+          "t": "text",
+          "v": ". Subtract "
+        },
+        {
+          "t": "math",
+          "v": "9"
+        },
+        {
+          "t": "text",
+          "v": " from both sides:"
+        },
+        {
+          "t": "mathblock",
+          "v": "x = 17 - 9 = 8"
+        },
+        {
+          "t": "text",
+          "v": "So the bamboo plant grew "
+        },
+        {
+          "t": "math",
+          "v": "8"
+        },
+        {
+          "t": "text",
+          "v": " centimeters during the week."
+        }
+      ],
+      "answer": {
+        "correct": "B"
+      },
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "9"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "8"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "17"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "26"
+            }
+          ]
+        }
+      ],
+      "figure": null,
+      "params": {
+        "a": 1,
+        "b": 9,
+        "c": 17
+      },
+      "tier": "band-targeted",
+      "cellId": "da13c0e65a348229",
+      "difficulty": {
+        "scalePoint": 350,
+        "band": "B1",
+        "se_scale": 45,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~350 has ~67% chance correct (Band 1).",
+        "signals": {
+          "judge": {
+            "scale": 350,
+            "se": 45,
+            "perBand": {
+              "B2": 0.88,
+              "B3": 0.93,
+              "B4": 0.96,
+              "B5": 0.98,
+              "B6": 0.99,
+              "B7": 0.99
+            },
+            "rp50Scale": 350,
+            "n": 1
+          }
+        }
+      },
+      "verify": {
+        "leash": "pass",
+        "deepVerdict": "PASS",
+        "independentAnswer": "B",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 8,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B1",
+      "target_band": "B1",
+      "statementId": "GEO.B1.s2",
+      "skill": "geo_rect_area",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "A marine biologist studying a pod of dolphins anchors a rectangular floating observation grid on the surface of a bay to record where the pod gathers. The grid measures "
+        },
+        {
+          "t": "math",
+          "v": "9"
+        },
+        {
+          "t": "text",
+          "v": " meters long and "
+        },
+        {
+          "t": "math",
+          "v": "4"
+        },
+        {
+          "t": "text",
+          "v": " meters wide. What is the area, in square meters, of the observation grid?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "The area of a rectangle equals its length times its width: "
+        },
+        {
+          "t": "mathblock",
+          "v": "A = l \\times w"
+        },
+        {
+          "t": "text",
+          "v": "Substitute the given side lengths "
+        },
+        {
+          "t": "math",
+          "v": "l = 9"
+        },
+        {
+          "t": "text",
+          "v": " meters and "
+        },
+        {
+          "t": "math",
+          "v": "w = 4"
+        },
+        {
+          "t": "text",
+          "v": " meters: "
+        },
+        {
+          "t": "mathblock",
+          "v": "A = 9 \\times 4 = 36"
+        },
+        {
+          "t": "text",
+          "v": " The observation grid has an area of "
+        },
+        {
+          "t": "math",
+          "v": "36"
+        },
+        {
+          "t": "text",
+          "v": " square meters."
+        }
+      ],
+      "answer": {
+        "correct": "C"
+      },
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "12"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "24"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "36"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "48"
+            }
+          ]
+        }
+      ],
+      "figure": null,
+      "params": {
+        "shape": "rectangle",
+        "report": "area",
+        "l": 9,
+        "w": 4
+      },
+      "tier": "band-targeted",
+      "cellId": "e6edff4b8b0cfa81",
+      "difficulty": {
+        "scalePoint": 350,
+        "band": "B1",
+        "se_scale": 45,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~350 has ~67% chance correct (Band 1).",
+        "signals": {
+          "judge": {
+            "scale": 350,
+            "se": 45,
+            "perBand": {
+              "B2": 0.75,
+              "B3": 0.88,
+              "B4": 0.93,
+              "B5": 0.96,
+              "B6": 0.98,
+              "B7": 0.99
+            },
+            "rp50Scale": 350,
+            "n": 1
+          }
+        }
+      },
+      "verify": {
+        "leash": "pass",
+        "deepVerdict": "PASS",
+        "independentAnswer": "C",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 9,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B1",
+      "target_band": "B1",
+      "statementId": "GEO.B1.s1",
+      "skill": "geo_prism_volume",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "A right rectangular prism has a length of 9 inches, a width of 4 inches, and a height of 2 inches. The volume "
+        },
+        {
+          "t": "math",
+          "v": "V"
+        },
+        {
+          "t": "text",
+          "v": " of a right rectangular prism is given by "
+        },
+        {
+          "t": "math",
+          "v": "V = \\ell w h"
+        },
+        {
+          "t": "text",
+          "v": ", where "
+        },
+        {
+          "t": "math",
+          "v": "\\ell"
+        },
+        {
+          "t": "text",
+          "v": " is the length, "
+        },
+        {
+          "t": "math",
+          "v": "w"
+        },
+        {
+          "t": "text",
+          "v": " is the width, and "
+        },
+        {
+          "t": "math",
+          "v": "h"
+        },
+        {
+          "t": "text",
+          "v": " is the height. What is the volume, in cubic inches, of the prism?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "Substitute the edge lengths into the formula "
+        },
+        {
+          "t": "math",
+          "v": "V = \\ell w h"
+        },
+        {
+          "t": "text",
+          "v": ":"
+        },
+        {
+          "t": "mathblock",
+          "v": "V = 9 \\times 4 \\times 2"
+        },
+        {
+          "t": "text",
+          "v": "Multiply: "
+        },
+        {
+          "t": "math",
+          "v": "9 \\times 4 = 36"
+        },
+        {
+          "t": "text",
+          "v": ", then "
+        },
+        {
+          "t": "math",
+          "v": "36 \\times 2 = 72"
+        },
+        {
+          "t": "text",
+          "v": ". The volume of the prism is 72 cubic inches."
+        }
+      ],
+      "answer": {
+        "accept": [
+          "72"
+        ],
+        "tol": 0
+      },
+      "figure": null,
+      "params": {
+        "shape": "prism",
+        "l": 9,
+        "w": 4,
+        "h": 2
+      },
+      "tier": "band-targeted",
+      "cellId": "f65c57c0672a9a40",
+      "difficulty": {
+        "scalePoint": 350,
+        "band": "B1",
+        "se_scale": 45,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~350 has ~67% chance correct (Band 1).",
+        "signals": {
+          "judge": {
+            "scale": 350,
+            "se": 45,
+            "perBand": {
+              "B2": 0.82,
+              "B3": 0.89,
+              "B4": 0.94,
+              "B5": 0.96,
+              "B6": 0.98,
+              "B7": 0.99
+            },
+            "rp50Scale": 350,
+            "n": 1
+          }
+        }
+      },
+      "verify": {
+        "leash": "pass",
+        "deepVerdict": "PASS",
+        "independentAnswer": "72",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 10,
+      "program": "SAT",
+      "domain": "advanced_math",
+      "band": "B2",
+      "target_band": "B2",
+      "statementId": "ADV.B2.s1",
+      "skill": "adv_feature_from_graph",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The graph of a quadratic function is shown in the "
+        },
+        {
+          "t": "math",
+          "v": "xy"
+        },
+        {
+          "t": "text",
+          "v": "-plane. What are the coordinates of the vertex of the graph?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "The vertex is the turning point of the parabola. Because this parabola opens upward, its vertex is the lowest point on the curve. Reading the graph, the curve reaches its minimum at "
+        },
+        {
+          "t": "math",
+          "v": "x = 2"
+        },
+        {
+          "t": "text",
+          "v": ", where "
+        },
+        {
+          "t": "math",
+          "v": "y = -4"
+        },
+        {
+          "t": "text",
+          "v": ". So the vertex is located at "
+        },
+        {
+          "t": "math",
+          "v": "(2, -4)"
+        },
+        {
+          "t": "text",
+          "v": "."
+        }
+      ],
+      "answer": {
+        "correct": "A"
+      },
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "(2, -4)"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "(-2, -4)"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "(2, 4)"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "(4, 0)"
+            }
+          ]
+        }
+      ],
+      "figure": {
+        "fn": "coordPlane",
+        "spec": {
+          "xRange": [
+            -3,
+            7
+          ],
+          "yRange": [
+            -6,
+            6
+          ],
+          "xStep": 1,
+          "yStep": 1,
+          "origin": true,
+          "curves": [
+            {
+              "type": "quadratic",
+              "a": 1,
+              "b": -4,
+              "c": 0
+            }
+          ]
+        },
+        "caption": "The graph of a quadratic function in the xy-plane."
+      },
+      "params": {
+        "a": 1,
+        "b": -4,
+        "c": 0
+      },
+      "tier": "band-targeted",
+      "cellId": "e65afb54a9974be8",
+      "difficulty": {
+        "scalePoint": 415,
+        "band": "B2",
+        "se_scale": 45,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~415 has ~67% chance correct (Band 2).",
+        "signals": {
+          "judge": {
+            "scale": 415,
+            "se": 45,
+            "perBand": {
+              "B2": 0.62,
+              "B3": 0.72,
+              "B4": 0.82,
+              "B5": 0.88,
+              "B6": 0.93,
+              "B7": 0.97
+            },
+            "rp50Scale": 350,
+            "n": 1
+          }
+        }
+      },
+      "verify": {
+        "leash": "deferred-to-deep-verify",
+        "deepVerdict": "PASS",
+        "independentAnswer": "A",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 11,
+      "program": "SAT",
+      "domain": "advanced_math",
+      "band": "B3",
+      "target_band": "B3",
+      "statementId": "ADV.B3.s2",
+      "skill": "adv_sum_polynomials",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The functions "
+        },
+        {
+          "t": "math",
+          "v": "f"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "g"
+        },
+        {
+          "t": "text",
+          "v": " are defined by "
+        },
+        {
+          "t": "math",
+          "v": "f(x) = 2x^2 - 3x + 5"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "g(x) = x^2 + 4x - 7"
+        },
+        {
+          "t": "text",
+          "v": ". The function "
+        },
+        {
+          "t": "math",
+          "v": "h"
+        },
+        {
+          "t": "text",
+          "v": " is defined by "
+        },
+        {
+          "t": "math",
+          "v": "h(x) = f(x) + g(x)"
+        },
+        {
+          "t": "text",
+          "v": ". What is the value of "
+        },
+        {
+          "t": "math",
+          "v": "h(2)"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "Add the two polynomials by combining like terms: "
+        },
+        {
+          "t": "mathblock",
+          "v": "h(x) = (2x^2 - 3x + 5) + (x^2 + 4x - 7)"
+        },
+        {
+          "t": "text",
+          "v": "Combine the "
+        },
+        {
+          "t": "math",
+          "v": "x^2"
+        },
+        {
+          "t": "text",
+          "v": " terms, the "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": " terms, and the constants: "
+        },
+        {
+          "t": "mathblock",
+          "v": "h(x) = 3x^2 + x - 2"
+        },
+        {
+          "t": "text",
+          "v": "Now substitute "
+        },
+        {
+          "t": "math",
+          "v": "x = 2"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "mathblock",
+          "v": "h(2) = 3(2)^2 + (2) - 2 = 12 + 2 - 2 = 12"
+        },
+        {
+          "t": "text",
+          "v": "So "
+        },
+        {
+          "t": "math",
+          "v": "h(2) = 12"
+        },
+        {
+          "t": "text",
+          "v": "."
+        }
+      ],
+      "answer": {
+        "correct": "C"
+      },
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "2"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "6"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "12"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "14"
+            }
+          ]
+        }
+      ],
+      "figure": null,
+      "params": {
+        "f": "2x^2 - 3x + 5",
+        "g": "x^2 + 4x - 7",
+        "operation": "sum",
+        "evaluate_at": 2,
+        "report": "value"
+      },
+      "tier": "band-targeted",
+      "cellId": "06c321cba4fa4355",
+      "difficulty": {
+        "scalePoint": 457,
+        "band": "B3",
+        "se_scale": 45,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~457 has ~67% chance correct (Band 3).",
+        "signals": {
+          "judge": {
+            "scale": 457,
+            "se": 45,
+            "perBand": {
+              "B2": 0.45,
+              "B3": 0.63,
+              "B4": 0.78,
+              "B5": 0.88,
+              "B6": 0.93,
+              "B7": 0.97
+            },
+            "rp50Scale": 404,
+            "n": 1
+          }
+        }
+      },
+      "verify": {
+        "leash": "deferred-to-deep-verify",
+        "deepVerdict": "PASS",
+        "independentAnswer": "C",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 12,
+      "program": "SAT",
+      "domain": "advanced_math",
+      "band": "B3",
+      "target_band": "B3",
+      "statementId": "ADV.B3.s2",
+      "skill": "adv_solve_for_variable",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "A plumber's total charge "
+        },
+        {
+          "t": "math",
+          "v": "C"
+        },
+        {
+          "t": "text",
+          "v": ", in dollars, for a repair is given by "
+        },
+        {
+          "t": "math",
+          "v": "C = rh"
+        },
+        {
+          "t": "text",
+          "v": ", where "
+        },
+        {
+          "t": "math",
+          "v": "r"
+        },
+        {
+          "t": "text",
+          "v": " is the hourly rate, in dollars per hour, and "
+        },
+        {
+          "t": "math",
+          "v": "h"
+        },
+        {
+          "t": "text",
+          "v": " is the number of hours worked. For one repair, the total charge was "
+        },
+        {
+          "t": "money",
+          "v": "$120"
+        },
+        {
+          "t": "text",
+          "v": " and the hourly rate was "
+        },
+        {
+          "t": "money",
+          "v": "$40"
+        },
+        {
+          "t": "text",
+          "v": " per hour. How many hours were worked?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "Start with the formula "
+        },
+        {
+          "t": "math",
+          "v": "C = rh"
+        },
+        {
+          "t": "text",
+          "v": " and solve for the number of hours "
+        },
+        {
+          "t": "math",
+          "v": "h"
+        },
+        {
+          "t": "text",
+          "v": " by dividing both sides by "
+        },
+        {
+          "t": "math",
+          "v": "r"
+        },
+        {
+          "t": "text",
+          "v": ", which gives "
+        },
+        {
+          "t": "math",
+          "v": "h = \\dfrac{C}{r}"
+        },
+        {
+          "t": "text",
+          "v": ". Substituting the given values "
+        },
+        {
+          "t": "math",
+          "v": "C = 120"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "r = 40"
+        },
+        {
+          "t": "text",
+          "v": " gives "
+        },
+        {
+          "t": "math",
+          "v": "h = \\dfrac{120}{40} = 3"
+        },
+        {
+          "t": "text",
+          "v": ". So 3 hours were worked. (Dividing in the wrong order gives the reciprocal "
+        },
+        {
+          "t": "math",
+          "v": "\\tfrac{1}{3}"
+        },
+        {
+          "t": "text",
+          "v": ", a common error.)"
+        }
+      ],
+      "answer": {
+        "correct": "A"
+      },
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "3"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "\\dfrac{1}{3}"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "80"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "160"
+            }
+          ]
+        }
+      ],
+      "figure": null,
+      "params": {
+        "equation": "C = r*h",
+        "solve_for": "h",
+        "givens": {
+          "C": 120,
+          "r": 40
+        },
+        "report": "value"
+      },
+      "tier": "band-targeted",
+      "cellId": "23586c5f5854dc98",
+      "difficulty": {
+        "scalePoint": 428,
+        "band": "B3",
+        "se_scale": 45,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~428 has ~67% chance correct (Band 3).",
+        "signals": {
+          "judge": {
+            "scale": 428,
+            "se": 45,
+            "perBand": {
+              "B2": 0.58,
+              "B3": 0.7,
+              "B4": 0.82,
+              "B5": 0.9,
+              "B6": 0.94,
+              "B7": 0.97
+            },
+            "rp50Scale": 350,
+            "n": 1
+          }
+        }
+      },
+      "verify": {
+        "leash": "deferred-to-deep-verify",
+        "deepVerdict": "PASS",
+        "independentAnswer": "A",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 13,
+      "program": "SAT",
+      "domain": "advanced_math",
+      "band": "B3",
+      "target_band": "B3",
+      "statementId": "ADV.B3.s2",
+      "skill": "open_advanced_math_117",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The polynomial functions "
+        },
+        {
+          "t": "math",
+          "v": "P"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "Q"
+        },
+        {
+          "t": "text",
+          "v": " are defined by "
+        },
+        {
+          "t": "math",
+          "v": "P(x)=2x^2-7x+4"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "Q(x)=5x^2+10x-9"
+        },
+        {
+          "t": "text",
+          "v": ". The function "
+        },
+        {
+          "t": "math",
+          "v": "h"
+        },
+        {
+          "t": "text",
+          "v": " is defined by "
+        },
+        {
+          "t": "math",
+          "v": "h(x)=P(x)+Q(x)"
+        },
+        {
+          "t": "text",
+          "v": ". What is the value of "
+        },
+        {
+          "t": "math",
+          "v": "h(2)"
+        },
+        {
+          "t": "text",
+          "v": " ?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "Find "
+        },
+        {
+          "t": "math",
+          "v": "h(x)"
+        },
+        {
+          "t": "text",
+          "v": " by combining like terms from the two polynomials:"
+        },
+        {
+          "t": "mathblock",
+          "v": "h(x)=(2x^2+5x^2)+(-7x+10x)+(4-9)=7x^2+3x-5"
+        },
+        {
+          "t": "text",
+          "v": "Then substitute "
+        },
+        {
+          "t": "math",
+          "v": "x=2"
+        },
+        {
+          "t": "text",
+          "v": " into the result:"
+        },
+        {
+          "t": "mathblock",
+          "v": "h(2)=7(2)^2+3(2)-5=28+6-5=29"
+        },
+        {
+          "t": "text",
+          "v": "So "
+        },
+        {
+          "t": "math",
+          "v": "h(2)=29"
+        },
+        {
+          "t": "text",
+          "v": "."
+        }
+      ],
+      "answer": {
+        "accept": [
+          "29"
+        ],
+        "tol": 0
+      },
+      "figure": null,
+      "params": {},
+      "tier": "band-targeted",
+      "cellId": "373d87520a8c4740",
+      "difficulty": {
+        "scalePoint": 452,
+        "band": "B3",
+        "se_scale": 45,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~452 has ~67% chance correct (Band 3).",
+        "signals": {
+          "judge": {
+            "scale": 452,
+            "se": 45,
+            "perBand": {
+              "B2": 0.45,
+              "B3": 0.64,
+              "B4": 0.8,
+              "B5": 0.89,
+              "B6": 0.94,
+              "B7": 0.97
+            },
+            "rp50Scale": 403,
+            "n": 1
+          }
+        }
+      },
+      "verify": {
+        "leash": "deferred-to-deep-verify",
+        "deepVerdict": "PASS",
+        "independentAnswer": "29",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 14,
+      "program": "SAT",
+      "domain": "advanced_math",
+      "band": "B3",
+      "target_band": "B3",
+      "statementId": "ADV.B3.s1",
+      "skill": "adv_quad_factored_solve",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "If "
+        },
+        {
+          "t": "math",
+          "v": "2(x-7)(x+3)=0"
+        },
+        {
+          "t": "text",
+          "v": ", what is the larger of the two solutions to the given equation?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "The equation is written as a product that equals 0, so apply the zero product property. The constant factor "
+        },
+        {
+          "t": "math",
+          "v": "2"
+        },
+        {
+          "t": "text",
+          "v": " cannot equal 0, so set each variable factor equal to 0. From "
+        },
+        {
+          "t": "math",
+          "v": "x-7=0"
+        },
+        {
+          "t": "text",
+          "v": " you get "
+        },
+        {
+          "t": "math",
+          "v": "x=7"
+        },
+        {
+          "t": "text",
+          "v": ", and from "
+        },
+        {
+          "t": "math",
+          "v": "x+3=0"
+        },
+        {
+          "t": "text",
+          "v": " you get "
+        },
+        {
+          "t": "math",
+          "v": "x=-3"
+        },
+        {
+          "t": "text",
+          "v": ". The two solutions are "
+        },
+        {
+          "t": "math",
+          "v": "-3"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "7"
+        },
+        {
+          "t": "text",
+          "v": ", so the larger solution is "
+        },
+        {
+          "t": "math",
+          "v": "7"
+        },
+        {
+          "t": "text",
+          "v": "."
+        }
+      ],
+      "answer": {
+        "correct": "D"
+      },
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "-7"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "-3"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "3"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "7"
+            }
+          ]
+        }
+      ],
+      "figure": null,
+      "params": {
+        "a": 2,
+        "b": -8,
+        "c": -42,
+        "root_select": "plus"
+      },
+      "tier": "band-targeted",
+      "cellId": "58cd273011244f75",
+      "difficulty": {
+        "scalePoint": 460,
+        "band": "B3",
+        "se_scale": 45,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~460 has ~67% chance correct (Band 3).",
+        "signals": {
+          "judge": {
+            "scale": 460,
+            "se": 45,
+            "perBand": {
+              "B2": 0.4,
+              "B3": 0.62,
+              "B4": 0.78,
+              "B5": 0.88,
+              "B6": 0.94,
+              "B7": 0.97
+            },
+            "rp50Scale": 413,
+            "n": 1
+          }
+        }
+      },
+      "verify": {
+        "leash": "pass",
+        "deepVerdict": "PASS",
+        "independentAnswer": "D",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 15,
+      "program": "SAT",
+      "domain": "advanced_math",
+      "band": "B3",
+      "target_band": "B3",
+      "statementId": "ADV.B3.s1",
+      "skill": "adv_solve_radical",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "If "
+        },
+        {
+          "t": "math",
+          "v": "\\sqrt{x+1}=4"
+        },
+        {
+          "t": "text",
+          "v": ", what is the value of "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "To remove the radical, square both sides of the equation."
+        },
+        {
+          "t": "mathblock",
+          "v": "\\left(\\sqrt{x+1}\\,\\right)^2 = 4^2"
+        },
+        {
+          "t": "mathblock",
+          "v": "x+1 = 16"
+        },
+        {
+          "t": "text",
+          "v": "Subtract 1 from both sides to isolate "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "mathblock",
+          "v": "x = 15"
+        },
+        {
+          "t": "text",
+          "v": "Check the solution: "
+        },
+        {
+          "t": "math",
+          "v": "\\sqrt{15+1}=\\sqrt{16}=4"
+        },
+        {
+          "t": "text",
+          "v": ", which matches the given equation."
+        }
+      ],
+      "answer": {
+        "accept": [
+          "15"
+        ],
+        "tol": 0
+      },
+      "figure": null,
+      "params": {
+        "mode": "solve_radical",
+        "a": 1,
+        "b": 1,
+        "c": 4
+      },
+      "tier": "band-targeted",
+      "cellId": "474fb6e2924eea42",
+      "difficulty": {
+        "scalePoint": 468,
+        "band": "B3",
+        "se_scale": 45,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~468 has ~67% chance correct (Band 3).",
+        "signals": {
+          "judge": {
+            "scale": 468,
+            "se": 45,
+            "perBand": {
+              "B2": 0.3,
+              "B3": 0.58,
+              "B4": 0.79,
+              "B5": 0.89,
+              "B6": 0.94,
+              "B7": 0.97
+            },
+            "rp50Scale": 426,
+            "n": 1
+          }
+        }
+      },
+      "verify": {
+        "leash": "pass",
+        "deepVerdict": "PASS",
+        "independentAnswer": "15",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 16,
+      "program": "SAT",
+      "domain": "advanced_math",
+      "band": "B3",
+      "target_band": "B3",
+      "statementId": "ADV.B3.s1",
+      "skill": "open_advanced_math_120",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The equation "
+        },
+        {
+          "t": "math",
+          "v": "(x+9)(2x-8)=0"
+        },
+        {
+          "t": "text",
+          "v": " has two solutions. What is the sum of the two solutions?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "When a product equals zero, at least one factor must equal zero, so set each factor equal to 0."
+        },
+        {
+          "t": "text",
+          "v": " From "
+        },
+        {
+          "t": "math",
+          "v": "x+9=0"
+        },
+        {
+          "t": "text",
+          "v": ", subtract 9 to get "
+        },
+        {
+          "t": "math",
+          "v": "x=-9"
+        },
+        {
+          "t": "text",
+          "v": ". From "
+        },
+        {
+          "t": "math",
+          "v": "2x-8=0"
+        },
+        {
+          "t": "text",
+          "v": ", add 8 and divide by 2 to get "
+        },
+        {
+          "t": "math",
+          "v": "x=4"
+        },
+        {
+          "t": "text",
+          "v": ". The sum of the solutions is "
+        },
+        {
+          "t": "math",
+          "v": "-9+4=-5"
+        },
+        {
+          "t": "text",
+          "v": "."
+        }
+      ],
+      "answer": {
+        "correct": "A"
+      },
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "-5"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "5"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "-1"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "-13"
+            }
+          ]
+        }
+      ],
+      "figure": null,
+      "params": {},
+      "tier": "band-targeted",
+      "cellId": "de17336be63f6265",
+      "difficulty": {
+        "scalePoint": 455,
+        "band": "B3",
+        "se_scale": 45,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~455 has ~67% chance correct (Band 3).",
+        "signals": {
+          "judge": {
+            "scale": 455,
+            "se": 45,
+            "perBand": {
+              "B2": 0.4,
+              "B3": 0.63,
+              "B4": 0.8,
+              "B5": 0.89,
+              "B6": 0.94,
+              "B7": 0.97
+            },
+            "rp50Scale": 412,
+            "n": 1
+          }
+        }
+      },
+      "verify": {
+        "leash": "deferred-to-deep-verify",
+        "deepVerdict": "PASS",
+        "independentAnswer": "A",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 17,
+      "program": "SAT",
+      "domain": "psda",
+      "band": "B3",
+      "target_band": "B3",
+      "statementId": "PSDA.B3.s1",
+      "skill": "psda_percent_over100",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "A marine biologist studying bottlenose dolphins recorded that one pod in a coastal bay contained "
+        },
+        {
+          "t": "math",
+          "v": "16"
+        },
+        {
+          "t": "text",
+          "v": " dolphins during her first survey. By her follow-up survey two years later, the number of dolphins in the pod had increased by "
+        },
+        {
+          "t": "math",
+          "v": "25\\%"
+        },
+        {
+          "t": "text",
+          "v": ". How many dolphins were in the pod during the follow-up survey?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "First find "
+        },
+        {
+          "t": "math",
+          "v": "25\\%"
+        },
+        {
+          "t": "text",
+          "v": " of the original "
+        },
+        {
+          "t": "math",
+          "v": "16"
+        },
+        {
+          "t": "text",
+          "v": " dolphins: "
+        },
+        {
+          "t": "math",
+          "v": "0.25 \\times 16 = 4"
+        },
+        {
+          "t": "text",
+          "v": ". An increase of "
+        },
+        {
+          "t": "math",
+          "v": "25\\%"
+        },
+        {
+          "t": "text",
+          "v": " means adding this amount to the original count: "
+        },
+        {
+          "t": "math",
+          "v": "16 + 4 = 20"
+        },
+        {
+          "t": "text",
+          "v": ". So the pod contained "
+        },
+        {
+          "t": "math",
+          "v": "20"
+        },
+        {
+          "t": "text",
+          "v": " dolphins during the follow-up survey."
+        }
+      ],
+      "answer": {
+        "correct": "B"
+      },
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "18"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "20"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "24"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "30"
+            }
+          ]
+        }
+      ],
+      "figure": null,
+      "params": {
+        "mode": "apply_change",
+        "base": 16,
+        "percent": 25
+      },
+      "tier": "band-targeted",
+      "cellId": "22ff9cf833f603e3",
+      "difficulty": {
+        "scalePoint": 465,
+        "band": "B3",
+        "se_scale": 45,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~465 has ~67% chance correct (Band 3).",
+        "signals": {
+          "judge": {
+            "scale": 465,
+            "se": 45,
+            "perBand": {
+              "B2": 0.42,
+              "B3": 0.6,
+              "B4": 0.78,
+              "B5": 0.88,
+              "B6": 0.93,
+              "B7": 0.96
+            },
+            "rp50Scale": 412,
+            "n": 1
+          }
+        }
+      },
+      "verify": {
+        "leash": "pass",
+        "deepVerdict": "PASS",
+        "independentAnswer": "B",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 18,
+      "program": "SAT",
+      "domain": "psda",
+      "band": "B4",
+      "target_band": "B4",
+      "statementId": "PSDA.B4.s4",
+      "skill": "psda_margin_error",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "A marine biologist studying a coastal population of bottlenose dolphins recorded the number of dolphins in each of "
+        },
+        {
+          "t": "math",
+          "v": "40"
+        },
+        {
+          "t": "text",
+          "v": " randomly selected pods. The mean pod size for the sample was "
+        },
+        {
+          "t": "math",
+          "v": "12"
+        },
+        {
+          "t": "text",
+          "v": " dolphins, with a margin of error of "
+        },
+        {
+          "t": "math",
+          "v": "3"
+        },
+        {
+          "t": "text",
+          "v": " dolphins at the 95% confidence level. Based on this sample, which of the following is the most plausible interval for the mean pod size of the entire dolphin population?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "A plausible interval for the population mean is centered on the sample mean and extends one margin of error in each direction."
+        },
+        {
+          "t": "text",
+          "v": " Find the lower bound by subtracting the margin from the sample mean: "
+        },
+        {
+          "t": "math",
+          "v": "12 - 3 = 9"
+        },
+        {
+          "t": "text",
+          "v": ". Find the upper bound by adding the margin to the sample mean: "
+        },
+        {
+          "t": "math",
+          "v": "12 + 3 = 15"
+        },
+        {
+          "t": "text",
+          "v": ". So the most plausible interval for the population mean pod size is from 9 to 15 dolphins, which is choice A. Choice B halves the margin of error, choice C doubles it, and choice D incorrectly centers the interval on an endpoint instead of the sample mean."
+        }
+      ],
+      "answer": {
+        "correct": "A"
+      },
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "text",
+              "v": "9 to 15 dolphins"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "text",
+              "v": "10.5 to 13.5 dolphins"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "text",
+              "v": "6 to 18 dolphins"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "text",
+              "v": "12 to 18 dolphins"
+            }
+          ]
+        }
+      ],
+      "figure": null,
+      "params": {
+        "sample_mean": 12,
+        "margin_of_error": 3
+      },
+      "tier": "band-targeted",
+      "cellId": "49fa56a12724eec5",
+      "difficulty": {
+        "scalePoint": 510,
+        "band": "B4",
+        "se_scale": 45,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~510 has ~67% chance correct (Band 4).",
+        "signals": {
+          "judge": {
+            "scale": 510,
+            "se": 45,
+            "perBand": {
+              "B2": 0.3,
+              "B3": 0.41,
+              "B4": 0.66,
+              "B5": 0.79,
+              "B6": 0.88,
+              "B7": 0.94
+            },
+            "rp50Scale": 463,
+            "n": 1
+          }
+        }
+      },
+      "verify": {
+        "leash": "deferred-to-deep-verify",
+        "deepVerdict": "PASS",
+        "independentAnswer": "A",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 19,
+      "program": "SAT",
+      "domain": "psda",
+      "band": "B4",
+      "target_band": "B4",
+      "statementId": "PSDA.B4.s2",
+      "skill": "psda_mean",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "In a lab, a student measures the mass, in grams, of each of 4 mineral samples. The mean mass of the 4 samples is "
+        },
+        {
+          "t": "math",
+          "v": "35"
+        },
+        {
+          "t": "text",
+          "v": " grams. Three of the samples have masses of "
+        },
+        {
+          "t": "math",
+          "v": "20"
+        },
+        {
+          "t": "text",
+          "v": " grams, "
+        },
+        {
+          "t": "math",
+          "v": "30"
+        },
+        {
+          "t": "text",
+          "v": " grams, and "
+        },
+        {
+          "t": "math",
+          "v": "40"
+        },
+        {
+          "t": "text",
+          "v": " grams. What is the mass, in grams, of the fourth sample?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "The mean of the 4 samples is "
+        },
+        {
+          "t": "math",
+          "v": "35"
+        },
+        {
+          "t": "text",
+          "v": " grams, so the total mass of all 4 samples is "
+        },
+        {
+          "t": "math",
+          "v": "4 \\times 35 = 140"
+        },
+        {
+          "t": "text",
+          "v": " grams."
+        },
+        {
+          "t": "text",
+          "v": " The three known samples have a combined mass of "
+        },
+        {
+          "t": "math",
+          "v": "20 + 30 + 40 = 90"
+        },
+        {
+          "t": "text",
+          "v": " grams."
+        },
+        {
+          "t": "text",
+          "v": " Subtracting gives the mass of the fourth sample: "
+        },
+        {
+          "t": "math",
+          "v": "140 - 90 = 50"
+        },
+        {
+          "t": "text",
+          "v": " grams."
+        }
+      ],
+      "answer": {
+        "accept": [
+          "50"
+        ],
+        "tol": 0
+      },
+      "figure": null,
+      "params": {
+        "mode": "mean_missing",
+        "mean": 35,
+        "n": 4,
+        "known": [
+          20,
+          30,
+          40
+        ]
+      },
+      "tier": "band-targeted",
+      "cellId": "810a14b736c4d6a1",
+      "difficulty": {
+        "scalePoint": 473,
+        "band": "B4",
+        "se_scale": 45,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~473 has ~67% chance correct (Band 4).",
+        "signals": {
+          "judge": {
+            "scale": 473,
+            "se": 45,
+            "perBand": {
+              "B2": 0.42,
+              "B3": 0.58,
+              "B4": 0.76,
+              "B5": 0.87,
+              "B6": 0.93,
+              "B7": 0.97
+            },
+            "rp50Scale": 415,
+            "n": 1
+          }
+        }
+      },
+      "verify": {
+        "leash": "pass",
+        "deepVerdict": "PASS",
+        "independentAnswer": "50",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 20,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B4",
+      "target_band": "B4",
+      "statementId": "GEO.B4.s1",
+      "skill": "geo_cube_volume",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "A marine biologist studying a resident pod of bottlenose dolphins stores water samples collected near the pod in clear, cube-shaped sample containers. Each container is a cube whose edges are each "
+        },
+        {
+          "t": "math",
+          "v": "9"
+        },
+        {
+          "t": "text",
+          "v": " centimeters long. What is the volume, in cubic centimeters, of one sample container?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "The volume of a cube with edge length "
+        },
+        {
+          "t": "math",
+          "v": "s"
+        },
+        {
+          "t": "text",
+          "v": " is "
+        },
+        {
+          "t": "math",
+          "v": "V = s^3"
+        },
+        {
+          "t": "text",
+          "v": ". Each edge measures "
+        },
+        {
+          "t": "math",
+          "v": "s = 9"
+        },
+        {
+          "t": "text",
+          "v": " centimeters, so"
+        },
+        {
+          "t": "mathblock",
+          "v": "V = 9^3 = 9 \\times 9 \\times 9 = 729"
+        },
+        {
+          "t": "text",
+          "v": "cubic centimeters. Watch the common traps: "
+        },
+        {
+          "t": "math",
+          "v": "s^2 = 81"
+        },
+        {
+          "t": "text",
+          "v": " is the area of one face, "
+        },
+        {
+          "t": "math",
+          "v": "6s^2 = 486"
+        },
+        {
+          "t": "text",
+          "v": " is the total surface area, and "
+        },
+        {
+          "t": "math",
+          "v": "12s = 108"
+        },
+        {
+          "t": "text",
+          "v": " is the total length of all edges — none of these is the volume."
+        }
+      ],
+      "answer": {
+        "correct": "D"
+      },
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "81"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "108"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "486"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "729"
+            }
+          ]
+        }
+      ],
+      "figure": null,
+      "params": {
+        "shape": "cube",
+        "s": 9
+      },
+      "tier": "band-targeted",
+      "cellId": "d8fcb14754800982",
+      "difficulty": {
+        "scalePoint": 484,
+        "band": "B4",
+        "se_scale": 45,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~484 has ~67% chance correct (Band 4).",
+        "signals": {
+          "judge": {
+            "scale": 484,
+            "se": 45,
+            "perBand": {
+              "B2": 0.34,
+              "B3": 0.52,
+              "B4": 0.74,
+              "B5": 0.86,
+              "B6": 0.93,
+              "B7": 0.97
+            },
+            "rp50Scale": 434,
+            "n": 1
+          }
+        }
+      },
+      "verify": {
+        "leash": "pass",
+        "deepVerdict": "PASS",
+        "independentAnswer": "D",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    }
+  ]
+}

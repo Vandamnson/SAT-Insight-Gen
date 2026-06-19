@@ -1,0 +1,17 @@
+# dependencies
+node_modules/
+**/node_modules/
+
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# os
+.DS_Store
+**/.DS_Store
+
+# scratch / sandbox
+.prove-sandbox/
+*.tmp

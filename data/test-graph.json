@@ -1,0 +1,471 @@
+{
+  "number": 90,
+  "title": "Novel graph-intersection items (procedural, self-verified)",
+  "questions": [
+    {
+      "id": 1,
+      "program": "SAT",
+      "band": "B7",
+      "target_band": "B7",
+      "skill": "nonlinear_intersection",
+      "domain": "advanced_math",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The functions "
+        },
+        {
+          "t": "math",
+          "v": "f(x) = -3x^{2} + 7x + 4"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "g(x) = -x^{2} - x + 4"
+        },
+        {
+          "t": "text",
+          "v": " are graphed in the xy-plane. At how many points do the graphs of f and g intersect?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "f(x)-g(x)=-2x^{2} + 8x=0 has 2 real solutions, so the graphs meet at 2 points."
+        }
+      ],
+      "answer": {
+        "accept": [
+          "2"
+        ],
+        "tol": 0
+      },
+      "params": {
+        "construction": "f-g roots",
+        "roots": [
+          0,
+          4
+        ],
+        "ask": "count"
+      },
+      "figure": {
+        "fn": "coordPlane",
+        "caption": "The graphs of f and g",
+        "spec": {
+          "xRange": [
+            -2,
+            6
+          ],
+          "yRange": [
+            -15,
+            3
+          ],
+          "xStep": 1,
+          "yStep": 2,
+          "origin": true,
+          "curves": [
+            {
+              "type": "quadratic",
+              "a": -3,
+              "b": 7,
+              "c": 4
+            },
+            {
+              "type": "quadratic",
+              "a": -1,
+              "b": -1,
+              "c": 4
+            }
+          ],
+          "points": []
+        }
+      },
+      "meta": {
+        "selfChecked": true,
+        "ask": "count",
+        "roots": [
+          0,
+          4
+        ],
+        "fDeg": 2,
+        "gDeg": 2
+      }
+    },
+    {
+      "id": 2,
+      "program": "SAT",
+      "band": "B7",
+      "target_band": "B7",
+      "skill": "nonlinear_intersection",
+      "domain": "advanced_math",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The functions "
+        },
+        {
+          "t": "math",
+          "v": "f(x) = -2x^{2} + 3x + 14"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "g(x) = x + 2"
+        },
+        {
+          "t": "text",
+          "v": " are graphed in the xy-plane. What is the product of the x-coordinates of the intersection points of the graphs of f and g?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "f(x)-g(x)=-2x^{2} + 2x + 12=0 has roots x=-2, 3; their product is -6."
+        }
+      ],
+      "answer": {
+        "accept": [
+          "-6"
+        ],
+        "tol": 0
+      },
+      "params": {
+        "construction": "f-g roots",
+        "roots": [
+          -2,
+          3
+        ],
+        "ask": "product_x"
+      },
+      "figure": {
+        "fn": "coordPlane",
+        "caption": "The graphs of f and g",
+        "spec": {
+          "xRange": [
+            -4,
+            5
+          ],
+          "yRange": [
+            -7,
+            13
+          ],
+          "xStep": 1,
+          "yStep": 3,
+          "origin": true,
+          "curves": [
+            {
+              "type": "quadratic",
+              "a": -2,
+              "b": 3,
+              "c": 14
+            },
+            {
+              "type": "line",
+              "m": 1,
+              "b": 2
+            }
+          ],
+          "points": []
+        }
+      },
+      "meta": {
+        "selfChecked": true,
+        "ask": "product_x",
+        "roots": [
+          -2,
+          3
+        ],
+        "fDeg": 2,
+        "gDeg": 1
+      }
+    },
+    {
+      "id": 3,
+      "program": "SAT",
+      "band": "B7",
+      "target_band": "B7",
+      "skill": "nonlinear_intersection",
+      "domain": "advanced_math",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The functions "
+        },
+        {
+          "t": "math",
+          "v": "f(x) = -2x^{3} + 4x^{2} + 21x - 35"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "g(x) = 3x + 1"
+        },
+        {
+          "t": "text",
+          "v": " are graphed in the xy-plane. At how many points do the graphs of f and g intersect?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "f(x)-g(x)=-2x^{3} + 4x^{2} + 18x - 36=0 has 3 real solutions, so the graphs meet at 3 points."
+        }
+      ],
+      "answer": {
+        "accept": [
+          "3"
+        ],
+        "tol": 0
+      },
+      "params": {
+        "construction": "f-g roots",
+        "roots": [
+          -3,
+          2,
+          3
+        ],
+        "ask": "count"
+      },
+      "figure": {
+        "fn": "coordPlane",
+        "caption": "The graphs of f and g",
+        "spec": {
+          "xRange": [
+            -5,
+            5
+          ],
+          "yRange": [
+            -10,
+            12
+          ],
+          "xStep": 1,
+          "yStep": 3,
+          "origin": true,
+          "curves": [
+            {
+              "type": "cubic",
+              "a": -2,
+              "b": 4,
+              "c": 21,
+              "d": -35
+            },
+            {
+              "type": "line",
+              "m": 3,
+              "b": 1
+            }
+          ],
+          "points": []
+        }
+      },
+      "meta": {
+        "selfChecked": true,
+        "ask": "count",
+        "roots": [
+          -3,
+          2,
+          3
+        ],
+        "fDeg": 3,
+        "gDeg": 1
+      }
+    },
+    {
+      "id": 4,
+      "program": "SAT",
+      "band": "B7",
+      "target_band": "B7",
+      "skill": "nonlinear_intersection",
+      "domain": "advanced_math",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The functions "
+        },
+        {
+          "t": "math",
+          "v": "f(x) = -2x^{2} - 4x + 2"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "g(x) = -x^{2} - x - 2"
+        },
+        {
+          "t": "text",
+          "v": " are graphed in the xy-plane. What is the sum of the x-coordinates of the points where the graphs of f and g intersect?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "Set f(x)=g(x): f(x)-g(x)=-x^{2} - 3x + 4=0, with roots x=-4, 1. Their sum is -3."
+        }
+      ],
+      "answer": {
+        "accept": [
+          "-3"
+        ],
+        "tol": 0
+      },
+      "params": {
+        "construction": "f-g roots",
+        "roots": [
+          -4,
+          1
+        ],
+        "ask": "sum_x"
+      },
+      "figure": {
+        "fn": "coordPlane",
+        "caption": "The graphs of f and g",
+        "spec": {
+          "xRange": [
+            -6,
+            3
+          ],
+          "yRange": [
+            -19,
+            1
+          ],
+          "xStep": 1,
+          "yStep": 3,
+          "origin": true,
+          "curves": [
+            {
+              "type": "quadratic",
+              "a": -2,
+              "b": -4,
+              "c": 2
+            },
+            {
+              "type": "quadratic",
+              "a": -1,
+              "b": -1,
+              "c": -2
+            }
+          ],
+          "points": []
+        }
+      },
+      "meta": {
+        "selfChecked": true,
+        "ask": "sum_x",
+        "roots": [
+          -4,
+          1
+        ],
+        "fDeg": 2,
+        "gDeg": 2
+      }
+    },
+    {
+      "id": 5,
+      "program": "SAT",
+      "band": "B7",
+      "target_band": "B7",
+      "skill": "nonlinear_intersection",
+      "domain": "advanced_math",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The functions "
+        },
+        {
+          "t": "math",
+          "v": "f(x) = x^{2} - 8x + 9"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "g(x) = -3x + 3"
+        },
+        {
+          "t": "text",
+          "v": " are graphed in the xy-plane. What is the sum of the x-coordinates of the points where the graphs of f and g intersect?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "Set f(x)=g(x): f(x)-g(x)=x^{2} - 5x + 6=0, with roots x=2, 3. Their sum is 5."
+        }
+      ],
+      "answer": {
+        "accept": [
+          "5"
+        ],
+        "tol": 0
+      },
+      "params": {
+        "construction": "f-g roots",
+        "roots": [
+          2,
+          3
+        ],
+        "ask": "sum_x"
+      },
+      "figure": {
+        "fn": "coordPlane",
+        "caption": "The graphs of f and g",
+        "spec": {
+          "xRange": [
+            0,
+            5
+          ],
+          "yRange": [
+            -12,
+            4
+          ],
+          "xStep": 1,
+          "yStep": 2,
+          "origin": true,
+          "curves": [
+            {
+              "type": "quadratic",
+              "a": 1,
+              "b": -8,
+              "c": 9
+            },
+            {
+              "type": "line",
+              "m": -3,
+              "b": 3
+            }
+          ],
+          "points": []
+        }
+      },
+      "meta": {
+        "selfChecked": true,
+        "ask": "sum_x",
+        "roots": [
+          2,
+          3
+        ],
+        "fDeg": 2,
+        "gDeg": 1
+      }
+    }
+  ]
+}

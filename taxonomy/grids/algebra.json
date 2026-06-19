@@ -1,0 +1,105 @@
+{
+  "_note": "DOMAIN grid: Algebra (all linear). Organized DOMAIN → SUBDOMAIN → variety cells. Every cell's TARGET is a Skills-Insight attribute the Algebra statements name (solution, slope, x/y-intercept, input-output pair, point, number of solutions, parallel/perpendicular, system solution, inequality boundary), and the recompute leash verifies exactly that attribute. Numeric attributes are double-verified (alg_linear_eq_1var / alg_linear_eq_2var / alg_linear_systems / alg_linear_inequalities); identify/interpret/connect/create defer to the blinded deep-verifier. Replaces the mis-leveled linear.json.",
+  "domain": "algebra",
+  "levers": {
+    "B1": ["one step", "small positive integers", "direct ask"],
+    "B2": ["one–two steps", "read a given slope/intercept/pair or a graph", "standard ask"],
+    "B3": ["two steps or create-the-equation/inequality", "a simple context", "interpret or invert"],
+    "B4": ["multi-step or structural (parallel/perpendicular)", "complex context", "interpret meaning"],
+    "B5": ["create from two pairs/a table/a translation", "two-variable", "set up one or both equations of a system"],
+    "B6": ["complex coefficients", "number of solutions / missing coefficient", "connect representations"],
+    "B7": ["create and/or solve", "variable constants", "connect across one-/two-variable, functions, systems, inequalities"]
+  },
+  "subdomains": {
+    "linear_equations_one_variable": {
+      "label": "Linear equations in one variable",
+      "attributes": ["solution"],
+      "statements": ["ALG.B1.s1", "ALG.B1.s2", "ALG.B3.s1", "ALG.B7.s1"],
+      "cells": [
+        { "key": "alg1_onestep_solve", "band": "B1", "statementId": "ALG.B1.s2", "type": "spr", "figure": "none", "rep": "equation", "target": "solution", "form": "one_step", "contextual": false,
+          "ask": "Pose a ONE-STEP linear equation (x+a=b, x−a=b, or a·x=b); solve for x.", "recompute": "alg_linear_eq_1var", "contract": "{\"a\":num,\"b\":num,\"c\":num}  // one-step ⇒ a=1 OR b=0" },
+        { "key": "alg1_onestep_words", "band": "B1", "statementId": "ALG.B1.s1", "type": "spr", "figure": "none", "rep": "words", "target": "solution", "form": "one_step", "contextual": false,
+          "ask": "State a one-step relationship in WORDS only ('when 7 is added to a number the result is 12'); ask for the number.", "recompute": "alg_linear_eq_1var", "contract": "{\"a\":num,\"b\":num,\"c\":num}" },
+        { "key": "alg1_onestep_context", "band": "B1", "statementId": "ALG.B1.s1", "type": "both", "figure": "none", "rep": "context", "target": "solution", "form": "one_step", "contextual": true,
+          "ask": "A simple ONE-STEP real-world situation (one purchase / one addition) → solve for the unknown.", "recompute": "alg_linear_eq_1var", "contract": "{\"a\":num,\"b\":num,\"c\":num}" },
+        { "key": "alg1_twostep_solve", "band": "B2", "statementId": "ALG.B1.s2", "type": "spr", "figure": "none", "rep": "equation", "target": "solution", "form": "two_step", "contextual": false,
+          "ask": "Pose a TWO-STEP equation a·x+b=c; solve for x.", "recompute": "alg_linear_eq_1var", "contract": "{\"a\":num,\"b\":num,\"c\":num}" },
+        { "key": "alg1_combine_solve", "band": "B3", "statementId": "ALG.B3.s1", "type": "spr", "figure": "none", "rep": "equation", "target": "solution", "form": "combine_like_terms", "contextual": false,
+          "ask": "Equation needing LIKE TERMS COMBINED first (a·x+d+e·x=c); put the combined coefficient in params (a:=a+e, b:=d).", "recompute": "alg_linear_eq_1var", "contract": "{\"a\":num,\"b\":num,\"c\":num}" },
+        { "key": "alg1_bothsides_solve", "band": "B3", "statementId": "ALG.B3.s1", "type": "spr", "figure": "none", "rep": "equation", "target": "solution", "form": "variable_both_sides", "contextual": false,
+          "ask": "Variable on BOTH sides (a·x+b=e·x+d); reduce (a:=a−e, b:=b, c:=d) and solve.", "recompute": "alg_linear_eq_1var", "contract": "{\"a\":num,\"b\":num,\"c\":num}" },
+        { "key": "alg1_distribute_solve", "band": "B3", "statementId": "ALG.B3.s1", "type": "spr", "figure": "none", "rep": "equation", "target": "solution", "form": "distribute", "contextual": false,
+          "ask": "Equation requiring DISTRIBUTION first (k(x+p)+q=c); put expanded form in params (a:=k, b:=k·p+q, c).", "recompute": "alg_linear_eq_1var", "contract": "{\"a\":num,\"b\":num,\"c\":num}" },
+        { "key": "alg1_invert_context", "band": "B3", "statementId": "ALG.B3.s1", "type": "spr", "figure": "none", "rep": "context", "target": "solution", "form": "two_step", "contextual": true,
+          "ask": "A linear model in context; ask for the INPUT producing a given output (a:=rate, b:=flat, c:=given output).", "recompute": "alg_linear_eq_1var", "contract": "{\"a\":num,\"b\":num,\"c\":num}" },
+        { "key": "alg1_fractional", "band": "B4", "statementId": "ALG.B1.s2", "type": "spr", "figure": "none", "rep": "equation", "target": "solution", "form": "fractional", "contextual": false,
+          "ask": "Two-step equation with a FRACTIONAL or decimal coefficient; solve for x (answer should still be clean).", "recompute": "alg_linear_eq_1var", "contract": "{\"a\":num,\"b\":num,\"c\":num}" },
+        { "key": "alg1_create_solve_complex", "band": "B7", "statementId": "ALG.B7.s1", "type": "both", "figure": "none", "rep": "context", "target": "solution", "form": "create_and_solve", "contextual": true,
+          "ask": "A richer context where the student must CREATE the linear equation and then solve it (multi-quantity setup).", "recompute": "alg_linear_eq_1var", "contract": "{\"a\":num,\"b\":num,\"c\":num}  // the modeled equation" }
+      ]
+    },
+    "linear_equations_two_variables": {
+      "label": "Linear equations in two variables & linear functions",
+      "attributes": ["slope", "x_intercept", "y_intercept", "input_output_pair", "point", "rate_of_change", "parallel_perpendicular"],
+      "statements": ["ALG.B2.s1", "ALG.B2.s2", "ALG.B3.s2", "ALG.B4.s1", "ALG.B4.s2", "ALG.B6.s1", "ALG.B6.s3", "ALG.B7.s2"],
+      "cells": [
+        { "key": "alg2_eval_from_2pairs", "band": "B2", "statementId": "ALG.B2.s1", "type": "both", "figure": "none", "rep": "two_pairs", "target": "input_output_pair", "form": "na", "contextual": false,
+          "ask": "Give TWO input-output pairs of a linear relationship; ask for the OUTPUT at a third input. Compute m,b for params.", "recompute": "alg_linear_eq_2var", "contract": "{\"m\":num,\"b\":num,\"x0\":num,\"report\":\"value\"}" },
+        { "key": "alg2_read_graph_point", "band": "B2", "statementId": "ALG.B2.s2", "type": "spr", "figure": "req", "rep": "graph", "target": "point", "form": "na", "contextual": false,
+          "ask": "Show the graph of a line; ask for the coordinate of a marked point or an intercept read from the graph.", "recompute": "alg_linear_eq_2var", "contract": "{\"m\":num,\"b\":num,\"x0\":num,\"report\":\"value\"|\"intercept\"}" },
+        { "key": "alg2_xintercept", "band": "B2", "statementId": "ALG.B2.s1", "type": "spr", "figure": "none", "rep": "slope_intercept", "target": "x_intercept", "form": "na", "contextual": false,
+          "ask": "Given a line's slope and y-intercept, find its X-INTERCEPT (solve m·x+b=0; a:=slope, b:=y-int, c:=0).", "recompute": "alg_linear_eq_1var", "contract": "{\"a\":num,\"b\":num,\"c\":num}" },
+        { "key": "alg2_rate_of_change", "band": "B3", "statementId": "ALG.B3.s2", "type": "both", "figure": "opt", "rep": "context", "target": "rate_of_change", "form": "na", "contextual": true,
+          "ask": "A linear context (prose, table, or graph); ask for the RATE OF CHANGE (the per-unit slope).", "recompute": "alg_linear_eq_2var", "contract": "{\"m\":num,\"b\":num,\"x0\":num,\"report\":\"slope\"}" },
+        { "key": "alg2_identify_equation", "band": "B3", "statementId": "ALG.B3.s2", "type": "mcq", "figure": "none", "rep": "context", "target": "create_equation", "form": "na", "contextual": true,
+          "ask": "A context with a flat amount + per-unit rate; ask WHICH equation models the total. Distractors swap flat/rate.", "recompute": "needs-deep-verify", "contract": "{\"m\":num,\"b\":num}" },
+        { "key": "alg2_interpret_coeff", "band": "B4", "statementId": "ALG.B4.s1", "type": "mcq", "figure": "none", "rep": "equation_context", "target": "interpret_part", "form": "na", "contextual": true,
+          "ask": "In a complex context, choose the best INTERPRETATION of a coefficient or constant of a linear model.", "recompute": "needs-deep-verify", "contract": "{\"m\":num,\"b\":num}" },
+        { "key": "alg2_parallel_perp", "band": "B4", "statementId": "ALG.B4.s2", "type": "mcq", "figure": "opt", "rep": "slope_point", "target": "parallel_perpendicular", "form": "na", "contextual": false,
+          "ask": "Find the equation of a line PARALLEL or PERPENDICULAR to a given line through a given point. Distractors keep the original slope.", "recompute": "needs-deep-verify", "contract": "{\"m\":num,\"b\":num}" },
+        { "key": "alg2_yint_from_slope_pt", "band": "B4", "statementId": "ALG.B4.s2", "type": "spr", "figure": "none", "rep": "slope_point", "target": "y_intercept", "form": "na", "contextual": false,
+          "ask": "Given a slope and a NON-intercept point, find the Y-INTERCEPT (encode c:=y_point−m·x_point ⇒ x is the y-intercept).", "recompute": "alg_linear_eq_1var", "contract": "{\"a\":num,\"b\":num,\"c\":num}" },
+        { "key": "alg2_interpret_slope_complex", "band": "B6", "statementId": "ALG.B6.s1", "type": "mcq", "figure": "none", "rep": "equation_context", "target": "interpret_part", "form": "complex", "contextual": true,
+          "ask": "For a COMPLEX linear equation in context, find or interpret the meaning of the slope or an intercept.", "recompute": "needs-deep-verify", "contract": "{\"m\":num,\"b\":num}" },
+        { "key": "alg2_connect_representations", "band": "B7", "statementId": "ALG.B7.s2", "type": "mcq", "figure": "opt", "rep": "table_or_graph", "target": "connect_representations", "form": "na", "contextual": false,
+          "ask": "CONNECT representations: given a table/graph/feature of a linear function, identify the matching equation or a stated value.", "recompute": "needs-deep-verify", "contract": "{\"m\":num,\"b\":num}" }
+      ]
+    },
+    "systems_of_linear_equations": {
+      "label": "Systems of two linear equations in two variables",
+      "attributes": ["system_solution", "number_of_solutions"],
+      "statements": ["ALG.B5.s2", "ALG.B6.s2", "ALG.B7.s1"],
+      "cells": [
+        { "key": "sys_solve_x", "band": "B5", "statementId": "ALG.B5.s2", "type": "both", "figure": "none", "rep": "system", "target": "system_solution", "form": "solve_x", "contextual": false,
+          "ask": "Solve a 2×2 linear system for x (set solve_for 'x').", "recompute": "alg_linear_systems", "contract": "{\"a1\":num,\"b1\":num,\"c1\":num,\"a2\":num,\"b2\":num,\"c2\":num,\"solve_for\":\"x\"}" },
+        { "key": "sys_solve_y", "band": "B5", "statementId": "ALG.B5.s2", "type": "both", "figure": "none", "rep": "system", "target": "system_solution", "form": "solve_y", "contextual": false,
+          "ask": "Solve a 2×2 linear system for y (set solve_for 'y').", "recompute": "alg_linear_systems", "contract": "{\"a1\":num,\"b1\":num,\"c1\":num,\"a2\":num,\"b2\":num,\"c2\":num,\"solve_for\":\"y\"}" },
+        { "key": "sys_create_context", "band": "B5", "statementId": "ALG.B5.s2", "type": "mcq", "figure": "none", "rep": "context", "target": "system_solution", "form": "create", "contextual": true,
+          "ask": "A two-quantity context (tickets, mixtures, two rates); CREATE the system or use it to find a value.", "recompute": "needs-deep-verify", "contract": "{\"a1\":num,\"b1\":num,\"c1\":num,\"a2\":num,\"b2\":num,\"c2\":num}" },
+        { "key": "sys_number_of_solutions", "band": "B6", "statementId": "ALG.B6.s2", "type": "mcq", "figure": "none", "rep": "system", "target": "number_of_solutions", "form": "na", "contextual": false,
+          "ask": "Determine the NUMBER of solutions of a system (one / none = parallel / infinitely many = same line).", "recompute": "needs-deep-verify", "contract": "{\"a1\":num,\"b1\":num,\"c1\":num,\"a2\":num,\"b2\":num,\"c2\":num}" },
+        { "key": "sys_missing_coeff", "band": "B6", "statementId": "ALG.B6.s2", "type": "spr", "figure": "none", "rep": "system", "target": "number_of_solutions", "form": "missing_coeff", "contextual": false,
+          "ask": "Find the missing COEFFICIENT that makes a system have no solution (or infinitely many) — match slopes.", "recompute": "needs-deep-verify", "contract": "{}  // coefficient for parallel/identical → deep-verify" },
+        { "key": "sys_create_solve_complex", "band": "B7", "statementId": "ALG.B7.s1", "type": "both", "figure": "none", "rep": "context", "target": "system_solution", "form": "create_and_solve", "contextual": true,
+          "ask": "Create AND solve a linear system from a richer context, or report a combination of the solution (e.g. x then a derived quantity).", "recompute": "alg_linear_systems", "contract": "{\"a1\":num,\"b1\":num,\"c1\":num,\"a2\":num,\"b2\":num,\"c2\":num,\"solve_for\":\"x\"|\"y\"}" }
+      ]
+    },
+    "linear_inequalities": {
+      "label": "Linear inequalities in one or two variables",
+      "attributes": ["inequality_boundary", "inequality_solution_set"],
+      "statements": ["ALG.B3.s1", "ALG.B5.s1", "ALG.B7.s2"],
+      "cells": [
+        { "key": "ineq_boundary", "band": "B3", "statementId": "ALG.B3.s1", "type": "spr", "figure": "none", "rep": "inequality", "target": "inequality_boundary", "form": "one_var", "contextual": false,
+          "ask": "Solve a one-variable linear INEQUALITY a·x+b (op) c; report the BOUNDARY value of x.", "recompute": "alg_linear_inequalities", "contract": "{\"a\":num,\"b\":num,\"c\":num,\"op\":\"le\"|\"ge\"|\"lt\"|\"gt\",\"report\":\"boundary\"}" },
+        { "key": "ineq_max_int", "band": "B4", "statementId": "ALG.B3.s1", "type": "spr", "figure": "none", "rep": "inequality", "target": "inequality_solution_set", "form": "max_int", "contextual": true,
+          "ask": "A context giving an upper-bounded inequality; ask for the GREATEST integer value satisfying it (report 'max_int').", "recompute": "alg_linear_inequalities", "contract": "{\"a\":num,\"b\":num,\"c\":num,\"op\":\"le\"|\"lt\",\"report\":\"max_int\"}" },
+        { "key": "ineq_min_int", "band": "B4", "statementId": "ALG.B3.s1", "type": "spr", "figure": "none", "rep": "inequality", "target": "inequality_solution_set", "form": "min_int", "contextual": true,
+          "ask": "A context giving a lower-bounded inequality; ask for the LEAST integer value satisfying it (report 'min_int').", "recompute": "alg_linear_inequalities", "contract": "{\"a\":num,\"b\":num,\"c\":num,\"op\":\"ge\"|\"gt\",\"report\":\"min_int\"}" },
+        { "key": "ineq_create_twovar", "band": "B5", "statementId": "ALG.B5.s1", "type": "mcq", "figure": "none", "rep": "context", "target": "inequality_solution_set", "form": "two_var", "contextual": true,
+          "ask": "Create a TWO-VARIABLE linear inequality from a constraint context (a budget/capacity); choose the correct inequality.", "recompute": "needs-deep-verify", "contract": "{}  // two-variable inequality model → deep-verify" },
+        { "key": "ineq_variable_constants", "band": "B7", "statementId": "ALG.B7.s2", "type": "mcq", "figure": "none", "rep": "inequality", "target": "inequality_solution_set", "form": "variable_constants", "contextual": false,
+          "ask": "Reason about a linear inequality with VARIABLE CONSTANTS (for which values of a constant is the solution set …).", "recompute": "needs-deep-verify", "contract": "{}  // parametric inequality → deep-verify" }
+      ]
+    }
+  }
+}

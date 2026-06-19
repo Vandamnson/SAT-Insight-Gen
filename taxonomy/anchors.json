@@ -1,0 +1,38 @@
+[
+  {
+    "band": "B2",
+    "domain": "advanced_math",
+    "key": "C",
+    "stem": "Which expression is equivalent to 12 x + 27 ? 129x+1 2712x+1 34x+9 39x+24"
+  },
+  {
+    "band": "B3",
+    "domain": "advanced_math",
+    "key": "11",
+    "stem": "x - 2 = 9 What is one possible solution to the given equation?"
+  },
+  {
+    "band": "B4",
+    "domain": "algebra",
+    "key": "2",
+    "stem": "2x+16=ax+8 In the given equation, a is a constant. If the equation has infinitely many solutions, what is the value of a ?"
+  },
+  {
+    "band": "B5",
+    "domain": "psda",
+    "key": "143",
+    "stem": "How many tablespoons are equivalent to 14 teaspoons? 3 teaspoons=1 tablespoon"
+  },
+  {
+    "band": "B6",
+    "domain": "advanced_math",
+    "key": "D",
+    "stem": "fx= x - 14 x + 19 The function f is defined by the given equation. For what value of x does fx reach its minimum? -266 -19 - 33 2 - 5 2"
+  },
+  {
+    "band": "B7",
+    "domain": "algebra",
+    "key": "B",
+    "stem": "If x+63=x+613 , the value of x+6 is between which of the following pairs of values? -7 and -3 -2 and 2 2 and 7 8 and 13"
+  }
+]

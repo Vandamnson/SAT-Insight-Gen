@@ -1,0 +1,87 @@
+{
+  "_note": "Structural variants per symbolic template — the author is told to build THIS variant (not the textbook default), rotated per item so successive instances of a skill differ in STRUCTURE (what's given, what's asked, the manipulation), not just numbers. Each variant stays within the template's existing params contract so the recompute leash still verifies it. Where the contract has a selector (root_select / mode / solve_for / target), the variant names the value to set.",
+  "variants": {
+    "poly_operations": [
+      "ADD two polynomials and report the simplified result (or one of its coefficients).",
+      "SUBTRACT the second polynomial from the first — make the sign distribution the crux (a common error).",
+      "Form a SCALED combination like 3·P(x) − 2·Q(x), then simplify.",
+      "Ask only for the COEFFICIENT of a specific term (e.g. the x² term) in the simplified sum.",
+      "Use CUBIC polynomials so there are more like-terms to track.",
+      "Give the result and one addend; ask for the MISSING polynomial (inverted)."
+    ],
+    "exponent_laws": [
+      "Apply the PRODUCT rule: x^a · x^b.",
+      "Apply the QUOTIENT rule: x^a / x^b (allow a negative resulting exponent).",
+      "Apply POWER-of-a-power: (x^a)^b, possibly times a coefficient.",
+      "Rewrite a NEGATIVE exponent as a positive-exponent fraction.",
+      "Rewrite a FRACTIONAL exponent as a radical (or vice versa).",
+      "Combine several factors into a single a·x^n form."
+    ],
+    "quad_factored": [
+      "Ask for the two SOLUTIONS (roots) of the equation (root_select 'plus'/'minus').",
+      "Ask for the SUM of the solutions (set root_select='sum').",
+      "Ask for the PRODUCT of the solutions (set root_select='product').",
+      "Ask for the NUMBER of real solutions (set root_select='count') — make the discriminant the point.",
+      "Give it in factored form a(x−r)(x−s)=0 and ask only for the LARGER (or positive) solution.",
+      "Provide ONE solution and a coefficient; ask for the OTHER solution (inverted)."
+    ],
+    "nonlinear_unknown_const": [
+      "Find the constant c so the equation has a GIVEN root (substitute and solve).",
+      "Find c so the quadratic has EXACTLY ONE real solution (discriminant = 0).",
+      "Find c so the equation has NO real solutions (discriminant < 0 boundary).",
+      "Given the SUM (or product) of the roots, recover the missing coefficient.",
+      "Two nonlinear equations share a solution; find the unknown constant."
+    ],
+    "quad_from_area": [
+      "Ask for the MAXIMUM or MINIMUM value (vertex_y).",
+      "Ask for the value of x at the vertex / axis of symmetry (vertex_x).",
+      "Ask for the NUMBER of solutions via the discriminant.",
+      "Ask for the POSITIVE root of the area equation (a real dimension).",
+      "Ask for the value where the graph crosses the y-axis (y_intercept)."
+    ],
+    "poly_factor": [
+      "Evaluate the polynomial at a value, P(k) (target 'value_at').",
+      "Identify a ZERO of the polynomial from its factored form (target 'zero').",
+      "Find the SUM of the zeros (target 'sum_of_zeros').",
+      "Find the PRODUCT of the zeros (target 'product_of_zeros').",
+      "Given that (x−k) is a FACTOR, find the missing constant.",
+      "Describe the END BEHAVIOR from the leading term (target 'end_behavior')."
+    ],
+    "radical_simple": [
+      "SOLVE a radical equation √(linear)=k (mode 'solve_radical').",
+      "Solve with ISOLATE-then-square: a radical plus a constant equals a value.",
+      "EVALUATE a radical expression at a given value (mode 'eval_radical').",
+      "Use a CUBE root rather than a square root.",
+      "Build one whose naive solving yields an EXTRANEOUS root to reject."
+    ],
+    "rational_rearrange": [
+      "SOLVE a literal formula for a named variable (mode 'solve_radical'/rearrange).",
+      "EVALUATE a rational expression at given values (mode 'eval_rational').",
+      "Isolate a variable that sits in the DENOMINATOR.",
+      "Rearrange first, THEN evaluate at a given value.",
+      "Solve a proportion (two ratios equal) for the unknown."
+    ],
+    "abs_value": [
+      "Solve |ax+b| = c for BOTH solutions.",
+      "Ask only for the SMALLER (or larger) of the two solutions.",
+      "Build |ax+b| = 0 — exactly ONE solution (the trap).",
+      "EVALUATE an absolute-value expression at a given value.",
+      "Ask for the SUM of the two solutions."
+    ],
+    "lin_solve_value": [
+      "Solve a·x + b = c for x directly.",
+      "Ask for a SUB-EXPRESSION (e.g. the value of 3x − 1, not x).",
+      "Put the variable on BOTH sides before solving.",
+      "Use FRACTIONAL or decimal coefficients.",
+      "Solve for x, then SUBSTITUTE to evaluate a second expression."
+    ],
+    "system_solve": [
+      "Solve the 2×2 system for x (solve_for 'x').",
+      "Solve the system for y (solve_for 'y').",
+      "Ask for the value of x + y (or x − y) without solving fully.",
+      "Recognize a system with NO solution — parallel lines (solve_for 'none').",
+      "Recognize INFINITELY many solutions — identical lines (solve_for 'infinite').",
+      "Find a missing COEFFICIENT given the solution (solve_for 'coeff')."
+    ]
+  }
+}

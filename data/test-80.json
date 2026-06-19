@@ -1,0 +1,652 @@
+{
+  "number": 80,
+  "title": "Algebra · band-targeted pilot (Phase 1)",
+  "questions": [
+    {
+      "id": 1,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B2",
+      "target_band": "B2",
+      "statementId": "ALG.B2.s1",
+      "skill": "lin_solve_value",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The equation below relates two quantities."
+        },
+        {
+          "t": "mathblock",
+          "v": "4x + 5 = 29"
+        },
+        {
+          "t": "text",
+          "v": "What is the value of "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "Start with the given equation."
+        },
+        {
+          "t": "mathblock",
+          "v": "4x + 5 = 29"
+        },
+        {
+          "t": "text",
+          "v": "Subtract 5 from both sides to isolate the term with "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "mathblock",
+          "v": "4x = 24"
+        },
+        {
+          "t": "text",
+          "v": "Divide both sides by 4."
+        },
+        {
+          "t": "mathblock",
+          "v": "x = 6"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "6"
+        ],
+        "tol": 0
+      },
+      "figure": null,
+      "params": {
+        "a": 4,
+        "b": 5,
+        "c": 29
+      },
+      "tier": "band-targeted",
+      "cellId": "26a3014bf158f592",
+      "difficulty": {
+        "scalePoint": 406,
+        "band": "B2",
+        "se_scale": 45,
+        "pBand": null,
+        "band_ambiguous": true,
+        "method": "apriori_v1_structural",
+        "rp67_statement": "A student scoring ~406 has ~67% chance correct (Band 2).",
+        "signals": {
+          "anchor": {
+            "scale": 390,
+            "band": "B2"
+          },
+          "feature": {
+            "scale": 422
+          }
+        },
+        "feature_vector": {
+          "solve_steps": 2,
+          "concepts_chained": 1,
+          "is_parametric": false,
+          "number_messiness": 0,
+          "trap_distractor": 0,
+          "figure_load": "none",
+          "reading_load": "plain",
+          "scaffolding_removed": false,
+          "two_step_ask": false,
+          "inversion": "standard"
+        }
+      },
+      "verify": {
+        "leash": "pass",
+        "deepVerdict": "PASS",
+        "independentAnswer": "6",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 2,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B4",
+      "target_band": "B4",
+      "statementId": "ALG.B4.s2",
+      "skill": "lin_from_2pt",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "Line "
+        },
+        {
+          "t": "math",
+          "v": "L"
+        },
+        {
+          "t": "text",
+          "v": " is shown in the "
+        },
+        {
+          "t": "math",
+          "v": "xy"
+        },
+        {
+          "t": "text",
+          "v": "-plane. Line "
+        },
+        {
+          "t": "math",
+          "v": "k"
+        },
+        {
+          "t": "text",
+          "v": " is parallel to line "
+        },
+        {
+          "t": "math",
+          "v": "L"
+        },
+        {
+          "t": "text",
+          "v": " and passes through the point "
+        },
+        {
+          "t": "math",
+          "v": "(3, 4)"
+        },
+        {
+          "t": "text",
+          "v": ". What is the "
+        },
+        {
+          "t": "math",
+          "v": "y"
+        },
+        {
+          "t": "text",
+          "v": "-coordinate of the point on line "
+        },
+        {
+          "t": "math",
+          "v": "k"
+        },
+        {
+          "t": "text",
+          "v": " whose "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": "-coordinate is "
+        },
+        {
+          "t": "math",
+          "v": "7"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "First find the slope of line "
+        },
+        {
+          "t": "math",
+          "v": "L"
+        },
+        {
+          "t": "text",
+          "v": " from the graph. It passes through "
+        },
+        {
+          "t": "math",
+          "v": "(0, 1)"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "(2, 5)"
+        },
+        {
+          "t": "text",
+          "v": ", so its slope is"
+        },
+        {
+          "t": "mathblock",
+          "v": "\\frac{5 - 1}{2 - 0} = 2."
+        },
+        {
+          "t": "text",
+          "v": "Because line "
+        },
+        {
+          "t": "math",
+          "v": "k"
+        },
+        {
+          "t": "text",
+          "v": " is parallel to line "
+        },
+        {
+          "t": "math",
+          "v": "L"
+        },
+        {
+          "t": "text",
+          "v": ", line "
+        },
+        {
+          "t": "math",
+          "v": "k"
+        },
+        {
+          "t": "text",
+          "v": " also has slope "
+        },
+        {
+          "t": "math",
+          "v": "2"
+        },
+        {
+          "t": "text",
+          "v": ". Using the point "
+        },
+        {
+          "t": "math",
+          "v": "(3, 4)"
+        },
+        {
+          "t": "text",
+          "v": " to find the intercept "
+        },
+        {
+          "t": "math",
+          "v": "b"
+        },
+        {
+          "t": "text",
+          "v": ":"
+        },
+        {
+          "t": "mathblock",
+          "v": "4 = 2(3) + b \\Rightarrow b = 4 - 6 = -2,"
+        },
+        {
+          "t": "text",
+          "v": "so line "
+        },
+        {
+          "t": "math",
+          "v": "k"
+        },
+        {
+          "t": "text",
+          "v": " is "
+        },
+        {
+          "t": "math",
+          "v": "y = 2x - 2"
+        },
+        {
+          "t": "text",
+          "v": ". Evaluating at "
+        },
+        {
+          "t": "math",
+          "v": "x = 7"
+        },
+        {
+          "t": "text",
+          "v": ":"
+        },
+        {
+          "t": "mathblock",
+          "v": "y = 2(7) - 2 = 12."
+        }
+      ],
+      "answer": {
+        "correct": "B"
+      },
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "2"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "12"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "14"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "18"
+            }
+          ]
+        }
+      ],
+      "figure": {
+        "fn": "coordPlane",
+        "spec": {
+          "xRange": [
+            -3,
+            5
+          ],
+          "yRange": [
+            -3,
+            7
+          ],
+          "xStep": 1,
+          "yStep": 1,
+          "origin": true,
+          "curves": [
+            {
+              "type": "line2pt",
+              "p1": [
+                0,
+                1
+              ],
+              "p2": [
+                2,
+                5
+              ]
+            }
+          ],
+          "points": [
+            {
+              "at": [
+                0,
+                1
+              ],
+              "label": "(0, 1)"
+            },
+            {
+              "at": [
+                2,
+                5
+              ],
+              "label": "(2, 5)"
+            }
+          ]
+        },
+        "caption": "Line L in the xy-plane."
+      },
+      "params": {
+        "m": 2,
+        "b": -2,
+        "x0": 7,
+        "report": "value"
+      },
+      "tier": "band-targeted",
+      "cellId": "b3ccd4a87c05f530",
+      "difficulty": {
+        "scalePoint": 540,
+        "band": "B4",
+        "se_scale": 45,
+        "pBand": null,
+        "band_ambiguous": true,
+        "method": "apriori_v1_structural",
+        "rp67_statement": "A student scoring ~540 has ~67% chance correct (Band 4).",
+        "signals": {
+          "anchor": {
+            "scale": 505,
+            "band": "B4"
+          },
+          "feature": {
+            "scale": 574
+          }
+        },
+        "feature_vector": {
+          "solve_steps": 2,
+          "concepts_chained": 1,
+          "is_parametric": true,
+          "number_messiness": 0,
+          "trap_distractor": 1,
+          "figure_load": "req",
+          "reading_load": "plain",
+          "scaffolding_removed": true,
+          "two_step_ask": false,
+          "inversion": "standard"
+        }
+      },
+      "verify": {
+        "leash": "pass",
+        "deepVerdict": "PASS",
+        "independentAnswer": "B",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 3,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B5",
+      "target_band": "B6",
+      "statementId": "ALG.B6.s2",
+      "skill": "system_solve",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The given system of equations is shown below."
+        },
+        {
+          "t": "mathblock",
+          "v": "4x + 5y = 2"
+        },
+        {
+          "t": "mathblock",
+          "v": "3x - 2y = 13"
+        },
+        {
+          "t": "text",
+          "v": "What is the value of"
+        },
+        {
+          "t": "math",
+          "v": "y"
+        },
+        {
+          "t": "text",
+          "v": "in the solution to this system?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "Eliminate"
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": "by scaling both equations. Multiply the first equation by 3 and the second equation by 4:"
+        },
+        {
+          "t": "mathblock",
+          "v": "12x + 15y = 6"
+        },
+        {
+          "t": "mathblock",
+          "v": "12x - 8y = 52"
+        },
+        {
+          "t": "text",
+          "v": "Subtract the second new equation from the first to remove the"
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": "terms:"
+        },
+        {
+          "t": "mathblock",
+          "v": "23y = -46"
+        },
+        {
+          "t": "text",
+          "v": "Divide both sides by 23:"
+        },
+        {
+          "t": "math",
+          "v": "y = -2"
+        },
+        {
+          "t": "text",
+          "v": ". (Back-substituting gives"
+        },
+        {
+          "t": "math",
+          "v": "x = 3"
+        },
+        {
+          "t": "text",
+          "v": ", which is the trap value in choice D.)"
+        }
+      ],
+      "answer": {
+        "correct": "B"
+      },
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "-3"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "-2"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "2"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "3"
+            }
+          ]
+        }
+      ],
+      "figure": null,
+      "params": {
+        "a1": 4,
+        "b1": 5,
+        "c1": 2,
+        "a2": 3,
+        "b2": -2,
+        "c2": 13,
+        "solve_for": "y"
+      },
+      "tier": "band-targeted",
+      "cellId": "259c39de0f6f4c9f",
+      "difficulty": {
+        "scalePoint": 607,
+        "band": "B5",
+        "se_scale": 45,
+        "pBand": null,
+        "band_ambiguous": true,
+        "method": "apriori_v1_structural",
+        "rp67_statement": "A student scoring ~607 has ~67% chance correct (Band 5).",
+        "signals": {
+          "anchor": {
+            "scale": 640,
+            "band": "B6"
+          },
+          "feature": {
+            "scale": 574
+          }
+        },
+        "feature_vector": {
+          "solve_steps": 3,
+          "concepts_chained": 1,
+          "is_parametric": true,
+          "number_messiness": 0,
+          "trap_distractor": 1,
+          "figure_load": "none",
+          "reading_load": "plain",
+          "scaffolding_removed": true,
+          "two_step_ask": false,
+          "inversion": "standard"
+        }
+      },
+      "verify": {
+        "leash": "pass",
+        "deepVerdict": "PASS",
+        "independentAnswer": "B",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    }
+  ]
+}

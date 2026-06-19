@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "sat-insight-gen/item.schema.json",
+  "title": "SAT-Insight-Gen item",
+  "description": "Per-item record: SAT-Mod2 segment model + the Skills-Insight band spine + difficulty/verify records. Renderer (build/render.mjs) consumes stem/solution/options/answer/figure; the rest is additive.",
+  "type": "object",
+  "required": ["id", "program", "domain", "band", "statementId", "skill", "type", "stem", "answer"],
+  "additionalProperties": true,
+  "properties": {
+    "id": { "type": ["integer", "string"] },
+    "program": { "enum": ["SAT", "PSAT_NMSQT", "PSAT_10", "PSAT_8_9"] },
+    "domain": { "enum": ["algebra", "advanced_math", "psda", "geometry_trig"] },
+    "band": { "enum": ["B1", "B2", "B3", "B4", "B5", "B6", "B7"] },
+    "target_band": { "enum": ["B1", "B2", "B3", "B4", "B5", "B6", "B7"], "description": "Band the generator aimed for; accepted only if measured band matches (RP67 gate)." },
+    "statementId": { "type": "string", "pattern": "^(ALG|ADV|PSDA|GEO)\\.B[1-7]\\.s[0-9]+$" },
+    "skill": { "type": "string", "description": "Generatable template key (taxonomy/skills.json)." },
+    "type": { "enum": ["mcq", "spr"] },
+    "stem": { "$ref": "#/$defs/segments" },
+    "solution": { "$ref": "#/$defs/segments" },
+    "restate": { "$ref": "#/$defs/segments" },
+    "options": {
+      "type": "array",
+      "items": { "type": "object", "required": ["key", "seg"], "properties": { "key": { "type": "string" }, "seg": { "$ref": "#/$defs/segments" } } }
+    },
+    "answer": {
+      "type": "object",
+      "oneOf": [
+        { "required": ["correct"], "properties": { "correct": { "type": "string" } } },
+        { "required": ["accept"], "properties": { "accept": { "type": "array", "items": { "type": "string" } }, "tol": { "type": "number" } } }
+      ]
+    },
+    "figure": {
+      "type": ["object", "null"],
+      "required": ["fn", "spec"],
+      "properties": {
+        "fn": { "type": "string", "description": "Dispatch key into figures/figures.js FIGURES." },
+        "spec": { "type": "object" },
+        "caption": { "type": "string" },
+        "note": { "type": "string" }
+      }
+    },
+    "params": { "type": "object", "description": "Structured GIVENS only (never the asked value) — the recompute-leash contract." },
+    "difficulty": {
+      "type": "object",
+      "required": ["scalePoint", "band", "method"],
+      "properties": {
+        "scalePoint": { "type": "number", "minimum": 200, "maximum": 800, "description": "RP67 location: scale score where P(correct)=0.67." },
+        "band": { "enum": ["B1", "B2", "B3", "B4", "B5", "B6", "B7"] },
+        "se_scale": { "type": "number" },
+        "pBand": { "type": ["number", "null"] },
+        "band_ambiguous": { "type": "boolean" },
+        "is_exemplar": { "type": "boolean", "description": "RP50: next-lower band < 0.50." },
+        "method": { "type": "string", "enum": ["fixture", "phase0-anchor", "apriori_v1", "irt_2pl", "irt_3pl"] },
+        "rp67_statement": { "type": "string" },
+        "signals": { "type": "object" },
+        "feature_vector": { "type": "object" }
+      }
+    },
+    "verify": {
+      "type": "object",
+      "properties": {
+        "leash": { "enum": ["pass", "fail", "needs-deep-verify"] },
+        "deepVerdict": { "enum": ["PASS", "FAIL", "AMBIGUOUS"] },
+        "independentAnswer": { "type": "string" },
+        "figureVerify": { "type": "object" }
+      }
+    },
+    "cellId": { "type": "string" },
+    "tier": { "type": "string" }
+  },
+  "$defs": {
+    "segment": {
+      "type": "object",
+      "required": ["t"],
+      "properties": { "t": { "enum": ["text", "math", "mathblock", "money", "br", "p"] }, "v": { "type": "string" }, "segs": { "$ref": "#/$defs/segments" } }
+    },
+    "segments": { "type": "array", "items": { "oneOf": [ { "type": "string" }, { "$ref": "#/$defs/segment" } ] } }
+  }
+}

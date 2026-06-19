@@ -1,0 +1,101 @@
+{
+  "_note": "DOMAIN grid: Problem-Solving & Data Analysis. DOMAIN → SUBDOMAIN → variety cells, the 6 official subdomains. Each cell's TARGET is a Skills-Insight attribute the PSDA statements name (percent, percent change, growth factor, unit rate, ratio/proportion, median, mean, standard deviation, range, probability, conditional probability, line of best fit, rate of change, margin of error, population). Computable ones are double-verified by psda_stats; display-reading / comparison / modeling / inference cells defer to the blinded deep-verifier. Figure cells use the LIVE renderers (table / barChart / scatter / dotPlot).",
+  "domain": "psda",
+  "levers": {
+    "B1": ["one step", "small whole numbers", "a single percent/rate or a short ordered list"],
+    "B2": ["one–two steps", "a unit conversion or read one display", "standard ask"],
+    "B3": ["percent > 100 or percent change; read a two-way table", "a probability from a table"],
+    "B4": ["equivalent ratio/rate forms; compare centers/spreads; fit a line; plausible values"],
+    "B5": ["growth factor as a percent or complex unit; probabilities sum to 1"],
+    "B6": ["multistep derived units; average rate of change from a graph; center from a frequency table; conditional probability"],
+    "B7": ["population a study extends to; how center/range change when the data set changes"]
+  },
+  "subdomains": {
+    "ratios_rates_proportions": {
+      "label": "Ratios, rates, proportional relationships & units",
+      "attributes": ["unit_rate", "ratio", "proportion", "derived_units"],
+      "statements": ["PSDA.B1.s1", "PSDA.B2.s1", "PSDA.B4.s1", "PSDA.B6.s1"],
+      "cells": [
+        { "key": "psda_unit_rate", "band": "B1", "statementId": "PSDA.B1.s1", "type": "both", "figure": "none", "rep": "context", "target": "unit_rate", "form": "rate", "contextual": true,
+          "ask": "A simple UNIT-RATE problem (price per item, speed, per-unit amount).", "recompute": "psda_stats", "contract": "{\"mode\":\"unit_rate\",\"total\":num,\"units\":num}" },
+        { "key": "psda_unit_conversion", "band": "B2", "statementId": "PSDA.B2.s1", "type": "both", "figure": "none", "rep": "context", "target": "derived_units", "form": "conversion", "contextual": true,
+          "ask": "A UNIT-CONVERSION problem (km/h→m/s, ounces→pounds, currency); convert and report.", "recompute": "needs-deep-verify", "contract": "{}  // conversion factor → deep-verify" },
+        { "key": "psda_proportion", "band": "B4", "statementId": "PSDA.B4.s1", "type": "both", "figure": "none", "rep": "context", "target": "proportion", "form": "ratio", "contextual": true,
+          "ask": "Use a RATIO/PROPORTION in equivalent form (scale a recipe, a map scale, a mixture); solve for the unknown.", "recompute": "needs-deep-verify", "contract": "{}  // proportion → deep-verify" },
+        { "key": "psda_multistep_derived", "band": "B6", "statementId": "PSDA.B6.s1", "type": "both", "figure": "none", "rep": "context", "target": "derived_units", "form": "multistep", "contextual": true,
+          "ask": "A MULTISTEP problem with rates/percentages/DERIVED units (products & quotients of units, e.g. density, fuel economy).", "recompute": "needs-deep-verify", "contract": "{}  // multistep derived units → deep-verify" }
+      ]
+    },
+    "percentages": {
+      "label": "Percentages",
+      "attributes": ["percent", "percent_change", "growth_factor"],
+      "statements": ["PSDA.B1.s1", "PSDA.B2.s1", "PSDA.B3.s1", "PSDA.B5.s1"],
+      "cells": [
+        { "key": "psda_percent_of", "band": "B1", "statementId": "PSDA.B1.s1", "type": "both", "figure": "none", "rep": "context", "target": "percent", "form": "percent", "contextual": true,
+          "ask": "Find a PERCENT of a quantity (or what percent one number is of another).", "recompute": "psda_stats", "contract": "{\"mode\":\"percent_of\",\"whole\":num,\"percent\":num}  // or {\"mode\":\"find_percent\",\"part\":num,\"whole\":num}" },
+        { "key": "psda_percent_over100", "band": "B3", "statementId": "PSDA.B3.s1", "type": "both", "figure": "none", "rep": "context", "target": "percent", "form": "percent_gt_100", "contextual": true,
+          "ask": "A percent problem where the percentage EXCEEDS 100% (grows to 250% of the original).", "recompute": "psda_stats", "contract": "{\"mode\":\"apply_change\",\"base\":num,\"percent\":num}" },
+        { "key": "psda_percent_change", "band": "B3", "statementId": "PSDA.B3.s1", "type": "both", "figure": "none", "rep": "context", "target": "percent_change", "form": "percent", "contextual": true,
+          "ask": "Find a PERCENT CHANGE (increase or decrease) from a start to an end value.", "recompute": "psda_stats", "contract": "{\"mode\":\"percent_change\",\"start\":num,\"end\":num}" },
+        { "key": "psda_growth_factor", "band": "B5", "statementId": "PSDA.B5.s1", "type": "both", "figure": "none", "rep": "context", "target": "growth_factor", "form": "percent", "contextual": true,
+          "ask": "Use a GROWTH FACTOR expressed as a percent (repeated/compound growth or a complex unit) to find an amount.", "recompute": "psda_stats", "contract": "{\"mode\":\"apply_change\",\"base\":num,\"percent\":num}  // single step; multi-step compounding → deep-verify" }
+      ]
+    },
+    "one_variable_data": {
+      "label": "One-variable data: distributions, center & spread",
+      "attributes": ["median", "mean", "standard_deviation", "range", "rate_of_change"],
+      "statements": ["PSDA.B1.s2", "PSDA.B2.s2", "PSDA.B4.s2", "PSDA.B6.s2", "PSDA.B7.s2"],
+      "cells": [
+        { "key": "psda_median", "band": "B1", "statementId": "PSDA.B1.s2", "type": "both", "figure": "none", "rep": "ordered_list", "target": "median", "form": "center", "contextual": false,
+          "ask": "Find the MEDIAN of a list in ascending order. Vary ODD vs EVEN length.", "recompute": "psda_stats", "contract": "{\"mode\":\"median\",\"values\":[the list]}" },
+        { "key": "psda_read_frequency", "band": "B2", "statementId": "PSDA.B2.s2", "type": "both", "figure": "req", "rep": "frequency_table", "target": "median", "form": "display", "contextual": false,
+          "ask": "Read/compare data in a BAR GRAPH or FREQUENCY TABLE — a total, a difference, or which category meets a condition. (fn 'barChart' or 'table')", "recompute": "needs-deep-verify", "contract": "{}  // read from display → deep-verify" },
+        { "key": "psda_mean", "band": "B4", "statementId": "PSDA.B4.s2", "type": "both", "figure": "none", "rep": "list_or_table", "target": "mean", "form": "center", "contextual": false,
+          "ask": "Compute a MEAN, or find a MISSING value given the mean (mode 'mean' or 'mean_missing').", "recompute": "psda_stats", "contract": "{\"mode\":\"mean\",\"values\":[..]}  // or {\"mode\":\"mean_missing\",\"mean\":num,\"n\":int,\"known\":[..]}" },
+        { "key": "psda_compare_center_spread", "band": "B4", "statementId": "PSDA.B4.s2", "type": "mcq", "figure": "opt", "rep": "two_data_sets", "target": "standard_deviation", "form": "compare", "contextual": false,
+          "ask": "COMPARE two data sets by mean, median, and/or STANDARD DEVIATION (which has greater center or spread). (opt fn 'dotPlot')", "recompute": "needs-deep-verify", "contract": "{}  // comparison → deep-verify" },
+        { "key": "psda_freq_table_center", "band": "B6", "statementId": "PSDA.B6.s2", "type": "both", "figure": "req", "rep": "frequency_table", "target": "mean", "form": "center", "contextual": false,
+          "ask": "Find the MEAN or MEDIAN of a data set presented in a FREQUENCY TABLE (weight each value by its frequency). (fn 'table')", "recompute": "needs-deep-verify", "contract": "{}  // weighted from table → deep-verify" },
+        { "key": "psda_data_change", "band": "B7", "statementId": "PSDA.B7.s2", "type": "mcq", "figure": "none", "rep": "list", "target": "range", "form": "effect", "contextual": false,
+          "ask": "Determine how the MEAN, MEDIAN, or RANGE changes when a value is added/removed/changed in the data set.", "recompute": "needs-deep-verify", "contract": "{}  // effect on a statistic → deep-verify" }
+      ]
+    },
+    "two_variable_data": {
+      "label": "Two-variable data: models & scatterplots",
+      "attributes": ["line_of_best_fit", "rate_of_change", "prediction"],
+      "statements": ["PSDA.B4.s3", "PSDA.B6.s2"],
+      "cells": [
+        { "key": "psda_scatter_fit", "band": "B4", "statementId": "PSDA.B4.s3", "type": "mcq", "figure": "req", "rep": "scatterplot", "target": "line_of_best_fit", "form": "modeling", "contextual": true,
+          "ask": "Show a SCATTERPLOT with a line of best fit; ask for the meaning of its slope or intercept. (fn 'scatter')", "recompute": "needs-deep-verify", "contract": "{}  // interpretation → deep-verify" },
+        { "key": "psda_scatter_predict", "band": "B4", "statementId": "PSDA.B4.s3", "type": "both", "figure": "req", "rep": "scatterplot", "target": "prediction", "form": "modeling", "contextual": true,
+          "ask": "From a scatterplot with a line of best fit, PREDICT a value at a given input or read the rate of change. (fn 'scatter')", "recompute": "needs-deep-verify", "contract": "{}  // read from fit line → deep-verify" },
+        { "key": "psda_rate_from_graph", "band": "B6", "statementId": "PSDA.B6.s2", "type": "both", "figure": "req", "rep": "graph", "target": "rate_of_change", "form": "modeling", "contextual": true,
+          "ask": "Determine the AVERAGE RATE OF CHANGE for data displayed in a graph between two points. (fn 'coordPlane' or 'scatter')", "recompute": "needs-deep-verify", "contract": "{}  // average rate of change → deep-verify" }
+      ]
+    },
+    "probability": {
+      "label": "Probability & conditional probability",
+      "attributes": ["probability", "conditional_probability"],
+      "statements": ["PSDA.B3.s2", "PSDA.B5.s2", "PSDA.B6.s3"],
+      "cells": [
+        { "key": "psda_prob_table", "band": "B3", "statementId": "PSDA.B3.s2", "type": "both", "figure": "req", "rep": "two_way_table", "target": "probability", "form": "probability", "contextual": false,
+          "ask": "From a frequency or TWO-WAY table, find the PROBABILITY of an event. Put favorable + total in params; answer as a fraction or decimal. (fn 'table')", "recompute": "psda_stats", "contract": "{\"mode\":\"probability\",\"favorable\":num,\"total\":num}" },
+        { "key": "psda_prob_sum_to_1", "band": "B5", "statementId": "PSDA.B5.s2", "type": "both", "figure": "opt", "rep": "table", "target": "probability", "form": "complement", "contextual": false,
+          "ask": "Apply that all outcome probabilities SUM TO 1 — find a missing probability (or its complement).", "recompute": "needs-deep-verify", "contract": "{}  // 1 − sum(given) → deep-verify" },
+        { "key": "psda_conditional_prob", "band": "B6", "statementId": "PSDA.B6.s3", "type": "mcq", "figure": "req", "rep": "two_way_table", "target": "conditional_probability", "form": "probability", "contextual": false,
+          "ask": "From a TWO-WAY table, find a CONDITIONAL probability (A GIVEN B — restrict to one row/column). favorable = the cell, total = the conditioning row/column. (fn 'table')", "recompute": "psda_stats", "contract": "{\"mode\":\"probability\",\"favorable\":num,\"total\":num}" }
+      ]
+    },
+    "inference": {
+      "label": "Inference from sample statistics & margin of error",
+      "attributes": ["margin_of_error", "population"],
+      "statements": ["PSDA.B4.s4", "PSDA.B7.s1"],
+      "cells": [
+        { "key": "psda_margin_error", "band": "B4", "statementId": "PSDA.B4.s4", "type": "mcq", "figure": "none", "rep": "context", "target": "margin_of_error", "form": "inference", "contextual": true,
+          "ask": "Given a sample mean/proportion and a MARGIN OF ERROR, select the plausible interval of population values. Distractors halve/double the margin or center wrong.", "recompute": "needs-deep-verify", "contract": "{}  // plausible interval → deep-verify" },
+        { "key": "psda_population", "band": "B7", "statementId": "PSDA.B7.s1", "type": "mcq", "figure": "none", "rep": "context", "target": "population", "form": "inference", "contextual": true,
+          "ask": "Identify the POPULATION to which a study's results can be extended, based on how the sample was selected.", "recompute": "needs-deep-verify", "contract": "{}  // study design reasoning → deep-verify" }
+      ]
+    }
+  }
+}

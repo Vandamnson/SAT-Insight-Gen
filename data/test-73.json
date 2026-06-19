@@ -1,0 +1,2887 @@
+{
+  "number": 73,
+  "title": "Variety grid demo — geometry (one item per cell)",
+  "questions": [
+    {
+      "id": 1,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B2",
+      "target_band": "B1",
+      "statementId": "GEO.B1.s2",
+      "skill": "geo_rect_area",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "A marine biologist studies a dolphin pod that is kept in a rectangular saltwater observation pool. The pool is "
+        },
+        {
+          "t": "math",
+          "v": "9"
+        },
+        {
+          "t": "text",
+          "v": " meters long. The width of the pool is shown in the figure. What is the area, in square meters, of the pool?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "The area of a rectangle is its length times its width: "
+        },
+        {
+          "t": "math",
+          "v": "A = \\ell \\times w"
+        },
+        {
+          "t": "text",
+          "v": ". The length is "
+        },
+        {
+          "t": "math",
+          "v": "9"
+        },
+        {
+          "t": "text",
+          "v": " meters, and the width read from the figure is "
+        },
+        {
+          "t": "math",
+          "v": "6"
+        },
+        {
+          "t": "text",
+          "v": " meters. Multiplying gives "
+        },
+        {
+          "t": "mathblock",
+          "v": "A = 9 \\times 6 = 54"
+        },
+        {
+          "t": "text",
+          "v": " So the area of the pool is 54 square meters."
+        }
+      ],
+      "answer": {
+        "correct": "C"
+      },
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "text",
+              "v": "15 square meters"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "text",
+              "v": "30 square meters"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "text",
+              "v": "54 square meters"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "text",
+              "v": "108 square meters"
+            }
+          ]
+        }
+      ],
+      "figure": {
+        "fn": "rectangle",
+        "spec": {
+          "length": 9,
+          "width": 6,
+          "lengthLabel": "9 m",
+          "widthLabel": "6 m"
+        },
+        "caption": "A rectangular observation pool with a width of 6 meters."
+      },
+      "params": {
+        "shape": "rectangle",
+        "report": "area",
+        "l": 9,
+        "w": 6
+      },
+      "tier": "band-targeted",
+      "cellId": "e6edff4b8b0cfa81",
+      "difficulty": {
+        "scalePoint": 409,
+        "band": "B2",
+        "se_scale": 45,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~409 has ~67% chance correct (Band 2).",
+        "signals": {
+          "judge": {
+            "scale": 409,
+            "se": 45,
+            "perBand": {
+              "B2": 0.6,
+              "B3": 0.78,
+              "B4": 0.88,
+              "B5": 0.93,
+              "B6": 0.96,
+              "B7": 0.98
+            },
+            "rp50Scale": 350,
+            "n": 1
+          }
+        }
+      },
+      "verify": {
+        "leash": "deferred-to-deep-verify",
+        "deepVerdict": "PASS",
+        "independentAnswer": "C",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 2,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B2",
+      "target_band": "B1",
+      "statementId": "GEO.B1.s1",
+      "skill": "geo_prism_volume",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "A right rectangular prism has a length of 8 inches, a width of 5 inches, and a height of 3 inches. Using the formula "
+        },
+        {
+          "t": "math",
+          "v": "V=\\ell wh"
+        },
+        {
+          "t": "text",
+          "v": ", what is the volume, in cubic inches, of the prism?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "Substitute the three edge lengths into the volume formula "
+        },
+        {
+          "t": "math",
+          "v": "V=\\ell wh"
+        },
+        {
+          "t": "text",
+          "v": ", where "
+        },
+        {
+          "t": "math",
+          "v": "\\ell=8"
+        },
+        {
+          "t": "text",
+          "v": ", "
+        },
+        {
+          "t": "math",
+          "v": "w=5"
+        },
+        {
+          "t": "text",
+          "v": ", and "
+        },
+        {
+          "t": "math",
+          "v": "h=3"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "mathblock",
+          "v": "V=8\\times 5\\times 3=120"
+        },
+        {
+          "t": "text",
+          "v": "The volume of the prism is 120 cubic inches."
+        }
+      ],
+      "answer": {
+        "accept": [
+          "120"
+        ],
+        "tol": 0
+      },
+      "figure": null,
+      "params": {
+        "shape": "prism",
+        "l": 8,
+        "w": 5,
+        "h": 3
+      },
+      "tier": "band-targeted",
+      "cellId": "f65c57c0672a9a40",
+      "difficulty": {
+        "scalePoint": 418,
+        "band": "B2",
+        "se_scale": 45,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~418 has ~67% chance correct (Band 2).",
+        "signals": {
+          "judge": {
+            "scale": 418,
+            "se": 45,
+            "perBand": {
+              "B2": 0.58,
+              "B3": 0.74,
+              "B4": 0.88,
+              "B5": 0.93,
+              "B6": 0.97,
+              "B7": 0.99
+            },
+            "rp50Scale": 350,
+            "n": 1
+          }
+        }
+      },
+      "verify": {
+        "leash": "pass",
+        "deepVerdict": "PASS",
+        "independentAnswer": "120",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 3,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B3",
+      "target_band": "B2",
+      "statementId": "GEO.B2.s1",
+      "skill": "geo_perimeter",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "Priya tracks the height of a bamboo plant in her backyard by recording a measurement each week on a rectangular growth chart taped to her wall. To decorate the chart, she glues a single strip of ribbon along all four edges, using a strip exactly 300 centimeters long with no overlap. The chart's vertical side measures 90 centimeters. What is the length, in centimeters, of the chart's horizontal side?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "The ribbon runs along all four edges with no overlap, so its length equals the perimeter of the rectangular chart: 300 centimeters. For a rectangle with length and width, the perimeter is "
+        },
+        {
+          "t": "math",
+          "v": "P = 2(l + w)"
+        },
+        {
+          "t": "text",
+          "v": ". Substitute the perimeter 300 and the known vertical side 90: "
+        },
+        {
+          "t": "math",
+          "v": "300 = 2(90 + w)"
+        },
+        {
+          "t": "text",
+          "v": ". Divide both sides by 2 to get "
+        },
+        {
+          "t": "math",
+          "v": "150 = 90 + w"
+        },
+        {
+          "t": "text",
+          "v": ", then subtract 90 from both sides: "
+        },
+        {
+          "t": "math",
+          "v": "w = 60"
+        },
+        {
+          "t": "text",
+          "v": ". The horizontal side is 60 centimeters."
+        }
+      ],
+      "answer": {
+        "correct": "A"
+      },
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "text",
+              "v": "60"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "text",
+              "v": "120"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "text",
+              "v": "150"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "text",
+              "v": "210"
+            }
+          ]
+        }
+      ],
+      "figure": null,
+      "params": {
+        "shape": "rectangle",
+        "report": "side_from_perimeter",
+        "l": 90,
+        "w": 60,
+        "perimeter": 300
+      },
+      "tier": "band-targeted",
+      "cellId": "2a7be1a09ca1e604",
+      "difficulty": {
+        "scalePoint": 467,
+        "band": "B3",
+        "se_scale": 45,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~467 has ~67% chance correct (Band 3).",
+        "signals": {
+          "judge": {
+            "scale": 467,
+            "se": 45,
+            "perBand": {
+              "B2": 0.48,
+              "B3": 0.62,
+              "B4": 0.74,
+              "B5": 0.84,
+              "B6": 0.91,
+              "B7": 0.96
+            },
+            "rp50Scale": 397,
+            "n": 1
+          }
+        }
+      },
+      "verify": {
+        "leash": "pass",
+        "deepVerdict": "PASS",
+        "independentAnswer": "A",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 4,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B3",
+      "target_band": "B2",
+      "statementId": "GEO.B2.s2",
+      "skill": "geo_parallel_transversal",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "In the figure shown, lines "
+        },
+        {
+          "t": "math",
+          "v": "m"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "n"
+        },
+        {
+          "t": "text",
+          "v": " are parallel and are crossed by transversal "
+        },
+        {
+          "t": "math",
+          "v": "t"
+        },
+        {
+          "t": "text",
+          "v": ". What is the measure, in degrees, of the angle marked "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "Lines "
+        },
+        {
+          "t": "math",
+          "v": "m"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "n"
+        },
+        {
+          "t": "text",
+          "v": " are parallel and are cut by transversal "
+        },
+        {
+          "t": "math",
+          "v": "t"
+        },
+        {
+          "t": "text",
+          "v": ". The given "
+        },
+        {
+          "t": "math",
+          "v": "118^\\circ"
+        },
+        {
+          "t": "text",
+          "v": " angle and the angle marked "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": " sit in the same position at the two intersections, so they are corresponding angles."
+        },
+        {
+          "t": "text",
+          "v": " Corresponding angles formed by parallel lines and a transversal are congruent, so "
+        },
+        {
+          "t": "math",
+          "v": "x = 118"
+        },
+        {
+          "t": "text",
+          "v": "."
+        }
+      ],
+      "answer": {
+        "accept": [
+          "118"
+        ],
+        "tol": 0
+      },
+      "figure": {
+        "fn": "parallelLines",
+        "spec": {
+          "lines": [
+            "m",
+            "n"
+          ],
+          "transversal": "t",
+          "given": {
+            "at": "m",
+            "position": "upper-right",
+            "value": 118
+          },
+          "unknown": {
+            "at": "n",
+            "position": "upper-right",
+            "label": "x"
+          }
+        },
+        "caption": "Parallel lines m and n are crossed by transversal t."
+      },
+      "params": {
+        "given_angle": 118,
+        "relationship": "corresponding"
+      },
+      "tier": "band-targeted",
+      "cellId": "53b135cd4c9a75fe",
+      "difficulty": {
+        "scalePoint": 436,
+        "band": "B3",
+        "se_scale": 45,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~436 has ~67% chance correct (Band 3).",
+        "signals": {
+          "judge": {
+            "scale": 436,
+            "se": 45,
+            "perBand": {
+              "B2": 0.55,
+              "B3": 0.68,
+              "B4": 0.8,
+              "B5": 0.88,
+              "B6": 0.93,
+              "B7": 0.97
+            },
+            "rp50Scale": 350,
+            "n": 1
+          }
+        }
+      },
+      "verify": {
+        "leash": "deferred-to-deep-verify",
+        "deepVerdict": "PASS",
+        "independentAnswer": "118",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 5,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B4",
+      "target_band": "B3",
+      "statementId": "GEO.B3.s1",
+      "skill": "geo_triangle_area",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "In right triangle "
+        },
+        {
+          "t": "math",
+          "v": "ABC"
+        },
+        {
+          "t": "text",
+          "v": " shown, the right angle is at vertex "
+        },
+        {
+          "t": "math",
+          "v": "B"
+        },
+        {
+          "t": "text",
+          "v": ". What is the area, in square units, of triangle "
+        },
+        {
+          "t": "math",
+          "v": "ABC"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "The area of a triangle is "
+        },
+        {
+          "t": "math",
+          "v": "\\frac{1}{2}\\times \\text{base}\\times \\text{height}"
+        },
+        {
+          "t": "text",
+          "v": ". Because the right angle is at "
+        },
+        {
+          "t": "math",
+          "v": "B"
+        },
+        {
+          "t": "text",
+          "v": ", the two legs "
+        },
+        {
+          "t": "math",
+          "v": "BC = 12"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "AB = 5"
+        },
+        {
+          "t": "text",
+          "v": " are perpendicular, so they serve as the base and height. The side "
+        },
+        {
+          "t": "math",
+          "v": "AC = 13"
+        },
+        {
+          "t": "text",
+          "v": " is the hypotenuse and is not used. Therefore "
+        },
+        {
+          "t": "mathblock",
+          "v": "\\text{area}=\\frac{1}{2}\\times 12\\times 5 = 30."
+        },
+        {
+          "t": "text",
+          "v": " The area is 30 square units."
+        }
+      ],
+      "answer": {
+        "correct": "B"
+      },
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "17"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "30"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "60"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "78"
+            }
+          ]
+        }
+      ],
+      "figure": {
+        "fn": "triangle",
+        "spec": {
+          "vertices": [
+            [
+              15,
+              75
+            ],
+            [
+              15,
+              15
+            ],
+            [
+              70,
+              15
+            ]
+          ],
+          "labels": [
+            "A",
+            "B",
+            "C"
+          ],
+          "right": "B",
+          "sideLabels": {
+            "AB": "5",
+            "BC": "12",
+            "AC": "13"
+          }
+        },
+        "caption": "Right triangle ABC (not drawn to scale)."
+      },
+      "params": {
+        "shape": "triangle",
+        "report": "area",
+        "base": 12,
+        "height": 5
+      },
+      "tier": "band-targeted",
+      "cellId": "223ce794552b7757",
+      "difficulty": {
+        "scalePoint": 486,
+        "band": "B4",
+        "se_scale": 45,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~486 has ~67% chance correct (Band 4).",
+        "signals": {
+          "judge": {
+            "scale": 486,
+            "se": 45,
+            "perBand": {
+              "B2": 0.3,
+              "B3": 0.55,
+              "B4": 0.72,
+              "B5": 0.83,
+              "B6": 0.9,
+              "B7": 0.95
+            },
+            "rp50Scale": 430,
+            "n": 1
+          }
+        }
+      },
+      "verify": {
+        "leash": "pass",
+        "deepVerdict": "PASS",
+        "independentAnswer": "B",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 6,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B4",
+      "target_band": "B3",
+      "statementId": "GEO.B3.s1",
+      "skill": "geo_composite_area",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "A homeowner installs a rooftop solar array that covers the entire L-shaped section of roof shown in the figure, where all dimensions are given in meters. To estimate the array's daily energy output, the installer must first determine the area of this section. What is the area, in square meters, of the L-shaped section covered by the solar array?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "Enclose the L-shaped region in its full bounding rectangle, then subtract the missing rectangular corner. "
+        },
+        {
+          "t": "text",
+          "v": "The bounding rectangle measures 12 meters by 9 meters, so its area is "
+        },
+        {
+          "t": "math",
+          "v": "12 \\times 9 = 108"
+        },
+        {
+          "t": "text",
+          "v": " square meters. "
+        },
+        {
+          "t": "text",
+          "v": "The cut-out corner is a rectangle measuring 5 meters by 4 meters, so its area is "
+        },
+        {
+          "t": "math",
+          "v": "5 \\times 4 = 20"
+        },
+        {
+          "t": "text",
+          "v": " square meters. "
+        },
+        {
+          "t": "text",
+          "v": "Subtract to find the area of the L-shaped section: "
+        },
+        {
+          "t": "mathblock",
+          "v": "108 - 20 = 88"
+        },
+        {
+          "t": "text",
+          "v": "The area of the section is 88 square meters."
+        }
+      ],
+      "answer": {
+        "accept": [
+          "88"
+        ],
+        "tol": 0
+      },
+      "figure": {
+        "fn": "polygon",
+        "spec": {
+          "vertices": [
+            [
+              0,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              12,
+              5
+            ],
+            [
+              7,
+              5
+            ],
+            [
+              7,
+              9
+            ],
+            [
+              0,
+              9
+            ]
+          ],
+          "labels": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F"
+          ],
+          "sideLabels": {
+            "AB": "12",
+            "BC": "5",
+            "CD": "5",
+            "DE": "4",
+            "EF": "7",
+            "FA": "9"
+          }
+        },
+        "caption": "L-shaped roof section covered by the solar array (dimensions in meters)."
+      },
+      "params": {
+        "units": "meters",
+        "method": "bounding_minus_removed",
+        "bounding_rectangle": {
+          "width": 12,
+          "height": 9
+        },
+        "removed_rectangle": {
+          "width": 5,
+          "height": 4
+        }
+      },
+      "tier": "band-targeted",
+      "cellId": "6d726a40aab2d574",
+      "difficulty": {
+        "scalePoint": 533,
+        "band": "B4",
+        "se_scale": 45,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~533 has ~67% chance correct (Band 4).",
+        "signals": {
+          "judge": {
+            "scale": 533,
+            "se": 45,
+            "perBand": {
+              "B2": 0.16,
+              "B3": 0.4,
+              "B4": 0.61,
+              "B5": 0.76,
+              "B6": 0.86,
+              "B7": 0.93
+            },
+            "rp50Scale": 471,
+            "n": 1
+          }
+        }
+      },
+      "verify": {
+        "leash": "deferred-to-deep-verify",
+        "deepVerdict": "PASS",
+        "independentAnswer": "88",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 7,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B3",
+      "target_band": "B3",
+      "statementId": "GEO.B3.s2",
+      "skill": "geo_triangle_angle_sum",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "In the triangle shown, the measure of angle "
+        },
+        {
+          "t": "math",
+          "v": "A"
+        },
+        {
+          "t": "text",
+          "v": " is "
+        },
+        {
+          "t": "math",
+          "v": "34^\\circ"
+        },
+        {
+          "t": "text",
+          "v": ". What is the measure, in degrees, of angle "
+        },
+        {
+          "t": "math",
+          "v": "C"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "The small square at vertex "
+        },
+        {
+          "t": "math",
+          "v": "B"
+        },
+        {
+          "t": "text",
+          "v": " in the figure marks a right angle, so "
+        },
+        {
+          "t": "math",
+          "v": "m\\angle B = 90^\\circ"
+        },
+        {
+          "t": "text",
+          "v": ". By the Triangle Angle Sum Theorem, the three interior angles add to "
+        },
+        {
+          "t": "math",
+          "v": "180^\\circ"
+        },
+        {
+          "t": "text",
+          "v": ":"
+        },
+        {
+          "t": "mathblock",
+          "v": "m\\angle A + m\\angle B + m\\angle C = 180^\\circ"
+        },
+        {
+          "t": "text",
+          "v": "Substituting the known measures gives "
+        },
+        {
+          "t": "math",
+          "v": "34^\\circ + 90^\\circ + m\\angle C = 180^\\circ"
+        },
+        {
+          "t": "text",
+          "v": ", so "
+        },
+        {
+          "t": "math",
+          "v": "m\\angle C = 180^\\circ - 124^\\circ = 56^\\circ"
+        },
+        {
+          "t": "text",
+          "v": "."
+        }
+      ],
+      "answer": {
+        "correct": "B"
+      },
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "34"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "56"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "124"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "146"
+            }
+          ]
+        }
+      ],
+      "figure": {
+        "fn": "triangle",
+        "spec": {
+          "vertices": [
+            [
+              15,
+              80
+            ],
+            [
+              15,
+              20
+            ],
+            [
+              55,
+              20
+            ]
+          ],
+          "labels": [
+            "A",
+            "B",
+            "C"
+          ],
+          "right": "B"
+        },
+        "caption": "Triangle ABC (figure not drawn to scale)."
+      },
+      "params": {
+        "shape": "triangle",
+        "report": "angle_sum",
+        "a": 90,
+        "b": 34
+      },
+      "tier": "band-targeted",
+      "cellId": "56c4c1c518f86795",
+      "difficulty": {
+        "scalePoint": 458,
+        "band": "B3",
+        "se_scale": 45,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~458 has ~67% chance correct (Band 3).",
+        "signals": {
+          "judge": {
+            "scale": 458,
+            "se": 45,
+            "perBand": {
+              "B2": 0.3,
+              "B3": 0.62,
+              "B4": 0.8,
+              "B5": 0.88,
+              "B6": 0.93,
+              "B7": 0.96
+            },
+            "rp50Scale": 421,
+            "n": 1
+          }
+        }
+      },
+      "verify": {
+        "leash": "pass",
+        "deepVerdict": "PASS",
+        "independentAnswer": "B",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 8,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B4",
+      "target_band": "B3",
+      "statementId": "GEO.B3.s2",
+      "skill": "geo_intersecting_angles",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "In the figure, lines "
+        },
+        {
+          "t": "math",
+          "v": "\\ell"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "m"
+        },
+        {
+          "t": "text",
+          "v": " intersect at point "
+        },
+        {
+          "t": "math",
+          "v": "O"
+        },
+        {
+          "t": "text",
+          "v": ". The measure of "
+        },
+        {
+          "t": "math",
+          "v": "\\angle BOC"
+        },
+        {
+          "t": "text",
+          "v": " is "
+        },
+        {
+          "t": "math",
+          "v": "(5x-8)^\\circ"
+        },
+        {
+          "t": "text",
+          "v": " and the measure of "
+        },
+        {
+          "t": "math",
+          "v": "\\angle DOA"
+        },
+        {
+          "t": "text",
+          "v": " is "
+        },
+        {
+          "t": "math",
+          "v": "(3x+24)^\\circ"
+        },
+        {
+          "t": "text",
+          "v": ". What is the measure, in degrees, of "
+        },
+        {
+          "t": "math",
+          "v": "\\angle AOB"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "Because "
+        },
+        {
+          "t": "math",
+          "v": "\\angle BOC"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "\\angle DOA"
+        },
+        {
+          "t": "text",
+          "v": " are formed by the two intersecting lines and lie opposite each other, they are vertical angles and therefore equal:"
+        },
+        {
+          "t": "mathblock",
+          "v": "5x-8 = 3x+24"
+        },
+        {
+          "t": "text",
+          "v": "Solving gives "
+        },
+        {
+          "t": "math",
+          "v": "2x = 32"
+        },
+        {
+          "t": "text",
+          "v": ", so "
+        },
+        {
+          "t": "math",
+          "v": "x = 16"
+        },
+        {
+          "t": "text",
+          "v": ". Then the measure of "
+        },
+        {
+          "t": "math",
+          "v": "\\angle BOC"
+        },
+        {
+          "t": "text",
+          "v": " is "
+        },
+        {
+          "t": "math",
+          "v": "5(16)-8 = 72^\\circ"
+        },
+        {
+          "t": "text",
+          "v": ". Since "
+        },
+        {
+          "t": "math",
+          "v": "\\angle AOB"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "\\angle BOC"
+        },
+        {
+          "t": "text",
+          "v": " form a linear pair (rays "
+        },
+        {
+          "t": "math",
+          "v": "OA"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "OC"
+        },
+        {
+          "t": "text",
+          "v": " are opposite), they are supplementary:"
+        },
+        {
+          "t": "mathblock",
+          "v": "\\angle AOB = 180^\\circ - 72^\\circ = 108^\\circ"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "108"
+        ],
+        "tol": 0
+      },
+      "figure": {
+        "fn": "coordPlane",
+        "spec": {
+          "xRange": [
+            -5,
+            5
+          ],
+          "yRange": [
+            -5,
+            5
+          ],
+          "xStep": 1,
+          "yStep": 1,
+          "origin": true,
+          "curves": [
+            {
+              "type": "line2pt",
+              "p1": [
+                -4,
+                -2
+              ],
+              "p2": [
+                4,
+                2
+              ]
+            },
+            {
+              "type": "line2pt",
+              "p1": [
+                -3,
+                3
+              ],
+              "p2": [
+                3,
+                -3
+              ]
+            }
+          ],
+          "points": [
+            {
+              "at": [
+                4,
+                2
+              ],
+              "label": "A"
+            },
+            {
+              "at": [
+                -3,
+                3
+              ],
+              "label": "B"
+            },
+            {
+              "at": [
+                -4,
+                -2
+              ],
+              "label": "C"
+            },
+            {
+              "at": [
+                3,
+                -3
+              ],
+              "label": "D"
+            },
+            {
+              "at": [
+                0,
+                0
+              ],
+              "label": "O"
+            }
+          ]
+        },
+        "caption": "Lines ℓ and m intersect at point O, with A and C on ℓ and B and D on m. (Figure not drawn to scale.)"
+      },
+      "params": {},
+      "tier": "band-targeted",
+      "cellId": "f6963dc8b6543a33",
+      "difficulty": {
+        "scalePoint": 546,
+        "band": "B4",
+        "se_scale": 45,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~546 has ~67% chance correct (Band 4).",
+        "signals": {
+          "judge": {
+            "scale": 546,
+            "se": 45,
+            "perBand": {
+              "B2": 0.3,
+              "B3": 0.45,
+              "B4": 0.6,
+              "B5": 0.72,
+              "B6": 0.83,
+              "B7": 0.91
+            },
+            "rp50Scale": 462,
+            "n": 1
+          }
+        }
+      },
+      "verify": {
+        "leash": "deferred-to-deep-verify",
+        "deepVerdict": "PASS",
+        "independentAnswer": "108",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 9,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B3",
+      "target_band": "B3",
+      "statementId": "GEO.B3.s3",
+      "skill": "geo_pythagorean_hyp",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "In right triangle "
+        },
+        {
+          "t": "math",
+          "v": "ABC"
+        },
+        {
+          "t": "text",
+          "v": " shown, the right angle is at vertex "
+        },
+        {
+          "t": "math",
+          "v": "B"
+        },
+        {
+          "t": "text",
+          "v": ". What is the length, in units, of the hypotenuse "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{AC}"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "By the Pythagorean theorem, the hypotenuse of a right triangle satisfies "
+        },
+        {
+          "t": "math",
+          "v": "AC^2 = AB^2 + BC^2"
+        },
+        {
+          "t": "text",
+          "v": ". The legs are given in the figure as "
+        },
+        {
+          "t": "math",
+          "v": "AB = 8"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "BC = 15"
+        },
+        {
+          "t": "text",
+          "v": ", so "
+        },
+        {
+          "t": "mathblock",
+          "v": "AC^2 = 8^2 + 15^2 = 64 + 225 = 289."
+        },
+        {
+          "t": "text",
+          "v": " Taking the positive square root gives "
+        },
+        {
+          "t": "math",
+          "v": "AC = \\sqrt{289} = 17"
+        },
+        {
+          "t": "text",
+          "v": " units. (Choice D adds the legs, "
+        },
+        {
+          "t": "math",
+          "v": "8 + 15 = 23"
+        },
+        {
+          "t": "text",
+          "v": ", instead of using the theorem.)"
+        }
+      ],
+      "answer": {
+        "correct": "C"
+      },
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "7"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "13"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "17"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "23"
+            }
+          ]
+        }
+      ],
+      "figure": {
+        "fn": "triangle",
+        "spec": {
+          "vertices": [
+            [
+              10,
+              50
+            ],
+            [
+              10,
+              10
+            ],
+            [
+              85,
+              10
+            ]
+          ],
+          "labels": [
+            "A",
+            "B",
+            "C"
+          ],
+          "right": "B",
+          "sideLabels": {
+            "AB": "8",
+            "BC": "15"
+          }
+        },
+        "caption": "Right triangle ABC with the right angle at B (figure not drawn to scale)."
+      },
+      "params": {
+        "shape": "right_triangle",
+        "report": "hyp",
+        "leg1": 8,
+        "leg2": 15
+      },
+      "tier": "band-targeted",
+      "cellId": "7361fdd09c1cb4dd",
+      "difficulty": {
+        "scalePoint": 460,
+        "band": "B3",
+        "se_scale": 45,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~460 has ~67% chance correct (Band 3).",
+        "signals": {
+          "judge": {
+            "scale": 460,
+            "se": 45,
+            "perBand": {
+              "B2": 0.3,
+              "B3": 0.62,
+              "B4": 0.78,
+              "B5": 0.87,
+              "B6": 0.93,
+              "B7": 0.97
+            },
+            "rp50Scale": 421,
+            "n": 1
+          }
+        }
+      },
+      "verify": {
+        "leash": "pass",
+        "deepVerdict": "PASS",
+        "independentAnswer": "C",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 10,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B5",
+      "target_band": "B4",
+      "statementId": "GEO.B4.s1",
+      "skill": "geo_cube_volume",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "During a long dry spell, a maintenance crew drained the Alder Creek reservoir — a concrete cistern built in the exact shape of a cube — in order to patch a crack near the bottom. "
+        },
+        {
+          "t": "text",
+          "v": "The square floor of the cistern has a perimeter of 28 meters. "
+        },
+        {
+          "t": "text",
+          "v": "When the cistern is completely full, what is the volume of water it holds, in cubic meters?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "The floor is a square, so each side of the floor has length "
+        },
+        {
+          "t": "math",
+          "v": "\\frac{28}{4}=7"
+        },
+        {
+          "t": "text",
+          "v": " meters. "
+        },
+        {
+          "t": "text",
+          "v": "Since the cistern is a cube, its depth equals that side length, so every edge measures "
+        },
+        {
+          "t": "math",
+          "v": "7"
+        },
+        {
+          "t": "text",
+          "v": " meters. "
+        },
+        {
+          "t": "text",
+          "v": "The volume of a cube is the cube of its edge length: "
+        },
+        {
+          "t": "mathblock",
+          "v": "V = s^3 = 7^3 = 343"
+        },
+        {
+          "t": "text",
+          "v": "The full cistern holds "
+        },
+        {
+          "t": "math",
+          "v": "343"
+        },
+        {
+          "t": "text",
+          "v": " cubic meters of water."
+        }
+      ],
+      "answer": {
+        "accept": [
+          "343"
+        ],
+        "tol": 0
+      },
+      "figure": null,
+      "params": {
+        "shape": "cube",
+        "s": 7
+      },
+      "tier": "band-targeted",
+      "cellId": "39990c1e0c097f61",
+      "difficulty": {
+        "scalePoint": 554,
+        "band": "B5",
+        "se_scale": 45,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~554 has ~67% chance correct (Band 5).",
+        "signals": {
+          "judge": {
+            "scale": 554,
+            "se": 45,
+            "perBand": {
+              "B2": 0.15,
+              "B3": 0.3,
+              "B4": 0.55,
+              "B5": 0.72,
+              "B6": 0.85,
+              "B7": 0.93
+            },
+            "rp50Scale": 492,
+            "n": 1
+          }
+        }
+      },
+      "verify": {
+        "leash": "pass",
+        "deepVerdict": "PASS",
+        "independentAnswer": "343",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 11,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B5",
+      "target_band": "B4",
+      "statementId": "GEO.B4.s1",
+      "skill": "geo_pyramid_volume",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "A beekeeper packages honey from her hives in a decorative glass jar shaped like a pyramid with a rectangular base. The base of the jar measures "
+        },
+        {
+          "t": "math",
+          "v": "12"
+        },
+        {
+          "t": "text",
+          "v": " cm by "
+        },
+        {
+          "t": "math",
+          "v": "9"
+        },
+        {
+          "t": "text",
+          "v": " cm, and the pyramid is "
+        },
+        {
+          "t": "math",
+          "v": "15"
+        },
+        {
+          "t": "text",
+          "v": " cm tall. What is the volume, in cubic centimeters, of honey the jar holds when it is completely full?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "The volume of a pyramid is one-third the product of its base area and its height:"
+        },
+        {
+          "t": "mathblock",
+          "v": "V=\\tfrac{1}{3}\\,\\ell w h"
+        },
+        {
+          "t": "text",
+          "v": "First find the area of the rectangular base: "
+        },
+        {
+          "t": "math",
+          "v": "12\\times 9 = 108"
+        },
+        {
+          "t": "text",
+          "v": " square centimeters. Then multiply by the height and by "
+        },
+        {
+          "t": "math",
+          "v": "\\tfrac{1}{3}"
+        },
+        {
+          "t": "text",
+          "v": ":"
+        },
+        {
+          "t": "mathblock",
+          "v": "V=\\tfrac{1}{3}\\times 108\\times 15=\\tfrac{1}{3}\\times 1620 = 540"
+        },
+        {
+          "t": "text",
+          "v": "So the jar holds "
+        },
+        {
+          "t": "math",
+          "v": "540"
+        },
+        {
+          "t": "text",
+          "v": " cubic centimeters of honey. (Choice D, "
+        },
+        {
+          "t": "math",
+          "v": "1620"
+        },
+        {
+          "t": "text",
+          "v": ", comes from omitting the "
+        },
+        {
+          "t": "math",
+          "v": "\\tfrac{1}{3}"
+        },
+        {
+          "t": "text",
+          "v": " and treating the jar as a box.)"
+        }
+      ],
+      "answer": {
+        "correct": "A"
+      },
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "540"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "810"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "1080"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "1620"
+            }
+          ]
+        }
+      ],
+      "figure": null,
+      "params": {
+        "shape": "pyramid",
+        "l": 12,
+        "w": 9,
+        "h": 15
+      },
+      "tier": "band-targeted",
+      "cellId": "9f3cc0d1714ae7b5",
+      "difficulty": {
+        "scalePoint": 554,
+        "band": "B5",
+        "se_scale": 45,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~554 has ~67% chance correct (Band 5).",
+        "signals": {
+          "judge": {
+            "scale": 554,
+            "se": 45,
+            "perBand": {
+              "B2": 0.12,
+              "B3": 0.22,
+              "B4": 0.55,
+              "B5": 0.72,
+              "B6": 0.85,
+              "B7": 0.93
+            },
+            "rp50Scale": 495,
+            "n": 1
+          }
+        }
+      },
+      "verify": {
+        "leash": "pass",
+        "deepVerdict": "PASS",
+        "independentAnswer": "A",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 12,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B4",
+      "target_band": "B4",
+      "statementId": "GEO.B4.s3",
+      "skill": "geo_pythagorean_leg",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "Triangle "
+        },
+        {
+          "t": "math",
+          "v": "ABC"
+        },
+        {
+          "t": "text",
+          "v": " is shown, where angle "
+        },
+        {
+          "t": "math",
+          "v": "C"
+        },
+        {
+          "t": "text",
+          "v": " is a right angle. Based on the figure, what is the length, in meters, of leg "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{AC}"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "Because angle "
+        },
+        {
+          "t": "math",
+          "v": "C"
+        },
+        {
+          "t": "text",
+          "v": " is a right angle, side "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{AB}"
+        },
+        {
+          "t": "text",
+          "v": " is the hypotenuse. By the Pythagorean theorem, "
+        },
+        {
+          "t": "mathblock",
+          "v": "AC^2 + BC^2 = AB^2."
+        },
+        {
+          "t": "text",
+          "v": "Substituting the lengths shown in the figure gives "
+        },
+        {
+          "t": "mathblock",
+          "v": "AC^2 + 9^2 = 41^2."
+        },
+        {
+          "t": "text",
+          "v": "So "
+        },
+        {
+          "t": "mathblock",
+          "v": "AC^2 = 1681 - 81 = 1600,"
+        },
+        {
+          "t": "text",
+          "v": "and taking the positive square root gives "
+        },
+        {
+          "t": "math",
+          "v": "AC = 40"
+        },
+        {
+          "t": "text",
+          "v": " meters."
+        }
+      ],
+      "answer": {
+        "accept": [
+          "40"
+        ],
+        "tol": 0
+      },
+      "figure": {
+        "fn": "triangle",
+        "spec": {
+          "vertices": [
+            [
+              20,
+              85
+            ],
+            [
+              40,
+              15
+            ],
+            [
+              20,
+              15
+            ]
+          ],
+          "labels": [
+            "A",
+            "B",
+            "C"
+          ],
+          "right": "C",
+          "sideLabels": {
+            "AB": "41",
+            "BC": "9"
+          }
+        },
+        "caption": "Note: Figure not drawn to scale."
+      },
+      "params": {
+        "shape": "right_triangle",
+        "report": "leg",
+        "hyp": 41,
+        "leg": 9
+      },
+      "tier": "band-targeted",
+      "cellId": "3167bb35777dc586",
+      "difficulty": {
+        "scalePoint": 503,
+        "band": "B4",
+        "se_scale": 45,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~503 has ~67% chance correct (Band 4).",
+        "signals": {
+          "judge": {
+            "scale": 503,
+            "se": 45,
+            "perBand": {
+              "B2": 0.12,
+              "B3": 0.4,
+              "B4": 0.68,
+              "B5": 0.82,
+              "B6": 0.9,
+              "B7": 0.95
+            },
+            "rp50Scale": 463,
+            "n": 1
+          }
+        }
+      },
+      "verify": {
+        "leash": "pass",
+        "deepVerdict": "PASS",
+        "independentAnswer": "40",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 13,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B5",
+      "target_band": "B4",
+      "statementId": "GEO.B4.s2",
+      "skill": "geo_similar_triangles",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "In right triangle "
+        },
+        {
+          "t": "math",
+          "v": "ABC"
+        },
+        {
+          "t": "text",
+          "v": " shown, the right angle is at vertex "
+        },
+        {
+          "t": "math",
+          "v": "B"
+        },
+        {
+          "t": "text",
+          "v": ". Triangle "
+        },
+        {
+          "t": "math",
+          "v": "DEF"
+        },
+        {
+          "t": "text",
+          "v": " is similar to triangle "
+        },
+        {
+          "t": "math",
+          "v": "ABC"
+        },
+        {
+          "t": "text",
+          "v": ", where "
+        },
+        {
+          "t": "math",
+          "v": "D"
+        },
+        {
+          "t": "text",
+          "v": ", "
+        },
+        {
+          "t": "math",
+          "v": "E"
+        },
+        {
+          "t": "text",
+          "v": ", and "
+        },
+        {
+          "t": "math",
+          "v": "F"
+        },
+        {
+          "t": "text",
+          "v": " correspond to "
+        },
+        {
+          "t": "math",
+          "v": "A"
+        },
+        {
+          "t": "text",
+          "v": ", "
+        },
+        {
+          "t": "math",
+          "v": "B"
+        },
+        {
+          "t": "text",
+          "v": ", and "
+        },
+        {
+          "t": "math",
+          "v": "C"
+        },
+        {
+          "t": "text",
+          "v": ", respectively. If "
+        },
+        {
+          "t": "math",
+          "v": "DE = 15"
+        },
+        {
+          "t": "text",
+          "v": ", what is the length of "
+        },
+        {
+          "t": "math",
+          "v": "DF"
+        },
+        {
+          "t": "text",
+          "v": " ?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "Because the right angle is at "
+        },
+        {
+          "t": "math",
+          "v": "B"
+        },
+        {
+          "t": "text",
+          "v": ", side "
+        },
+        {
+          "t": "math",
+          "v": "AC"
+        },
+        {
+          "t": "text",
+          "v": " is the hypotenuse of triangle "
+        },
+        {
+          "t": "math",
+          "v": "ABC"
+        },
+        {
+          "t": "text",
+          "v": ". By the Pythagorean theorem,"
+        },
+        {
+          "t": "mathblock",
+          "v": "AC = \\sqrt{9^2 + 12^2} = \\sqrt{225} = 15."
+        },
+        {
+          "t": "text",
+          "v": "Since "
+        },
+        {
+          "t": "math",
+          "v": "DEF \\sim ABC"
+        },
+        {
+          "t": "text",
+          "v": " with "
+        },
+        {
+          "t": "math",
+          "v": "D \\leftrightarrow A"
+        },
+        {
+          "t": "text",
+          "v": ", "
+        },
+        {
+          "t": "math",
+          "v": "E \\leftrightarrow B"
+        },
+        {
+          "t": "text",
+          "v": ", and "
+        },
+        {
+          "t": "math",
+          "v": "F \\leftrightarrow C"
+        },
+        {
+          "t": "text",
+          "v": ", side "
+        },
+        {
+          "t": "math",
+          "v": "DF"
+        },
+        {
+          "t": "text",
+          "v": " corresponds to the hypotenuse "
+        },
+        {
+          "t": "math",
+          "v": "AC"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "DE"
+        },
+        {
+          "t": "text",
+          "v": " corresponds to "
+        },
+        {
+          "t": "math",
+          "v": "AB"
+        },
+        {
+          "t": "text",
+          "v": ". The scale factor is"
+        },
+        {
+          "t": "mathblock",
+          "v": "k = \\dfrac{DE}{AB} = \\dfrac{15}{9} = \\dfrac{5}{3}."
+        },
+        {
+          "t": "text",
+          "v": "Therefore"
+        },
+        {
+          "t": "mathblock",
+          "v": "DF = k \\cdot AC = \\dfrac{5}{3}\\cdot 15 = 25."
+        }
+      ],
+      "answer": {
+        "correct": "D"
+      },
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "15"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "20"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "21"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "25"
+            }
+          ]
+        }
+      ],
+      "figure": {
+        "fn": "triangle",
+        "spec": {
+          "vertices": [
+            [
+              15,
+              78
+            ],
+            [
+              15,
+              18
+            ],
+            [
+              88,
+              18
+            ]
+          ],
+          "labels": [
+            "A",
+            "B",
+            "C"
+          ],
+          "right": "B",
+          "sideLabels": {
+            "AB": "9",
+            "BC": "12"
+          }
+        },
+        "caption": "Triangle ABC (not drawn to scale)."
+      },
+      "params": {
+        "relation": "similar",
+        "given_triangle": {
+          "name": "ABC",
+          "right_angle_vertex": "B",
+          "legs": {
+            "AB": 9,
+            "BC": 12
+          }
+        },
+        "image_triangle": {
+          "name": "DEF",
+          "correspondence": {
+            "D": "A",
+            "E": "B",
+            "F": "C"
+          },
+          "known_side": {
+            "name": "DE",
+            "length": 15
+          }
+        },
+        "find_side": "DF",
+        "report": "value"
+      },
+      "tier": "band-targeted",
+      "cellId": "6a942345f3e881d0",
+      "difficulty": {
+        "scalePoint": 600,
+        "band": "B5",
+        "se_scale": 45,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~600 has ~67% chance correct (Band 5).",
+        "signals": {
+          "judge": {
+            "scale": 600,
+            "se": 45,
+            "perBand": {
+              "B2": 0.1,
+              "B3": 0.2,
+              "B4": 0.42,
+              "B5": 0.6,
+              "B6": 0.78,
+              "B7": 0.9
+            },
+            "rp50Scale": 536,
+            "n": 1
+          }
+        }
+      },
+      "verify": {
+        "leash": "deferred-to-deep-verify",
+        "deepVerdict": "PASS",
+        "independentAnswer": "D",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 14,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B5",
+      "target_band": "B4",
+      "statementId": "GEO.B4.s2",
+      "skill": "geo_scale_factor",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "On a mountain cycling route, the first climb can be modeled by a right triangle in which the horizontal run measures 1,200 meters and the road surface (the hypotenuse of the triangle) measures 1,300 meters. The elevation a cyclist gains on this climb equals the length of the vertical leg of the triangle. A second climb farther along the route is similar to the first, with each dimension scaled by a factor of "
+        },
+        {
+          "t": "math",
+          "v": "2.5"
+        },
+        {
+          "t": "text",
+          "v": ". How many meters of elevation does the cyclist gain on the second climb?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "First find the elevation gained on the first climb, which is the vertical leg of the right triangle. By the Pythagorean theorem, "
+        },
+        {
+          "t": "mathblock",
+          "v": "\\text{leg} = \\sqrt{1300^2 - 1200^2} = \\sqrt{1{,}690{,}000 - 1{,}440{,}000} = \\sqrt{250{,}000} = 500"
+        },
+        {
+          "t": "text",
+          "v": "so the first climb gains 500 meters of elevation. The second climb is similar to the first with scale factor "
+        },
+        {
+          "t": "math",
+          "v": "k = 2.5"
+        },
+        {
+          "t": "text",
+          "v": ". Because elevation gain is a length, it scales by "
+        },
+        {
+          "t": "math",
+          "v": "k"
+        },
+        {
+          "t": "text",
+          "v": " (not "
+        },
+        {
+          "t": "math",
+          "v": "k^2"
+        },
+        {
+          "t": "text",
+          "v": " or "
+        },
+        {
+          "t": "math",
+          "v": "k^3"
+        },
+        {
+          "t": "text",
+          "v": "). Therefore the elevation gained on the second climb is "
+        },
+        {
+          "t": "mathblock",
+          "v": "500 \\times 2.5 = 1{,}250 \\text{ meters.}"
+        }
+      ],
+      "answer": {
+        "correct": "B"
+      },
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "text",
+              "v": "500 meters"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "text",
+              "v": "1,250 meters"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "text",
+              "v": "3,125 meters"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "text",
+              "v": "3,250 meters"
+            }
+          ]
+        }
+      ],
+      "figure": null,
+      "params": {
+        "shape": "right_triangle",
+        "given_hypotenuse_m": 1300,
+        "given_horizontal_run_m": 1200,
+        "elevation_is": "vertical_leg",
+        "scale_factor": 2.5,
+        "scaled_quantity": "elevation_gain",
+        "scale_dimension": "length",
+        "report": "value"
+      },
+      "tier": "band-targeted",
+      "cellId": "23edb07d9dc29ac5",
+      "difficulty": {
+        "scalePoint": 586,
+        "band": "B5",
+        "se_scale": 45,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~586 has ~67% chance correct (Band 5).",
+        "signals": {
+          "judge": {
+            "scale": 586,
+            "se": 45,
+            "perBand": {
+              "B2": 0.1,
+              "B3": 0.19,
+              "B4": 0.45,
+              "B5": 0.64,
+              "B6": 0.81,
+              "B7": 0.92
+            },
+            "rp50Scale": 523,
+            "n": 1
+          }
+        }
+      },
+      "verify": {
+        "leash": "deferred-to-deep-verify",
+        "deepVerdict": "PASS",
+        "independentAnswer": "B",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 15,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B5",
+      "target_band": "B4",
+      "statementId": "GEO.B4.s3",
+      "skill": "geo_special_right",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "In right triangle "
+        },
+        {
+          "t": "math",
+          "v": "ABC"
+        },
+        {
+          "t": "text",
+          "v": " shown, angle "
+        },
+        {
+          "t": "math",
+          "v": "B"
+        },
+        {
+          "t": "text",
+          "v": " is a right angle and the measure of angle "
+        },
+        {
+          "t": "math",
+          "v": "A"
+        },
+        {
+          "t": "text",
+          "v": " is "
+        },
+        {
+          "t": "math",
+          "v": "60^\\circ"
+        },
+        {
+          "t": "text",
+          "v": ". What is the length, in centimeters, of "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{BC}"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "Since angle "
+        },
+        {
+          "t": "math",
+          "v": "B=90^\\circ"
+        },
+        {
+          "t": "text",
+          "v": " and angle "
+        },
+        {
+          "t": "math",
+          "v": "A=60^\\circ"
+        },
+        {
+          "t": "text",
+          "v": ", angle "
+        },
+        {
+          "t": "math",
+          "v": "C=30^\\circ"
+        },
+        {
+          "t": "text",
+          "v": ", so "
+        },
+        {
+          "t": "math",
+          "v": "ABC"
+        },
+        {
+          "t": "text",
+          "v": " is a 30-60-90 triangle whose hypotenuse "
+        },
+        {
+          "t": "math",
+          "v": "AC=18"
+        },
+        {
+          "t": "text",
+          "v": " cm (read from the figure). The shorter leg, opposite the "
+        },
+        {
+          "t": "math",
+          "v": "30^\\circ"
+        },
+        {
+          "t": "text",
+          "v": " angle, is half the hypotenuse: "
+        },
+        {
+          "t": "math",
+          "v": "AB=\\tfrac{1}{2}(18)=9"
+        },
+        {
+          "t": "text",
+          "v": " cm. The longer leg "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{BC}"
+        },
+        {
+          "t": "text",
+          "v": ", opposite the "
+        },
+        {
+          "t": "math",
+          "v": "60^\\circ"
+        },
+        {
+          "t": "text",
+          "v": " angle, is "
+        },
+        {
+          "t": "math",
+          "v": "\\sqrt{3}"
+        },
+        {
+          "t": "text",
+          "v": " times the shorter leg:"
+        },
+        {
+          "t": "mathblock",
+          "v": "BC=9\\sqrt{3}\\text{ cm.}"
+        }
+      ],
+      "answer": {
+        "correct": "C"
+      },
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "6\\sqrt{3}"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "9"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "9\\sqrt{3}"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "9\\sqrt{2}"
+            }
+          ]
+        }
+      ],
+      "figure": {
+        "fn": "triangle",
+        "spec": {
+          "vertices": [
+            [
+              20,
+              62
+            ],
+            [
+              20,
+              25
+            ],
+            [
+              85,
+              25
+            ]
+          ],
+          "labels": [
+            "A",
+            "B",
+            "C"
+          ],
+          "right": "B",
+          "sideLabels": {
+            "AC": "18 cm"
+          }
+        },
+        "caption": "Right triangle ABC with the right angle at B (figure not drawn to scale)."
+      },
+      "params": {},
+      "tier": "band-targeted",
+      "cellId": "866231bc6e808261",
+      "difficulty": {
+        "scalePoint": 561,
+        "band": "B5",
+        "se_scale": 45,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~561 has ~67% chance correct (Band 5).",
+        "signals": {
+          "judge": {
+            "scale": 561,
+            "se": 45,
+            "perBand": {
+              "B2": 0.22,
+              "B3": 0.32,
+              "B4": 0.55,
+              "B5": 0.7,
+              "B6": 0.83,
+              "B7": 0.92
+            },
+            "rp50Scale": 491,
+            "n": 1
+          }
+        }
+      },
+      "verify": {
+        "leash": "deferred-to-deep-verify",
+        "deepVerdict": "PASS",
+        "independentAnswer": "C",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    }
+  ]
+}

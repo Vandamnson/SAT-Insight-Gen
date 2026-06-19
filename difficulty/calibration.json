@@ -1,0 +1,22 @@
+{
+  "a": 30,
+  "b": 0.973,
+  "deployed": false,
+  "method": "linear-decompress",
+  "fittedOn": "skills-insight-exemplars",
+  "n": 34,
+  "slope_b": 0.973,
+  "intercept_a": 30,
+  "raw": {
+    "exact": 0.47,
+    "within1": 0.88,
+    "rho": 0.9,
+    "rmse": 57
+  },
+  "cal_LOO": {
+    "exact": 0.35,
+    "within1": 0.85,
+    "rho": 0.84,
+    "rmse": 58
+  }
+}

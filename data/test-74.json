@@ -1,0 +1,1479 @@
+{
+  "number": 74,
+  "title": "A/B GRID arm — advanced/nonlinear_equations_systems",
+  "questions": [
+    {
+      "id": 1,
+      "program": "SAT",
+      "domain": "advanced_math",
+      "band": "B3",
+      "target_band": "B3",
+      "statementId": "ADV.B3.s1",
+      "skill": "adv_quad_factored_solve",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The given equation has two solutions."
+        },
+        {
+          "t": "mathblock",
+          "v": "2(x-3)(x+5)=0"
+        },
+        {
+          "t": "text",
+          "v": "What is the greater of the two solutions to the given equation?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "By the zero-product property, the product equals 0 only when one of the factors equals 0, so set each factor equal to 0."
+        },
+        {
+          "t": "mathblock",
+          "v": "x-3=0 \\;\\Rightarrow\\; x=3"
+        },
+        {
+          "t": "mathblock",
+          "v": "x+5=0 \\;\\Rightarrow\\; x=-5"
+        },
+        {
+          "t": "text",
+          "v": "The constant factor "
+        },
+        {
+          "t": "math",
+          "v": "2"
+        },
+        {
+          "t": "text",
+          "v": " cannot be 0, so the two solutions are "
+        },
+        {
+          "t": "math",
+          "v": "x=3"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "x=-5"
+        },
+        {
+          "t": "text",
+          "v": ". The greater of these is "
+        },
+        {
+          "t": "math",
+          "v": "3"
+        },
+        {
+          "t": "text",
+          "v": "."
+        }
+      ],
+      "answer": {
+        "correct": "C"
+      },
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "-5"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "-3"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "3"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "5"
+            }
+          ]
+        }
+      ],
+      "figure": null,
+      "params": {
+        "a": 2,
+        "b": 4,
+        "c": -30,
+        "root_select": "plus"
+      },
+      "tier": "band-targeted",
+      "cellId": "58cd273011244f75",
+      "difficulty": {
+        "scalePoint": 431,
+        "band": "B3",
+        "se_scale": 25,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~431 has ~67% chance correct (Band 3).",
+        "signals": {
+          "judge": {
+            "scale": 431,
+            "se": 25,
+            "perBand": {
+              "B2": 0.47,
+              "B3": 0.71,
+              "B4": 0.86,
+              "B5": 0.93,
+              "B6": 0.96,
+              "B7": 0.98
+            },
+            "rp50Scale": 396,
+            "n": 3
+          }
+        }
+      },
+      "verify": {
+        "leash": "pass",
+        "deepVerdict": "PASS",
+        "independentAnswer": "C",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 2,
+      "program": "SAT",
+      "domain": "advanced_math",
+      "band": "B4",
+      "target_band": "B3",
+      "statementId": "ADV.B3.s1",
+      "skill": "adv_solve_radical",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "If "
+        },
+        {
+          "t": "math",
+          "v": "\\sqrt{2x+7}=5"
+        },
+        {
+          "t": "text",
+          "v": ", what is the value of "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "Since the radical is already isolated, square both sides to undo the square root: "
+        },
+        {
+          "t": "math",
+          "v": "(\\sqrt{2x+7})^2=5^2"
+        },
+        {
+          "t": "text",
+          "v": ", which gives "
+        },
+        {
+          "t": "math",
+          "v": "2x+7=25"
+        },
+        {
+          "t": "text",
+          "v": ". Subtract "
+        },
+        {
+          "t": "math",
+          "v": "7"
+        },
+        {
+          "t": "text",
+          "v": " from both sides to get "
+        },
+        {
+          "t": "math",
+          "v": "2x=18"
+        },
+        {
+          "t": "text",
+          "v": ". Divide both sides by "
+        },
+        {
+          "t": "math",
+          "v": "2"
+        },
+        {
+          "t": "text",
+          "v": " to find "
+        },
+        {
+          "t": "math",
+          "v": "x=9"
+        },
+        {
+          "t": "text",
+          "v": ". Check: "
+        },
+        {
+          "t": "math",
+          "v": "\\sqrt{2(9)+7}=\\sqrt{25}=5"
+        },
+        {
+          "t": "text",
+          "v": ", so the solution is valid."
+        }
+      ],
+      "answer": {
+        "accept": [
+          "9"
+        ],
+        "tol": 0
+      },
+      "figure": null,
+      "params": {
+        "mode": "solve_radical",
+        "a": 2,
+        "b": 7,
+        "c": 5
+      },
+      "tier": "band-targeted",
+      "cellId": "474fb6e2924eea42",
+      "difficulty": {
+        "scalePoint": 491,
+        "band": "B4",
+        "se_scale": 25,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~491 has ~67% chance correct (Band 4).",
+        "signals": {
+          "judge": {
+            "scale": 491,
+            "se": 25,
+            "perBand": {
+              "B2": 0.22,
+              "B3": 0.49,
+              "B4": 0.72,
+              "B5": 0.84,
+              "B6": 0.92,
+              "B7": 0.96
+            },
+            "rp50Scale": 442,
+            "n": 3
+          }
+        }
+      },
+      "verify": {
+        "leash": "pass",
+        "deepVerdict": "PASS",
+        "independentAnswer": "9",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 3,
+      "program": "SAT",
+      "domain": "advanced_math",
+      "band": "B4",
+      "target_band": "B3",
+      "statementId": "ADV.B3.s1",
+      "skill": "adv_solve_absvalue",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "Which of the following gives all solutions to the equation "
+        },
+        {
+          "t": "math",
+          "v": "|2x - 6| = 10"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "An absolute value equation "
+        },
+        {
+          "t": "math",
+          "v": "|2x - 6| = 10"
+        },
+        {
+          "t": "text",
+          "v": " means the inside expression equals "
+        },
+        {
+          "t": "math",
+          "v": "10"
+        },
+        {
+          "t": "text",
+          "v": " or "
+        },
+        {
+          "t": "math",
+          "v": "-10"
+        },
+        {
+          "t": "text",
+          "v": ", so write two cases."
+        },
+        {
+          "t": "mathblock",
+          "v": "2x - 6 = 10 \\quad\\Rightarrow\\quad 2x = 16 \\quad\\Rightarrow\\quad x = 8"
+        },
+        {
+          "t": "mathblock",
+          "v": "2x - 6 = -10 \\quad\\Rightarrow\\quad 2x = -4 \\quad\\Rightarrow\\quad x = -2"
+        },
+        {
+          "t": "text",
+          "v": "The solutions are "
+        },
+        {
+          "t": "math",
+          "v": "x = -2"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "x = 8"
+        },
+        {
+          "t": "text",
+          "v": ", which is choice A."
+        }
+      ],
+      "answer": {
+        "correct": "A"
+      },
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "x = -2"
+            },
+            {
+              "t": "text",
+              "v": " and "
+            },
+            {
+              "t": "math",
+              "v": "x = 8"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "x = -2"
+            },
+            {
+              "t": "text",
+              "v": " and "
+            },
+            {
+              "t": "math",
+              "v": "x = -8"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "x = 2"
+            },
+            {
+              "t": "text",
+              "v": " and "
+            },
+            {
+              "t": "math",
+              "v": "x = 8"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "x = -8"
+            },
+            {
+              "t": "text",
+              "v": " and "
+            },
+            {
+              "t": "math",
+              "v": "x = 8"
+            }
+          ]
+        }
+      ],
+      "figure": null,
+      "params": {
+        "a": 2,
+        "b": -6,
+        "c": 10
+      },
+      "tier": "band-targeted",
+      "cellId": "9f52d95df31b5910",
+      "difficulty": {
+        "scalePoint": 483,
+        "band": "B4",
+        "se_scale": 25,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~483 has ~67% chance correct (Band 4).",
+        "signals": {
+          "judge": {
+            "scale": 483,
+            "se": 25,
+            "perBand": {
+              "B2": 0.31,
+              "B3": 0.56,
+              "B4": 0.73,
+              "B5": 0.84,
+              "B6": 0.91,
+              "B7": 0.96
+            },
+            "rp50Scale": 429,
+            "n": 3
+          }
+        }
+      },
+      "verify": {
+        "leash": "deferred-to-deep-verify",
+        "deepVerdict": "PASS",
+        "independentAnswer": "A",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 4,
+      "program": "SAT",
+      "domain": "advanced_math",
+      "band": "B5",
+      "target_band": "B4",
+      "statementId": "ADV.B4.s2",
+      "skill": "adv_quad_standard_solve",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The given equation is shown, where "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": " is a variable."
+        },
+        {
+          "t": "mathblock",
+          "v": "2x^2 + x - 15 = 0"
+        },
+        {
+          "t": "text",
+          "v": "What is the positive solution to the given equation?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "Factor the quadratic by splitting the middle term. Find two numbers whose product is "
+        },
+        {
+          "t": "math",
+          "v": "a\\cdot c = (2)(-15) = -30"
+        },
+        {
+          "t": "text",
+          "v": " and whose sum is "
+        },
+        {
+          "t": "math",
+          "v": "b = 1"
+        },
+        {
+          "t": "text",
+          "v": ". Those numbers are "
+        },
+        {
+          "t": "math",
+          "v": "6"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "-5"
+        },
+        {
+          "t": "text",
+          "v": ", so rewrite and group:"
+        },
+        {
+          "t": "mathblock",
+          "v": "2x^2 + 6x - 5x - 15 = 0"
+        },
+        {
+          "t": "mathblock",
+          "v": "2x(x+3) - 5(x+3) = 0"
+        },
+        {
+          "t": "mathblock",
+          "v": "(2x-5)(x+3) = 0"
+        },
+        {
+          "t": "text",
+          "v": "Set each factor equal to "
+        },
+        {
+          "t": "math",
+          "v": "0"
+        },
+        {
+          "t": "text",
+          "v": ". From "
+        },
+        {
+          "t": "math",
+          "v": "2x-5=0"
+        },
+        {
+          "t": "text",
+          "v": " we get "
+        },
+        {
+          "t": "math",
+          "v": "x=\\tfrac{5}{2}"
+        },
+        {
+          "t": "text",
+          "v": ", and from "
+        },
+        {
+          "t": "math",
+          "v": "x+3=0"
+        },
+        {
+          "t": "text",
+          "v": " we get "
+        },
+        {
+          "t": "math",
+          "v": "x=-3"
+        },
+        {
+          "t": "text",
+          "v": ". The positive solution is "
+        },
+        {
+          "t": "math",
+          "v": "x=\\tfrac{5}{2}"
+        },
+        {
+          "t": "text",
+          "v": " (equivalently "
+        },
+        {
+          "t": "math",
+          "v": "2.5"
+        },
+        {
+          "t": "text",
+          "v": ")."
+        }
+      ],
+      "answer": {
+        "accept": [
+          "5/2",
+          "2.5"
+        ],
+        "tol": 0
+      },
+      "figure": null,
+      "params": {
+        "a": 2,
+        "b": 1,
+        "c": -15,
+        "root_select": "plus"
+      },
+      "tier": "band-targeted",
+      "cellId": "bf2aea6d083b82a3",
+      "difficulty": {
+        "scalePoint": 566,
+        "band": "B5",
+        "se_scale": 25,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~566 has ~67% chance correct (Band 5).",
+        "signals": {
+          "judge": {
+            "scale": 566,
+            "se": 25,
+            "perBand": {
+              "B2": 0.07,
+              "B3": 0.19,
+              "B4": 0.5,
+              "B5": 0.69,
+              "B6": 0.83,
+              "B7": 0.93
+            },
+            "rp50Scale": 504,
+            "n": 3
+          }
+        }
+      },
+      "verify": {
+        "leash": "pass",
+        "deepVerdict": "PASS",
+        "independentAnswer": "5/2",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 5,
+      "program": "SAT",
+      "domain": "advanced_math",
+      "band": "B5",
+      "target_band": "B4",
+      "statementId": "ADV.B4.s2",
+      "skill": "adv_rational_solve",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "What value of "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": " is the solution to the equation shown?"
+        },
+        {
+          "t": "mathblock",
+          "v": "\\dfrac{x^{2}-3x}{x+2}=\\dfrac{10}{x+2}"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "The equation is undefined when the denominator is zero, so "
+        },
+        {
+          "t": "math",
+          "v": "x+2\\neq 0"
+        },
+        {
+          "t": "text",
+          "v": ", which means "
+        },
+        {
+          "t": "math",
+          "v": "x\\neq -2"
+        },
+        {
+          "t": "text",
+          "v": ". Multiply both sides by "
+        },
+        {
+          "t": "math",
+          "v": "x+2"
+        },
+        {
+          "t": "text",
+          "v": " to clear the denominator:"
+        },
+        {
+          "t": "mathblock",
+          "v": "x^{2}-3x=10"
+        },
+        {
+          "t": "text",
+          "v": "Write the quadratic in standard form and factor:"
+        },
+        {
+          "t": "mathblock",
+          "v": "x^{2}-3x-10=(x-5)(x+2)=0"
+        },
+        {
+          "t": "text",
+          "v": "The roots are "
+        },
+        {
+          "t": "math",
+          "v": "x=5"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "x=-2"
+        },
+        {
+          "t": "text",
+          "v": ". Because "
+        },
+        {
+          "t": "math",
+          "v": "x=-2"
+        },
+        {
+          "t": "text",
+          "v": " is the excluded value (it makes the denominator equal "
+        },
+        {
+          "t": "math",
+          "v": "0"
+        },
+        {
+          "t": "text",
+          "v": "), it must be rejected. The only valid solution is "
+        },
+        {
+          "t": "math",
+          "v": "x=5"
+        },
+        {
+          "t": "text",
+          "v": "."
+        }
+      ],
+      "answer": {
+        "accept": [
+          "5"
+        ],
+        "tol": 0
+      },
+      "figure": null,
+      "params": {},
+      "tier": "band-targeted",
+      "cellId": "1eae7380d3575a30",
+      "difficulty": {
+        "scalePoint": 605,
+        "band": "B5",
+        "se_scale": 25,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~605 has ~67% chance correct (Band 5).",
+        "signals": {
+          "judge": {
+            "scale": 605,
+            "se": 25,
+            "perBand": {
+              "B2": 0.07,
+              "B3": 0.15,
+              "B4": 0.41,
+              "B5": 0.6,
+              "B6": 0.76,
+              "B7": 0.88
+            },
+            "rp50Scale": 538,
+            "n": 3
+          }
+        }
+      },
+      "verify": {
+        "leash": "deferred-to-deep-verify",
+        "deepVerdict": "PASS",
+        "independentAnswer": "5",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 6,
+      "program": "SAT",
+      "domain": "advanced_math",
+      "band": "B5",
+      "target_band": "B4",
+      "statementId": "ADV.B4.s2",
+      "skill": "adv_lin_nonlin_system",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "mathblock",
+          "v": "y = x^2 - 3"
+        },
+        {
+          "t": "mathblock",
+          "v": "y = 2x"
+        },
+        {
+          "t": "text",
+          "v": "The system of equations shown has two solutions "
+        },
+        {
+          "t": "math",
+          "v": "(x, y)"
+        },
+        {
+          "t": "text",
+          "v": ". Using substitution, consider the solution in which "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": " is negative. What is the value of "
+        },
+        {
+          "t": "math",
+          "v": "y"
+        },
+        {
+          "t": "text",
+          "v": " in that solution?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "Because "
+        },
+        {
+          "t": "math",
+          "v": "y = 2x"
+        },
+        {
+          "t": "text",
+          "v": ", substitute "
+        },
+        {
+          "t": "math",
+          "v": "2x"
+        },
+        {
+          "t": "text",
+          "v": " for "
+        },
+        {
+          "t": "math",
+          "v": "y"
+        },
+        {
+          "t": "text",
+          "v": " in the other equation: "
+        },
+        {
+          "t": "math",
+          "v": "2x = x^2 - 3"
+        },
+        {
+          "t": "text",
+          "v": ". Rewrite as "
+        },
+        {
+          "t": "math",
+          "v": "x^2 - 2x - 3 = 0"
+        },
+        {
+          "t": "text",
+          "v": " and factor: "
+        },
+        {
+          "t": "math",
+          "v": "(x - 3)(x + 1) = 0"
+        },
+        {
+          "t": "text",
+          "v": ", so "
+        },
+        {
+          "t": "math",
+          "v": "x = 3"
+        },
+        {
+          "t": "text",
+          "v": " or "
+        },
+        {
+          "t": "math",
+          "v": "x = -1"
+        },
+        {
+          "t": "text",
+          "v": ". The negative value is "
+        },
+        {
+          "t": "math",
+          "v": "x = -1"
+        },
+        {
+          "t": "text",
+          "v": ". Substitute it into "
+        },
+        {
+          "t": "math",
+          "v": "y = 2x"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "math",
+          "v": "y = 2(-1) = -2"
+        },
+        {
+          "t": "text",
+          "v": ". So the solution with negative "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": " is "
+        },
+        {
+          "t": "math",
+          "v": "(-1, -2)"
+        },
+        {
+          "t": "text",
+          "v": ", and "
+        },
+        {
+          "t": "math",
+          "v": "y = -2"
+        },
+        {
+          "t": "text",
+          "v": "."
+        }
+      ],
+      "answer": {
+        "correct": "A"
+      },
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "-2"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "-1"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "3"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "6"
+            }
+          ]
+        }
+      ],
+      "figure": null,
+      "params": {
+        "linear": {
+          "m": 2,
+          "b": 0
+        },
+        "nonlinear": {
+          "a": 1,
+          "b": 0,
+          "c": -3
+        },
+        "select": {
+          "by": "x",
+          "condition": "negative"
+        },
+        "coordinate": "y",
+        "report": "value"
+      },
+      "tier": "band-targeted",
+      "cellId": "d62ec392c890655e",
+      "difficulty": {
+        "scalePoint": 582,
+        "band": "B5",
+        "se_scale": 25,
+        "band_ambiguous": false,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~582 has ~67% chance correct (Band 5).",
+        "signals": {
+          "judge": {
+            "scale": 582,
+            "se": 25,
+            "perBand": {
+              "B2": 0.13,
+              "B3": 0.23,
+              "B4": 0.48,
+              "B5": 0.65,
+              "B6": 0.8,
+              "B7": 0.91
+            },
+            "rp50Scale": 514,
+            "n": 3
+          }
+        }
+      },
+      "verify": {
+        "leash": "deferred-to-deep-verify",
+        "deepVerdict": "PASS",
+        "independentAnswer": "A",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 7,
+      "program": "SAT",
+      "domain": "advanced_math",
+      "band": "B5",
+      "target_band": "B4",
+      "statementId": "ADV.B4.s2",
+      "skill": "adv_poly_factor_solve",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "mathblock",
+          "v": "x^3 - 2x^2 - 9x + 18 = 0"
+        },
+        {
+          "t": "text",
+          "v": "Which of the following is a solution to the given equation?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "Factor the left side by grouping. Group the first two terms and the last two terms:"
+        },
+        {
+          "t": "mathblock",
+          "v": "x^2(x - 2) - 9(x - 2) = 0"
+        },
+        {
+          "t": "text",
+          "v": "Factor out the common binomial "
+        },
+        {
+          "t": "math",
+          "v": "(x - 2)"
+        },
+        {
+          "t": "text",
+          "v": ":"
+        },
+        {
+          "t": "mathblock",
+          "v": "(x - 2)(x^2 - 9) = 0"
+        },
+        {
+          "t": "text",
+          "v": "Because "
+        },
+        {
+          "t": "math",
+          "v": "x^2 - 9 = (x - 3)(x + 3)"
+        },
+        {
+          "t": "text",
+          "v": ", the equation factors completely as "
+        },
+        {
+          "t": "mathblock",
+          "v": "(x - 2)(x - 3)(x + 3) = 0"
+        },
+        {
+          "t": "text",
+          "v": "Setting each factor equal to 0 gives the solutions "
+        },
+        {
+          "t": "math",
+          "v": "x = 2"
+        },
+        {
+          "t": "text",
+          "v": ", "
+        },
+        {
+          "t": "math",
+          "v": "x = 3"
+        },
+        {
+          "t": "text",
+          "v": ", and "
+        },
+        {
+          "t": "math",
+          "v": "x = -3"
+        },
+        {
+          "t": "text",
+          "v": ". Of these, only "
+        },
+        {
+          "t": "math",
+          "v": "x = 2"
+        },
+        {
+          "t": "text",
+          "v": " appears among the choices. (Note that "
+        },
+        {
+          "t": "math",
+          "v": "-2"
+        },
+        {
+          "t": "text",
+          "v": " comes from reversing the sign of the "
+        },
+        {
+          "t": "math",
+          "v": "(x - 2)"
+        },
+        {
+          "t": "text",
+          "v": " factor, so it is not a solution.)"
+        }
+      ],
+      "answer": {
+        "correct": "B"
+      },
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "-2"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "2"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "6"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "9"
+            }
+          ]
+        }
+      ],
+      "figure": null,
+      "params": {
+        "roots": [
+          2,
+          3,
+          -3
+        ],
+        "leading": 1,
+        "target": "zero"
+      },
+      "tier": "band-targeted",
+      "cellId": "b7cdd5ceaf8d9d92",
+      "difficulty": {
+        "scalePoint": 593,
+        "band": "B5",
+        "se_scale": 25,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~593 has ~67% chance correct (Band 5).",
+        "signals": {
+          "judge": {
+            "scale": 593,
+            "se": 25,
+            "perBand": {
+              "B2": 0.21,
+              "B3": 0.31,
+              "B4": 0.48,
+              "B5": 0.63,
+              "B6": 0.77,
+              "B7": 0.89
+            },
+            "rp50Scale": 513,
+            "n": 3
+          }
+        }
+      },
+      "verify": {
+        "leash": "pass",
+        "deepVerdict": "PASS",
+        "independentAnswer": "B",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 8,
+      "program": "SAT",
+      "domain": "advanced_math",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "ADV.B7.s1",
+      "skill": "adv_unknown_constant",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "For a constant "
+        },
+        {
+          "t": "math",
+          "v": "k"
+        },
+        {
+          "t": "text",
+          "v": ", the equation"
+        },
+        {
+          "t": "mathblock",
+          "v": "\\frac{k}{x+1}+\\frac{3}{x-2}=\\frac{20}{x^2-x-2}"
+        },
+        {
+          "t": "text",
+          "v": "has a solution "
+        },
+        {
+          "t": "math",
+          "v": "x=4"
+        },
+        {
+          "t": "text",
+          "v": ". What is the value of "
+        },
+        {
+          "t": "math",
+          "v": "k"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "Factor the quadratic denominator using structure: "
+        },
+        {
+          "t": "math",
+          "v": "x^2-x-2=(x-2)(x+1)"
+        },
+        {
+          "t": "text",
+          "v": ", so every term shares the factors "
+        },
+        {
+          "t": "math",
+          "v": "(x+1)"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "(x-2)"
+        },
+        {
+          "t": "text",
+          "v": ". Multiply both sides by "
+        },
+        {
+          "t": "math",
+          "v": "(x+1)(x-2)"
+        },
+        {
+          "t": "text",
+          "v": " to clear all denominators:"
+        },
+        {
+          "t": "mathblock",
+          "v": "k(x-2)+3(x+1)=20"
+        },
+        {
+          "t": "text",
+          "v": "Because "
+        },
+        {
+          "t": "math",
+          "v": "x=4"
+        },
+        {
+          "t": "text",
+          "v": " is a solution, substitute it: "
+        },
+        {
+          "t": "math",
+          "v": "k(4-2)+3(4+1)=20"
+        },
+        {
+          "t": "text",
+          "v": ", which simplifies to "
+        },
+        {
+          "t": "math",
+          "v": "2k+15=20"
+        },
+        {
+          "t": "text",
+          "v": ". Subtract to get "
+        },
+        {
+          "t": "math",
+          "v": "2k=5"
+        },
+        {
+          "t": "text",
+          "v": ", so "
+        },
+        {
+          "t": "math",
+          "v": "k=\\tfrac{5}{2}=2.5"
+        },
+        {
+          "t": "text",
+          "v": "."
+        }
+      ],
+      "answer": {
+        "accept": [
+          "5/2",
+          "2.5"
+        ],
+        "tol": 0
+      },
+      "figure": null,
+      "params": {},
+      "tier": "band-targeted",
+      "cellId": "b537387390d4481f",
+      "difficulty": {
+        "scalePoint": 694,
+        "band": "B7",
+        "se_scale": 25,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~694 has ~67% chance correct (Band 7).",
+        "signals": {
+          "judge": {
+            "scale": 694,
+            "se": 25,
+            "perBand": {
+              "B2": 0.03,
+              "B3": 0.06,
+              "B4": 0.14,
+              "B5": 0.29,
+              "B6": 0.5,
+              "B7": 0.75
+            },
+            "rp50Scale": 640,
+            "n": 3
+          }
+        }
+      },
+      "verify": {
+        "leash": "deferred-to-deep-verify",
+        "deepVerdict": "PASS",
+        "independentAnswer": "2.5",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    }
+  ]
+}

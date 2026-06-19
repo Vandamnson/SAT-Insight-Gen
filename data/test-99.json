@@ -1,0 +1,142 @@
+{
+  "number": 99,
+  "title": "Phase-0 fixture — schema + figure + KaTeX smoke test",
+  "questions": [
+    {
+      "id": 1,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B3",
+      "statementId": "ALG.B3.s1",
+      "skill": "lin_solve_value",
+      "type": "mcq",
+      "stem": [
+        { "t": "text", "v": "If " },
+        { "t": "math", "v": "5x - 7 = 3x + 11" },
+        { "t": "text", "v": ", what is the value of " },
+        { "t": "math", "v": "x" },
+        { "t": "text", "v": "?" }
+      ],
+      "solution": [
+        { "t": "text", "v": "Subtract " },
+        { "t": "math", "v": "3x" },
+        { "t": "text", "v": " from both sides to get " },
+        { "t": "math", "v": "2x - 7 = 11" },
+        { "t": "text", "v": ", then add 7: " },
+        { "t": "math", "v": "2x = 18" },
+        { "t": "text", "v": ", so " },
+        { "t": "math", "v": "x = 9" },
+        { "t": "text", "v": "." }
+      ],
+      "options": [
+        { "key": "A", "seg": [{ "t": "math", "v": "x = 2" }] },
+        { "key": "B", "seg": [{ "t": "math", "v": "x = 9" }] },
+        { "key": "C", "seg": [{ "t": "math", "v": "x = 11" }] },
+        { "key": "D", "seg": [{ "t": "math", "v": "x = 18" }] }
+      ],
+      "answer": { "correct": "B" },
+      "params": { "target": "x", "a": 2, "b": -18 },
+      "difficulty": {
+        "scalePoint": 440,
+        "band": "B3",
+        "se_scale": 35,
+        "pBand": 0.71,
+        "band_ambiguous": false,
+        "method": "fixture",
+        "rp67_statement": "A student scoring ~440 has ~67% chance correct (Band 3)."
+      },
+      "verify": { "leash": "pass", "deepVerdict": "PASS", "figureVerify": { "ok": true } },
+      "cellId": "fixture-alg-b3-1",
+      "tier": "grounded"
+    },
+    {
+      "id": 2,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B4",
+      "statementId": "ALG.B4.s2",
+      "skill": "lin_from_2pt",
+      "type": "mcq",
+      "stem": [
+        { "t": "text", "v": "Line " },
+        { "t": "math", "v": "\\ell" },
+        { "t": "text", "v": " passes through the points shown. What is the slope of " },
+        { "t": "math", "v": "\\ell" },
+        { "t": "text", "v": "?" }
+      ],
+      "solution": [
+        { "t": "text", "v": "Slope " },
+        { "t": "math", "v": "= \\dfrac{-9 - 7}{5 - (-3)} = \\dfrac{-16}{8} = -2" },
+        { "t": "text", "v": "." }
+      ],
+      "options": [
+        { "key": "A", "seg": [{ "t": "math", "v": "-2" }] },
+        { "key": "B", "seg": [{ "t": "math", "v": "-\\tfrac12" }] },
+        { "key": "C", "seg": [{ "t": "math", "v": "\\tfrac12" }] },
+        { "key": "D", "seg": [{ "t": "math", "v": "2" }] }
+      ],
+      "answer": { "correct": "A" },
+      "figure": {
+        "fn": "coordPlane",
+        "caption": "Line ℓ in the xy-plane",
+        "spec": {
+          "xRange": [-6, 6], "yRange": [-10, 10], "xStep": 2, "yStep": 2, "origin": true,
+          "curves": [{ "type": "line2pt", "p1": [-3, 7], "p2": [5, -9] }],
+          "points": [{ "at": [-3, 7], "label": "(-3, 7)" }, { "at": [5, -9], "label": "(5, -9)" }]
+        }
+      },
+      "params": { "target": "slope", "p1": [-3, 7], "p2": [5, -9] },
+      "difficulty": {
+        "scalePoint": 505, "band": "B4", "se_scale": 40, "pBand": 0.68, "band_ambiguous": false,
+        "method": "fixture", "rp67_statement": "A student scoring ~505 has ~67% chance correct (Band 4)."
+      },
+      "verify": { "leash": "pass", "deepVerdict": "PASS", "figureVerify": { "ok": true } },
+      "cellId": "fixture-alg-b4-2",
+      "tier": "novel"
+    },
+    {
+      "id": 3,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B3",
+      "statementId": "GEO.B3.s3",
+      "skill": "right_triangle",
+      "type": "spr",
+      "stem": [
+        { "t": "text", "v": "In right triangle " },
+        { "t": "math", "v": "ABC" },
+        { "t": "text", "v": " shown, the legs have lengths " },
+        { "t": "math", "v": "AB = 15" },
+        { "t": "text", "v": " and " },
+        { "t": "math", "v": "BC = 20" },
+        { "t": "text", "v": ". What is the length of the hypotenuse " },
+        { "t": "math", "v": "AC" },
+        { "t": "text", "v": "?" }
+      ],
+      "solution": [
+        { "t": "text", "v": "By the Pythagorean theorem, " },
+        { "t": "math", "v": "AC = \\sqrt{15^2 + 20^2} = \\sqrt{625} = 25" },
+        { "t": "text", "v": "." }
+      ],
+      "answer": { "accept": ["25"], "tol": 0 },
+      "figure": {
+        "fn": "triangle",
+        "caption": "Right triangle ABC (not to scale)",
+        "spec": {
+          "vertices": [[0, 15], [0, 0], [20, 0]],
+          "labels": ["A", "B", "C"],
+          "right": "B",
+          "sideLabels": { "AB": "15", "BC": "20" }
+        }
+      },
+      "params": { "target": "hypotenuse", "leg1": 15, "leg2": 20 },
+      "difficulty": {
+        "scalePoint": 445, "band": "B3", "se_scale": 30, "pBand": 0.73, "band_ambiguous": false,
+        "method": "fixture", "rp67_statement": "A student scoring ~445 has ~67% chance correct (Band 3)."
+      },
+      "verify": { "leash": "pass", "deepVerdict": "PASS", "figureVerify": { "ok": true } },
+      "cellId": "fixture-geo-b3-3",
+      "tier": "grounded"
+    }
+  ]
+}

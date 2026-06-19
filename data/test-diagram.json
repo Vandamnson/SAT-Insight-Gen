@@ -1,0 +1,458 @@
+{
+  "number": 91,
+  "title": "Novel polygon vertex-angle items (procedural, self-verified)",
+  "questions": [
+    {
+      "id": 1,
+      "program": "SAT",
+      "band": "B7",
+      "target_band": "B7",
+      "skill": "angles_polygon",
+      "domain": "geometry_trig",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "In quadrilateral ABCD shown, the interior angle measures are as marked (the figure is not drawn to scale). What is the measure, in degrees, of "
+        },
+        {
+          "t": "math",
+          "v": "\\angle B"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "The interior angles of a quadrilateral sum to 360°. Adding the marked expressions: 7x + 297 = 360, so x = 9. Then ∠B = (9) + 133 = 142°."
+        }
+      ],
+      "answer": {
+        "accept": [
+          "142"
+        ],
+        "tol": 0
+      },
+      "params": {
+        "shape": "quadrilateral",
+        "x": 9,
+        "angles": [
+          82,
+          142,
+          49,
+          87
+        ],
+        "total": 360
+      },
+      "figure": {
+        "fn": "polygon",
+        "caption": "Quadrilateral ABCD (not to scale)",
+        "spec": {
+          "vertices": [
+            [
+              50,
+              89
+            ],
+            [
+              12,
+              50
+            ],
+            [
+              50,
+              13
+            ],
+            [
+              87,
+              50
+            ]
+          ],
+          "labels": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "angleLabels": {
+            "A": "(2x + 64)°",
+            "B": "(x + 133)°",
+            "C": "(2x + 31)°",
+            "D": "(2x + 69)°"
+          }
+        }
+      },
+      "meta": {
+        "selfChecked": true,
+        "N": 4,
+        "x": 9,
+        "target": "B",
+        "answer": 142
+      }
+    },
+    {
+      "id": 2,
+      "program": "SAT",
+      "band": "B7",
+      "target_band": "B7",
+      "skill": "angles_polygon",
+      "domain": "geometry_trig",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "In quadrilateral ABCD shown, the interior angle measures are as marked (the figure is not drawn to scale). What is the measure, in degrees, of "
+        },
+        {
+          "t": "math",
+          "v": "\\angle A"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "The interior angles of a quadrilateral sum to 360°. Adding the marked expressions: 7x + 276 = 360, so x = 12. Then ∠A = 2(12) + 92 = 116°."
+        }
+      ],
+      "answer": {
+        "accept": [
+          "116"
+        ],
+        "tol": 0
+      },
+      "params": {
+        "shape": "quadrilateral",
+        "x": 12,
+        "angles": [
+          116,
+          106,
+          92,
+          46
+        ],
+        "total": 360
+      },
+      "figure": {
+        "fn": "polygon",
+        "caption": "Quadrilateral ABCD (not to scale)",
+        "spec": {
+          "vertices": [
+            [
+              50,
+              96
+            ],
+            [
+              15,
+              50
+            ],
+            [
+              50,
+              7
+            ],
+            [
+              94,
+              50
+            ]
+          ],
+          "labels": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "angleLabels": {
+            "A": "(2x + 92)°",
+            "B": "(2x + 82)°",
+            "C": "(x + 80)°",
+            "D": "(2x + 22)°"
+          }
+        }
+      },
+      "meta": {
+        "selfChecked": true,
+        "N": 4,
+        "x": 12,
+        "target": "A",
+        "answer": 116
+      }
+    },
+    {
+      "id": 3,
+      "program": "SAT",
+      "band": "B7",
+      "target_band": "B7",
+      "skill": "angles_polygon",
+      "domain": "geometry_trig",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "In pentagon ABCDE shown, the interior angle measures are as marked (the figure is not drawn to scale). What is the measure, in degrees, of "
+        },
+        {
+          "t": "math",
+          "v": "\\angle D"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "The interior angles of a pentagon sum to 540°. Adding the marked expressions: 10x + 470 = 540, so x = 7. Then ∠D = 3(7) + 100 = 121°."
+        }
+      ],
+      "answer": {
+        "accept": [
+          "121"
+        ],
+        "tol": 0
+      },
+      "params": {
+        "shape": "pentagon",
+        "x": 7,
+        "angles": [
+          101,
+          142,
+          56,
+          121,
+          120
+        ],
+        "total": 540
+      },
+      "figure": {
+        "fn": "polygon",
+        "caption": "Pentagon ABCDE (not to scale)",
+        "spec": {
+          "vertices": [
+            [
+              50,
+              92
+            ],
+            [
+              10,
+              63
+            ],
+            [
+              24,
+              14
+            ],
+            [
+              71,
+              21
+            ],
+            [
+              88,
+              62
+            ]
+          ],
+          "labels": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E"
+          ],
+          "angleLabels": {
+            "A": "(x + 94)°",
+            "B": "(x + 135)°",
+            "C": "(2x + 42)°",
+            "D": "(3x + 100)°",
+            "E": "(3x + 99)°"
+          }
+        }
+      },
+      "meta": {
+        "selfChecked": true,
+        "N": 5,
+        "x": 7,
+        "target": "D",
+        "answer": 121
+      }
+    },
+    {
+      "id": 4,
+      "program": "SAT",
+      "band": "B7",
+      "target_band": "B7",
+      "skill": "angles_polygon",
+      "domain": "geometry_trig",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "In quadrilateral ABCD shown, the interior angle measures are as marked (the figure is not drawn to scale). What is the measure, in degrees, of "
+        },
+        {
+          "t": "math",
+          "v": "\\angle D"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "The interior angles of a quadrilateral sum to 360°. Adding the marked expressions: 6x + 300 = 360, so x = 10. Then ∠D = (10) + 101 = 111°."
+        }
+      ],
+      "answer": {
+        "accept": [
+          "111"
+        ],
+        "tol": 0
+      },
+      "params": {
+        "shape": "quadrilateral",
+        "x": 10,
+        "angles": [
+          78,
+          61,
+          110,
+          111
+        ],
+        "total": 360
+      },
+      "figure": {
+        "fn": "polygon",
+        "caption": "Quadrilateral ABCD (not to scale)",
+        "spec": {
+          "vertices": [
+            [
+              50,
+              90
+            ],
+            [
+              16,
+              50
+            ],
+            [
+              50,
+              15
+            ],
+            [
+              95,
+              50
+            ]
+          ],
+          "labels": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "angleLabels": {
+            "A": "(x + 68)°",
+            "B": "(x + 51)°",
+            "C": "(3x + 80)°",
+            "D": "(x + 101)°"
+          }
+        }
+      },
+      "meta": {
+        "selfChecked": true,
+        "N": 4,
+        "x": 10,
+        "target": "D",
+        "answer": 111
+      }
+    },
+    {
+      "id": 5,
+      "program": "SAT",
+      "band": "B7",
+      "target_band": "B7",
+      "skill": "angles_polygon",
+      "domain": "geometry_trig",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "In quadrilateral ABCD shown, the interior angle measures are as marked (the figure is not drawn to scale). What is the measure, in degrees, of "
+        },
+        {
+          "t": "math",
+          "v": "\\angle A"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "The interior angles of a quadrilateral sum to 360°. Adding the marked expressions: 6x + 324 = 360, so x = 6. Then ∠A = 3(6) + 65 = 83°."
+        }
+      ],
+      "answer": {
+        "accept": [
+          "83"
+        ],
+        "tol": 0
+      },
+      "params": {
+        "shape": "quadrilateral",
+        "x": 6,
+        "angles": [
+          83,
+          51,
+          84,
+          142
+        ],
+        "total": 360
+      },
+      "figure": {
+        "fn": "polygon",
+        "caption": "Quadrilateral ABCD (not to scale)",
+        "spec": {
+          "vertices": [
+            [
+              50,
+              95
+            ],
+            [
+              5,
+              50
+            ],
+            [
+              50,
+              10
+            ],
+            [
+              84,
+              50
+            ]
+          ],
+          "labels": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "angleLabels": {
+            "A": "(3x + 65)°",
+            "B": "(x + 45)°",
+            "C": "(x + 78)°",
+            "D": "(x + 136)°"
+          }
+        }
+      },
+      "meta": {
+        "selfChecked": true,
+        "N": 4,
+        "x": 6,
+        "target": "A",
+        "answer": 83
+      }
+    }
+  ]
+}

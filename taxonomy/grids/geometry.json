@@ -1,0 +1,91 @@
+{
+  "_note": "DOMAIN grid: Geometry & Trigonometry. DOMAIN → SUBDOMAIN → variety cells, the 4 official subdomains. Each cell's TARGET is a Skills-Insight attribute the GEO statements name (area, volume, perimeter, side length, surface area, angle / triangle-angle-sum, hypotenuse/leg via Pythagorean, special-right side, scale factor, congruence/similarity, sine/cosine, radian, circle equation, arc, arc length, sector, tangent). Clean mensuration is double-verified by geo_measure; angle theorems, similarity/scale, special-right & trig (radical/irrational answers), radian/π, and circles defer to the blinded deep-verifier. Figures use LIVE renderers (triangle/rectangle/parallelLines/parallelogram/polygon/coordPlane/circle); 3D solids state dimensions in prose.",
+  "domain": "geometry_trig",
+  "levers": {
+    "B1": ["one formula, one step", "small whole numbers", "direct ask"],
+    "B2": ["perimeter/side or a parallel-line angle relationship", "one–two steps"],
+    "B3": ["area/sides, a triangle/intersecting-line angle, or a Pythagorean hypotenuse", "clean numbers"],
+    "B4": ["volume of cube/pyramid, similarity/scale, a Pythagorean leg / special right triangle"],
+    "B5": ["sine/cosine of complementary angles; degree↔radian; circle equation; multistep area & perimeter"],
+    "B6": ["prism surface area/volume/dimension; complex Pythagorean / angle-sum; right-triangle trig; scale-factor effects"],
+    "B7": ["missing values in 2D/3D shapes; similar/congruent-triangle & angle theorems; right-triangle trig; circle theorems"]
+  },
+  "subdomains": {
+    "area_and_volume": {
+      "label": "Area and volume",
+      "attributes": ["area", "perimeter", "side_length", "volume", "surface_area"],
+      "statements": ["GEO.B1.s1", "GEO.B1.s2", "GEO.B2.s1", "GEO.B3.s1", "GEO.B4.s1", "GEO.B5.s3", "GEO.B6.s1", "GEO.B7.s1"],
+      "cells": [
+        { "key": "geo_rect_area", "band": "B1", "statementId": "GEO.B1.s2", "type": "both", "figure": "opt", "rep": "rectangle", "target": "area", "form": "rectangle", "contextual": true,
+          "ask": "Find the AREA of a rectangle from its side lengths (garden/mural/panel context fine). (fn 'rectangle')", "recompute": "geo_measure", "contract": "{\"shape\":\"rectangle\",\"report\":\"area\",\"l\":num,\"w\":num}" },
+        { "key": "geo_prism_volume", "band": "B1", "statementId": "GEO.B1.s1", "type": "both", "figure": "none", "rep": "prose", "target": "volume", "form": "prism", "contextual": true,
+          "ask": "Find the VOLUME of a right rectangular prism from its three edge lengths and V=ℓwh.", "recompute": "geo_measure", "contract": "{\"shape\":\"prism\",\"l\":num,\"w\":num,\"h\":num}" },
+        { "key": "geo_perimeter", "band": "B2", "statementId": "GEO.B2.s1", "type": "both", "figure": "opt", "rep": "rectangle", "target": "perimeter", "form": "rectangle", "contextual": true,
+          "ask": "PERIMETER from the sides, OR a missing side from the perimeter (report 'perimeter' or 'side_from_perimeter'). (fn 'rectangle')", "recompute": "geo_measure", "contract": "{\"shape\":\"rectangle\",\"report\":\"perimeter\"|\"side_from_perimeter\",\"l\":num,\"w\":num,\"perimeter\":num}" },
+        { "key": "geo_triangle_area", "band": "B3", "statementId": "GEO.B3.s1", "type": "both", "figure": "opt", "rep": "triangle", "target": "area", "form": "triangle", "contextual": false,
+          "ask": "Find the AREA of a triangle from base and height (or a side given the area). (fn 'triangle')", "recompute": "geo_measure", "contract": "{\"shape\":\"triangle\",\"report\":\"area\",\"base\":num,\"height\":num}" },
+        { "key": "geo_composite_area", "band": "B5", "statementId": "GEO.B5.s3", "type": "both", "figure": "opt", "rep": "composite_figure", "target": "area", "form": "composite", "contextual": true,
+          "ask": "MULTISTEP area & perimeter of a COMPOSITE figure (an L-shape, or a rectangle with a piece removed). (fn 'polygon')", "recompute": "needs-deep-verify", "contract": "{}  // decomposition → deep-verify" },
+        { "key": "geo_cube_volume", "band": "B4", "statementId": "GEO.B4.s1", "type": "both", "figure": "none", "rep": "prose", "target": "volume", "form": "cube", "contextual": true,
+          "ask": "Find the VOLUME of a cube from its edge (or the edge from the volume).", "recompute": "geo_measure", "contract": "{\"shape\":\"cube\",\"s\":num}" },
+        { "key": "geo_pyramid_volume", "band": "B4", "statementId": "GEO.B4.s1", "type": "both", "figure": "none", "rep": "prose", "target": "volume", "form": "pyramid", "contextual": true,
+          "ask": "Find the VOLUME of a pyramid with a rectangular base, V=⅓ℓwh.", "recompute": "geo_measure", "contract": "{\"shape\":\"pyramid\",\"l\":num,\"w\":num,\"h\":num}" },
+        { "key": "geo_prism_surface_area", "band": "B6", "statementId": "GEO.B6.s1", "type": "both", "figure": "none", "rep": "prose", "target": "surface_area", "form": "prism", "contextual": true,
+          "ask": "Find the SURFACE AREA, volume, or a missing DIMENSION of a prism given other information.", "recompute": "needs-deep-verify", "contract": "{}  // surface area / inverse → deep-verify" },
+        { "key": "geo_missing_dimension", "band": "B7", "statementId": "GEO.B7.s1", "type": "both", "figure": "none", "rep": "prose", "target": "side_length", "form": "solid_inverse", "contextual": true,
+          "ask": "Find a MISSING VALUE in a 2D/3D shape by applying an area, surface-area, or volume formula in reverse.", "recompute": "needs-deep-verify", "contract": "{}  // inverse mensuration → deep-verify" }
+      ]
+    },
+    "lines_angles_triangles": {
+      "label": "Lines, angles, and triangles",
+      "attributes": ["angle", "triangle_angle_sum", "scale_factor", "congruence", "similarity"],
+      "statements": ["GEO.B2.s2", "GEO.B3.s2", "GEO.B4.s2", "GEO.B6.s2", "GEO.B7.s2"],
+      "cells": [
+        { "key": "geo_parallel_transversal", "band": "B2", "statementId": "GEO.B2.s2", "type": "both", "figure": "req", "rep": "parallel_lines", "target": "angle", "form": "transversal", "contextual": false,
+          "ask": "Two PARALLEL lines cut by a TRANSVERSAL; find an angle via corresponding/alternate/co-interior relationships (one given as an expression). (fn 'parallelLines')", "recompute": "needs-deep-verify", "contract": "{}  // angle relationship → deep-verify" },
+        { "key": "geo_triangle_angle_sum", "band": "B3", "statementId": "GEO.B3.s2", "type": "both", "figure": "opt", "rep": "triangle", "target": "triangle_angle_sum", "form": "angle_sum", "contextual": false,
+          "ask": "Find a missing angle by the TRIANGLE ANGLE-SUM theorem (third angle from two given). (fn 'triangle')", "recompute": "geo_measure", "contract": "{\"shape\":\"triangle\",\"report\":\"angle_sum\",\"a\":num,\"b\":num}" },
+        { "key": "geo_intersecting_angles", "band": "B3", "statementId": "GEO.B3.s2", "type": "both", "figure": "req", "rep": "intersecting_lines", "target": "angle", "form": "intersecting", "contextual": false,
+          "ask": "Find an angle formed by INTERSECTING lines via vertical-angle and supplementary/linear-pair relationships. (fn 'parallelLines' / 'polygon')", "recompute": "needs-deep-verify", "contract": "{}  // vertical/supplementary → deep-verify" },
+        { "key": "geo_similar_triangles", "band": "B4", "statementId": "GEO.B4.s2", "type": "mcq", "figure": "opt", "rep": "two_triangles", "target": "similarity", "form": "similarity", "contextual": false,
+          "ask": "Use SIMILAR/CONGRUENT triangles or a scale factor to find a missing side via proportion. (fn 'triangle')", "recompute": "needs-deep-verify", "contract": "{}  // proportion → deep-verify" },
+        { "key": "geo_scale_factor", "band": "B6", "statementId": "GEO.B4.s2", "type": "mcq", "figure": "none", "rep": "prose", "target": "scale_factor", "form": "scale", "contextual": true,
+          "ask": "Reason about how a SCALE FACTOR affects perimeter (×k), area (×k²), or volume (×k³).", "recompute": "needs-deep-verify", "contract": "{}  // scaling → deep-verify" },
+        { "key": "geo_triangle_theorems", "band": "B7", "statementId": "GEO.B7.s2", "type": "mcq", "figure": "opt", "rep": "triangle", "target": "congruence", "form": "theorems", "contextual": false,
+          "ask": "Apply properties/theorems of SIMILAR & CONGRUENT triangles or angle theorems in a multi-step setup. (fn 'triangle')", "recompute": "needs-deep-verify", "contract": "{}  // theorem chain → deep-verify" }
+      ]
+    },
+    "right_triangles_trig": {
+      "label": "Right triangles and trigonometry",
+      "attributes": ["hypotenuse", "leg", "special_right_side", "sine", "cosine", "radian"],
+      "statements": ["GEO.B3.s3", "GEO.B4.s3", "GEO.B5.s1", "GEO.B6.s3", "GEO.B7.s2"],
+      "cells": [
+        { "key": "geo_pythagorean_hyp", "band": "B3", "statementId": "GEO.B3.s3", "type": "both", "figure": "opt", "rep": "right_triangle", "target": "hypotenuse", "form": "pythagorean", "contextual": false,
+          "ask": "Find the HYPOTENUSE from two legs (use a Pythagorean triple 3-4-5, 5-12-13, 8-15-17 for a clean answer). (fn 'triangle' + right-angle mark)", "recompute": "geo_measure", "contract": "{\"shape\":\"right_triangle\",\"report\":\"hyp\",\"leg1\":num,\"leg2\":num}" },
+        { "key": "geo_pythagorean_leg", "band": "B4", "statementId": "GEO.B4.s3", "type": "both", "figure": "opt", "rep": "right_triangle", "target": "leg", "form": "pythagorean", "contextual": false,
+          "ask": "Find a missing LEG from the hypotenuse and the other leg (Pythagorean triple for a clean answer). (fn 'triangle' + right-angle mark)", "recompute": "geo_measure", "contract": "{\"shape\":\"right_triangle\",\"report\":\"leg\",\"hyp\":num,\"leg\":num}" },
+        { "key": "geo_special_right", "band": "B4", "statementId": "GEO.B4.s3", "type": "mcq", "figure": "opt", "rep": "right_triangle", "target": "special_right_side", "form": "special_right", "contextual": false,
+          "ask": "Use a SPECIAL right triangle (30-60-90 or 45-45-90) ratio to find a side (answers may involve √2 or √3). (fn 'triangle')", "recompute": "needs-deep-verify", "contract": "{}  // radical ratios → deep-verify" },
+        { "key": "geo_sin_cos_complementary", "band": "B5", "statementId": "GEO.B5.s1", "type": "both", "figure": "none", "rep": "prose", "target": "sine", "form": "complementary", "contextual": false,
+          "ask": "Use the relationship sin(x)=cos(90°−x) between sine & cosine of COMPLEMENTARY angles to find a value.", "recompute": "needs-deep-verify", "contract": "{}  // trig identity → deep-verify" },
+        { "key": "geo_degree_radian", "band": "B5", "statementId": "GEO.B5.s1", "type": "both", "figure": "none", "rep": "prose", "target": "radian", "form": "conversion", "contextual": false,
+          "ask": "Convert between DEGREE and RADIAN measure (answer typically a multiple of π).", "recompute": "needs-deep-verify", "contract": "{}  // π-form answer → deep-verify" },
+        { "key": "geo_trig_ratio", "band": "B6", "statementId": "GEO.B6.s3", "type": "both", "figure": "opt", "rep": "right_triangle", "target": "sine", "form": "trig_ratio", "contextual": false,
+          "ask": "Use right-triangle TRIG RATIOS (sin/cos/tan) to find a side or a ratio; or use similarity to get a trig ratio. (fn 'triangle')", "recompute": "needs-deep-verify", "contract": "{}  // trig ratio → deep-verify" }
+      ]
+    },
+    "circles": {
+      "label": "Circles",
+      "attributes": ["circle_equation", "arc", "arc_length", "sector", "tangent", "inscribed_angle"],
+      "statements": ["GEO.B5.s2", "GEO.B7.s3"],
+      "cells": [
+        { "key": "geo_circle_equation", "band": "B5", "statementId": "GEO.B5.s2", "type": "mcq", "figure": "none", "rep": "coordinate", "target": "circle_equation", "form": "circle", "contextual": false,
+          "ask": "Write the EQUATION of a circle in the xy-plane given its center and a point on it ((x−h)²+(y−k)²=r²); choose the equation.", "recompute": "needs-deep-verify", "contract": "{}  // circle equation → deep-verify" },
+        { "key": "geo_arc_sector", "band": "B7", "statementId": "GEO.B7.s3", "type": "both", "figure": "opt", "rep": "circle", "target": "arc_length", "form": "circle", "contextual": false,
+          "ask": "Find an ARC LENGTH or SECTOR area from a central angle and radius (answer often a multiple of π). (fn 'circle')", "recompute": "needs-deep-verify", "contract": "{}  // arc/sector (π) → deep-verify" },
+        { "key": "geo_circle_angles", "band": "B7", "statementId": "GEO.B7.s3", "type": "mcq", "figure": "opt", "rep": "circle", "target": "inscribed_angle", "form": "circle", "contextual": false,
+          "ask": "Apply circle theorems — central vs INSCRIBED angle, a TANGENT-radius right angle, or a chord/arc relationship. (fn 'circle')", "recompute": "needs-deep-verify", "contract": "{}  // circle theorem → deep-verify" }
+      ]
+    }
+  }
+}

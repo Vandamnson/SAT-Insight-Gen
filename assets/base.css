@@ -1,0 +1,239 @@
+/* ============================================================================
+   Slate — layout & components. Refined-academic: serif headline, sans body,
+   mono numerals/labels; soft rounded cards; square A–D letter chips.
+   ========================================================================== */
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--paper);
+  font-feature-settings: "cv05" 1, "ss01" 1;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--ink); text-underline-offset: 2px; text-decoration-color: var(--tint-20); }
+a:hover { text-decoration-color: var(--ink); }
+
+/* ---- page shell ---------------------------------------------------------- */
+.wrap { max-width: 52rem; margin: 0 auto; padding: 2.4rem 1.5rem 6rem; }
+
+/* ---- mastheads ----------------------------------------------------------- */
+.masthead { border-bottom: 1px solid var(--rule); padding-bottom: 1.1rem; margin-bottom: 2.2rem; }
+.masthead .eyebrow {
+  font-family: var(--font-mono);
+  font-size: .72rem; letter-spacing: .18em; text-transform: uppercase;
+  color: var(--ink-3); margin: 0 0 .5rem;
+}
+.masthead h1 {
+  font-family: var(--font-display);
+  font-weight: 560; font-size: clamp(1.7rem, 4.2vw, 2.5rem);
+  line-height: 1.08; margin: 0; letter-spacing: -0.01em;
+}
+.masthead .sub { color: var(--ink-2); margin: .55rem 0 0; font-size: .98rem; }
+
+.toolbar {
+  display: flex; flex-wrap: wrap; gap: .65rem; align-items: center;
+  margin-top: 1.15rem;
+}
+.toolbar .meta { font-family: var(--font-mono); font-size: .78rem; color: var(--ink-2); letter-spacing: .02em; }
+.toolbar .spacer { flex: 1; }
+
+button.btn {
+  font-family: var(--font-mono); font-size: .78rem; letter-spacing: .04em;
+  color: var(--ink); background: var(--paper-2);
+  border: 1px solid var(--ink); border-radius: 999px;
+  padding: .42rem .95rem; cursor: pointer; transition: background .12s, color .12s;
+}
+button.btn:hover { background: var(--tint-10); }
+button.btn[aria-pressed="true"], button.btn.primary { background: var(--ink); color: var(--paper-2); }
+.score-chip {
+  font-family: var(--font-mono); font-size: .8rem; font-weight: 600;
+  border: 1px solid var(--ink); border-radius: 999px; padding: .4rem .9rem;
+  display: none;
+}
+.score-chip.show { display: inline-block; }
+
+/* ---- question card ------------------------------------------------------- */
+.qlist { display: flex; flex-direction: column; gap: 1.5rem; }
+
+.q {
+  background: var(--paper-2);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.6rem 1.7rem;
+  position: relative;
+  scroll-margin-top: 1rem;
+}
+.q-num {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-weight: 600; font-size: .95rem;
+  color: var(--paper-2); background: var(--ink);
+  width: 2rem; height: 2rem; border-radius: 8px;
+  display: inline-flex; align-items: center; justify-content: center;
+  margin-bottom: .9rem;
+}
+.q-tag {
+  font-family: var(--font-mono); font-size: .66rem; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--ink-3);
+  margin-left: .7rem; vertical-align: 2px;
+}
+.stem { font-size: 1.04rem; line-height: 1.62; }
+.stem p { margin: 0 0 .7rem; }
+.stem p:last-child { margin-bottom: 0; }
+
+/* displayed equation block inside a stem */
+.eqn { text-align: center; margin: .8rem 0; }
+.math-scroll { overflow-x: auto; overflow-y: hidden; }
+
+/* ---- figures ------------------------------------------------------------- */
+figure.q-fig { margin: 1.1rem auto; text-align: center; max-width: 460px; }
+figure.q-fig svg { max-width: 100%; height: auto; color: var(--ink); }
+figure.q-fig figcaption {
+  font-family: var(--font-mono); font-size: .72rem; color: var(--ink-3);
+  margin-top: .4rem; letter-spacing: .02em;
+}
+.fig-grid { stroke: var(--fig-grid); }
+.fig-axis { stroke: var(--fig-axis); }
+.fig-stroke { stroke: var(--fig-stroke); fill: none; }
+.fig-fill { fill: var(--fig-fill); }
+.fig-fill-strong { fill: var(--fig-fill-strong); }
+.fig-marker { fill: var(--fig-marker); stroke: var(--fig-marker); }
+.fig-open { fill: var(--paper-2); stroke: var(--fig-marker); }
+.fig-label { fill: var(--ink); font-family: var(--font-body); }
+.fig-muted { fill: var(--ink-3); }
+.fig-dash { stroke-dasharray: 4 3; }
+
+/* ---- data tables --------------------------------------------------------- */
+figure.q-fig table, table.data {
+  border-collapse: collapse; margin: .2rem auto; font-size: .94rem;
+  font-variant-numeric: tabular-nums;
+}
+table.data th, table.data td {
+  border: 1px solid var(--rule); padding: .34rem .8rem; text-align: center;
+}
+table.data th { font-family: var(--font-body); font-weight: 650; background: var(--tint-05); }
+table.data caption { caption-side: top; font-family: var(--font-mono); font-size: .72rem; color: var(--ink-3); margin-bottom: .35rem; }
+/* "ruled" minimalist variant used by xy / value tables */
+table.data.ruled th, table.data.ruled td { border: 0; border-bottom: 1px solid var(--tint-10); }
+table.data.ruled thead th { border-bottom: 1.5px solid var(--ink); }
+
+/* ---- multiple-choice options -------------------------------------------- */
+ol.opts { list-style: none; margin: 1.15rem 0 0; padding: 0; display: grid; gap: .6rem; }
+@media (min-width: 560px) { ol.opts.two-col { grid-template-columns: 1fr 1fr; } }
+
+.opt {
+  display: flex; align-items: center; gap: .8rem; width: 100%;
+  text-align: left; cursor: pointer;
+  background: var(--paper-2); border: 1px solid var(--rule);
+  border-radius: var(--radius-sm); padding: .7rem .85rem;
+  font: inherit; color: inherit; transition: background .1s, border-color .1s;
+  min-width: 0;
+}
+.opt:hover { background: var(--tint-05); }
+.opt .chip {
+  flex: 0 0 auto;
+  font-family: var(--font-mono); font-weight: 600; font-size: .85rem;
+  width: 1.7rem; height: 1.7rem; border-radius: 6px;
+  border: 1px solid var(--ink-3); background: var(--paper);
+  display: inline-flex; align-items: center; justify-content: center;
+  transition: background .1s, color .1s, border-color .1s;
+}
+.opt .otxt { min-width: 0; overflow-wrap: anywhere; }
+.opt .verdict { margin-left: auto; font-family: var(--font-mono); font-weight: 700; opacity: 0; }
+
+/* selected (pre-reveal) */
+.opt[aria-checked="true"] { border-color: var(--ink); background: var(--tint-10); }
+.opt[aria-checked="true"] .chip { background: var(--ink); color: var(--paper-2); border-color: var(--ink); }
+
+/* revealed states — encode by FILL / HATCH / glyph, never colour */
+.q.revealed .opt.correct { border-color: var(--ink); border-width: 1.5px; }
+.q.revealed .opt.correct .chip { background: var(--ink); color: var(--paper-2); border-color: var(--ink); }
+.q.revealed .opt.correct .verdict { opacity: 1; }
+.q.revealed .opt.correct .verdict::after { content: "✓"; }
+.q.revealed .opt.chosen-wrong {
+  border-color: var(--ink-3);
+  background-image: repeating-linear-gradient(45deg,
+      transparent, transparent 5px, var(--tint-10) 5px, var(--tint-10) 6px);
+}
+.q.revealed .opt.chosen-wrong .verdict { opacity: 1; }
+.q.revealed .opt.chosen-wrong .verdict::after { content: "✕"; }
+.q.revealed .opt { cursor: default; }
+
+/* ---- student-produced response (grid-in) -------------------------------- */
+.spr { margin-top: 1.15rem; }
+.spr label { display: block; font-family: var(--font-mono); font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-3); margin-bottom: .4rem; }
+.spr input {
+  font-family: var(--font-mono); font-size: 1.1rem; text-align: left;
+  width: min(15rem, 100%); padding: .55rem .8rem;
+  border: 1px solid var(--ink-3); border-radius: var(--radius-sm);
+  background: var(--paper-2); color: var(--ink);
+}
+.spr input:focus { outline: 2px solid var(--ink); outline-offset: 1px; border-color: var(--ink); }
+.spr .accept-note { font-family: var(--font-mono); font-size: .72rem; color: var(--ink-3); margin-top: .4rem; }
+.q.revealed .spr .reveal-answer { display: block; }
+.spr .reveal-answer { display: none; margin-top: .55rem; font-size: .95rem; }
+.spr .reveal-answer b { font-family: var(--font-mono); }
+.spr.right input { border-color: var(--ink); border-width: 1.5px; }
+.spr.wrong input { background-image: repeating-linear-gradient(45deg, transparent, transparent 5px, var(--tint-10) 5px, var(--tint-10) 6px); }
+
+/* ---- answer / solution disclosure on test page -------------------------- */
+.answer { margin-top: 1rem; padding-top: .8rem; border-top: 1px dashed var(--rule); font-size: .95rem; color: var(--ink-2); }
+.answer b { color: var(--ink); font-family: var(--font-mono); }
+.q:not(.revealed) .answer { display: none; }
+
+/* ---- solutions page ------------------------------------------------------ */
+.key { margin: 1.5rem 0 2.6rem; }
+.key h2, .worked h2 { font-family: var(--font-display); font-weight: 540; font-size: 1.3rem; margin: 0 0 .9rem; }
+ol.key-grid {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(7.5rem, 1fr)); gap: .35rem .9rem;
+  font-family: var(--font-mono); font-size: .9rem; font-variant-numeric: tabular-nums;
+}
+ol.key-grid li { border-bottom: 1px solid var(--tint-10); padding: .25rem .1rem; display: flex; gap: .6rem; }
+ol.key-grid li .kq { color: var(--ink-3); min-width: 1.6rem; }
+ol.key-grid li .ka { font-weight: 600; }
+
+.worked { display: flex; flex-direction: column; gap: 1.4rem; }
+.sol { border-top: 1px solid var(--rule); padding-top: 1.2rem; }
+.sol .q-num { width: 1.8rem; height: 1.8rem; font-size: .85rem; }
+.sol .restate { color: var(--ink-2); font-size: .98rem; margin: .2rem 0 .7rem; }
+.sol .work { font-size: 1rem; }
+.sol .work p { margin: .35rem 0; }
+.sol .work ol { margin: .4rem 0 .4rem 1.1rem; padding: 0; }
+.sol .work li { margin: .3rem 0; }
+.sol .final {
+  margin-top: .8rem; font-family: var(--font-mono); font-size: .92rem;
+  display: inline-block; border: 1px solid var(--ink); border-radius: 8px; padding: .35rem .8rem;
+}
+.sol .final b { font-weight: 700; }
+
+/* ---- index page ---------------------------------------------------------- */
+.test-grid { list-style: none; margin: 1.5rem 0 0; padding: 0;
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr)); gap: 1rem; }
+.test-grid li { }
+.test-card {
+  display: block; background: var(--paper-2); border: 1px solid var(--rule);
+  border-radius: var(--radius); padding: 1.1rem 1.2rem;
+  transition: border-color .12s, transform .12s;
+}
+.test-card:hover { border-color: var(--ink); transform: translateY(-1px); }
+.test-card .tnum { font-family: var(--font-mono); font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-3); display: block; }
+.test-card a.ttitle { display: block; font-family: var(--font-display); font-size: 1.45rem; font-weight: 540; margin: .2rem 0 .15rem; text-decoration: none; color: var(--ink); }
+.test-card a.ttitle:hover { text-decoration: underline; text-decoration-color: var(--tint-20); }
+.test-card .tmeta { font-size: .85rem; color: var(--ink-2); }
+.test-card .tlinks { margin-top: .8rem; padding-top: .7rem; border-top: 1px solid var(--tint-10); font-family: var(--font-mono); font-size: .75rem; display: flex; gap: 1rem; }
+.test-card .tlinks a { text-decoration: none; color: var(--ink-2); }
+.test-card .tlinks a:hover { color: var(--ink); text-decoration: underline; }
+
+.pagenav { margin-top: 2.6rem; padding-top: 1.2rem; border-top: 1px solid var(--rule);
+  display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: .8rem; }
+.pagenav a { text-decoration: none; }
+.pagenav a:hover { text-decoration: underline; }
+
+footer.foot { margin-top: 4rem; padding-top: 1.2rem; border-top: 1px solid var(--rule);
+  font-family: var(--font-mono); font-size: .72rem; color: var(--ink-3); }

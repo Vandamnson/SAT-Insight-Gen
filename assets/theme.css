@@ -1,0 +1,84 @@
+/* ============================================================================
+   Slate — monochromatic design tokens for the SAT Math Module 2 test set.
+   Single ink hue (deep slate-teal) + a tint/shade ramp derived only from it.
+   No second accent colour. Correctness is signalled by FILL / WEIGHT / HATCH —
+   never by hue — so the set is colourblind-safe and toner-safe.
+   ========================================================================== */
+
+/* ---- Vendored variable webfonts (offline-first) -------------------------- */
+@font-face {
+  font-family: "Newsreader VF";
+  src: url("./fonts/newsreader-var.woff2") format("woff2-variations");
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter VF";
+  src: url("./fonts/inter-var.woff2") format("woff2-variations");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "JetBrains Mono VF";
+  src: url("./fonts/jetbrains-mono-var.woff2") format("woff2-variations");
+  font-weight: 100 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* --- the single hue + tints/shades ------------------------------------- */
+  --ink:    #16343a;          /* deep slate-teal — primary text, axes, strokes */
+  --ink-2:  #3d5860;          /* ~72% — secondary text, captions               */
+  --ink-3:  #74898d;          /* ~45% — muted, "not drawn to scale"            */
+  --paper:  #f2f4f3;          /* page background                                */
+  --paper-2:#ffffff;          /* card surface                                   */
+
+  --tint-05:#e7ecea;          /* 5%  ink over paper — hovers, faint fills       */
+  --tint-10:#d6dedc;          /* 10% — gridlines, chips                         */
+  --tint-20:#b4c3c0;          /* 20% — rules, selected fill, bars               */
+  --tint-40:#7a948f;          /* 40% — strong bar fill                          */
+
+  --rule:   #c4cfcd;          /* hairline borders                              */
+  --selected-fill: var(--tint-20);
+  --selected-edge: var(--ink);
+
+  /* --- type ramp --------------------------------------------------------- */
+  --font-display: "Newsreader VF", Georgia, "Times New Roman", serif;
+  --font-body:    "Inter VF", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono:    "JetBrains Mono VF", ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+  /* --- figure tokens (consumed by figures.js via classes) ---------------- */
+  --fig-stroke: var(--ink);
+  --fig-grid:   var(--tint-10);
+  --fig-axis:   var(--ink);
+  --fig-fill:   var(--tint-20);
+  --fig-fill-strong: var(--tint-40);
+  --fig-marker: var(--ink);
+  --line-w: 1.4;
+  --tick-len: 4;
+
+  /* --- geometry ---------------------------------------------------------- */
+  --radius: 14px;
+  --radius-sm: 9px;
+  --measure: 42rem;           /* comfortable reading width */
+}
+
+/* base element colours */
+html { background: var(--paper); color: var(--ink); }
+::selection { background: var(--tint-20); color: var(--ink); }
+
+/* KaTeX — force every atom, fraction bar, sqrt & rule to the ink hue */
+.katex { color: var(--ink); }
+.katex .frac-line,
+.katex .overline .overline-line,
+.katex .underline .underline-line,
+.katex .hline,
+.katex .sqrt > .root,
+.katex .sqrt .sqrt-line,
+.katex .rule,
+.katex .mord.overline,
+.katex .accent .accent-body { border-color: var(--ink); color: var(--ink); }
+.katex-display { margin: .55em 0; }

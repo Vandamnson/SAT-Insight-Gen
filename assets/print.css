@@ -1,0 +1,98 @@
+/* ============================================================================
+   Print — degrade Slate to toner-light: ink → near-black, tinted fills → none
+   or hairline, no heavy backgrounds, controlled page breaks. Interactive chrome
+   is suppressed so a printed test reads as a blank practice paper.
+   ========================================================================== */
+@media print {
+  @page { size: Letter portrait; margin: 0.45in; }
+
+  :root {
+    --ink:    #111;
+    --ink-2:  #333;
+    --ink-3:  #555;
+    --paper:  #fff;
+    --paper-2:#fff;
+    --tint-05:#fff;
+    --tint-10:#fff;
+    --tint-20:#fff;
+    --tint-40:#fff;
+    --rule:   #111;
+    --fig-grid: #bbb;
+    --fig-fill: #fff;
+    --fig-fill-strong: #fff;
+  }
+
+  html, body { background: #fff; }
+  .wrap { max-width: 100%; padding: 0; }
+
+  /* hide interactive chrome */
+  .toolbar, button.btn, .score-chip, .answer { display: none !important; }
+
+  /* cards become plain ruled blocks */
+  .q {
+    border: 0; border-top: 1px solid #111; border-radius: 0;
+    padding: .55rem 0 .3rem; break-inside: avoid;
+  }
+  .q:first-child { border-top: 0; }
+  .q-num { background: #fff; color: #111; border: 1.2px solid #111; }
+
+  /* options: blank practice paper — no selected/revealed highlight */
+  .opt, .opt:hover { background: #fff !important; border: 1px solid #555; background-image: none !important; }
+  .opt .chip { background: #fff !important; color: #111 !important; border-color: #555 !important; }
+  .opt .verdict { display: none !important; }
+  ol.opts { break-inside: avoid; }
+
+  /* grid-in becomes an empty ruled box */
+  .spr input { background: #fff !important; border: 1px solid #555 !important; background-image: none !important; }
+  .spr .reveal-answer { display: none !important; }
+
+  /* figures: flatten fills to hairline outlines; keep strokes thin & dark */
+  figure.q-fig { break-inside: avoid; }
+  .fig-fill, .fig-fill-strong { fill: none !important; stroke: #111 !important; stroke-width: .5 !important; }
+  .fig-marker { fill: #111 !important; stroke: #111 !important; }
+  .fig-open { fill: #fff !important; stroke: #111 !important; }
+  .fig-stroke, .fig-axis { stroke: #111 !important; }
+  figure.q-fig svg { color: #111; }
+
+  table.data th { background: #fff !important; }
+
+  /* page-break discipline */
+  .katex-display { break-inside: avoid; }
+  .sol { break-inside: avoid; }
+  .q-num, .stem { break-after: avoid; }
+  .masthead { break-after: avoid; }
+  .pagenav, footer.foot { display: none; }
+
+  a { color: #111; text-decoration: none; }
+
+  /* ===== compact TWO-COLUMN booklet — fits ~2x the questions per sheet ===== */
+  body { font-size: 9.6pt; line-height: 1.38; }
+  .masthead { padding-bottom: .35rem; margin-bottom: .45rem; }
+  .masthead h1 { font-size: 15pt; }
+  .masthead .eyebrow { font-size: 7pt; margin-bottom: .15rem; }
+  .masthead .sub { font-size: 8.5pt; margin-top: .15rem; }
+
+  /* questions flow down the left half, then the right half, split by a rule */
+  .qlist { column-count: 2; column-gap: 0.34in; column-rule: 0.5pt solid #aaa; display: block; }
+  .q { break-inside: avoid; padding: .3rem 0 .35rem; margin: 0; border-top-color: #ccc; }
+  .q-num { width: 1.45rem; height: 1.45rem; font-size: .76rem; margin-bottom: .35rem; }
+  .q-tag { display: none; }                     /* drop the domain chip to save width */
+  .stem { font-size: 9.6pt; line-height: 1.4; }
+  .stem p { margin: 0 0 .3rem; }
+  .eqn { margin: .45rem 0; }
+
+  /* options stack single-column inside each print column */
+  ol.opts, ol.opts.two-col { grid-template-columns: 1fr !important; gap: .2rem; margin-top: .45rem; }
+  .opt { padding: .28rem .42rem; gap: .45rem; border-radius: 4px; }
+  .opt .chip { width: 1.3rem; height: 1.3rem; font-size: .7rem; }
+  .spr { margin-top: .5rem; }
+  .spr input { width: 100%; padding: .35rem .45rem; }
+  .spr label { font-size: 7pt; }
+  .spr .accept-note, .spr .reveal-answer { display: none !important; }
+
+  /* keep figures within a single column */
+  figure.q-fig { margin: .45rem auto; max-width: 100%; }
+  figure.q-fig svg { max-width: 100%; max-height: 2.4in; }
+  figure.q-fig figcaption { font-size: 7.5pt; margin-top: .2rem; }
+  table.data { font-size: 8.5pt; }
+}

@@ -1,0 +1,2880 @@
+{
+  "number": 71,
+  "title": "Variety grid demo — advanced (one item per cell)",
+  "questions": [
+    {
+      "id": 1,
+      "program": "SAT",
+      "domain": "advanced_math",
+      "band": "B2",
+      "target_band": "B1",
+      "statementId": "ADV.B1.s1",
+      "skill": "adv_yint_from_graph",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The graph of the quadratic function "
+        },
+        {
+          "t": "math",
+          "v": "f"
+        },
+        {
+          "t": "text",
+          "v": " is shown in the "
+        },
+        {
+          "t": "math",
+          "v": "xy"
+        },
+        {
+          "t": "text",
+          "v": "-plane. What is the "
+        },
+        {
+          "t": "math",
+          "v": "y"
+        },
+        {
+          "t": "text",
+          "v": "-coordinate of the "
+        },
+        {
+          "t": "math",
+          "v": "y"
+        },
+        {
+          "t": "text",
+          "v": "-intercept of the graph of "
+        },
+        {
+          "t": "math",
+          "v": "f"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "The "
+        },
+        {
+          "t": "math",
+          "v": "y"
+        },
+        {
+          "t": "text",
+          "v": "-intercept is the point where the graph crosses the "
+        },
+        {
+          "t": "math",
+          "v": "y"
+        },
+        {
+          "t": "text",
+          "v": "-axis, which happens when "
+        },
+        {
+          "t": "math",
+          "v": "x = 0"
+        },
+        {
+          "t": "text",
+          "v": ". Reading the graph, the curve crosses the "
+        },
+        {
+          "t": "math",
+          "v": "y"
+        },
+        {
+          "t": "text",
+          "v": "-axis at "
+        },
+        {
+          "t": "math",
+          "v": "y = 3"
+        },
+        {
+          "t": "text",
+          "v": ". So the "
+        },
+        {
+          "t": "math",
+          "v": "y"
+        },
+        {
+          "t": "text",
+          "v": "-coordinate of the "
+        },
+        {
+          "t": "math",
+          "v": "y"
+        },
+        {
+          "t": "text",
+          "v": "-intercept is "
+        },
+        {
+          "t": "math",
+          "v": "3"
+        },
+        {
+          "t": "text",
+          "v": "."
+        }
+      ],
+      "answer": {
+        "accept": [
+          "3"
+        ],
+        "tol": 0
+      },
+      "figure": {
+        "fn": "coordPlane",
+        "spec": {
+          "xRange": [
+            -5,
+            5
+          ],
+          "yRange": [
+            -5,
+            5
+          ],
+          "xStep": 1,
+          "yStep": 1,
+          "origin": true,
+          "curves": [
+            {
+              "type": "quadratic",
+              "a": -1,
+              "b": 2,
+              "c": 3
+            }
+          ]
+        },
+        "caption": "The graph of the quadratic function f in the xy-plane."
+      },
+      "params": {
+        "a": -1,
+        "b": 2,
+        "c": 3,
+        "target": "y_intercept"
+      },
+      "tier": "band-targeted",
+      "cellId": "b9c5140d73a338ee",
+      "difficulty": {
+        "scalePoint": 411,
+        "band": "B2",
+        "se_scale": 45,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~411 has ~67% chance correct (Band 2).",
+        "signals": {
+          "judge": {
+            "scale": 411,
+            "se": 45,
+            "perBand": {
+              "B2": 0.62,
+              "B3": 0.74,
+              "B4": 0.84,
+              "B5": 0.9,
+              "B6": 0.94,
+              "B7": 0.97
+            },
+            "rp50Scale": 350,
+            "n": 1
+          }
+        }
+      },
+      "verify": {
+        "leash": "pass",
+        "deepVerdict": "PASS",
+        "independentAnswer": "3",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 2,
+      "program": "SAT",
+      "domain": "advanced_math",
+      "band": "B2",
+      "target_band": "B1",
+      "statementId": "ADV.B1.s2",
+      "skill": "adv_combine_like_terms",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "Which of the following is equivalent to "
+        },
+        {
+          "t": "math",
+          "v": "(4x^2 + 3x) + (2x^2 + 5x)"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "Group the like terms together — the "
+        },
+        {
+          "t": "math",
+          "v": "x^2"
+        },
+        {
+          "t": "text",
+          "v": " terms with the "
+        },
+        {
+          "t": "math",
+          "v": "x^2"
+        },
+        {
+          "t": "text",
+          "v": " terms, and the "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": " terms with the "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": " terms:"
+        },
+        {
+          "t": "mathblock",
+          "v": "(4x^2 + 2x^2) + (3x + 5x)"
+        },
+        {
+          "t": "text",
+          "v": "Add the coefficients of each pair of like terms: "
+        },
+        {
+          "t": "math",
+          "v": "4 + 2 = 6"
+        },
+        {
+          "t": "text",
+          "v": " gives "
+        },
+        {
+          "t": "math",
+          "v": "6x^2"
+        },
+        {
+          "t": "text",
+          "v": ", and "
+        },
+        {
+          "t": "math",
+          "v": "3 + 5 = 8"
+        },
+        {
+          "t": "text",
+          "v": " gives "
+        },
+        {
+          "t": "math",
+          "v": "8x"
+        },
+        {
+          "t": "text",
+          "v": ". So the expression is equivalent to "
+        },
+        {
+          "t": "math",
+          "v": "6x^2 + 8x"
+        },
+        {
+          "t": "text",
+          "v": ", which is choice A."
+        }
+      ],
+      "answer": {
+        "correct": "A"
+      },
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "6x^2 + 8x"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "8x^2 + 6x"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "6x^2 + 15x"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "14x^2"
+            }
+          ]
+        }
+      ],
+      "figure": null,
+      "params": {
+        "original": [
+          6,
+          8,
+          0
+        ],
+        "claimed": [
+          6,
+          8,
+          0
+        ],
+        "sample_xs": [
+          1,
+          2,
+          3
+        ]
+      },
+      "tier": "band-targeted",
+      "cellId": "c54b05b7d97304ff",
+      "difficulty": {
+        "scalePoint": 406,
+        "band": "B2",
+        "se_scale": 45,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~406 has ~67% chance correct (Band 2).",
+        "signals": {
+          "judge": {
+            "scale": 406,
+            "se": 45,
+            "perBand": {
+              "B2": 0.62,
+              "B3": 0.78,
+              "B4": 0.88,
+              "B5": 0.93,
+              "B6": 0.96,
+              "B7": 0.98
+            },
+            "rp50Scale": 350,
+            "n": 1
+          }
+        }
+      },
+      "verify": {
+        "leash": "deferred-to-deep-verify",
+        "deepVerdict": "PASS",
+        "independentAnswer": "A",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 3,
+      "program": "SAT",
+      "domain": "advanced_math",
+      "band": "B1",
+      "target_band": "B2",
+      "statementId": "ADV.B2.s1",
+      "skill": "adv_feature_from_graph",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The graph of a quadratic function "
+        },
+        {
+          "t": "math",
+          "v": "f"
+        },
+        {
+          "t": "text",
+          "v": " is shown in the "
+        },
+        {
+          "t": "math",
+          "v": "xy"
+        },
+        {
+          "t": "text",
+          "v": "-plane, with its lowest point marked. What are the coordinates of the vertex of the graph of "
+        },
+        {
+          "t": "math",
+          "v": "f"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "The parabola opens upward, so the vertex is the lowest point on the curve. Reading the coordinates of the marked lowest point from the grid gives "
+        },
+        {
+          "t": "math",
+          "v": "(1, -4)"
+        },
+        {
+          "t": "text",
+          "v": ". As a check, the vertex "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": "-coordinate is "
+        },
+        {
+          "t": "math",
+          "v": "x = -\\frac{b}{2a} = -\\frac{-2}{2(1)} = 1"
+        },
+        {
+          "t": "text",
+          "v": ", and the "
+        },
+        {
+          "t": "math",
+          "v": "y"
+        },
+        {
+          "t": "text",
+          "v": "-value is "
+        },
+        {
+          "t": "math",
+          "v": "f(1) = (1)^2 - 2(1) - 3 = -4"
+        },
+        {
+          "t": "text",
+          "v": ", so the vertex is "
+        },
+        {
+          "t": "math",
+          "v": "(1, -4)"
+        },
+        {
+          "t": "text",
+          "v": "."
+        }
+      ],
+      "answer": {
+        "correct": "A"
+      },
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "(1, -4)"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "(0, -3)"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "(-1, 0)"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "(1, -3)"
+            }
+          ]
+        }
+      ],
+      "figure": {
+        "fn": "coordPlane",
+        "spec": {
+          "xRange": [
+            -3,
+            5
+          ],
+          "yRange": [
+            -5,
+            6
+          ],
+          "xStep": 1,
+          "yStep": 1,
+          "origin": true,
+          "curves": [
+            {
+              "type": "quadratic",
+              "a": 1,
+              "b": -2,
+              "c": -3
+            }
+          ],
+          "points": [
+            {
+              "at": [
+                1,
+                -4
+              ],
+              "label": "V"
+            }
+          ]
+        },
+        "caption": "The graph of the quadratic function f, with its lowest point V marked."
+      },
+      "params": {
+        "a": 1,
+        "b": -2,
+        "c": -3
+      },
+      "tier": "band-targeted",
+      "cellId": "e65afb54a9974be8",
+      "difficulty": {
+        "scalePoint": 350,
+        "band": "B1",
+        "se_scale": 45,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~350 has ~67% chance correct (Band 1).",
+        "signals": {
+          "judge": {
+            "scale": 350,
+            "se": 45,
+            "perBand": {
+              "B2": 0.7,
+              "B3": 0.8,
+              "B4": 0.88,
+              "B5": 0.93,
+              "B6": 0.96,
+              "B7": 0.98
+            },
+            "rp50Scale": 350,
+            "n": 1
+          }
+        }
+      },
+      "verify": {
+        "leash": "deferred-to-deep-verify",
+        "deepVerdict": "PASS",
+        "independentAnswer": "A",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 4,
+      "program": "SAT",
+      "domain": "advanced_math",
+      "band": "B3",
+      "target_band": "B2",
+      "statementId": "ADV.B2.s2",
+      "skill": "adv_factor_gcf",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "Which of the following expressions is equivalent to "
+        },
+        {
+          "t": "math",
+          "v": "12x^2 + 18x"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "Find the greatest common factor (GCF) of the two terms "
+        },
+        {
+          "t": "math",
+          "v": "12x^2"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "18x"
+        },
+        {
+          "t": "text",
+          "v": ". The GCF of "
+        },
+        {
+          "t": "math",
+          "v": "12"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "18"
+        },
+        {
+          "t": "text",
+          "v": " is "
+        },
+        {
+          "t": "math",
+          "v": "6"
+        },
+        {
+          "t": "text",
+          "v": ", and each term contains a factor of "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": ", so the GCF is "
+        },
+        {
+          "t": "math",
+          "v": "6x"
+        },
+        {
+          "t": "text",
+          "v": ". Dividing each term by "
+        },
+        {
+          "t": "math",
+          "v": "6x"
+        },
+        {
+          "t": "text",
+          "v": " gives "
+        },
+        {
+          "t": "math",
+          "v": "\\frac{12x^2}{6x} = 2x"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "\\frac{18x}{6x} = 3"
+        },
+        {
+          "t": "text",
+          "v": ". Therefore "
+        },
+        {
+          "t": "math",
+          "v": "12x^2 + 18x = 6x(2x + 3)"
+        },
+        {
+          "t": "text",
+          "v": "."
+        }
+      ],
+      "answer": {
+        "correct": "C"
+      },
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "6x(2x + 18)"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "3x(2x + 3)"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "6x(2x + 3)"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "6x(x + 3)"
+            }
+          ]
+        }
+      ],
+      "figure": null,
+      "params": {
+        "original": [
+          12,
+          18,
+          0
+        ],
+        "claimed": [
+          12,
+          18,
+          0
+        ],
+        "sample_xs": [
+          1,
+          2,
+          3
+        ]
+      },
+      "tier": "band-targeted",
+      "cellId": "1c908915cc2df305",
+      "difficulty": {
+        "scalePoint": 436,
+        "band": "B3",
+        "se_scale": 45,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~436 has ~67% chance correct (Band 3).",
+        "signals": {
+          "judge": {
+            "scale": 436,
+            "se": 45,
+            "perBand": {
+              "B2": 0.55,
+              "B3": 0.68,
+              "B4": 0.8,
+              "B5": 0.88,
+              "B6": 0.93,
+              "B7": 0.97
+            },
+            "rp50Scale": 350,
+            "n": 1
+          }
+        }
+      },
+      "verify": {
+        "leash": "deferred-to-deep-verify",
+        "deepVerdict": "PASS",
+        "independentAnswer": "C",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 5,
+      "program": "SAT",
+      "domain": "advanced_math",
+      "band": "B3",
+      "target_band": "B3",
+      "statementId": "ADV.B3.s1",
+      "skill": "adv_quad_factored_root",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "In the equation shown, "
+        },
+        {
+          "t": "math",
+          "v": "4(x-6)(x+1)=0"
+        },
+        {
+          "t": "text",
+          "v": ", what is the greatest value of "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": " that satisfies the equation?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "The equation is written as a product of factors equal to zero, so apply the zero-product property: at least one factor must be "
+        },
+        {
+          "t": "math",
+          "v": "0"
+        },
+        {
+          "t": "text",
+          "v": ". This gives "
+        },
+        {
+          "t": "math",
+          "v": "x-6=0"
+        },
+        {
+          "t": "text",
+          "v": " or "
+        },
+        {
+          "t": "math",
+          "v": "x+1=0"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "text",
+          "v": " Solving each gives the two solutions "
+        },
+        {
+          "t": "math",
+          "v": "x=6"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "x=-1"
+        },
+        {
+          "t": "text",
+          "v": ". The greater of these is "
+        },
+        {
+          "t": "math",
+          "v": "x=6"
+        },
+        {
+          "t": "text",
+          "v": "."
+        }
+      ],
+      "answer": {
+        "accept": [
+          "6"
+        ],
+        "tol": 0
+      },
+      "figure": null,
+      "params": {
+        "a": 4,
+        "b": -20,
+        "c": -24,
+        "root_select": "plus"
+      },
+      "tier": "band-targeted",
+      "cellId": "369efdd31e7ed341",
+      "difficulty": {
+        "scalePoint": 444,
+        "band": "B3",
+        "se_scale": 45,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~444 has ~67% chance correct (Band 3).",
+        "signals": {
+          "judge": {
+            "scale": 444,
+            "se": 45,
+            "perBand": {
+              "B2": 0.42,
+              "B3": 0.66,
+              "B4": 0.82,
+              "B5": 0.9,
+              "B6": 0.95,
+              "B7": 0.98
+            },
+            "rp50Scale": 407,
+            "n": 1
+          }
+        }
+      },
+      "verify": {
+        "leash": "pass",
+        "deepVerdict": "PASS",
+        "independentAnswer": "6",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 6,
+      "program": "SAT",
+      "domain": "advanced_math",
+      "band": "B4",
+      "target_band": "B3",
+      "statementId": "ADV.B3.s1",
+      "skill": "adv_solve_absvalue",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "What are all values of "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": " that satisfy the equation "
+        },
+        {
+          "t": "math",
+          "v": "|2x - 6| = 10"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "An absolute value equals a positive number when the expression inside is either that number or its opposite, so "
+        },
+        {
+          "t": "math",
+          "v": "|2x - 6| = 10"
+        },
+        {
+          "t": "text",
+          "v": " splits into two cases: "
+        },
+        {
+          "t": "math",
+          "v": "2x - 6 = 10"
+        },
+        {
+          "t": "text",
+          "v": " or "
+        },
+        {
+          "t": "math",
+          "v": "2x - 6 = -10"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "mathblock",
+          "v": "2x - 6 = 10 \\;\\Rightarrow\\; 2x = 16 \\;\\Rightarrow\\; x = 8"
+        },
+        {
+          "t": "mathblock",
+          "v": "2x - 6 = -10 \\;\\Rightarrow\\; 2x = -4 \\;\\Rightarrow\\; x = -2"
+        },
+        {
+          "t": "text",
+          "v": "Both values check in the original equation, so the solutions are "
+        },
+        {
+          "t": "math",
+          "v": "x = -2"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "x = 8"
+        },
+        {
+          "t": "text",
+          "v": "."
+        }
+      ],
+      "answer": {
+        "correct": "A"
+      },
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "x = -2 \\text{ and } x = 8"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "x = 2 \\text{ and } x = 8"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "x = -8 \\text{ and } x = -2"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "x = -8 \\text{ and } x = 8"
+            }
+          ]
+        }
+      ],
+      "figure": null,
+      "params": {
+        "a": 2,
+        "b": -6,
+        "c": 10
+      },
+      "tier": "band-targeted",
+      "cellId": "9f52d95df31b5910",
+      "difficulty": {
+        "scalePoint": 494,
+        "band": "B4",
+        "se_scale": 45,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~494 has ~67% chance correct (Band 4).",
+        "signals": {
+          "judge": {
+            "scale": 494,
+            "se": 45,
+            "perBand": {
+              "B2": 0.3,
+              "B3": 0.52,
+              "B4": 0.7,
+              "B5": 0.82,
+              "B6": 0.91,
+              "B7": 0.97
+            },
+            "rp50Scale": 435,
+            "n": 1
+          }
+        }
+      },
+      "verify": {
+        "leash": "deferred-to-deep-verify",
+        "deepVerdict": "PASS",
+        "independentAnswer": "A",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 7,
+      "program": "SAT",
+      "domain": "advanced_math",
+      "band": "B4",
+      "target_band": "B3",
+      "statementId": "ADV.B3.s2",
+      "skill": "adv_poly_sum",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The functions "
+        },
+        {
+          "t": "math",
+          "v": "f"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "g"
+        },
+        {
+          "t": "text",
+          "v": " are defined by "
+        },
+        {
+          "t": "math",
+          "v": "f(x) = 3x^2 + 2x - 5"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "g(x) = 2x^2 - 7x + 8"
+        },
+        {
+          "t": "text",
+          "v": ". The function "
+        },
+        {
+          "t": "math",
+          "v": "h"
+        },
+        {
+          "t": "text",
+          "v": " is defined by "
+        },
+        {
+          "t": "math",
+          "v": "h(x) = f(x) + g(x)"
+        },
+        {
+          "t": "text",
+          "v": ". What is the value of "
+        },
+        {
+          "t": "math",
+          "v": "h(2)"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "First find the sum "
+        },
+        {
+          "t": "math",
+          "v": "h(x) = f(x) + g(x)"
+        },
+        {
+          "t": "text",
+          "v": " by combining like terms:"
+        },
+        {
+          "t": "mathblock",
+          "v": "h(x) = (3x^2 + 2x - 5) + (2x^2 - 7x + 8) = 5x^2 - 5x + 3"
+        },
+        {
+          "t": "text",
+          "v": "Then substitute "
+        },
+        {
+          "t": "math",
+          "v": "x = 2"
+        },
+        {
+          "t": "text",
+          "v": " into the simplified expression:"
+        },
+        {
+          "t": "mathblock",
+          "v": "h(2) = 5(2)^2 - 5(2) + 3 = 20 - 10 + 3 = 13"
+        },
+        {
+          "t": "text",
+          "v": "The value of "
+        },
+        {
+          "t": "math",
+          "v": "h(2)"
+        },
+        {
+          "t": "text",
+          "v": " is 13."
+        }
+      ],
+      "answer": {
+        "accept": [
+          "13"
+        ],
+        "tol": 0
+      },
+      "figure": null,
+      "params": {
+        "original": [
+          3,
+          2,
+          -5
+        ],
+        "claimed": [
+          2,
+          -7,
+          8
+        ],
+        "sample_xs": [
+          2
+        ]
+      },
+      "tier": "band-targeted",
+      "cellId": "d24b4a92f8c38d4a",
+      "difficulty": {
+        "scalePoint": 483,
+        "band": "B4",
+        "se_scale": 45,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~483 has ~67% chance correct (Band 4).",
+        "signals": {
+          "judge": {
+            "scale": 483,
+            "se": 45,
+            "perBand": {
+              "B2": 0.34,
+              "B3": 0.55,
+              "B4": 0.73,
+              "B5": 0.85,
+              "B6": 0.92,
+              "B7": 0.97
+            },
+            "rp50Scale": 428,
+            "n": 1
+          }
+        }
+      },
+      "verify": {
+        "leash": "deferred-to-deep-verify",
+        "deepVerdict": "PASS",
+        "independentAnswer": "13",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 8,
+      "program": "SAT",
+      "domain": "advanced_math",
+      "band": "B4",
+      "target_band": "B3",
+      "statementId": "ADV.B3.s2",
+      "skill": "adv_solve_for_var",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The volume "
+        },
+        {
+          "t": "math",
+          "v": "V"
+        },
+        {
+          "t": "text",
+          "v": " of a right circular cone with base radius "
+        },
+        {
+          "t": "math",
+          "v": "r"
+        },
+        {
+          "t": "text",
+          "v": " and height "
+        },
+        {
+          "t": "math",
+          "v": "h"
+        },
+        {
+          "t": "text",
+          "v": " is given by the formula "
+        },
+        {
+          "t": "math",
+          "v": "V = \\frac{1}{3}\\pi r^2 h"
+        },
+        {
+          "t": "text",
+          "v": ". Which of the following correctly expresses "
+        },
+        {
+          "t": "math",
+          "v": "h"
+        },
+        {
+          "t": "text",
+          "v": " in terms of "
+        },
+        {
+          "t": "math",
+          "v": "V"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "r"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "Start with the formula "
+        },
+        {
+          "t": "math",
+          "v": "V = \\frac{1}{3}\\pi r^2 h"
+        },
+        {
+          "t": "text",
+          "v": ". Multiply both sides by 3 to clear the fraction:"
+        },
+        {
+          "t": "mathblock",
+          "v": "3V = \\pi r^2 h"
+        },
+        {
+          "t": "text",
+          "v": "Now divide both sides by "
+        },
+        {
+          "t": "math",
+          "v": "\\pi r^2"
+        },
+        {
+          "t": "text",
+          "v": " to isolate "
+        },
+        {
+          "t": "math",
+          "v": "h"
+        },
+        {
+          "t": "text",
+          "v": ":"
+        },
+        {
+          "t": "mathblock",
+          "v": "h = \\frac{3V}{\\pi r^2}"
+        },
+        {
+          "t": "text",
+          "v": " This matches choice A. (Choice B divides by 3 instead of multiplying; choice C drops the square on "
+        },
+        {
+          "t": "math",
+          "v": "r"
+        },
+        {
+          "t": "text",
+          "v": "; choice D omits the factor of 3.)"
+        }
+      ],
+      "answer": {
+        "correct": "A"
+      },
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "h = \\frac{3V}{\\pi r^2}"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "h = \\frac{V}{3\\pi r^2}"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "h = \\frac{3V}{\\pi r}"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "h = \\frac{V}{\\pi r^2}"
+            }
+          ]
+        }
+      ],
+      "figure": null,
+      "params": {},
+      "tier": "band-targeted",
+      "cellId": "3cea7798ee50b97a",
+      "difficulty": {
+        "scalePoint": 546,
+        "band": "B4",
+        "se_scale": 45,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~546 has ~67% chance correct (Band 4).",
+        "signals": {
+          "judge": {
+            "scale": 546,
+            "se": 45,
+            "perBand": {
+              "B2": 0.34,
+              "B3": 0.46,
+              "B4": 0.6,
+              "B5": 0.72,
+              "B6": 0.83,
+              "B7": 0.92
+            },
+            "rp50Scale": 459,
+            "n": 1
+          }
+        }
+      },
+      "verify": {
+        "leash": "deferred-to-deep-verify",
+        "deepVerdict": "PASS",
+        "independentAnswer": "A",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 9,
+      "program": "SAT",
+      "domain": "advanced_math",
+      "band": "B5",
+      "target_band": "B4",
+      "statementId": "ADV.B4.s2",
+      "skill": "adv_quad_solve_std",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The function "
+        },
+        {
+          "t": "math",
+          "v": "f"
+        },
+        {
+          "t": "text",
+          "v": " is defined by "
+        },
+        {
+          "t": "math",
+          "v": "f(x) = 2x^2 - 5x - 12"
+        },
+        {
+          "t": "text",
+          "v": ". What is the positive value of "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": " for which "
+        },
+        {
+          "t": "math",
+          "v": "f(x) = 0"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "To find where the output is zero, set the function equal to "
+        },
+        {
+          "t": "math",
+          "v": "0"
+        },
+        {
+          "t": "text",
+          "v": " and factor the quadratic:"
+        },
+        {
+          "t": "mathblock",
+          "v": "2x^2 - 5x - 12 = 0"
+        },
+        {
+          "t": "mathblock",
+          "v": "(2x + 3)(x - 4) = 0"
+        },
+        {
+          "t": "text",
+          "v": "Set each factor equal to zero. From "
+        },
+        {
+          "t": "math",
+          "v": "2x + 3 = 0"
+        },
+        {
+          "t": "text",
+          "v": " you get "
+        },
+        {
+          "t": "math",
+          "v": "x = -\\tfrac{3}{2}"
+        },
+        {
+          "t": "text",
+          "v": ", and from "
+        },
+        {
+          "t": "math",
+          "v": "x - 4 = 0"
+        },
+        {
+          "t": "text",
+          "v": " you get "
+        },
+        {
+          "t": "math",
+          "v": "x = 4"
+        },
+        {
+          "t": "text",
+          "v": ". The only positive solution is "
+        },
+        {
+          "t": "math",
+          "v": "x = 4"
+        },
+        {
+          "t": "text",
+          "v": "."
+        }
+      ],
+      "answer": {
+        "accept": [
+          "4"
+        ],
+        "tol": 0
+      },
+      "figure": null,
+      "params": {
+        "a": 2,
+        "b": -5,
+        "c": -12,
+        "root_select": "plus"
+      },
+      "tier": "band-targeted",
+      "cellId": "3fc982def3e482ad",
+      "difficulty": {
+        "scalePoint": 579,
+        "band": "B5",
+        "se_scale": 45,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~579 has ~67% chance correct (Band 5).",
+        "signals": {
+          "judge": {
+            "scale": 579,
+            "se": 45,
+            "perBand": {
+              "B2": 0.05,
+              "B3": 0.12,
+              "B4": 0.45,
+              "B5": 0.66,
+              "B6": 0.83,
+              "B7": 0.93
+            },
+            "rp50Scale": 522,
+            "n": 1
+          }
+        }
+      },
+      "verify": {
+        "leash": "pass",
+        "deepVerdict": "PASS",
+        "independentAnswer": "4",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 10,
+      "program": "SAT",
+      "domain": "advanced_math",
+      "band": "B5",
+      "target_band": "B4",
+      "statementId": "ADV.B4.s1",
+      "skill": "adv_quad_vertex",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "A sports analyst models the number of points "
+        },
+        {
+          "t": "math",
+          "v": "P"
+        },
+        {
+          "t": "text",
+          "v": " that a basketball player scores in game "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": " during a 10-game stretch of the season with the equation"
+        },
+        {
+          "t": "mathblock",
+          "v": "P = -2(x-5)^2 + 61."
+        },
+        {
+          "t": "text",
+          "v": "According to this model, what is the maximum number of points the player scores in a game during this stretch?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "The equation is written in vertex form "
+        },
+        {
+          "t": "math",
+          "v": "P = a(x-h)^2 + k"
+        },
+        {
+          "t": "text",
+          "v": ", where the vertex is "
+        },
+        {
+          "t": "math",
+          "v": "(h, k)"
+        },
+        {
+          "t": "text",
+          "v": ". Here "
+        },
+        {
+          "t": "math",
+          "v": "a = -2"
+        },
+        {
+          "t": "text",
+          "v": " is negative, so the parabola opens downward and the vertex is a maximum point."
+        },
+        {
+          "t": "text",
+          "v": " The maximum value of "
+        },
+        {
+          "t": "math",
+          "v": "P"
+        },
+        {
+          "t": "text",
+          "v": " is the constant added at the end, "
+        },
+        {
+          "t": "math",
+          "v": "k = 61"
+        },
+        {
+          "t": "text",
+          "v": ", which occurs at "
+        },
+        {
+          "t": "math",
+          "v": "x = 5"
+        },
+        {
+          "t": "text",
+          "v": ". Therefore the maximum number of points predicted is 61."
+        }
+      ],
+      "answer": {
+        "accept": [
+          "61"
+        ],
+        "tol": 0
+      },
+      "figure": null,
+      "params": {
+        "a": -2,
+        "b": 20,
+        "c": 11,
+        "target": "vertex_y"
+      },
+      "tier": "band-targeted",
+      "cellId": "be1ec1ab1e9c5db2",
+      "difficulty": {
+        "scalePoint": 579,
+        "band": "B5",
+        "se_scale": 45,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~579 has ~67% chance correct (Band 5).",
+        "signals": {
+          "judge": {
+            "scale": 579,
+            "se": 45,
+            "perBand": {
+              "B2": 0.15,
+              "B3": 0.26,
+              "B4": 0.46,
+              "B5": 0.66,
+              "B6": 0.83,
+              "B7": 0.93
+            },
+            "rp50Scale": 519,
+            "n": 1
+          }
+        }
+      },
+      "verify": {
+        "leash": "pass",
+        "deepVerdict": "PASS",
+        "independentAnswer": "61",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 11,
+      "program": "SAT",
+      "domain": "advanced_math",
+      "band": "B3",
+      "target_band": "B4",
+      "statementId": "ADV.B4.s2",
+      "skill": "adv_quad_discriminant",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The function "
+        },
+        {
+          "t": "math",
+          "v": "f"
+        },
+        {
+          "t": "text",
+          "v": " is defined by "
+        },
+        {
+          "t": "math",
+          "v": "f(x)=(x-2)(x+6)"
+        },
+        {
+          "t": "text",
+          "v": ". How many distinct real values of "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": " satisfy the equation "
+        },
+        {
+          "t": "math",
+          "v": "f(x)=0"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "Set the function value equal to 0: "
+        },
+        {
+          "t": "mathblock",
+          "v": "(x-2)(x+6)=0"
+        },
+        {
+          "t": "text",
+          "v": "By the zero-product property, a product equals 0 only when one of its factors equals 0, so "
+        },
+        {
+          "t": "math",
+          "v": "x-2=0"
+        },
+        {
+          "t": "text",
+          "v": " or "
+        },
+        {
+          "t": "math",
+          "v": "x+6=0"
+        },
+        {
+          "t": "text",
+          "v": ". These give "
+        },
+        {
+          "t": "math",
+          "v": "x=2"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "x=-6"
+        },
+        {
+          "t": "text",
+          "v": ", which are two different real numbers. (Equivalently, expanding to "
+        },
+        {
+          "t": "math",
+          "v": "x^2+4x-12=0"
+        },
+        {
+          "t": "text",
+          "v": " gives a positive discriminant "
+        },
+        {
+          "t": "math",
+          "v": "b^2-4ac=4^2-4(1)(-12)=64"
+        },
+        {
+          "t": "text",
+          "v": ", confirming two distinct real solutions.) So the number of solutions is 2."
+        }
+      ],
+      "answer": {
+        "accept": [
+          "2"
+        ],
+        "tol": 0
+      },
+      "figure": null,
+      "params": {
+        "a": 1,
+        "b": 4,
+        "c": -12,
+        "root_select": "count"
+      },
+      "tier": "band-targeted",
+      "cellId": "b1af4c8f49807b66",
+      "difficulty": {
+        "scalePoint": 460,
+        "band": "B3",
+        "se_scale": 45,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~460 has ~67% chance correct (Band 3).",
+        "signals": {
+          "judge": {
+            "scale": 460,
+            "se": 45,
+            "perBand": {
+              "B2": 0.42,
+              "B3": 0.62,
+              "B4": 0.78,
+              "B5": 0.88,
+              "B6": 0.93,
+              "B7": 0.97
+            },
+            "rp50Scale": 410,
+            "n": 1
+          }
+        }
+      },
+      "verify": {
+        "leash": "pass",
+        "deepVerdict": "PASS",
+        "independentAnswer": "2",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 12,
+      "program": "SAT",
+      "domain": "advanced_math",
+      "band": "B5",
+      "target_band": "B4",
+      "statementId": "ADV.B4.s1",
+      "skill": "adv_create_quadratic",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "At one practice, each swimmer in a single lane of the Eastside swim team swims 4 more lengths of the pool than the number of swimmers in that lane. Altogether, the swimmers in that lane complete a total of 320 lengths. How many swimmers are in the lane?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "Let "
+        },
+        {
+          "t": "math",
+          "v": "s"
+        },
+        {
+          "t": "text",
+          "v": " be the number of swimmers in the lane. Each swimmer swims "
+        },
+        {
+          "t": "math",
+          "v": "s+4"
+        },
+        {
+          "t": "text",
+          "v": " lengths, so the total number of lengths is the product "
+        },
+        {
+          "t": "math",
+          "v": "s(s+4)"
+        },
+        {
+          "t": "text",
+          "v": ". Set this equal to the total of 320 lengths:"
+        },
+        {
+          "t": "mathblock",
+          "v": "s(s+4)=320"
+        },
+        {
+          "t": "text",
+          "v": "Expand and write the quadratic in standard form:"
+        },
+        {
+          "t": "mathblock",
+          "v": "s^2+4s-320=0"
+        },
+        {
+          "t": "text",
+          "v": "Factor the quadratic:"
+        },
+        {
+          "t": "mathblock",
+          "v": "(s-16)(s+20)=0"
+        },
+        {
+          "t": "text",
+          "v": "So "
+        },
+        {
+          "t": "math",
+          "v": "s=16"
+        },
+        {
+          "t": "text",
+          "v": " or "
+        },
+        {
+          "t": "math",
+          "v": "s=-20"
+        },
+        {
+          "t": "text",
+          "v": ". A count of swimmers cannot be negative, so "
+        },
+        {
+          "t": "math",
+          "v": "s=16"
+        },
+        {
+          "t": "text",
+          "v": ". (Note that "
+        },
+        {
+          "t": "math",
+          "v": "20"
+        },
+        {
+          "t": "text",
+          "v": " is the number of lengths each swimmer swims, not the number of swimmers.)"
+        }
+      ],
+      "answer": {
+        "correct": "A"
+      },
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "16"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "20"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "36"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "80"
+            }
+          ]
+        }
+      ],
+      "figure": null,
+      "params": {
+        "a": 1,
+        "b": 4,
+        "c": -320
+      },
+      "tier": "band-targeted",
+      "cellId": "de68290c512eb013",
+      "difficulty": {
+        "scalePoint": 579,
+        "band": "B5",
+        "se_scale": 45,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~579 has ~67% chance correct (Band 5).",
+        "signals": {
+          "judge": {
+            "scale": 579,
+            "se": 45,
+            "perBand": {
+              "B2": 0.18,
+              "B3": 0.29,
+              "B4": 0.49,
+              "B5": 0.66,
+              "B6": 0.81,
+              "B7": 0.92
+            },
+            "rp50Scale": 509,
+            "n": 1
+          }
+        }
+      },
+      "verify": {
+        "leash": "deferred-to-deep-verify",
+        "deepVerdict": "PASS",
+        "independentAnswer": "A",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 13,
+      "program": "SAT",
+      "domain": "advanced_math",
+      "band": "B5",
+      "target_band": "B4",
+      "statementId": "ADV.B4.s1",
+      "skill": "adv_create_exponential",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "During a multi-day mountain trek, a hiker's fitness tracker recorded 5,000 steps on the first day of the trek. The tracker showed that the number of steps it recorded each day was 20% greater than the number it recorded the day before. Which of the following equations gives the number of steps "
+        },
+        {
+          "t": "math",
+          "v": "s"
+        },
+        {
+          "t": "text",
+          "v": " the tracker recorded on the day that is "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": " days after the first day of the trek?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "On the first day, "
+        },
+        {
+          "t": "math",
+          "v": "x = 0"
+        },
+        {
+          "t": "text",
+          "v": ", and the tracker recorded 5,000 steps, so the initial value is "
+        },
+        {
+          "t": "math",
+          "v": "a = 5000"
+        },
+        {
+          "t": "text",
+          "v": ". A 20% increase each day multiplies the previous day's count by "
+        },
+        {
+          "t": "math",
+          "v": "1 + 0.20 = 1.2"
+        },
+        {
+          "t": "text",
+          "v": ", so the growth factor is "
+        },
+        {
+          "t": "math",
+          "v": "b = 1.2"
+        },
+        {
+          "t": "text",
+          "v": ". An exponential model has the form "
+        },
+        {
+          "t": "math",
+          "v": "s = a \\cdot b^x"
+        },
+        {
+          "t": "text",
+          "v": ", which gives "
+        },
+        {
+          "t": "math",
+          "v": "s = 5000(1.2)^x"
+        },
+        {
+          "t": "text",
+          "v": ". This is choice A. Choice B uses "
+        },
+        {
+          "t": "math",
+          "v": "0.2"
+        },
+        {
+          "t": "text",
+          "v": " as the base instead of "
+        },
+        {
+          "t": "math",
+          "v": "1.2"
+        },
+        {
+          "t": "text",
+          "v": ", choice C models a 20% decrease, and choice D incorrectly swaps the base with the initial value."
+        }
+      ],
+      "answer": {
+        "correct": "A"
+      },
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "s = 5000(1.2)^x"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "s = 5000(0.2)^x"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "s = 5000(0.8)^x"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "s = 1.2(5000)^x"
+            }
+          ]
+        }
+      ],
+      "figure": null,
+      "params": {
+        "a": 5000,
+        "b": 1.2
+      },
+      "tier": "band-targeted",
+      "cellId": "9282a4c992b5c22e",
+      "difficulty": {
+        "scalePoint": 556,
+        "band": "B5",
+        "se_scale": 45,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~556 has ~67% chance correct (Band 5).",
+        "signals": {
+          "judge": {
+            "scale": 556,
+            "se": 45,
+            "perBand": {
+              "B2": 0.3,
+              "B3": 0.39,
+              "B4": 0.56,
+              "B5": 0.71,
+              "B6": 0.85,
+              "B7": 0.93
+            },
+            "rp50Scale": 482,
+            "n": 1
+          }
+        }
+      },
+      "verify": {
+        "leash": "deferred-to-deep-verify",
+        "deepVerdict": "PASS",
+        "independentAnswer": "A",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 14,
+      "program": "SAT",
+      "domain": "advanced_math",
+      "band": "B3",
+      "target_band": "B4",
+      "statementId": "ADV.B4.s2",
+      "skill": "adv_rational_solve",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "For a particular job, the time "
+        },
+        {
+          "t": "math",
+          "v": "t"
+        },
+        {
+          "t": "text",
+          "v": ", in hours, needed to finish the job is given by "
+        },
+        {
+          "t": "math",
+          "v": "t = \\dfrac{288}{n}"
+        },
+        {
+          "t": "text",
+          "v": ", where "
+        },
+        {
+          "t": "math",
+          "v": "n"
+        },
+        {
+          "t": "text",
+          "v": " is the number of workers assigned to the job and "
+        },
+        {
+          "t": "math",
+          "v": "n > 0"
+        },
+        {
+          "t": "text",
+          "v": ". If the job is finished in 8 hours, how many workers were assigned to the job?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "Substitute "
+        },
+        {
+          "t": "math",
+          "v": "t = 8"
+        },
+        {
+          "t": "text",
+          "v": " into the model to get "
+        },
+        {
+          "t": "math",
+          "v": "8 = \\dfrac{288}{n}"
+        },
+        {
+          "t": "text",
+          "v": ". Because "
+        },
+        {
+          "t": "math",
+          "v": "n > 0"
+        },
+        {
+          "t": "text",
+          "v": ", you can multiply both sides by "
+        },
+        {
+          "t": "math",
+          "v": "n"
+        },
+        {
+          "t": "text",
+          "v": " to clear the denominator: "
+        },
+        {
+          "t": "math",
+          "v": "8n = 288"
+        },
+        {
+          "t": "text",
+          "v": ". Then divide both sides by 8: "
+        },
+        {
+          "t": "math",
+          "v": "n = \\dfrac{288}{8} = 36"
+        },
+        {
+          "t": "text",
+          "v": ". So 36 workers were assigned to the job."
+        }
+      ],
+      "answer": {
+        "accept": [
+          "36"
+        ],
+        "tol": 0
+      },
+      "figure": null,
+      "params": {
+        "mode": "eval_rational",
+        "num": [
+          288
+        ],
+        "den": [
+          8
+        ],
+        "x0": 8
+      },
+      "tier": "band-targeted",
+      "cellId": "1eae7380d3575a30",
+      "difficulty": {
+        "scalePoint": 465,
+        "band": "B3",
+        "se_scale": 45,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~465 has ~67% chance correct (Band 3).",
+        "signals": {
+          "judge": {
+            "scale": 465,
+            "se": 45,
+            "perBand": {
+              "B2": 0.4,
+              "B3": 0.6,
+              "B4": 0.78,
+              "B5": 0.88,
+              "B6": 0.94,
+              "B7": 0.97
+            },
+            "rp50Scale": 415,
+            "n": 1
+          }
+        }
+      },
+      "verify": {
+        "leash": "deferred-to-deep-verify",
+        "deepVerdict": "PASS",
+        "independentAnswer": "36",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 15,
+      "program": "SAT",
+      "domain": "advanced_math",
+      "band": "B5",
+      "target_band": "B4",
+      "statementId": "ADV.B4.s2",
+      "skill": "adv_lin_nonlin_system",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "In the xy-plane, the graphs of the equations in the following system intersect at two points."
+        },
+        {
+          "t": "mathblock",
+          "v": "y = x^2 - 2x - 2"
+        },
+        {
+          "t": "mathblock",
+          "v": "y = x + 2"
+        },
+        {
+          "t": "text",
+          "v": "What is the "
+        },
+        {
+          "t": "math",
+          "v": "y"
+        },
+        {
+          "t": "text",
+          "v": "-coordinate of the intersection point with the greater "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": "-coordinate?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "Both equations are solved for "
+        },
+        {
+          "t": "math",
+          "v": "y"
+        },
+        {
+          "t": "text",
+          "v": ", so set the right-hand sides equal: "
+        },
+        {
+          "t": "math",
+          "v": "x^2 - 2x - 2 = x + 2"
+        },
+        {
+          "t": "text",
+          "v": ". Collecting all terms on one side gives "
+        },
+        {
+          "t": "math",
+          "v": "x^2 - 3x - 4 = 0"
+        },
+        {
+          "t": "text",
+          "v": ". Factoring gives "
+        },
+        {
+          "t": "math",
+          "v": "(x - 4)(x + 1) = 0"
+        },
+        {
+          "t": "text",
+          "v": ", so "
+        },
+        {
+          "t": "math",
+          "v": "x = 4"
+        },
+        {
+          "t": "text",
+          "v": " or "
+        },
+        {
+          "t": "math",
+          "v": "x = -1"
+        },
+        {
+          "t": "text",
+          "v": ". The greater "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": "-value is "
+        },
+        {
+          "t": "math",
+          "v": "x = 4"
+        },
+        {
+          "t": "text",
+          "v": ". Substituting into "
+        },
+        {
+          "t": "math",
+          "v": "y = x + 2"
+        },
+        {
+          "t": "text",
+          "v": " gives "
+        },
+        {
+          "t": "math",
+          "v": "y = 4 + 2 = 6"
+        },
+        {
+          "t": "text",
+          "v": ". (Checking in the parabola: "
+        },
+        {
+          "t": "math",
+          "v": "4^2 - 2(4) - 2 = 6"
+        },
+        {
+          "t": "text",
+          "v": ".)"
+        }
+      ],
+      "answer": {
+        "correct": "D"
+      },
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "-1"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "1"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "4"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "6"
+            }
+          ]
+        }
+      ],
+      "figure": null,
+      "params": {
+        "linear": {
+          "m": 1,
+          "b": 2
+        },
+        "quadratic": {
+          "a": 1,
+          "b": -2,
+          "c": -2
+        },
+        "select": "greater_x",
+        "report": "y"
+      },
+      "tier": "band-targeted",
+      "cellId": "d62ec392c890655e",
+      "difficulty": {
+        "scalePoint": 591,
+        "band": "B5",
+        "se_scale": 45,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~591 has ~67% chance correct (Band 5).",
+        "signals": {
+          "judge": {
+            "scale": 591,
+            "se": 45,
+            "perBand": {
+              "B2": 0.13,
+              "B3": 0.22,
+              "B4": 0.45,
+              "B5": 0.63,
+              "B6": 0.79,
+              "B7": 0.91
+            },
+            "rp50Scale": 524,
+            "n": 1
+          }
+        }
+      },
+      "verify": {
+        "leash": "deferred-to-deep-verify",
+        "deepVerdict": "PASS",
+        "independentAnswer": "D",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": 16,
+      "program": "SAT",
+      "domain": "advanced_math",
+      "band": "B4",
+      "target_band": "B4",
+      "statementId": "ADV.B4.s2",
+      "skill": "adv_poly_factor_zeros",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The function "
+        },
+        {
+          "t": "math",
+          "v": "f"
+        },
+        {
+          "t": "text",
+          "v": " is defined by "
+        },
+        {
+          "t": "math",
+          "v": "f(x) = x^2 - x - 6"
+        },
+        {
+          "t": "text",
+          "v": ". The equation "
+        },
+        {
+          "t": "math",
+          "v": "f(x) = 0"
+        },
+        {
+          "t": "text",
+          "v": " has two real solutions. What is the sum of these solutions?"
+        }
+      ],
+      "solution": [
+        {
+          "t": "text",
+          "v": "Factor the quadratic: "
+        },
+        {
+          "t": "math",
+          "v": "x^2 - x - 6 = (x - 3)(x + 2)"
+        },
+        {
+          "t": "text",
+          "v": ". Setting each factor equal to zero gives the solutions "
+        },
+        {
+          "t": "math",
+          "v": "x = 3"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "x = -2"
+        },
+        {
+          "t": "text",
+          "v": ". Their sum is "
+        },
+        {
+          "t": "math",
+          "v": "3 + (-2) = 1"
+        },
+        {
+          "t": "text",
+          "v": "."
+        }
+      ],
+      "answer": {
+        "correct": "A"
+      },
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "1"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "-1"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "5"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "-6"
+            }
+          ]
+        }
+      ],
+      "figure": null,
+      "params": {
+        "roots": [
+          3,
+          -2
+        ],
+        "leading": 1,
+        "target": "sum_of_zeros"
+      },
+      "tier": "band-targeted",
+      "cellId": "eceb7f5880ed6f76",
+      "difficulty": {
+        "scalePoint": 510,
+        "band": "B4",
+        "se_scale": 45,
+        "band_ambiguous": true,
+        "method": "llm-judge",
+        "rp67_statement": "A student scoring ~510 has ~67% chance correct (Band 4).",
+        "signals": {
+          "judge": {
+            "scale": 510,
+            "se": 45,
+            "perBand": {
+              "B2": 0.28,
+              "B3": 0.44,
+              "B4": 0.66,
+              "B5": 0.8,
+              "B6": 0.89,
+              "B7": 0.95
+            },
+            "rp50Scale": 458,
+            "n": 1
+          }
+        }
+      },
+      "verify": {
+        "leash": "pass",
+        "deepVerdict": "PASS",
+        "independentAnswer": "A",
+        "figureVerify": {
+          "ok": true
+        }
+      }
+    }
+  ]
+}
