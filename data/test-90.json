@@ -1,0 +1,459 @@
+{
+  "number": 90,
+  "title": "BUILD_SPEC · linear_equations_one_variable (band-targeted)",
+  "questions": [
+    {
+      "id": 1,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B1",
+      "target_band": "B1",
+      "statementId": "ALG.B1.s2",
+      "skill": "linear_equations_one_variable",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "7w + 9 = 37\n\nWhat is the value of w?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "text",
+              "v": "3"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "text",
+              "v": "4"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "text",
+              "v": "5"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "text",
+              "v": "28"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "B"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. subtract constant: Subtract 9 from both sides: 7w + 9 − 9 = 37 − 9, yielding 7w = 28."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. divide coefficient: Divide both sides by 7: w = 28 ÷ 7 = 4."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 320,
+        "band": "B1",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "n_steps": 1,
+          "has_variable_both_sides": false,
+          "has_distribution": false,
+          "has_fractions": false,
+          "answer_type": "integer"
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "n_steps": 1,
+        "has_variable_both_sides": false,
+        "has_distribution": false,
+        "has_fractions": false,
+        "answer_type": "integer"
+      },
+      "fingerprint": [
+        "subtract_constant",
+        "divide_coefficient"
+      ],
+      "reskinDistance": 0,
+      "tier": "build-spec"
+    },
+    {
+      "id": 2,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B1",
+      "target_band": "B1",
+      "statementId": "ALG.B1.s2",
+      "skill": "linear_equations_one_variable",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "7t + 5 = 33"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "4"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. subtract constant: Subtract 5 from both sides: 7t + 5 − 5 = 33 − 5, giving 7t = 28."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. divide coefficient: Divide both sides by 7: t = 28 ÷ 7 = 4."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 320,
+        "band": "B1",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "n_steps": 1,
+          "has_variable_both_sides": false,
+          "has_distribution": false,
+          "has_fractions": false,
+          "answer_type": "integer"
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "n_steps": 1,
+        "has_variable_both_sides": false,
+        "has_distribution": false,
+        "has_fractions": false,
+        "answer_type": "integer"
+      },
+      "fingerprint": [
+        "subtract_constant",
+        "divide_coefficient"
+      ],
+      "reskinDistance": 0,
+      "tier": "build-spec"
+    },
+    {
+      "id": 3,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B2",
+      "target_band": "B2",
+      "statementId": "ALG.B1.s2",
+      "skill": "linear_equations_one_variable",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "A family farm has two fields. The north field is divided into 7 equal sections, with k acres of crops planted in each section. The south field is divided into 3 equal sections, also with k acres of crops planted in each section, plus an additional 20 acres planted along its border fence. If the total number of acres planted in the north field equals the total number of acres planted in the south field, what is the value of k?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "5"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. isolate variable: Translate the context into an equation: north field total = 7k; south field total = 3k + 20. Setting them equal gives 7k = 3k + 20."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. subtract constant: Subtract 3k from both sides to collect the variable term on one side: 7k − 3k = 3k + 20 − 3k, which simplifies to 4k = 20."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. divide coefficient: Divide both sides by the combined coefficient 4: k = 20 ÷ 4 = 5. Since 5 is a positive integer, the answer is reasonable in context (whole-number acres per section)."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 380,
+        "band": "B2",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "n_steps": 1,
+          "has_variable_both_sides": true,
+          "has_distribution": false,
+          "has_fractions": false,
+          "answer_type": "integer"
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "n_steps": 1,
+        "has_variable_both_sides": true,
+        "has_distribution": false,
+        "has_fractions": false,
+        "answer_type": "integer"
+      },
+      "fingerprint": [
+        "isolate_variable",
+        "subtract_constant",
+        "divide_coefficient"
+      ],
+      "reskinDistance": 0.333,
+      "tier": "build-spec"
+    },
+    {
+      "id": 4,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B3",
+      "target_band": "B3",
+      "statementId": "ALG.B3.s1",
+      "skill": "linear_equations_one_variable",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "At a farmers market, a vendor prices fresh peaches at r dollars per pound. A customer purchases 5 pounds of peaches and pays a flat $3 packaging fee, for a total cost of $19. The equation below represents this situation.\n\n5r + 3 = 19\n\nWhat is the value of r?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "text",
+              "v": "4/5"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "text",
+              "v": "16/5"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "text",
+              "v": "19/5"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "text",
+              "v": "22/5"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "B"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. subtract constant: Subtract 3 from both sides of 5r + 3 = 19 to isolate the variable term: 5r + 3 − 3 = 19 − 3, which gives 5r = 16."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. divide coefficient: Divide both sides by 5: r = 16/5. Because GCD(16, 5) = 1, the fraction is already fully reduced. Since 5 does not divide 16 evenly, the answer is a non-integer fraction, not a whole number."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 460,
+        "band": "B3",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "n_steps": 2,
+          "has_variable_both_sides": false,
+          "has_distribution": false,
+          "has_fractions": false,
+          "answer_type": "fraction"
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "n_steps": 2,
+        "has_variable_both_sides": false,
+        "has_distribution": false,
+        "has_fractions": false,
+        "answer_type": "fraction"
+      },
+      "fingerprint": [
+        "subtract_constant",
+        "divide_coefficient"
+      ],
+      "reskinDistance": 0,
+      "tier": "build-spec"
+    },
+    {
+      "id": 5,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B4",
+      "target_band": "B4",
+      "statementId": "ALG.B3.s1",
+      "skill": "linear_equations_one_variable",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "Two players in a retro video game tournament finish a round with the same high score. Player 1's score, in thousands of points, is 3h + 5, and Player 2's score is h/2 + 20, where h is the number of bonus stages each player completed. What is the value of h?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "text",
+              "v": "5"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "text",
+              "v": "6"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "text",
+              "v": "10"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "text",
+              "v": "15"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "B"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. move variable term: Set the two expressions equal to form 3h + 5 = h/2 + 20. Subtract h/2 from both sides and subtract 5 from both sides simultaneously to collect variable terms on the left and constants on the right: 3h − h/2 = 20 − 5. Rewrite 3h as 6h/2 and combine: (6h/2 − h/2) = 15, giving (5/2)h = 15."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. divide coefficient: Divide both sides by the net fractional coefficient 5/2, which is equivalent to multiplying both sides by 2/5: h = 15 × (2/5) = 30/5 = 6."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 540,
+        "band": "B4",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "n_steps": 2,
+          "has_variable_both_sides": true,
+          "has_distribution": false,
+          "has_fractions": true,
+          "answer_type": "integer"
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "n_steps": 2,
+        "has_variable_both_sides": true,
+        "has_distribution": false,
+        "has_fractions": true,
+        "answer_type": "integer"
+      },
+      "fingerprint": [
+        "move_variable_term",
+        "divide_coefficient"
+      ],
+      "reskinDistance": 0.5,
+      "tier": "build-spec"
+    }
+  ]
+}

@@ -1,0 +1,602 @@
+{
+  "number": 91,
+  "title": "BUILD_SPEC · linear_equations_one_variable (band-targeted)",
+  "questions": [
+    {
+      "id": 1,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B1",
+      "target_band": "B1",
+      "statementId": "ALG.B1.s2",
+      "skill": "linear_equations_one_variable",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "If w + 1 = 4, what is the value of w?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "text",
+              "v": "1"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "text",
+              "v": "3"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "text",
+              "v": "4"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "text",
+              "v": "5"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "B"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. isolate variable: Recognize that 1 is being added to w on the left side; to isolate w, apply the inverse operation (subtraction) to both sides."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. subtract constant: Subtract 1 from both sides: w + 1 − 1 = 4 − 1."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. simplify: The left side reduces to w and the right side reduces to 3, giving w = 3."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 320,
+        "band": "B1",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "n_steps": 1,
+          "has_variable_both_sides": false,
+          "has_distribution": false,
+          "has_fractions": false,
+          "answer_type": "integer"
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "n_steps": 1,
+        "has_variable_both_sides": false,
+        "has_distribution": false,
+        "has_fractions": false,
+        "answer_type": "integer"
+      },
+      "fingerprint": [
+        "isolate_variable",
+        "subtract_constant",
+        "simplify"
+      ],
+      "reskinDistance": 0.667,
+      "tier": "build-spec"
+    },
+    {
+      "id": 2,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B1",
+      "target_band": "B1",
+      "statementId": "ALG.B1.s2",
+      "skill": "linear_equations_one_variable",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "A school fundraiser collects donations in tiers. Each tier raises $3, and the fundraiser raised a total of $15 across all tiers. The equation 3h = 15 models this situation, where h is the number of tiers that raised donations. What is the value of h?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "text",
+              "v": "12"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "text",
+              "v": "5"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "text",
+              "v": "18"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "text",
+              "v": "45"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "B"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. isolate variable: Read the context: h tiers each raising $3 yields a total of $15, giving the equation 3h = 15. The variable h is multiplied by the coefficient 3."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. divide coefficient: Divide both sides of 3h = 15 by 3: h = 15 ÷ 3 = 5."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 320,
+        "band": "B1",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "n_steps": 1,
+          "has_variable_both_sides": false,
+          "has_distribution": false,
+          "has_fractions": false,
+          "answer_type": "integer"
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "n_steps": 1,
+        "has_variable_both_sides": false,
+        "has_distribution": false,
+        "has_fractions": false,
+        "answer_type": "integer"
+      },
+      "fingerprint": [
+        "isolate_variable",
+        "divide_coefficient"
+      ],
+      "reskinDistance": 0.5,
+      "tier": "build-spec"
+    },
+    {
+      "id": 3,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B2",
+      "target_band": "B2",
+      "statementId": "ALG.B1.s2",
+      "skill": "linear_equations_one_variable",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "A geologist studying rock formations measures the thickness of two sediment layers in a drill core. The lower layer has a thickness of 16/2 centimeters, and the upper layer has an unknown thickness of n centimeters. If the total combined thickness of the two layers is 20 centimeters, what is the value of n?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "text",
+              "v": "4"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "text",
+              "v": "12"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "text",
+              "v": "18"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "text",
+              "v": "28"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "B"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. isolate variable: Translate the geological context into an equation: the upper-layer thickness n plus the lower-layer thickness 16/2 equals the total thickness 20, giving n + 16/2 = 20."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. simplify: Simplify the fraction appearing in the equation: 16/2 = 8, so the equation becomes n + 8 = 20. No fraction arithmetic carries forward."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. subtract constant: Subtract 8 from both sides of n + 8 = 20: n = 20 − 8 = 12."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "4. divide coefficient: The coefficient of n is 1; dividing both sides by 1 is trivial and confirms n = 12."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 410,
+        "band": "B2",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "n_steps": 1,
+          "has_variable_both_sides": false,
+          "has_distribution": false,
+          "has_fractions": true,
+          "answer_type": "integer"
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "n_steps": 1,
+        "has_variable_both_sides": false,
+        "has_distribution": false,
+        "has_fractions": true,
+        "answer_type": "integer"
+      },
+      "fingerprint": [
+        "isolate_variable",
+        "simplify",
+        "subtract_constant",
+        "divide_coefficient"
+      ],
+      "reskinDistance": 0.5,
+      "tier": "build-spec"
+    },
+    {
+      "id": 4,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B2",
+      "target_band": "B2",
+      "statementId": "ALG.B1.s2",
+      "skill": "linear_equations_one_variable",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "At a craft brewery, each batch of beer contains h gallons. A brewer records that the total volume produced across 9 batches is equal to 40 gallons more than the volume of a single batch. What is the value of h?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "text",
+              "v": "4"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "text",
+              "v": "5"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "text",
+              "v": "8"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "text",
+              "v": "40"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "B"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. isolate variable: Translate the word problem into an equation. Nine batches of h gallons on the left; 40 gallons more than one batch on the right: 9h = h + 40."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. move variable term: Subtract h from both sides to consolidate variable terms: 9h − h = h + 40 − h, giving 8h = 40."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. divide coefficient: Divide both sides by the coefficient 8: h = 40 ÷ 8 = 5."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 380,
+        "band": "B2",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "n_steps": 1,
+          "has_variable_both_sides": true,
+          "has_distribution": false,
+          "has_fractions": false,
+          "answer_type": "integer"
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "n_steps": 1,
+        "has_variable_both_sides": true,
+        "has_distribution": false,
+        "has_fractions": false,
+        "answer_type": "integer"
+      },
+      "fingerprint": [
+        "isolate_variable",
+        "move_variable_term",
+        "divide_coefficient"
+      ],
+      "reskinDistance": 0.667,
+      "tier": "build-spec"
+    },
+    {
+      "id": 5,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B3",
+      "target_band": "B3",
+      "statementId": "ALG.B3.s1",
+      "skill": "linear_equations_one_variable",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "A wildlife researcher monitors salmon migration by counting fish as they pass through a river ladder. The researcher models the cumulative fish count with the equation 12h − 1 = 34, where h is the average number of fish passing the ladder per hour. What is the value of h?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "35/12"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. add constant: Add 1 to both sides of 12h − 1 = 34 to isolate the variable term: 12h − 1 + 1 = 34 + 1, yielding 12h = 35."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. divide coefficient: Divide both sides by 12 to solve for h: h = 35 ÷ 12 = 35/12. Since gcd(35, 12) = 1, the fraction is already in simplest form. The equivalent decimal 2.91̄6̄ may also be entered if the SPR rubric accepts non-terminating decimals."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 460,
+        "band": "B3",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "n_steps": 2,
+          "has_variable_both_sides": false,
+          "has_distribution": false,
+          "has_fractions": false,
+          "answer_type": "fraction"
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "n_steps": 2,
+        "has_variable_both_sides": false,
+        "has_distribution": false,
+        "has_fractions": false,
+        "answer_type": "fraction"
+      },
+      "fingerprint": [
+        "add_constant",
+        "divide_coefficient"
+      ],
+      "reskinDistance": 0.5,
+      "tier": "build-spec"
+    },
+    {
+      "id": 6,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B4",
+      "target_band": "B4",
+      "statementId": "ALG.B3.s1",
+      "skill": "linear_equations_one_variable",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "If 2m + 13 = −16, what is the value of m?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "-29/2"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. isolate variable: Write the equation as given: 2m + 13 = −16."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. subtract constant: Subtract 13 from both sides: 2m = −16 − 13 = −29."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. divide coefficient: Divide both sides by 2: m = −29 ÷ 2 = −29/2."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "4. simplify: Confirm −29/2 is fully reduced: gcd(29, 2) = 1, so no further simplification is possible. Record −29/2 in the SPR grid."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 480,
+        "band": "B4",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "n_steps": 1,
+          "has_variable_both_sides": false,
+          "has_distribution": false,
+          "has_fractions": true,
+          "answer_type": "fraction"
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "n_steps": 1,
+        "has_variable_both_sides": false,
+        "has_distribution": false,
+        "has_fractions": true,
+        "answer_type": "fraction"
+      },
+      "fingerprint": [
+        "isolate_variable",
+        "subtract_constant",
+        "divide_coefficient",
+        "simplify"
+      ],
+      "reskinDistance": 0.5,
+      "tier": "build-spec"
+    }
+  ]
+}

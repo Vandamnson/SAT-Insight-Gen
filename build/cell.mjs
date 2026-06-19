@@ -25,6 +25,35 @@ function rng(seedStr) {
 }
 const pick = (r, arr) => arr[Math.floor(r() * arr.length)];
 const randint = (r, lo, hi) => lo + Math.floor(r() * (hi - lo + 1));
+const gcd = (a, b) => (b ? gcd(b, a % b) : Math.abs(a));
+function frac(p, q) { const g = gcd(p, q) || 1; p /= g; q /= g; if (q < 0) { p = -p; q = -q; } return q === 1 ? String(p) : `${p}/${q}`; }
+
+// drawNumbers — CONSTRUCT-BACKWARD concrete numbers for a one-variable linear
+// equation, drawn in CODE (not chosen by the model — that's what collapses to the
+// canonical "7"). Pins the core equation a·x + b = c and its solution, honoring
+// answer_type; the radicals say how to DISGUISE it (both sides / distribute /
+// fraction) and the author wraps it in context. PROVE re-verifies the final answer.
+function drawNumbers(rad, varName, r, range, band) {
+  const [, chi] = range || [2, 12];
+  const messy = band >= 3;                                  // negatives/larger magnitudes only from B3 up
+  const sgn = () => (messy && r() < 0.35 ? -1 : 1);
+  const solMax = band <= 1 ? 9 : 12;
+  let a = randint(r, 2, band <= 1 ? 9 : chi), b, c, solution;
+  if (rad.answer_type === "fraction") {                     // ax+b=c with (c−b) ∤ a ⇒ non-integer solution
+    b = sgn() * randint(r, 1, messy ? 15 : 9);
+    do { c = sgn() * randint(r, 4, messy ? 40 : 25); } while (((((c - b) % a) + a) % a) === 0);
+    solution = frac(c - b, a);
+  } else if (Number(rad.n_steps) === 1) {                   // GENUINELY one step: a·x = c (divide) OR x + b = c (subtract)
+    solution = sgn() * randint(r, 2, solMax);
+    if (r() < 0.5) { b = 0; c = a * solution; } else { a = 1; b = sgn() * randint(r, 1, band <= 1 ? 9 : 15); c = solution + b; }
+  } else {                                                  // a·x + b = c
+    b = sgn() * randint(r, 1, messy ? 15 : 9);
+    solution = sgn() * randint(r, 2, solMax);
+    c = a * solution + b;
+  }
+  const eq = b === 0 ? `${a}*${varName} = ${c}` : a === 1 ? `${varName} + (${b}) = ${c}` : `${a}*${varName} + (${b}) = ${c}`;
+  return { a, b, c, solution, variable: varName, core_equation: eq };
+}
 
 /** drawCell(domain, subdomain, band, idx) -> a cell object (the spec JSON of §1).
  *  Radicals pinned to the band; incidentals drawn from the index-seeded RNG. */
@@ -42,14 +71,13 @@ export function drawCell(domain, subdomain, band, idx = 0) {
   const ia = sub.incidental_axes;
   const ctxList = ia.context === "@contexts" ? CONTEXTS : (ia.context || []);
   const useNone = r() < (ia.context_none_weight ?? 0);
+  const varName = pick(r, ia.var_name);
   const incidentals = {
     context: useNone ? "none" : pick(r, ctxList),
-    var_name: pick(r, ia.var_name),
-    coefficient_range: ia.coefficient_range,
-    constant_range: ia.constant_range,
-    answer_type: radicals.answer_type,        // echoed for the author's number choices
+    var_name: varName,
+    numbers: drawNumbers(radicals, varName, r, ia.coefficient_range, Number(bandStr.slice(1))),   // CONCRETE, band-appropriate numbers, drawn in code (BUILD_SPEC §8)
+    answer_type: radicals.answer_type,
     format: r() < 0.6 ? "spr" : "mcq",        // question format is SURFACE (incidental), not difficulty-determining
-    seed: randint(r, 1000, 9999),             // a surface nonce so identical radicals still vary numerically
   };
 
   return {

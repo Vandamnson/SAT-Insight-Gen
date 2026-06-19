@@ -90,3 +90,48 @@ flowchart TD
   classDef n fill:#e0f0ff,stroke:#06c,color:#036
 ```
 *Grid = variety + verified backbone; open lane = richness ceiling. Band gate pinned to exact-low; transport hardened against rate limits.*
+
+---
+
+## 5 — BUILD_SPEC: four-agent linear pipeline (current)
+
+A clean redesign from `BUILD_SPEC.md` (PromptCoT concept→rationale→problem + PROVE program-as-verifier). The producer is **linear** — no agent mesh, no recursive tuning — ending in a **deterministic two-tier selector**. It targets the session's three recurring pains head-on: reskins (rationale agent + radical/incidental split), difficulty drift (deterministic LLTM over *known* radicals, not an LLM-judge guessing from text), and trust (PROVE recomputes every answer).
+
+```mermaid
+flowchart TD
+  subgraph harness["HARNESS (your code, deterministic) — no agent calls another"]
+    DRAW["DRAW (code, no LLM)<br/>radicals PINNED to band via LLTM<br/>incidentals DRAWN randomly = variety"]
+    A1["AGENT 1 — rationale (sonnet)<br/>design rationale + intended solve path<br/>(PromptCoT: pushes author off canonical)"]
+    A2["AGENT 2 — author (sonnet/opus)<br/>structured JSON + typed solve_path"]
+    subgraph sel["SELECTOR — two-tier deterministic gate (all trust here)"]
+      TA["Tier A (anchored: algebra)<br/>AGENT 3 writes Python verify()<br/>harness runs it sandboxed, 10s"]
+      TB["Tier B (free: geometry)<br/>solve N times, keep if >=4 agree"]
+      BG["LLTM band gate (asymmetric)<br/>reject if HARDER than target"]
+      DD["surface dedup"]
+      RS["reskin structural-distance<br/>LOG ONLY (epsilon floor off)"]
+    end
+    PB["over-generate -> pick_balanced<br/>band spread within the cell"]
+    RA["adapter -> render segment schema"]
+  end
+  CELL["cell + free axes<br/>(taxonomy/cells/*.json)"] --> DRAW
+  DRAW --> A1 --> A2 --> TA
+  A2 -. free domains .-> TB
+  TA --> BG
+  TB --> BG
+  BG --> DD --> RS --> PB --> RA
+  TA -->|verify=False| REJ["reject (most draws)"]:::r
+  BG -->|too hard| REJ
+  KAPPA["step 5 research (optional, off critical path):<br/>regress measured (consistency) difficulty on radicals -> refit LLTM<br/>structure-vs-model correlation = anc(d)"]:::e
+  PB -.-> KAPPA
+  classDef r fill:#ffe0e0,stroke:#c00,color:#900
+  classDef e fill:#fff3cd,stroke:#c90,color:#960
+```
+
+**What changed from #4 → #5, and why:**
+- **Variety is harness-drawn, not model-coaxed.** Radicals (difficulty-determining: steps, both-sides, distribution, fractions, answer-type) are *pinned* to the band; incidentals (context, variable, numbers, format) are *drawn in code*. Asking the model to "be creative" re-collapses to canonical — so we don't. (Replaces the grid `form` + open-lane "be inventive".)
+- **Difficulty is deterministic again — but soundly.** The LLTM is additive over radicals the harness *set* (ground truth), so it sidesteps the brittleness that killed the earlier text-inferred estimator, and it removes the LLM-judge's +1 drift entirely. (Replaces the LLM-judge band gate.)
+- **PROVE generalizes the leash.** Agent 3 writes a fresh sympy `verify()` per item, executed sandboxed — no hand-written recompute branch per skill. (Generalizes `recompute.js`.)
+- **Rationale-first (PromptCoT).** Writing the design rationale before the problem is the structural lever against reskins.
+- **One direction, deterministic gate.** Linearity is what makes it shippable; tuning knobs (over-generate ×, ε reskin floor, band tolerance, consistency N) sit on top of a frozen selector.
+
+*Build order: ship `linear_equations_one_variable` end-to-end first (steps 1–4 are the product); LLTM weight-refit + the structure-vs-model correlation are optional research (step 5) that rides on top.*
