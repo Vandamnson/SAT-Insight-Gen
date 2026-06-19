@@ -1,0 +1,41 @@
+{
+  "_note": "CELL SCHEMA for the BUILD_SPEC four-agent pipeline. Per subdomain: RADICALS (difficulty-determining axes the harness pins to a band via the LLTM) vs INCIDENTALS (surface axes the harness draws randomly for variety). The LLTM (additive, hand-set weights — Embretson/Gierl; you FIT these, you don't derive them) maps a radical vector to a 200-800 scale score, bucketed to a band by the official Skills-Insight cut scores. Start: linear_equations_one_variable only (BUILD_SPEC build order step 1).",
+  "domain": "algebra",
+  "tier": "A",
+  "band_cuts": { "_note": "lower edge (scale score) of each band; score < first edge => B1", "edges": [370, 420, 470, 550, 610, 680] },
+  "band_anchors": { "B1": 340, "B2": 395, "B3": 445, "B4": 510, "B5": 580, "B6": 645, "B7": 740 },
+  "subdomains": {
+    "linear_equations_one_variable": {
+      "label": "Linear equations in one variable",
+      "target": "solve for the unknown",
+      "statementByBand": { "B1": "ALG.B1.s2", "B2": "ALG.B1.s2", "B3": "ALG.B3.s1", "B4": "ALG.B3.s1", "B5": "ALG.B7.s1", "B6": "ALG.B7.s1", "B7": "ALG.B7.s1" },
+      "radical_axes": {
+        "n_steps": [1, 2, 3],
+        "has_variable_both_sides": [false, true],
+        "has_distribution": [false, true],
+        "has_fractions": [false, true],
+        "answer_type": ["integer", "fraction"]
+      },
+      "incidental_axes": {
+        "context": "@contexts",
+        "context_none_weight": 0.35,
+        "var_name": ["x", "n", "t", "p", "w", "h", "k", "m", "r", "s"],
+        "coefficient_range": [2, 12],
+        "constant_range": [1, 40]
+      },
+      "lltm": {
+        "_note": "predicted_difficulty = w0 + n_steps*ws + both_sides + distribution + fractions + answer_is_fraction. Ordered by intuition (fractions and steps weigh most). Refit against measured consistency-difficulty in BUILD_SPEC step 5.",
+        "weights": {
+          "w0": 250,
+          "n_steps": 70,
+          "has_variable_both_sides": 60,
+          "has_distribution": 55,
+          "has_fractions": 90,
+          "answer_is_fraction": 70
+        }
+      },
+      "canonical_fingerprint": ["subtract_constant", "divide_coefficient"],
+      "op_vocab": ["distribute", "combine_like_terms", "move_variable_term", "subtract_constant", "add_constant", "divide_coefficient", "multiply_both_sides", "clear_fractions", "isolate_variable", "simplify"]
+    }
+  }
+}
