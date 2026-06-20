@@ -60,7 +60,9 @@ FORMAT: ${fmt}
 STYLE (SAT items are tight — follow exactly):
 - LENGTH: this is a Band ${cell.band} item — target a STEM of ${WBAND} words. (Measured from official SAT Math: median ≈18 words, ~half under 20, only ~10% exceed 50 — and those are higher-band modeling items. Never exceed ~60 words unless the math genuinely requires a modeling setup.)
 - Be CONCISE. At MOST one short sentence of context, then the question. No backstory, no scene-setting, no flavor padding (e.g. NOT "A wildlife researcher monitors salmon migration by counting fish as they pass through a river ladder…"). Lower bands (B1–B3) especially terse; an abstract item is just the equation/expression and the ask.
-- Write ALL mathematics as LaTeX wrapped in $...$ — e.g. $3x + 5 = 20$, $\\frac{16}{5}$, $y = \\frac{3}{2}x + 7$, $-3n + 1 > -24$. Use \\frac for fractions, \\le \\ge for ≤ ≥, \\cdot or juxtaposition for multiply. Plain prose stays OUTSIDE the $...$. Put each MCQ choice's math in $...$ too.
+- Write ALL mathematics as LaTeX wrapped in \\( ... \\) — e.g. \\(3x + 5 = 20\\), \\(\\frac{16}{5}\\), \\(y = \\frac{3}{2}x + 7\\), \\(-3n + 1 > -24\\). Use \\frac for fractions, \\le \\ge for ≤ ≥, \\cdot for multiply. Prose stays OUTSIDE the \\(...\\). Put each MCQ choice's math in \\(...\\) too. Do NOT use $ as a math delimiter.
+- CURRENCY: write money as ordinary text — $5, $3.50 — NEVER inside \\(...\\) (a dollar sign is money, not math).
+- TABLES: if the item shows a table of values, emit it as a clean markdown table with a header-separator row, each row on its OWN line (newline-separated), e.g.  | x | y |\\n| --- | --- |\\n| 0 | 5 |\\n| 1 | -2 |  . Keep cells PLAIN — bare numbers/letters, no \\(...\\), no $. Do not also restate the table values in prose.
 - The "answer" field (free-response) must be the PLAIN griddable value (e.g. -29/2 or 4.5), NOT LaTeX.
 Use op names in solve_path drawn from this vocabulary where they apply: ${JSON.stringify(cell.opVocab || cell.op_vocab || [])}.`;
   const raw = await llmComplete(user, { system: SYSTEM, model });

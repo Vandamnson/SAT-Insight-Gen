@@ -54,17 +54,47 @@ function pickBalanced(survivors, n, bands) {
 
 /* ---- render-schema adapter (new flat author JSON -> the segment item model) ---- */
 const txt = (s) => [{ t: "text", v: String(s) }];
-// split a string on $…$ math delimiters into render segments (render.mjs KaTeX-typesets {t:"math"}).
+// split a string on \( … \) math delimiters into render segments (render.mjs KaTeX-typesets {t:"math"}).
+// \(...\) — NOT $...$ — so a "$5" currency amount is never mistaken for a math span.
 function mathSeg(str) {
   const s = String(str ?? ""); const out = [];
-  for (const p of s.split(/(\$[^$]*\$)/g)) { if (!p) continue; if (p.length >= 2 && p[0] === "$" && p[p.length - 1] === "$") out.push({ t: "math", v: p.slice(1, -1) }); else out.push({ t: "text", v: p }); }
+  for (const p of s.split(/(\\\(.*?\\\))/g)) {
+    if (!p) continue;
+    const m = p.match(/^\\\(([\s\S]*)\\\)$/);
+    if (m) out.push({ t: "math", v: m[1].trim() }); else out.push({ t: "text", v: p });
+  }
   return out.length ? out : [{ t: "text", v: s }];
 }
-// plain griddable form for SPR grading (strip $, \frac{a}{b} → a/b).
-const plainAns = (a) => String(a ?? "").replace(/\$/g, "").replace(/\\d?frac\s*\{(-?\d+)\}\s*\{(-?\d+)\}/g, "$1/$2").replace(/\\cdot/g, "").trim();
+// plain griddable form for SPR grading (strip math delimiters + currency, \frac{a}{b} → a/b).
+const plainAns = (a) => String(a ?? "").replace(/\\\(|\\\)/g, "").replace(/\\d?frac\s*\{(-?\d+)\}\s*\{(-?\d+)\}/g, "$1/$2").replace(/\\cdot/g, "").replace(/\$/g, "").trim();
 function solvePathSegs(sp) {
   if (!Array.isArray(sp) || !sp.length) return txt("See answer.");
   return sp.flatMap((s, i) => [{ t: "text", v: `${s.step ?? i + 1}. ${s.op ? s.op.replace(/_/g, " ") + ": " : ""}` }, ...mathSeg(s.detail || ""), { t: "br" }]);
+}
+// pull a markdown table out of a statement → a render "table" figure + the prose with the table removed.
+const cleanCell = (c) => String(c).replace(/\\\(|\\\)/g, "").replace(/\$/g, "").trim();
+const isSep = (c) => /^:?-{2,}:?$/.test(String(c).trim());
+function extractTable(statement) {
+  const s = String(statement ?? "");
+  if (!/\|\s*:?-{2,}/.test(s)) return null;                       // needs a |---| separator row
+  const first = s.indexOf("|"), last = s.lastIndexOf("|");
+  if (first < 0 || last <= first) return null;
+  const before = s.slice(0, first).trim(), region = s.slice(first, last + 1), after = s.slice(last + 1).trim();
+  let rows;
+  if (/\n/.test(region)) {                                        // newline-delimited rows
+    rows = region.split(/\n/).map((l) => l.trim()).filter((l) => l.includes("|")).map((l) => l.replace(/^\||\|$/g, "").split("|").map((c) => c.trim()));
+  } else {                                                        // flat inline stream → infer column count from the header
+    const cells = region.split("|").map((c) => c.trim()).filter((c) => c !== "");
+    const ncol = cells.findIndex(isSep);
+    if (ncol < 1) return null;
+    const flat = cells.filter((c) => !isSep(c));
+    rows = []; for (let i = 0; i < flat.length; i += ncol) rows.push(flat.slice(i, i + ncol));
+  }
+  rows = rows.filter((r) => r.length && !r.every((c) => isSep(c) || c === "")).map((r) => r.map(cleanCell));
+  if (rows.length < 2 || rows[0].length < 2) return null;
+  const headers = rows[0], data = rows.slice(1).filter((r) => r.length === headers.length);
+  if (!data.length) return null;
+  return { figure: { fn: "table", spec: { kind: "value", headers, rows: data } }, cleaned: [before, after].filter(Boolean).join("  ").replace(/\s+/g, " ").trim() };
 }
 function toRenderItem(s, id) {
   const { cand, cell, gate } = s;
@@ -72,15 +102,16 @@ function toRenderItem(s, id) {
   const used = cand.radicals_used && Object.keys(cand.radicals_used).length ? { ...cell.radicals, ...cand.radicals_used } : cell.radicals;
   const diff = measureFromRadicals(used, cell.domain, cell.subdomain);
   const opts = isMcq ? cand.choices.map((c, i) => ({ key: "ABCD"[i], seg: mathSeg(String(c).replace(/^[A-D][).]\s*/, "")) })) : undefined;
+  const tbl = extractTable(cand.statement);                       // markdown table → render figure + cleaned prose
   return {
     id, program: "SAT", domain: cell.domain, band: `B${cell.band}`, target_band: `B${cell.band}`,
     statementId: cell.statementId || `${DOMAIN_CODE[cell.domain]}.B${cell.band}.s1`,
     skill: cell.subdomain, type: isMcq ? "mcq" : "spr",
-    stem: mathSeg(cand.statement),
+    stem: mathSeg(tbl ? tbl.cleaned : cand.statement),
     options: opts,
     answer: isMcq ? { correct: cand.correct_choice } : { accept: [plainAns(cand.answer)], tol: 0 },
     solution: solvePathSegs(cand.solve_path),
-    figure: null,
+    figure: tbl ? tbl.figure : null,
     difficulty: { scalePoint: diff.scalePoint, band: gate.predictedBand, method: "apriori_v1", feature_vector: diff.feature_vector },
     verify: { tier: cell.tier || "A", correctness: cell.tier === "B" ? `consistency ${s.gate.correctness?.agree}/${s.gate.correctness?.need}` : "prove:pass" },
     radicals: used, fingerprint: gate.fingerprint, reskinDistance: Number(gate.distance?.toFixed?.(3) ?? gate.distance),
@@ -178,7 +209,7 @@ async function main() {
   }
 }
 
-export { toRenderItem, pickBalanced, generateCell };
+export { toRenderItem, pickBalanced, generateCell, mathSeg, extractTable };
 if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) {
   main().catch((e) => { console.error("FATAL", e); process.exit(1); });
 }
