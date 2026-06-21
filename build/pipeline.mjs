@@ -34,7 +34,7 @@ function reviseInstruction(g) {
   if (g.stage === "band") return g.gate?.reason === "too hard"
     ? "It measured HARDER than the target band — simplify: fewer solve steps, cleaner numbers, no structure beyond the radicals."
     : "It measured off the target band — match the target difficulty exactly per the radicals, no more and no less.";
-  if (g.stage === "reskin") return "Too close to the textbook-canonical instance — change the structure so the solve path differs, keeping the same skill, band, and pinned answer.";
+  if (g.stage === "reskin") return "Too close to the textbook-canonical instance — change the structure so the solve path differs, keeping the same skill and target band (you may choose different numbers and a different answer).";
   if (g.stage === "dedup") return "Too similar to another item — change the context and surface details substantially.";
   return "Revise so the item passes independent verification and lands in the target band.";
 }
@@ -114,16 +114,17 @@ function toRenderItem(s, id) {
   const used = cand.radicals_used && Object.keys(cand.radicals_used).length ? { ...cell.radicals, ...cand.radicals_used } : cell.radicals;
   const diff = measureFromRadicals(used, cell.domain, cell.subdomain);
   const opts = isMcq ? cand.choices.map((c, i) => ({ key: "ABCD"[i], seg: mathSeg(String(c).replace(/^[A-D][).]\s*/, "")) })) : undefined;
-  const tbl = extractTable(cand.statement);                       // markdown table → render figure + cleaned prose
+  const harnessFig = cell.incidentals?.numbers?.figure || null;   // graph items: harness-drawn coordPlane figure
+  const tbl = harnessFig ? null : extractTable(cand.statement);   // else a markdown table from the prose
   return {
     id, program: "SAT", domain: cell.domain, band: `B${cell.band}`, target_band: `B${cell.band}`,
     statementId: cell.statementId || `${DOMAIN_CODE[cell.domain]}.B${cell.band}.s1`,
     skill: cell.subdomain, type: isMcq ? "mcq" : "spr",
     stem: mathSeg(tbl ? tbl.cleaned : cand.statement),
     options: opts,
-    answer: isMcq ? { correct: cand.correct_choice } : { accept: [plainAns(cand.answer)], tol: 0 },
+    answer: isMcq ? { correct: cand.correct_choice } : { accept: [plainAns(cell.tier === "C" ? (cell.incidentals?.numbers?.answer ?? cand.answer) : cand.answer)], tol: 0 },
     solution: solvePathSegs(cand.solve_path),
-    figure: tbl ? tbl.figure : null,
+    figure: harnessFig || (tbl ? tbl.figure : null),
     difficulty: { scalePoint: diff.scalePoint, band: gate.predictedBand, method: "apriori_v1", feature_vector: diff.feature_vector },
     verify: { tier: cell.tier || "A", correctness: cell.tier === "B" ? `consistency ${s.gate.correctness?.agree}/${s.gate.correctness?.need}` : "prove:pass" },
     radicals: used, fingerprint: gate.fingerprint, reskinDistance: Number(gate.distance?.toFixed?.(3) ?? gate.distance),
@@ -190,7 +191,7 @@ export async function generateTest(blueprint, { bands = ["B1", "B2", "B3", "B4"]
 /** generateDomain(domain, perCell, bands) — N items per VALID (subdomain × band)
  *  cell across B1–B7; cells with no defensible radical combo are skipped (e.g.
  *  systems at B1–B3). Prints the coverage matrix so the holes are explicit. */
-export async function generateDomain(domain, { perCell = 1, bands = BANDS, testNum = 92, title } = {}) {
+export async function generateDomain(domain, { perCell = 1, bands = BANDS, testNum = 92, title, targetTotal = null } = {}) {
   const subs = Object.keys(cellSchema(domain).subdomains);
   const ctr = { i: 0 }, kept = [], matrix = {};
   console.log(`\n=== FULL DOMAIN: ${domain} · ${perCell}/cell · bands ${bands.join(",")} ===`);
@@ -206,7 +207,17 @@ export async function generateDomain(domain, { perCell = 1, bands = BANDS, testN
   console.log(`\nCOVERAGE MATRIX (kept / target ${perCell}; · = no defensible cell):`);
   console.log(`  ${"subdomain".padEnd(34)} ${bands.join("   ")}`);
   for (const sub of subs) console.log(`  ${sub.padEnd(34)} ${bands.map((b) => String(matrix[sub][b]).padStart(2)).join("  ")}`);
-  return assemble(kept, testNum, title || `BUILD_SPEC · ${domain} (whole domain, B1–B7)`);
+  let final = kept;
+  if (targetTotal && kept.length > targetTotal) {                 // balanced down-select to an exact count, by SUBDOMAIN × BAND
+    const byCell = {}; for (const s of kept) (byCell[`${s.cell.subdomain}|${s.cell.band}`] ||= []).push(s);
+    const cellsBySub = {}; for (const ck of Object.keys(byCell)) { const sub = ck.split("|")[0]; (cellsBySub[sub] ||= []).push(ck); }
+    const subs = Object.keys(cellsBySub); subs.forEach((sub) => cellsBySub[sub].sort());
+    const ordered = []; for (let r = 0; ; r++) { let added = false; for (const sub of subs) if (cellsBySub[sub][r]) { ordered.push(cellsBySub[sub][r]); added = true; } if (!added) break; }   // interleave subdomains
+    final = []; let progress = true;
+    while (final.length < targetTotal && progress) { progress = false; for (const ck of ordered) { if (final.length >= targetTotal) break; if (byCell[ck].length) { final.push(byCell[ck].shift()); progress = true; } } }
+    console.log(`  trimmed ${kept.length} → ${final.length} kept (target ${targetTotal}), balanced across subdomain × band`);
+  }
+  return assemble(final, testNum, title || `BUILD_SPEC · ${domain} (whole domain, B1–B7)`);
 }
 
 async function main() {
@@ -216,7 +227,8 @@ async function main() {
     const perCell = Number(process.argv[4] || 1);
     const testNum = Number(process.argv[5] || 92);
     const bands = (process.argv[6] || BANDS.join(",")).split(",");
-    await generateDomain(domain, { perCell, bands, testNum });
+    const targetTotal = Number(process.argv[7]) || null;
+    await generateDomain(domain, { perCell, bands, testNum, targetTotal });
   } else {
     const sub = process.argv[2] || "linear_equations_one_variable";
     const n = Number(process.argv[3] || 6);

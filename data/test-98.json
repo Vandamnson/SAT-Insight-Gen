@@ -1,0 +1,1708 @@
+{
+  "number": 98,
+  "title": "model-first spot-check (v2: abstract-task + few-shot + phrasing)",
+  "questions": [
+    {
+      "id": 1,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B1",
+      "target_band": "B1",
+      "statementId": "ALG.B1.s2",
+      "skill": "linear_equations_one_variable",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "A community theater raised $1,180 from a $60 donation and tickets sold at $14 each. How many tickets "
+        },
+        {
+          "t": "math",
+          "v": "h"
+        },
+        {
+          "t": "text",
+          "v": " were sold?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "80"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. translate context: "
+        },
+        {
+          "t": "text",
+          "v": "Revenue is the per-ticket price times the number of tickets plus the fixed donation, equal to the total: "
+        },
+        {
+          "t": "math",
+          "v": "14h + 60 = 1180"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. subtract constant: "
+        },
+        {
+          "t": "text",
+          "v": "Subtract 60 from both sides to isolate the variable term: "
+        },
+        {
+          "t": "math",
+          "v": "14h = 1120"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. divide coefficient: "
+        },
+        {
+          "t": "text",
+          "v": "Divide both sides by 14 to isolate "
+        },
+        {
+          "t": "math",
+          "v": "h"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "math",
+          "v": "h = 80"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 320,
+        "band": "B1",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "solve",
+          "n_steps": 1,
+          "has_variable_both_sides": false,
+          "has_fractions": false,
+          "answer_type": "integer"
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "solve",
+        "n_steps": 1,
+        "has_variable_both_sides": false,
+        "has_fractions": false,
+        "answer_type": "integer"
+      },
+      "fingerprint": [
+        "translate_context",
+        "subtract_constant",
+        "divide_coefficient"
+      ],
+      "reskinDistance": 0.333,
+      "tier": "build-spec"
+    },
+    {
+      "id": 2,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B3",
+      "target_band": "B3",
+      "statementId": "ALG.B3.s1",
+      "skill": "linear_equations_one_variable",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "A family farm planted soybeans on 38 acres, which is "
+        },
+        {
+          "t": "math",
+          "v": "\\frac{2}{3}"
+        },
+        {
+          "t": "text",
+          "v": " of its total "
+        },
+        {
+          "t": "math",
+          "v": "k"
+        },
+        {
+          "t": "text",
+          "v": " acres of cropland. What is the value of "
+        },
+        {
+          "t": "math",
+          "v": "k"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "19"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "57"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "76"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "114"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "B"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. translate context: "
+        },
+        {
+          "t": "text",
+          "v": "Soybeans cover "
+        },
+        {
+          "t": "math",
+          "v": "\\frac{2}{3}"
+        },
+        {
+          "t": "text",
+          "v": " of the total "
+        },
+        {
+          "t": "math",
+          "v": "k"
+        },
+        {
+          "t": "text",
+          "v": " acres and equal 38 acres, giving "
+        },
+        {
+          "t": "math",
+          "v": "\\frac{2}{3}k = 38"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. divide coefficient: "
+        },
+        {
+          "t": "text",
+          "v": "Multiply both sides by the reciprocal "
+        },
+        {
+          "t": "math",
+          "v": "\\frac{3}{2}"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "math",
+          "v": "k = 38 \\cdot \\frac{3}{2} = 57"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 435,
+        "band": "B3",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "create_solve",
+          "n_steps": 1,
+          "has_variable_both_sides": false,
+          "has_fractions": true,
+          "answer_type": "integer"
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "create_solve",
+        "n_steps": 1,
+        "has_variable_both_sides": false,
+        "has_fractions": true,
+        "answer_type": "integer"
+      },
+      "fingerprint": [
+        "translate_context",
+        "divide_coefficient"
+      ],
+      "reskinDistance": 0.5,
+      "tier": "build-spec"
+    },
+    {
+      "id": 3,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B4",
+      "target_band": "B4",
+      "statementId": "ALG.B3.s1",
+      "skill": "linear_equations_one_variable",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "One ride-share app pays a driver $12 per ride plus a nightly base of $15. A second app pays $7 per ride plus a nightly base of $85. For how many rides "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": " are the two nightly totals equal?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "14"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. translate context: "
+        },
+        {
+          "t": "text",
+          "v": "Set the two nightly-fare expressions equal: "
+        },
+        {
+          "t": "math",
+          "v": "12x + 15 = 7x + 85"
+        },
+        {
+          "t": "text",
+          "v": ", with "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": " on both sides."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. move variable term: "
+        },
+        {
+          "t": "text",
+          "v": "Subtract "
+        },
+        {
+          "t": "math",
+          "v": "7x"
+        },
+        {
+          "t": "text",
+          "v": " from both sides to combine the variable terms: "
+        },
+        {
+          "t": "math",
+          "v": "5x + 15 = 85"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. subtract constant: "
+        },
+        {
+          "t": "text",
+          "v": "Subtract "
+        },
+        {
+          "t": "math",
+          "v": "15"
+        },
+        {
+          "t": "text",
+          "v": " from both sides to isolate the variable term: "
+        },
+        {
+          "t": "math",
+          "v": "5x = 70"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "4. divide coefficient: "
+        },
+        {
+          "t": "text",
+          "v": "Divide both sides by "
+        },
+        {
+          "t": "math",
+          "v": "5"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "math",
+          "v": "x = 14"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 520,
+        "band": "B4",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "solve",
+          "n_steps": 3,
+          "has_variable_both_sides": true,
+          "has_fractions": false,
+          "answer_type": "integer"
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "solve",
+        "n_steps": 3,
+        "has_variable_both_sides": true,
+        "has_fractions": false,
+        "answer_type": "integer"
+      },
+      "fingerprint": [
+        "translate_context",
+        "move_variable_term",
+        "subtract_constant",
+        "divide_coefficient"
+      ],
+      "reskinDistance": 0.5,
+      "tier": "build-spec"
+    },
+    {
+      "id": 4,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B6",
+      "target_band": "B6",
+      "statementId": "ALG.B6.s1",
+      "skill": "linear_equations_two_variables",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "In the "
+        },
+        {
+          "t": "math",
+          "v": "xy"
+        },
+        {
+          "t": "text",
+          "v": "-plane, line "
+        },
+        {
+          "t": "math",
+          "v": "\\ell"
+        },
+        {
+          "t": "text",
+          "v": " models the mass "
+        },
+        {
+          "t": "math",
+          "v": "y"
+        },
+        {
+          "t": "text",
+          "v": ", in grams, of a melting glacier sample after "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": " hours, with the mass decreasing by 2 grams every 5 hours. Line "
+        },
+        {
+          "t": "math",
+          "v": "k"
+        },
+        {
+          "t": "text",
+          "v": " is perpendicular to line "
+        },
+        {
+          "t": "math",
+          "v": "\\ell"
+        },
+        {
+          "t": "text",
+          "v": " and passes through the point "
+        },
+        {
+          "t": "math",
+          "v": "(10, 8)"
+        },
+        {
+          "t": "text",
+          "v": ". Which equation represents line "
+        },
+        {
+          "t": "math",
+          "v": "k"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "y = -\\frac{2}{5}x + 12"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "y = \\frac{5}{2}x - 17"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "y = -\\frac{5}{2}x + 33"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "y = \\frac{2}{5}x + 4"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "B"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. translate function: "
+        },
+        {
+          "t": "text",
+          "v": "The mass decreases by 2 grams every 5 hours, so line "
+        },
+        {
+          "t": "math",
+          "v": "\\ell"
+        },
+        {
+          "t": "text",
+          "v": " has slope "
+        },
+        {
+          "t": "math",
+          "v": "-\\frac{2}{5}"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. apply perpendicular: "
+        },
+        {
+          "t": "text",
+          "v": "The perpendicular slope is the negative reciprocal of "
+        },
+        {
+          "t": "math",
+          "v": "-\\frac{2}{5}"
+        },
+        {
+          "t": "text",
+          "v": ", which is "
+        },
+        {
+          "t": "math",
+          "v": "\\frac{5}{2}"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. point slope: "
+        },
+        {
+          "t": "text",
+          "v": "Substitute slope "
+        },
+        {
+          "t": "math",
+          "v": "\\frac{5}{2}"
+        },
+        {
+          "t": "text",
+          "v": " and point "
+        },
+        {
+          "t": "math",
+          "v": "(10, 8)"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "math",
+          "v": "8 = \\frac{5}{2}(10) + b"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "4. find intercept: "
+        },
+        {
+          "t": "math",
+          "v": "8 = 25 + b"
+        },
+        {
+          "t": "text",
+          "v": " gives "
+        },
+        {
+          "t": "math",
+          "v": "b = -17"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "5. match representation: "
+        },
+        {
+          "t": "text",
+          "v": "Line "
+        },
+        {
+          "t": "math",
+          "v": "k"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "math",
+          "v": "y = \\frac{5}{2}x - 17"
+        },
+        {
+          "t": "text",
+          "v": ", matching option B."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 630,
+        "band": "B6",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "parallel_perp",
+          "has_fraction": true,
+          "from_context": true
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "parallel_perp",
+        "has_fraction": true,
+        "from_context": true
+      },
+      "fingerprint": [
+        "translate_function",
+        "apply_perpendicular",
+        "point_slope",
+        "find_intercept",
+        "match_representation"
+      ],
+      "reskinDistance": 0.8,
+      "tier": "build-spec"
+    },
+    {
+      "id": 5,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "ALG.B7.s2",
+      "skill": "linear_equations_two_variables",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "An online form for a beach cleanup lets each volunteer pledge cleanup hours. The table shows the total number of hours pledged, "
+        },
+        {
+          "t": "math",
+          "v": "y"
+        },
+        {
+          "t": "text",
+          "v": ", after "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": " volunteers have signed up. Which equation represents this relationship?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "y = 5x + 4"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "y = \\frac{2}{5}x + 9"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "y = \\frac{5}{2}x + 9"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "y = \\frac{5}{2}x + 14"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "C"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. slope formula: "
+        },
+        {
+          "t": "text",
+          "v": "Pick two rows, e.g. (2, 14) and (4, 19): slope = (19 - 14)/(4 - 2) = 5/2."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. compute slope: "
+        },
+        {
+          "t": "text",
+          "v": "Confirm with another pair, e.g. (8, 29) and (12, 39): (39 - 29)/(12 - 8) = 10/4 = 5/2."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. substitute: "
+        },
+        {
+          "t": "text",
+          "v": "Substitute point (2, 14) into y = (5/2)x + b: 14 = (5/2)(2) + b."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "4. find intercept: "
+        },
+        {
+          "t": "text",
+          "v": "Solve 14 = 5 + b, so b = 9."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "5. match representation: "
+        },
+        {
+          "t": "text",
+          "v": "Equation y = (5/2)x + 9 fits every row, matching choice C."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "table",
+        "spec": {
+          "kind": "value",
+          "headers": [
+            "x",
+            "y"
+          ],
+          "rows": [
+            [
+              "2",
+              "14"
+            ],
+            [
+              "4",
+              "19"
+            ],
+            [
+              "8",
+              "29"
+            ],
+            [
+              "12",
+              "39"
+            ]
+          ]
+        }
+      },
+      "difficulty": {
+        "scalePoint": 680,
+        "band": "B7",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "create_from_table",
+          "has_fraction": true,
+          "from_context": true
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "create_from_table",
+        "has_fraction": true,
+        "from_context": true
+      },
+      "fingerprint": [
+        "slope_formula",
+        "compute_slope",
+        "substitute",
+        "find_intercept",
+        "match_representation"
+      ],
+      "reskinDistance": 0.6,
+      "tier": "build-spec"
+    },
+    {
+      "id": 6,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B5",
+      "target_band": "B5",
+      "statementId": "ALG.B5.s2",
+      "skill": "systems_of_linear_equations",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "An electric scooter drains battery at a constant percent per mile in eco mode and a constant percent per mile in sport mode. Riding "
+        },
+        {
+          "t": "math",
+          "v": "5"
+        },
+        {
+          "t": "text",
+          "v": " eco miles and "
+        },
+        {
+          "t": "math",
+          "v": "2"
+        },
+        {
+          "t": "text",
+          "v": " sport miles drains "
+        },
+        {
+          "t": "math",
+          "v": "23\\%"
+        },
+        {
+          "t": "text",
+          "v": "; riding "
+        },
+        {
+          "t": "math",
+          "v": "3"
+        },
+        {
+          "t": "text",
+          "v": " eco miles and "
+        },
+        {
+          "t": "math",
+          "v": "4"
+        },
+        {
+          "t": "text",
+          "v": " sport miles drains "
+        },
+        {
+          "t": "math",
+          "v": "27\\%"
+        },
+        {
+          "t": "text",
+          "v": ". What is "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": ", the percent drained per eco mile?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "19/7"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. translate constraint: "
+        },
+        {
+          "t": "text",
+          "v": "Let "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": " be percent drained per eco mile and "
+        },
+        {
+          "t": "math",
+          "v": "y"
+        },
+        {
+          "t": "text",
+          "v": " per sport mile: "
+        },
+        {
+          "t": "math",
+          "v": "5x+2y=23"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "3x+4y=27"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. scale equation: "
+        },
+        {
+          "t": "text",
+          "v": "Multiply the first equation by "
+        },
+        {
+          "t": "math",
+          "v": "3"
+        },
+        {
+          "t": "text",
+          "v": " ("
+        },
+        {
+          "t": "math",
+          "v": "15x+6y=69"
+        },
+        {
+          "t": "text",
+          "v": ") and the second by "
+        },
+        {
+          "t": "math",
+          "v": "5"
+        },
+        {
+          "t": "text",
+          "v": " ("
+        },
+        {
+          "t": "math",
+          "v": "15x+20y=135"
+        },
+        {
+          "t": "text",
+          "v": ") to match the "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": "-coefficients at "
+        },
+        {
+          "t": "math",
+          "v": "15"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. subtract equations: "
+        },
+        {
+          "t": "text",
+          "v": "Subtract the aligned equations to eliminate "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "math",
+          "v": "14y=66"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "4. solve single: "
+        },
+        {
+          "t": "text",
+          "v": "Solve for "
+        },
+        {
+          "t": "math",
+          "v": "y"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "math",
+          "v": "y=\\frac{66}{14}=\\frac{33}{7}"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "5. back substitute: "
+        },
+        {
+          "t": "text",
+          "v": "Substitute "
+        },
+        {
+          "t": "math",
+          "v": "y=\\frac{33}{7}"
+        },
+        {
+          "t": "text",
+          "v": " into "
+        },
+        {
+          "t": "math",
+          "v": "5x+2y=23"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "math",
+          "v": "5x+\\frac{66}{7}=23"
+        },
+        {
+          "t": "text",
+          "v": ", so "
+        },
+        {
+          "t": "math",
+          "v": "5x=\\frac{95}{7}"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "6. solve single: "
+        },
+        {
+          "t": "text",
+          "v": "Solve for "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "math",
+          "v": "x=\\frac{95}{35}=\\frac{19}{7}"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 600,
+        "band": "B5",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "solve",
+          "has_fraction_solution": true,
+          "from_context": true
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "solve",
+        "has_fraction_solution": true,
+        "from_context": true
+      },
+      "fingerprint": [
+        "translate_constraint",
+        "scale_equation",
+        "subtract_equations",
+        "solve_single",
+        "back_substitute",
+        "solve_single"
+      ],
+      "reskinDistance": 0.667,
+      "tier": "build-spec"
+    },
+    {
+      "id": 7,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "ALG.B7.s1",
+      "skill": "systems_of_linear_equations",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "math",
+          "v": "8x - 6y = 5"
+        },
+        {
+          "t": "text",
+          "v": "\n"
+        },
+        {
+          "t": "math",
+          "v": "12x - 10y = 9"
+        },
+        {
+          "t": "text",
+          "v": "\nHow many solutions "
+        },
+        {
+          "t": "math",
+          "v": "(x, y)"
+        },
+        {
+          "t": "text",
+          "v": " does the given system of equations have?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "text",
+              "v": "No solution"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "text",
+              "v": "Exactly one solution"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "text",
+              "v": "Exactly two solutions"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "text",
+              "v": "Infinitely many solutions"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "B"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. scale equation: "
+        },
+        {
+          "t": "text",
+          "v": "Normalize each equation to slope-intercept form: "
+        },
+        {
+          "t": "math",
+          "v": "8x - 6y = 5\\Rightarrow y = \\frac{4}{3}x - \\frac{5}{6}"
+        },
+        {
+          "t": "text",
+          "v": "; "
+        },
+        {
+          "t": "math",
+          "v": "12x - 10y = 9\\Rightarrow y = \\frac{6}{5}x - \\frac{9}{10}"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. compare slopes: "
+        },
+        {
+          "t": "text",
+          "v": "Compare slopes: "
+        },
+        {
+          "t": "math",
+          "v": "m_1 = \\frac{4}{3}"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "m_2 = \\frac{6}{5}"
+        },
+        {
+          "t": "text",
+          "v": ". Since "
+        },
+        {
+          "t": "math",
+          "v": "\\frac{4}{3} \\neq \\frac{6}{5}"
+        },
+        {
+          "t": "text",
+          "v": ", the lines are not parallel (and not coincident)."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. determinant: "
+        },
+        {
+          "t": "text",
+          "v": "Confirm via the determinant: "
+        },
+        {
+          "t": "math",
+          "v": "8(-10) - 12(-6) = -80 + 72 = -8 \\neq 0"
+        },
+        {
+          "t": "text",
+          "v": ", so the lines cross at a single point — here "
+        },
+        {
+          "t": "math",
+          "v": "\\left(-\\frac{1}{2}, -\\frac{3}{2}\\right)"
+        },
+        {
+          "t": "text",
+          "v": ", a non-integer point."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "4. translate constraint: "
+        },
+        {
+          "t": "text",
+          "v": "A nonzero determinant means the two distinct lines intersect exactly once, so the system has exactly one solution."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 660,
+        "band": "B6",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "number_of_solutions",
+          "has_fraction_solution": true,
+          "from_context": false
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "number_of_solutions",
+        "has_fraction_solution": true,
+        "from_context": false
+      },
+      "fingerprint": [
+        "scale_equation",
+        "compare_slopes",
+        "determinant",
+        "translate_constraint"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 8,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B5",
+      "target_band": "B5",
+      "statementId": "ALG.B5.s1",
+      "skill": "linear_inequalities",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "A rainwater system's untreated reserve holds 133 liters and drops by 4 liters for each liter "
+        },
+        {
+          "t": "math",
+          "v": "w"
+        },
+        {
+          "t": "text",
+          "v": " it filters. To make room before a storm, the reserve must fall below 98 liters. What is the least integer value of "
+        },
+        {
+          "t": "math",
+          "v": "w"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "8"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "9"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "10"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "12"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "B"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. model inequality: "
+        },
+        {
+          "t": "text",
+          "v": "After filtering "
+        },
+        {
+          "t": "math",
+          "v": "w"
+        },
+        {
+          "t": "text",
+          "v": " liters, the reserve is "
+        },
+        {
+          "t": "math",
+          "v": "133 - 4w"
+        },
+        {
+          "t": "text",
+          "v": "; requiring it below 98 gives "
+        },
+        {
+          "t": "math",
+          "v": "133 - 4w < 98"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. subtract constant: "
+        },
+        {
+          "t": "text",
+          "v": "Subtract 133 from both sides: "
+        },
+        {
+          "t": "math",
+          "v": "-4w < -35"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. divide coefficient: "
+        },
+        {
+          "t": "text",
+          "v": "Divide both sides by "
+        },
+        {
+          "t": "math",
+          "v": "-4"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "4. flip inequality: "
+        },
+        {
+          "t": "text",
+          "v": "Dividing by a negative reverses the sign: "
+        },
+        {
+          "t": "math",
+          "v": "w > \\frac{35}{4} = 8.75"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "5. apply ceiling: "
+        },
+        {
+          "t": "text",
+          "v": "The least integer greater than 8.75 is 9."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 575,
+        "band": "B5",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "min_int",
+          "negative_coefficient": true,
+          "from_context": true
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "min_int",
+        "negative_coefficient": true,
+        "from_context": true
+      },
+      "fingerprint": [
+        "model_inequality",
+        "subtract_constant",
+        "divide_coefficient",
+        "flip_inequality",
+        "apply_ceiling"
+      ],
+      "reskinDistance": 0.6,
+      "tier": "build-spec"
+    }
+  ]
+}
