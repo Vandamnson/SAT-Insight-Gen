@@ -99,32 +99,42 @@ A clean redesign from `BUILD_SPEC.md` (PromptCoT concept→rationale→problem +
 
 ```mermaid
 flowchart TD
-  subgraph harness["HARNESS (your code, deterministic) — no agent calls another"]
-    DRAW["DRAW (code, no LLM)<br/>radicals PINNED to band via LLTM<br/>incidentals DRAWN randomly = variety"]
-    A1["AGENT 1 — rationale (sonnet)<br/>design rationale + intended solve path<br/>(PromptCoT: pushes author off canonical)"]
-    A2["AGENT 2 — author (sonnet/opus)<br/>structured JSON + typed solve_path"]
-    subgraph sel["SELECTOR — two-tier deterministic gate (all trust here)"]
-      TA["Tier A (anchored: algebra)<br/>AGENT 3 writes Python verify()<br/>harness runs it sandboxed, 10s"]
-      TB["Tier B (free: geometry)<br/>solve N times, keep if >=4 agree"]
-      BG["LLTM band gate (asymmetric)<br/>reject if HARDER than target"]
-      DD["surface dedup"]
-      RS["reskin structural-distance<br/>LOG ONLY (epsilon floor off)"]
+  CELL[("cells/*.json : radical axes, LLTM weights, per-task A/B tier")]
+  subgraph harness["HARNESS - deterministic, your code (no agent calls another)"]
+    direction TB
+    DRAW["1. DRAW cell + free axes - no LLM<br/>radicals (difficulty) PINNED to band via LLTM<br/>incidentals + concrete numbers DRAWN in code"]
+    A1["AGENT 1 - Rationale (OPUS)<br/>design rationale + intended solve path"]
+    A2["AGENT 2 - Author (OPUS)<br/>JSON: statement, choices, answer,<br/>typed solve_path, radicals_used, claimed_band"]
+    subgraph SEL["SELECTOR - two-tier deterministic gate, all trust here"]
+      direction TB
+      TIER{"anchored domain?"}
+      TA["TIER A - PROVE (OPUS)<br/>AGENT 3 writes a SymPy verify()<br/>harness runs it sandboxed, 10s"]
+      TB["TIER B - self-consistency (OPUS)<br/>N independent solves must agree"]
+      BAND["LLTM band gate, asymmetric<br/>reject if harder than target"]
+      DEDUP["surface dedup"]
+      RESKIN["reskin distance on solve_path"]
     end
-    PB["over-generate -> pick_balanced<br/>band spread within the cell"]
-    RA["adapter -> render segment schema"]
+    REVISE["DOUBLE GATE - revise, do not discard<br/>turn the failure into feedback,<br/>re-author, then gate AGAIN"]
+    PB["2. over-generate then pick_balanced<br/>SAT band/domain mix, covering design"]
+    RA["render adapter to KaTeX static site"]
   end
-  CELL["cell + free axes<br/>(taxonomy/cells/*.json)"] --> DRAW
-  DRAW --> A1 --> A2 --> TA
-  A2 -. free domains .-> TB
-  TA --> BG
-  TB --> BG
-  BG --> DD --> RS --> PB --> RA
-  TA -->|verify=False| REJ["reject (most draws)"]:::r
-  BG -->|too hard| REJ
-  KAPPA["step 5 research (optional, off critical path):<br/>regress measured (consistency) difficulty on radicals -> refit LLTM<br/>structure-vs-model correlation = anc(d)"]:::e
-  PB -.-> KAPPA
+  DROP["drop ONLY after repairs exhausted"]
+  CELL --> DRAW --> A1 --> A2 --> TIER
+  TIER -->|"yes: algebra"| TA
+  TIER -->|"no: geometry"| TB
+  TA --> BAND
+  TB --> BAND
+  BAND --> DEDUP --> RESKIN
+  RESKIN -->|"pass"| PB --> RA
+  TA -.->|"verify False"| REVISE
+  BAND -.->|"wrong band"| REVISE
+  RESKIN -.->|"reskin / dup"| REVISE
+  REVISE ==>|"feedback to Agent 2"| A2
+  REVISE -.->|"still failing"| DROP
   classDef r fill:#ffe0e0,stroke:#c00,color:#900
-  classDef e fill:#fff3cd,stroke:#c90,color:#960
+  classDef g fill:#e0f7e9,stroke:#093,color:#063
+  class DROP r
+  class REVISE g
 ```
 
 **What changed from #4 → #5, and why:**
@@ -133,5 +143,6 @@ flowchart TD
 - **PROVE generalizes the leash.** Agent 3 writes a fresh sympy `verify()` per item, executed sandboxed — no hand-written recompute branch per skill. (Generalizes `recompute.js`.)
 - **Rationale-first (PromptCoT).** Writing the design rationale before the problem is the structural lever against reskins.
 - **One direction, deterministic gate.** Linearity is what makes it shippable; tuning knobs (over-generate ×, ε reskin floor, band tolerance, consistency N) sit on top of a frozen selector.
+- **Double gate, not discard — all on Opus.** A rejected item isn't thrown away: the failure is turned into a concrete revision instruction, the author (Agent 2) re-writes it, and it runs the gate **again**; it's dropped only after the repair budget is exhausted. All four agents (rationale, author, PROVE checker-writer, consistency solver) run on Claude Opus.
 
 *Build order: ship `linear_equations_one_variable` end-to-end first (steps 1–4 are the product); LLTM weight-refit + the structure-vs-model correlation are optional research (step 5) that rides on top.*

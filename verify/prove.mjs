@@ -13,7 +13,7 @@ import { writeFileSync, mkdtempSync, rmSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 
-const PROVE_MODEL = process.env.SIG_PROVE_MODEL || "claude-sonnet-4-6";
+const PROVE_MODEL = process.env.SIG_PROVE_MODEL || "claude-opus-4-8";
 const PY = process.env.SIG_PYTHON || "python3";
 const PROVE_TIMEOUT = Number(process.env.SIG_PROVE_TIMEOUT || 10000);
 

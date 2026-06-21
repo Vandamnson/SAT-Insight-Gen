@@ -6,7 +6,7 @@
    ============================================================================ */
 import { llmComplete } from "./llm.mjs";
 
-const RATIONALE_MODEL = process.env.SIG_RATIONALE_MODEL || "claude-sonnet-4-6";
+const RATIONALE_MODEL = process.env.SIG_RATIONALE_MODEL || "claude-opus-4-8";
 
 // System prompt — verbatim from BUILD_SPEC §2.
 const SYSTEM = `You are an expert SAT math item designer. Given a problem SPECIFICATION (the skill to

@@ -12,7 +12,7 @@
    ============================================================================ */
 import { llmComplete } from "../build/llm.mjs";
 
-const SOLVE_MODEL = process.env.SIG_SOLVE_MODEL || "claude-sonnet-4-6";
+const SOLVE_MODEL = process.env.SIG_SOLVE_MODEL || "claude-opus-4-8";
 const SYSTEM = "You are a careful SAT math solver. You solve from scratch and show no work beyond a final line. You never assume any provided answer.";
 
 const norm = (s) => String(s ?? "").trim().toLowerCase().replace(/\s+/g, "").replace(/^[(]|[)]$/g, "").replace(/^\+/, "");

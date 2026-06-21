@@ -7,8 +7,8 @@
    ============================================================================ */
 import { llmComplete, parseJson } from "./llm.mjs";
 
-// sonnet for most bands; opus for the hardest (B6-B7), per BUILD_SPEC §3.
-const AUTHOR_MODEL = process.env.SIG_AUTHOR_MODEL || "claude-sonnet-4-6";
+// Opus for all bands (quality over cost). Overridable per env.
+const AUTHOR_MODEL = process.env.SIG_AUTHOR_MODEL || "claude-opus-4-8";
 const AUTHOR_MODEL_HARD = process.env.SIG_AUTHOR_MODEL_HARD || "claude-opus-4-8";
 export const modelForBand = (band) => (Number(String(band).replace("B", "")) >= 6 ? AUTHOR_MODEL_HARD : AUTHOR_MODEL);
 
@@ -38,7 +38,7 @@ Output ONLY valid JSON, no prose, no markdown fences:
 
 /** authorItem(cell, rationaleText) -> parsed candidate JSON (throws on transport;
  *  returns null on unparseable output so the harness just drops that draw). */
-export async function authorItem(cell, rationaleText, { model = modelForBand(cell.band) } = {}) {
+export async function authorItem(cell, rationaleText, { model = modelForBand(cell.band), feedback = null } = {}) {
   const fmt = cell.incidentals?.format === "mcq"
     ? `Write this as MULTIPLE CHOICE: include "choices" (exactly 4, "A) ".."D) ") and "correct_choice"; exactly one is correct, the other three are plausible near-misses.`
     : `Write this as FREE-RESPONSE (student-produced): OMIT "choices"; put the single value in "answer". Do not include "correct_choice".`;
@@ -64,7 +64,7 @@ STYLE (SAT items are tight — follow exactly):
 - CURRENCY: write money as ordinary text — $5, $3.50 — NEVER inside \\(...\\) (a dollar sign is money, not math).
 - TABLES: if the item shows a table of values, emit it as a clean markdown table with a header-separator row, each row on its OWN line (newline-separated), e.g.  | x | y |\\n| --- | --- |\\n| 0 | 5 |\\n| 1 | -2 |  . Keep cells PLAIN — bare numbers/letters, no \\(...\\), no $. Do not also restate the table values in prose.
 - The "answer" field (free-response) must be the PLAIN griddable value (e.g. -29/2 or 4.5), NOT LaTeX.
-Use op names in solve_path drawn from this vocabulary where they apply: ${JSON.stringify(cell.opVocab || cell.op_vocab || [])}.`;
+Use op names in solve_path drawn from this vocabulary where they apply: ${JSON.stringify(cell.opVocab || cell.op_vocab || [])}.${feedback ? `\n\n⚠ REVISION — your previous attempt for THIS exact cell was REJECTED by an independent gate. Reason: ${feedback}\nFix precisely that. Keep the same skill, target band, format, and the pinned numbers/answer above; return the corrected item as JSON.` : ""}`;
   const raw = await llmComplete(user, { system: SYSTEM, model });
   try { return parseJson(raw); } catch { return null; }
 }

@@ -26,6 +26,18 @@ const cellSchema = (dom) => JSON.parse(readFileSync(join(ROOT, "taxonomy", "cell
 const OVER = Number(process.env.SIG_OVER || 3);                 // over-generate multiple (§6)
 const CAP = Number(process.env.SIG_POOL || 4);                  // candidate concurrency
 const DOMAIN_CODE = { algebra: "ALG", advanced_math: "ADV", psda: "PSDA", geometry_trig: "GEO" };
+const MAX_REPAIRS = Number(process.env.SIG_MAX_REPAIRS ?? 1);   // "double gate": 1 repair = 2 gate passes
+
+// turn a failed selector gate into a concrete revision instruction for the author (Agent 2).
+function reviseInstruction(g) {
+  if (g.stage === "correctness") return "An independent checker could NOT reproduce your answer. Re-solve from scratch and fix the numbers/answer so there is exactly one clearly-correct, unambiguous answer.";
+  if (g.stage === "band") return g.gate?.reason === "too hard"
+    ? "It measured HARDER than the target band — simplify: fewer solve steps, cleaner numbers, no structure beyond the radicals."
+    : "It measured off the target band — match the target difficulty exactly per the radicals, no more and no less.";
+  if (g.stage === "reskin") return "Too close to the textbook-canonical instance — change the structure so the solve path differs, keeping the same skill, band, and pinned answer.";
+  if (g.stage === "dedup") return "Too similar to another item — change the context and surface details substantially.";
+  return "Revise so the item passes independent verification and lands in the target band.";
+}
 
 /* ---- concurrency pool ---- */
 async function pool(tasks, cap) {
@@ -128,13 +140,18 @@ async function generateCell(domain, subdomain, n, bands, ctr) {
   const tasks = Array.from({ length: draws }, (_, k) => async () => {
     const band = bands[k % bands.length];
     const cell = drawCell(domain, subdomain, band, ctr.i++);
-    let rat, cand;
+    let rat;
     try { rat = await rationale(cell); } catch (e) { reasons.push(`rationale ${e.message}`); return null; }
-    cand = await authorItem(cell, rat);
-    if (!cand || !cand.statement) { reasons.push(`author parse fail [${band}]`); return null; }
-    const gate = await verifyAndGate(cand, cell);
-    if (!gate.keep) { reasons.push(`${gate.stage} [${band}] ${gate.reason || ""}`.trim()); return null; }
-    return { cand, cell, gate };
+    let feedback = null;                                          // DOUBLE GATE: gate → repair → gate (don't discard on first fail)
+    for (let attempt = 0; attempt <= MAX_REPAIRS; attempt++) {
+      const cand = await authorItem(cell, rat, { feedback });
+      if (!cand || !cand.statement) { feedback = "Output was not a single valid JSON object with a \"statement\". Return ONLY the JSON object."; reasons.push(`parse [${band}] r${attempt}`); continue; }
+      const gate = await verifyAndGate(cand, cell);
+      if (gate.keep) return { cand, cell, gate, repairs: attempt };
+      feedback = reviseInstruction(gate);                          // feed the failure back to the author
+      reasons.push(`${gate.stage} [${band}] r${attempt}${attempt < MAX_REPAIRS ? " → repair" : " → drop"}`);
+    }
+    return null;
   });
   const verified = (await pool(tasks, CAP)).filter(Boolean);
   // 3 sequential: surface dedup over the growing kept pool
