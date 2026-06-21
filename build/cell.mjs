@@ -157,10 +157,11 @@ const DRAWERS = {
   linear_inequalities: drawInequality,
 };
 
-// tasks the real SAT poses ABSTRACTLY (bare equation, no scenario) — they ask the
-// student to ANALYZE equation structure, so dressing them in a real-world story
-// reads as generator output. Force context off for these.
-const ABSTRACT_TASKS = new Set(["num_solutions", "missing_coeff", "number_of_solutions", "missing_coefficient", "variable_constants"]);
+// tasks the real SAT poses ABSTRACTLY (bare equation/lines, no scenario) — they ask
+// the student to ANALYZE structure, so a real-world story reads as generator output.
+// (parallel_perp included: perpendicularity has no meaning on a real-world rate model
+// — the blind judge flagged the contextualized version as "conceptually incoherent".)
+const ABSTRACT_TASKS = new Set(["num_solutions", "missing_coeff", "number_of_solutions", "missing_coefficient", "variable_constants", "parallel_perp"]);
 
 /* ============================ the draw ============================ */
 export function drawCell(domain, subdomain, band, idx = 0) {
