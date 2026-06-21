@@ -1,8 +1,22 @@
 # HANDOFF — SAT-Insight-Gen
 
-_Last updated: 2026-06-19 · Repo is now GIT (`main` = old hybrid baseline; work on branch `build-spec-pipeline`). NEW ARCHITECTURE per `BUILD_SPEC.md` — see below. Prior phases 0–2 (hybrid) still on `main`._
+_Last updated: 2026-06-21 · Repo is GIT (`main` = old hybrid baseline; BUILD_SPEC on `build-spec-pipeline`; latest work on `opus-double-gate`). NEW ARCHITECTURE per `BUILD_SPEC.md` — see below._
 
-## ⮕ CURRENT: BUILD_SPEC four-agent linear pipeline (2026-06-19)
+## ⮕ CURRENT: model-first authoring + authenticity finding (2026-06-21, branch `opus-double-gate`, commit d99c522)
+A refinement on the BUILD_SPEC pipeline (described below). The harness now pins item **STRUCTURE, not exact numbers**: it draws the band-fixing radicals + a structure directive; the **author invents a natural situation and picks fitting numbers**; PROVE re-derives; the LLTM gates the band off the radicals. This removes the "context pasted onto a pre-set equation" tell. Graph tasks (`read_graph`/`connect_graph`) stay harness-pinned (figure + answer).
+
+- `build/cell.mjs` — drawers emit MODEL-FIRST structure directives (`answer:null`). Structure-analysis tasks (`num_solutions`, `missing_coeff`, `number_of_solutions`, `variable_constants`) forced **ABSTRACT** (no scenario) to match the real SAT. MCQ/SPR ratio fixed (~50/50 → **~70/30**). Keeps context (without-replacement) + task (least-used) rotation.
+- `build/author2.mjs` — **few-shot VOICE anchors** from real CB exemplars (`taxonomy/exemplars.clean.json`, held out by band so the same-band judge pair isn't leaked); **variable-definition** + phrasing discipline; model-first contract (author owns the numbers).
+- `build/selector.mjs` — tier-C `figureCheck` (graph items) + run-level structural-clone dedup (`SIG_STRUCT_DEDUP`).
+
+**Authenticity spot-check** (blind judge vs CB exemplars — `build/_authjudge.mjs` matched-pairs, `build/_absjudge.mjs` absolute):
+- **The matched-pairs metric is CONFOUNDED by recognition** (the judge has memorized released items → "I recognize the Kelvin item"); it scored ours 4.1 vs 8.1. **Use the ABSOLUTE single-item judge** (`_absjudge.mjs`) instead.
+- ABSOLUTE authenticity: **5.8** (model-first only) / **5.9** (+ abstract-task/few-shot/phrasing) vs **8.0 official** (clean ceiling ~9). Real gap ≈ **2 pts, not 4**. Abstract-task fix moved the how-many-solutions item **3→9**. The 4 fixes net flat on aggregate because the judge always finds a fresh nit.
+- **DOMINANT remaining tell = variable definition** (CB defines the variable in its own clause or omits it from the ask; we embedded it awkwardly). Fix applied in `author2.mjs` STYLE but **UNVERIFIED** (chose to bank, not spend another cycle).
+- 2 official exemplars are **scrape-corrupted** (`2x+16=ax+8`, `x+63=x+613`) — excluded from few-shot + baseline.
+- Re-run: `SIG_OVER=2 node build/_spot.mjs 99` (gen 8) → `node build/_absjudge.mjs official data/test-98.json data/test-99.json`. **NOTE:** the judges' `texToPlain` MUST keep `$` (currency) and map `\ell`→ℓ — a bug stripped both and unfairly tanked currency/ℓ items.
+
+## BUILD_SPEC four-agent linear pipeline (2026-06-19) — base architecture
 The architecture was rebuilt to `BUILD_SPEC.md` — a **linear four-agent producer + deterministic two-tier selector** (PromptCoT rationale→author + PROVE program-verifier). This REPLACES the hybrid grid+open-lane + LLM-judge approach. Diagram #5 in `ARCHITECTURE.md`.
 
 **Modules (all new, on branch `build-spec-pipeline`):**
