@@ -34,6 +34,7 @@ function reviseInstruction(g) {
   if (g.stage === "band") return g.gate?.reason === "too hard"
     ? "It measured HARDER than the target band — simplify: fewer solve steps, cleaner numbers, no structure beyond the radicals."
     : "It measured off the target band — match the target difficulty exactly per the radicals, no more and no less.";
+  if (g.stage === "plausibility") return `The scenario or numbers aren't realistic enough for a published SAT item${g.issues?.length ? ` (${g.issues.join("; ")})` : ""}. Keep the SAME skill, band, and solve structure, but rewrite with a coherent, realistic scenario and sensible, clean numbers — a real-world-plausible quantity, a whole-number result when it counts discrete things, and no physically/economically broken setup.`;
   if (g.stage === "reskin") return "Too close to the textbook-canonical instance — change the structure so the solve path differs, keeping the same skill and target band (you may choose different numbers and a different answer).";
   if (g.stage === "dedup") return "Too similar to another item — change the context and surface details substantially.";
   return "Revise so the item passes independent verification and lands in the target band.";

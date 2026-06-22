@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>SAT-Insight-Gen — Architecture</title>
+<style>
+  :root { --bg:#0e1116; --panel:#161b22; --ink:#e6edf3; --muted:#9aa7b4; --accent:#58a6ff; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
+  header { padding:28px 32px 8px; }
+  h1 { margin:0 0 4px; font-size:22px; letter-spacing:.2px; }
+  .sub { color:var(--muted); font-size:13px; }
+  .legend { margin:14px 32px 0; padding:14px 18px; background:var(--panel); border:1px solid #21262d; border-radius:10px; color:var(--muted); font-size:13px; }
+  .legend b { color:var(--ink); }
+  .legend .principle { color:var(--accent); }
+  .wrap { padding:18px 24px 48px; overflow:auto; }
+  .mermaid { background:transparent; }
+  code { background:#1f2630; padding:1px 5px; border-radius:4px; color:#cdd7e2; font-size:12.5px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>SAT-Insight-Gen — generation architecture</h1>
+  <div class="sub">BUILD_SPEC four-agent linear pipeline + deterministic two-tier selector · branch <code>opus-double-gate</code> · 2026-06-21</div>
+</header>
+
+<div class="legend">
+  <b>Model-first authoring:</b> the harness pins the difficulty-fixing <b>radicals</b> + a <em>structure</em> directive (not exact numbers); the author invents a natural situation and chooses fitting numbers; <b>PROVE</b> re-derives, the <b>LLTM</b> gates the band. Graph tasks stay harness-pinned (figure + answer); structure-analysis &amp; parallel/perpendicular tasks are forced <b>abstract</b> (the real SAT poses them with no scenario).<br/>
+  <b>Plausibility gate (new):</b> on context items, an LLM checks <em>objective real-world coherence only</em> — implausible quantities, broken physics, wrong answer-type. <span class="principle">Novelty is explicitly NOT a defect; we do not optimize toward resembling memorized released items (that would be pre-training-target hitting).</span><br/>
+  <b>Double gate:</b> any gate failure becomes a concrete revision instruction → re-author → re-gate; dropped only after the repair budget is spent.
+</div>
+
+<div class="wrap">
+<pre class="mermaid">
+flowchart TD
+  CELL[("cells/algebra.json<br/>radical axes &middot; LLTM weights<br/>per-task tier &middot; ABSTRACT_TASKS")]
+
+  subgraph HARNESS["HARNESS — deterministic (no agent calls another)"]
+    direction TB
+    DRAW["1 &middot; DRAW cell (cell.mjs) — no LLM<br/>&bull; radicals (difficulty) PINNED to band via LLTM<br/>&bull; context drawn w/o replacement + task rotation<br/>&bull; emits MODEL-FIRST structure directive (answer = null)<br/>&bull; structure-analysis + parallel/perp &rarr; ABSTRACT (no scenario)<br/>&bull; graph tasks &rarr; figure + answer PINNED"]
+    A1["AGENT 1 &middot; Rationale (Opus)<br/>design rationale + intended solve path"]
+    A2["AGENT 2 &middot; Author (Opus)<br/>invents situation + its OWN numbers<br/>few-shot VOICE anchors (real CB exemplars)<br/>clean variable definition<br/>&rarr; JSON: stem, choices, answer, solve_path, radicals_used"]
+
+    subgraph SEL["SELECTOR — deterministic two-tier gate (all trust lives here)"]
+      direction TB
+      COR{"correctness<br/>by tier"}
+      TA["Tier A &middot; PROVE (Opus + SymPy)<br/>Agent 3 writes verify(), run sandboxed 10s"]
+      TB["Tier B &middot; self-consistency<br/>N independent solves must agree"]
+      TC["Tier C &middot; figureCheck<br/>graph self-consistent"]
+      BAND["LLTM band gate (asymmetric)<br/>reject if harder than target"]
+      PLAUS["PLAUSIBILITY gate (Opus) — context items<br/>objective real-world coherence ONLY<br/>(novelty is NOT a defect)"]
+      DEDUP["structural dedup<br/>distinct solve-path fingerprints"]
+    end
+
+    REVISE["DOUBLE GATE — revise, do NOT discard<br/>failure &rarr; concrete instruction &rarr; re-author &rarr; re-gate"]
+    PB["2 &middot; over-generate &rarr; pickBalanced<br/>band &times; subdomain mix"]
+    RA["render adapter &rarr; KaTeX static site"]
+  end
+
+  EVAL["EVAL (offline, NOT in the pipeline)<br/>&bull; ABSOLUTE authenticity judge = DEFECT detector<br/>&bull; matched-pairs = recognition-confounded (deprecated)<br/>goal: remove defects + keep novelty, NOT match official"]
+
+  DROP["drop only after repairs exhausted"]
+
+  CELL --> DRAW --> A1 --> A2 --> COR
+  COR -->|algebra| TA
+  COR -->|free domain| TB
+  COR -->|graph| TC
+  TA --> BAND
+  TB --> BAND
+  TC --> BAND
+  BAND --> PLAUS --> DEDUP
+  DEDUP -->|pass| PB --> RA
+  TA -.->|verify False| REVISE
+  BAND -.->|wrong band| REVISE
+  PLAUS -.->|implausible| REVISE
+  DEDUP -.->|clone| REVISE
+  REVISE ==>|feedback to Agent 2| A2
+  REVISE -.->|still failing| DROP
+  RA -.->|sampled| EVAL
+
+  classDef pin fill:#1b2330,stroke:#30475e,color:#e6edf3;
+  classDef agent fill:#10261c,stroke:#1f6f43,color:#d6f5e3;
+  classDef gate fill:#2a2030,stroke:#7a3f86,color:#f0e2f5;
+  classDef green fill:#0f2a1c,stroke:#2ea043,color:#d6f5e3;
+  classDef red fill:#2a1416,stroke:#c0392b,color:#f5d6d6;
+  classDef eval fill:#241f10,stroke:#9e8423,color:#f5edc9;
+  class CELL,DRAW pin;
+  class A1,A2,TA,TB,TC pin;
+  class COR,BAND,PLAUS,DEDUP gate;
+  class REVISE green;
+  class DROP red;
+  class EVAL eval;
+</pre>
+</div>
+
+<script type="module">
+  import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";
+  mermaid.initialize({ startOnLoad: true, theme: "dark", flowchart: { htmlLabels: true, curve: "basis", nodeSpacing: 45, rankSpacing: 55 }, securityLevel: "loose" });
+</script>
+</body>
+</html>

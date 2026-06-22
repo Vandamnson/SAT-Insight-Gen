@@ -1,0 +1,4544 @@
+{
+  "number": 100,
+  "title": "BUILD_SPEC · algebra (whole domain, B1–B7)",
+  "questions": [
+    {
+      "id": 1,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B1",
+      "target_band": "B1",
+      "statementId": "ALG.B1.s2",
+      "skill": "linear_equations_one_variable",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "A "
+        },
+        {
+          "t": "math",
+          "v": "153"
+        },
+        {
+          "t": "text",
+          "v": "-inch length of fabric is cut completely into "
+        },
+        {
+          "t": "math",
+          "v": "h"
+        },
+        {
+          "t": "text",
+          "v": " sashes of "
+        },
+        {
+          "t": "math",
+          "v": "7"
+        },
+        {
+          "t": "text",
+          "v": " inches each and one "
+        },
+        {
+          "t": "math",
+          "v": "13"
+        },
+        {
+          "t": "text",
+          "v": "-inch trim piece. What is the value of "
+        },
+        {
+          "t": "math",
+          "v": "h"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "20"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. translate context: "
+        },
+        {
+          "t": "text",
+          "v": "Total length equals the h sashes at 7 inches plus the 13-inch trim: "
+        },
+        {
+          "t": "math",
+          "v": "7h + 13 = 153"
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. subtract constant: "
+        },
+        {
+          "t": "text",
+          "v": "Subtract 13 from both sides: "
+        },
+        {
+          "t": "math",
+          "v": "7h = 140"
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. divide coefficient: "
+        },
+        {
+          "t": "text",
+          "v": "Divide both sides by 7: "
+        },
+        {
+          "t": "math",
+          "v": "h = 20"
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "4. isolate variable: "
+        },
+        {
+          "t": "text",
+          "v": "Integer solution: "
+        },
+        {
+          "t": "math",
+          "v": "h = 20"
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 320,
+        "band": "B1",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "solve",
+          "n_steps": 1,
+          "has_variable_both_sides": false,
+          "has_fractions": false,
+          "answer_type": "integer"
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "solve",
+        "n_steps": 1,
+        "has_variable_both_sides": false,
+        "has_fractions": false,
+        "answer_type": "integer"
+      },
+      "fingerprint": [
+        "translate_context",
+        "subtract_constant",
+        "divide_coefficient",
+        "isolate_variable"
+      ],
+      "reskinDistance": 0.5,
+      "tier": "build-spec"
+    },
+    {
+      "id": 2,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B2",
+      "target_band": "B2",
+      "statementId": "ALG.B1.s2",
+      "skill": "linear_equations_one_variable",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "One weather balloon is at 124 meters and rises 9 meters per minute. A second balloon is at 40 meters and rises 16 meters per minute. After how many minutes are the two balloons at the same height?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "12"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. translate context: "
+        },
+        {
+          "t": "text",
+          "v": "Write each height as start + rate·w, where w is minutes: Balloon A = "
+        },
+        {
+          "t": "math",
+          "v": "124 + 9w"
+        },
+        {
+          "t": "text",
+          "v": ", Balloon B = "
+        },
+        {
+          "t": "math",
+          "v": "40 + 16w"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. translate context: "
+        },
+        {
+          "t": "text",
+          "v": "Same-height condition sets the expressions equal: "
+        },
+        {
+          "t": "math",
+          "v": "124 + 9w = 40 + 16w"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. move variable term: "
+        },
+        {
+          "t": "text",
+          "v": "Subtract "
+        },
+        {
+          "t": "math",
+          "v": "9w"
+        },
+        {
+          "t": "text",
+          "v": " from both sides to gather the variable: "
+        },
+        {
+          "t": "math",
+          "v": "124 = 40 + 7w"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "4. subtract constant: "
+        },
+        {
+          "t": "text",
+          "v": "Subtract "
+        },
+        {
+          "t": "math",
+          "v": "40"
+        },
+        {
+          "t": "text",
+          "v": " from both sides: "
+        },
+        {
+          "t": "math",
+          "v": "84 = 7w"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "5. divide coefficient: "
+        },
+        {
+          "t": "text",
+          "v": "Divide both sides by "
+        },
+        {
+          "t": "math",
+          "v": "7"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "math",
+          "v": "w = 84/7 = 12"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 405,
+        "band": "B2",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "create_solve",
+          "n_steps": 1,
+          "has_variable_both_sides": true,
+          "has_fractions": false,
+          "answer_type": "integer"
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "create_solve",
+        "n_steps": 1,
+        "has_variable_both_sides": true,
+        "has_fractions": false,
+        "answer_type": "integer"
+      },
+      "fingerprint": [
+        "translate_context",
+        "translate_context",
+        "move_variable_term",
+        "subtract_constant",
+        "divide_coefficient"
+      ],
+      "reskinDistance": 0.6,
+      "tier": "build-spec"
+    },
+    {
+      "id": 3,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B2",
+      "target_band": "B2",
+      "statementId": "ALG.B2.s1",
+      "skill": "linear_equations_two_variables",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "In the "
+        },
+        {
+          "t": "math",
+          "v": "xy"
+        },
+        {
+          "t": "text",
+          "v": "-plane, the graph of "
+        },
+        {
+          "t": "math",
+          "v": "6x + 7y = 54"
+        },
+        {
+          "t": "text",
+          "v": " is a line. What is the "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": "-coordinate of the line's "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": "-intercept?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "9"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. find intercept: "
+        },
+        {
+          "t": "text",
+          "v": "The x-intercept is the point where the output is 0, so set "
+        },
+        {
+          "t": "math",
+          "v": "y = 0"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. substitute: "
+        },
+        {
+          "t": "text",
+          "v": "Substitute "
+        },
+        {
+          "t": "math",
+          "v": "y = 0"
+        },
+        {
+          "t": "text",
+          "v": " into "
+        },
+        {
+          "t": "math",
+          "v": "6x + 7y = 54"
+        },
+        {
+          "t": "text",
+          "v": ", reducing it to "
+        },
+        {
+          "t": "math",
+          "v": "6x = 54"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. evaluate: "
+        },
+        {
+          "t": "text",
+          "v": "Divide both sides by 6 to get "
+        },
+        {
+          "t": "math",
+          "v": "x = \\frac{54}{6} = 9"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 400,
+        "band": "B2",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "find_intercept",
+          "has_fraction": false,
+          "from_context": false
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "find_intercept",
+        "has_fraction": false,
+        "from_context": false
+      },
+      "fingerprint": [
+        "find_intercept",
+        "substitute",
+        "evaluate"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 4,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B3",
+      "target_band": "B3",
+      "statementId": "ALG.B3.s1",
+      "skill": "linear_equations_one_variable",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "A vinyl shop sold "
+        },
+        {
+          "t": "math",
+          "v": "\\frac{3}{8}"
+        },
+        {
+          "t": "text",
+          "v": " of its records during a one-day sale, totaling 96 records. How many records did the shop have before the sale?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "36"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "256"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "288"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "768"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "B"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. translate context: "
+        },
+        {
+          "t": "text",
+          "v": "Let "
+        },
+        {
+          "t": "math",
+          "v": "r"
+        },
+        {
+          "t": "text",
+          "v": " be the number of records before the sale. Selling "
+        },
+        {
+          "t": "math",
+          "v": "\\frac{3}{8}"
+        },
+        {
+          "t": "text",
+          "v": " of them gives 96, so "
+        },
+        {
+          "t": "math",
+          "v": "\\frac{3}{8}r = 96"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. divide coefficient: "
+        },
+        {
+          "t": "text",
+          "v": "Multiply both sides by "
+        },
+        {
+          "t": "math",
+          "v": "\\frac{8}{3}"
+        },
+        {
+          "t": "text",
+          "v": " (equivalently divide by "
+        },
+        {
+          "t": "math",
+          "v": "\\frac{3}{8}"
+        },
+        {
+          "t": "text",
+          "v": "): "
+        },
+        {
+          "t": "math",
+          "v": "r = 96 \\cdot \\frac{8}{3} = 256"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 435,
+        "band": "B3",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "create_solve",
+          "n_steps": 1,
+          "has_variable_both_sides": false,
+          "has_fractions": true,
+          "answer_type": "integer"
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "create_solve",
+        "n_steps": 1,
+        "has_variable_both_sides": false,
+        "has_fractions": true,
+        "answer_type": "integer"
+      },
+      "fingerprint": [
+        "translate_context",
+        "divide_coefficient"
+      ],
+      "reskinDistance": 0.5,
+      "tier": "build-spec"
+    },
+    {
+      "id": 5,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B3",
+      "target_band": "B3",
+      "statementId": "ALG.B3.s2",
+      "skill": "linear_equations_two_variables",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "During a dry spell, a reservoir's water level drops 3 feet per week. After 5 weeks the level is 218 feet. What is the level, in feet, after 14 weeks?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "191"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. model equation: "
+        },
+        {
+          "t": "text",
+          "v": "The level falls a constant 3 ft per week, so the rate of change is the slope: "
+        },
+        {
+          "t": "math",
+          "v": "m = -3"
+        },
+        {
+          "t": "text",
+          "v": ", with "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": " = weeks since the dry spell began and "
+        },
+        {
+          "t": "math",
+          "v": "y"
+        },
+        {
+          "t": "text",
+          "v": " = level in feet."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. point slope: "
+        },
+        {
+          "t": "text",
+          "v": "Write the linear model with unknown starting level "
+        },
+        {
+          "t": "math",
+          "v": "b"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "math",
+          "v": "y = b - 3x"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. substitute: "
+        },
+        {
+          "t": "text",
+          "v": "Substitute the data point "
+        },
+        {
+          "t": "math",
+          "v": "(x, y) = (5, 218)"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "math",
+          "v": "218 = b - 3(5)"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "4. find intercept: "
+        },
+        {
+          "t": "text",
+          "v": "Solve for the intercept: "
+        },
+        {
+          "t": "math",
+          "v": "218 = b - 15"
+        },
+        {
+          "t": "text",
+          "v": ", so "
+        },
+        {
+          "t": "math",
+          "v": "b = 233"
+        },
+        {
+          "t": "text",
+          "v": "; the model is "
+        },
+        {
+          "t": "math",
+          "v": "y = 233 - 3x"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "5. evaluate: "
+        },
+        {
+          "t": "text",
+          "v": "Evaluate at "
+        },
+        {
+          "t": "math",
+          "v": "x = 14"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "math",
+          "v": "y = 233 - 3(14) = 233 - 42 = 191"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 460,
+        "band": "B3",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "solve_given",
+          "has_fraction": false,
+          "from_context": true
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "solve_given",
+        "has_fraction": false,
+        "from_context": true
+      },
+      "fingerprint": [
+        "model_equation",
+        "point_slope",
+        "substitute",
+        "find_intercept",
+        "evaluate"
+      ],
+      "reskinDistance": 0.8,
+      "tier": "build-spec"
+    },
+    {
+      "id": 6,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B3",
+      "target_band": "B3",
+      "statementId": "ALG.B3.s1",
+      "skill": "linear_inequalities",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "What is the value of "
+        },
+        {
+          "t": "math",
+          "v": "k"
+        },
+        {
+          "t": "text",
+          "v": " for which the two sides of the inequality "
+        },
+        {
+          "t": "math",
+          "v": "6k + 17 \\le 44"
+        },
+        {
+          "t": "text",
+          "v": " are equal?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "9/2"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. subtract constant: "
+        },
+        {
+          "t": "text",
+          "v": "At the boundary the sides are equal: "
+        },
+        {
+          "t": "math",
+          "v": "6k + 17 = 44"
+        },
+        {
+          "t": "text",
+          "v": ". Subtract 17 from both sides to get "
+        },
+        {
+          "t": "math",
+          "v": "6k = 27"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. divide coefficient: "
+        },
+        {
+          "t": "text",
+          "v": "Divide both sides by 6 to isolate "
+        },
+        {
+          "t": "math",
+          "v": "k"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "math",
+          "v": "k = \\frac{27}{6} = \\frac{9}{2}"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 420,
+        "band": "B3",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "solve_boundary",
+          "negative_coefficient": false,
+          "from_context": false
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "solve_boundary",
+        "negative_coefficient": false,
+        "from_context": false
+      },
+      "fingerprint": [
+        "subtract_constant",
+        "divide_coefficient"
+      ],
+      "reskinDistance": 0,
+      "tier": "build-spec"
+    },
+    {
+      "id": 7,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B4",
+      "target_band": "B4",
+      "statementId": "ALG.B3.s1",
+      "skill": "linear_equations_one_variable",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "One electric scooter's battery is at "
+        },
+        {
+          "t": "math",
+          "v": "89\\%"
+        },
+        {
+          "t": "text",
+          "v": " charge and drops "
+        },
+        {
+          "t": "math",
+          "v": "7"
+        },
+        {
+          "t": "text",
+          "v": " percentage points per mile ridden. Another is at "
+        },
+        {
+          "t": "math",
+          "v": "84\\%"
+        },
+        {
+          "t": "text",
+          "v": " and drops "
+        },
+        {
+          "t": "math",
+          "v": "5"
+        },
+        {
+          "t": "text",
+          "v": " percentage points per mile. After how many miles will the two batteries show equal charge?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "5/2"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. translate context: "
+        },
+        {
+          "t": "text",
+          "v": "Each battery's remaining charge is its starting percent minus its per-mile drop times the miles ridden. Setting the two charges equal gives "
+        },
+        {
+          "t": "math",
+          "v": "89 - 7w = 84 - 5w"
+        },
+        {
+          "t": "text",
+          "v": ", where "
+        },
+        {
+          "t": "math",
+          "v": "w"
+        },
+        {
+          "t": "text",
+          "v": " is the number of miles ridden."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. move variable term: "
+        },
+        {
+          "t": "text",
+          "v": "Add "
+        },
+        {
+          "t": "math",
+          "v": "7w"
+        },
+        {
+          "t": "text",
+          "v": " to both sides to collect the variable on one side: "
+        },
+        {
+          "t": "math",
+          "v": "89 = 84 + 2w"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. subtract constant: "
+        },
+        {
+          "t": "text",
+          "v": "Subtract "
+        },
+        {
+          "t": "math",
+          "v": "84"
+        },
+        {
+          "t": "text",
+          "v": " from both sides: "
+        },
+        {
+          "t": "math",
+          "v": "5 = 2w"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "4. divide coefficient: "
+        },
+        {
+          "t": "text",
+          "v": "Divide both sides by "
+        },
+        {
+          "t": "math",
+          "v": "2"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "math",
+          "v": "w = \\frac{5}{2}"
+        },
+        {
+          "t": "text",
+          "v": ", already in lowest terms. Check: "
+        },
+        {
+          "t": "math",
+          "v": "89 - 7(2.5) = 71.5"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "84 - 5(2.5) = 71.5"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 545,
+        "band": "B4",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "create_solve",
+          "n_steps": 2,
+          "has_variable_both_sides": true,
+          "has_fractions": false,
+          "answer_type": "fraction"
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "create_solve",
+        "n_steps": 2,
+        "has_variable_both_sides": true,
+        "has_fractions": false,
+        "answer_type": "fraction"
+      },
+      "fingerprint": [
+        "translate_context",
+        "move_variable_term",
+        "subtract_constant",
+        "divide_coefficient"
+      ],
+      "reskinDistance": 0.5,
+      "tier": "build-spec"
+    },
+    {
+      "id": 8,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B4",
+      "target_band": "B4",
+      "statementId": "ALG.B4.s2",
+      "skill": "linear_equations_two_variables",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "A delivery drone's maximum range "
+        },
+        {
+          "t": "math",
+          "v": "y"
+        },
+        {
+          "t": "text",
+          "v": ", in kilometers, for a trip carrying a package that weighs "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": " kilograms, is modeled by the equation "
+        },
+        {
+          "t": "math",
+          "v": "y = 26 - 3x"
+        },
+        {
+          "t": "text",
+          "v": ". Which of the following is the best interpretation of the coefficient "
+        },
+        {
+          "t": "math",
+          "v": "-3"
+        },
+        {
+          "t": "text",
+          "v": " in this context?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "text",
+              "v": "For each additional kilogram the package weighs, the drone's maximum range increases by 3 kilometers."
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "text",
+              "v": "For each additional kilogram the package weighs, the drone's maximum range decreases by 3 kilometers."
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "text",
+              "v": "For each additional kilometer of maximum range, the package weight decreases by 3 kilograms."
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "text",
+              "v": "A drone carrying a package that weighs 0 kilograms has a maximum range of 3 kilometers."
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "B"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. match representation: "
+        },
+        {
+          "t": "text",
+          "v": "Recognize the model is in slope-intercept form "
+        },
+        {
+          "t": "math",
+          "v": "y = b + mx"
+        },
+        {
+          "t": "text",
+          "v": " with "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": " the package weight and "
+        },
+        {
+          "t": "math",
+          "v": "y"
+        },
+        {
+          "t": "text",
+          "v": " the maximum range, so the slope is "
+        },
+        {
+          "t": "math",
+          "v": "m = -3"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. interpret meaning: "
+        },
+        {
+          "t": "text",
+          "v": "The slope is the change in "
+        },
+        {
+          "t": "math",
+          "v": "y"
+        },
+        {
+          "t": "text",
+          "v": " per unit increase in "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": ": each additional 1 kilogram of package weight changes the maximum range by "
+        },
+        {
+          "t": "math",
+          "v": "-3"
+        },
+        {
+          "t": "text",
+          "v": " kilometers, i.e. the range decreases by 3 kilometers per kilogram."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 505,
+        "band": "B4",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "rate_of_change",
+          "has_fraction": false,
+          "from_context": true
+        }
+      },
+      "verify": {
+        "tier": "B",
+        "correctness": "consistency 5/4"
+      },
+      "radicals": {
+        "task": "rate_of_change",
+        "has_fraction": false,
+        "from_context": true
+      },
+      "fingerprint": [
+        "match_representation",
+        "interpret_meaning"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 9,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B4",
+      "target_band": "B4",
+      "statementId": "ALG.B3.s1",
+      "skill": "linear_inequalities",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The cumulative number of monarch butterflies counted at a sanctuary is modeled by "
+        },
+        {
+          "t": "math",
+          "v": "44x + 780"
+        },
+        {
+          "t": "text",
+          "v": ", where x is the number of days since counting began. What is the least number of days for which the count is at least "
+        },
+        {
+          "t": "math",
+          "v": "3{,}250"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "56"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "57"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "74"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "92"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "B"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. model inequality: "
+        },
+        {
+          "t": "text",
+          "v": "Translate the constraint: the count must be at least 3,250, so "
+        },
+        {
+          "t": "math",
+          "v": "44x + 780 \\ge 3250"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. subtract constant: "
+        },
+        {
+          "t": "text",
+          "v": "Subtract 780 from both sides: "
+        },
+        {
+          "t": "math",
+          "v": "44x \\ge 2470"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. divide coefficient: "
+        },
+        {
+          "t": "text",
+          "v": "Divide both sides by the positive coefficient 44 (inequality does not flip): "
+        },
+        {
+          "t": "math",
+          "v": "x \\ge 56.136\\ldots"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "4. apply ceiling: "
+        },
+        {
+          "t": "text",
+          "v": "Since x must be a whole number of days, take the ceiling of 56.136…, giving the least integer value 57."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 530,
+        "band": "B4",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "min_int",
+          "negative_coefficient": false,
+          "from_context": true
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "min_int",
+        "negative_coefficient": false,
+        "from_context": true
+      },
+      "fingerprint": [
+        "model_inequality",
+        "subtract_constant",
+        "divide_coefficient",
+        "apply_ceiling"
+      ],
+      "reskinDistance": 0.5,
+      "tier": "build-spec"
+    },
+    {
+      "id": 10,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B4",
+      "target_band": "B4",
+      "statementId": "ALG.B5.s2",
+      "skill": "systems_of_linear_equations",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The system of equations "
+        },
+        {
+          "t": "math",
+          "v": "5x + 3y = 38"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "2x + 7y = 50"
+        },
+        {
+          "t": "text",
+          "v": " has solution "
+        },
+        {
+          "t": "math",
+          "v": "(x, y)"
+        },
+        {
+          "t": "text",
+          "v": ". What is the value of "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "4"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. scale equation: "
+        },
+        {
+          "t": "text",
+          "v": "Multiply "
+        },
+        {
+          "t": "math",
+          "v": "5x + 3y = 38"
+        },
+        {
+          "t": "text",
+          "v": " by 7 and "
+        },
+        {
+          "t": "math",
+          "v": "2x + 7y = 50"
+        },
+        {
+          "t": "text",
+          "v": " by 3 to make the "
+        },
+        {
+          "t": "math",
+          "v": "y"
+        },
+        {
+          "t": "text",
+          "v": "-coefficients equal: "
+        },
+        {
+          "t": "math",
+          "v": "35x + 21y = 266"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "6x + 21y = 150"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. subtract equations: "
+        },
+        {
+          "t": "text",
+          "v": "Subtract the second scaled equation from the first to eliminate "
+        },
+        {
+          "t": "math",
+          "v": "y"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "math",
+          "v": "29x = 116"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. solve single: "
+        },
+        {
+          "t": "text",
+          "v": "Divide both sides by 29: "
+        },
+        {
+          "t": "math",
+          "v": "x = 4"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "4. back substitute: "
+        },
+        {
+          "t": "text",
+          "v": "Check: "
+        },
+        {
+          "t": "math",
+          "v": "5(4) + 3y = 38 \\Rightarrow y = 6"
+        },
+        {
+          "t": "text",
+          "v": "; then "
+        },
+        {
+          "t": "math",
+          "v": "2(4) + 7(6) = 50"
+        },
+        {
+          "t": "text",
+          "v": ". Consistent."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 490,
+        "band": "B4",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "solve",
+          "has_fraction_solution": false,
+          "from_context": false
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "solve",
+        "has_fraction_solution": false,
+        "from_context": false
+      },
+      "fingerprint": [
+        "scale_equation",
+        "subtract_equations",
+        "solve_single",
+        "back_substitute"
+      ],
+      "reskinDistance": 0.5,
+      "tier": "build-spec"
+    },
+    {
+      "id": 11,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B5",
+      "target_band": "B5",
+      "statementId": "ALG.B7.s1",
+      "skill": "linear_equations_one_variable",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "In a county election, the turnout at one precinct was "
+        },
+        {
+          "t": "math",
+          "v": "\\frac{5}{3}"
+        },
+        {
+          "t": "text",
+          "v": " times the turnout "
+        },
+        {
+          "t": "math",
+          "v": "t"
+        },
+        {
+          "t": "text",
+          "v": ", in percent, at a second precinct. The first precinct's turnout was also 11 percentage points greater than the second's. What is the value of "
+        },
+        {
+          "t": "math",
+          "v": "t"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "\\frac{33}{8}"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "\\frac{33}{5}"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "\\frac{33}{2}"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "\\frac{22}{3}"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "C"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. translate context: "
+        },
+        {
+          "t": "text",
+          "v": "Precinct A's turnout is described two ways, giving "
+        },
+        {
+          "t": "math",
+          "v": "\\frac{5}{3}t = t + 11"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. move variable term: "
+        },
+        {
+          "t": "text",
+          "v": "Subtract "
+        },
+        {
+          "t": "math",
+          "v": "t"
+        },
+        {
+          "t": "text",
+          "v": " from both sides: "
+        },
+        {
+          "t": "math",
+          "v": "\\frac{5}{3}t - t = 11"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. combine like terms: "
+        },
+        {
+          "t": "math",
+          "v": "\\frac{2}{3}t = 11"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "4. divide coefficient: "
+        },
+        {
+          "t": "text",
+          "v": "Divide by "
+        },
+        {
+          "t": "math",
+          "v": "\\frac{2}{3}"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "math",
+          "v": "t = 11 \\cdot \\frac{3}{2} = \\frac{33}{2}"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 565,
+        "band": "B5",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "create_solve",
+          "n_steps": 1,
+          "has_variable_both_sides": true,
+          "has_fractions": true,
+          "answer_type": "fraction"
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "create_solve",
+        "n_steps": 1,
+        "has_variable_both_sides": true,
+        "has_fractions": true,
+        "answer_type": "fraction"
+      },
+      "fingerprint": [
+        "translate_context",
+        "move_variable_term",
+        "combine_like_terms",
+        "divide_coefficient"
+      ],
+      "reskinDistance": 0.75,
+      "tier": "build-spec"
+    },
+    {
+      "id": 12,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B5",
+      "target_band": "B5",
+      "statementId": "ALG.B5.s1",
+      "skill": "linear_equations_two_variables",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The equation "
+        },
+        {
+          "t": "math",
+          "v": "y = \\frac{7}{4}x - 9"
+        },
+        {
+          "t": "text",
+          "v": " represents a linear relationship between the variables "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "y"
+        },
+        {
+          "t": "text",
+          "v": ". Which statement best describes the meaning of "
+        },
+        {
+          "t": "math",
+          "v": "\\frac{7}{4}"
+        },
+        {
+          "t": "text",
+          "v": " in this relationship?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "text",
+              "v": "The value of "
+            },
+            {
+              "t": "math",
+              "v": "y"
+            },
+            {
+              "t": "text",
+              "v": " is "
+            },
+            {
+              "t": "math",
+              "v": "\\frac{7}{4}"
+            },
+            {
+              "t": "text",
+              "v": " when "
+            },
+            {
+              "t": "math",
+              "v": "x = 0"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "text",
+              "v": "For each increase of 1 in "
+            },
+            {
+              "t": "math",
+              "v": "x"
+            },
+            {
+              "t": "text",
+              "v": ", the value of "
+            },
+            {
+              "t": "math",
+              "v": "y"
+            },
+            {
+              "t": "text",
+              "v": " increases by "
+            },
+            {
+              "t": "math",
+              "v": "\\frac{7}{4}"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "text",
+              "v": "For each increase of 1 in "
+            },
+            {
+              "t": "math",
+              "v": "y"
+            },
+            {
+              "t": "text",
+              "v": ", the value of "
+            },
+            {
+              "t": "math",
+              "v": "x"
+            },
+            {
+              "t": "text",
+              "v": " increases by "
+            },
+            {
+              "t": "math",
+              "v": "\\frac{7}{4}"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "text",
+              "v": "The value of "
+            },
+            {
+              "t": "math",
+              "v": "x"
+            },
+            {
+              "t": "text",
+              "v": " is "
+            },
+            {
+              "t": "math",
+              "v": "\\frac{7}{4}"
+            },
+            {
+              "t": "text",
+              "v": " when "
+            },
+            {
+              "t": "math",
+              "v": "y = 0"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "B"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. match representation: "
+        },
+        {
+          "t": "text",
+          "v": "Recognize "
+        },
+        {
+          "t": "math",
+          "v": "y = \\frac{7}{4}x - 9"
+        },
+        {
+          "t": "text",
+          "v": " is in slope-intercept form "
+        },
+        {
+          "t": "math",
+          "v": "y = mx + b"
+        },
+        {
+          "t": "text",
+          "v": " with "
+        },
+        {
+          "t": "math",
+          "v": "m = \\frac{7}{4}"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "b = -9"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. translate function: "
+        },
+        {
+          "t": "text",
+          "v": "Identify "
+        },
+        {
+          "t": "math",
+          "v": "\\frac{7}{4}"
+        },
+        {
+          "t": "text",
+          "v": " as the coefficient of "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": ", i.e., the slope, the rate of change of "
+        },
+        {
+          "t": "math",
+          "v": "y"
+        },
+        {
+          "t": "text",
+          "v": " with respect to "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. interpret meaning: "
+        },
+        {
+          "t": "text",
+          "v": "Translate the slope into words: "
+        },
+        {
+          "t": "math",
+          "v": "y"
+        },
+        {
+          "t": "text",
+          "v": " increases by "
+        },
+        {
+          "t": "math",
+          "v": "\\frac{7}{4}"
+        },
+        {
+          "t": "text",
+          "v": " for every increase of 1 in "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": " — choice B. Eliminate A (value of "
+        },
+        {
+          "t": "math",
+          "v": "y"
+        },
+        {
+          "t": "text",
+          "v": " at "
+        },
+        {
+          "t": "math",
+          "v": "x=0"
+        },
+        {
+          "t": "text",
+          "v": " describes "
+        },
+        {
+          "t": "math",
+          "v": "b"
+        },
+        {
+          "t": "text",
+          "v": "), C (inverted/reciprocal rate), and D (x-intercept, value of "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": " at "
+        },
+        {
+          "t": "math",
+          "v": "y=0"
+        },
+        {
+          "t": "text",
+          "v": ")."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 570,
+        "band": "B5",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "interpret_part",
+          "has_fraction": true,
+          "from_context": false
+        }
+      },
+      "verify": {
+        "tier": "B",
+        "correctness": "consistency 5/4"
+      },
+      "radicals": {
+        "task": "interpret_part",
+        "has_fraction": true,
+        "from_context": false
+      },
+      "fingerprint": [
+        "match_representation",
+        "translate_function",
+        "interpret_meaning"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 13,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B5",
+      "target_band": "B5",
+      "statementId": "ALG.B5.s1",
+      "skill": "linear_inequalities",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "Each unit of "
+        },
+        {
+          "t": "math",
+          "v": "t"
+        },
+        {
+          "t": "text",
+          "v": " contributes 9 and each unit of "
+        },
+        {
+          "t": "math",
+          "v": "s"
+        },
+        {
+          "t": "text",
+          "v": " contributes 4 to a combined total that is at most 115. Which inequality represents this constraint?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "4t + 9s \\le 115"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "9t + 4s \\le 115"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "9t + 4s \\ge 115"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "13(t + s) \\le 115"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "B"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. translate constraint: "
+        },
+        {
+          "t": "text",
+          "v": "Read off each per-unit value as a coefficient: 9 belongs to t and 4 belongs to s."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. model inequality: "
+        },
+        {
+          "t": "text",
+          "v": "Attach each coefficient to its own variable and add the two product terms to represent the combined total: 9t + 4s."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. translate constraint: "
+        },
+        {
+          "t": "text",
+          "v": "Interpret 'at most 115' as the upper bound, giving the sense "
+        },
+        {
+          "t": "math",
+          "v": "\\le"
+        },
+        {
+          "t": "text",
+          "v": " with no negative coefficient to force a flip."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "4. model inequality: "
+        },
+        {
+          "t": "text",
+          "v": "Write 9t + 4s ≤ 115. Eliminate C (sense reversed to ≥), A (coefficients swapped onto wrong variables), and D (coefficients combined into one term)."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 550,
+        "band": "B5",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "create_twovar",
+          "negative_coefficient": false,
+          "from_context": false
+        }
+      },
+      "verify": {
+        "tier": "B",
+        "correctness": "consistency 5/4"
+      },
+      "radicals": {
+        "task": "create_twovar",
+        "negative_coefficient": false,
+        "from_context": false
+      },
+      "fingerprint": [
+        "translate_constraint",
+        "model_inequality",
+        "translate_constraint",
+        "model_inequality"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 14,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B5",
+      "target_band": "B5",
+      "statementId": "ALG.B5.s2",
+      "skill": "systems_of_linear_equations",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The system of equations "
+        },
+        {
+          "t": "math",
+          "v": "4x + 5y = 18"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "3x - 2y = 25"
+        },
+        {
+          "t": "text",
+          "v": " has solution "
+        },
+        {
+          "t": "math",
+          "v": "(x, y)"
+        },
+        {
+          "t": "text",
+          "v": ". What is the value of "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "-7"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "-2"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "5"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "7"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "D"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. scale equation: "
+        },
+        {
+          "t": "text",
+          "v": "Both equations are in standard form with no matching y-coefficients. Multiply "
+        },
+        {
+          "t": "math",
+          "v": "4x+5y=18"
+        },
+        {
+          "t": "text",
+          "v": " by 2 to get "
+        },
+        {
+          "t": "math",
+          "v": "8x+10y=36"
+        },
+        {
+          "t": "text",
+          "v": ", and multiply "
+        },
+        {
+          "t": "math",
+          "v": "3x-2y=25"
+        },
+        {
+          "t": "text",
+          "v": " by 5 to get "
+        },
+        {
+          "t": "math",
+          "v": "15x-10y=125"
+        },
+        {
+          "t": "text",
+          "v": ", making the y-coefficients "
+        },
+        {
+          "t": "math",
+          "v": "\\pm 10"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. add equations: "
+        },
+        {
+          "t": "text",
+          "v": "Add the scaled equations: "
+        },
+        {
+          "t": "math",
+          "v": "(8x+10y)+(15x-10y)=36+125"
+        },
+        {
+          "t": "text",
+          "v": ", so the y-terms cancel and "
+        },
+        {
+          "t": "math",
+          "v": "23x = 161"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. solve single: "
+        },
+        {
+          "t": "text",
+          "v": "Divide both sides by 23: "
+        },
+        {
+          "t": "math",
+          "v": "x = \\frac{161}{23} = 7"
+        },
+        {
+          "t": "text",
+          "v": " — a clean integer, which is the requested quantity."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "4. back substitute: "
+        },
+        {
+          "t": "text",
+          "v": "Substitute "
+        },
+        {
+          "t": "math",
+          "v": "x=7"
+        },
+        {
+          "t": "text",
+          "v": " into "
+        },
+        {
+          "t": "math",
+          "v": "4x+5y=18"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "math",
+          "v": "28+5y=18\\Rightarrow y=-2"
+        },
+        {
+          "t": "text",
+          "v": ". Check in "
+        },
+        {
+          "t": "math",
+          "v": "3x-2y=25"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "math",
+          "v": "21-(-4)=25"
+        },
+        {
+          "t": "text",
+          "v": ". Both hold, confirming "
+        },
+        {
+          "t": "math",
+          "v": "x=7"
+        },
+        {
+          "t": "text",
+          "v": " (not the distractor "
+        },
+        {
+          "t": "math",
+          "v": "y=-2"
+        },
+        {
+          "t": "text",
+          "v": ")."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 560,
+        "band": "B5",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "create_solve",
+          "has_fraction_solution": false,
+          "from_context": false
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "create_solve",
+        "has_fraction_solution": false,
+        "from_context": false
+      },
+      "fingerprint": [
+        "scale_equation",
+        "add_equations",
+        "solve_single",
+        "back_substitute"
+      ],
+      "reskinDistance": 0.5,
+      "tier": "build-spec"
+    },
+    {
+      "id": 15,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B6",
+      "target_band": "B6",
+      "statementId": "ALG.B6.s2",
+      "skill": "linear_equations_one_variable",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "math",
+          "v": "kr - 8 = 6r + 5"
+        },
+        {
+          "t": "text",
+          "v": "\n\nIn the given equation, "
+        },
+        {
+          "t": "math",
+          "v": "k"
+        },
+        {
+          "t": "text",
+          "v": " is a constant. If the equation has no solution, what is the value of "
+        },
+        {
+          "t": "math",
+          "v": "k"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "6"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. count solutions: "
+        },
+        {
+          "t": "text",
+          "v": "A one-variable linear equation has no solution exactly when the variable terms have equal coefficients on both sides while the constant terms differ, so the "
+        },
+        {
+          "t": "math",
+          "v": "r"
+        },
+        {
+          "t": "text",
+          "v": "-terms cancel and leave a false numeric statement."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. compare coefficients: "
+        },
+        {
+          "t": "text",
+          "v": "Set the coefficient of "
+        },
+        {
+          "t": "math",
+          "v": "r"
+        },
+        {
+          "t": "text",
+          "v": " on the left equal to the coefficient of "
+        },
+        {
+          "t": "math",
+          "v": "r"
+        },
+        {
+          "t": "text",
+          "v": " on the right: "
+        },
+        {
+          "t": "math",
+          "v": "k = 6"
+        },
+        {
+          "t": "text",
+          "v": ". The constants "
+        },
+        {
+          "t": "math",
+          "v": "-8"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "5"
+        },
+        {
+          "t": "text",
+          "v": " are unequal, so at "
+        },
+        {
+          "t": "math",
+          "v": "k = 6"
+        },
+        {
+          "t": "text",
+          "v": " the equation reduces to "
+        },
+        {
+          "t": "math",
+          "v": "-8 = 5"
+        },
+        {
+          "t": "text",
+          "v": ", a contradiction confirming no solution."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 630,
+        "band": "B6",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "missing_coeff",
+          "n_steps": 1,
+          "has_variable_both_sides": false,
+          "has_fractions": false,
+          "answer_type": "integer"
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "missing_coeff",
+        "n_steps": 1,
+        "has_variable_both_sides": false,
+        "has_fractions": false,
+        "answer_type": "integer"
+      },
+      "fingerprint": [
+        "count_solutions",
+        "compare_coefficients"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 16,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B6",
+      "target_band": "B6",
+      "statementId": "ALG.B6.s1",
+      "skill": "linear_equations_two_variables",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The table shows four values of "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": " and their corresponding values of "
+        },
+        {
+          "t": "math",
+          "v": "y"
+        },
+        {
+          "t": "text",
+          "v": " for a linear function. Which equation represents the relationship between "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "y"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "y = -4x + 23"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "y = 4x + 23"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "y = -4x + 11"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "y = -4x - 1"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "A"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. compute slope: "
+        },
+        {
+          "t": "text",
+          "v": "Using two rows, slope "
+        },
+        {
+          "t": "math",
+          "v": "= \\frac{3 - 11}{5 - 3} = \\frac{-8}{2} = -4"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. find intercept: "
+        },
+        {
+          "t": "text",
+          "v": "Substitute "
+        },
+        {
+          "t": "math",
+          "v": "(3, 11)"
+        },
+        {
+          "t": "text",
+          "v": " into "
+        },
+        {
+          "t": "math",
+          "v": "y = -4x + b"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "math",
+          "v": "11 = -4(3) + b"
+        },
+        {
+          "t": "text",
+          "v": ", so "
+        },
+        {
+          "t": "math",
+          "v": "b = 23"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. match representation: "
+        },
+        {
+          "t": "text",
+          "v": "The line "
+        },
+        {
+          "t": "math",
+          "v": "y = -4x + 23"
+        },
+        {
+          "t": "text",
+          "v": " fits every row (e.g., "
+        },
+        {
+          "t": "math",
+          "v": "x=7\\Rightarrow -28+23=-5"
+        },
+        {
+          "t": "text",
+          "v": "), matching choice A."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "table",
+        "spec": {
+          "kind": "value",
+          "headers": [
+            "x",
+            "y"
+          ],
+          "rows": [
+            [
+              "3",
+              "11"
+            ],
+            [
+              "5",
+              "3"
+            ],
+            [
+              "7",
+              "-5"
+            ],
+            [
+              "9",
+              "-13"
+            ]
+          ]
+        }
+      },
+      "difficulty": {
+        "scalePoint": 645,
+        "band": "B6",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "connect",
+          "has_fraction": false,
+          "from_context": false
+        }
+      },
+      "verify": {
+        "tier": "B",
+        "correctness": "consistency 5/4"
+      },
+      "radicals": {
+        "task": "connect",
+        "has_fraction": false,
+        "from_context": false
+      },
+      "fingerprint": [
+        "compute_slope",
+        "find_intercept",
+        "match_representation"
+      ],
+      "reskinDistance": 0.333,
+      "tier": "build-spec"
+    },
+    {
+      "id": 17,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B6",
+      "target_band": "B6",
+      "statementId": "ALG.B5.s1",
+      "skill": "linear_inequalities",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The solution set of the inequality "
+        },
+        {
+          "t": "math",
+          "v": "5x + k \\le 126"
+        },
+        {
+          "t": "text",
+          "v": ", where "
+        },
+        {
+          "t": "math",
+          "v": "k"
+        },
+        {
+          "t": "text",
+          "v": " is a constant, is "
+        },
+        {
+          "t": "math",
+          "v": "x \\le 22"
+        },
+        {
+          "t": "text",
+          "v": ". What is the value of "
+        },
+        {
+          "t": "math",
+          "v": "k"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "-16"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "16"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "104"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "110"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "B"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. subtract constant: "
+        },
+        {
+          "t": "text",
+          "v": "Subtract k from both sides: 5x \\le 126 - k."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. divide coefficient: "
+        },
+        {
+          "t": "text",
+          "v": "Divide both sides by 5: x \\le (126 - k)/5."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. translate constraint: "
+        },
+        {
+          "t": "text",
+          "v": "The solution set is x \\le 22, so the boundary (126 - k)/5 = 22."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "4. isolate variable: "
+        },
+        {
+          "t": "text",
+          "v": "126 - k = 110, so k = 16."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 675,
+        "band": "B6",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "variable_constants",
+          "negative_coefficient": false,
+          "from_context": false
+        }
+      },
+      "verify": {
+        "tier": "B",
+        "correctness": "consistency 5/4"
+      },
+      "radicals": {
+        "task": "variable_constants",
+        "negative_coefficient": false,
+        "from_context": false
+      },
+      "fingerprint": [
+        "subtract_constant",
+        "divide_coefficient",
+        "translate_constraint",
+        "isolate_variable"
+      ],
+      "reskinDistance": 0.5,
+      "tier": "build-spec"
+    },
+    {
+      "id": 18,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B6",
+      "target_band": "B6",
+      "statementId": "ALG.B6.s2",
+      "skill": "systems_of_linear_equations",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "math",
+          "v": "4x - 6y = 10"
+        },
+        {
+          "t": "text",
+          "v": "\n"
+        },
+        {
+          "t": "math",
+          "v": "-6x + 9y = 21"
+        },
+        {
+          "t": "text",
+          "v": "\nHow many solutions "
+        },
+        {
+          "t": "math",
+          "v": "(x, y)"
+        },
+        {
+          "t": "text",
+          "v": " does the given system of equations have?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "text",
+              "v": "No solution"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "text",
+              "v": "Exactly one solution"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "text",
+              "v": "Exactly two solutions"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "text",
+              "v": "Infinitely many solutions"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "A"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. scale equation: "
+        },
+        {
+          "t": "text",
+          "v": "Multiply "
+        },
+        {
+          "t": "math",
+          "v": "4x-6y=10"
+        },
+        {
+          "t": "text",
+          "v": " by "
+        },
+        {
+          "t": "math",
+          "v": "-\\tfrac{3}{2}"
+        },
+        {
+          "t": "text",
+          "v": " to match the second equation's left side: "
+        },
+        {
+          "t": "math",
+          "v": "-6x+9y=-15"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. subtract equations: "
+        },
+        {
+          "t": "text",
+          "v": "Compare with "
+        },
+        {
+          "t": "math",
+          "v": "-6x+9y=21"
+        },
+        {
+          "t": "text",
+          "v": ": the expression "
+        },
+        {
+          "t": "math",
+          "v": "-6x+9y"
+        },
+        {
+          "t": "text",
+          "v": " would have to equal both "
+        },
+        {
+          "t": "math",
+          "v": "-15"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "21"
+        },
+        {
+          "t": "text",
+          "v": ", giving "
+        },
+        {
+          "t": "math",
+          "v": "0=36"
+        },
+        {
+          "t": "text",
+          "v": ", which is false."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. compare slopes: "
+        },
+        {
+          "t": "text",
+          "v": "Equivalently, both lines have slope "
+        },
+        {
+          "t": "math",
+          "v": "\\tfrac{2}{3}"
+        },
+        {
+          "t": "text",
+          "v": " but different intercepts ("
+        },
+        {
+          "t": "math",
+          "v": "-\\tfrac{5}{3}"
+        },
+        {
+          "t": "text",
+          "v": " vs "
+        },
+        {
+          "t": "math",
+          "v": "\\tfrac{7}{3}"
+        },
+        {
+          "t": "text",
+          "v": "); parallel, non-identical lines never meet, so there is no solution."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 610,
+        "band": "B6",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "number_of_solutions",
+          "has_fraction_solution": false,
+          "from_context": false
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "number_of_solutions",
+        "has_fraction_solution": false,
+        "from_context": false
+      },
+      "fingerprint": [
+        "scale_equation",
+        "subtract_equations",
+        "compare_slopes"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 19,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "ALG.B7.s1",
+      "skill": "linear_equations_one_variable",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "In the equation "
+        },
+        {
+          "t": "math",
+          "v": "\\frac{15}{2}r + 11 = 2kr + \\frac{3}{2}r - 6"
+        },
+        {
+          "t": "text",
+          "v": ", "
+        },
+        {
+          "t": "math",
+          "v": "k"
+        },
+        {
+          "t": "text",
+          "v": " is a constant. If the equation has no solution, what is the value of "
+        },
+        {
+          "t": "math",
+          "v": "k"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "3"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. count solutions: "
+        },
+        {
+          "t": "text",
+          "v": "A linear equation in "
+        },
+        {
+          "t": "math",
+          "v": "r"
+        },
+        {
+          "t": "text",
+          "v": " has no solution exactly when the "
+        },
+        {
+          "t": "math",
+          "v": "r"
+        },
+        {
+          "t": "text",
+          "v": "-coefficients on both sides are equal but the constant terms differ."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. compare coefficients: "
+        },
+        {
+          "t": "text",
+          "v": "Set the left "
+        },
+        {
+          "t": "math",
+          "v": "r"
+        },
+        {
+          "t": "text",
+          "v": "-coefficient equal to the combined right "
+        },
+        {
+          "t": "math",
+          "v": "r"
+        },
+        {
+          "t": "text",
+          "v": "-coefficient: "
+        },
+        {
+          "t": "math",
+          "v": "\\frac{15}{2} = 2k + \\frac{3}{2}"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. subtract constant: "
+        },
+        {
+          "t": "text",
+          "v": "Subtract "
+        },
+        {
+          "t": "math",
+          "v": "\\frac{3}{2}"
+        },
+        {
+          "t": "text",
+          "v": " from both sides: "
+        },
+        {
+          "t": "math",
+          "v": "2k = \\frac{15}{2} - \\frac{3}{2} = 6"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "4. divide coefficient: "
+        },
+        {
+          "t": "text",
+          "v": "Divide both sides by 2: "
+        },
+        {
+          "t": "math",
+          "v": "k = 3"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "5. count solutions: "
+        },
+        {
+          "t": "text",
+          "v": "Check constants differ at "
+        },
+        {
+          "t": "math",
+          "v": "k=3"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "math",
+          "v": "11 \\ne -6"
+        },
+        {
+          "t": "text",
+          "v": ", so the equation is contradictory (no solution), not an identity (infinitely many). Answer "
+        },
+        {
+          "t": "math",
+          "v": "k = 3"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 780,
+        "band": "B7",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "missing_coeff",
+          "n_steps": 1,
+          "has_variable_both_sides": true,
+          "has_fractions": true,
+          "answer_type": "integer"
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "missing_coeff",
+        "n_steps": 1,
+        "has_variable_both_sides": true,
+        "has_fractions": true,
+        "answer_type": "integer"
+      },
+      "fingerprint": [
+        "count_solutions",
+        "compare_coefficients",
+        "subtract_constant",
+        "divide_coefficient",
+        "count_solutions"
+      ],
+      "reskinDistance": 0.6,
+      "tier": "build-spec"
+    },
+    {
+      "id": 20,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "ALG.B7.s2",
+      "skill": "linear_equations_two_variables",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The function "
+        },
+        {
+          "t": "math",
+          "v": "g(x)=\\frac{5}{2}x+9"
+        },
+        {
+          "t": "text",
+          "v": " gives the number of mugs produced in a kiln firing that uses "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": " kilograms of clay. After an upgrade, each firing produces 6 more mugs for the same amount of clay. Which function "
+        },
+        {
+          "t": "math",
+          "v": "f"
+        },
+        {
+          "t": "text",
+          "v": " gives the new number of mugs?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "f(x)=\\frac{17}{2}x+9"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "f(x)=\\frac{5}{2}x+15"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "f(x)=\\frac{5}{2}x+3"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "f(x)=\\frac{17}{2}x+15"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "B"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. model equation: "
+        },
+        {
+          "t": "text",
+          "v": "Read the situation: the per-firing output is "
+        },
+        {
+          "t": "math",
+          "v": "g(x)=\\frac{5}{2}x+9"
+        },
+        {
+          "t": "text",
+          "v": ", with rate "
+        },
+        {
+          "t": "math",
+          "v": "\\frac{5}{2}"
+        },
+        {
+          "t": "text",
+          "v": " mugs per kilogram of clay and constant term 9."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. translate function: "
+        },
+        {
+          "t": "text",
+          "v": "Producing 6 more mugs for the same clay is a vertical shift up by 6: "
+        },
+        {
+          "t": "math",
+          "v": "f(x)=g(x)+6"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. find intercept: "
+        },
+        {
+          "t": "text",
+          "v": "Apply the shift to the constant term only: "
+        },
+        {
+          "t": "math",
+          "v": "9+6=15"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "4. match representation: "
+        },
+        {
+          "t": "text",
+          "v": "The slope is unchanged by a vertical translation, so "
+        },
+        {
+          "t": "math",
+          "v": "f(x)=\\frac{5}{2}x+15"
+        },
+        {
+          "t": "text",
+          "v": "; reject "
+        },
+        {
+          "t": "math",
+          "v": "\\frac{5}{2}x+3"
+        },
+        {
+          "t": "text",
+          "v": " (wrong direction), "
+        },
+        {
+          "t": "math",
+          "v": "\\frac{17}{2}x+9"
+        },
+        {
+          "t": "text",
+          "v": " (shift on slope), and "
+        },
+        {
+          "t": "math",
+          "v": "\\frac{17}{2}x+15"
+        },
+        {
+          "t": "text",
+          "v": " (shift on both)."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 695,
+        "band": "B7",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "create_from_translation",
+          "has_fraction": true,
+          "from_context": true
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "create_from_translation",
+        "has_fraction": true,
+        "from_context": true
+      },
+      "fingerprint": [
+        "model_equation",
+        "translate_function",
+        "find_intercept",
+        "match_representation"
+      ],
+      "reskinDistance": 0.75,
+      "tier": "build-spec"
+    },
+    {
+      "id": 21,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "ALG.B7.s2",
+      "skill": "linear_inequalities",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The inequality "
+        },
+        {
+          "t": "math",
+          "v": "-7x + k \\ge -2x - 8"
+        },
+        {
+          "t": "text",
+          "v": ", where "
+        },
+        {
+          "t": "math",
+          "v": "k"
+        },
+        {
+          "t": "text",
+          "v": " is a constant, has solution "
+        },
+        {
+          "t": "math",
+          "v": "x \\le 4"
+        },
+        {
+          "t": "text",
+          "v": ". What is the value of "
+        },
+        {
+          "t": "math",
+          "v": "k"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "-28"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "-12"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "12"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "28"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "C"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. collect like terms: "
+        },
+        {
+          "t": "text",
+          "v": "Add "
+        },
+        {
+          "t": "math",
+          "v": "2x"
+        },
+        {
+          "t": "text",
+          "v": " to both sides of "
+        },
+        {
+          "t": "math",
+          "v": "-7x + k \\ge -2x - 8"
+        },
+        {
+          "t": "text",
+          "v": " to gather variable terms: "
+        },
+        {
+          "t": "math",
+          "v": "-5x + k \\ge -8"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. subtract constant: "
+        },
+        {
+          "t": "text",
+          "v": "Subtract "
+        },
+        {
+          "t": "math",
+          "v": "k"
+        },
+        {
+          "t": "text",
+          "v": " from both sides: "
+        },
+        {
+          "t": "math",
+          "v": "-5x \\ge -8 - k"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. divide coefficient: "
+        },
+        {
+          "t": "text",
+          "v": "Divide both sides by "
+        },
+        {
+          "t": "math",
+          "v": "-5"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "4. flip inequality: "
+        },
+        {
+          "t": "text",
+          "v": "Dividing by the negative coefficient "
+        },
+        {
+          "t": "math",
+          "v": "-5"
+        },
+        {
+          "t": "text",
+          "v": " reverses the sign: "
+        },
+        {
+          "t": "math",
+          "v": "x \\le \\frac{-8-k}{-5} = \\frac{k+8}{5}"
+        },
+        {
+          "t": "text",
+          "v": ", which matches the stated form "
+        },
+        {
+          "t": "math",
+          "v": "x \\le 4"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "5. translate constraint: "
+        },
+        {
+          "t": "text",
+          "v": "Set the boundary equal to the given solution boundary: "
+        },
+        {
+          "t": "math",
+          "v": "\\frac{k+8}{5} = 4"
+        },
+        {
+          "t": "text",
+          "v": ", so "
+        },
+        {
+          "t": "math",
+          "v": "k + 8 = 20"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "k = 12"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 720,
+        "band": "B7",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "variable_constants",
+          "negative_coefficient": true,
+          "from_context": false
+        }
+      },
+      "verify": {
+        "tier": "B",
+        "correctness": "consistency 5/4"
+      },
+      "radicals": {
+        "task": "variable_constants",
+        "negative_coefficient": true,
+        "from_context": false
+      },
+      "fingerprint": [
+        "collect_like_terms",
+        "subtract_constant",
+        "divide_coefficient",
+        "flip_inequality",
+        "translate_constraint"
+      ],
+      "reskinDistance": 0.6,
+      "tier": "build-spec"
+    },
+    {
+      "id": 22,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "ALG.B7.s1",
+      "skill": "systems_of_linear_equations",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "math",
+          "v": "5x + 3y = 7"
+        },
+        {
+          "t": "text",
+          "v": "\n"
+        },
+        {
+          "t": "math",
+          "v": "4x - 6y = 9"
+        },
+        {
+          "t": "text",
+          "v": "\nHow many solutions "
+        },
+        {
+          "t": "math",
+          "v": "(x, y)"
+        },
+        {
+          "t": "text",
+          "v": " does the given system of equations have?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "text",
+              "v": "Exactly one"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "text",
+              "v": "Exactly two"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "text",
+              "v": "None"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "text",
+              "v": "Infinitely many"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "A"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. determinant: "
+        },
+        {
+          "t": "text",
+          "v": "Compute "
+        },
+        {
+          "t": "math",
+          "v": "D = (5)(-6) - (3)(4) = -30 - 12 = -42"
+        },
+        {
+          "t": "text",
+          "v": ". Since "
+        },
+        {
+          "t": "math",
+          "v": "D \\neq 0"
+        },
+        {
+          "t": "text",
+          "v": ", the two lines are not parallel and intersect in exactly one point."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. scale equation: "
+        },
+        {
+          "t": "text",
+          "v": "Multiply the first equation by 2: "
+        },
+        {
+          "t": "math",
+          "v": "10x + 6y = 14"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. add equations: "
+        },
+        {
+          "t": "text",
+          "v": "Add to "
+        },
+        {
+          "t": "math",
+          "v": "4x - 6y = 9"
+        },
+        {
+          "t": "text",
+          "v": ": the "
+        },
+        {
+          "t": "math",
+          "v": "y"
+        },
+        {
+          "t": "text",
+          "v": "-terms cancel, giving "
+        },
+        {
+          "t": "math",
+          "v": "14x = 23"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "4. solve single: "
+        },
+        {
+          "t": "text",
+          "v": "Solve for "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "math",
+          "v": "x = \\frac{23}{14}"
+        },
+        {
+          "t": "text",
+          "v": ", a single value."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "5. back substitute: "
+        },
+        {
+          "t": "text",
+          "v": "Substitute into "
+        },
+        {
+          "t": "math",
+          "v": "5x + 3y = 7"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "math",
+          "v": "3y = 7 - \\frac{115}{14} = -\\frac{17}{14}"
+        },
+        {
+          "t": "text",
+          "v": ", so "
+        },
+        {
+          "t": "math",
+          "v": "y = -\\frac{17}{42}"
+        },
+        {
+          "t": "text",
+          "v": ". One unique solution confirms exactly one solution."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 660,
+        "band": "B6",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "number_of_solutions",
+          "has_fraction_solution": true,
+          "from_context": false
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "number_of_solutions",
+        "has_fraction_solution": true,
+        "from_context": false
+      },
+      "fingerprint": [
+        "determinant",
+        "scale_equation",
+        "add_equations",
+        "solve_single",
+        "back_substitute"
+      ],
+      "reskinDistance": 0.6,
+      "tier": "build-spec"
+    }
+  ]
+}

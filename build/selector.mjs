@@ -12,6 +12,7 @@
    ============================================================================ */
 import { proveCheck } from "../verify/prove.mjs";
 import { consistencyCheck } from "../verify/consistency.mjs";
+import { plausibilityCheck } from "../verify/plausibility.mjs";
 import { predictBand, bandGate } from "../difficulty/lltm.mjs";
 import { fingerprint, structuralDistance } from "./fingerprint.mjs";
 
@@ -20,6 +21,8 @@ import { fingerprint, structuralDistance } from "./fingerprint.mjs";
 // structure. Enabled by SIG_STRUCT_DEDUP=1 (or whenever SIG_RESKIN_FLOOR is set).
 const seenFingerprints = new Set();
 const STRUCT_DEDUP = process.env.SIG_STRUCT_DEDUP === "1" || process.env.SIG_RESKIN_FLOOR != null;
+// real-world plausibility gate (context items only) — ON by default; SIG_PLAUSIBILITY=0 disables.
+const PLAUSIBILITY = process.env.SIG_PLAUSIBILITY !== "0";
 
 // ---- surface dedup: numeric/letter-blanked shingles + Jaccard (port of the
 // ledger's normalization, but operating on the flat author `statement` string) --
@@ -67,6 +70,14 @@ export async function verifyAndGate(cand, cell, { tier = cell.tier || "A", reski
   const pBand = predictBand(used, cell.domain, cell.subdomain);
   const gate = bandGate(pBand, `B${cell.band}`);
   if (!gate.ok) return { keep: false, stage: "band", predictedBand: pBand, gate, correctness, reason: `${gate.reason} (pred ${pBand} vs target B${cell.band})` };
+
+  // 2.5 real-world plausibility (context items only; abstract items pass inside
+  //     the check) — the scenario/numbers a real published item would ship.
+  //     Targets the judge's 3–4 realism tells; feeds the double-gate on failure.
+  if (PLAUSIBILITY) {
+    const plaus = await plausibilityCheck(cand, cell);
+    if (!plaus.keep) return { keep: false, stage: "plausibility", issues: plaus.issues, correctness, predictedBand: pBand, reason: `implausible: ${(plaus.issues || []).join("; ") || "scenario/numbers a real item would not ship"}` };
+  }
 
   // 3. reskin structural distance (§4.3) — measured + returned for logging; the
   //    ε(c) floor is OFF unless reskinFloor is supplied.
