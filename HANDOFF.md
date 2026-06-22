@@ -1,8 +1,18 @@
 # HANDOFF — SAT-Insight-Gen
 
-_Last updated: 2026-06-21 · Repo is GIT (`main` = old hybrid baseline; BUILD_SPEC on `build-spec-pipeline`; latest work on `opus-double-gate`). NEW ARCHITECTURE per `BUILD_SPEC.md` — see below._
+_Last updated: 2026-06-22 · Repo is GIT (`main` = old hybrid baseline; BUILD_SPEC on `build-spec-pipeline`; latest work on `opus-double-gate`). NEW ARCHITECTURE per `BUILD_SPEC.md` — see below._
 
-## ⮕ CURRENT: model-first authoring + authenticity finding (2026-06-21, branch `opus-double-gate`, commit d99c522)
+## ⮕ CURRENT: ALGEBRA GRAPH PIPELINE — complete (2026-06-22, branch `opus-double-gate`, commits 93e1b96→3c89436)
+A construct-backward graph-item pipeline for Algebra. **Graphs invert model-first**: the FIGURE is the source of truth, so the harness pins the figure + answer + distractors → correct BY CONSTRUCTION, and abstract graph tasks need **NO LLM** (`build/graph.mjs`; routed from `cell.mjs drawTwoVar` when the task is in `GRAPH_TASKS`; pipeline harness-complete branch skips rationale+author, re-draws on a gate miss). Tier C.
+- **12 graph tasks**, all rubric-grounded: `read_value`, `slope_from_points`, `connect_graph` (graph→eq), `system_read`, `system_count`, `inequality_region`, `parallel_perp_graph`, `equation_to_graph` + `inequality_to_graph` (**4 figure OPTIONS** — "which graph"), `point_in_region`, `feasible_region` (system of 2 inequalities, overlapping shaded), `interpret_graph_context` (graphed model, interpret slope/intercept). All in `linear_equations_two_variables` (algebra.json), tier C, LLTM-banded B2–B6.
+- **Verification (no LLM):** `verify/figurecheck.mjs` (per-type: points-on-line(s), system intersection on both / parallel, inequality boundary↔shaded, **distractor-validity** for which-graph = exactly-one-option-matches, **point-membership** for region tasks); `verify/legibility.mjs` (graph analog of plausibility — wired into `verifyAndGate`, plausibility skipped for tier C). `figures/verify-all.mjs` adversarial gate passes all live figures.
+- **Standardized presentation:** every coordPlane is a symmetric square ±6 unit-grid window (`standardFrame` in graph.mjs); ±10 fallback only if a feature exceeds ±6.
+- **Renderer:** `figures.js coordPlane` shaded region uses Sutherland–Hodgman half-plane clip (correct for steep boundaries; `spec.shaded` may be an ARRAY for systems). `render.mjs` renders per-option figures in a 2×2 grid (FIG_OPT_CSS). Dashed boundary = strict `<`/`>`, solid = `≤`/`≥`.
+- **Eval drivers:** `build/_graphtest.mjs` (offline correctness-by-construction, 600 draws/0 err), `build/_graphspot.mjs` (graph-only test → `data/test-101.json`, 36/36 through the real gate), `build/_shadedcheck.mjs` (72 half-planes correct — shaded-region regression guard).
+- Rubric coverage vs `matrix.json` algebra is now COMPLETE for graphs/figures (the one figureLoad:req statement ALG.B2.s2 is covered line+system). Tables are still LLM-authored (text pipeline), not construct-backward — a possible future rigor upgrade.
+- **NOT yet done:** a full mixed `--domain` LLM run confirming graph items flow alongside text items at scale (the harness-complete branch is wired + unit-tested via `_graphspot`, but not exercised in a full pipeline run).
+
+## model-first authoring + authenticity finding (2026-06-21, branch `opus-double-gate`, commit d99c522)
 A refinement on the BUILD_SPEC pipeline (described below). The harness now pins item **STRUCTURE, not exact numbers**: it draws the band-fixing radicals + a structure directive; the **author invents a natural situation and picks fitting numbers**; PROVE re-derives; the LLTM gates the band off the radicals. This removes the "context pasted onto a pre-set equation" tell. Graph tasks (`read_graph`/`connect_graph`) stay harness-pinned (figure + answer).
 
 - `build/cell.mjs` — drawers emit MODEL-FIRST structure directives (`answer:null`). Structure-analysis tasks (`num_solutions`, `missing_coeff`, `number_of_solutions`, `variable_constants`) forced **ABSTRACT** (no scenario) to match the real SAT. MCQ/SPR ratio fixed (~50/50 → **~70/30**). Keeps context (without-replacement) + task (least-used) rotation.
