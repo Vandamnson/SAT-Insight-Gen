@@ -60,16 +60,16 @@ function mcq(correct, distractors, r) {
 
 const sp = (...steps) => steps.map((d, i) => ({ step: i + 1, op: d.op, detail: d.detail }));
 
-/* ---- window: fit all lines + points; slope-sized; integer ticks ---- */
-function frameFor(lines, points = [], extraX = []) {
-  const X = Math.min(7, Math.max(3, ...points.map((p) => Math.abs(p[0]) + 1), ...extraX.map((x) => Math.abs(x) + 1)));
-  const xmin = -X, xmax = X;
-  const ys = [0, ...points.map((p) => p[1]), ...lines.map((L) => L.b)];
-  for (const L of lines) ys.push(fval(L.f) * xmin + L.b, fval(L.f) * xmax + L.b);
-  let ymin = Math.floor(Math.min(...ys)) - 1, ymax = Math.ceil(Math.max(...ys)) + 1;
-  if (ymax - ymin > 16) { const c = Math.round((ymax + ymin) / 2); ymin = c - 8; ymax = c + 8; }
-  const step = Math.max(xmax - xmin, ymax - ymin) > 12 ? 2 : 1;
-  return { xRange: [xmin, xmax], yRange: [ymin, ymax], xStep: step, yStep: step, origin: true, axisLabels: ["x", "y"] };
+/* ---- STANDARD window — every graph reads as one family: a SYMMETRIC SQUARE
+   window centred on the origin, unit grid. ±6 (step 1) is the canonical look;
+   ±10 (step 2) is used ONLY when a feature that must be visible would fall outside
+   ±6. Same canvas size either way (the renderer fixes the plot width and scales
+   equally on both axes). Pass the feature points that MUST be on-screen — lines
+   themselves clip to the window, as on the real test. ---- */
+function standardFrame(featurePts = []) {
+  const mx = Math.max(0, ...featurePts.flatMap((p) => [Math.abs(p[0]), Math.abs(p[1])]));
+  const W = mx <= 6 ? 6 : 10, step = W <= 6 ? 1 : 2;
+  return { xRange: [-W, W], yRange: [-W, W], xStep: step, yStep: step, origin: true, axisLabels: ["x", "y"] };
 }
 const lineCurve = (m, b, opts = {}) => ({ type: "line", m, b, ...opts });
 
@@ -79,25 +79,26 @@ function gReadValue(r) {
   const m = sgn(r) * randint(r, 1, 3), f = frac(m, 1);
   const feature = pick(r, ["yint", "xint", "point", "slope"]);
   let b, answer, ask, points = [], detail, sub = feature;
+  let feat;
   if (feature === "xint") {
-    const xi = sgn(r) * randint(r, 1, 4); b = -m * xi; answer = String(xi);
+    const xi = sgn(r) * randint(r, 1, 4); b = -m * xi; answer = String(xi); feat = [[xi, 0]];
     ask = "What is the \\(x\\)-coordinate of the \\(x\\)-intercept of line \\(\\ell\\)?";
     detail = `Line \\(\\ell\\) crosses the \\(x\\)-axis at \\((${xi}, 0)\\).`;
   } else if (feature === "point") {
-    b = sgn(r) * randint(r, 0, 5); const px = sgn(r) * randint(r, 1, 4), py = m * px + b; answer = String(py);
-    points = [[px, py]];
+    const px = sgn(r) * randint(r, 1, 3), py = sgn(r) * randint(r, 1, 6); b = py - m * px; answer = String(py);
+    points = [[px, py]]; feat = [[px, py]];
     ask = "Point \\(P\\) is shown on line \\(\\ell\\). What is the \\(y\\)-coordinate of \\(P\\)?";
     detail = `Read \\(P = (${px}, ${py})\\) off the graph.`;
   } else if (feature === "slope") {
-    b = sgn(r) * randint(r, 0, 5); answer = String(m);
+    b = sgn(r) * randint(r, 0, 5); answer = String(m); feat = [[0, b]];
     ask = "What is the slope of line \\(\\ell\\)?";
     detail = `Line \\(\\ell\\) rises \\(${m}\\) for every \\(1\\) unit increase in \\(x\\).`;
   } else {
-    b = sgn(r) * randint(r, 1, 6); answer = String(b);
+    b = sgn(r) * randint(r, 1, 6); answer = String(b); feat = [[0, b]];
     ask = "What is the \\(y\\)-coordinate of the \\(y\\)-intercept of line \\(\\ell\\)?";
     detail = `Line \\(\\ell\\) crosses the \\(y\\)-axis at \\((0, ${b})\\).`;
   }
-  const spec = frameFor([{ f, b }], points);
+  const spec = standardFrame(feat);
   spec.curves = [lineCurve(m, b)];
   if (points.length) spec.points = points.map(([x, y]) => ({ at: [x, y], label: "P" }));
   return {
@@ -110,11 +111,12 @@ function gReadValue(r) {
 }
 
 function gSlopeFromPoints(r) {
-  const m = sgn(r) * randint(r, 1, 3), dx = pick(r, [1, 2, 3]);
-  const x1 = sgn(r) * randint(r, 1, 3), y1 = sgn(r) * randint(r, 1, 4);
-  const x2 = x1 + dx, y2 = y1 + m * dx, f = frac(y2 - y1, x2 - x1);
-  const spec = frameFor([{ f: frac(m, 1), b: y1 - m * x1 }], [[x1, y1], [x2, y2]]);
-  spec.curves = [lineCurve(m, y1 - m * x1)];
+  const dx = pick(r, [2, 3]), dy = sgn(r) * randint(r, 1, 4);   // dy not a multiple of dx ⇒ fractional slopes too
+  const x1 = sgn(r) * randint(r, 1, 2), y1 = sgn(r) * randint(r, 1, 2);
+  const x2 = x1 + dx, y2 = y1 + dy, f = frac(dy, dx);
+  const m = dy / dx, b = y1 - m * x1;
+  const spec = standardFrame([[x1, y1], [x2, y2]]);
+  spec.curves = [lineCurve(m, b)];
   spec.points = [{ at: [x1, y1], label: "P" }, { at: [x2, y2], label: "Q" }];
   return {
     task: "slope_from_points", format: "spr", answer: plainNum(f),
@@ -130,7 +132,7 @@ function gConnectGraph(r) {
   const correct = tex(lineTex(m, b));
   const distractors = [tex(lineTex(-m, b)), tex(lineTex(m, -b)), tex(lineTex(-m, -b))];
   const { choices, correct_choice } = mcq(correct, distractors, r);
-  const spec = frameFor([{ f: frac(m, 1), b }]); spec.curves = [lineCurve(m, b)];
+  const spec = standardFrame([[0, b]]); spec.curves = [lineCurve(m, b)];
   return {
     task: "connect_graph", format: "mcq", answer: correct, choices, correct_choice,
     statement: "Which equation represents the line shown in the \\(xy\\)-plane?",
@@ -141,10 +143,10 @@ function gConnectGraph(r) {
 }
 
 function gSystemRead(r) {
-  const sx = sgn(r) * randint(r, 1, 4), sy = sgn(r) * randint(r, 1, 5);
+  const sx = sgn(r) * randint(r, 1, 4), sy = sgn(r) * randint(r, 1, 4);
   let m1 = sgn(r) * randint(r, 1, 3), m2; do { m2 = sgn(r) * randint(r, 1, 3); } while (m2 === m1);
   const b1 = sy - m1 * sx, b2 = sy - m2 * sx;
-  const spec = frameFor([{ f: frac(m1, 1), b: b1 }, { f: frac(m2, 1), b: b2 }], [[sx, sy]]);
+  const spec = standardFrame([[sx, sy]]);
   spec.curves = [lineCurve(m1, b1), lineCurve(m2, b2)];
   spec.points = [{ at: [sx, sy], label: "P" }];
   const askPair = r() < 0.5;
@@ -170,16 +172,16 @@ function gSystemRead(r) {
 
 function gSystemCount(r) {
   const none = r() < 0.5;
-  let curves, lines;
+  let curves, feats;
   if (none) {                                   // parallel: equal slope, distinct intercept
     const m = sgn(r) * randint(r, 1, 3), b1 = sgn(r) * randint(r, 1, 5); let b2; do { b2 = sgn(r) * randint(r, 1, 5); } while (b2 === b1);
-    lines = [{ f: frac(m, 1), b: b1 }, { f: frac(m, 1), b: b2 }]; curves = [lineCurve(m, b1), lineCurve(m, b2)];
+    curves = [lineCurve(m, b1), lineCurve(m, b2)]; feats = [[0, b1], [0, b2]];
   } else {                                      // intersecting
     const sx = sgn(r) * randint(r, 1, 3), sy = sgn(r) * randint(r, 1, 4);
     let m1 = sgn(r) * randint(r, 1, 3), m2; do { m2 = sgn(r) * randint(r, 1, 3); } while (m2 === m1);
-    lines = [{ f: frac(m1, 1), b: sy - m1 * sx }, { f: frac(m2, 1), b: sy - m2 * sx }]; curves = [lineCurve(m1, lines[0].b), lineCurve(m2, lines[1].b)];
+    curves = [lineCurve(m1, sy - m1 * sx), lineCurve(m2, sy - m2 * sx)]; feats = [[sx, sy]];
   }
-  const spec = frameFor(lines); spec.curves = curves;
+  const spec = standardFrame(feats); spec.curves = curves;
   const correct = none ? "No solution" : "Exactly one solution";
   const { choices, correct_choice } = mcq(correct, ["Exactly one solution", "No solution", "Infinitely many solutions", "Exactly two solutions"].filter((x) => x !== correct).slice(0, 3), r);
   return {
@@ -205,7 +207,7 @@ function gInequalityRegion(r) {
     `y ${opTex} ${coefTex(f)}${-b > 0 ? ` + ${-b}` : -b < 0 ? ` - ${b}` : ""}`,           // flipped intercept
   ];
   const { choices, correct_choice } = mcq(tex(correct), distractors.map(tex), r);
-  const spec = frameFor([{ f, b }]);
+  const spec = standardFrame([[0, b]]);
   spec.curves = [lineCurve(m, b, { dash: strict })];
   spec.shaded = { m, b, ineq };
   return {
@@ -232,7 +234,7 @@ function gParallelPerp(r) {
     ? [lineTexR(perp, through(perp)), lineTexR(frac(-m, 1), through(frac(-m, 1))), lineTexR(par, frac(bL, 1)), lineTexR(par, bump)]
     : [lineTexR(par, through(par)), lineTexR(frac(1, m), through(frac(1, m))), lineTexR(perp, frac(bL, 1)), lineTexR(perp, bump)];
   const { choices, correct_choice } = mcq(tex(correct), distractors.map(tex), r);
-  const spec = frameFor([{ f: frac(m, 1), b: bL }]); spec.curves = [lineCurve(m, bL)];
+  const spec = standardFrame([[0, bL]]); spec.curves = [lineCurve(m, bL)];
   return {
     task: "parallel_perp_graph", format: "mcq", answer: tex(correct), choices, correct_choice,
     statement: `Line \\(\\ell\\) is shown in the \\(xy\\)-plane. Which equation represents the line that passes through the point \\((${qx}, ${qy})\\) and is ${kind} to line \\(\\ell\\)?`,

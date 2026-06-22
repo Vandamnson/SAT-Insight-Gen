@@ -104,15 +104,15 @@
         "fn": "coordPlane",
         "spec": {
           "xRange": [
-            -3,
-            3
+            -6,
+            6
           ],
           "yRange": [
-            -17,
-            -1
+            -6,
+            6
           ],
-          "xStep": 2,
-          "yStep": 2,
+          "xStep": 1,
+          "yStep": 1,
           "origin": true,
           "axisLabels": [
             "x",
@@ -245,15 +245,15 @@
         "fn": "coordPlane",
         "spec": {
           "xRange": [
-            -3,
-            3
+            -6,
+            6
           ],
           "yRange": [
-            -10,
-            4
+            -6,
+            6
           ],
-          "xStep": 2,
-          "yStep": 2,
+          "xStep": 1,
+          "yStep": 1,
           "origin": true,
           "axisLabels": [
             "x",
@@ -386,15 +386,15 @@
         "fn": "coordPlane",
         "spec": {
           "xRange": [
-            -3,
-            3
+            -6,
+            6
           ],
           "yRange": [
-            -13,
-            3
+            -6,
+            6
           ],
-          "xStep": 2,
-          "yStep": 2,
+          "xStep": 1,
+          "yStep": 1,
           "origin": true,
           "axisLabels": [
             "x",
@@ -474,7 +474,7 @@
       ],
       "answer": {
         "accept": [
-          "1"
+          "-1"
         ],
         "tol": 0
       },
@@ -489,7 +489,7 @@
         },
         {
           "t": "math",
-          "v": "= \\frac{0 - (-2)}{-1 - (-3)} = 1"
+          "v": "= \\frac{-4 - (-1)}{1 - (-2)} = -1"
         },
         {
           "t": "text",
@@ -503,11 +503,11 @@
         "fn": "coordPlane",
         "spec": {
           "xRange": [
-            -4,
-            4
+            -6,
+            6
           ],
           "yRange": [
-            -4,
+            -6,
             6
           ],
           "xStep": 1,
@@ -520,22 +520,22 @@
           "curves": [
             {
               "type": "line",
-              "m": 1,
-              "b": 1
+              "m": -1,
+              "b": -3
             }
           ],
           "points": [
             {
               "at": [
-                -3,
-                -2
+                -2,
+                -1
               ],
               "label": "P"
             },
             {
               "at": [
-                -1,
-                0
+                1,
+                -4
               ],
               "label": "Q"
             }
@@ -559,7 +559,7 @@
       },
       "fingerprint": [
         "slope_from_points",
-        "pos_int",
+        "neg_int",
         "slope",
         "1line"
       ],
@@ -607,7 +607,7 @@
       ],
       "answer": {
         "accept": [
-          "1"
+          "-1/3"
         ],
         "tol": 0
       },
@@ -622,7 +622,7 @@
         },
         {
           "t": "math",
-          "v": "= \\frac{-2 - (-3)}{2 - (1)} = 1"
+          "v": "= \\frac{-3 - (-2)}{4 - (1)} = -1/3"
         },
         {
           "t": "text",
@@ -636,12 +636,12 @@
         "fn": "coordPlane",
         "spec": {
           "xRange": [
-            -3,
-            3
+            -6,
+            6
           ],
           "yRange": [
-            -8,
-            1
+            -6,
+            6
           ],
           "xStep": 1,
           "yStep": 1,
@@ -653,22 +653,22 @@
           "curves": [
             {
               "type": "line",
-              "m": 1,
-              "b": -4
+              "m": -0.3333333333333333,
+              "b": -1.6666666666666667
             }
           ],
           "points": [
             {
               "at": [
                 1,
-                -3
+                -2
               ],
               "label": "P"
             },
             {
               "at": [
-                2,
-                -2
+                4,
+                -3
               ],
               "label": "Q"
             }
@@ -692,7 +692,7 @@
       },
       "fingerprint": [
         "slope_from_points",
-        "pos_int",
+        "neg_frac",
         "slope",
         "1line"
       ],
@@ -740,7 +740,7 @@
       ],
       "answer": {
         "accept": [
-          "3"
+          "1/3"
         ],
         "tol": 0
       },
@@ -755,7 +755,7 @@
         },
         {
           "t": "math",
-          "v": "= \\frac{7 - (4)}{0 - (-1)} = 3"
+          "v": "= \\frac{3 - (2)}{2 - (-1)} = 1/3"
         },
         {
           "t": "text",
@@ -769,15 +769,15 @@
         "fn": "coordPlane",
         "spec": {
           "xRange": [
-            -3,
-            3
+            -6,
+            6
           ],
           "yRange": [
-            -1,
-            15
+            -6,
+            6
           ],
-          "xStep": 2,
-          "yStep": 2,
+          "xStep": 1,
+          "yStep": 1,
           "origin": true,
           "axisLabels": [
             "x",
@@ -786,22 +786,22 @@
           "curves": [
             {
               "type": "line",
-              "m": 3,
-              "b": 7
+              "m": 0.3333333333333333,
+              "b": 2.3333333333333335
             }
           ],
           "points": [
             {
               "at": [
                 -1,
-                4
+                2
               ],
               "label": "P"
             },
             {
               "at": [
-                0,
-                7
+                2,
+                3
               ],
               "label": "Q"
             }
@@ -825,7 +825,7 @@
       },
       "fingerprint": [
         "slope_from_points",
-        "pos_int",
+        "pos_frac",
         "slope",
         "1line"
       ],
@@ -945,15 +945,15 @@
         "fn": "coordPlane",
         "spec": {
           "xRange": [
-            -3,
-            3
+            -6,
+            6
           ],
           "yRange": [
-            -11,
-            3
+            -6,
+            6
           ],
-          "xStep": 2,
-          "yStep": 2,
+          "xStep": 1,
+          "yStep": 1,
           "origin": true,
           "axisLabels": [
             "x",
@@ -1105,15 +1105,15 @@
         "fn": "coordPlane",
         "spec": {
           "xRange": [
-            -3,
-            3
+            -6,
+            6
           ],
           "yRange": [
-            -13,
-            1
+            -6,
+            6
           ],
-          "xStep": 2,
-          "yStep": 2,
+          "xStep": 1,
+          "yStep": 1,
           "origin": true,
           "axisLabels": [
             "x",
@@ -1265,12 +1265,12 @@
         "fn": "coordPlane",
         "spec": {
           "xRange": [
-            -3,
-            3
+            -6,
+            6
           ],
           "yRange": [
-            -1,
-            7
+            -6,
+            6
           ],
           "xStep": 1,
           "yStep": 1,
@@ -1417,15 +1417,15 @@
         "fn": "coordPlane",
         "spec": {
           "xRange": [
-            -3,
-            3
+            -6,
+            6
           ],
           "yRange": [
-            -4,
-            12
+            -6,
+            6
           ],
-          "xStep": 2,
-          "yStep": 2,
+          "xStep": 1,
+          "yStep": 1,
           "origin": true,
           "axisLabels": [
             "x",
@@ -1583,15 +1583,15 @@
         "fn": "coordPlane",
         "spec": {
           "xRange": [
-            -4,
-            4
+            -6,
+            6
           ],
           "yRange": [
-            -14,
-            2
+            -6,
+            6
           ],
-          "xStep": 2,
-          "yStep": 2,
+          "xStep": 1,
+          "yStep": 1,
           "origin": true,
           "axisLabels": [
             "x",
@@ -1714,15 +1714,15 @@
         "fn": "coordPlane",
         "spec": {
           "xRange": [
-            -3,
-            3
+            -6,
+            6
           ],
           "yRange": [
-            -11,
-            3
+            -6,
+            6
           ],
-          "xStep": 2,
-          "yStep": 2,
+          "xStep": 1,
+          "yStep": 1,
           "origin": true,
           "axisLabels": [
             "x",
@@ -1864,15 +1864,15 @@
         "fn": "coordPlane",
         "spec": {
           "xRange": [
-            -3,
-            3
+            -6,
+            6
           ],
           "yRange": [
-            -9,
-            7
+            -6,
+            6
           ],
-          "xStep": 2,
-          "yStep": 2,
+          "xStep": 1,
+          "yStep": 1,
           "origin": true,
           "axisLabels": [
             "x",
@@ -2005,15 +2005,15 @@
         "fn": "coordPlane",
         "spec": {
           "xRange": [
-            -3,
-            3
+            -6,
+            6
           ],
           "yRange": [
-            -9,
-            7
+            -6,
+            6
           ],
-          "xStep": 2,
-          "yStep": 2,
+          "xStep": 1,
+          "yStep": 1,
           "origin": true,
           "axisLabels": [
             "x",
@@ -2146,15 +2146,15 @@
         "fn": "coordPlane",
         "spec": {
           "xRange": [
-            -3,
-            3
+            -6,
+            6
           ],
           "yRange": [
-            -1,
-            13
+            -6,
+            6
           ],
-          "xStep": 2,
-          "yStep": 2,
+          "xStep": 1,
+          "yStep": 1,
           "origin": true,
           "axisLabels": [
             "x",
@@ -2287,15 +2287,15 @@
         "fn": "coordPlane",
         "spec": {
           "xRange": [
-            -3,
-            3
+            -6,
+            6
           ],
           "yRange": [
-            -3,
-            11
+            -6,
+            6
           ],
-          "xStep": 2,
-          "yStep": 2,
+          "xStep": 1,
+          "yStep": 1,
           "origin": true,
           "axisLabels": [
             "x",
@@ -2429,15 +2429,15 @@
         "fn": "coordPlane",
         "spec": {
           "xRange": [
-            -3,
-            3
-          ],
-          "yRange": [
-            -10,
+            -6,
             6
           ],
-          "xStep": 2,
-          "yStep": 2,
+          "yRange": [
+            -6,
+            6
+          ],
+          "xStep": 1,
+          "yStep": 1,
           "origin": true,
           "axisLabels": [
             "x",
@@ -2571,15 +2571,15 @@
         "fn": "coordPlane",
         "spec": {
           "xRange": [
-            -3,
-            3
+            -6,
+            6
           ],
           "yRange": [
-            -5,
-            9
+            -6,
+            6
           ],
-          "xStep": 2,
-          "yStep": 2,
+          "xStep": 1,
+          "yStep": 1,
           "origin": true,
           "axisLabels": [
             "x",
@@ -2780,15 +2780,15 @@
         "fn": "coordPlane",
         "spec": {
           "xRange": [
-            -3,
-            3
+            -6,
+            6
           ],
           "yRange": [
-            -3,
-            11
+            -6,
+            6
           ],
-          "xStep": 2,
-          "yStep": 2,
+          "xStep": 1,
+          "yStep": 1,
           "origin": true,
           "axisLabels": [
             "x",
@@ -2983,15 +2983,15 @@
         "fn": "coordPlane",
         "spec": {
           "xRange": [
-            -3,
-            3
+            -6,
+            6
           ],
           "yRange": [
             -6,
-            10
+            6
           ],
-          "xStep": 2,
-          "yStep": 2,
+          "xStep": 1,
+          "yStep": 1,
           "origin": true,
           "axisLabels": [
             "x",
@@ -3186,15 +3186,15 @@
         "fn": "coordPlane",
         "spec": {
           "xRange": [
-            -3,
-            3
+            -6,
+            6
           ],
           "yRange": [
-            -4,
-            10
+            -6,
+            6
           ],
-          "xStep": 2,
-          "yStep": 2,
+          "xStep": 1,
+          "yStep": 1,
           "origin": true,
           "axisLabels": [
             "x",
