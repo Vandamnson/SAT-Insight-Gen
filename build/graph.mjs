@@ -13,7 +13,7 @@
    solve_path, fingerprint, figure:{fn:"coordPlane", spec}, harness:true }.
    ============================================================================ */
 
-export const GRAPH_TASKS = ["read_value", "slope_from_points", "connect_graph", "system_read", "system_count", "inequality_region", "parallel_perp_graph", "equation_to_graph", "inequality_to_graph"];
+export const GRAPH_TASKS = ["read_value", "slope_from_points", "connect_graph", "system_read", "system_count", "inequality_region", "parallel_perp_graph", "equation_to_graph", "inequality_to_graph", "point_in_region", "feasible_region", "interpret_graph_context"];
 
 /* ---- small helpers ---- */
 const randint = (r, lo, hi) => lo + Math.floor(r() * (hi - lo + 1));
@@ -287,6 +287,108 @@ function gInequalityToGraph(r) {
   };
 }
 
+/* ===== "which point is a solution" — region figure, POINT options (gaps #4/#5) ===== */
+const ptStr = (p) => `(${p[0]}, ${p[1]})`;
+const inHalf = (p, rg) => { const v = p[1] - (rg.m * p[0] + rg.b); return (rg.ineq === ">" || rg.ineq === ">=") ? v > 0 : v < 0; };
+const offBoundary = (p, regions) => regions.every((rg) => Math.abs(p[1] - (rg.m * p[0] + rg.b)) >= 1);   // ≥1 unit off each boundary (clean, unambiguous)
+function regionFig(regions) {
+  const s = standardFrame([[0, regions[0].b], [0, regions[regions.length - 1].b]]);
+  s.curves = regions.map((rg) => lineCurve(rg.m, rg.b, { dash: rg.strict }));
+  s.shaded = regions.map((rg) => ({ m: rg.m, b: rg.b, ineq: rg.ineq }));
+  return s;
+}
+/* pick 1 lattice point inside ALL regions + 3 outside ≥1 of them, all off-boundary; null if it can't */
+function pickPoints(r, regions) {
+  const grid = [];
+  for (let x = -5; x <= 5; x++) for (let y = -5; y <= 5; y++) grid.push([x, y]);
+  const off = grid.filter((p) => offBoundary(p, regions));
+  const inside = off.filter((p) => regions.every((rg) => inHalf(p, rg)));
+  const outside = off.filter((p) => !regions.every((rg) => inHalf(p, rg)));
+  if (inside.length < 1 || outside.length < 3) return null;
+  const correct = pick(r, inside), pool = outside.slice(), outs = [];
+  while (outs.length < 3 && pool.length) outs.push(pool.splice(Math.floor(r() * pool.length), 1)[0]);
+  return { correct, distractors: outs };
+}
+/* shuffle point options, keeping choices ↔ optionPoints aligned */
+function shufflePoints(correct, distractors, r) {
+  const cands = [{ pt: correct, ok: true }, ...distractors.map((pt) => ({ pt, ok: false }))];
+  for (let i = cands.length - 1; i > 0; i--) { const j = Math.floor(r() * (i + 1)); [cands[i], cands[j]] = [cands[j], cands[i]]; }
+  return { choices: cands.map((c) => tex(ptStr(c.pt))), optionPoints: cands.map((c) => c.pt), correct_choice: "ABCD"[cands.findIndex((c) => c.ok)] };
+}
+
+function gPointInRegion(r) {
+  let regions, pts, t = 0;
+  do {
+    const m = sgn(r) * randint(r, 1, 2), b = sgn(r) * randint(r, 1, 3), above = r() < 0.5, strict = r() < 0.5;
+    regions = [{ m, b, ineq: above ? (strict ? ">" : ">=") : (strict ? "<" : "<="), strict }];
+    pts = pickPoints(r, regions);
+  } while (!pts && ++t < 30);
+  const { choices, optionPoints, correct_choice } = shufflePoints(pts.correct, pts.distractors, r);
+  return {
+    task: "point_in_region", format: "mcq", choices, correct_choice, optionPoints, regions,
+    answer: tex(ptStr(pts.correct)),
+    statement: "The shaded region in the \\(xy\\)-plane is the graph of a linear inequality. Which of the following points is a solution to the inequality?",
+    figure: { fn: "coordPlane", spec: regionFig(regions) },
+    solve_path: sp({ op: "test_point", detail: `Only \\(${ptStr(pts.correct)}\\) lies in the shaded region.` }),
+    fingerprint: ["point_in_region", slopeClass(frac(regions[0].m, 1)), regions[0].ineq.includes(">") ? "above" : "below", "1region"],
+  };
+}
+
+function gFeasibleRegion(r) {
+  let regions, pts, t = 0;
+  do {
+    const m1 = sgn(r) * randint(r, 1, 2); let m2; do { m2 = sgn(r) * randint(r, 1, 2); } while (m2 === m1);
+    const s1 = r() < 0.5, s2 = r() < 0.5;
+    regions = [
+      { m: m1, b: sgn(r) * randint(r, 1, 3), ineq: s1 ? ">=" : "<=", strict: false },
+      { m: m2, b: sgn(r) * randint(r, 1, 3), ineq: s2 ? ">=" : "<=", strict: false },
+    ];
+    pts = pickPoints(r, regions);
+  } while (!pts && ++t < 40);
+  if (!pts) { regions = [{ m: 1, b: -2, ineq: ">=", strict: false }, { m: -1, b: 2, ineq: "<=", strict: false }]; pts = pickPoints(r, regions); }   // guaranteed-feasible fallback
+  const { choices, optionPoints, correct_choice } = shufflePoints(pts.correct, pts.distractors, r);
+  return {
+    task: "feasible_region", format: "mcq", choices, correct_choice, optionPoints, regions,
+    answer: tex(ptStr(pts.correct)),
+    statement: "The graph shows the solution region of a system of two linear inequalities in the \\(xy\\)-plane. Which of the following points is a solution to the system?",
+    figure: { fn: "coordPlane", spec: regionFig(regions) },
+    solve_path: sp({ op: "test_point", detail: `Only \\(${ptStr(pts.correct)}\\) satisfies BOTH inequalities (lies in the overlap).` }),
+    fingerprint: ["feasible_region", `${regions[0].ineq}|${regions[1].ineq}`, "system", "2region"],
+  };
+}
+
+/* ===== contextual interpret-a-graph (Phase C) — construct-backward templates ===== */
+const CTX = [   // y-quantity has NO leading article (templates add it); all INCREASING ⇒ positive slope/intercept is plausible
+  { y: "total cost", yu: "dollars", x: "hours", xu: "hour" },
+  { y: "amount of water in a tank", yu: "liters", x: "minutes", xu: "minute" },
+  { y: "distance from the starting line", yu: "meters", x: "seconds", xu: "second" },
+  { y: "balance of an account", yu: "dollars", x: "weeks", xu: "week" },
+  { y: "height of a seedling", yu: "centimeters", x: "days", xu: "day" },
+  { y: "amount of data stored", yu: "gigabytes", x: "months", xu: "month" },
+  { y: "number of subscribers", yu: "subscribers", x: "weeks", xu: "week" },
+  { y: "total savings", yu: "dollars", x: "months", xu: "month" },
+];
+const uq = (n, u) => (n === 1 ? u.replace(/s$/, "") : u);   // singular unit for a value of 1
+function gInterpretGraphContext(r) {
+  const c = pick(r, CTX), m = randint(r, 2, 4); let b; do { b = randint(r, 1, 5); } while (b === m);   // positive ⇒ plausible increasing model; b≠m so distractors stay distinct
+  const askSlope = r() < 0.5;
+  const correct = askSlope
+    ? `The ${c.y} increases by ${m} ${uq(m, c.yu)} for each additional ${c.xu}.`
+    : `Before any ${c.x} have passed, the ${c.y} is ${b} ${uq(b, c.yu)}.`;
+  const distractors = askSlope
+    ? [`The ${c.y} increases by ${b} ${uq(b, c.yu)} for each additional ${c.xu}.`, `The initial ${c.y} is ${m} ${uq(m, c.yu)}.`, `After ${m} ${c.x}, the ${c.y} is ${b} ${uq(b, c.yu)}.`]
+    : [`Before any ${c.x} have passed, the ${c.y} is ${m} ${uq(m, c.yu)}.`, `The ${c.y} increases by ${b} ${uq(b, c.yu)} for each additional ${c.xu}.`, `The ${c.y} increases by ${m} ${uq(m, c.yu)} for each additional ${c.xu}.`];
+  const { choices, correct_choice } = mcq(correct, distractors, r);
+  const spec = standardFrame([[0, b]]); spec.curves = [lineCurve(m, b)];
+  return {
+    task: "interpret_graph_context", format: "mcq", choices, correct_choice, answer: correct,
+    statement: `The graph shown models the ${c.y}, \\(y\\), in ${c.yu}, after \\(x\\) ${c.x}. What does the ${askSlope ? "slope" : "\\(y\\)-intercept"} of the line represent?`,
+    figure: { fn: "coordPlane", spec },
+    solve_path: sp({ op: "interpret_part", detail: askSlope ? `Slope \\(${m}\\) = the change in ${c.y} per ${c.xu}.` : `\\(y\\)-intercept \\(${b}\\) = the ${c.y} at \\(x = 0\\).` }),
+    fingerprint: ["interpret_graph_context", askSlope ? "slope" : "intercept", "context", "1line"],
+  };
+}
+
 const BUILDERS = {
   read_value: gReadValue,
   slope_from_points: gSlopeFromPoints,
@@ -297,6 +399,9 @@ const BUILDERS = {
   parallel_perp_graph: gParallelPerp,
   equation_to_graph: gEquationToGraph,
   inequality_to_graph: gInequalityToGraph,
+  point_in_region: gPointInRegion,
+  feasible_region: gFeasibleRegion,
+  interpret_graph_context: gInterpretGraphContext,
 };
 
 /** drawGraphItem(task, band, r) — a complete, correct-by-construction graph candidate.

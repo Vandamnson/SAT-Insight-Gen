@@ -4564,6 +4564,1355 @@
       ],
       "reskinDistance": 1,
       "tier": "build-spec"
+    },
+    {
+      "id": 28,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B3",
+      "target_band": "B3",
+      "statementId": "ALG.B3.s1",
+      "skill": "linear_equations_two_variables",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The shaded region in the "
+        },
+        {
+          "t": "math",
+          "v": "xy"
+        },
+        {
+          "t": "text",
+          "v": "-plane is the graph of a linear inequality. Which of the following points is a solution to the inequality?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "(4, 0)"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "(3, -3)"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "(0, 0)"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "(2, 0)"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "A"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. test point: "
+        },
+        {
+          "t": "text",
+          "v": "Only "
+        },
+        {
+          "t": "math",
+          "v": "(4, 0)"
+        },
+        {
+          "t": "text",
+          "v": " lies in the shaded region."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "coordPlane",
+        "spec": {
+          "xRange": [
+            -6,
+            6
+          ],
+          "yRange": [
+            -6,
+            6
+          ],
+          "xStep": 1,
+          "yStep": 1,
+          "origin": true,
+          "axisLabels": [
+            "x",
+            "y"
+          ],
+          "curves": [
+            {
+              "type": "line",
+              "m": -1,
+              "b": 3,
+              "dash": true
+            }
+          ],
+          "shaded": [
+            {
+              "m": -1,
+              "b": 3,
+              "ineq": ">"
+            }
+          ]
+        }
+      },
+      "difficulty": {
+        "scalePoint": 435,
+        "band": "B3",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "point_in_region"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "point_in_region"
+      },
+      "fingerprint": [
+        "point_in_region",
+        "neg_int",
+        "above",
+        "1region"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 29,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B3",
+      "target_band": "B3",
+      "statementId": "ALG.B3.s1",
+      "skill": "linear_equations_two_variables",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The shaded region in the "
+        },
+        {
+          "t": "math",
+          "v": "xy"
+        },
+        {
+          "t": "text",
+          "v": "-plane is the graph of a linear inequality. Which of the following points is a solution to the inequality?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "(5, 4)"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "(-2, -5)"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "(5, -2)"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "(1, 5)"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "B"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. test point: "
+        },
+        {
+          "t": "text",
+          "v": "Only "
+        },
+        {
+          "t": "math",
+          "v": "(-2, -5)"
+        },
+        {
+          "t": "text",
+          "v": " lies in the shaded region."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "coordPlane",
+        "spec": {
+          "xRange": [
+            -6,
+            6
+          ],
+          "yRange": [
+            -6,
+            6
+          ],
+          "xStep": 1,
+          "yStep": 1,
+          "origin": true,
+          "axisLabels": [
+            "x",
+            "y"
+          ],
+          "curves": [
+            {
+              "type": "line",
+              "m": -1,
+              "b": 2,
+              "dash": false
+            }
+          ],
+          "shaded": [
+            {
+              "m": -1,
+              "b": 2,
+              "ineq": "<="
+            }
+          ]
+        }
+      },
+      "difficulty": {
+        "scalePoint": 435,
+        "band": "B3",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "point_in_region"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "point_in_region"
+      },
+      "fingerprint": [
+        "point_in_region",
+        "neg_int",
+        "below",
+        "1region"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 30,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B3",
+      "target_band": "B3",
+      "statementId": "ALG.B3.s1",
+      "skill": "linear_equations_two_variables",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The shaded region in the "
+        },
+        {
+          "t": "math",
+          "v": "xy"
+        },
+        {
+          "t": "text",
+          "v": "-plane is the graph of a linear inequality. Which of the following points is a solution to the inequality?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "(5, 0)"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "(-3, -4)"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "(-1, 2)"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "(-3, -3)"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "C"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. test point: "
+        },
+        {
+          "t": "text",
+          "v": "Only "
+        },
+        {
+          "t": "math",
+          "v": "(-1, 2)"
+        },
+        {
+          "t": "text",
+          "v": " lies in the shaded region."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "coordPlane",
+        "spec": {
+          "xRange": [
+            -6,
+            6
+          ],
+          "yRange": [
+            -6,
+            6
+          ],
+          "xStep": 1,
+          "yStep": 1,
+          "origin": true,
+          "axisLabels": [
+            "x",
+            "y"
+          ],
+          "curves": [
+            {
+              "type": "line",
+              "m": 1,
+              "b": 2,
+              "dash": true
+            }
+          ],
+          "shaded": [
+            {
+              "m": 1,
+              "b": 2,
+              "ineq": ">"
+            }
+          ]
+        }
+      },
+      "difficulty": {
+        "scalePoint": 435,
+        "band": "B3",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "point_in_region"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "point_in_region"
+      },
+      "fingerprint": [
+        "point_in_region",
+        "pos_int",
+        "above",
+        "1region"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 31,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B6",
+      "target_band": "B6",
+      "statementId": "ALG.B6.s1",
+      "skill": "linear_equations_two_variables",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The graph shows the solution region of a system of two linear inequalities in the "
+        },
+        {
+          "t": "math",
+          "v": "xy"
+        },
+        {
+          "t": "text",
+          "v": "-plane. Which of the following points is a solution to the system?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "(4, 2)"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "(-4, -3)"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "(-4, 3)"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "(1, 4)"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "A"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. test point: "
+        },
+        {
+          "t": "text",
+          "v": "Only "
+        },
+        {
+          "t": "math",
+          "v": "(4, 2)"
+        },
+        {
+          "t": "text",
+          "v": " satisfies BOTH inequalities (lies in the overlap)."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "coordPlane",
+        "spec": {
+          "xRange": [
+            -6,
+            6
+          ],
+          "yRange": [
+            -6,
+            6
+          ],
+          "xStep": 1,
+          "yStep": 1,
+          "origin": true,
+          "axisLabels": [
+            "x",
+            "y"
+          ],
+          "curves": [
+            {
+              "type": "line",
+              "m": 2,
+              "b": 1,
+              "dash": false
+            },
+            {
+              "type": "line",
+              "m": -1,
+              "b": -3,
+              "dash": false
+            }
+          ],
+          "shaded": [
+            {
+              "m": 2,
+              "b": 1,
+              "ineq": "<="
+            },
+            {
+              "m": -1,
+              "b": -3,
+              "ineq": ">="
+            }
+          ]
+        }
+      },
+      "difficulty": {
+        "scalePoint": 650,
+        "band": "B6",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "feasible_region"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "feasible_region"
+      },
+      "fingerprint": [
+        "feasible_region",
+        "<=|>=",
+        "system",
+        "2region"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 32,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B6",
+      "target_band": "B6",
+      "statementId": "ALG.B6.s1",
+      "skill": "linear_equations_two_variables",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The graph shows the solution region of a system of two linear inequalities in the "
+        },
+        {
+          "t": "math",
+          "v": "xy"
+        },
+        {
+          "t": "text",
+          "v": "-plane. Which of the following points is a solution to the system?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "(5, 4)"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "(2, 3)"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "(-1, -4)"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "(-5, -3)"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "D"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. test point: "
+        },
+        {
+          "t": "text",
+          "v": "Only "
+        },
+        {
+          "t": "math",
+          "v": "(-5, -3)"
+        },
+        {
+          "t": "text",
+          "v": " satisfies BOTH inequalities (lies in the overlap)."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "coordPlane",
+        "spec": {
+          "xRange": [
+            -6,
+            6
+          ],
+          "yRange": [
+            -6,
+            6
+          ],
+          "xStep": 1,
+          "yStep": 1,
+          "origin": true,
+          "axisLabels": [
+            "x",
+            "y"
+          ],
+          "curves": [
+            {
+              "type": "line",
+              "m": 1,
+              "b": -2,
+              "dash": false
+            },
+            {
+              "type": "line",
+              "m": -2,
+              "b": 3,
+              "dash": false
+            }
+          ],
+          "shaded": [
+            {
+              "m": 1,
+              "b": -2,
+              "ineq": ">="
+            },
+            {
+              "m": -2,
+              "b": 3,
+              "ineq": "<="
+            }
+          ]
+        }
+      },
+      "difficulty": {
+        "scalePoint": 650,
+        "band": "B6",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "feasible_region"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "feasible_region"
+      },
+      "fingerprint": [
+        "feasible_region",
+        ">=|<=",
+        "system",
+        "2region"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 33,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B6",
+      "target_band": "B6",
+      "statementId": "ALG.B6.s1",
+      "skill": "linear_equations_two_variables",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The graph shows the solution region of a system of two linear inequalities in the "
+        },
+        {
+          "t": "math",
+          "v": "xy"
+        },
+        {
+          "t": "text",
+          "v": "-plane. Which of the following points is a solution to the system?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "(0, 2)"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "(4, 4)"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "(-4, -2)"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "(-3, 4)"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "B"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. test point: "
+        },
+        {
+          "t": "text",
+          "v": "Only "
+        },
+        {
+          "t": "math",
+          "v": "(4, 4)"
+        },
+        {
+          "t": "text",
+          "v": " satisfies BOTH inequalities (lies in the overlap)."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "coordPlane",
+        "spec": {
+          "xRange": [
+            -6,
+            6
+          ],
+          "yRange": [
+            -6,
+            6
+          ],
+          "xStep": 1,
+          "yStep": 1,
+          "origin": true,
+          "axisLabels": [
+            "x",
+            "y"
+          ],
+          "curves": [
+            {
+              "type": "line",
+              "m": 2,
+              "b": -3,
+              "dash": false
+            },
+            {
+              "type": "line",
+              "m": 1,
+              "b": -1,
+              "dash": false
+            }
+          ],
+          "shaded": [
+            {
+              "m": 2,
+              "b": -3,
+              "ineq": "<="
+            },
+            {
+              "m": 1,
+              "b": -1,
+              "ineq": ">="
+            }
+          ]
+        }
+      },
+      "difficulty": {
+        "scalePoint": 650,
+        "band": "B6",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "feasible_region"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "feasible_region"
+      },
+      "fingerprint": [
+        "feasible_region",
+        "<=|>=",
+        "system",
+        "2region"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 34,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B3",
+      "target_band": "B3",
+      "statementId": "ALG.B3.s1",
+      "skill": "linear_equations_two_variables",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The graph shown models the number of subscribers, "
+        },
+        {
+          "t": "math",
+          "v": "y"
+        },
+        {
+          "t": "text",
+          "v": ", in subscribers, after "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": " weeks. What does the "
+        },
+        {
+          "t": "math",
+          "v": "y"
+        },
+        {
+          "t": "text",
+          "v": "-intercept of the line represent?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "text",
+              "v": "Before any weeks have passed, the number of subscribers is 3 subscribers."
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "text",
+              "v": "The number of subscribers increases by 3 subscribers for each additional week."
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "text",
+              "v": "The number of subscribers increases by 1 subscriber for each additional week."
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "text",
+              "v": "Before any weeks have passed, the number of subscribers is 1 subscriber."
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "D"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. interpret part: "
+        },
+        {
+          "t": "math",
+          "v": "y"
+        },
+        {
+          "t": "text",
+          "v": "-intercept "
+        },
+        {
+          "t": "math",
+          "v": "1"
+        },
+        {
+          "t": "text",
+          "v": " = the number of subscribers at "
+        },
+        {
+          "t": "math",
+          "v": "x = 0"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "coordPlane",
+        "spec": {
+          "xRange": [
+            -6,
+            6
+          ],
+          "yRange": [
+            -6,
+            6
+          ],
+          "xStep": 1,
+          "yStep": 1,
+          "origin": true,
+          "axisLabels": [
+            "x",
+            "y"
+          ],
+          "curves": [
+            {
+              "type": "line",
+              "m": 3,
+              "b": 1
+            }
+          ]
+        }
+      },
+      "difficulty": {
+        "scalePoint": 460,
+        "band": "B3",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "interpret_graph_context"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "interpret_graph_context"
+      },
+      "fingerprint": [
+        "interpret_graph_context",
+        "intercept",
+        "context",
+        "1line"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 35,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B3",
+      "target_band": "B3",
+      "statementId": "ALG.B3.s1",
+      "skill": "linear_equations_two_variables",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The graph shown models the height of a seedling, "
+        },
+        {
+          "t": "math",
+          "v": "y"
+        },
+        {
+          "t": "text",
+          "v": ", in centimeters, after "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": " days. What does the slope of the line represent?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "text",
+              "v": "After 2 days, the height of a seedling is 5 centimeters."
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "text",
+              "v": "The height of a seedling increases by 5 centimeters for each additional day."
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "text",
+              "v": "The initial height of a seedling is 2 centimeters."
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "text",
+              "v": "The height of a seedling increases by 2 centimeters for each additional day."
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "D"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. interpret part: "
+        },
+        {
+          "t": "text",
+          "v": "Slope "
+        },
+        {
+          "t": "math",
+          "v": "2"
+        },
+        {
+          "t": "text",
+          "v": " = the change in height of a seedling per day."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "coordPlane",
+        "spec": {
+          "xRange": [
+            -6,
+            6
+          ],
+          "yRange": [
+            -6,
+            6
+          ],
+          "xStep": 1,
+          "yStep": 1,
+          "origin": true,
+          "axisLabels": [
+            "x",
+            "y"
+          ],
+          "curves": [
+            {
+              "type": "line",
+              "m": 2,
+              "b": 5
+            }
+          ]
+        }
+      },
+      "difficulty": {
+        "scalePoint": 460,
+        "band": "B3",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "interpret_graph_context"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "interpret_graph_context"
+      },
+      "fingerprint": [
+        "interpret_graph_context",
+        "slope",
+        "context",
+        "1line"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 36,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B3",
+      "target_band": "B3",
+      "statementId": "ALG.B3.s1",
+      "skill": "linear_equations_two_variables",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The graph shown models the balance of an account, "
+        },
+        {
+          "t": "math",
+          "v": "y"
+        },
+        {
+          "t": "text",
+          "v": ", in dollars, after "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": " weeks. What does the slope of the line represent?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "text",
+              "v": "After 3 weeks, the balance of an account is 4 dollars."
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "text",
+              "v": "The initial balance of an account is 3 dollars."
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "text",
+              "v": "The balance of an account increases by 3 dollars for each additional week."
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "text",
+              "v": "The balance of an account increases by 4 dollars for each additional week."
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "C"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. interpret part: "
+        },
+        {
+          "t": "text",
+          "v": "Slope "
+        },
+        {
+          "t": "math",
+          "v": "3"
+        },
+        {
+          "t": "text",
+          "v": " = the change in balance of an account per week."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "coordPlane",
+        "spec": {
+          "xRange": [
+            -6,
+            6
+          ],
+          "yRange": [
+            -6,
+            6
+          ],
+          "xStep": 1,
+          "yStep": 1,
+          "origin": true,
+          "axisLabels": [
+            "x",
+            "y"
+          ],
+          "curves": [
+            {
+              "type": "line",
+              "m": 3,
+              "b": 4
+            }
+          ]
+        }
+      },
+      "difficulty": {
+        "scalePoint": 460,
+        "band": "B3",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "interpret_graph_context"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "interpret_graph_context"
+      },
+      "fingerprint": [
+        "interpret_graph_context",
+        "slope",
+        "context",
+        "1line"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
     }
   ]
 }

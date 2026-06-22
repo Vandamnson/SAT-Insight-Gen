@@ -43,6 +43,22 @@ export function figureCheck(cell) {
 
   const num = cell.incidentals.numbers, task = num.task;
 
+  // "which point is a solution" (point_in_region / feasible_region): the figure shows
+  // the shaded region(s); the OPTIONS are points. Each region's boundary must be drawn,
+  // and EXACTLY ONE option point must satisfy every region — the keyed one.
+  if (num.regions) {
+    const regions = num.regions;
+    const shaded = Array.isArray(spec.shaded) ? spec.shaded : (spec.shaded ? [spec.shaded] : []);
+    if (shaded.length !== regions.length) return { keep: false, reason: `${shaded.length} shaded vs ${regions.length} regions` };
+    for (const rg of regions) if (!ls.some((c) => c.m === rg.m && c.b === rg.b)) return { keep: false, reason: `region boundary m=${rg.m} b=${rg.b} not drawn` };
+    const sat = (p) => regions.every((rg) => { const v = p[1] - (rg.m * p[0] + rg.b); return (rg.ineq === ">" || rg.ineq === ">=") ? v > 1e-9 : v < -1e-9; });
+    const ci = "ABCD".indexOf(num.correct_choice);
+    const hits = (num.optionPoints || []).map((p, i) => (sat(p) ? i : -1)).filter((i) => i >= 0);
+    if (hits.length !== 1) return { keep: false, reason: `${hits.length} option points satisfy all regions (need exactly 1)` };
+    if (hits[0] !== ci) return { keep: false, reason: `correct_choice ${num.correct_choice} but the solution point is option ${"ABCD"[hits[0]]}` };
+    return { keep: true };
+  }
+
   // marked points must lie on a line; a system's intersection on BOTH lines
   for (const p of (spec.points || [])) {
     const hits = ls.filter((c) => onLine(c, p.at[0], p.at[1])).length;
