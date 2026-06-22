@@ -13,6 +13,7 @@ import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 import { schemaFor, radicalsForBand, nearestRadicals, predictDifficulty } from "../difficulty/lltm.mjs";
+import { drawGraphItem, GRAPH_TASKS } from "./graph.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const CONTEXTS = (() => { const c = JSON.parse(readFileSync(join(ROOT, "taxonomy", "contexts.json"), "utf8")); return (c.contexts || c).map(String); })();
@@ -95,19 +96,10 @@ function coordSpec(m, b0, pt) {
 const TWOVAR_MCQ = new Set(["create_equation", "interpret_io", "rate_of_change", "interpret_part", "parallel_perp", "create_from_pairs", "create_from_table", "create_from_translation", "connect", "identify_coeff"]);
 function drawTwoVar(rad, { r, band, context }) {
   const task = rad.task, ctx = ctxLineMF(context), fr = rad.has_fraction ? " Use a fractional slope/rate." : "";
-  // GRAPH tasks (tier C) — harness draws the figure AND pins the answer.
-  if (task === "read_graph") {
-    const mi = (band >= 4 && r() < 0.4 ? -1 : 1) * randint(r, 1, 3), bi = (r() < 0.4 ? -1 : 1) * randint(r, 1, 6);
-    const readY = r() < 0.5; let answer, pt = null, ask;
-    if (readY) { answer = String(bi); ask = "ask for the y-coordinate where line ℓ crosses the y-axis (its y-intercept)"; }
-    else { const px = randint(r, 1, 3) * (r() < 0.5 ? -1 : 1), py = mi * px + bi; pt = [px, py]; answer = String(py); ask = `point P is marked at (${px}, ${py}) on the line — ask for the y-coordinate of P`; }
-    return { task, answer, format: null, directive: `${GRAPH_HDR}\n- A graph of line ℓ is shown; the value must be READ off the graph.\n- ${ask}; the answer is ${answer}.`, figure: { fn: "coordPlane", spec: coordSpec(mi, bi, pt) } };
-  }
-  if (task === "connect_graph") {
-    const mi = (band >= 4 && r() < 0.4 ? -1 : 1) * randint(r, 1, 3), bi = (r() < 0.4 ? -1 : 1) * randint(r, 1, 6);
-    const ansTex = `y = ${mi === 1 ? "x" : mi === -1 ? "-x" : mi + "x"} ${bi < 0 ? "- " + -bi : "+ " + bi}`;
-    return { task, answer: ansTex, format: "mcq", directive: `${GRAPH_HDR}\n- A graph of a line is shown. Ask WHICH equation represents it (answer \\(${ansTex}\\)); 4 options varying the slope sign and the intercept.`, figure: { fn: "coordPlane", spec: coordSpec(mi, bi, null) } };
-  }
+  // GRAPH tasks (tier C) — construct-backward in graph.mjs: the harness pins the
+  // figure, answer, AND distractors; NO LLM (the figure is the source of truth, so
+  // there is no text to author or PROVE). The result is marked harness:true.
+  if (GRAPH_TASKS.includes(task)) return drawGraphItem(task, band, r);
   // model-first for the computational + interpretive tasks
   const T = {
     evaluate: `a linear relationship in context defined by a starting value and a constant rate; ask for the output at a specific input.${fr}`,

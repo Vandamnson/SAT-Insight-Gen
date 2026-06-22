@@ -141,7 +141,21 @@ async function generateCell(domain, subdomain, n, bands, ctr) {
   // 1+2 parallel: draw → rationale → author → verifyAndGate
   const tasks = Array.from({ length: draws }, (_, k) => async () => {
     const band = bands[k % bands.length];
-    const cell = drawCell(domain, subdomain, band, ctr.i++);
+    let cell = drawCell(domain, subdomain, band, ctr.i++);
+    // HARNESS-COMPLETE (graph / Tier C): no LLM — the harness built the whole item
+    // (figure + answer + distractors). Gate it; on a figure/legibility miss, RE-DRAW
+    // a fresh graph item (not an LLM revise) within the repair budget.
+    if (cell.incidentals?.numbers?.harness) {
+      for (let attempt = 0; attempt <= MAX_REPAIRS; attempt++) {
+        const num = cell.incidentals.numbers;
+        const cand = { statement: num.statement, choices: num.choices, correct_choice: num.correct_choice, answer: num.answer, solve_path: num.solve_path, fingerprint: num.fingerprint, radicals_used: {} };
+        const gate = await verifyAndGate(cand, cell);
+        if (gate.keep) return { cand, cell, gate, repairs: attempt };
+        reasons.push(`${gate.stage} [${band}] r${attempt} (graph ${attempt < MAX_REPAIRS ? "→ redraw" : "→ drop"})`);
+        cell = drawCell(domain, subdomain, band, ctr.i++);
+      }
+      return null;
+    }
     let rat;
     try { rat = await rationale(cell); } catch (e) { reasons.push(`rationale ${e.message}`); return null; }
     let feedback = null;                                          // DOUBLE GATE: gate → repair → gate (don't discard on first fail)

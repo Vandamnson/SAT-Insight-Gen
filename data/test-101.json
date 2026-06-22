@@ -1,0 +1,3237 @@
+{
+  "number": 101,
+  "title": "graph pipeline — Phase A (construct-backward, Tier C)",
+  "questions": [
+    {
+      "id": 1,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B2",
+      "target_band": "B2",
+      "statementId": "ALG.B2.s1",
+      "skill": "linear_equations_two_variables",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The graph of line "
+        },
+        {
+          "t": "math",
+          "v": "\\ell"
+        },
+        {
+          "t": "text",
+          "v": " in the "
+        },
+        {
+          "t": "math",
+          "v": "xy"
+        },
+        {
+          "t": "text",
+          "v": "-plane is shown. What is the "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": "-coordinate of the "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": "-intercept of line "
+        },
+        {
+          "t": "math",
+          "v": "\\ell"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "3"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. read graph: "
+        },
+        {
+          "t": "text",
+          "v": "Line "
+        },
+        {
+          "t": "math",
+          "v": "\\ell"
+        },
+        {
+          "t": "text",
+          "v": " crosses the "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": "-axis at "
+        },
+        {
+          "t": "math",
+          "v": "(3, 0)"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "coordPlane",
+        "spec": {
+          "xRange": [
+            -3,
+            3
+          ],
+          "yRange": [
+            -17,
+            -1
+          ],
+          "xStep": 2,
+          "yStep": 2,
+          "origin": true,
+          "axisLabels": [
+            "x",
+            "y"
+          ],
+          "curves": [
+            {
+              "type": "line",
+              "m": 3,
+              "b": -9
+            }
+          ]
+        }
+      },
+      "difficulty": {
+        "scalePoint": 380,
+        "band": "B2",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "read_value"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "read_value"
+      },
+      "fingerprint": [
+        "read_value",
+        "pos_int",
+        "xint",
+        "1line"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 2,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B2",
+      "target_band": "B2",
+      "statementId": "ALG.B2.s1",
+      "skill": "linear_equations_two_variables",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The graph of line "
+        },
+        {
+          "t": "math",
+          "v": "\\ell"
+        },
+        {
+          "t": "text",
+          "v": " in the "
+        },
+        {
+          "t": "math",
+          "v": "xy"
+        },
+        {
+          "t": "text",
+          "v": "-plane is shown. What is the slope of line "
+        },
+        {
+          "t": "math",
+          "v": "\\ell"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "-2"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. read graph: "
+        },
+        {
+          "t": "text",
+          "v": "Line "
+        },
+        {
+          "t": "math",
+          "v": "\\ell"
+        },
+        {
+          "t": "text",
+          "v": " rises "
+        },
+        {
+          "t": "math",
+          "v": "-2"
+        },
+        {
+          "t": "text",
+          "v": " for every "
+        },
+        {
+          "t": "math",
+          "v": "1"
+        },
+        {
+          "t": "text",
+          "v": " unit increase in "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "coordPlane",
+        "spec": {
+          "xRange": [
+            -3,
+            3
+          ],
+          "yRange": [
+            -10,
+            4
+          ],
+          "xStep": 2,
+          "yStep": 2,
+          "origin": true,
+          "axisLabels": [
+            "x",
+            "y"
+          ],
+          "curves": [
+            {
+              "type": "line",
+              "m": -2,
+              "b": -3
+            }
+          ]
+        }
+      },
+      "difficulty": {
+        "scalePoint": 380,
+        "band": "B2",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "read_value"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "read_value"
+      },
+      "fingerprint": [
+        "read_value",
+        "neg_int",
+        "slope",
+        "1line"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 3,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B2",
+      "target_band": "B2",
+      "statementId": "ALG.B2.s1",
+      "skill": "linear_equations_two_variables",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The graph of line "
+        },
+        {
+          "t": "math",
+          "v": "\\ell"
+        },
+        {
+          "t": "text",
+          "v": " in the "
+        },
+        {
+          "t": "math",
+          "v": "xy"
+        },
+        {
+          "t": "text",
+          "v": "-plane is shown. What is the slope of line "
+        },
+        {
+          "t": "math",
+          "v": "\\ell"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "3"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. read graph: "
+        },
+        {
+          "t": "text",
+          "v": "Line "
+        },
+        {
+          "t": "math",
+          "v": "\\ell"
+        },
+        {
+          "t": "text",
+          "v": " rises "
+        },
+        {
+          "t": "math",
+          "v": "3"
+        },
+        {
+          "t": "text",
+          "v": " for every "
+        },
+        {
+          "t": "math",
+          "v": "1"
+        },
+        {
+          "t": "text",
+          "v": " unit increase in "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "coordPlane",
+        "spec": {
+          "xRange": [
+            -3,
+            3
+          ],
+          "yRange": [
+            -13,
+            3
+          ],
+          "xStep": 2,
+          "yStep": 2,
+          "origin": true,
+          "axisLabels": [
+            "x",
+            "y"
+          ],
+          "curves": [
+            {
+              "type": "line",
+              "m": 3,
+              "b": -5
+            }
+          ]
+        }
+      },
+      "difficulty": {
+        "scalePoint": 380,
+        "band": "B2",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "read_value"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "read_value"
+      },
+      "fingerprint": [
+        "read_value",
+        "pos_int",
+        "slope",
+        "1line"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 4,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B3",
+      "target_band": "B3",
+      "statementId": "ALG.B3.s1",
+      "skill": "linear_equations_two_variables",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The line shown in the "
+        },
+        {
+          "t": "math",
+          "v": "xy"
+        },
+        {
+          "t": "text",
+          "v": "-plane passes through points "
+        },
+        {
+          "t": "math",
+          "v": "P"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "Q"
+        },
+        {
+          "t": "text",
+          "v": ". What is the slope of the line?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "1"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. slope from two points: "
+        },
+        {
+          "t": "text",
+          "v": "Slope "
+        },
+        {
+          "t": "math",
+          "v": "= \\frac{0 - (-2)}{-1 - (-3)} = 1"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "coordPlane",
+        "spec": {
+          "xRange": [
+            -4,
+            4
+          ],
+          "yRange": [
+            -4,
+            6
+          ],
+          "xStep": 1,
+          "yStep": 1,
+          "origin": true,
+          "axisLabels": [
+            "x",
+            "y"
+          ],
+          "curves": [
+            {
+              "type": "line",
+              "m": 1,
+              "b": 1
+            }
+          ],
+          "points": [
+            {
+              "at": [
+                -3,
+                -2
+              ],
+              "label": "P"
+            },
+            {
+              "at": [
+                -1,
+                0
+              ],
+              "label": "Q"
+            }
+          ]
+        }
+      },
+      "difficulty": {
+        "scalePoint": 425,
+        "band": "B3",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "slope_from_points"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "slope_from_points"
+      },
+      "fingerprint": [
+        "slope_from_points",
+        "pos_int",
+        "slope",
+        "1line"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 5,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B3",
+      "target_band": "B3",
+      "statementId": "ALG.B3.s1",
+      "skill": "linear_equations_two_variables",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The line shown in the "
+        },
+        {
+          "t": "math",
+          "v": "xy"
+        },
+        {
+          "t": "text",
+          "v": "-plane passes through points "
+        },
+        {
+          "t": "math",
+          "v": "P"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "Q"
+        },
+        {
+          "t": "text",
+          "v": ". What is the slope of the line?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "1"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. slope from two points: "
+        },
+        {
+          "t": "text",
+          "v": "Slope "
+        },
+        {
+          "t": "math",
+          "v": "= \\frac{-2 - (-3)}{2 - (1)} = 1"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "coordPlane",
+        "spec": {
+          "xRange": [
+            -3,
+            3
+          ],
+          "yRange": [
+            -8,
+            1
+          ],
+          "xStep": 1,
+          "yStep": 1,
+          "origin": true,
+          "axisLabels": [
+            "x",
+            "y"
+          ],
+          "curves": [
+            {
+              "type": "line",
+              "m": 1,
+              "b": -4
+            }
+          ],
+          "points": [
+            {
+              "at": [
+                1,
+                -3
+              ],
+              "label": "P"
+            },
+            {
+              "at": [
+                2,
+                -2
+              ],
+              "label": "Q"
+            }
+          ]
+        }
+      },
+      "difficulty": {
+        "scalePoint": 425,
+        "band": "B3",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "slope_from_points"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "slope_from_points"
+      },
+      "fingerprint": [
+        "slope_from_points",
+        "pos_int",
+        "slope",
+        "1line"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 6,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B3",
+      "target_band": "B3",
+      "statementId": "ALG.B3.s1",
+      "skill": "linear_equations_two_variables",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The line shown in the "
+        },
+        {
+          "t": "math",
+          "v": "xy"
+        },
+        {
+          "t": "text",
+          "v": "-plane passes through points "
+        },
+        {
+          "t": "math",
+          "v": "P"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "Q"
+        },
+        {
+          "t": "text",
+          "v": ". What is the slope of the line?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "3"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. slope from two points: "
+        },
+        {
+          "t": "text",
+          "v": "Slope "
+        },
+        {
+          "t": "math",
+          "v": "= \\frac{7 - (4)}{0 - (-1)} = 3"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "coordPlane",
+        "spec": {
+          "xRange": [
+            -3,
+            3
+          ],
+          "yRange": [
+            -1,
+            15
+          ],
+          "xStep": 2,
+          "yStep": 2,
+          "origin": true,
+          "axisLabels": [
+            "x",
+            "y"
+          ],
+          "curves": [
+            {
+              "type": "line",
+              "m": 3,
+              "b": 7
+            }
+          ],
+          "points": [
+            {
+              "at": [
+                -1,
+                4
+              ],
+              "label": "P"
+            },
+            {
+              "at": [
+                0,
+                7
+              ],
+              "label": "Q"
+            }
+          ]
+        }
+      },
+      "difficulty": {
+        "scalePoint": 425,
+        "band": "B3",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "slope_from_points"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "slope_from_points"
+      },
+      "fingerprint": [
+        "slope_from_points",
+        "pos_int",
+        "slope",
+        "1line"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 7,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B6",
+      "target_band": "B6",
+      "statementId": "ALG.B6.s1",
+      "skill": "linear_equations_two_variables",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "Which equation represents the line shown in the "
+        },
+        {
+          "t": "math",
+          "v": "xy"
+        },
+        {
+          "t": "text",
+          "v": "-plane?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "y = -2x + 4"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "y = -2x - 4"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "y = 2x - 4"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "y = 2x + 4"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "C"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. read slope intercept: "
+        },
+        {
+          "t": "text",
+          "v": "Slope "
+        },
+        {
+          "t": "math",
+          "v": "2"
+        },
+        {
+          "t": "text",
+          "v": ", "
+        },
+        {
+          "t": "math",
+          "v": "y"
+        },
+        {
+          "t": "text",
+          "v": "-intercept "
+        },
+        {
+          "t": "math",
+          "v": "-4"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "math",
+          "v": "\\(y = 2x - 4"
+        },
+        {
+          "t": "text",
+          "v": "\\)."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "coordPlane",
+        "spec": {
+          "xRange": [
+            -3,
+            3
+          ],
+          "yRange": [
+            -11,
+            3
+          ],
+          "xStep": 2,
+          "yStep": 2,
+          "origin": true,
+          "axisLabels": [
+            "x",
+            "y"
+          ],
+          "curves": [
+            {
+              "type": "line",
+              "m": 2,
+              "b": -4
+            }
+          ]
+        }
+      },
+      "difficulty": {
+        "scalePoint": 645,
+        "band": "B6",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "connect_graph"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "connect_graph"
+      },
+      "fingerprint": [
+        "connect_graph",
+        "pos_int",
+        "equation",
+        "1line"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 8,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B6",
+      "target_band": "B6",
+      "statementId": "ALG.B6.s1",
+      "skill": "linear_equations_two_variables",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "Which equation represents the line shown in the "
+        },
+        {
+          "t": "math",
+          "v": "xy"
+        },
+        {
+          "t": "text",
+          "v": "-plane?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "y = 2x - 6"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "y = -2x - 6"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "y = 2x + 6"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "y = -2x + 6"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "B"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. read slope intercept: "
+        },
+        {
+          "t": "text",
+          "v": "Slope "
+        },
+        {
+          "t": "math",
+          "v": "-2"
+        },
+        {
+          "t": "text",
+          "v": ", "
+        },
+        {
+          "t": "math",
+          "v": "y"
+        },
+        {
+          "t": "text",
+          "v": "-intercept "
+        },
+        {
+          "t": "math",
+          "v": "-6"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "math",
+          "v": "\\(y = -2x - 6"
+        },
+        {
+          "t": "text",
+          "v": "\\)."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "coordPlane",
+        "spec": {
+          "xRange": [
+            -3,
+            3
+          ],
+          "yRange": [
+            -13,
+            1
+          ],
+          "xStep": 2,
+          "yStep": 2,
+          "origin": true,
+          "axisLabels": [
+            "x",
+            "y"
+          ],
+          "curves": [
+            {
+              "type": "line",
+              "m": -2,
+              "b": -6
+            }
+          ]
+        }
+      },
+      "difficulty": {
+        "scalePoint": 645,
+        "band": "B6",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "connect_graph"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "connect_graph"
+      },
+      "fingerprint": [
+        "connect_graph",
+        "neg_int",
+        "equation",
+        "1line"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 9,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B6",
+      "target_band": "B6",
+      "statementId": "ALG.B6.s1",
+      "skill": "linear_equations_two_variables",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "Which equation represents the line shown in the "
+        },
+        {
+          "t": "math",
+          "v": "xy"
+        },
+        {
+          "t": "text",
+          "v": "-plane?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "y = -x - 3"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "y = x - 3"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "y = -x + 3"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "y = x + 3"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "C"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. read slope intercept: "
+        },
+        {
+          "t": "text",
+          "v": "Slope "
+        },
+        {
+          "t": "math",
+          "v": "-1"
+        },
+        {
+          "t": "text",
+          "v": ", "
+        },
+        {
+          "t": "math",
+          "v": "y"
+        },
+        {
+          "t": "text",
+          "v": "-intercept "
+        },
+        {
+          "t": "math",
+          "v": "3"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "math",
+          "v": "\\(y = -x + 3"
+        },
+        {
+          "t": "text",
+          "v": "\\)."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "coordPlane",
+        "spec": {
+          "xRange": [
+            -3,
+            3
+          ],
+          "yRange": [
+            -1,
+            7
+          ],
+          "xStep": 1,
+          "yStep": 1,
+          "origin": true,
+          "axisLabels": [
+            "x",
+            "y"
+          ],
+          "curves": [
+            {
+              "type": "line",
+              "m": -1,
+              "b": 3
+            }
+          ]
+        }
+      },
+      "difficulty": {
+        "scalePoint": 645,
+        "band": "B6",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "connect_graph"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "connect_graph"
+      },
+      "fingerprint": [
+        "connect_graph",
+        "neg_int",
+        "equation",
+        "1line"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 10,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B5",
+      "target_band": "B5",
+      "statementId": "ALG.B5.s1",
+      "skill": "linear_equations_two_variables",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The graphs of two lines in the "
+        },
+        {
+          "t": "math",
+          "v": "xy"
+        },
+        {
+          "t": "text",
+          "v": "-plane intersect at the point "
+        },
+        {
+          "t": "math",
+          "v": "P"
+        },
+        {
+          "t": "text",
+          "v": " shown. What is the solution "
+        },
+        {
+          "t": "math",
+          "v": "(x, y)"
+        },
+        {
+          "t": "text",
+          "v": " of the system?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "(-2, 1)"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "(2, -1)"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "(2, 1)"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "(1, 2)"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "C"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. read intersection: "
+        },
+        {
+          "t": "text",
+          "v": "The lines meet at "
+        },
+        {
+          "t": "math",
+          "v": "P = (2, 1)"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "coordPlane",
+        "spec": {
+          "xRange": [
+            -3,
+            3
+          ],
+          "yRange": [
+            -4,
+            12
+          ],
+          "xStep": 2,
+          "yStep": 2,
+          "origin": true,
+          "axisLabels": [
+            "x",
+            "y"
+          ],
+          "curves": [
+            {
+              "type": "line",
+              "m": 2,
+              "b": -3
+            },
+            {
+              "type": "line",
+              "m": -3,
+              "b": 7
+            }
+          ],
+          "points": [
+            {
+              "at": [
+                2,
+                1
+              ],
+              "label": "P"
+            }
+          ]
+        }
+      },
+      "difficulty": {
+        "scalePoint": 550,
+        "band": "B5",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "system_read"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "system_read"
+      },
+      "fingerprint": [
+        "system_read",
+        "mixed",
+        "pair",
+        "2line"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 11,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B5",
+      "target_band": "B5",
+      "statementId": "ALG.B5.s1",
+      "skill": "linear_equations_two_variables",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The graphs of two lines in the "
+        },
+        {
+          "t": "math",
+          "v": "xy"
+        },
+        {
+          "t": "text",
+          "v": "-plane intersect at the point "
+        },
+        {
+          "t": "math",
+          "v": "P"
+        },
+        {
+          "t": "text",
+          "v": " shown. What is the solution "
+        },
+        {
+          "t": "math",
+          "v": "(x, y)"
+        },
+        {
+          "t": "text",
+          "v": " of the system?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "(-3, 1)"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "(-3, -1)"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "(3, 1)"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "(1, -3)"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "A"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. read intersection: "
+        },
+        {
+          "t": "text",
+          "v": "The lines meet at "
+        },
+        {
+          "t": "math",
+          "v": "P = (-3, 1)"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "coordPlane",
+        "spec": {
+          "xRange": [
+            -4,
+            4
+          ],
+          "yRange": [
+            -14,
+            2
+          ],
+          "xStep": 2,
+          "yStep": 2,
+          "origin": true,
+          "axisLabels": [
+            "x",
+            "y"
+          ],
+          "curves": [
+            {
+              "type": "line",
+              "m": -3,
+              "b": -8
+            },
+            {
+              "type": "line",
+              "m": 1,
+              "b": 4
+            }
+          ],
+          "points": [
+            {
+              "at": [
+                -3,
+                1
+              ],
+              "label": "P"
+            }
+          ]
+        }
+      },
+      "difficulty": {
+        "scalePoint": 550,
+        "band": "B5",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "system_read"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "system_read"
+      },
+      "fingerprint": [
+        "system_read",
+        "mixed",
+        "pair",
+        "2line"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 12,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B5",
+      "target_band": "B5",
+      "statementId": "ALG.B5.s1",
+      "skill": "linear_equations_two_variables",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The graphs of two lines in the "
+        },
+        {
+          "t": "math",
+          "v": "xy"
+        },
+        {
+          "t": "text",
+          "v": "-plane intersect at the point "
+        },
+        {
+          "t": "math",
+          "v": "P"
+        },
+        {
+          "t": "text",
+          "v": " shown. What is the "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": "-coordinate of the solution to the system?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "1"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. read intersection: "
+        },
+        {
+          "t": "text",
+          "v": "The lines meet at "
+        },
+        {
+          "t": "math",
+          "v": "P = (1, -2)"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "coordPlane",
+        "spec": {
+          "xRange": [
+            -3,
+            3
+          ],
+          "yRange": [
+            -11,
+            3
+          ],
+          "xStep": 2,
+          "yStep": 2,
+          "origin": true,
+          "axisLabels": [
+            "x",
+            "y"
+          ],
+          "curves": [
+            {
+              "type": "line",
+              "m": 2,
+              "b": -4
+            },
+            {
+              "type": "line",
+              "m": 1,
+              "b": -3
+            }
+          ],
+          "points": [
+            {
+              "at": [
+                1,
+                -2
+              ],
+              "label": "P"
+            }
+          ]
+        }
+      },
+      "difficulty": {
+        "scalePoint": 550,
+        "band": "B5",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "system_read"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "system_read"
+      },
+      "fingerprint": [
+        "system_read",
+        "mixed",
+        "xcoord",
+        "2line"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 13,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B6",
+      "target_band": "B6",
+      "statementId": "ALG.B6.s1",
+      "skill": "linear_equations_two_variables",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The graphs of the two lines of a system of linear equations are shown in the "
+        },
+        {
+          "t": "math",
+          "v": "xy"
+        },
+        {
+          "t": "text",
+          "v": "-plane. How many solutions "
+        },
+        {
+          "t": "math",
+          "v": "(x, y)"
+        },
+        {
+          "t": "text",
+          "v": " does the system have?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "text",
+              "v": "Infinitely many solutions"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "text",
+              "v": "Exactly two solutions"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "text",
+              "v": "Exactly one solution"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "text",
+              "v": "No solution"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "D"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. compare lines: "
+        },
+        {
+          "t": "text",
+          "v": "The lines are parallel (equal slope, different intercepts), so they never meet."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "coordPlane",
+        "spec": {
+          "xRange": [
+            -3,
+            3
+          ],
+          "yRange": [
+            -9,
+            7
+          ],
+          "xStep": 2,
+          "yStep": 2,
+          "origin": true,
+          "axisLabels": [
+            "x",
+            "y"
+          ],
+          "curves": [
+            {
+              "type": "line",
+              "m": 1,
+              "b": 3
+            },
+            {
+              "type": "line",
+              "m": 1,
+              "b": -5
+            }
+          ]
+        }
+      },
+      "difficulty": {
+        "scalePoint": 610,
+        "band": "B6",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "system_count"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "system_count"
+      },
+      "fingerprint": [
+        "system_count",
+        "parallel",
+        "count",
+        "2line"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 14,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B6",
+      "target_band": "B6",
+      "statementId": "ALG.B6.s1",
+      "skill": "linear_equations_two_variables",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The graphs of the two lines of a system of linear equations are shown in the "
+        },
+        {
+          "t": "math",
+          "v": "xy"
+        },
+        {
+          "t": "text",
+          "v": "-plane. How many solutions "
+        },
+        {
+          "t": "math",
+          "v": "(x, y)"
+        },
+        {
+          "t": "text",
+          "v": " does the system have?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "text",
+              "v": "Infinitely many solutions"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "text",
+              "v": "Exactly two solutions"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "text",
+              "v": "No solution"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "text",
+              "v": "Exactly one solution"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "C"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. compare lines: "
+        },
+        {
+          "t": "text",
+          "v": "The lines are parallel (equal slope, different intercepts), so they never meet."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "coordPlane",
+        "spec": {
+          "xRange": [
+            -3,
+            3
+          ],
+          "yRange": [
+            -9,
+            7
+          ],
+          "xStep": 2,
+          "yStep": 2,
+          "origin": true,
+          "axisLabels": [
+            "x",
+            "y"
+          ],
+          "curves": [
+            {
+              "type": "line",
+              "m": -2,
+              "b": 2
+            },
+            {
+              "type": "line",
+              "m": -2,
+              "b": -4
+            }
+          ]
+        }
+      },
+      "difficulty": {
+        "scalePoint": 610,
+        "band": "B6",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "system_count"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "system_count"
+      },
+      "fingerprint": [
+        "system_count",
+        "parallel",
+        "count",
+        "2line"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 15,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B6",
+      "target_band": "B6",
+      "statementId": "ALG.B6.s1",
+      "skill": "linear_equations_two_variables",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The graphs of the two lines of a system of linear equations are shown in the "
+        },
+        {
+          "t": "math",
+          "v": "xy"
+        },
+        {
+          "t": "text",
+          "v": "-plane. How many solutions "
+        },
+        {
+          "t": "math",
+          "v": "(x, y)"
+        },
+        {
+          "t": "text",
+          "v": " does the system have?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "text",
+              "v": "Exactly two solutions"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "text",
+              "v": "Infinitely many solutions"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "text",
+              "v": "No solution"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "text",
+              "v": "Exactly one solution"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "D"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. compare lines: "
+        },
+        {
+          "t": "text",
+          "v": "The lines have different slopes, so they meet at exactly one point."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "coordPlane",
+        "spec": {
+          "xRange": [
+            -3,
+            3
+          ],
+          "yRange": [
+            -1,
+            13
+          ],
+          "xStep": 2,
+          "yStep": 2,
+          "origin": true,
+          "axisLabels": [
+            "x",
+            "y"
+          ],
+          "curves": [
+            {
+              "type": "line",
+              "m": -2,
+              "b": 6
+            },
+            {
+              "type": "line",
+              "m": -1,
+              "b": 5
+            }
+          ]
+        }
+      },
+      "difficulty": {
+        "scalePoint": 610,
+        "band": "B6",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "system_count"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "system_count"
+      },
+      "fingerprint": [
+        "system_count",
+        "intersect",
+        "count",
+        "2line"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 16,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B5",
+      "target_band": "B5",
+      "statementId": "ALG.B5.s1",
+      "skill": "linear_equations_two_variables",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The shaded region in the "
+        },
+        {
+          "t": "math",
+          "v": "xy"
+        },
+        {
+          "t": "text",
+          "v": "-plane is the graph of which inequality?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "y < -2x + 4"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "y < 2x - 4"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "y > 2x + 4"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "y < 2x + 4"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "D"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. read region: "
+        },
+        {
+          "t": "text",
+          "v": "Boundary "
+        },
+        {
+          "t": "math",
+          "v": "y = 2x + 4"
+        },
+        {
+          "t": "text",
+          "v": " (dashed → strict); the shaded side is below it."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "coordPlane",
+        "spec": {
+          "xRange": [
+            -3,
+            3
+          ],
+          "yRange": [
+            -3,
+            11
+          ],
+          "xStep": 2,
+          "yStep": 2,
+          "origin": true,
+          "axisLabels": [
+            "x",
+            "y"
+          ],
+          "curves": [
+            {
+              "type": "line",
+              "m": 2,
+              "b": 4,
+              "dash": true
+            }
+          ],
+          "shaded": {
+            "m": 2,
+            "b": 4,
+            "ineq": "<"
+          }
+        }
+      },
+      "difficulty": {
+        "scalePoint": 570,
+        "band": "B5",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "inequality_region"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "inequality_region"
+      },
+      "fingerprint": [
+        "inequality_region",
+        "pos_int",
+        "below",
+        "strict"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 17,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B5",
+      "target_band": "B5",
+      "statementId": "ALG.B5.s1",
+      "skill": "linear_equations_two_variables",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The shaded region in the "
+        },
+        {
+          "t": "math",
+          "v": "xy"
+        },
+        {
+          "t": "text",
+          "v": "-plane is the graph of which inequality?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "y \\ge 3x - 2"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "y \\ge 3x + 2"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "y \\le 3x - 2"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "y \\ge -3x - 2"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "A"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. read region: "
+        },
+        {
+          "t": "text",
+          "v": "Boundary "
+        },
+        {
+          "t": "math",
+          "v": "y = 3x - 2"
+        },
+        {
+          "t": "text",
+          "v": " (solid → inclusive); the shaded side is above it."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "coordPlane",
+        "spec": {
+          "xRange": [
+            -3,
+            3
+          ],
+          "yRange": [
+            -10,
+            6
+          ],
+          "xStep": 2,
+          "yStep": 2,
+          "origin": true,
+          "axisLabels": [
+            "x",
+            "y"
+          ],
+          "curves": [
+            {
+              "type": "line",
+              "m": 3,
+              "b": -2,
+              "dash": false
+            }
+          ],
+          "shaded": {
+            "m": 3,
+            "b": -2,
+            "ineq": ">="
+          }
+        }
+      },
+      "difficulty": {
+        "scalePoint": 570,
+        "band": "B5",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "inequality_region"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "inequality_region"
+      },
+      "fingerprint": [
+        "inequality_region",
+        "pos_int",
+        "above",
+        "incl"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 18,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B5",
+      "target_band": "B5",
+      "statementId": "ALG.B5.s1",
+      "skill": "linear_equations_two_variables",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The shaded region in the "
+        },
+        {
+          "t": "math",
+          "v": "xy"
+        },
+        {
+          "t": "text",
+          "v": "-plane is the graph of which inequality?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "y > -2x + 2"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "y < 2x + 2"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "y > 2x + 2"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "y > 2x - 2"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "C"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. read region: "
+        },
+        {
+          "t": "text",
+          "v": "Boundary "
+        },
+        {
+          "t": "math",
+          "v": "y = 2x + 2"
+        },
+        {
+          "t": "text",
+          "v": " (dashed → strict); the shaded side is above it."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "coordPlane",
+        "spec": {
+          "xRange": [
+            -3,
+            3
+          ],
+          "yRange": [
+            -5,
+            9
+          ],
+          "xStep": 2,
+          "yStep": 2,
+          "origin": true,
+          "axisLabels": [
+            "x",
+            "y"
+          ],
+          "curves": [
+            {
+              "type": "line",
+              "m": 2,
+              "b": 2,
+              "dash": true
+            }
+          ],
+          "shaded": {
+            "m": 2,
+            "b": 2,
+            "ineq": ">"
+          }
+        }
+      },
+      "difficulty": {
+        "scalePoint": 570,
+        "band": "B5",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "inequality_region"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "inequality_region"
+      },
+      "fingerprint": [
+        "inequality_region",
+        "pos_int",
+        "above",
+        "strict"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 19,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B6",
+      "target_band": "B6",
+      "statementId": "ALG.B6.s1",
+      "skill": "linear_equations_two_variables",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "Line "
+        },
+        {
+          "t": "math",
+          "v": "\\ell"
+        },
+        {
+          "t": "text",
+          "v": " is shown in the "
+        },
+        {
+          "t": "math",
+          "v": "xy"
+        },
+        {
+          "t": "text",
+          "v": "-plane. Which equation represents the line that passes through the point "
+        },
+        {
+          "t": "math",
+          "v": "(-1, -2)"
+        },
+        {
+          "t": "text",
+          "v": " and is parallel to line "
+        },
+        {
+          "t": "math",
+          "v": "\\ell"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "y = -2x - 4"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "y = \\frac{1}{2}x - \\frac{3}{2}"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "y = 2x"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "y = -2x + 4"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "A"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. apply parallel: "
+        },
+        {
+          "t": "text",
+          "v": "Line "
+        },
+        {
+          "t": "math",
+          "v": "\\ell"
+        },
+        {
+          "t": "text",
+          "v": " has slope "
+        },
+        {
+          "t": "math",
+          "v": "-2"
+        },
+        {
+          "t": "text",
+          "v": "; the parallel slope is "
+        },
+        {
+          "t": "math",
+          "v": "-2"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. point slope: "
+        },
+        {
+          "t": "text",
+          "v": "Through "
+        },
+        {
+          "t": "math",
+          "v": "(-1, -2)"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "math",
+          "v": "y = -2x - 4"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "coordPlane",
+        "spec": {
+          "xRange": [
+            -3,
+            3
+          ],
+          "yRange": [
+            -3,
+            11
+          ],
+          "xStep": 2,
+          "yStep": 2,
+          "origin": true,
+          "axisLabels": [
+            "x",
+            "y"
+          ],
+          "curves": [
+            {
+              "type": "line",
+              "m": -2,
+              "b": 4
+            }
+          ]
+        }
+      },
+      "difficulty": {
+        "scalePoint": 610,
+        "band": "B6",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "parallel_perp_graph"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "parallel_perp_graph"
+      },
+      "fingerprint": [
+        "parallel_perp_graph",
+        "parallel",
+        "neg_int",
+        "1line"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 20,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B6",
+      "target_band": "B6",
+      "statementId": "ALG.B6.s1",
+      "skill": "linear_equations_two_variables",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "Line "
+        },
+        {
+          "t": "math",
+          "v": "\\ell"
+        },
+        {
+          "t": "text",
+          "v": " is shown in the "
+        },
+        {
+          "t": "math",
+          "v": "xy"
+        },
+        {
+          "t": "text",
+          "v": "-plane. Which equation represents the line that passes through the point "
+        },
+        {
+          "t": "math",
+          "v": "(-2, 1)"
+        },
+        {
+          "t": "text",
+          "v": " and is perpendicular to line "
+        },
+        {
+          "t": "math",
+          "v": "\\ell"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "y = \\frac{1}{3}x + \\frac{5}{3}"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "y = -3x - 5"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "y = \\frac{1}{3}x + 2"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "y = -\\frac{1}{3}x + \\frac{1}{3}"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "A"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. apply perpendicular: "
+        },
+        {
+          "t": "text",
+          "v": "Line "
+        },
+        {
+          "t": "math",
+          "v": "\\ell"
+        },
+        {
+          "t": "text",
+          "v": " has slope "
+        },
+        {
+          "t": "math",
+          "v": "-3"
+        },
+        {
+          "t": "text",
+          "v": "; the perpendicular slope is "
+        },
+        {
+          "t": "math",
+          "v": "\\frac{1}{3}"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. point slope: "
+        },
+        {
+          "t": "text",
+          "v": "Through "
+        },
+        {
+          "t": "math",
+          "v": "(-2, 1)"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "math",
+          "v": "y = \\frac{1}{3}x + \\frac{5}{3}"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "coordPlane",
+        "spec": {
+          "xRange": [
+            -3,
+            3
+          ],
+          "yRange": [
+            -6,
+            10
+          ],
+          "xStep": 2,
+          "yStep": 2,
+          "origin": true,
+          "axisLabels": [
+            "x",
+            "y"
+          ],
+          "curves": [
+            {
+              "type": "line",
+              "m": -3,
+              "b": 2
+            }
+          ]
+        }
+      },
+      "difficulty": {
+        "scalePoint": 610,
+        "band": "B6",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "parallel_perp_graph"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "parallel_perp_graph"
+      },
+      "fingerprint": [
+        "parallel_perp_graph",
+        "perpendicular",
+        "pos_frac",
+        "1line"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 21,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B6",
+      "target_band": "B6",
+      "statementId": "ALG.B6.s1",
+      "skill": "linear_equations_two_variables",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "Line "
+        },
+        {
+          "t": "math",
+          "v": "\\ell"
+        },
+        {
+          "t": "text",
+          "v": " is shown in the "
+        },
+        {
+          "t": "math",
+          "v": "xy"
+        },
+        {
+          "t": "text",
+          "v": "-plane. Which equation represents the line that passes through the point "
+        },
+        {
+          "t": "math",
+          "v": "(2, 4)"
+        },
+        {
+          "t": "text",
+          "v": " and is perpendicular to line "
+        },
+        {
+          "t": "math",
+          "v": "\\ell"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "y = -\\frac{1}{2}x + 5"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "y = \\frac{1}{2}x + 4"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "y = \\frac{1}{2}x + 3"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "y = -2x + 8"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "C"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. apply perpendicular: "
+        },
+        {
+          "t": "text",
+          "v": "Line "
+        },
+        {
+          "t": "math",
+          "v": "\\ell"
+        },
+        {
+          "t": "text",
+          "v": " has slope "
+        },
+        {
+          "t": "math",
+          "v": "-2"
+        },
+        {
+          "t": "text",
+          "v": "; the perpendicular slope is "
+        },
+        {
+          "t": "math",
+          "v": "\\frac{1}{2}"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. point slope: "
+        },
+        {
+          "t": "text",
+          "v": "Through "
+        },
+        {
+          "t": "math",
+          "v": "(2, 4)"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "math",
+          "v": "y = \\frac{1}{2}x + 3"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "coordPlane",
+        "spec": {
+          "xRange": [
+            -3,
+            3
+          ],
+          "yRange": [
+            -4,
+            10
+          ],
+          "xStep": 2,
+          "yStep": 2,
+          "origin": true,
+          "axisLabels": [
+            "x",
+            "y"
+          ],
+          "curves": [
+            {
+              "type": "line",
+              "m": -2,
+              "b": 3
+            }
+          ]
+        }
+      },
+      "difficulty": {
+        "scalePoint": 610,
+        "band": "B6",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "parallel_perp_graph"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "parallel_perp_graph"
+      },
+      "fingerprint": [
+        "parallel_perp_graph",
+        "perpendicular",
+        "pos_frac",
+        "1line"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    }
+  ]
+}
