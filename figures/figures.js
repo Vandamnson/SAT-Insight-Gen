@@ -131,14 +131,23 @@ export function coordPlane(spec) {
   placer.reserve(ay - 4, T, ay + 4, B);                         // keep point labels off the y-axis line
   placer.reserve(L, ax - 4, R, ax + 4);                         // and off the x-axis line
 
-  // shaded inequality region
+  // shaded inequality region — clip the window rectangle to the correct side of
+  // y = mx + b (Sutherland–Hodgman half-plane clip). Robust for ANY slope, incl.
+  // steep boundaries that exit the window through the top/bottom edges (the old
+  // corner-clamp only worked for shallow lines spanning left→right).
   if (spec.shaded) {
     const { m, b, ineq } = spec.shaded;
-    const yAt = (x) => m * x + b;
     const above = ineq === ">" || ineq === ">=";
-    const corners = [[xmin, above ? ymax : ymin], [xmin, yAt(xmin)], [xmax, yAt(xmax)], [xmax, above ? ymax : ymin]];
-    const clamped = corners.map(([x, y]) => [sx(x), sy(Math.max(ymin, Math.min(ymax, y)))]);
-    out.push(`<polygon points="${clamped.map(p => `${fmt(p[0])},${fmt(p[1])}`).join(" ")}" class="fig-fill" opacity="0.5"/>`);
+    const sideVal = (p) => (above ? p[1] - (m * p[0] + b) : (m * p[0] + b) - p[1]);   // ≥0 ⇒ in the shaded half-plane
+    const isect = (A, B) => { const t = sideVal(A) / (sideVal(A) - sideVal(B)); return [A[0] + t * (B[0] - A[0]), A[1] + t * (B[1] - A[1])]; };
+    const rect = [[xmin, ymin], [xmax, ymin], [xmax, ymax], [xmin, ymax]];
+    const poly = [];
+    for (let i = 0; i < rect.length; i++) {
+      const A = rect[i], B = rect[(i + 1) % rect.length], inA = sideVal(A) >= -1e-9, inB = sideVal(B) >= -1e-9;
+      if (inA) poly.push(A);
+      if (inA !== inB) poly.push(isect(A, B));
+    }
+    if (poly.length >= 3) out.push(`<polygon points="${poly.map((p) => `${fmt(sx(p[0]))},${fmt(sy(p[1]))}`).join(" ")}" class="fig-fill" opacity="0.5"/>`);
   }
 
   // curves — render, and reserve obstacle boxes along them so point labels dodge the line
