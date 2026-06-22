@@ -14,7 +14,28 @@ const lines = (spec) => (spec.curves || []).filter((c) => c.type === "line");
 const onLine = (c, x, y) => Math.abs(c.m * x + c.b - y) < EPS;
 
 export function figureCheck(cell) {
-  const fig = cell?.incidentals?.numbers?.figure;
+  const num0 = cell?.incidentals?.numbers;
+
+  // "which graph" items (Phase B): the ANSWER OPTIONS are figures. Distractor-
+  // validity — EXACTLY ONE option figure matches the target equation/inequality,
+  // it is the keyed one, and the other three measurably differ.
+  if (num0?.optionFigures) {
+    const opts = num0.optionFigures, t = num0.target || {}, ci = "ABCD".indexOf(num0.correct_choice);
+    if (opts.length !== 4) return { keep: false, reason: `expected 4 option figures, got ${opts.length}` };
+    if (ci < 0 || ci > 3) return { keep: false, reason: `bad correct_choice "${num0.correct_choice}"` };
+    const matches = (spec) => {
+      const c = (spec.curves || [])[0];
+      if (!c || c.m !== t.m || c.b !== t.b) return false;
+      if (t.ineq !== undefined) return !!spec.shaded && spec.shaded.ineq === t.ineq && spec.shaded.m === t.m && spec.shaded.b === t.b;
+      return true;
+    };
+    const hit = opts.map((s, i) => (matches(s) ? i : -1)).filter((i) => i >= 0);
+    if (hit.length !== 1) return { keep: false, reason: `${hit.length} option figures match the target (need exactly 1)` };
+    if (hit[0] !== ci) return { keep: false, reason: `correct_choice is ${num0.correct_choice} but the matching graph is option ${"ABCD"[hit[0]]}` };
+    return { keep: true };
+  }
+
+  const fig = num0?.figure;
   if (!fig || fig.fn !== "coordPlane") return { keep: false, reason: "graph item missing coordPlane figure" };
   const spec = fig.spec, ls = lines(spec);
   if (!ls.length) return { keep: false, reason: "graph figure has no line" };

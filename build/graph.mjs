@@ -13,7 +13,7 @@
    solve_path, fingerprint, figure:{fn:"coordPlane", spec}, harness:true }.
    ============================================================================ */
 
-export const GRAPH_TASKS = ["read_value", "slope_from_points", "connect_graph", "system_read", "system_count", "inequality_region", "parallel_perp_graph"];
+export const GRAPH_TASKS = ["read_value", "slope_from_points", "connect_graph", "system_read", "system_count", "inequality_region", "parallel_perp_graph", "equation_to_graph", "inequality_to_graph"];
 
 /* ---- small helpers ---- */
 const randint = (r, lo, hi) => lo + Math.floor(r() * (hi - lo + 1));
@@ -247,6 +247,46 @@ function gParallelPerp(r) {
   };
 }
 
+/* ===== "which graph" items — the ANSWER OPTIONS are figures (Phase B) ===== */
+const lineSpec = (m, b) => { const s = standardFrame([[0, b]]); s.curves = [lineCurve(m, b)]; return s; };
+const ineqSpec = (m, b, ineq, strict) => { const s = standardFrame([[0, b]]); s.curves = [lineCurve(m, b, { dash: strict })]; s.shaded = { m, b, ineq }; return s; };
+function mcqFigures(correctSpec, distractorSpecs, r) {
+  const four = [{ spec: correctSpec, ok: true }, ...distractorSpecs.map((spec) => ({ spec, ok: false }))].slice(0, 4);
+  for (let i = four.length - 1; i > 0; i--) { const j = Math.floor(r() * (i + 1)); [four[i], four[j]] = [four[j], four[i]]; }
+  return { optionFigures: four.map((c) => c.spec), correct_choice: "ABCD"[four.findIndex((c) => c.ok)] };
+}
+
+function gEquationToGraph(r) {
+  const m = sgn(r) * randint(r, 1, 3), b = sgn(r) * randint(r, 1, 4);
+  const { optionFigures, correct_choice } = mcqFigures(lineSpec(m, b), [lineSpec(-m, b), lineSpec(m, -b), lineSpec(-m, -b)], r);
+  return {
+    task: "equation_to_graph", format: "mcq", correct_choice, answer: tex(lineTex(m, b)),
+    statement: `Which of the following graphs in the \\(xy\\)-plane represents the equation \\(${lineTex(m, b)}\\)?`,
+    optionFigures, target: { m, b }, figure: null,
+    solve_path: sp({ op: "match_graph", detail: `The line has slope \\(${m}\\) and \\(y\\)-intercept \\(${b}\\).` }),
+    fingerprint: ["equation_to_graph", slopeClass(frac(m, 1)), b > 0 ? "bpos" : "bneg", "4opt"],
+  };
+}
+
+function gInequalityToGraph(r) {
+  const m = sgn(r) * randint(r, 1, 3), b = sgn(r) * randint(r, 1, 4);
+  const above = r() < 0.5, strict = r() < 0.5;
+  const ineq = above ? (strict ? ">" : ">=") : (strict ? "<" : "<=");
+  const opTex = above ? (strict ? ">" : "\\ge") : (strict ? "<" : "\\le");
+  const flip = above ? (strict ? "<" : "<=") : (strict ? ">" : ">=");        // opposite-side distractor
+  const tail = `${coefTex(frac(m, 1))}${b > 0 ? ` + ${b}` : b < 0 ? ` - ${-b}` : ""}`;
+  const { optionFigures, correct_choice } = mcqFigures(
+    ineqSpec(m, b, ineq, strict),
+    [ineqSpec(m, b, flip, strict), ineqSpec(-m, b, ineq, strict), ineqSpec(m, -b, ineq, strict)], r);
+  return {
+    task: "inequality_to_graph", format: "mcq", correct_choice, answer: tex(`y ${opTex} ${tail}`),
+    statement: `Which of the following graphs represents the inequality \\(y ${opTex} ${tail}\\) in the \\(xy\\)-plane?`,
+    optionFigures, target: { m, b, ineq }, figure: null,
+    solve_path: sp({ op: "match_region", detail: `Boundary \\(y = ${tail}\\) (${strict ? "dashed" : "solid"}); shade ${above ? "above" : "below"} it.` }),
+    fingerprint: ["inequality_to_graph", slopeClass(frac(m, 1)), above ? "above" : "below", "4opt"],
+  };
+}
+
 const BUILDERS = {
   read_value: gReadValue,
   slope_from_points: gSlopeFromPoints,
@@ -255,6 +295,8 @@ const BUILDERS = {
   system_count: gSystemCount,
   inequality_region: gInequalityRegion,
   parallel_perp_graph: gParallelPerp,
+  equation_to_graph: gEquationToGraph,
+  inequality_to_graph: gInequalityToGraph,
 };
 
 /** drawGraphItem(task, band, r) — a complete, correct-by-construction graph candidate.

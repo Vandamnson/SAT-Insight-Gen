@@ -110,14 +110,25 @@ function renderQuestion(q) {
   let body = `<div class="q-num">${q.id}</div>${tag}<div class="stem">${renderStem(q.stem)}</div>`;
   body += renderFigure(q.figure);
   if (q.type === "mcq") {
-    const twoCol = (q.options || []).every(o => textLen(o.seg) <= 14) ? " two-col" : "";
-    const opts = q.options.map(o => `
-      <li><button class="opt" role="radio" aria-checked="false" data-key="${o.key}">
-        <span class="chip">${o.key}</span>
-        <span class="otxt">${segs(o.seg)}</span>
-        <span class="verdict"></span>
-      </button></li>`).join("");
-    body += `<ol class="opts${twoCol}" role="radiogroup" aria-label="answer choices">${opts}</ol>`;
+    const figOpts = (q.options || []).some(o => o.fig);   // "which graph" — each option is a figure
+    if (figOpts) {
+      const opts = q.options.map(o => `
+        <li><button class="opt opt-fig" role="radio" aria-checked="false" data-key="${o.key}">
+          <span class="chip">${o.key}</span>
+          <span class="ofig">${renderFigure(o.fig)}</span>
+          <span class="verdict"></span>
+        </button></li>`).join("");
+      body += `<ol class="opts fig-opts" role="radiogroup" aria-label="answer choices">${opts}</ol>`;
+    } else {
+      const twoCol = (q.options || []).every(o => textLen(o.seg) <= 14) ? " two-col" : "";
+      const opts = q.options.map(o => `
+        <li><button class="opt" role="radio" aria-checked="false" data-key="${o.key}">
+          <span class="chip">${o.key}</span>
+          <span class="otxt">${segs(o.seg)}</span>
+          <span class="verdict"></span>
+        </button></li>`).join("");
+      body += `<ol class="opts${twoCol}" role="radiogroup" aria-label="answer choices">${opts}</ol>`;
+    }
     body += `<div class="answer">Correct answer: <b>${q.answer.correct}</b> · <a href="solutions.html#q${q.id}">See worked solution →</a></div>`;
   } else {
     const accept = (q.answer.accept || []).join("  ·  ");
@@ -149,6 +160,15 @@ function renderSolution(q) {
 
 /* ---- page shells -------------------------------------------------------- */
 const V = "5";   // asset cache-busting version — bump when CSS/JS change
+// "which graph" items: lay the four option figures out in a 2×2 grid.
+const FIG_OPT_CSS = `<style>
+.opts.fig-opts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;list-style:none;padding:0;margin:1rem 0}
+.opts.fig-opts .opt{display:flex;align-items:flex-start;gap:8px;width:100%;height:100%;text-align:left}
+.opts.fig-opts .ofig{flex:1;min-width:0}
+.opts.fig-opts .ofig .q-fig{margin:0}
+.opts.fig-opts .ofig svg{width:100%;height:auto;display:block}
+@media (max-width:540px){.opts.fig-opts{grid-template-columns:1fr}}
+</style>`;
 function head(title, depth) {
   const up = "../".repeat(depth);
   return `<!doctype html><html lang="en"><head>
@@ -165,7 +185,7 @@ const foot = (depth) => `</div><script src="${"../".repeat(depth)}assets/app.js?
 function renderTestPage(test) {
   const n = String(test.number).padStart(2, "0");
   const qs = test.questions.map(renderQuestion).join("\n");
-  return head(`${test.title || `Practice Set ${n}`} — Digital SAT Math`, 2) + `
+  return head(`${test.title || `Practice Set ${n}`} — Digital SAT Math`, 2) + FIG_OPT_CSS + `
 <header class="masthead">
   <p class="eyebrow">Digital SAT · Math · Skills-Insight band-targeted</p>
   <h1>${escapeHtml(test.title || `Practice Set ${n}`)}</h1>

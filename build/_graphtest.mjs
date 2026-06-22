@@ -18,6 +18,14 @@ for (const task of GRAPH_TASKS) {
     let it;
     try { it = drawGraphItem(task, 5, r); } catch (e) { exc++; console.error(`EXC ${task}#${i}: ${e.message}`); continue; }
     n++;
+    if (it.optionFigures) {                         // "which graph": options ARE figures
+      const idx = "ABCD".indexOf(it.correct_choice);
+      if (it.optionFigures.length !== 4 || idx < 0) { badMcq++; console.error(`BAD OPT ${task}#${i}: n=${it.optionFigures.length} cc=${it.correct_choice}`); }
+      for (const spec of it.optionFigures) if (!(spec.curves || []).some((c) => c.type === "line")) { badPt++; console.error(`OPT NO LINE ${task}#${i}`); }
+      const fp0 = (it.fingerprint || []).join(">"); fps[fp0] = (fps[fp0] || 0) + 1; seen.add(fp0);
+      if (samples.length < 9 && i === 3) samples.push(it);
+      continue;
+    }
     const curves = it.figure?.spec?.curves || [];
     if (!curves.length || curves.some((c) => c.type !== "line" || typeof c.m !== "number")) { badPt++; console.error(`BAD CURVES ${task}#${i}`); }
     for (const p of (it.figure.spec.points || [])) if (!onAnyCurve(curves, p.at[0], p.at[1])) { badPt++; console.error(`OFF-CURVE ${task}#${i}: ${JSON.stringify(p.at)}`); }

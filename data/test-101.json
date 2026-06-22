@@ -3232,6 +3232,1338 @@
       ],
       "reskinDistance": 1,
       "tier": "build-spec"
+    },
+    {
+      "id": 22,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B5",
+      "target_band": "B5",
+      "statementId": "ALG.B5.s1",
+      "skill": "linear_equations_two_variables",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "Which of the following graphs in the "
+        },
+        {
+          "t": "math",
+          "v": "xy"
+        },
+        {
+          "t": "text",
+          "v": "-plane represents the equation "
+        },
+        {
+          "t": "math",
+          "v": "y = 3x - 4"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "fig": {
+            "fn": "coordPlane",
+            "spec": {
+              "xRange": [
+                -6,
+                6
+              ],
+              "yRange": [
+                -6,
+                6
+              ],
+              "xStep": 1,
+              "yStep": 1,
+              "origin": true,
+              "axisLabels": [
+                "x",
+                "y"
+              ],
+              "curves": [
+                {
+                  "type": "line",
+                  "m": 3,
+                  "b": 4
+                }
+              ]
+            }
+          }
+        },
+        {
+          "key": "B",
+          "fig": {
+            "fn": "coordPlane",
+            "spec": {
+              "xRange": [
+                -6,
+                6
+              ],
+              "yRange": [
+                -6,
+                6
+              ],
+              "xStep": 1,
+              "yStep": 1,
+              "origin": true,
+              "axisLabels": [
+                "x",
+                "y"
+              ],
+              "curves": [
+                {
+                  "type": "line",
+                  "m": -3,
+                  "b": -4
+                }
+              ]
+            }
+          }
+        },
+        {
+          "key": "C",
+          "fig": {
+            "fn": "coordPlane",
+            "spec": {
+              "xRange": [
+                -6,
+                6
+              ],
+              "yRange": [
+                -6,
+                6
+              ],
+              "xStep": 1,
+              "yStep": 1,
+              "origin": true,
+              "axisLabels": [
+                "x",
+                "y"
+              ],
+              "curves": [
+                {
+                  "type": "line",
+                  "m": 3,
+                  "b": -4
+                }
+              ]
+            }
+          }
+        },
+        {
+          "key": "D",
+          "fig": {
+            "fn": "coordPlane",
+            "spec": {
+              "xRange": [
+                -6,
+                6
+              ],
+              "yRange": [
+                -6,
+                6
+              ],
+              "xStep": 1,
+              "yStep": 1,
+              "origin": true,
+              "axisLabels": [
+                "x",
+                "y"
+              ],
+              "curves": [
+                {
+                  "type": "line",
+                  "m": -3,
+                  "b": 4
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "answer": {
+        "correct": "C"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. match graph: "
+        },
+        {
+          "t": "text",
+          "v": "The line has slope "
+        },
+        {
+          "t": "math",
+          "v": "3"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "y"
+        },
+        {
+          "t": "text",
+          "v": "-intercept "
+        },
+        {
+          "t": "math",
+          "v": "-4"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 570,
+        "band": "B5",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "equation_to_graph"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "equation_to_graph"
+      },
+      "fingerprint": [
+        "equation_to_graph",
+        "pos_int",
+        "bneg",
+        "4opt"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 23,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B5",
+      "target_band": "B5",
+      "statementId": "ALG.B5.s1",
+      "skill": "linear_equations_two_variables",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "Which of the following graphs in the "
+        },
+        {
+          "t": "math",
+          "v": "xy"
+        },
+        {
+          "t": "text",
+          "v": "-plane represents the equation "
+        },
+        {
+          "t": "math",
+          "v": "y = 3x + 2"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "fig": {
+            "fn": "coordPlane",
+            "spec": {
+              "xRange": [
+                -6,
+                6
+              ],
+              "yRange": [
+                -6,
+                6
+              ],
+              "xStep": 1,
+              "yStep": 1,
+              "origin": true,
+              "axisLabels": [
+                "x",
+                "y"
+              ],
+              "curves": [
+                {
+                  "type": "line",
+                  "m": 3,
+                  "b": -2
+                }
+              ]
+            }
+          }
+        },
+        {
+          "key": "B",
+          "fig": {
+            "fn": "coordPlane",
+            "spec": {
+              "xRange": [
+                -6,
+                6
+              ],
+              "yRange": [
+                -6,
+                6
+              ],
+              "xStep": 1,
+              "yStep": 1,
+              "origin": true,
+              "axisLabels": [
+                "x",
+                "y"
+              ],
+              "curves": [
+                {
+                  "type": "line",
+                  "m": 3,
+                  "b": 2
+                }
+              ]
+            }
+          }
+        },
+        {
+          "key": "C",
+          "fig": {
+            "fn": "coordPlane",
+            "spec": {
+              "xRange": [
+                -6,
+                6
+              ],
+              "yRange": [
+                -6,
+                6
+              ],
+              "xStep": 1,
+              "yStep": 1,
+              "origin": true,
+              "axisLabels": [
+                "x",
+                "y"
+              ],
+              "curves": [
+                {
+                  "type": "line",
+                  "m": -3,
+                  "b": -2
+                }
+              ]
+            }
+          }
+        },
+        {
+          "key": "D",
+          "fig": {
+            "fn": "coordPlane",
+            "spec": {
+              "xRange": [
+                -6,
+                6
+              ],
+              "yRange": [
+                -6,
+                6
+              ],
+              "xStep": 1,
+              "yStep": 1,
+              "origin": true,
+              "axisLabels": [
+                "x",
+                "y"
+              ],
+              "curves": [
+                {
+                  "type": "line",
+                  "m": -3,
+                  "b": 2
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "answer": {
+        "correct": "B"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. match graph: "
+        },
+        {
+          "t": "text",
+          "v": "The line has slope "
+        },
+        {
+          "t": "math",
+          "v": "3"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "y"
+        },
+        {
+          "t": "text",
+          "v": "-intercept "
+        },
+        {
+          "t": "math",
+          "v": "2"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 570,
+        "band": "B5",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "equation_to_graph"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "equation_to_graph"
+      },
+      "fingerprint": [
+        "equation_to_graph",
+        "pos_int",
+        "bpos",
+        "4opt"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 24,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B5",
+      "target_band": "B5",
+      "statementId": "ALG.B5.s1",
+      "skill": "linear_equations_two_variables",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "Which of the following graphs in the "
+        },
+        {
+          "t": "math",
+          "v": "xy"
+        },
+        {
+          "t": "text",
+          "v": "-plane represents the equation "
+        },
+        {
+          "t": "math",
+          "v": "y = 3x - 3"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "fig": {
+            "fn": "coordPlane",
+            "spec": {
+              "xRange": [
+                -6,
+                6
+              ],
+              "yRange": [
+                -6,
+                6
+              ],
+              "xStep": 1,
+              "yStep": 1,
+              "origin": true,
+              "axisLabels": [
+                "x",
+                "y"
+              ],
+              "curves": [
+                {
+                  "type": "line",
+                  "m": 3,
+                  "b": -3
+                }
+              ]
+            }
+          }
+        },
+        {
+          "key": "B",
+          "fig": {
+            "fn": "coordPlane",
+            "spec": {
+              "xRange": [
+                -6,
+                6
+              ],
+              "yRange": [
+                -6,
+                6
+              ],
+              "xStep": 1,
+              "yStep": 1,
+              "origin": true,
+              "axisLabels": [
+                "x",
+                "y"
+              ],
+              "curves": [
+                {
+                  "type": "line",
+                  "m": -3,
+                  "b": 3
+                }
+              ]
+            }
+          }
+        },
+        {
+          "key": "C",
+          "fig": {
+            "fn": "coordPlane",
+            "spec": {
+              "xRange": [
+                -6,
+                6
+              ],
+              "yRange": [
+                -6,
+                6
+              ],
+              "xStep": 1,
+              "yStep": 1,
+              "origin": true,
+              "axisLabels": [
+                "x",
+                "y"
+              ],
+              "curves": [
+                {
+                  "type": "line",
+                  "m": -3,
+                  "b": -3
+                }
+              ]
+            }
+          }
+        },
+        {
+          "key": "D",
+          "fig": {
+            "fn": "coordPlane",
+            "spec": {
+              "xRange": [
+                -6,
+                6
+              ],
+              "yRange": [
+                -6,
+                6
+              ],
+              "xStep": 1,
+              "yStep": 1,
+              "origin": true,
+              "axisLabels": [
+                "x",
+                "y"
+              ],
+              "curves": [
+                {
+                  "type": "line",
+                  "m": 3,
+                  "b": 3
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "answer": {
+        "correct": "A"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. match graph: "
+        },
+        {
+          "t": "text",
+          "v": "The line has slope "
+        },
+        {
+          "t": "math",
+          "v": "3"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "y"
+        },
+        {
+          "t": "text",
+          "v": "-intercept "
+        },
+        {
+          "t": "math",
+          "v": "-3"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 570,
+        "band": "B5",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "equation_to_graph"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "equation_to_graph"
+      },
+      "fingerprint": [
+        "equation_to_graph",
+        "pos_int",
+        "bneg",
+        "4opt"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 25,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B6",
+      "target_band": "B6",
+      "statementId": "ALG.B6.s1",
+      "skill": "linear_equations_two_variables",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "Which of the following graphs represents the inequality "
+        },
+        {
+          "t": "math",
+          "v": "y \\ge 3x + 2"
+        },
+        {
+          "t": "text",
+          "v": " in the "
+        },
+        {
+          "t": "math",
+          "v": "xy"
+        },
+        {
+          "t": "text",
+          "v": "-plane?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "fig": {
+            "fn": "coordPlane",
+            "spec": {
+              "xRange": [
+                -6,
+                6
+              ],
+              "yRange": [
+                -6,
+                6
+              ],
+              "xStep": 1,
+              "yStep": 1,
+              "origin": true,
+              "axisLabels": [
+                "x",
+                "y"
+              ],
+              "curves": [
+                {
+                  "type": "line",
+                  "m": 3,
+                  "b": 2,
+                  "dash": false
+                }
+              ],
+              "shaded": {
+                "m": 3,
+                "b": 2,
+                "ineq": "<="
+              }
+            }
+          }
+        },
+        {
+          "key": "B",
+          "fig": {
+            "fn": "coordPlane",
+            "spec": {
+              "xRange": [
+                -6,
+                6
+              ],
+              "yRange": [
+                -6,
+                6
+              ],
+              "xStep": 1,
+              "yStep": 1,
+              "origin": true,
+              "axisLabels": [
+                "x",
+                "y"
+              ],
+              "curves": [
+                {
+                  "type": "line",
+                  "m": -3,
+                  "b": 2,
+                  "dash": false
+                }
+              ],
+              "shaded": {
+                "m": -3,
+                "b": 2,
+                "ineq": ">="
+              }
+            }
+          }
+        },
+        {
+          "key": "C",
+          "fig": {
+            "fn": "coordPlane",
+            "spec": {
+              "xRange": [
+                -6,
+                6
+              ],
+              "yRange": [
+                -6,
+                6
+              ],
+              "xStep": 1,
+              "yStep": 1,
+              "origin": true,
+              "axisLabels": [
+                "x",
+                "y"
+              ],
+              "curves": [
+                {
+                  "type": "line",
+                  "m": 3,
+                  "b": 2,
+                  "dash": false
+                }
+              ],
+              "shaded": {
+                "m": 3,
+                "b": 2,
+                "ineq": ">="
+              }
+            }
+          }
+        },
+        {
+          "key": "D",
+          "fig": {
+            "fn": "coordPlane",
+            "spec": {
+              "xRange": [
+                -6,
+                6
+              ],
+              "yRange": [
+                -6,
+                6
+              ],
+              "xStep": 1,
+              "yStep": 1,
+              "origin": true,
+              "axisLabels": [
+                "x",
+                "y"
+              ],
+              "curves": [
+                {
+                  "type": "line",
+                  "m": 3,
+                  "b": -2,
+                  "dash": false
+                }
+              ],
+              "shaded": {
+                "m": 3,
+                "b": -2,
+                "ineq": ">="
+              }
+            }
+          }
+        }
+      ],
+      "answer": {
+        "correct": "C"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. match region: "
+        },
+        {
+          "t": "text",
+          "v": "Boundary "
+        },
+        {
+          "t": "math",
+          "v": "y = 3x + 2"
+        },
+        {
+          "t": "text",
+          "v": " (solid); shade above it."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 610,
+        "band": "B6",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "inequality_to_graph"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "inequality_to_graph"
+      },
+      "fingerprint": [
+        "inequality_to_graph",
+        "pos_int",
+        "above",
+        "4opt"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 26,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B6",
+      "target_band": "B6",
+      "statementId": "ALG.B6.s1",
+      "skill": "linear_equations_two_variables",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "Which of the following graphs represents the inequality "
+        },
+        {
+          "t": "math",
+          "v": "y \\le 3x + 4"
+        },
+        {
+          "t": "text",
+          "v": " in the "
+        },
+        {
+          "t": "math",
+          "v": "xy"
+        },
+        {
+          "t": "text",
+          "v": "-plane?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "fig": {
+            "fn": "coordPlane",
+            "spec": {
+              "xRange": [
+                -6,
+                6
+              ],
+              "yRange": [
+                -6,
+                6
+              ],
+              "xStep": 1,
+              "yStep": 1,
+              "origin": true,
+              "axisLabels": [
+                "x",
+                "y"
+              ],
+              "curves": [
+                {
+                  "type": "line",
+                  "m": 3,
+                  "b": 4,
+                  "dash": false
+                }
+              ],
+              "shaded": {
+                "m": 3,
+                "b": 4,
+                "ineq": ">="
+              }
+            }
+          }
+        },
+        {
+          "key": "B",
+          "fig": {
+            "fn": "coordPlane",
+            "spec": {
+              "xRange": [
+                -6,
+                6
+              ],
+              "yRange": [
+                -6,
+                6
+              ],
+              "xStep": 1,
+              "yStep": 1,
+              "origin": true,
+              "axisLabels": [
+                "x",
+                "y"
+              ],
+              "curves": [
+                {
+                  "type": "line",
+                  "m": 3,
+                  "b": -4,
+                  "dash": false
+                }
+              ],
+              "shaded": {
+                "m": 3,
+                "b": -4,
+                "ineq": "<="
+              }
+            }
+          }
+        },
+        {
+          "key": "C",
+          "fig": {
+            "fn": "coordPlane",
+            "spec": {
+              "xRange": [
+                -6,
+                6
+              ],
+              "yRange": [
+                -6,
+                6
+              ],
+              "xStep": 1,
+              "yStep": 1,
+              "origin": true,
+              "axisLabels": [
+                "x",
+                "y"
+              ],
+              "curves": [
+                {
+                  "type": "line",
+                  "m": -3,
+                  "b": 4,
+                  "dash": false
+                }
+              ],
+              "shaded": {
+                "m": -3,
+                "b": 4,
+                "ineq": "<="
+              }
+            }
+          }
+        },
+        {
+          "key": "D",
+          "fig": {
+            "fn": "coordPlane",
+            "spec": {
+              "xRange": [
+                -6,
+                6
+              ],
+              "yRange": [
+                -6,
+                6
+              ],
+              "xStep": 1,
+              "yStep": 1,
+              "origin": true,
+              "axisLabels": [
+                "x",
+                "y"
+              ],
+              "curves": [
+                {
+                  "type": "line",
+                  "m": 3,
+                  "b": 4,
+                  "dash": false
+                }
+              ],
+              "shaded": {
+                "m": 3,
+                "b": 4,
+                "ineq": "<="
+              }
+            }
+          }
+        }
+      ],
+      "answer": {
+        "correct": "D"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. match region: "
+        },
+        {
+          "t": "text",
+          "v": "Boundary "
+        },
+        {
+          "t": "math",
+          "v": "y = 3x + 4"
+        },
+        {
+          "t": "text",
+          "v": " (solid); shade below it."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 610,
+        "band": "B6",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "inequality_to_graph"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "inequality_to_graph"
+      },
+      "fingerprint": [
+        "inequality_to_graph",
+        "pos_int",
+        "below",
+        "4opt"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 27,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B6",
+      "target_band": "B6",
+      "statementId": "ALG.B6.s1",
+      "skill": "linear_equations_two_variables",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "Which of the following graphs represents the inequality "
+        },
+        {
+          "t": "math",
+          "v": "y > 3x + 1"
+        },
+        {
+          "t": "text",
+          "v": " in the "
+        },
+        {
+          "t": "math",
+          "v": "xy"
+        },
+        {
+          "t": "text",
+          "v": "-plane?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "fig": {
+            "fn": "coordPlane",
+            "spec": {
+              "xRange": [
+                -6,
+                6
+              ],
+              "yRange": [
+                -6,
+                6
+              ],
+              "xStep": 1,
+              "yStep": 1,
+              "origin": true,
+              "axisLabels": [
+                "x",
+                "y"
+              ],
+              "curves": [
+                {
+                  "type": "line",
+                  "m": 3,
+                  "b": 1,
+                  "dash": true
+                }
+              ],
+              "shaded": {
+                "m": 3,
+                "b": 1,
+                "ineq": ">"
+              }
+            }
+          }
+        },
+        {
+          "key": "B",
+          "fig": {
+            "fn": "coordPlane",
+            "spec": {
+              "xRange": [
+                -6,
+                6
+              ],
+              "yRange": [
+                -6,
+                6
+              ],
+              "xStep": 1,
+              "yStep": 1,
+              "origin": true,
+              "axisLabels": [
+                "x",
+                "y"
+              ],
+              "curves": [
+                {
+                  "type": "line",
+                  "m": 3,
+                  "b": -1,
+                  "dash": true
+                }
+              ],
+              "shaded": {
+                "m": 3,
+                "b": -1,
+                "ineq": ">"
+              }
+            }
+          }
+        },
+        {
+          "key": "C",
+          "fig": {
+            "fn": "coordPlane",
+            "spec": {
+              "xRange": [
+                -6,
+                6
+              ],
+              "yRange": [
+                -6,
+                6
+              ],
+              "xStep": 1,
+              "yStep": 1,
+              "origin": true,
+              "axisLabels": [
+                "x",
+                "y"
+              ],
+              "curves": [
+                {
+                  "type": "line",
+                  "m": 3,
+                  "b": 1,
+                  "dash": true
+                }
+              ],
+              "shaded": {
+                "m": 3,
+                "b": 1,
+                "ineq": "<"
+              }
+            }
+          }
+        },
+        {
+          "key": "D",
+          "fig": {
+            "fn": "coordPlane",
+            "spec": {
+              "xRange": [
+                -6,
+                6
+              ],
+              "yRange": [
+                -6,
+                6
+              ],
+              "xStep": 1,
+              "yStep": 1,
+              "origin": true,
+              "axisLabels": [
+                "x",
+                "y"
+              ],
+              "curves": [
+                {
+                  "type": "line",
+                  "m": -3,
+                  "b": 1,
+                  "dash": true
+                }
+              ],
+              "shaded": {
+                "m": -3,
+                "b": 1,
+                "ineq": ">"
+              }
+            }
+          }
+        }
+      ],
+      "answer": {
+        "correct": "A"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. match region: "
+        },
+        {
+          "t": "text",
+          "v": "Boundary "
+        },
+        {
+          "t": "math",
+          "v": "y = 3x + 1"
+        },
+        {
+          "t": "text",
+          "v": " (dashed); shade above it."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 610,
+        "band": "B6",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "inequality_to_graph"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "inequality_to_graph"
+      },
+      "fingerprint": [
+        "inequality_to_graph",
+        "pos_int",
+        "above",
+        "4opt"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
     }
   ]
 }

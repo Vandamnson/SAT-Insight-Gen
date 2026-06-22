@@ -111,12 +111,15 @@ function extractTable(statement) {
 }
 function toRenderItem(s, id) {
   const { cand, cell, gate } = s;
-  const isMcq = !!cand.choices;
+  const optFigs = cell.incidentals?.numbers?.optionFigures || null;   // "which graph" items: each OPTION is a figure
+  const isMcq = !!cand.choices || !!optFigs;
   const used = cand.radicals_used && Object.keys(cand.radicals_used).length ? { ...cell.radicals, ...cand.radicals_used } : cell.radicals;
   const diff = measureFromRadicals(used, cell.domain, cell.subdomain);
-  const opts = isMcq ? cand.choices.map((c, i) => ({ key: "ABCD"[i], seg: mathSeg(String(c).replace(/^[A-D][).]\s*/, "")) })) : undefined;
-  const harnessFig = cell.incidentals?.numbers?.figure || null;   // graph items: harness-drawn coordPlane figure
-  const tbl = harnessFig ? null : extractTable(cand.statement);   // else a markdown table from the prose
+  const opts = optFigs
+    ? optFigs.map((spec, i) => ({ key: "ABCD"[i], fig: { fn: "coordPlane", spec } }))
+    : (isMcq ? cand.choices.map((c, i) => ({ key: "ABCD"[i], seg: mathSeg(String(c).replace(/^[A-D][).]\s*/, "")) })) : undefined);
+  const harnessFig = optFigs ? null : (cell.incidentals?.numbers?.figure || null);   // single stem figure (graph items)
+  const tbl = (harnessFig || optFigs) ? null : extractTable(cand.statement);   // else a markdown table from the prose
   return {
     id, program: "SAT", domain: cell.domain, band: `B${cell.band}`, target_band: `B${cell.band}`,
     statementId: cell.statementId || `${DOMAIN_CODE[cell.domain]}.B${cell.band}.s1`,
