@@ -24,7 +24,13 @@ export function figureCheck(cell) {
     if (opts.length !== 4) return { keep: false, reason: `expected 4 option figures, got ${opts.length}` };
     if (ci < 0 || ci > 3) return { keep: false, reason: `bad correct_choice "${num0.correct_choice}"` };
     const matches = (spec) => {
-      const c = (spec.curves || [])[0];
+      const cs = (spec.curves || []).filter((c) => c.type === "line");
+      if (t.lines) {   // system_to_graph: the line SET must match (unordered)
+        return cs.length === t.lines.length
+          && t.lines.every((tl) => cs.some((c) => c.m === tl.m && c.b === tl.b))
+          && cs.every((c) => t.lines.some((tl) => tl.m === c.m && tl.b === c.b));
+      }
+      const c = cs[0];
       if (!c || c.m !== t.m || c.b !== t.b) return false;
       if (t.ineq !== undefined) return !!spec.shaded && spec.shaded.ineq === t.ineq && spec.shaded.m === t.m && spec.shaded.b === t.b;
       return true;
@@ -77,7 +83,8 @@ export function figureCheck(cell) {
   if (task === "system_read") {
     if (ls.length !== 2) return { keep: false, reason: "system needs exactly 2 lines" };
     if (ls[0].m === ls[1].m) return { keep: false, reason: "system lines are parallel (no unique solution)" };
-    if (!(spec.points || []).length) return { keep: false, reason: "system_read has no marked intersection" };
+    // a marked intersection (when present) is verified by the generic point loop above;
+    // an unmarked one is a visible integer lattice point by construction.
   }
 
   if (task === "inequality_region") {

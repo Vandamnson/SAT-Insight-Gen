@@ -183,10 +183,10 @@ function renderCurve(c, sx, sy, xmin, xmax, ymin, ymax) {
     // clip to box
     const pts = clipLine(m, b, xmin, xmax, ymin, ymax);
     if (!pts) return "";
-    return poly(pts.map(([x, y]) => [sx(x), sy(y)]), "fig-stroke", c.dash ? `class="fig-stroke fig-dash"` : "");
+    return poly(pts.map(([x, y]) => [sx(x), sy(y)]), c.dash ? "fig-stroke fig-curve fig-dash" : "fig-stroke fig-curve");
   }
   if (c.type === "segment") {
-    return line(sx(c.p1[0]), sy(c.p1[1]), sx(c.p2[0]), sy(c.p2[1]), "fig-stroke", c.dash ? `stroke-dasharray="4 3"` : "");
+    return line(sx(c.p1[0]), sy(c.p1[1]), sx(c.p2[0]), sy(c.p2[1]), "fig-stroke fig-curve", c.dash ? `stroke-dasharray="4 3"` : "");
   }
   if (c.type === "fn" || c.type === "quadratic" || c.type === "cubic") {
     const f = c.f || (c.type === "quadratic"
@@ -203,7 +203,7 @@ function renderCurve(c, sx, sy, xmin, xmax, ymin, ymax) {
     const segs = []; let cur = [];
     for (const p of pts) { if (p) cur.push(p); else if (cur.length) { segs.push(cur); cur = []; } }
     if (cur.length) segs.push(cur);
-    return segs.map(s => poly(s, "fig-stroke")).join("");
+    return segs.map(s => poly(s, "fig-stroke fig-curve")).join("");
   }
   return "";
 }

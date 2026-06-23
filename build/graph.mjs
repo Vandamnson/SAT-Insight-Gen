@@ -13,7 +13,7 @@
    solve_path, fingerprint, figure:{fn:"coordPlane", spec}, harness:true }.
    ============================================================================ */
 
-export const GRAPH_TASKS = ["read_value", "slope_from_points", "connect_graph", "system_read", "system_count", "inequality_region", "parallel_perp_graph", "equation_to_graph", "inequality_to_graph", "point_in_region", "feasible_region", "interpret_graph_context"];
+export const GRAPH_TASKS = ["read_value", "slope_from_points", "connect_graph", "system_read", "system_count", "inequality_region", "parallel_perp_graph", "equation_to_graph", "inequality_to_graph", "system_to_graph", "point_in_region", "feasible_region", "interpret_graph_context"];
 
 /* ---- small helpers ---- */
 const randint = (r, lo, hi) => lo + Math.floor(r() * (hi - lo + 1));
@@ -146,26 +146,29 @@ function gSystemRead(r) {
   const sx = sgn(r) * randint(r, 1, 4), sy = sgn(r) * randint(r, 1, 4);
   let m1 = sgn(r) * randint(r, 1, 3), m2; do { m2 = sgn(r) * randint(r, 1, 3); } while (m2 === m1);
   const b1 = sy - m1 * sx, b2 = sy - m2 * sx;
+  const mark = r() < 0.5;                       // ~half mark the intersection P; ~half leave it to be READ off the graph (the more common SAT form)
   const spec = standardFrame([[sx, sy]]);
   spec.curves = [lineCurve(m1, b1), lineCurve(m2, b2)];
-  spec.points = [{ at: [sx, sy], label: "P" }];
+  if (mark) spec.points = [{ at: [sx, sy], label: "P" }];
+  const where = mark ? "intersect at the point \\(P\\) shown" : "are shown";
+  const fpMark = mark ? "marked" : "unmarked";
   const askPair = r() < 0.5;
   if (askPair) {
     const correct = tex(`(${sx}, ${sy})`);
     const { choices, correct_choice } = mcq(correct, [tex(`(${sy}, ${sx})`), tex(`(${-sx}, ${sy})`), tex(`(${sx}, ${-sy})`), tex(`(${-sx}, ${-sy})`)], r);
     return {
       task: "system_read", format: "mcq", answer: correct, choices, correct_choice,
-      statement: "The graphs of two lines in the \\(xy\\)-plane intersect at the point \\(P\\) shown. What is the solution \\((x, y)\\) of the system?",
-      solve_path: sp({ op: "read_intersection", detail: `The lines meet at \\(P = (${sx}, ${sy})\\).` }),
-      fingerprint: ["system_read", "mixed", "pair", "2line"],
+      statement: `The graphs of the two equations in a system of linear equations ${where} in the \\(xy\\)-plane. What is the solution \\((x, y)\\) to the system?`,
+      solve_path: sp({ op: "read_intersection", detail: `The lines meet at \\((${sx}, ${sy})\\).` }),
+      fingerprint: ["system_read", fpMark, "pair", "2line"],
       figure: { fn: "coordPlane", spec },
     };
   }
   return {
     task: "system_read", format: "spr", answer: String(sx),
-    statement: "The graphs of two lines in the \\(xy\\)-plane intersect at the point \\(P\\) shown. What is the \\(x\\)-coordinate of the solution to the system?",
-    solve_path: sp({ op: "read_intersection", detail: `The lines meet at \\(P = (${sx}, ${sy})\\).` }),
-    fingerprint: ["system_read", "mixed", "xcoord", "2line"],
+    statement: `The graphs of the two equations in a system of linear equations ${where} in the \\(xy\\)-plane. What is the \\(x\\)-coordinate of the solution to the system?`,
+    solve_path: sp({ op: "read_intersection", detail: `The lines meet at \\((${sx}, ${sy})\\).` }),
+    fingerprint: ["system_read", fpMark, "xcoord", "2line"],
     figure: { fn: "coordPlane", spec },
   };
 }
@@ -250,6 +253,7 @@ function gParallelPerp(r) {
 /* ===== "which graph" items — the ANSWER OPTIONS are figures (Phase B) ===== */
 const lineSpec = (m, b) => { const s = standardFrame([[0, b]]); s.curves = [lineCurve(m, b)]; return s; };
 const ineqSpec = (m, b, ineq, strict) => { const s = standardFrame([[0, b]]); s.curves = [lineCurve(m, b, { dash: strict })]; s.shaded = { m, b, ineq }; return s; };
+const sysSpec = (lns) => { const s = standardFrame(lns.map((L) => [0, L.b])); s.curves = lns.map((L) => lineCurve(L.m, L.b)); return s; };
 function mcqFigures(correctSpec, distractorSpecs, r) {
   const four = [{ spec: correctSpec, ok: true }, ...distractorSpecs.map((spec) => ({ spec, ok: false }))].slice(0, 4);
   for (let i = four.length - 1; i > 0; i--) { const j = Math.floor(r() * (i + 1)); [four[i], four[j]] = [four[j], four[i]]; }
@@ -284,6 +288,25 @@ function gInequalityToGraph(r) {
     optionFigures, target: { m, b, ineq }, figure: null,
     solve_path: sp({ op: "match_region", detail: `Boundary \\(y = ${tail}\\) (${strict ? "dashed" : "solid"}); shade ${above ? "above" : "below"} it.` }),
     fingerprint: ["inequality_to_graph", slopeClass(frac(m, 1)), above ? "above" : "below", "4opt"],
+  };
+}
+
+function gSystemToGraph(r) {
+  let m1 = sgn(r) * randint(r, 1, 3), m2; do { m2 = sgn(r) * randint(r, 1, 3); } while (m2 === m1);
+  const b1 = sgn(r) * randint(r, 1, 4), b2 = sgn(r) * randint(r, 1, 4);
+  const L = [{ m: m1, b: b1 }, { m: m2, b: b2 }];
+  const distractors = [                                  // each flips ONE feature of ONE line ⇒ a different line-set
+    sysSpec([{ m: -m1, b: b1 }, { m: m2, b: b2 }]),
+    sysSpec([{ m: m1, b: -b1 }, { m: m2, b: b2 }]),
+    sysSpec([{ m: m1, b: b1 }, { m: -m2, b: b2 }]),
+  ];
+  const { optionFigures, correct_choice } = mcqFigures(sysSpec(L), distractors, r);
+  return {
+    task: "system_to_graph", format: "mcq", correct_choice, answer: tex(`${lineTex(m1, b1)}, \\ ${lineTex(m2, b2)}`),
+    statement: `Which of the following graphs in the \\(xy\\)-plane represents the system of equations \\(${lineTex(m1, b1)}\\) and \\(${lineTex(m2, b2)}\\)?`,
+    optionFigures, target: { lines: L }, figure: null,
+    solve_path: sp({ op: "match_system", detail: `Two lines: slope \\(${m1}\\), intercept \\(${b1}\\); and slope \\(${m2}\\), intercept \\(${b2}\\).` }),
+    fingerprint: ["system_to_graph", `${slopeClass(frac(m1, 1))}|${slopeClass(frac(m2, 1))}`, "graph", "2line4opt"],
   };
 }
 
@@ -399,6 +422,7 @@ const BUILDERS = {
   parallel_perp_graph: gParallelPerp,
   equation_to_graph: gEquationToGraph,
   inequality_to_graph: gInequalityToGraph,
+  system_to_graph: gSystemToGraph,
   point_in_region: gPointInRegion,
   feasible_region: gFeasibleRegion,
   interpret_graph_context: gInterpretGraphContext,

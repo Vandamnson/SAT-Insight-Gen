@@ -159,7 +159,7 @@ function renderSolution(q) {
 }
 
 /* ---- page shells -------------------------------------------------------- */
-const V = "5";   // asset cache-busting version — bump when CSS/JS change
+const V = "6";   // asset cache-busting version — bump when CSS/JS change
 // "which graph" items: lay the four option figures out in a 2×2 grid.
 const FIG_OPT_CSS = `<style>
 .opts.fig-opts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;list-style:none;padding:0;margin:1rem 0}

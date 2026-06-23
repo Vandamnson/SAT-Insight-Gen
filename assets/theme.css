@@ -52,6 +52,7 @@
 
   /* --- figure tokens (consumed by figures.js via classes) ---------------- */
   --fig-stroke: var(--ink);
+  --fig-curve:  #2563eb;       /* coordPlane function/line stroke — SAT-style blue */
   --fig-grid:   var(--tint-10);
   --fig-axis:   var(--ink);
   --fig-fill:   var(--tint-20);

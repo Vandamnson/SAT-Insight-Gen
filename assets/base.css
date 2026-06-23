@@ -100,6 +100,7 @@ figure.q-fig figcaption {
 .fig-grid { stroke: var(--fig-grid); }
 .fig-axis { stroke: var(--fig-axis); }
 .fig-stroke { stroke: var(--fig-stroke); fill: none; }
+.fig-curve { stroke: var(--fig-curve, #2563eb); }   /* coordPlane function/line stroke — SAT-blue (defined after .fig-stroke so it wins) */
 .fig-fill { fill: var(--fig-fill); }
 .fig-fill-strong { fill: var(--fig-fill-strong); }
 .fig-marker { fill: var(--fig-marker); stroke: var(--fig-marker); }

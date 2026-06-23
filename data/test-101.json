@@ -1324,15 +1324,7 @@
       "stem": [
         {
           "t": "text",
-          "v": "The graphs of two lines in the "
-        },
-        {
-          "t": "math",
-          "v": "xy"
-        },
-        {
-          "t": "text",
-          "v": "-plane intersect at the point "
+          "v": "The graphs of the two equations in a system of linear equations intersect at the point "
         },
         {
           "t": "math",
@@ -1340,7 +1332,15 @@
         },
         {
           "t": "text",
-          "v": " shown. What is the solution "
+          "v": " shown in the "
+        },
+        {
+          "t": "math",
+          "v": "xy"
+        },
+        {
+          "t": "text",
+          "v": "-plane. What is the solution "
         },
         {
           "t": "math",
@@ -1348,7 +1348,7 @@
         },
         {
           "t": "text",
-          "v": " of the system?"
+          "v": " to the system?"
         }
       ],
       "options": [
@@ -1375,7 +1375,7 @@
           "seg": [
             {
               "t": "math",
-              "v": "(2, 1)"
+              "v": "(1, 2)"
             }
           ]
         },
@@ -1384,13 +1384,13 @@
           "seg": [
             {
               "t": "math",
-              "v": "(1, 2)"
+              "v": "(2, 1)"
             }
           ]
         }
       ],
       "answer": {
-        "correct": "C"
+        "correct": "D"
       },
       "solution": [
         {
@@ -1403,7 +1403,7 @@
         },
         {
           "t": "math",
-          "v": "P = (2, 1)"
+          "v": "(2, 1)"
         },
         {
           "t": "text",
@@ -1471,7 +1471,7 @@
       },
       "fingerprint": [
         "system_read",
-        "mixed",
+        "marked",
         "pair",
         "2line"
       ],
@@ -1490,15 +1490,7 @@
       "stem": [
         {
           "t": "text",
-          "v": "The graphs of two lines in the "
-        },
-        {
-          "t": "math",
-          "v": "xy"
-        },
-        {
-          "t": "text",
-          "v": "-plane intersect at the point "
+          "v": "The graphs of the two equations in a system of linear equations intersect at the point "
         },
         {
           "t": "math",
@@ -1506,7 +1498,15 @@
         },
         {
           "t": "text",
-          "v": " shown. What is the solution "
+          "v": " shown in the "
+        },
+        {
+          "t": "math",
+          "v": "xy"
+        },
+        {
+          "t": "text",
+          "v": "-plane. What is the solution "
         },
         {
           "t": "math",
@@ -1514,7 +1514,7 @@
         },
         {
           "t": "text",
-          "v": " of the system?"
+          "v": " to the system?"
         }
       ],
       "options": [
@@ -1523,7 +1523,7 @@
           "seg": [
             {
               "t": "math",
-              "v": "(-3, 1)"
+              "v": "(1, -3)"
             }
           ]
         },
@@ -1532,7 +1532,7 @@
           "seg": [
             {
               "t": "math",
-              "v": "(-3, -1)"
+              "v": "(-3, 1)"
             }
           ]
         },
@@ -1550,13 +1550,13 @@
           "seg": [
             {
               "t": "math",
-              "v": "(1, -3)"
+              "v": "(-3, -1)"
             }
           ]
         }
       ],
       "answer": {
-        "correct": "A"
+        "correct": "B"
       },
       "solution": [
         {
@@ -1569,7 +1569,7 @@
         },
         {
           "t": "math",
-          "v": "P = (-3, 1)"
+          "v": "(-3, 1)"
         },
         {
           "t": "text",
@@ -1637,7 +1637,7 @@
       },
       "fingerprint": [
         "system_read",
-        "mixed",
+        "marked",
         "pair",
         "2line"
       ],
@@ -1656,7 +1656,7 @@
       "stem": [
         {
           "t": "text",
-          "v": "The graphs of two lines in the "
+          "v": "The graphs of the two equations in a system of linear equations are shown in the "
         },
         {
           "t": "math",
@@ -1664,15 +1664,7 @@
         },
         {
           "t": "text",
-          "v": "-plane intersect at the point "
-        },
-        {
-          "t": "math",
-          "v": "P"
-        },
-        {
-          "t": "text",
-          "v": " shown. What is the "
+          "v": "-plane. What is the "
         },
         {
           "t": "math",
@@ -1700,7 +1692,7 @@
         },
         {
           "t": "math",
-          "v": "P = (1, -2)"
+          "v": "(1, -2)"
         },
         {
           "t": "text",
@@ -1739,15 +1731,6 @@
               "m": 1,
               "b": -3
             }
-          ],
-          "points": [
-            {
-              "at": [
-                1,
-                -2
-              ],
-              "label": "P"
-            }
           ]
         }
       },
@@ -1768,7 +1751,7 @@
       },
       "fingerprint": [
         "system_read",
-        "mixed",
+        "unmarked",
         "xcoord",
         "2line"
       ],
@@ -4569,6 +4552,768 @@
       "id": 28,
       "program": "SAT",
       "domain": "algebra",
+      "band": "B6",
+      "target_band": "B6",
+      "statementId": "ALG.B6.s1",
+      "skill": "linear_equations_two_variables",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "Which of the following graphs in the "
+        },
+        {
+          "t": "math",
+          "v": "xy"
+        },
+        {
+          "t": "text",
+          "v": "-plane represents the system of equations "
+        },
+        {
+          "t": "math",
+          "v": "y = 3x - 4"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "y = -2x + 2"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "fig": {
+            "fn": "coordPlane",
+            "spec": {
+              "xRange": [
+                -6,
+                6
+              ],
+              "yRange": [
+                -6,
+                6
+              ],
+              "xStep": 1,
+              "yStep": 1,
+              "origin": true,
+              "axisLabels": [
+                "x",
+                "y"
+              ],
+              "curves": [
+                {
+                  "type": "line",
+                  "m": 3,
+                  "b": -4
+                },
+                {
+                  "type": "line",
+                  "m": -2,
+                  "b": 2
+                }
+              ]
+            }
+          }
+        },
+        {
+          "key": "B",
+          "fig": {
+            "fn": "coordPlane",
+            "spec": {
+              "xRange": [
+                -6,
+                6
+              ],
+              "yRange": [
+                -6,
+                6
+              ],
+              "xStep": 1,
+              "yStep": 1,
+              "origin": true,
+              "axisLabels": [
+                "x",
+                "y"
+              ],
+              "curves": [
+                {
+                  "type": "line",
+                  "m": 3,
+                  "b": -4
+                },
+                {
+                  "type": "line",
+                  "m": 2,
+                  "b": 2
+                }
+              ]
+            }
+          }
+        },
+        {
+          "key": "C",
+          "fig": {
+            "fn": "coordPlane",
+            "spec": {
+              "xRange": [
+                -6,
+                6
+              ],
+              "yRange": [
+                -6,
+                6
+              ],
+              "xStep": 1,
+              "yStep": 1,
+              "origin": true,
+              "axisLabels": [
+                "x",
+                "y"
+              ],
+              "curves": [
+                {
+                  "type": "line",
+                  "m": 3,
+                  "b": 4
+                },
+                {
+                  "type": "line",
+                  "m": -2,
+                  "b": 2
+                }
+              ]
+            }
+          }
+        },
+        {
+          "key": "D",
+          "fig": {
+            "fn": "coordPlane",
+            "spec": {
+              "xRange": [
+                -6,
+                6
+              ],
+              "yRange": [
+                -6,
+                6
+              ],
+              "xStep": 1,
+              "yStep": 1,
+              "origin": true,
+              "axisLabels": [
+                "x",
+                "y"
+              ],
+              "curves": [
+                {
+                  "type": "line",
+                  "m": -3,
+                  "b": -4
+                },
+                {
+                  "type": "line",
+                  "m": -2,
+                  "b": 2
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "answer": {
+        "correct": "A"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. match system: "
+        },
+        {
+          "t": "text",
+          "v": "Two lines: slope "
+        },
+        {
+          "t": "math",
+          "v": "3"
+        },
+        {
+          "t": "text",
+          "v": ", intercept "
+        },
+        {
+          "t": "math",
+          "v": "-4"
+        },
+        {
+          "t": "text",
+          "v": "; and slope "
+        },
+        {
+          "t": "math",
+          "v": "-2"
+        },
+        {
+          "t": "text",
+          "v": ", intercept "
+        },
+        {
+          "t": "math",
+          "v": "2"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 650,
+        "band": "B6",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "system_to_graph"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "system_to_graph"
+      },
+      "fingerprint": [
+        "system_to_graph",
+        "pos_int|neg_int",
+        "graph",
+        "2line4opt"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 29,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B6",
+      "target_band": "B6",
+      "statementId": "ALG.B6.s1",
+      "skill": "linear_equations_two_variables",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "Which of the following graphs in the "
+        },
+        {
+          "t": "math",
+          "v": "xy"
+        },
+        {
+          "t": "text",
+          "v": "-plane represents the system of equations "
+        },
+        {
+          "t": "math",
+          "v": "y = -2x - 4"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "y = x - 4"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "fig": {
+            "fn": "coordPlane",
+            "spec": {
+              "xRange": [
+                -6,
+                6
+              ],
+              "yRange": [
+                -6,
+                6
+              ],
+              "xStep": 1,
+              "yStep": 1,
+              "origin": true,
+              "axisLabels": [
+                "x",
+                "y"
+              ],
+              "curves": [
+                {
+                  "type": "line",
+                  "m": -2,
+                  "b": -4
+                },
+                {
+                  "type": "line",
+                  "m": 1,
+                  "b": -4
+                }
+              ]
+            }
+          }
+        },
+        {
+          "key": "B",
+          "fig": {
+            "fn": "coordPlane",
+            "spec": {
+              "xRange": [
+                -6,
+                6
+              ],
+              "yRange": [
+                -6,
+                6
+              ],
+              "xStep": 1,
+              "yStep": 1,
+              "origin": true,
+              "axisLabels": [
+                "x",
+                "y"
+              ],
+              "curves": [
+                {
+                  "type": "line",
+                  "m": -2,
+                  "b": 4
+                },
+                {
+                  "type": "line",
+                  "m": 1,
+                  "b": -4
+                }
+              ]
+            }
+          }
+        },
+        {
+          "key": "C",
+          "fig": {
+            "fn": "coordPlane",
+            "spec": {
+              "xRange": [
+                -6,
+                6
+              ],
+              "yRange": [
+                -6,
+                6
+              ],
+              "xStep": 1,
+              "yStep": 1,
+              "origin": true,
+              "axisLabels": [
+                "x",
+                "y"
+              ],
+              "curves": [
+                {
+                  "type": "line",
+                  "m": -2,
+                  "b": -4
+                },
+                {
+                  "type": "line",
+                  "m": -1,
+                  "b": -4
+                }
+              ]
+            }
+          }
+        },
+        {
+          "key": "D",
+          "fig": {
+            "fn": "coordPlane",
+            "spec": {
+              "xRange": [
+                -6,
+                6
+              ],
+              "yRange": [
+                -6,
+                6
+              ],
+              "xStep": 1,
+              "yStep": 1,
+              "origin": true,
+              "axisLabels": [
+                "x",
+                "y"
+              ],
+              "curves": [
+                {
+                  "type": "line",
+                  "m": 2,
+                  "b": -4
+                },
+                {
+                  "type": "line",
+                  "m": 1,
+                  "b": -4
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "answer": {
+        "correct": "A"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. match system: "
+        },
+        {
+          "t": "text",
+          "v": "Two lines: slope "
+        },
+        {
+          "t": "math",
+          "v": "-2"
+        },
+        {
+          "t": "text",
+          "v": ", intercept "
+        },
+        {
+          "t": "math",
+          "v": "-4"
+        },
+        {
+          "t": "text",
+          "v": "; and slope "
+        },
+        {
+          "t": "math",
+          "v": "1"
+        },
+        {
+          "t": "text",
+          "v": ", intercept "
+        },
+        {
+          "t": "math",
+          "v": "-4"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 650,
+        "band": "B6",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "system_to_graph"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "system_to_graph"
+      },
+      "fingerprint": [
+        "system_to_graph",
+        "neg_int|pos_int",
+        "graph",
+        "2line4opt"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 30,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B6",
+      "target_band": "B6",
+      "statementId": "ALG.B6.s1",
+      "skill": "linear_equations_two_variables",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "Which of the following graphs in the "
+        },
+        {
+          "t": "math",
+          "v": "xy"
+        },
+        {
+          "t": "text",
+          "v": "-plane represents the system of equations "
+        },
+        {
+          "t": "math",
+          "v": "y = 3x + 4"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "y = -2x + 1"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "fig": {
+            "fn": "coordPlane",
+            "spec": {
+              "xRange": [
+                -6,
+                6
+              ],
+              "yRange": [
+                -6,
+                6
+              ],
+              "xStep": 1,
+              "yStep": 1,
+              "origin": true,
+              "axisLabels": [
+                "x",
+                "y"
+              ],
+              "curves": [
+                {
+                  "type": "line",
+                  "m": 3,
+                  "b": 4
+                },
+                {
+                  "type": "line",
+                  "m": -2,
+                  "b": 1
+                }
+              ]
+            }
+          }
+        },
+        {
+          "key": "B",
+          "fig": {
+            "fn": "coordPlane",
+            "spec": {
+              "xRange": [
+                -6,
+                6
+              ],
+              "yRange": [
+                -6,
+                6
+              ],
+              "xStep": 1,
+              "yStep": 1,
+              "origin": true,
+              "axisLabels": [
+                "x",
+                "y"
+              ],
+              "curves": [
+                {
+                  "type": "line",
+                  "m": 3,
+                  "b": -4
+                },
+                {
+                  "type": "line",
+                  "m": -2,
+                  "b": 1
+                }
+              ]
+            }
+          }
+        },
+        {
+          "key": "C",
+          "fig": {
+            "fn": "coordPlane",
+            "spec": {
+              "xRange": [
+                -6,
+                6
+              ],
+              "yRange": [
+                -6,
+                6
+              ],
+              "xStep": 1,
+              "yStep": 1,
+              "origin": true,
+              "axisLabels": [
+                "x",
+                "y"
+              ],
+              "curves": [
+                {
+                  "type": "line",
+                  "m": -3,
+                  "b": 4
+                },
+                {
+                  "type": "line",
+                  "m": -2,
+                  "b": 1
+                }
+              ]
+            }
+          }
+        },
+        {
+          "key": "D",
+          "fig": {
+            "fn": "coordPlane",
+            "spec": {
+              "xRange": [
+                -6,
+                6
+              ],
+              "yRange": [
+                -6,
+                6
+              ],
+              "xStep": 1,
+              "yStep": 1,
+              "origin": true,
+              "axisLabels": [
+                "x",
+                "y"
+              ],
+              "curves": [
+                {
+                  "type": "line",
+                  "m": 3,
+                  "b": 4
+                },
+                {
+                  "type": "line",
+                  "m": 2,
+                  "b": 1
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "answer": {
+        "correct": "A"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. match system: "
+        },
+        {
+          "t": "text",
+          "v": "Two lines: slope "
+        },
+        {
+          "t": "math",
+          "v": "3"
+        },
+        {
+          "t": "text",
+          "v": ", intercept "
+        },
+        {
+          "t": "math",
+          "v": "4"
+        },
+        {
+          "t": "text",
+          "v": "; and slope "
+        },
+        {
+          "t": "math",
+          "v": "-2"
+        },
+        {
+          "t": "text",
+          "v": ", intercept "
+        },
+        {
+          "t": "math",
+          "v": "1"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 650,
+        "band": "B6",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "system_to_graph"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "system_to_graph"
+      },
+      "fingerprint": [
+        "system_to_graph",
+        "pos_int|neg_int",
+        "graph",
+        "2line4opt"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 31,
+      "program": "SAT",
+      "domain": "algebra",
       "band": "B3",
       "target_band": "B3",
       "statementId": "ALG.B3.s1",
@@ -4710,7 +5455,7 @@
       "tier": "build-spec"
     },
     {
-      "id": 29,
+      "id": 32,
       "program": "SAT",
       "domain": "algebra",
       "band": "B3",
@@ -4854,7 +5599,7 @@
       "tier": "build-spec"
     },
     {
-      "id": 30,
+      "id": 33,
       "program": "SAT",
       "domain": "algebra",
       "band": "B3",
@@ -4998,7 +5743,7 @@
       "tier": "build-spec"
     },
     {
-      "id": 31,
+      "id": 34,
       "program": "SAT",
       "domain": "algebra",
       "band": "B6",
@@ -5153,7 +5898,7 @@
       "tier": "build-spec"
     },
     {
-      "id": 32,
+      "id": 35,
       "program": "SAT",
       "domain": "algebra",
       "band": "B6",
@@ -5308,7 +6053,7 @@
       "tier": "build-spec"
     },
     {
-      "id": 33,
+      "id": 36,
       "program": "SAT",
       "domain": "algebra",
       "band": "B6",
@@ -5463,7 +6208,7 @@
       "tier": "build-spec"
     },
     {
-      "id": 34,
+      "id": 37,
       "program": "SAT",
       "domain": "algebra",
       "band": "B3",
@@ -5627,7 +6372,7 @@
       "tier": "build-spec"
     },
     {
-      "id": 35,
+      "id": 38,
       "program": "SAT",
       "domain": "algebra",
       "band": "B3",
@@ -5771,7 +6516,7 @@
       "tier": "build-spec"
     },
     {
-      "id": 36,
+      "id": 39,
       "program": "SAT",
       "domain": "algebra",
       "band": "B3",
