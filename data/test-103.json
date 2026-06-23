@@ -1,0 +1,57 @@
+{
+  "number": 103,
+  "title": "Band 7 — gloves off (algebra)",
+  "questions": [
+    {
+      "id": 1,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "ALG.B7.s1",
+      "skill": "systems_of_linear_equations",
+      "type": "spr",
+      "radicals": { "task": "missing_coefficient", "from_context": false, "has_fraction_solution": false },
+      "stem": [
+        { "t": "mathblock", "v": "\\begin{cases} 3x - ky = 12 \\\\ kx - 12y = 16 \\end{cases}" },
+        { "t": "p", "segs": [
+          { "t": "text", "v": "In the given system of equations, " },
+          { "t": "math", "v": "k" },
+          { "t": "text", "v": " is a constant. If the system has no solution, what is the greatest possible value of " },
+          { "t": "math", "v": "k" },
+          { "t": "text", "v": "?" }
+        ] }
+      ],
+      "answer": { "accept": ["6"], "tol": 0 },
+      "solution": [
+        { "t": "p", "segs": [
+          { "t": "text", "v": "A system of two linear equations has no solution exactly when the lines are parallel — equal slopes but different " },
+          { "t": "math", "v": "y" }, { "t": "text", "v": "-intercepts." }
+        ] },
+        { "t": "p", "segs": [
+          { "t": "text", "v": "Find each slope. From " }, { "t": "math", "v": "3x - ky = 12" },
+          { "t": "text", "v": " the slope is " }, { "t": "math", "v": "\\dfrac{3}{k}" },
+          { "t": "text", "v": "; from " }, { "t": "math", "v": "kx - 12y = 16" },
+          { "t": "text", "v": " the slope is " }, { "t": "math", "v": "\\dfrac{k}{12}" }, { "t": "text", "v": "." }
+        ] },
+        { "t": "p", "segs": [
+          { "t": "text", "v": "Equal slopes: " }, { "t": "math", "v": "\\dfrac{3}{k} = \\dfrac{k}{12}" },
+          { "t": "text", "v": ", so " }, { "t": "math", "v": "k^2 = 36" },
+          { "t": "text", "v": " and " }, { "t": "math", "v": "k = \\pm 6" }, { "t": "text", "v": "." }
+        ] },
+        { "t": "p", "segs": [
+          { "t": "text", "v": "Check each is parallel-and-distinct (not the same line). For " }, { "t": "math", "v": "k = 6" },
+          { "t": "text", "v": ", the intercepts are " }, { "t": "math", "v": "-2" }, { "t": "text", "v": " and " }, { "t": "math", "v": "-\\tfrac{4}{3}" },
+          { "t": "text", "v": "; for " }, { "t": "math", "v": "k = -6" }, { "t": "text", "v": ", they are " }, { "t": "math", "v": "2" }, { "t": "text", "v": " and " }, { "t": "math", "v": "-\\tfrac{4}{3}" },
+          { "t": "text", "v": ". Both differ, so each value gives no solution." }
+        ] },
+        { "t": "p", "segs": [
+          { "t": "text", "v": "The greatest possible value is " }, { "t": "math", "v": "k = 6" }, { "t": "text", "v": "." }
+        ] }
+      ],
+      "difficulty": { "scalePoint": 740, "band": "B7", "method": "curated" },
+      "verify": { "tier": "curated", "correctness": "sympy:pass — k=±6 both parallel-distinct, greatest 6" },
+      "tier": "gloves-off"
+    }
+  ]
+}

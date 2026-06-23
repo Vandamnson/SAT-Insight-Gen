@@ -19,6 +19,7 @@ import { drawCell } from "./cell.mjs";
 import { rationale } from "./rationale.mjs";
 import { authorItem } from "./author2.mjs";
 import { verifyAndGate, surfaceDup } from "./selector.mjs";
+import { appendToBank } from "./bank.mjs";
 import { measureFromRadicals, radicalsForBand, BANDS, bandIndex } from "../difficulty/lltm.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
@@ -189,6 +190,7 @@ function assemble(kept, testNum, title) {
   const n = String(testNum).padStart(2, "0");
   const fp = join(ROOT, "data", `test-${n}.json`);
   writeFileSync(fp, JSON.stringify({ number: testNum, title: title || `BUILD_SPEC pipeline — test ${n}`, questions }, null, 2));
+  try { const added = appendToBank(questions, { source: `test-${n}` }); console.log(`  banked ${added} new item(s) → data/item-bank.jsonl`); } catch (e) { console.log(`  bank skip: ${e.message}`); }
   const by = {}; questions.forEach((q) => (by[q.target_band] = (by[q.target_band] || 0) + 1));
   const bySub = {}; questions.forEach((q) => (bySub[q.skill] = (bySub[q.skill] || 0) + 1));
   console.log(`\n✓ ${questions.length} items → ${fp}`);
