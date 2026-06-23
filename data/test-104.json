@@ -637,6 +637,301 @@
         "x0": -3,
         "k": -9
       }
+    },
+    {
+      "id": 5,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "ALG.B7.s1",
+      "type": "spr",
+      "tier": "cross-skill",
+      "difficulty": {
+        "scalePoint": 770,
+        "band": "B7",
+        "method": "curated"
+      },
+      "verify": {
+        "tier": "cross-skill",
+        "correctness": "construct-backward + sympy"
+      },
+      "chain": "C5",
+      "skill": "linear_inequalities",
+      "scalePoint": 770,
+      "stem": [
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "A teacher buys deluxe kits at $7 each and basic kits at $4 each, for a total of "
+            },
+            {
+              "t": "math",
+              "v": "10"
+            },
+            {
+              "t": "text",
+              "v": " items. If the total cost is at most $53, what is the greatest number of deluxe kits that can be bought?"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "accept": [
+          "4"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "Let "
+            },
+            {
+              "t": "math",
+              "v": "x"
+            },
+            {
+              "t": "text",
+              "v": " be the number of deluxe kits; then basic kits number "
+            },
+            {
+              "t": "math",
+              "v": "10 - x"
+            },
+            {
+              "t": "text",
+              "v": ". Cost:  "
+            },
+            {
+              "t": "math",
+              "v": "7x + 4(10 - x) \\le 53"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "Simplify:  "
+            },
+            {
+              "t": "math",
+              "v": "3x \\le 13"
+            },
+            {
+              "t": "text",
+              "v": ",  so  "
+            },
+            {
+              "t": "math",
+              "v": "x \\le 4.33"
+            },
+            {
+              "t": "text",
+              "v": ".  The greatest whole number is  "
+            },
+            {
+              "t": "math",
+              "v": "x = 4"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        }
+      ],
+      "fingerprint": [
+        "cross_skill",
+        "C5",
+        "budget-optimize"
+      ],
+      "_p": {
+        "kind": "C5",
+        "p": 7,
+        "q": 4,
+        "T": 10,
+        "B": 53,
+        "ans": 4
+      }
+    },
+    {
+      "id": 6,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "ALG.B7.s1",
+      "type": "spr",
+      "tier": "cross-skill",
+      "difficulty": {
+        "scalePoint": 795,
+        "band": "B7",
+        "method": "curated"
+      },
+      "verify": {
+        "tier": "cross-skill",
+        "correctness": "construct-backward + sympy"
+      },
+      "chain": "C6",
+      "skill": "systems_of_linear_equations",
+      "scalePoint": 795,
+      "stem": [
+        {
+          "t": "mathblock",
+          "v": "\\begin{cases} x + ky = -2 \\\\ kx + 4y = 2 \\end{cases}"
+        },
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "In the given system of equations, "
+            },
+            {
+              "t": "math",
+              "v": "k"
+            },
+            {
+              "t": "text",
+              "v": " is a positive constant and the system has no solution. In the "
+            },
+            {
+              "t": "math",
+              "v": "xy"
+            },
+            {
+              "t": "text",
+              "v": "-plane, the line with slope "
+            },
+            {
+              "t": "math",
+              "v": "k"
+            },
+            {
+              "t": "text",
+              "v": " that passes through "
+            },
+            {
+              "t": "math",
+              "v": "(2, 5)"
+            },
+            {
+              "t": "text",
+              "v": " has what "
+            },
+            {
+              "t": "math",
+              "v": "y"
+            },
+            {
+              "t": "text",
+              "v": "-intercept?"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "accept": [
+          "1"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "No solution ⇒ the lines are parallel ⇒ the coefficient rows are proportional:  "
+            },
+            {
+              "t": "math",
+              "v": "\\dfrac{1}{k} = \\dfrac{k}{4}"
+            },
+            {
+              "t": "text",
+              "v": ",  so  "
+            },
+            {
+              "t": "math",
+              "v": "k^2 = 4"
+            },
+            {
+              "t": "text",
+              "v": "  and (positive) "
+            },
+            {
+              "t": "math",
+              "v": "k = 2"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "The line with slope "
+            },
+            {
+              "t": "math",
+              "v": "2"
+            },
+            {
+              "t": "text",
+              "v": " through "
+            },
+            {
+              "t": "math",
+              "v": "(2, 5)"
+            },
+            {
+              "t": "text",
+              "v": ":  "
+            },
+            {
+              "t": "math",
+              "v": "b = 5 - 2(2) = 1"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        }
+      ],
+      "fingerprint": [
+        "cross_skill",
+        "C6",
+        "quadratic-param+slope"
+      ],
+      "_p": {
+        "kind": "C6",
+        "a": 1,
+        "d": 4,
+        "c1": -2,
+        "c2": 2,
+        "k": 2,
+        "m": 2,
+        "n": 5,
+        "ans": 1
+      }
     }
   ]
 }

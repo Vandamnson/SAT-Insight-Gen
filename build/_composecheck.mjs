@@ -35,6 +35,15 @@ function solve(p) {
     const gOK = Math.abs(p.m * x0 + p.b + k) < 1e-9, lOK = Math.abs(p.n * x0 + p.d) < 1e-9;
     return { ans: k, ok: p.n !== 0 && isInt(x0) && isInt(k) && gOK && lOK, essential2step: p.n !== 0 && x0 !== 0 };
   }
+  if (p.kind === "C5") {
+    const val = (p.B - p.q * p.T) / (p.p - p.q), xMax = Math.floor(val);   // step A: model + cost inequality ; step B: floor
+    return { ans: xMax, ok: p.p > p.q && val > xMax && xMax >= 0 && xMax < p.T, essential2step: p.p > p.q && !isInt(val) };
+  }
+  if (p.kind === "C6") {
+    const k = Math.sqrt(p.a * p.d), scale = k / p.a;                       // step A: no-solution ⇒ k² = a·d ⇒ k
+    const ans = p.n - k * p.m;                                             // step B: intercept of the slope-k line
+    return { ans, ok: isInt(k) && p.c2 !== scale * p.c1 && isInt(ans), essential2step: isInt(k) && p.c2 !== scale * p.c1 && p.m !== 0 };
+  }
   return { ans: NaN, ok: false, essential2step: false };
 }
 

@@ -12,7 +12,7 @@
      C4  translate a line by k → its graph meets a line ON the x-axis → find k
    ============================================================================ */
 
-export const CROSS_TYPES = ["C1", "C2", "C3", "C4"];
+export const CROSS_TYPES = ["C1", "C2", "C3", "C4", "C5", "C6"];
 
 const randint = (r, lo, hi) => lo + Math.floor(r() * (hi - lo + 1));
 const nz = (r, lo, hi) => { let v; do { v = randint(r, lo, hi); } while (v === 0); return v; };
@@ -123,7 +123,58 @@ function c4(r) {
   };
 }
 
-const BUILD = { C1: c1, C2: c2, C3: c3, C4: c4 };
+/* ---- C5: model a 2-constraint budget → solve the inequality → greatest integer ---- */
+const CTX5 = [
+  { a: "premium seats", b: "standard seats", who: "A group" },
+  { a: "deluxe kits", b: "basic kits", who: "A teacher" },
+  { a: "large trees", b: "small trees", who: "A landscaper" },
+  { a: "front-row tickets", b: "balcony tickets", who: "A buyer" },
+];
+function c5(r) {
+  const c = pick(r, CTX5);
+  const p = randint(r, 5, 9), q = randint(r, 2, p - 2);        // pricier "a" = $p, "b" = $q, with p − q ≥ 2
+  const xMax = randint(r, 4, 9), y0 = randint(r, 3, 8), T = xMax + y0;
+  const slack = randint(r, 1, p - q - 1);                      // 1 ≤ slack < p−q ⇒ floor stays at xMax
+  const B = p * xMax + q * (T - xMax) + slack;                 // budget binds just above the xMax split
+  return {
+    chain: "C5", skill: "linear_inequalities", scalePoint: 770,
+    stem: [
+      par(tx(`${c.who} buys ${c.a} at $${p} each and ${c.b} at $${q} each, for a total of `), mt(`${T}`), tx(` items. If the total cost is at most $${B}, what is the greatest number of ${c.a} that can be bought?`)),
+    ],
+    answer: { accept: [String(xMax)], tol: 0 },
+    solution: [
+      par(tx("Let "), mt("x"), tx(` be the number of ${c.a}; then ${c.b} number `), mt(`${T} - x`), tx(". Cost:  "), mt(`${p}x + ${q}(${T} - x) \\le ${B}`), tx(".")),
+      par(tx("Simplify:  "), mt(`${p - q}x \\le ${B - q * T}`), tx(",  so  "), mt(`x \\le ${((B - q * T) / (p - q)).toFixed(2)}`), tx(".  The greatest whole number is  "), mt(`x = ${xMax}`), tx(".")),
+    ],
+    fingerprint: ["cross_skill", "C5", "budget-optimize"],
+    _p: { kind: "C5", p, q, T, B, ans: xMax },
+  };
+}
+
+/* ---- C6: no-solution parameter (QUADRATIC in k) → reuse k as a slope ---- */
+const KPAIRS = { 2: [[1, 4], [4, 1]], 3: [[1, 9], [9, 1]], 4: [[2, 8], [8, 2]], 6: [[3, 12], [12, 3], [4, 9], [9, 4]] };
+function c6(r) {
+  const k = pick(r, [2, 3, 4, 6]); const [a, d] = pick(r, KPAIRS[k]);   // a·d = k² ⇒ slope-match gives k² = a·d
+  const scale = k / a; let c1 = nz(r, -9, 9), c2; do { c2 = nz(r, -9, 9); } while (c2 === scale * c1);   // parallel + not coincident ⇒ no solution
+  const m = nz(r, -5, 5), n = nz(r, -6, 6), ans = n - k * m;            // intercept of slope-k line through (m,n)
+  const ax = a === 1 ? "x" : `${a}x`, dy = d === 1 ? "y" : `${d}y`;
+  return {
+    chain: "C6", skill: "systems_of_linear_equations", scalePoint: 795,
+    stem: [
+      mb(`\\begin{cases} ${ax} + ky = ${c1} \\\\ kx + ${dy} = ${c2} \\end{cases}`),
+      par(tx("In the given system of equations, "), mt("k"), tx(" is a positive constant and the system has no solution. In the "), mt("xy"), tx("-plane, the line with slope "), mt("k"), tx(" that passes through "), mt(`(${m}, ${n})`), tx(" has what "), mt("y"), tx("-intercept?")),
+    ],
+    answer: { accept: [String(ans)], tol: 0 },
+    solution: [
+      par(tx("No solution ⇒ the lines are parallel ⇒ the coefficient rows are proportional:  "), mt(`\\dfrac{${a}}{k} = \\dfrac{k}{${d}}`), tx(",  so  "), mt(`k^2 = ${a * d}`), tx("  and (positive) "), mt(`k = ${k}`), tx(".")),
+      par(tx("The line with slope "), mt(`${k}`), tx(" through "), mt(`(${m}, ${n})`), tx(":  "), mt(`b = ${n} - ${k}(${m}) = ${ans}`), tx(".")),
+    ],
+    fingerprint: ["cross_skill", "C6", "quadratic-param+slope"],
+    _p: { kind: "C6", a, d, c1, c2, k, m, n, ans },
+  };
+}
+
+const BUILD = { C1: c1, C2: c2, C3: c3, C4: c4, C5: c5, C6: c6 };
 
 /** drawCross(type, r) → a complete cross-skill B7 item (band B7, tier cross-skill). */
 export function drawCross(type, r) {
