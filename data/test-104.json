@@ -932,6 +932,164 @@
         "n": 5,
         "ans": 1
       }
+    },
+    {
+      "id": 7,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "ALG.B7.s1",
+      "type": "spr",
+      "tier": "cross-skill",
+      "difficulty": {
+        "scalePoint": 800,
+        "band": "B7",
+        "method": "curated"
+      },
+      "verify": {
+        "tier": "cross-skill",
+        "correctness": "construct-backward + sympy"
+      },
+      "chain": "C7",
+      "skill": "linear_inequalities",
+      "scalePoint": 800,
+      "stem": [
+        {
+          "t": "mathblock",
+          "v": "\\begin{cases} y \\ge 3x - 4 \\\\ y \\le 2x + k \\end{cases}"
+        },
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "In the given system of inequalities, "
+            },
+            {
+              "t": "math",
+              "v": "k"
+            },
+            {
+              "t": "text",
+              "v": " is a constant. The point "
+            },
+            {
+              "t": "math",
+              "v": "(2, 6)"
+            },
+            {
+              "t": "text",
+              "v": " is a solution to the system and lies on the line "
+            },
+            {
+              "t": "math",
+              "v": "y = 2x + k"
+            },
+            {
+              "t": "text",
+              "v": ". What is the greatest value of "
+            },
+            {
+              "t": "math",
+              "v": "x"
+            },
+            {
+              "t": "text",
+              "v": " for which the system has a solution?"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "accept": [
+          "6"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "The point lies on the upper boundary:  "
+            },
+            {
+              "t": "math",
+              "v": "6 = 2(2) + k"
+            },
+            {
+              "t": "text",
+              "v": ",  so  "
+            },
+            {
+              "t": "math",
+              "v": "k = 2"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "A solution exists only where the lower bound ≤ the upper bound:  "
+            },
+            {
+              "t": "math",
+              "v": "3x - 4 \\le 2x + 2"
+            },
+            {
+              "t": "text",
+              "v": ",  i.e.  "
+            },
+            {
+              "t": "math",
+              "v": "1x \\le 6"
+            },
+            {
+              "t": "text",
+              "v": ",  so  "
+            },
+            {
+              "t": "math",
+              "v": "x \\le 6"
+            },
+            {
+              "t": "text",
+              "v": ".  Greatest "
+            },
+            {
+              "t": "math",
+              "v": "x = 6"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        }
+      ],
+      "fingerprint": [
+        "cross_skill",
+        "C7",
+        "ineq-system+varconst"
+      ],
+      "_p": {
+        "kind": "C7",
+        "m1": 3,
+        "m2": 2,
+        "b1": -4,
+        "k": 2,
+        "p": 2,
+        "q": 6,
+        "ans": 6
+      }
     }
   ]
 }

@@ -12,7 +12,7 @@
      C4  translate a line by k → its graph meets a line ON the x-axis → find k
    ============================================================================ */
 
-export const CROSS_TYPES = ["C1", "C2", "C3", "C4", "C5", "C6"];
+export const CROSS_TYPES = ["C1", "C2", "C3", "C4", "C5", "C6", "C7"];
 
 const randint = (r, lo, hi) => lo + Math.floor(r() * (hi - lo + 1));
 const nz = (r, lo, hi) => { let v; do { v = randint(r, lo, hi); } while (v === 0); return v; };
@@ -174,7 +174,30 @@ function c6(r) {
   };
 }
 
-const BUILD = { C1: c1, C2: c2, C3: c3, C4: c4, C5: c5, C6: c6 };
+/* ---- C7: SYSTEM of two inequalities WITH a variable constant → find k, then optimize ---- */
+function c7(r) {
+  let m1, gap, m2; do { m1 = randint(r, 1, 3); gap = randint(r, 1, 3); m2 = m1 - gap; } while (m2 === 0);   // m1 > m2, m2 ≠ 0
+  const b1 = nz(r, -4, 4), xMax = randint(r, 5, 9), s = gap === 1 ? 0 : randint(r, 1, gap - 1);
+  const k = b1 + gap * xMax + s;                       // ⇒ floor((k−b1)/gap) = xMax
+  const p = randint(r, 1, xMax - 1), q = m2 * p + k;   // an interior solution that sits on the upper boundary ⇒ pins k
+  const upper = m2 === 0 ? "k" : `${xt(m2)} + k`, val = (k - b1) / gap;
+  return {
+    chain: "C7", skill: "linear_inequalities", scalePoint: 800,
+    stem: [
+      mb(`\\begin{cases} y \\ge ${lc1(m1, b1)} \\\\ y \\le ${upper} \\end{cases}`),
+      par(tx("In the given system of inequalities, "), mt("k"), tx(" is a constant. The point "), mt(`(${p}, ${q})`), tx(" is a solution to the system and lies on the line "), mt(`y = ${upper}`), tx(". What is the greatest value of "), mt("x"), tx(" for which the system has a solution?")),
+    ],
+    answer: { accept: [String(xMax)], tol: 0 },
+    solution: [
+      par(tx("The point lies on the upper boundary:  "), mt(`${q} = ${m2}(${p}) + k`), tx(",  so  "), mt(`k = ${k}`), tx(".")),
+      par(tx("A solution exists only where the lower bound ≤ the upper bound:  "), mt(`${lc1(m1, b1)} \\le ${xt(m2)} + ${k}`), tx(",  i.e.  "), mt(`${gap}x \\le ${k - b1}`), tx(",  so  "), mt(`x \\le ${Number.isInteger(val) ? val : val.toFixed(2)}`), tx(".  Greatest "), mt(`x = ${xMax}`), tx(".")),
+    ],
+    fingerprint: ["cross_skill", "C7", "ineq-system+varconst"],
+    _p: { kind: "C7", m1, m2, b1, k, p, q, ans: xMax },
+  };
+}
+
+const BUILD = { C1: c1, C2: c2, C3: c3, C4: c4, C5: c5, C6: c6, C7: c7 };
 
 /** drawCross(type, r) → a complete cross-skill B7 item (band B7, tier cross-skill). */
 export function drawCross(type, r) {

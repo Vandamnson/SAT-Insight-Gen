@@ -44,6 +44,14 @@ function solve(p) {
     const ans = p.n - k * p.m;                                             // step B: intercept of the slope-k line
     return { ans, ok: isInt(k) && p.c2 !== scale * p.c1 && isInt(ans), essential2step: isInt(k) && p.c2 !== scale * p.c1 && p.m !== 0 };
   }
+  if (p.kind === "C7") {
+    const gap = p.m1 - p.m2;
+    const kCheck = p.q - p.m2 * p.p;                          // step A: recover k from the point on the upper boundary
+    let xMax = -Infinity;                                     // step B: greatest x where lower bound ≤ upper bound (brute force)
+    for (let x = -60; x <= 90; x++) if (p.m1 * x + p.b1 <= p.m2 * x + p.k) xMax = x;
+    const pointFeasible = (p.m1 * p.p + p.b1 <= p.q) && (p.q <= p.m2 * p.p + p.k);
+    return { ans: xMax, ok: gap >= 1 && kCheck === p.k && pointFeasible && Number.isFinite(xMax), essential2step: gap >= 1 && kCheck === p.k };
+  }
   return { ans: NaN, ok: false, essential2step: false };
 }
 
