@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>SAT-Insight-Gen — pipeline architecture</title>
+<style>
+  :root { --ink:#1f2933; --muted:#647084; --line:#d7dde6; --bg:#f7f9fc;
+          --dom:#2563eb; --dombg:#e8f0fe; --shared:#0f766e; --sharedbg:#e6f4f1;
+          --gate:#c2410c; --gatebg:#fdeee4; --future:#94a3b8; --futurebg:#f1f4f8; }
+  * { box-sizing: border-box; }
+  body { margin:0; font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+         color:var(--ink); background:var(--bg); padding:28px 20px 60px; }
+  header { max-width:1080px; margin:0 auto 18px; }
+  h1 { font-size:22px; margin:0 0 4px; letter-spacing:-.2px; }
+  .sub { color:var(--muted); font-size:14px; margin:0; }
+  .legend { display:flex; gap:18px; flex-wrap:wrap; max-width:1080px; margin:14px auto 22px;
+            font-size:13px; color:var(--muted); }
+  .legend span { display:inline-flex; align-items:center; gap:7px; }
+  .sw { width:14px; height:14px; border-radius:3px; border:1.5px solid; }
+  .sw.dom { background:var(--dombg); border-color:var(--dom); }
+  .sw.shared { background:var(--sharedbg); border-color:var(--shared); }
+  .sw.gate { background:var(--gatebg); border-color:var(--gate); }
+  .sw.future { background:var(--futurebg); border-color:var(--future); border-style:dashed; }
+  .card { max-width:1080px; margin:0 auto; background:#fff; border:1px solid var(--line);
+          border-radius:14px; padding:18px 14px; box-shadow:0 1px 3px rgba(20,30,50,.05); overflow:auto; }
+  .note { max-width:1080px; margin:20px auto 0; color:var(--muted); font-size:13px;
+          border-left:3px solid var(--shared); padding:6px 0 6px 14px; background:#fff; }
+  code { background:#eef2f7; padding:1px 5px; border-radius:4px; font-size:12.5px; }
+  .mermaid { display:flex; justify-content:center; }
+</style>
+</head>
+<body>
+<header>
+  <h1>SAT-Insight-Gen — four-agent generator (shared engine · per-domain distinct)</h1>
+  <p class="sub">One linear pipeline parameterized by domain. What <em>defines</em> a domain is distinct &amp; isolated;
+     the orchestration, verifiers, difficulty model, dedup, and render are shared.</p>
+</header>
+
+<div class="legend">
+  <span><i class="sw dom"></i> Per-domain (distinct: algebra / advanced_math / …)</span>
+  <span><i class="sw shared"></i> Shared engine (one code path, domain-general)</span>
+  <span><i class="sw gate"></i> Deterministic gate (trust lives here)</span>
+  <span><i class="sw future"></i> Deferred (ADV-2 figures / ADV-3 capstones / other domains)</span>
+</div>
+
+<div class="card">
+<pre class="mermaid">
+flowchart TB
+
+  subgraph TAX["Taxonomy spine — data"]
+    direction LR
+    MATRIX["matrix.json · 4×7 Skills-Insight<br/>ALG.* · ADV.* · PSDA.* · GEO.* + RP67 cut scores"]:::shared
+    CELLALG["cells/algebra.json"]:::dom
+    CELLADV["cells/advanced_math.json"]:::dom
+    CELLFUT["cells/psda · geometry<br/>(future)"]:::future
+    ANCH["contexts.json · exemplars.clean.json<br/>(voice anchors, domain-matched)"]:::dom
+  end
+
+  subgraph DRAW["1 · Harness draw — cell.mjs (NO LLM)"]
+    direction TB
+    DC["drawCell(domain, subdomain, band)<br/>RADICALS pinned to band · INCIDENTALS drawn in code"]:::shared
+    DRW["per-domain drawers (MODEL-FIRST directives)<br/>drawOneVar… · drawQuadratic / drawNonlinearModel…"]:::dom
+    DC --- DRW
+  end
+
+  CELLALG --> DC
+  CELLADV --> DC
+  MATRIX --> DC
+
+  DC -->|"tier A / B · text item"| LLM
+  DC -->|"tier C · figure / capstone"| HARN
+
+  subgraph LLM["2–3 · LLM producer (model-first authoring)"]
+    direction TB
+    RAT["Agent 1 · rationale.mjs<br/>design rationale (pin structure, not numbers)"]:::shared
+    AUTH["Agent 2 · author2.mjs<br/>invent natural scenario + fitting numbers<br/>(pulls domain-matched anchors)"]:::shared
+    RAT --> AUTH
+  end
+  ANCH --> AUTH
+
+  subgraph HARN["2 · Construct-backward (NO LLM)"]
+    direction TB
+    GRAPH["graph.mjs — linear graphs (13 tasks)"]:::dom
+    COMP["compose.mjs — cross-skill capstones C1–C7"]:::dom
+    ADVF["graph-advanced / compose-advanced<br/>(ADV-2 / ADV-3, deferred)"]:::future
+  end
+
+  AUTH --> SEL
+  HARN --> SEL
+
+  subgraph SEL["4 · Selector — deterministic gates"]
+    direction TB
+    PROVE["Tier A · prove.mjs<br/>Agent-3 writes sympy verify() · recompute independently"]:::gate
+    CONS["Tier B · consistency.mjs<br/>N-solve self-agreement (interpretive / modeling)"]:::gate
+    FIG["Tier C · figurecheck.mjs + legibility.mjs"]:::gate
+    BAND["LLTM band gate · lltm.mjs<br/>predicted band == target?"]:::gate
+    JUDGE["difficulty judge · judge.mjs<br/>RP67 scale point + band (grounded per-domain)"]:::gate
+    DEDUP["structural dedup · fingerprint.mjs / selector.mjs<br/>distinct STRUCTURE, not reskin"]:::gate
+    PROVE --- CONS --- FIG --- BAND --- JUDGE --- DEDUP
+  end
+  MATRIX -.per-domain band rubric.-> JUDGE
+
+  SEL -->|"miss → critique → repair / redraw"| DC
+  SEL -->|"pass (correct · banded · novel)"| OUT
+
+  subgraph OUT["5 · Assemble + deliver"]
+    direction LR
+    ASM["pipeline.mjs · band-stratified assemble"]:::shared
+    REND["render.mjs · KaTeX + inline SVG → static site"]:::shared
+    BANK["bank.mjs · append-only item-bank.jsonl"]:::shared
+    ASM --> REND
+    ASM --> BANK
+  end
+
+  classDef dom fill:#e8f0fe,stroke:#2563eb,stroke-width:1.5px,color:#1f2933;
+  classDef shared fill:#e6f4f1,stroke:#0f766e,stroke-width:1.5px,color:#1f2933;
+  classDef gate fill:#fdeee4,stroke:#c2410c,stroke-width:1.5px,color:#1f2933;
+  classDef future fill:#f1f4f8,stroke:#94a3b8,stroke-width:1.3px,stroke-dasharray:5 4,color:#647084;
+</pre>
+</div>
+
+<p class="note">
+  <strong>Reading the diagram.</strong> Blue = the only things that change per domain (cell schema, drawers,
+  construct-backward generators, voice anchors). Teal = shared engine reused unchanged. Orange = the gates that
+  carry all trust — nothing the producer emits is kept until it is independently re-derived (PROVE), measured
+  (judge), and shown to be a distinct structure (dedup). Novelty is the goal: <em>new structures, not reskins</em>,
+  measured by distinct fingerprints — the absolute judge is a <em>defect detector</em>, never a recognition target.
+</p>
+
+<script type="module">
+  import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
+  mermaid.initialize({ startOnLoad: true, theme: "neutral", flowchart: { curve: "basis", nodeSpacing: 42, rankSpacing: 52 } });
+</script>
+</body>
+</html>

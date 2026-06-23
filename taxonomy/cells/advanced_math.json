@@ -1,0 +1,69 @@
+{
+  "_note": "CELL SCHEMA — ADVANCED MATH (quadratics, exponential/quadratic models, polynomial rewriting, radical/rational equations). Mirrors algebra.json. `task` is the rubric attribute (the primary difficulty radical); boolean modifiers nudge within ±1 band. Each task's LLTM weight places it at its Skills-Insight rubric band (band_anchors are the midpoints; see verification step 2). task_tier routes each task to Tier A (PROVE, sympy) or Tier B (self-consistency, for interpretive/modeling MCQ). TEXT/algebraic core only — the two figureLoad:req nonlinear-graph statements (ADV.B1.s1, ADV.B2.s1) and figure-optional graph features are Phase ADV-2 (Tier C, build/graph.mjs analog).",
+  "domain": "advanced_math",
+  "tier": "A",
+  "band_cuts": { "edges": [370, 420, 470, 550, 610, 680] },
+  "band_anchors": { "B1": 340, "B2": 395, "B3": 445, "B4": 510, "B5": 580, "B6": 645, "B7": 740 },
+  "subdomains": {
+    "quadratic_equations": {
+      "label": "Quadratic equations in one variable",
+      "target": "solve / analyze / create-and-solve a quadratic equation",
+      "statementByBand": { "B3": "ADV.B3.s1", "B4": "ADV.B4.s2", "B5": "ADV.B5.s1", "B6": "ADV.B6.s1", "B7": "ADV.B6.s1" },
+      "radical_axes": {
+        "task": ["solve_factored", "solve_by_factoring", "solve_formula", "discriminant", "vertex", "create_solve"],
+        "has_fraction_or_irrational": [false, true],
+        "from_context": [false, true]
+      },
+      "incidental_axes": { "context": "@contexts", "var_name": ["x", "t", "h", "n"], "coefficient_range": [1, 9], "constant_range": [1, 40] },
+      "lltm": { "weights": { "w0": 390, "task": { "solve_factored": 50, "solve_by_factoring": 110, "solve_formula": 145, "discriminant": 195, "vertex": 185, "create_solve": 225 }, "has_fraction_or_irrational": 40, "from_context": 45 } },
+      "task_tier": { "solve_factored": "A", "solve_by_factoring": "A", "solve_formula": "A", "discriminant": "A", "vertex": "A", "create_solve": "A" },
+      "canonical_fingerprint": ["factor", "apply_zero_product"],
+      "op_vocab": ["factor", "apply_zero_product", "expand", "complete_square", "quadratic_formula", "compute_discriminant", "find_vertex", "axis_of_symmetry", "evaluate", "model_equation", "isolate_variable"]
+    },
+    "nonlinear_functions_models": {
+      "label": "Quadratic & exponential functions and models",
+      "target": "use / create / interpret a quadratic or exponential model",
+      "statementByBand": { "B4": "ADV.B4.s1", "B5": "ADV.B5.s1", "B6": "ADV.B6.s1", "B7": "ADV.B6.s2" },
+      "radical_axes": {
+        "task": ["quad_model_use", "exp_model_use", "identify_feature", "create_model", "interpret_feature"],
+        "from_context": [false, true],
+        "uses_exponential": [false, true]
+      },
+      "incidental_axes": { "context": "@contexts", "var_name": ["x", "t", "n", "p"], "coefficient_range": [2, 12], "constant_range": [1, 200] },
+      "lltm": { "weights": { "w0": 410, "task": { "quad_model_use": 95, "exp_model_use": 85, "identify_feature": 170, "create_model": 215, "interpret_feature": 205 }, "from_context": 30, "uses_exponential": 20 } },
+      "task_tier": { "quad_model_use": "A", "exp_model_use": "A", "identify_feature": "B", "create_model": "B", "interpret_feature": "B" },
+      "canonical_fingerprint": ["substitute", "evaluate"],
+      "op_vocab": ["substitute", "evaluate", "apply_growth_factor", "find_vertex", "identify_intercept", "identify_asymptote", "interpret_meaning", "model_equation", "match_representation"]
+    },
+    "polynomial_expressions": {
+      "label": "Polynomial & equivalent-expression rewriting",
+      "target": "rewrite / combine / factor / solve-for-a-variable a polynomial expression",
+      "statementByBand": { "B1": "ADV.B1.s2", "B2": "ADV.B2.s2", "B3": "ADV.B3.s2", "B4": "ADV.B3.s2", "B5": "ADV.B5.s2", "B6": "ADV.B5.s2", "B7": "ADV.B7.s2" },
+      "radical_axes": {
+        "task": ["combine_like_terms", "distribute", "factor_gcf", "sum_polynomials", "solve_for_variable", "product_mono_bin", "product_bin_bin", "factor", "choose_form"],
+        "more_terms": [false, true],
+        "has_fraction": [false, true]
+      },
+      "incidental_axes": { "context": "@contexts", "var_name": ["x", "y", "n", "t"], "coefficient_range": [1, 9], "constant_range": [1, 20] },
+      "lltm": { "weights": { "w0": 300, "task": { "combine_like_terms": 40, "distribute": 95, "factor_gcf": 100, "sum_polynomials": 145, "solve_for_variable": 150, "product_mono_bin": 260, "product_bin_bin": 285, "factor": 290, "choose_form": 425 }, "more_terms": 35, "has_fraction": 30 } },
+      "task_tier": { "combine_like_terms": "A", "distribute": "A", "factor_gcf": "A", "sum_polynomials": "A", "solve_for_variable": "A", "product_mono_bin": "A", "product_bin_bin": "A", "factor": "A", "choose_form": "B" },
+      "canonical_fingerprint": ["combine_like_terms"],
+      "op_vocab": ["combine_like_terms", "distribute", "factor_gcf", "foil", "expand", "factor_trinomial", "add_polynomials", "subtract_polynomials", "rearrange_formula", "isolate_variable", "rewrite_equivalent", "identify_form"]
+    },
+    "radical_rational_equations": {
+      "label": "Radical, rational, absolute-value & nonlinear-system equations",
+      "target": "solve radical / rational / absolute-value / nonlinear-system / unknown-constant problems",
+      "statementByBand": { "B3": "ADV.B3.s1", "B4": "ADV.B4.s2", "B5": "ADV.B4.s2", "B6": "ADV.B4.s2", "B7": "ADV.B7.s1" },
+      "radical_axes": {
+        "task": ["solve_abs_value", "solve_radical", "solve_rational", "nonlinear_system", "unknown_constant", "solve_formula"],
+        "extraneous_check": [false, true],
+        "from_context": [false, true]
+      },
+      "incidental_axes": { "context": "@contexts", "var_name": ["x", "t", "n", "k"], "coefficient_range": [1, 9], "constant_range": [1, 30] },
+      "lltm": { "weights": { "w0": 410, "task": { "solve_abs_value": 35, "solve_radical": 30, "solve_rational": 100, "nonlinear_system": 135, "unknown_constant": 290, "solve_formula": 295 }, "extraneous_check": 40, "from_context": 40 } },
+      "task_tier": { "solve_abs_value": "A", "solve_radical": "A", "solve_rational": "A", "nonlinear_system": "A", "unknown_constant": "A", "solve_formula": "A" },
+      "canonical_fingerprint": ["isolate_radical", "square_both_sides"],
+      "op_vocab": ["isolate_radical", "square_both_sides", "check_extraneous", "clear_denominator", "cross_multiply", "split_absolute_value", "substitute_eliminate", "solve_quadratic", "back_substitute", "isolate_variable", "apply_condition"]
+    }
+  }
+}

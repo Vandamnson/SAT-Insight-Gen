@@ -142,18 +142,77 @@ function drawInequality(rad, { context }) {
   return mf(`Write a constraint giving a one-variable linear inequality whose solution is a range; ask for the ${want} INTEGER value of the variable satisfying it. Choose numbers so the boundary is NOT an integer (so the floor/ceiling is unambiguous).${neg}`, ctx);
 }
 
+/* ===================== advanced math: quadratics ===================== */
+function drawQuadratic(rad, { r, context }) {
+  const task = rad.task, ctx = ctxLineMF(context), irr = rad.has_fraction_or_irrational;
+  if (task === "solve_factored") return mf(`Write a quadratic equation already in FACTORED form (a product of two linear factors equal to 0); ask for its solution(s). ${irr ? "Use fractional roots (factors like \\((2x-3)\\))." : "Use integer roots."}`, ctx);
+  if (task === "solve_by_factoring") return mf(`Write a quadratic equation in standard form \\(ax^2+bx+c=0\\) that factors over the integers; ask for its solutions (the values of the variable).${irr ? " The roots may be fractions." : ""}`, ctx);
+  if (task === "solve_formula") return mf(`Write a quadratic equation that does NOT factor over the integers, so the quadratic formula is needed; ask for a solution. ${irr ? "The roots are irrational — give one in exact \\(\\frac{a\\pm\\sqrt{b}}{c}\\) form." : "Choose coefficients giving clean values."}`, ctx);
+  if (task === "discriminant") return mf("Write a quadratic equation (optionally with a parameter) and ask HOW MANY real solutions it has, or for the parameter value at which the number of real solutions changes. The answer hinges on the discriminant.", ctx, { mcq: true });
+  if (task === "vertex") return mf("Write a quadratic function; ask for a feature determined by its vertex — the maximum or minimum value, or the x-coordinate of the vertex (axis of symmetry).", ctx);
+  return mf("Write a situation the student must MODEL as a quadratic equation, then solve for an unknown quantity (a length, a time, a count). The quadratic must arise from the story (area, projectile height, or a product of related quantities) — never pasted on.", ctx);
+}
+
+/* ============== advanced math: nonlinear functions & models ============== */
+function drawNonlinearModel(rad, { context }) {
+  const task = rad.task, ctx = ctxLineMF(context), exp = rad.uses_exponential;
+  if (task === "quad_model_use") return mf("Give a QUADRATIC model relating two quantities in context (e.g. height vs. time); ask the student to USE it to find an output for a given input, or an input giving a stated output.", ctx);
+  if (task === "exp_model_use") return mf("Give an EXPONENTIAL model in context (a quantity changing by a constant factor/percent per period, \\(y=a\\cdot b^{t}\\)); ask the student to use it to find a value.", ctx);
+  if (task === "identify_feature") return mf(`Give ${exp ? "an exponential" : "a quadratic"} FUNCTION as an equation; ask which statement correctly identifies a key feature of its graph (the vertex/maximum, the y-intercept, or the ${exp ? "end behavior / horizontal asymptote" : "zeros"}). Pose it abstractly.`, ctx, { mcq: true });
+  if (task === "create_model") return mf(`Describe a situation with ${exp ? "constant-percent growth or decay" : "a quadratic relationship"} between two quantities; ask WHICH equation models it.`, ctx, { mcq: true });
+  return mf("Give a quadratic or exponential model in context; ask the student to INTERPRET the meaning of one specific feature (the initial value, the growth/decay factor, or the vertex) in terms of the situation.", ctx, { mcq: true });
+}
+
+/* ============== advanced math: polynomial / expression rewriting ============== */
+const POLY_DIRECTIVE = {
+  combine_like_terms: "Give a polynomial expression with several like terms; ask which expression is equivalent after combining like terms.",
+  distribute: "Give a product of a monomial and a polynomial; ask which expression is equivalent after applying the distributive property.",
+  factor_gcf: "Give a polynomial whose terms share a common factor; ask which expression results from factoring out the greatest common factor.",
+  sum_polynomials: "Give two polynomials; ask which expression is equivalent to their sum or difference.",
+  solve_for_variable: "Give a literal equation (a formula relating several variables); ask which expression equals a specified variable when the equation is solved for it.",
+  product_mono_bin: "Give the product of a monomial and a binomial; ask which expression is its expanded equivalent.",
+  product_bin_bin: "Give the product of two binomials; ask which expression is its expanded equivalent.",
+  factor: "Give a quadratic trinomial; ask which factored form is equivalent.",
+  choose_form: "Give a quadratic or exponential expression; ask which EQUIVALENT form most clearly displays a stated feature (the zeros, the vertex/extreme value, the y-intercept, or the growth factor).",
+};
+function drawPolyExpr(rad, { context }) {
+  return mf(POLY_DIRECTIVE[rad.task] || POLY_DIRECTIVE.combine_like_terms, ctxLineMF(context), { mcq: true });
+}
+
+/* ============== advanced math: radical / rational / nonlinear-system ============== */
+function drawRadicalRational(rad, { context }) {
+  const task = rad.task, ctx = ctxLineMF(context);
+  if (task === "solve_abs_value") return mf("Write an absolute-value equation \\(|ax+b|=c\\) with \\(c>0\\); ask for its solution set (both values).", ctx);
+  if (task === "solve_radical") return mf(`Write a radical equation (a square root of a linear expression equal to a value or another expression); ask for the solution.${rad.extraneous_check ? " Choose numbers so that squaring introduces an EXTRANEOUS root the student must reject." : ""}`, ctx);
+  if (task === "solve_rational") return mf("Write a rational equation (the variable in a denominator, or two equal fractions) that reduces to a linear or quadratic equation; ask for the solution.", ctx);
+  if (task === "nonlinear_system") return mf("Write a system of one LINEAR and one NONLINEAR equation (a line and a parabola, or a line and \\(xy=k\\)); ask for a coordinate value at an intersection.", ctx);
+  if (task === "unknown_constant") return mf("Write a problem with one or more nonlinear equations containing an unknown CONSTANT, where a stated condition (a given solution, a repeated/double root, or no real solution) pins the constant; ask for that constant's value.", ctx);
+  return mf("Give a complex equation or formula relating several variables (with a square, a root, or a fraction); ask which expression equals a specified variable of interest when solved for it.", ctx, { mcq: true });
+}
+
 const DRAWERS = {
   linear_equations_one_variable: drawOneVar,
   linear_equations_two_variables: drawTwoVar,
   systems_of_linear_equations: drawSystem,
   linear_inequalities: drawInequality,
+  quadratic_equations: drawQuadratic,
+  nonlinear_functions_models: drawNonlinearModel,
+  polynomial_expressions: drawPolyExpr,
+  radical_rational_equations: drawRadicalRational,
 };
 
 // tasks the real SAT poses ABSTRACTLY (bare equation/lines, no scenario) — they ask
 // the student to ANALYZE structure, so a real-world story reads as generator output.
 // (parallel_perp included: perpendicularity has no meaning on a real-world rate model
 // — the blind judge flagged the contextualized version as "conceptually incoherent".)
-const ABSTRACT_TASKS = new Set(["num_solutions", "missing_coeff", "number_of_solutions", "missing_coefficient", "variable_constants", "parallel_perp"]);
+const ABSTRACT_TASKS = new Set([
+  "num_solutions", "missing_coeff", "number_of_solutions", "missing_coefficient", "variable_constants", "parallel_perp",
+  // advanced math — solving/rewriting/analysis the real SAT poses with a bare expression (no story)
+  "solve_factored", "solve_by_factoring", "solve_formula", "discriminant", "vertex", "identify_feature",
+  "combine_like_terms", "distribute", "factor_gcf", "sum_polynomials", "solve_for_variable",
+  "product_mono_bin", "product_bin_bin", "factor", "choose_form",
+  "solve_abs_value", "solve_radical", "solve_rational", "nonlinear_system", "unknown_constant", "solve_formula",
+]);
 
 /* ============================ the draw ============================ */
 export function drawCell(domain, subdomain, band, idx = 0) {

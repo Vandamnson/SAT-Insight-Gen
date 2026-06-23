@@ -8,6 +8,7 @@
    hand-written branch per skill, the checker is written per item.
    ============================================================================ */
 import { llmComplete } from "../build/llm.mjs";
+import { promptPack } from "../build/prompts.mjs";
 import { execFile } from "node:child_process";
 import { writeFileSync, mkdtempSync, rmSync } from "node:fs";
 import { tmpdir } from "node:os";
@@ -61,7 +62,8 @@ function claimText(cand) {
 
 /** proveCheck(cand) -> {keep, result, error, code}. keep=true iff the independently
  *  written+executed checker returns True. */
-export async function proveCheck(cand, { model = PROVE_MODEL } = {}) {
+export async function proveCheck(cand, { model = PROVE_MODEL, domain = null } = {}) {
+  const system = SYSTEM + (promptPack(domain).proveHints || "");   // domain-specific verification gotchas
   const choices = cand.choices ? `\nCHOICES:\n${cand.choices.join("\n")}` : "";
   const user = `PROBLEM:
 ${cand.statement}${choices}
@@ -73,7 +75,7 @@ ${JSON.stringify(cand.solve_path || [], null, 0)}
 
 Write verify() now. It must hard-code the numbers from the PROBLEM text, solve from scratch with sympy, and compare to the claimed answer (for MCQ, recompute the value and confirm the claimed letter's value matches; for free-response, confirm the value). Return True/False.`;
   let code;
-  try { code = stripFences(await llmComplete(user, { system: SYSTEM, model })); }
+  try { code = stripFences(await llmComplete(user, { system, model })); }
   catch (e) { return { keep: false, error: `agent3 transport: ${e.message}`, code: "" }; }
   if (!/def\s+verify\s*\(/.test(code)) return { keep: false, error: "no verify() in agent3 output", code };
   const run = await runPython(code);

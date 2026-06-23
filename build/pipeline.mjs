@@ -72,10 +72,18 @@ const txt = (s) => [{ t: "text", v: String(s) }];
 // \(...\) — NOT $...$ — so a "$5" currency amount is never mistaken for a math span.
 function mathSeg(str) {
   const s = String(str ?? ""); const out = [];
-  for (const p of s.split(/(\\\(.*?\\\))/g)) {
+  // Split on DISPLAY \[...\] and INLINE \(...\). A system of equations/inequalities
+  // uses an array/cases/aligned environment, which is a STACKED display block — render
+  // it as a mathblock even if the author inlined it with \(...\), so it never appears
+  // as two side-by-side inline spans.
+  const SYS = /\\begin\{(?:array|cases|aligned|gathered|bmatrix|pmatrix|split)\}/;
+  for (const p of s.split(/(\\\[[\s\S]*?\\\]|\\\([\s\S]*?\\\))/g)) {
     if (!p) continue;
-    const m = p.match(/^\\\(([\s\S]*)\\\)$/);
-    if (m) out.push({ t: "math", v: m[1].trim() }); else out.push({ t: "text", v: p });
+    const md = p.match(/^\\\[([\s\S]*)\\\]$/);
+    const mi = p.match(/^\\\(([\s\S]*?)\\\)$/);
+    if (md) out.push({ t: "mathblock", v: md[1].trim() });
+    else if (mi) { const v = mi[1].trim(); out.push(SYS.test(v) ? { t: "mathblock", v } : { t: "math", v }); }
+    else out.push({ t: "text", v: p });
   }
   return out.length ? out : [{ t: "text", v: s }];
 }
@@ -215,14 +223,23 @@ export async function generateDomain(domain, { perCell = 1, bands = BANDS, testN
   const subs = Object.keys(cellSchema(domain).subdomains);
   const ctr = { i: 0 }, kept = [], matrix = {};
   console.log(`\n=== FULL DOMAIN: ${domain} · ${perCell}/cell · bands ${bands.join(",")} ===`);
-  for (const sub of subs) {
-    matrix[sub] = {};
-    for (const band of bands) {
-      if (!radicalsForBand(domain, sub, band).length) { matrix[sub][band] = "·"; continue; }   // not defensible at this band
-      const got = await generateCell(domain, sub, perCell, [band], ctr);
-      kept.push(...got); matrix[sub][band] = got.length;
-    }
-  }
+  // enumerate the defensible (subdomain × band) cells, then generate them CONCURRENTLY.
+  // JS is single-threaded, so the only thing that actually overlaps is the per-candidate
+  // `claude` subprocess I/O — shared kept[]/ctr/dedup mutations happen synchronously
+  // between awaits (no data race). Effective concurrency ≈ CELL_CAP × (candidates/cell).
+  const cellList = [];
+  for (const sub of subs) { matrix[sub] = {}; for (const band of bands) {
+    if (!radicalsForBand(domain, sub, band).length) { matrix[sub][band] = "·"; continue; }   // not defensible at this band
+    cellList.push({ sub, band });
+  } }
+  const CELL_CAP = Number(process.env.SIG_CELL_POOL || 6);
+  console.log(`(generating ${cellList.length} cells, up to ${CELL_CAP} concurrently)`);
+  const results = await pool(cellList.map(({ sub, band }) => async () => {
+    const got = await generateCell(domain, sub, perCell, [band], ctr);
+    matrix[sub][band] = got.length;
+    return got;
+  }), CELL_CAP);
+  for (const got of results) if (got) kept.push(...got);
   // coverage matrix (rows = subdomains, cols = bands)
   console.log(`\nCOVERAGE MATRIX (kept / target ${perCell}; · = no defensible cell):`);
   console.log(`  ${"subdomain".padEnd(34)} ${bands.join("   ")}`);

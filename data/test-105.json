@@ -1,0 +1,4234 @@
+{
+  "number": 105,
+  "title": "BUILD_SPEC · advanced_math (whole domain, B1–B7)",
+  "questions": [
+    {
+      "id": 1,
+      "program": "SAT",
+      "domain": "advanced_math",
+      "band": "B1",
+      "target_band": "B1",
+      "statementId": "ADV.B1.s2",
+      "skill": "polynomial_expressions",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "Which expression is equivalent to "
+        },
+        {
+          "t": "math",
+          "v": "6x^2 + 9x - 14x^2 - 5 + 2x - 8"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "-8x^2 + 7x - 13"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "-8x^2 + 11x - 13"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "8x^2 + 11x - 13"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "-8x^2 + 11x + 13"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "B"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. combine like terms: "
+        },
+        {
+          "t": "text",
+          "v": "Combine the "
+        },
+        {
+          "t": "math",
+          "v": "x^2"
+        },
+        {
+          "t": "text",
+          "v": " terms: "
+        },
+        {
+          "t": "math",
+          "v": "6x^2 - 14x^2 = -8x^2"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. combine like terms: "
+        },
+        {
+          "t": "text",
+          "v": "Combine the "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": " terms: "
+        },
+        {
+          "t": "math",
+          "v": "9x + 2x = 11x"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. combine like terms: "
+        },
+        {
+          "t": "text",
+          "v": "Combine the constant terms: "
+        },
+        {
+          "t": "math",
+          "v": "-5 - 8 = -13"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "4. rewrite equivalent: "
+        },
+        {
+          "t": "text",
+          "v": "Write the result in standard form: "
+        },
+        {
+          "t": "math",
+          "v": "-8x^2 + 11x - 13"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 340,
+        "band": "B1",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "combine_like_terms",
+          "more_terms": false,
+          "has_fraction": false
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "combine_like_terms",
+        "more_terms": false,
+        "has_fraction": false
+      },
+      "fingerprint": [
+        "combine_like_terms",
+        "combine_like_terms",
+        "combine_like_terms",
+        "rewrite_equivalent"
+      ],
+      "reskinDistance": 0.75,
+      "tier": "build-spec"
+    },
+    {
+      "id": 2,
+      "program": "SAT",
+      "domain": "advanced_math",
+      "band": "B2",
+      "target_band": "B2",
+      "statementId": "ADV.B2.s2",
+      "skill": "polynomial_expressions",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "Which expression shows "
+        },
+        {
+          "t": "math",
+          "v": "42y^5 + 28y^3"
+        },
+        {
+          "t": "text",
+          "v": " rewritten with its greatest common factor factored out?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "7y^3(6y^2 + 4)"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "14y(3y^4 + 2y^2)"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "14y^3(3y^2 + 2)"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "14y^3(3y^3 + 2)"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "C"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. factor gcf: "
+        },
+        {
+          "t": "text",
+          "v": "Find the GCF of the coefficients: gcd(42, 28) = 14."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. factor gcf: "
+        },
+        {
+          "t": "text",
+          "v": "Find the GCF of the variable parts: the lower power of y^5 and y^3 is y^3, so the variable GCF is y^3. The overall GCF is 14y^3."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. factor gcf: "
+        },
+        {
+          "t": "text",
+          "v": "Divide each term by 14y^3: 42y^5 / (14y^3) = 3y^2 and 28y^3 / (14y^3) = 2, giving 14y^3(3y^2 + 2)."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "4. distribute: "
+        },
+        {
+          "t": "text",
+          "v": "Check: 14y^3 * 3y^2 = 42y^5 and 14y^3 * 2 = 28y^3, recovering the original expression."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 400,
+        "band": "B2",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "factor_gcf",
+          "more_terms": false,
+          "has_fraction": false
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "factor_gcf",
+        "more_terms": false,
+        "has_fraction": false
+      },
+      "fingerprint": [
+        "factor_gcf",
+        "factor_gcf",
+        "factor_gcf",
+        "distribute"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 3,
+      "program": "SAT",
+      "domain": "advanced_math",
+      "band": "B3",
+      "target_band": "B3",
+      "statementId": "ADV.B3.s2",
+      "skill": "polynomial_expressions",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "If "
+        },
+        {
+          "t": "math",
+          "v": "5a + n = 12a - 8b"
+        },
+        {
+          "t": "text",
+          "v": ", which of the following expresses "
+        },
+        {
+          "t": "math",
+          "v": "n"
+        },
+        {
+          "t": "text",
+          "v": " in terms of "
+        },
+        {
+          "t": "math",
+          "v": "a"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "b"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "17a - 8b"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "7a - 8b"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "7a + 8b"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "-7a - 8b"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "B"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. isolate variable: "
+        },
+        {
+          "t": "text",
+          "v": "Subtract "
+        },
+        {
+          "t": "math",
+          "v": "5a"
+        },
+        {
+          "t": "text",
+          "v": " from both sides to leave "
+        },
+        {
+          "t": "math",
+          "v": "n"
+        },
+        {
+          "t": "text",
+          "v": " alone: "
+        },
+        {
+          "t": "math",
+          "v": "n = 12a - 8b - 5a"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. combine like terms: "
+        },
+        {
+          "t": "text",
+          "v": "Combine the "
+        },
+        {
+          "t": "math",
+          "v": "a"
+        },
+        {
+          "t": "text",
+          "v": " terms: "
+        },
+        {
+          "t": "math",
+          "v": "12a - 5a = 7a"
+        },
+        {
+          "t": "text",
+          "v": ", giving "
+        },
+        {
+          "t": "math",
+          "v": "n = 7a - 8b"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 450,
+        "band": "B3",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "solve_for_variable",
+          "more_terms": false,
+          "has_fraction": false
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "solve_for_variable",
+        "more_terms": false,
+        "has_fraction": false
+      },
+      "fingerprint": [
+        "isolate_variable",
+        "combine_like_terms"
+      ],
+      "reskinDistance": 0.5,
+      "tier": "build-spec"
+    },
+    {
+      "id": 4,
+      "program": "SAT",
+      "domain": "advanced_math",
+      "band": "B3",
+      "target_band": "B3",
+      "statementId": "ADV.B3.s1",
+      "skill": "quadratic_equations",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "What are the solutions to the equation "
+        },
+        {
+          "t": "math",
+          "v": "(h-7)(h+13)=0"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "h=-7"
+            },
+            {
+              "t": "text",
+              "v": " and "
+            },
+            {
+              "t": "math",
+              "v": "h=13"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "h=-13"
+            },
+            {
+              "t": "text",
+              "v": " and "
+            },
+            {
+              "t": "math",
+              "v": "h=7"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "h=7"
+            },
+            {
+              "t": "text",
+              "v": " and "
+            },
+            {
+              "t": "math",
+              "v": "h=13"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "h=-13"
+            },
+            {
+              "t": "text",
+              "v": " and "
+            },
+            {
+              "t": "math",
+              "v": "h=-7"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "B"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. apply zero product: "
+        },
+        {
+          "t": "text",
+          "v": "The left side is a product of two linear factors equal to 0, so set each factor equal to 0: "
+        },
+        {
+          "t": "math",
+          "v": "h-7=0"
+        },
+        {
+          "t": "text",
+          "v": " or "
+        },
+        {
+          "t": "math",
+          "v": "h+13=0"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. isolate variable: "
+        },
+        {
+          "t": "text",
+          "v": "Solve the first factor: "
+        },
+        {
+          "t": "math",
+          "v": "h-7=0 \\Rightarrow h=7"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. isolate variable: "
+        },
+        {
+          "t": "text",
+          "v": "Solve the second factor: "
+        },
+        {
+          "t": "math",
+          "v": "h+13=0 \\Rightarrow h=-13"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "4. apply zero product: "
+        },
+        {
+          "t": "text",
+          "v": "State the solution set "
+        },
+        {
+          "t": "math",
+          "v": "\\{7,\\,-13\\}"
+        },
+        {
+          "t": "text",
+          "v": ", matching choice B."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 440,
+        "band": "B3",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "solve_factored",
+          "has_fraction_or_irrational": false,
+          "from_context": false
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "solve_factored",
+        "has_fraction_or_irrational": false,
+        "from_context": false
+      },
+      "fingerprint": [
+        "apply_zero_product",
+        "isolate_variable",
+        "isolate_variable",
+        "apply_zero_product"
+      ],
+      "reskinDistance": 0.75,
+      "tier": "build-spec"
+    },
+    {
+      "id": 5,
+      "program": "SAT",
+      "domain": "advanced_math",
+      "band": "B3",
+      "target_band": "B3",
+      "statementId": "ADV.B3.s1",
+      "skill": "radical_rational_equations",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "What value of "
+        },
+        {
+          "t": "math",
+          "v": "k"
+        },
+        {
+          "t": "text",
+          "v": " satisfies the equation "
+        },
+        {
+          "t": "math",
+          "v": "\\sqrt{2k + 10} + 6 = 14"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "k = 3"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "k = 27"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "k = 37"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "k = 93"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "B"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. isolate radical: "
+        },
+        {
+          "t": "text",
+          "v": "Subtract 6 from both sides: "
+        },
+        {
+          "t": "math",
+          "v": "\\sqrt{2k + 10} = 8"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. square both sides: "
+        },
+        {
+          "t": "text",
+          "v": "Square both sides: "
+        },
+        {
+          "t": "math",
+          "v": "2k + 10 = 64"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. isolate variable: "
+        },
+        {
+          "t": "text",
+          "v": "Subtract 10: "
+        },
+        {
+          "t": "math",
+          "v": "2k = 54"
+        },
+        {
+          "t": "text",
+          "v": ", then divide by 2: "
+        },
+        {
+          "t": "math",
+          "v": "k = 27"
+        },
+        {
+          "t": "text",
+          "v": ". Check: "
+        },
+        {
+          "t": "math",
+          "v": "\\sqrt{2(27)+10}+6=\\sqrt{64}+6=8+6=14"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 440,
+        "band": "B3",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "solve_radical",
+          "extraneous_check": false,
+          "from_context": false
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "solve_radical",
+        "extraneous_check": false,
+        "from_context": false
+      },
+      "fingerprint": [
+        "isolate_radical",
+        "square_both_sides",
+        "isolate_variable"
+      ],
+      "reskinDistance": 0.333,
+      "tier": "build-spec"
+    },
+    {
+      "id": 6,
+      "program": "SAT",
+      "domain": "advanced_math",
+      "band": "B4",
+      "target_band": "B4",
+      "statementId": "ADV.B4.s1",
+      "skill": "nonlinear_functions_models",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The water level of a reservoir during a dry spell is modeled by "
+        },
+        {
+          "t": "math",
+          "v": "L=-0.35n^2-1.2n+70"
+        },
+        {
+          "t": "text",
+          "v": ", where "
+        },
+        {
+          "t": "math",
+          "v": "L"
+        },
+        {
+          "t": "text",
+          "v": " is the level in feet "
+        },
+        {
+          "t": "math",
+          "v": "n"
+        },
+        {
+          "t": "text",
+          "v": " weeks after the spell begins. What is the water level, in feet, after 6 weeks?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "50.2"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. interpret meaning: "
+        },
+        {
+          "t": "text",
+          "v": "Identify "
+        },
+        {
+          "t": "math",
+          "v": "n"
+        },
+        {
+          "t": "text",
+          "v": " as the input (weeks since the dry spell began) and "
+        },
+        {
+          "t": "math",
+          "v": "L"
+        },
+        {
+          "t": "text",
+          "v": " as the output (water level in feet); the given input is "
+        },
+        {
+          "t": "math",
+          "v": "n=6"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. substitute: "
+        },
+        {
+          "t": "text",
+          "v": "Substitute "
+        },
+        {
+          "t": "math",
+          "v": "n=6"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "math",
+          "v": "L=-0.35(6)^2-1.2(6)+70"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. evaluate: "
+        },
+        {
+          "t": "text",
+          "v": "Square first: "
+        },
+        {
+          "t": "math",
+          "v": "6^2=36"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "4. evaluate: "
+        },
+        {
+          "t": "text",
+          "v": "Apply coefficients: "
+        },
+        {
+          "t": "math",
+          "v": "-0.35(36)=-12.6"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "-1.2(6)=-7.2"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "5. evaluate: "
+        },
+        {
+          "t": "text",
+          "v": "Combine: "
+        },
+        {
+          "t": "math",
+          "v": "70-12.6-7.2=50.2"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 535,
+        "band": "B4",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "quad_model_use",
+          "from_context": true,
+          "uses_exponential": false
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "quad_model_use",
+        "from_context": true,
+        "uses_exponential": false
+      },
+      "fingerprint": [
+        "interpret_meaning",
+        "substitute",
+        "evaluate",
+        "evaluate",
+        "evaluate"
+      ],
+      "reskinDistance": 0.6,
+      "tier": "build-spec"
+    },
+    {
+      "id": 7,
+      "program": "SAT",
+      "domain": "advanced_math",
+      "band": "B4",
+      "target_band": "B4",
+      "statementId": "ADV.B3.s2",
+      "skill": "polynomial_expressions",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The given equation relates the variables "
+        },
+        {
+          "t": "math",
+          "v": "k"
+        },
+        {
+          "t": "text",
+          "v": ", "
+        },
+        {
+          "t": "math",
+          "v": "m"
+        },
+        {
+          "t": "text",
+          "v": ", and "
+        },
+        {
+          "t": "math",
+          "v": "n"
+        },
+        {
+          "t": "text",
+          "v": ", where "
+        },
+        {
+          "t": "math",
+          "v": "k \\neq 6"
+        },
+        {
+          "t": "text",
+          "v": ".\n\n"
+        },
+        {
+          "t": "math",
+          "v": "\\dfrac{kn - 7}{3} = 2n + m"
+        },
+        {
+          "t": "text",
+          "v": "\n\nWhich expression is equal to "
+        },
+        {
+          "t": "math",
+          "v": "n"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "\\dfrac{m + 7}{k - 2}"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "\\dfrac{3m + 7}{k - 6}"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "\\dfrac{3m - 7}{k - 6}"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "\\dfrac{3m + 7}{k}"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "B"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. rearrange formula: "
+        },
+        {
+          "t": "text",
+          "v": "Multiply both sides by 3 to clear the denominator: "
+        },
+        {
+          "t": "math",
+          "v": "kn - 7 = 3(2n + m)"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. distribute: "
+        },
+        {
+          "t": "text",
+          "v": "Expand the right side: "
+        },
+        {
+          "t": "math",
+          "v": "kn - 7 = 6n + 3m"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. combine like terms: "
+        },
+        {
+          "t": "text",
+          "v": "Collect n-terms on the left and constants on the right: "
+        },
+        {
+          "t": "math",
+          "v": "kn - 6n = 3m + 7"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "4. factor gcf: "
+        },
+        {
+          "t": "text",
+          "v": "Factor n from the left side: "
+        },
+        {
+          "t": "math",
+          "v": "n(k - 6) = 3m + 7"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "5. isolate variable: "
+        },
+        {
+          "t": "text",
+          "v": "Divide both sides by "
+        },
+        {
+          "t": "math",
+          "v": "k - 6"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "math",
+          "v": "n = \\dfrac{3m + 7}{k - 6}"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 515,
+        "band": "B4",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "solve_for_variable",
+          "more_terms": true,
+          "has_fraction": true
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "solve_for_variable",
+        "more_terms": true,
+        "has_fraction": true
+      },
+      "fingerprint": [
+        "rearrange_formula",
+        "distribute",
+        "combine_like_terms",
+        "factor_gcf",
+        "isolate_variable"
+      ],
+      "reskinDistance": 0.8,
+      "tier": "build-spec"
+    },
+    {
+      "id": 8,
+      "program": "SAT",
+      "domain": "advanced_math",
+      "band": "B4",
+      "target_band": "B4",
+      "statementId": "ADV.B4.s2",
+      "skill": "quadratic_equations",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "math",
+          "v": "6t^2 - 11t - 10 = 0"
+        },
+        {
+          "t": "text",
+          "v": "\n\nWhat are the solutions to the given equation?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "t=\\frac{2}{3}"
+            },
+            {
+              "t": "text",
+              "v": " and "
+            },
+            {
+              "t": "math",
+              "v": "t=\\frac{5}{2}"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "t=-\\frac{2}{3}"
+            },
+            {
+              "t": "text",
+              "v": " and "
+            },
+            {
+              "t": "math",
+              "v": "t=\\frac{5}{2}"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "t=\\frac{2}{3}"
+            },
+            {
+              "t": "text",
+              "v": " and "
+            },
+            {
+              "t": "math",
+              "v": "t=-\\frac{5}{2}"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "t=-\\frac{3}{2}"
+            },
+            {
+              "t": "text",
+              "v": " and "
+            },
+            {
+              "t": "math",
+              "v": "t=\\frac{2}{5}"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "B"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. factor: "
+        },
+        {
+          "t": "text",
+          "v": "Factor "
+        },
+        {
+          "t": "math",
+          "v": "6t^2 - 11t - 10"
+        },
+        {
+          "t": "text",
+          "v": " over the integers as "
+        },
+        {
+          "t": "math",
+          "v": "(2t-5)(3t+2)"
+        },
+        {
+          "t": "text",
+          "v": "; check: "
+        },
+        {
+          "t": "math",
+          "v": "2t\\cdot 3t=6t^2"
+        },
+        {
+          "t": "text",
+          "v": ", "
+        },
+        {
+          "t": "math",
+          "v": "2t\\cdot 2 + (-5)\\cdot 3t = 4t-15t=-11t"
+        },
+        {
+          "t": "text",
+          "v": ", "
+        },
+        {
+          "t": "math",
+          "v": "(-5)(2)=-10"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. apply zero product: "
+        },
+        {
+          "t": "text",
+          "v": "Set each factor equal to zero: "
+        },
+        {
+          "t": "math",
+          "v": "2t-5=0"
+        },
+        {
+          "t": "text",
+          "v": " or "
+        },
+        {
+          "t": "math",
+          "v": "3t+2=0"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. isolate variable: "
+        },
+        {
+          "t": "text",
+          "v": "Solve each: "
+        },
+        {
+          "t": "math",
+          "v": "2t-5=0 \\Rightarrow t=\\frac{5}{2}"
+        },
+        {
+          "t": "text",
+          "v": "; "
+        },
+        {
+          "t": "math",
+          "v": "3t+2=0 \\Rightarrow t=-\\frac{2}{3}"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 540,
+        "band": "B4",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "solve_by_factoring",
+          "has_fraction_or_irrational": true,
+          "from_context": false
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "solve_by_factoring",
+        "has_fraction_or_irrational": true,
+        "from_context": false
+      },
+      "fingerprint": [
+        "factor",
+        "apply_zero_product",
+        "isolate_variable"
+      ],
+      "reskinDistance": 0.333,
+      "tier": "build-spec"
+    },
+    {
+      "id": 9,
+      "program": "SAT",
+      "domain": "advanced_math",
+      "band": "B4",
+      "target_band": "B4",
+      "statementId": "ADV.B4.s2",
+      "skill": "radical_rational_equations",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "math",
+          "v": "\\dfrac{4}{2n+9} = \\dfrac{5}{3n+10}"
+        },
+        {
+          "t": "text",
+          "v": "\n\nWhat is the solution to the given equation?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "5/2"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. cross multiply: "
+        },
+        {
+          "t": "text",
+          "v": "Cross-multiply the equal fractions: "
+        },
+        {
+          "t": "math",
+          "v": "4(3n+10) = 5(2n+9)"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. distribute: "
+        },
+        {
+          "t": "text",
+          "v": "Distribute on each side: "
+        },
+        {
+          "t": "math",
+          "v": "12n + 40 = 10n + 45"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. collect like terms: "
+        },
+        {
+          "t": "text",
+          "v": "Move n-terms left and constants right: "
+        },
+        {
+          "t": "math",
+          "v": "12n - 10n = 45 - 40"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "4. isolate variable: "
+        },
+        {
+          "t": "text",
+          "v": "Combine like terms to the linear form "
+        },
+        {
+          "t": "math",
+          "v": "2n = 5"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "5. isolate variable: "
+        },
+        {
+          "t": "text",
+          "v": "Divide by the coefficient: "
+        },
+        {
+          "t": "math",
+          "v": "n = \\frac{5}{2}"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "6. apply condition: "
+        },
+        {
+          "t": "text",
+          "v": "Check denominators at "
+        },
+        {
+          "t": "math",
+          "v": "n=\\frac{5}{2}"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "math",
+          "v": "2n+9=14\\neq 0"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "3n+10=17.5\\neq 0"
+        },
+        {
+          "t": "text",
+          "v": "; value is non-negative and grid-in valid."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 510,
+        "band": "B4",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "solve_rational",
+          "extraneous_check": false,
+          "from_context": false
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "solve_rational",
+        "extraneous_check": false,
+        "from_context": false
+      },
+      "fingerprint": [
+        "cross_multiply",
+        "distribute",
+        "collect_like_terms",
+        "isolate_variable",
+        "isolate_variable",
+        "apply_condition"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 10,
+      "program": "SAT",
+      "domain": "advanced_math",
+      "band": "B5",
+      "target_band": "B5",
+      "statementId": "ADV.B5.s1",
+      "skill": "nonlinear_functions_models",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The function "
+        },
+        {
+          "t": "math",
+          "v": "f"
+        },
+        {
+          "t": "text",
+          "v": " is defined by "
+        },
+        {
+          "t": "math",
+          "v": "f(x) = 3(x-5)(x+2)"
+        },
+        {
+          "t": "text",
+          "v": ". Which of the following statements about the graph of "
+        },
+        {
+          "t": "math",
+          "v": "y = f(x)"
+        },
+        {
+          "t": "text",
+          "v": " in the xy-plane is true?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "text",
+              "v": "The graph crosses the y-axis at "
+            },
+            {
+              "t": "math",
+              "v": "(0, -30)"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "text",
+              "v": "The graph crosses the x-axis at "
+            },
+            {
+              "t": "math",
+              "v": "x = -5"
+            },
+            {
+              "t": "text",
+              "v": " and "
+            },
+            {
+              "t": "math",
+              "v": "x = 2"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "text",
+              "v": "The graph crosses the y-axis at "
+            },
+            {
+              "t": "math",
+              "v": "(0, 30)"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "text",
+              "v": "The vertex of the graph is a maximum."
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "A"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. substitute: "
+        },
+        {
+          "t": "text",
+          "v": "The y-intercept occurs at "
+        },
+        {
+          "t": "math",
+          "v": "x = 0"
+        },
+        {
+          "t": "text",
+          "v": "; substitute "
+        },
+        {
+          "t": "math",
+          "v": "x = 0"
+        },
+        {
+          "t": "text",
+          "v": " into "
+        },
+        {
+          "t": "math",
+          "v": "f(x) = 3(x-5)(x+2)"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. evaluate: "
+        },
+        {
+          "t": "math",
+          "v": "f(0) = 3(0-5)(0+2) = 3(-5)(2) = -30"
+        },
+        {
+          "t": "text",
+          "v": ", so the y-intercept is "
+        },
+        {
+          "t": "math",
+          "v": "(0, -30)"
+        },
+        {
+          "t": "text",
+          "v": " — choice A is true."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. identify feature: "
+        },
+        {
+          "t": "text",
+          "v": "Factored form gives zeros "
+        },
+        {
+          "t": "math",
+          "v": "x = 5"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "x = -2"
+        },
+        {
+          "t": "text",
+          "v": " (so B's "
+        },
+        {
+          "t": "math",
+          "v": "x=-5, x=2"
+        },
+        {
+          "t": "text",
+          "v": " is false); the product magnitude misread gives the false "
+        },
+        {
+          "t": "math",
+          "v": "(0,30)"
+        },
+        {
+          "t": "text",
+          "v": " in C; leading coefficient "
+        },
+        {
+          "t": "math",
+          "v": "3 > 0"
+        },
+        {
+          "t": "text",
+          "v": " opens upward, so the vertex is a minimum, making D false."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 580,
+        "band": "B5",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "identify_feature",
+          "from_context": false,
+          "uses_exponential": false
+        }
+      },
+      "verify": {
+        "tier": "B",
+        "correctness": "consistency 5/4"
+      },
+      "radicals": {
+        "task": "identify_feature",
+        "from_context": false,
+        "uses_exponential": false
+      },
+      "fingerprint": [
+        "substitute",
+        "evaluate",
+        "identify_feature"
+      ],
+      "reskinDistance": 0.333,
+      "tier": "build-spec"
+    },
+    {
+      "id": 11,
+      "program": "SAT",
+      "domain": "advanced_math",
+      "band": "B5",
+      "target_band": "B5",
+      "statementId": "ADV.B5.s2",
+      "skill": "polynomial_expressions",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "Which expression is equivalent to "
+        },
+        {
+          "t": "math",
+          "v": "(3y + 4)(5y - 2)"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "15y^2 - 26y - 8"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "15y^2 + 14y - 8"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "15y^2 + 26y - 8"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "15y^2 - 8"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "B"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. identify form: "
+        },
+        {
+          "t": "text",
+          "v": "Recognize "
+        },
+        {
+          "t": "math",
+          "v": "(3y + 4)(5y - 2)"
+        },
+        {
+          "t": "text",
+          "v": " as a product of two binomials "
+        },
+        {
+          "t": "math",
+          "v": "(Ay+B)(Cy+D)"
+        },
+        {
+          "t": "text",
+          "v": " with "
+        },
+        {
+          "t": "math",
+          "v": "A=3, B=4, C=5, D=-2"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. foil: "
+        },
+        {
+          "t": "text",
+          "v": "First: "
+        },
+        {
+          "t": "math",
+          "v": "3y \\cdot 5y = 15y^2"
+        },
+        {
+          "t": "text",
+          "v": ". Outer: "
+        },
+        {
+          "t": "math",
+          "v": "3y \\cdot (-2) = -6y"
+        },
+        {
+          "t": "text",
+          "v": ". Inner: "
+        },
+        {
+          "t": "math",
+          "v": "4 \\cdot 5y = 20y"
+        },
+        {
+          "t": "text",
+          "v": ". Last: "
+        },
+        {
+          "t": "math",
+          "v": "4 \\cdot (-2) = -8"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. combine like terms: "
+        },
+        {
+          "t": "text",
+          "v": "Combine the middle terms: "
+        },
+        {
+          "t": "math",
+          "v": "-6y + 20y = 14y"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "4. rewrite equivalent: "
+        },
+        {
+          "t": "text",
+          "v": "Write in standard form: "
+        },
+        {
+          "t": "math",
+          "v": "15y^2 + 14y - 8"
+        },
+        {
+          "t": "text",
+          "v": ", matching choice B."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 585,
+        "band": "B5",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "product_bin_bin",
+          "more_terms": false,
+          "has_fraction": false
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "product_bin_bin",
+        "more_terms": false,
+        "has_fraction": false
+      },
+      "fingerprint": [
+        "identify_form",
+        "foil",
+        "combine_like_terms",
+        "rewrite_equivalent"
+      ],
+      "reskinDistance": 0.75,
+      "tier": "build-spec"
+    },
+    {
+      "id": 12,
+      "program": "SAT",
+      "domain": "advanced_math",
+      "band": "B5",
+      "target_band": "B5",
+      "statementId": "ADV.B5.s1",
+      "skill": "quadratic_equations",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The function "
+        },
+        {
+          "t": "math",
+          "v": "f"
+        },
+        {
+          "t": "text",
+          "v": " is defined by "
+        },
+        {
+          "t": "math",
+          "v": "f(h) = 2h^2 - 28h + 117"
+        },
+        {
+          "t": "text",
+          "v": ". What is the minimum value of "
+        },
+        {
+          "t": "math",
+          "v": "f(h)"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "19"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. axis of symmetry: "
+        },
+        {
+          "t": "text",
+          "v": "For "
+        },
+        {
+          "t": "math",
+          "v": "f(h)=2h^2-28h+117"
+        },
+        {
+          "t": "text",
+          "v": ", the vertex occurs at "
+        },
+        {
+          "t": "math",
+          "v": "h=-\\frac{b}{2a}=-\\frac{-28}{2(2)}=7"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. find vertex: "
+        },
+        {
+          "t": "text",
+          "v": "Since "
+        },
+        {
+          "t": "math",
+          "v": "a=2>0"
+        },
+        {
+          "t": "text",
+          "v": ", the parabola opens upward, so "
+        },
+        {
+          "t": "math",
+          "v": "f"
+        },
+        {
+          "t": "text",
+          "v": " attains its minimum at "
+        },
+        {
+          "t": "math",
+          "v": "h=7"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. evaluate: "
+        },
+        {
+          "t": "text",
+          "v": "Substitute "
+        },
+        {
+          "t": "math",
+          "v": "h=7"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "math",
+          "v": "f(7)=2(49)-28(7)+117=98-196+117=19"
+        },
+        {
+          "t": "text",
+          "v": ", the minimum value."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 575,
+        "band": "B5",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "vertex",
+          "has_fraction_or_irrational": false,
+          "from_context": false
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "vertex",
+        "has_fraction_or_irrational": false,
+        "from_context": false
+      },
+      "fingerprint": [
+        "axis_of_symmetry",
+        "find_vertex",
+        "evaluate"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 13,
+      "program": "SAT",
+      "domain": "advanced_math",
+      "band": "B5",
+      "target_band": "B5",
+      "statementId": "ADV.B4.s2",
+      "skill": "radical_rational_equations",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "math",
+          "v": "\\frac{2n}{n-2}+\\frac{6}{n+2}=\\frac{16}{n^2-4}"
+        },
+        {
+          "t": "text",
+          "v": "\n\nWhat is the solution to the given equation?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "n = 2"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "n = -7"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "n = 7"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "n = -7"
+            },
+            {
+              "t": "text",
+              "v": " or "
+            },
+            {
+              "t": "math",
+              "v": "n = 2"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "B"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. apply condition: "
+        },
+        {
+          "t": "text",
+          "v": "Since "
+        },
+        {
+          "t": "math",
+          "v": "n^2-4=(n-2)(n+2)"
+        },
+        {
+          "t": "text",
+          "v": ", the denominators require "
+        },
+        {
+          "t": "math",
+          "v": "n \\neq 2"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "n \\neq -2"
+        },
+        {
+          "t": "text",
+          "v": "; these values are excluded from the domain."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. clear denominator: "
+        },
+        {
+          "t": "text",
+          "v": "Multiply both sides by the LCD "
+        },
+        {
+          "t": "math",
+          "v": "(n-2)(n+2)"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "math",
+          "v": "2n(n+2) + 6(n-2) = 16"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. solve quadratic: "
+        },
+        {
+          "t": "text",
+          "v": "Expand and collect: "
+        },
+        {
+          "t": "math",
+          "v": "2n^2 + 10n - 12 = 16 \\Rightarrow 2n^2 + 10n - 28 = 0 \\Rightarrow n^2 + 5n - 14 = 0"
+        },
+        {
+          "t": "text",
+          "v": ". Factor "
+        },
+        {
+          "t": "math",
+          "v": "(n+7)(n-2)=0"
+        },
+        {
+          "t": "text",
+          "v": ", giving candidates "
+        },
+        {
+          "t": "math",
+          "v": "n=-7"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "n=2"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "4. check extraneous: "
+        },
+        {
+          "t": "math",
+          "v": "n=2"
+        },
+        {
+          "t": "text",
+          "v": " makes the denominators "
+        },
+        {
+          "t": "math",
+          "v": "n-2"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "n^2-4"
+        },
+        {
+          "t": "text",
+          "v": " zero, so it is extraneous and rejected. "
+        },
+        {
+          "t": "math",
+          "v": "n=-7"
+        },
+        {
+          "t": "text",
+          "v": " is valid (checks to "
+        },
+        {
+          "t": "math",
+          "v": "\\frac{16}{45}=\\frac{16}{45}"
+        },
+        {
+          "t": "text",
+          "v": "), so the only solution is "
+        },
+        {
+          "t": "math",
+          "v": "n=-7"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 550,
+        "band": "B5",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "solve_rational",
+          "extraneous_check": true,
+          "from_context": false
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "solve_rational",
+        "extraneous_check": true,
+        "from_context": false
+      },
+      "fingerprint": [
+        "apply_condition",
+        "clear_denominator",
+        "solve_quadratic",
+        "check_extraneous"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 14,
+      "program": "SAT",
+      "domain": "advanced_math",
+      "band": "B6",
+      "target_band": "B6",
+      "statementId": "ADV.B6.s1",
+      "skill": "nonlinear_functions_models",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "During a snowstorm, the depth of snow on a ski slope is modeled by "
+        },
+        {
+          "t": "math",
+          "v": "d(t) = -0.8(t-6)^2 + 33"
+        },
+        {
+          "t": "text",
+          "v": ", where "
+        },
+        {
+          "t": "math",
+          "v": "d"
+        },
+        {
+          "t": "text",
+          "v": " is the depth in inches and "
+        },
+        {
+          "t": "math",
+          "v": "t"
+        },
+        {
+          "t": "text",
+          "v": " is the number of hours after the storm began. Which statement best interprets the vertex of the graph of "
+        },
+        {
+          "t": "math",
+          "v": "d"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "text",
+              "v": "The snow reached a maximum depth of 6 inches 33 hours after the storm began."
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "text",
+              "v": "The snow reached a maximum depth of 33 inches 6 hours after the storm began."
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "text",
+              "v": "The snow reached a minimum depth of 33 inches 6 hours after the storm began."
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "text",
+              "v": "The snow was 33 inches deep when the storm began."
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "B"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. find vertex: "
+        },
+        {
+          "t": "text",
+          "v": "The model is in vertex form "
+        },
+        {
+          "t": "math",
+          "v": "d(t) = -0.8(t-6)^2 + 33"
+        },
+        {
+          "t": "text",
+          "v": "; the leading coefficient "
+        },
+        {
+          "t": "math",
+          "v": "-0.8"
+        },
+        {
+          "t": "text",
+          "v": " is negative, so the parabola opens downward and the vertex "
+        },
+        {
+          "t": "math",
+          "v": "(6, 33)"
+        },
+        {
+          "t": "text",
+          "v": " is a maximum."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. interpret meaning: "
+        },
+        {
+          "t": "text",
+          "v": "Map "
+        },
+        {
+          "t": "math",
+          "v": "h = 6"
+        },
+        {
+          "t": "text",
+          "v": " to the input (hours after the storm began) and "
+        },
+        {
+          "t": "math",
+          "v": "k = 33"
+        },
+        {
+          "t": "text",
+          "v": " to the output (depth in inches): the snow reached its greatest depth, 33 inches, 6 hours after the storm began."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 645,
+        "band": "B6",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "interpret_feature",
+          "from_context": true,
+          "uses_exponential": false
+        }
+      },
+      "verify": {
+        "tier": "B",
+        "correctness": "consistency 5/4"
+      },
+      "radicals": {
+        "task": "interpret_feature",
+        "from_context": true,
+        "uses_exponential": false
+      },
+      "fingerprint": [
+        "find_vertex",
+        "interpret_meaning"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 15,
+      "program": "SAT",
+      "domain": "advanced_math",
+      "band": "B6",
+      "target_band": "B6",
+      "statementId": "ADV.B5.s2",
+      "skill": "polynomial_expressions",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "Which expression is equivalent to "
+        },
+        {
+          "t": "math",
+          "v": "\\frac{3}{4}n^2\\left(8n^3 + 20\\right)"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "6n^6 + 15n^2"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "6n^5 + 15n^2"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "6n^5 + 20n^2"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "21n^7"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "B"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. distribute: "
+        },
+        {
+          "t": "text",
+          "v": "Multiply the monomial by the first term: "
+        },
+        {
+          "t": "math",
+          "v": "\\frac{3}{4}\\cdot 8 = 6"
+        },
+        {
+          "t": "text",
+          "v": " and add exponents "
+        },
+        {
+          "t": "math",
+          "v": "n^{2+3}=n^5"
+        },
+        {
+          "t": "text",
+          "v": ", giving "
+        },
+        {
+          "t": "math",
+          "v": "6n^5"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. distribute: "
+        },
+        {
+          "t": "text",
+          "v": "Multiply the monomial by the second term: "
+        },
+        {
+          "t": "math",
+          "v": "\\frac{3}{4}\\cdot 20 = 15"
+        },
+        {
+          "t": "text",
+          "v": " and keep "
+        },
+        {
+          "t": "math",
+          "v": "n^2"
+        },
+        {
+          "t": "text",
+          "v": ", giving "
+        },
+        {
+          "t": "math",
+          "v": "15n^2"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. combine like terms: "
+        },
+        {
+          "t": "text",
+          "v": "The two products have different degrees ("
+        },
+        {
+          "t": "math",
+          "v": "n^5"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "n^2"
+        },
+        {
+          "t": "text",
+          "v": "), so nothing combines; write the sum "
+        },
+        {
+          "t": "math",
+          "v": "6n^5 + 15n^2"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "4. identify form: "
+        },
+        {
+          "t": "text",
+          "v": "Match the fully expanded result, rejecting near-misses from dropping the fraction ("
+        },
+        {
+          "t": "math",
+          "v": "20n^2"
+        },
+        {
+          "t": "text",
+          "v": "), multiplying exponents ("
+        },
+        {
+          "t": "math",
+          "v": "n^6"
+        },
+        {
+          "t": "text",
+          "v": "), or fusing unlike terms ("
+        },
+        {
+          "t": "math",
+          "v": "21n^7"
+        },
+        {
+          "t": "text",
+          "v": ")."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 625,
+        "band": "B6",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "product_mono_bin",
+          "more_terms": true,
+          "has_fraction": true
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "product_mono_bin",
+        "more_terms": true,
+        "has_fraction": true
+      },
+      "fingerprint": [
+        "distribute",
+        "distribute",
+        "combine_like_terms",
+        "identify_form"
+      ],
+      "reskinDistance": 0.75,
+      "tier": "build-spec"
+    },
+    {
+      "id": 16,
+      "program": "SAT",
+      "domain": "advanced_math",
+      "band": "B6",
+      "target_band": "B6",
+      "statementId": "ADV.B6.s1",
+      "skill": "quadratic_equations",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "Each member of a summer reading club checks out the same number of books from a library branch — "
+        },
+        {
+          "t": "math",
+          "v": "4"
+        },
+        {
+          "t": "text",
+          "v": " fewer than "
+        },
+        {
+          "t": "math",
+          "v": "3"
+        },
+        {
+          "t": "text",
+          "v": " times the number of members in the club. If "
+        },
+        {
+          "t": "math",
+          "v": "55"
+        },
+        {
+          "t": "text",
+          "v": " books are checked out in all, how many members are in the club?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "5"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "11"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "\\frac{11}{3}"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "-\\frac{11}{3}"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "A"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. model equation: "
+        },
+        {
+          "t": "text",
+          "v": "Let "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": " be the number of members. Each member checks out "
+        },
+        {
+          "t": "math",
+          "v": "3x-4"
+        },
+        {
+          "t": "text",
+          "v": " books, so the total is "
+        },
+        {
+          "t": "math",
+          "v": "x(3x-4)=55"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. expand: "
+        },
+        {
+          "t": "text",
+          "v": "Distribute and move to standard form: "
+        },
+        {
+          "t": "math",
+          "v": "3x^2-4x-55=0"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. factor: "
+        },
+        {
+          "t": "text",
+          "v": "Factor: "
+        },
+        {
+          "t": "math",
+          "v": "(3x+11)(x-5)=0"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "4. apply zero product: "
+        },
+        {
+          "t": "text",
+          "v": "Set each factor to zero: "
+        },
+        {
+          "t": "math",
+          "v": "3x+11=0\\Rightarrow x=-\\tfrac{11}{3}"
+        },
+        {
+          "t": "text",
+          "v": " or "
+        },
+        {
+          "t": "math",
+          "v": "x-5=0\\Rightarrow x=5"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "5. evaluate: "
+        },
+        {
+          "t": "text",
+          "v": "A count of members must be a positive integer, so reject "
+        },
+        {
+          "t": "math",
+          "v": "x=-\\tfrac{11}{3}"
+        },
+        {
+          "t": "text",
+          "v": "; thus "
+        },
+        {
+          "t": "math",
+          "v": "x=5"
+        },
+        {
+          "t": "text",
+          "v": ". Check: "
+        },
+        {
+          "t": "math",
+          "v": "5\\times(3\\cdot5-4)=5\\times11=55"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 660,
+        "band": "B6",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "create_solve",
+          "has_fraction_or_irrational": false,
+          "from_context": true
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "create_solve",
+        "has_fraction_or_irrational": false,
+        "from_context": true
+      },
+      "fingerprint": [
+        "model_equation",
+        "expand",
+        "factor",
+        "apply_zero_product",
+        "evaluate"
+      ],
+      "reskinDistance": 0.6,
+      "tier": "build-spec"
+    },
+    {
+      "id": 17,
+      "program": "SAT",
+      "domain": "advanced_math",
+      "band": "B6",
+      "target_band": "B6",
+      "statementId": "ADV.B4.s2",
+      "skill": "radical_rational_equations",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "math",
+          "v": "y = 2t^2 + 4t - 5"
+        },
+        {
+          "t": "text",
+          "v": "\n"
+        },
+        {
+          "t": "math",
+          "v": "y = 3t + 16"
+        },
+        {
+          "t": "text",
+          "v": "\nIf "
+        },
+        {
+          "t": "math",
+          "v": "(t, y)"
+        },
+        {
+          "t": "text",
+          "v": " is a solution to the given system of equations and "
+        },
+        {
+          "t": "math",
+          "v": "t > 0"
+        },
+        {
+          "t": "text",
+          "v": ", what is the value of "
+        },
+        {
+          "t": "math",
+          "v": "y"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "3"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "5.5"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "16"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "25"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "D"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. substitute eliminate: "
+        },
+        {
+          "t": "text",
+          "v": "Set the expressions for y equal: 2t^2 + 4t - 5 = 3t + 16."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. solve quadratic: "
+        },
+        {
+          "t": "text",
+          "v": "Rearrange to 2t^2 + t - 21 = 0; discriminant 1 + 168 = 169 = 13^2, so t = (-1 ± 13)/4, giving t = 3 or t = -3.5."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. apply condition: "
+        },
+        {
+          "t": "text",
+          "v": "The condition t > 0 keeps t = 3 and rejects the extraneous root t = -3.5."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "4. back substitute: "
+        },
+        {
+          "t": "text",
+          "v": "Substitute t = 3 into y = 3t + 16 to get y = 25 (check: 2(9) + 12 - 5 = 25)."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 585,
+        "band": "B5",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "nonlinear_system",
+          "extraneous_check": true,
+          "from_context": false
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "nonlinear_system",
+        "extraneous_check": true,
+        "from_context": false
+      },
+      "fingerprint": [
+        "substitute_eliminate",
+        "solve_quadratic",
+        "apply_condition",
+        "back_substitute"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 18,
+      "program": "SAT",
+      "domain": "advanced_math",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "ADV.B7.s2",
+      "skill": "polynomial_expressions",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The function "
+        },
+        {
+          "t": "math",
+          "v": "f"
+        },
+        {
+          "t": "text",
+          "v": " is defined by "
+        },
+        {
+          "t": "math",
+          "v": "f(y) = 2y^2 + 5y - 3"
+        },
+        {
+          "t": "text",
+          "v": ". Which of the following equivalent forms of "
+        },
+        {
+          "t": "math",
+          "v": "f(y)"
+        },
+        {
+          "t": "text",
+          "v": " displays the minimum value of "
+        },
+        {
+          "t": "math",
+          "v": "f"
+        },
+        {
+          "t": "text",
+          "v": " as a constant or coefficient?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "f(y) = (2y - 1)(y + 3)"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "f(y) = 2y^2 + 5y - 3"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "f(y) = 2\\left(y + \\frac{5}{4}\\right)^2 - \\frac{49}{8}"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "f(y) = 2\\left(y + \\frac{5}{4}\\right)^2 - \\frac{25}{8}"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "C"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. identify form: "
+        },
+        {
+          "t": "text",
+          "v": "The stated feature is the minimum value; since "
+        },
+        {
+          "t": "math",
+          "v": "a=2>0"
+        },
+        {
+          "t": "text",
+          "v": " the parabola opens up, and vertex form "
+        },
+        {
+          "t": "math",
+          "v": "a(y-h)^2+k"
+        },
+        {
+          "t": "text",
+          "v": " displays the minimum directly as the constant "
+        },
+        {
+          "t": "math",
+          "v": "k"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. factor gcf: "
+        },
+        {
+          "t": "text",
+          "v": "Factor the leading coefficient out of the "
+        },
+        {
+          "t": "math",
+          "v": "y"
+        },
+        {
+          "t": "text",
+          "v": "-terms: "
+        },
+        {
+          "t": "math",
+          "v": "2y^2+5y-3 = 2\\left(y^2+\\tfrac{5}{2}y\\right)-3"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. rewrite equivalent: "
+        },
+        {
+          "t": "text",
+          "v": "Complete the square inside: half of "
+        },
+        {
+          "t": "math",
+          "v": "\\tfrac{5}{2}"
+        },
+        {
+          "t": "text",
+          "v": " is "
+        },
+        {
+          "t": "math",
+          "v": "\\tfrac{5}{4}"
+        },
+        {
+          "t": "text",
+          "v": ", "
+        },
+        {
+          "t": "math",
+          "v": "\\left(\\tfrac{5}{4}\\right)^2=\\tfrac{25}{16}"
+        },
+        {
+          "t": "text",
+          "v": ", giving "
+        },
+        {
+          "t": "math",
+          "v": "2\\left[(y+\\tfrac{5}{4})^2-\\tfrac{25}{16}\\right]-3"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "4. distribute: "
+        },
+        {
+          "t": "text",
+          "v": "Distribute the 2: "
+        },
+        {
+          "t": "math",
+          "v": "2(y+\\tfrac{5}{4})^2 - \\tfrac{25}{8} - 3"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "5. combine like terms: "
+        },
+        {
+          "t": "text",
+          "v": "Combine constants: "
+        },
+        {
+          "t": "math",
+          "v": "-\\tfrac{25}{8} - 3 = -\\tfrac{25}{8} - \\tfrac{24}{8} = -\\tfrac{49}{8}"
+        },
+        {
+          "t": "text",
+          "v": ", so "
+        },
+        {
+          "t": "math",
+          "v": "f(y)=2(y+\\tfrac{5}{4})^2-\\tfrac{49}{8}"
+        },
+        {
+          "t": "text",
+          "v": "; the minimum value is "
+        },
+        {
+          "t": "math",
+          "v": "-\\tfrac{49}{8}"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "6. expand: "
+        },
+        {
+          "t": "text",
+          "v": "Verify equivalence: "
+        },
+        {
+          "t": "math",
+          "v": "2(y+\\tfrac{5}{4})^2-\\tfrac{49}{8}=2y^2+5y+\\tfrac{25}{8}-\\tfrac{49}{8}=2y^2+5y-3"
+        },
+        {
+          "t": "text",
+          "v": ". Eliminate B (standard form, shows "
+        },
+        {
+          "t": "math",
+          "v": "y"
+        },
+        {
+          "t": "text",
+          "v": "-intercept "
+        },
+        {
+          "t": "math",
+          "v": "-3"
+        },
+        {
+          "t": "text",
+          "v": "), A (factored form, shows zeros "
+        },
+        {
+          "t": "math",
+          "v": "\\tfrac{1}{2},-3"
+        },
+        {
+          "t": "text",
+          "v": "), and D (vertex look-alike with wrong constant: it expands to "
+        },
+        {
+          "t": "math",
+          "v": "2y^2+5y"
+        },
+        {
+          "t": "text",
+          "v": ", not equivalent). Select C."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 755,
+        "band": "B7",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "choose_form",
+          "more_terms": false,
+          "has_fraction": true
+        }
+      },
+      "verify": {
+        "tier": "B",
+        "correctness": "consistency 5/4"
+      },
+      "radicals": {
+        "task": "choose_form",
+        "more_terms": false,
+        "has_fraction": true
+      },
+      "fingerprint": [
+        "identify_form",
+        "factor_gcf",
+        "rewrite_equivalent",
+        "distribute",
+        "combine_like_terms",
+        "expand"
+      ],
+      "reskinDistance": 0.833,
+      "tier": "build-spec"
+    },
+    {
+      "id": 19,
+      "program": "SAT",
+      "domain": "advanced_math",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "ADV.B6.s1",
+      "skill": "quadratic_equations",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "A pottery studio offers "
+        },
+        {
+          "t": "math",
+          "v": "h"
+        },
+        {
+          "t": "text",
+          "v": " classes this season, and each class enrolls "
+        },
+        {
+          "t": "math",
+          "v": "3"
+        },
+        {
+          "t": "text",
+          "v": " fewer than twice the number of classes offered. If the studio teaches "
+        },
+        {
+          "t": "math",
+          "v": "20"
+        },
+        {
+          "t": "text",
+          "v": " students in all, how many classes does it offer?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "\\frac{5}{2}"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "4"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "5"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "10"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "B"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. model equation: "
+        },
+        {
+          "t": "text",
+          "v": "Students per class "
+        },
+        {
+          "t": "math",
+          "v": "=2h-3"
+        },
+        {
+          "t": "text",
+          "v": "; total students "
+        },
+        {
+          "t": "math",
+          "v": "=h(2h-3)=20"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. expand: "
+        },
+        {
+          "t": "text",
+          "v": "Distribute and set equal to zero: "
+        },
+        {
+          "t": "math",
+          "v": "2h^2-3h-20=0"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. factor: "
+        },
+        {
+          "t": "text",
+          "v": "Factor the quadratic: "
+        },
+        {
+          "t": "math",
+          "v": "(2h+5)(h-4)=0"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "4. apply zero product: "
+        },
+        {
+          "t": "text",
+          "v": "Set each factor to zero: "
+        },
+        {
+          "t": "math",
+          "v": "h=-\\frac{5}{2}"
+        },
+        {
+          "t": "text",
+          "v": " or "
+        },
+        {
+          "t": "math",
+          "v": "h=4"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "5. isolate variable: "
+        },
+        {
+          "t": "text",
+          "v": "A number of classes must be a positive integer, so reject "
+        },
+        {
+          "t": "math",
+          "v": "-\\frac{5}{2}"
+        },
+        {
+          "t": "text",
+          "v": "; thus "
+        },
+        {
+          "t": "math",
+          "v": "h=4"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 700,
+        "band": "B7",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "create_solve",
+          "has_fraction_or_irrational": true,
+          "from_context": true
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "create_solve",
+        "has_fraction_or_irrational": true,
+        "from_context": true
+      },
+      "fingerprint": [
+        "model_equation",
+        "expand",
+        "factor",
+        "apply_zero_product",
+        "isolate_variable"
+      ],
+      "reskinDistance": 0.6,
+      "tier": "build-spec"
+    },
+    {
+      "id": 20,
+      "program": "SAT",
+      "domain": "advanced_math",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "ADV.B7.s1",
+      "skill": "radical_rational_equations",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "math",
+          "v": "\\sqrt{kx + 127} = 3x + 8"
+        },
+        {
+          "t": "text",
+          "v": "\n\nIn the given equation, "
+        },
+        {
+          "t": "math",
+          "v": "k"
+        },
+        {
+          "t": "text",
+          "v": " is a constant. If "
+        },
+        {
+          "t": "math",
+          "v": "x = 7"
+        },
+        {
+          "t": "text",
+          "v": " is a solution to the equation, what is the value of "
+        },
+        {
+          "t": "math",
+          "v": "k"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "102"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. apply condition: "
+        },
+        {
+          "t": "text",
+          "v": "Since "
+        },
+        {
+          "t": "math",
+          "v": "x = 7"
+        },
+        {
+          "t": "text",
+          "v": " is a solution, substitute it: "
+        },
+        {
+          "t": "math",
+          "v": "\\sqrt{7k + 127} = 3(7) + 8 = 29"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. isolate radical: "
+        },
+        {
+          "t": "text",
+          "v": "The radical "
+        },
+        {
+          "t": "math",
+          "v": "\\sqrt{7k + 127}"
+        },
+        {
+          "t": "text",
+          "v": " is already isolated on the left and equals "
+        },
+        {
+          "t": "math",
+          "v": "29"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. square both sides: "
+        },
+        {
+          "t": "text",
+          "v": "Square both sides: "
+        },
+        {
+          "t": "math",
+          "v": "7k + 127 = 841"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "4. isolate variable: "
+        },
+        {
+          "t": "text",
+          "v": "Subtract "
+        },
+        {
+          "t": "math",
+          "v": "127"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "math",
+          "v": "7k = 714"
+        },
+        {
+          "t": "text",
+          "v": "; divide by "
+        },
+        {
+          "t": "math",
+          "v": "7"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "math",
+          "v": "k = 102"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 700,
+        "band": "B7",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "unknown_constant",
+          "extraneous_check": false,
+          "from_context": false
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "unknown_constant",
+        "extraneous_check": false,
+        "from_context": false
+      },
+      "fingerprint": [
+        "apply_condition",
+        "isolate_radical",
+        "square_both_sides",
+        "isolate_variable"
+      ],
+      "reskinDistance": 0.5,
+      "tier": "build-spec"
+    }
+  ]
+}

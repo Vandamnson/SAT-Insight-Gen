@@ -49,7 +49,7 @@ export function surfaceDup(cand, kept, threshold = Number(process.env.SIG_DEDUP 
 export async function verifyAndGate(cand, cell, { tier = cell.tier || "A", reskinFloor = (process.env.SIG_RESKIN_FLOOR ? Number(process.env.SIG_RESKIN_FLOOR) : null) } = {}) {
   // 1. correctness — the trusted gate.
   let correctness;
-  if (tier === "A") correctness = await proveCheck(cand);
+  if (tier === "A") correctness = await proveCheck(cand, { domain: cell.domain });
   else if (tier === "C") correctness = figureCheck(cell);          // graph item: harness-constructed, per-type figure self-consistency
   else correctness = await consistencyCheck(cand);
   if (!correctness.keep) return { keep: false, stage: "correctness", correctness, reason: correctness.error || `agree ${correctness.agree}/${correctness.need}` };

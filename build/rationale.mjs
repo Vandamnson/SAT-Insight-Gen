@@ -5,6 +5,7 @@
    "reskins" problem. Cheap model, plain text out, passed verbatim into Agent 2.
    ============================================================================ */
 import { llmComplete } from "./llm.mjs";
+import { promptPack } from "./prompts.mjs";
 
 const RATIONALE_MODEL = process.env.SIG_RATIONALE_MODEL || "claude-opus-4-8";
 
@@ -24,8 +25,9 @@ Output 4–8 sentences of plain reasoning, then a numbered intended solution pat
 
 /** rationale(cell) -> design-rationale text (Agent 1's output, fed verbatim to Agent 2). */
 export async function rationale(cell, { model = RATIONALE_MODEL } = {}) {
+  const system = SYSTEM + (promptPack(cell.domain).rationaleExtra || "");   // domain-focused method framing
   const user = JSON.stringify(cell, null, 2);
-  const raw = await llmComplete(user, { system: SYSTEM, model });
+  const raw = await llmComplete(user, { system, model });
   return String(raw).trim();
 }
 

@@ -9,6 +9,7 @@ import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 import { llmComplete, parseJson } from "./llm.mjs";
+import { promptPack } from "./prompts.mjs";
 
 // Opus for all bands (quality over cost). Overridable per env.
 const AUTHOR_MODEL = process.env.SIG_AUTHOR_MODEL || "claude-opus-4-8";
@@ -16,20 +17,25 @@ const AUTHOR_MODEL_HARD = process.env.SIG_AUTHOR_MODEL_HARD || "claude-opus-4-8"
 export const modelForBand = (band) => (Number(String(band).replace("B", "")) >= 6 ? AUTHOR_MODEL_HARD : AUTHOR_MODEL);
 
 // FEW-SHOT VOICE ANCHORS — real released SAT items (College Board Skills-Insight
-// exemplars) anchor the author to the SAT's terse, natural phrasing. Algebra only;
-// two scrape-corrupted stems dropped. fewShot(band) returns 2 items from OTHER
-// bands, so the same-band authenticity-judge pairing is never leaked to the author.
+// exemplars) anchor the author to the SAT's terse, natural phrasing. fewShot(band,
+// domain) prefers anchors from the SAME content domain (algebra / advanced_math /
+// psda — exemplars.clean.json carries all three), and only returns items from OTHER
+// bands so the same-band authenticity-judge pairing is never leaked to the author.
+// Two scrape-corrupted stems are dropped at load.
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const EXEMPLARS = (() => {
   try {
     const raw = JSON.parse(readFileSync(join(ROOT, "taxonomy/exemplars.clean.json"), "utf8"));
     const arr = Array.isArray(raw) ? raw : (raw.items || raw.exemplars || Object.values(raw).find(Array.isArray) || []);
-    return arr.filter((e) => /alg/i.test(e.domain || "") && e.stem && !/ax\+8|x\+613/.test(e.stem));
+    return arr.filter((e) => e.stem && !/ax\+8|x\+613/.test(e.stem));
   } catch { return []; }
 })();
-function fewShot(band) {
+function fewShot(band, domain = "algebra") {
   const n = Number(String(band).replace("B", ""));
-  return EXEMPLARS.filter((e) => e.band !== `B${n}`).map((e) => [e, Math.abs(Number(e.band.slice(1)) - n)]).sort((a, b) => a[1] - b[1]).slice(0, 2).map((x) => x[0]);
+  const key = String(domain).slice(0, 3).toLowerCase();           // algebra→alg, advanced_math→adv, psda→psd
+  let pool = EXEMPLARS.filter((e) => (e.domain || "").toLowerCase().startsWith(key));
+  if (pool.length < 2) pool = EXEMPLARS;                            // fall back to all clean exemplars if a domain is thin
+  return pool.filter((e) => e.band !== `B${n}`).map((e) => [e, Math.abs(Number(e.band.slice(1)) - n)]).sort((a, b) => a[1] - b[1]).slice(0, 2).map((x) => x[0]);
 }
 
 // System prompt — verbatim from BUILD_SPEC §3 (incl. the exact output contract).
@@ -71,7 +77,8 @@ export async function authorItem(cell, rationaleText, { model = modelForBand(cel
   // (Skills-Insight exemplars + practice test #10): median ≈18 words, ~half < 20,
   // only ~10% > 50 (those are higher-band modeling), hard max ≈ 80.
   const WBAND = ({ 1: "8–16", 2: "10–20", 3: "15–32", 4: "20–40", 5: "20–42", 6: "25–48", 7: "25–55" })[cell.band] || "15–40";
-  const shots = fewShot(cell.band);
+  const shots = fewShot(cell.band, cell.domain);
+  const pack = promptPack(cell.domain);   // domain-focused STYLE bullets (generic formatting rules stay below)
   const voice = shots.length ? `\nVOICE ANCHORS — these are REAL released SAT Math items. Match their VOICE: terse, plain, at most one short clause of context, the question asked directly. Do NOT reuse their scenarios, numbers, or structure — invent your own.\n${shots.map((e, i) => `  ${i + 1}. ${e.stem}`).join("\n")}\n` : "";
   const user = `SPECIFICATION:
 ${JSON.stringify(cell, null, 2)}
@@ -84,11 +91,9 @@ FORMAT: ${fmt}
 
 STYLE (SAT items are tight — follow exactly):
 - LENGTH: this is a Band ${cell.band} item — target a STEM of ${WBAND} words. (Measured from official SAT Math: median ≈18 words, ~half under 20, only ~10% exceed 50 — and those are higher-band modeling items. Never exceed ~60 words unless the math genuinely requires a modeling setup.)
-- Be CONCISE. At MOST one short sentence of context, then the question. No backstory, no scene-setting, no flavor padding (e.g. NOT "A wildlife researcher monitors salmon migration by counting fish as they pass through a river ladder…"). Lower bands (B1–B3) especially terse; an abstract item is just the equation/expression and the ask.
-- PHRASE LIKE THE REAL TEST: no redundant clauses (don't restate what is already implied — e.g. if a point off a line is given, do NOT add "which does not lie on the line"); no pile-ups of proper nouns or place-names.
-- DEFINE THE VARIABLE CLEANLY — this is the #1 authenticity tell. Introduce it in its own clause ("…, where \\(w\\) is the number of liters filtered") OR keep it out of the question entirely ("How many tickets were sold?" — NEVER "How many tickets \\(h\\) were sold?"). Never drop an undefined letter into the ask, and never jam a variable into a noun phrase ("removes 14 grams per liter \\(w\\)"). For a free-response numeric item the cleanest form often names no variable at all.
-- NUMBERS SHOULD FEEL REAL: when a fraction is required prefer common ones (1/2, 2/3, 3/4, 5/2) over arbitrary ratios like 12/5; avoid implausible real-world values (e.g. a 12.5-pound "bag" or "14 grams per liter").
+${pack.authorStyle}
 - Write ALL mathematics as LaTeX wrapped in \\( ... \\) — e.g. \\(3x + 5 = 20\\), \\(\\frac{16}{5}\\), \\(y = \\frac{3}{2}x + 7\\), \\(-3n + 1 > -24\\). Use \\frac for fractions, \\le \\ge for ≤ ≥, \\cdot for multiply. Prose stays OUTSIDE the \\(...\\). Put each MCQ choice's math in \\(...\\) too. Do NOT use $ as a math delimiter.
+- SYSTEMS: present any system of two or more equations or inequalities as ONE stacked block — \\[\\begin{array}{l} FIRST EQUATION \\\\ SECOND EQUATION \\end{array}\\] (use \\begin{cases} instead when a brace is wanted). NEVER write the equations of a system as separate side-by-side \\(...\\) expressions.
 - CURRENCY: write money as ordinary text — $5, $3.50 — NEVER inside \\(...\\) (a dollar sign is money, not math).
 - TABLES: if the item shows a table of values, emit it as a clean markdown table with a header-separator row, each row on its OWN line (newline-separated), e.g.  | x | y |\\n| --- | --- |\\n| 0 | 5 |\\n| 1 | -2 |  . Keep cells PLAIN — bare numbers/letters, no \\(...\\), no $. Do not also restate the table values in prose.
 - The "answer" field (free-response) must be the PLAIN griddable value (e.g. -29/2 or 4.5), NOT LaTeX.
