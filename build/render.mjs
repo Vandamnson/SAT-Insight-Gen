@@ -282,4 +282,9 @@ function main() {
   }
   if (FIG_ERRORS.length) { console.error(`⚠ ${FIG_ERRORS.length} figure errors:`); FIG_ERRORS.slice(0, 12).forEach(e => console.error("  ", e.fn, "→", e.err)); }
 }
-main();
+
+// reusable rendering helpers (bank-html.mjs reuses these for a browsable bank view)
+export { renderQuestion, renderSolution, head, foot, FIG_OPT_CSS };
+
+// run main() only when invoked directly, not when imported.
+if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) main();
