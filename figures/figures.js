@@ -209,18 +209,24 @@ function renderCurve(c, sx, sy, xmin, xmax, ymin, ymax) {
       c.type === "quadratic" ? (x) => c.a * x * x + c.b * x + c.c
       : c.type === "exponential" ? (x) => c.a * Math.pow(c.b, x) + (c.k || 0)   // y = a·b^x + k  (asymptote y = k)
       : (x) => c.a * x ** 3 + c.b * x ** 2 + c.c * x + c.d);
-    const N = c.samples || 80;
-    const pts = [];
+    const N = c.samples || 160;
+    // Clip to the y-window by INTERPOLATING the exact boundary crossing, then breaking the
+    // polyline. (The old code clamped out-of-range points to the edge with a ±1 tolerance,
+    // which drew a flat tail where a steep arm exits the frame, or a flat floor when the
+    // vertex fell just below the window.) Now the curve leaves/enters exactly at the edge.
+    const segs = []; let cur = []; let prev = null;
+    const cross = (p, q) => { const out = p.in ? q : p; const yb = out.y > ymax ? ymax : ymin; const t = (yb - p.y) / (q.y - p.y); return [sx(p.x + t * (q.x - p.x)), sy(yb)]; };
     for (let i = 0; i <= N; i++) {
-      const x = xmin + (xmax - xmin) * i / N, y = f(x);
-      if (y >= ymin - 1 && y <= ymax + 1) pts.push([sx(x), sy(Math.max(ymin, Math.min(ymax, y)))]);
-      else if (pts.length) { pts.push(null); }
+      const x = xmin + (xmax - xmin) * i / N, y = f(x), within = y >= ymin && y <= ymax;
+      if (prev) {
+        if (prev.in && !within) { cur.push(cross(prev, { x, y })); segs.push(cur); cur = []; }   // exit: add edge crossing, break
+        else if (!prev.in && within) cur.push(cross(prev, { x, y }));                              // re-enter: add edge crossing
+      }
+      if (within) cur.push([sx(x), sy(y)]);
+      prev = { x, y, in: within };
     }
-    // split on nulls
-    const segs = []; let cur = [];
-    for (const p of pts) { if (p) cur.push(p); else if (cur.length) { segs.push(cur); cur = []; } }
     if (cur.length) segs.push(cur);
-    return segs.map(s => poly(s, "fig-stroke fig-curve")).join("");
+    return segs.map((s) => poly(s, c.dash ? "fig-stroke fig-curve fig-dash" : "fig-stroke fig-curve")).join("");
   }
   return "";
 }
