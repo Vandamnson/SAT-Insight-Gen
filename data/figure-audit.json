@@ -1,0 +1,96 @@
+{
+ "audited": 88,
+ "clean": 79,
+ "defects": [
+  {
+   "ref": 30,
+   "severity": "blocker",
+   "issue": "Grid is empty — the two system lines are not drawn, so x cannot be read",
+   "fix": "Draw both lines intersecting at x=2",
+   "origin": "insight-gen",
+   "source": "test-02",
+   "skill": "system_graph_solution",
+   "fn": "coordPlane"
+  },
+  {
+   "ref": 156,
+   "severity": "blocker",
+   "issue": "Rectangle is blank; stem says the width is shown but no '6' is labeled",
+   "fix": "Label the 6 m width (and 9 m length)",
+   "origin": "insight-gen",
+   "source": "test-73",
+   "skill": "geo_rect_area",
+   "fn": "rectangle"
+  },
+  {
+   "ref": 159,
+   "severity": "blocker",
+   "issue": "Lines labeled p/q not m/n, transversal r not t, no angle x marked, no given value",
+   "fix": "Relabel m/n/t, mark angle x, add the given angle",
+   "origin": "insight-gen",
+   "source": "test-73",
+   "skill": "geo_parallel_transversal",
+   "fn": "parallelLines"
+  },
+  {
+   "ref": 681,
+   "severity": "blocker",
+   "issue": "Dot plots show 14 & 16 points (stem says 18 each); B is not a +4 shift of A's shape",
+   "fix": "Redraw both with 18 points; B = A shifted +4 identically",
+   "origin": "mod2",
+   "source": "mod2/test-14",
+   "skill": "center_spread",
+   "fn": "dotPlot"
+  },
+  {
+   "ref": 22,
+   "severity": "major",
+   "issue": "Stem says a line is shown with P on it, but no line is drawn — only point P(3,5)",
+   "fix": "Render the line through P",
+   "origin": "insight-gen",
+   "source": "test-02",
+   "skill": "read_graph_point",
+   "fn": "coordPlane"
+  },
+  {
+   "ref": 554,
+   "severity": "minor",
+   "issue": "74° drawn lower-left at n while (a+b) is lower-right at m — alternate, not corresponding as stated",
+   "fix": "Move the 74° arc to the lower-right position at line n",
+   "origin": "mod2",
+   "source": "mod2/test-08",
+   "skill": "angles_parallel",
+   "fn": "parallelLines"
+  },
+  {
+   "ref": 163,
+   "severity": "nit",
+   "issue": "Points A,B,C,D correctly placed on two lines through O; the lines themselves are unlabeled",
+   "fix": "Optionally label lines ℓ and m",
+   "origin": "insight-gen",
+   "source": "test-73",
+   "skill": "geo_intersecting_angles",
+   "fn": "coordPlane"
+  },
+  {
+   "ref": 455,
+   "severity": "nit",
+   "issue": "Three labeled angles positioned plausibly; math yields x=35 consistent with the answer",
+   "fix": "",
+   "origin": "mod2",
+   "source": "mod2/test-04",
+   "skill": "angles_parallel",
+   "fn": "parallelLines"
+  },
+  {
+   "ref": 726,
+   "severity": "nit",
+   "issue": "Alternate-interior config correct; caption has a stray '·' separator",
+   "fix": "Remove the trailing '·' in the caption",
+   "origin": "mod2",
+   "source": "mod2/test-16",
+   "skill": "angles_parallel",
+   "fn": "parallelLines"
+  }
+ ]
+}

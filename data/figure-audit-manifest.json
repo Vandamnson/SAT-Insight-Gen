@@ -1,0 +1,648 @@
+[
+ {
+  "page": "p01.html",
+  "refs": [
+   {
+    "ref": 4,
+    "fn": "coordPlane",
+    "type": "spr",
+    "answer": "2",
+    "stem": "The graph of line  \\ell  is shown in the  xy -plane, where point  P  lies on line  \\ell . What is the  y -coordinate of point  P ?"
+   },
+   {
+    "ref": 9,
+    "fn": "coordPlane",
+    "type": "mcq",
+    "answer": "A",
+    "stem": "The graph of a quadratic function is shown in the  xy -plane. What are the coordinates of the vertex of the graph?"
+   },
+   {
+    "ref": 22,
+    "fn": "coordPlane",
+    "type": "spr",
+    "answer": "5",
+    "stem": "The graph of a line in the  xy -plane is shown. Point  P  lies on the line. What is the  y -coordinate of point  P ?"
+   },
+   {
+    "ref": 27,
+    "fn": "coordPlane",
+    "type": "mcq",
+    "answer": "D",
+    "stem": "Line  \\ell  is graphed in the  xy -plane, as shown. What is the value of  y  on line  \\ell  when  x = 4 ?"
+   },
+   {
+    "ref": 30,
+    "fn": "coordPlane",
+    "type": "mcq",
+    "answer": "B",
+    "stem": "The graph of a system of two linear equations is shown. If  (x, y)  is the solution to this system, what is the value of  x ?"
+   },
+   {
+    "ref": 55,
+    "fn": "table",
+    "type": "mcq",
+    "answer": "A",
+    "stem": "The table shows four values of  x  and their corresponding values of  y  for a linear function. Which equation represents the relationship between  x  and  y ?"
+   },
+   {
+    "ref": 62,
+    "fn": "coordPlane",
+    "type": "spr",
+    "answer": "3",
+    "stem": "The graph of line  \\ell  in the  xy -plane is shown. What is the  x -coordinate of the  x -intercept of line  \\ell ?"
+   },
+   {
+    "ref": 65,
+    "fn": "coordPlane",
+    "type": "spr",
+    "answer": "-1",
+    "stem": "The line shown in the  xy -plane passes through points  P  and  Q . What is the slope of the line?"
+   },
+   {
+    "ref": 68,
+    "fn": "coordPlane",
+    "type": "mcq",
+    "answer": "C",
+    "stem": "Which equation represents the line shown in the  xy -plane?"
+   },
+   {
+    "ref": 71,
+    "fn": "coordPlane",
+    "type": "mcq",
+    "answer": "D",
+    "stem": "The graphs of the two equations in a system of linear equations intersect at the point  P  shown in the  xy -plane. What is the solution  (x, y)  to the system?"
+   },
+   {
+    "ref": 74,
+    "fn": "coordPlane",
+    "type": "mcq",
+    "answer": "D",
+    "stem": "The graphs of the two lines of a system of linear equations are shown in the  xy -plane. How many solutions  (x, y)  does the system have?"
+   },
+   {
+    "ref": 77,
+    "fn": "coordPlane",
+    "type": "mcq",
+    "answer": "D",
+    "stem": "The shaded region in the  xy -plane is the graph of which inequality?"
+   },
+   {
+    "ref": 80,
+    "fn": "coordPlane",
+    "type": "mcq",
+    "answer": "A",
+    "stem": "Line  \\ell  is shown in the  xy -plane. Which equation represents the line that passes through the point  (-1, -2)  and is parallel to line  \\ell ?"
+   },
+   {
+    "ref": 92,
+    "fn": "coordPlane",
+    "type": "mcq",
+    "answer": "A",
+    "stem": "The shaded region in the  xy -plane is the graph of a linear inequality. Which of the following points is a solution to the inequality?"
+   },
+   {
+    "ref": 95,
+    "fn": "coordPlane",
+    "type": "mcq",
+    "answer": "A",
+    "stem": "The graph shows the solution region of a system of two linear inequalities in the  xy -plane. Which of the following points is a solution to the system?"
+   }
+  ]
+ },
+ {
+  "page": "p02.html",
+  "refs": [
+   {
+    "ref": 98,
+    "fn": "coordPlane",
+    "type": "mcq",
+    "answer": "D",
+    "stem": "The graph shown models the number of subscribers,  y , in subscribers, after  x  weeks. What does the  y -intercept of the line represent?"
+   },
+   {
+    "ref": 99,
+    "fn": "coordPlane",
+    "type": "mcq",
+    "answer": "D",
+    "stem": "The graph shown models the height of a seedling,  y , in centimeters, after  x  days. What does the slope of the line represent?"
+   },
+   {
+    "ref": 128,
+    "fn": "coordPlane",
+    "type": "spr",
+    "answer": "5",
+    "stem": "Line  \\ell  is graphed in the  xy -plane shown. Point  P  lies on line  \\ell . What is the  y -coordinate of point  P ?"
+   },
+   {
+    "ref": 138,
+    "fn": "coordPlane",
+    "type": "mcq",
+    "answer": "A",
+    "stem": "Line  \\ell  is graphed in the  xy -plane shown. Line  k  (not shown) is perpendicular to line  \\ell  and passes through the point where line  \\ell  crosses the  y -axis. Which of the following is an equation of line  k ?"
+   },
+   {
+    "ref": 140,
+    "fn": "coordPlane",
+    "type": "spr",
+    "answer": "3",
+    "stem": "The graph of the quadratic function  f  is shown in the  xy -plane. What is the  y -coordinate of the  y -intercept of the graph of  f ?"
+   },
+   {
+    "ref": 142,
+    "fn": "coordPlane",
+    "type": "mcq",
+    "answer": "A",
+    "stem": "The graph of a quadratic function  f  is shown in the  xy -plane, with its lowest point marked. What are the coordinates of the vertex of the graph of  f ?"
+   },
+   {
+    "ref": 156,
+    "fn": "rectangle",
+    "type": "mcq",
+    "answer": "C",
+    "stem": "A marine biologist studies a dolphin pod that is kept in a rectangular saltwater observation pool. The pool is  9  meters long. The width of the pool is shown in the figure. What is the area, in square meters, of the pool?"
+   },
+   {
+    "ref": 159,
+    "fn": "parallelLines",
+    "type": "spr",
+    "answer": "118",
+    "stem": "In the figure shown, lines  m  and  n  are parallel and are crossed by transversal  t . What is the measure, in degrees, of the angle marked  x ?"
+   },
+   {
+    "ref": 160,
+    "fn": "triangle",
+    "type": "mcq",
+    "answer": "B",
+    "stem": "In right triangle  ABC  shown, the right angle is at vertex  B . What is the area, in square units, of triangle  ABC ?"
+   },
+   {
+    "ref": 161,
+    "fn": "polygon",
+    "type": "spr",
+    "answer": "88",
+    "stem": "A homeowner installs a rooftop solar array that covers the entire L-shaped section of roof shown in the figure, where all dimensions are given in meters. To estimate the array's daily energy output, the installer must first determine the area of this section. What is the area, in square meters, of the L-shaped section covered by the solar array?"
+   },
+   {
+    "ref": 162,
+    "fn": "triangle",
+    "type": "mcq",
+    "answer": "B",
+    "stem": "In the triangle shown, the measure of angle  A  is  34^\\circ . What is the measure, in degrees, of angle  C ?"
+   },
+   {
+    "ref": 163,
+    "fn": "coordPlane",
+    "type": "spr",
+    "answer": "108",
+    "stem": "In the figure, lines  \\ell  and  m  intersect at point  O . The measure of  \\angle BOC  is  (5x-8)^\\circ  and the measure of  \\angle DOA  is  (3x+24)^\\circ . What is the measure, in degrees, of  \\angle AOB ?"
+   },
+   {
+    "ref": 164,
+    "fn": "triangle",
+    "type": "mcq",
+    "answer": "C",
+    "stem": "In right triangle  ABC  shown, the right angle is at vertex  B . What is the length, in units, of the hypotenuse  \\overline{AC} ?"
+   },
+   {
+    "ref": 167,
+    "fn": "triangle",
+    "type": "spr",
+    "answer": "40",
+    "stem": "Triangle  ABC  is shown, where angle  C  is a right angle. Based on the figure, what is the length, in meters, of leg  \\overline{AC} ?"
+   },
+   {
+    "ref": 168,
+    "fn": "triangle",
+    "type": "mcq",
+    "answer": "D",
+    "stem": "In right triangle  ABC  shown, the right angle is at vertex  B . Triangle  DEF  is similar to triangle  ABC , where  D ,  E , and  F  correspond to  A ,  B , and  C , respectively. If  DE = 15 , what is the length of  DF  ?"
+   }
+  ]
+ },
+ {
+  "page": "p03.html",
+  "refs": [
+   {
+    "ref": 170,
+    "fn": "triangle",
+    "type": "mcq",
+    "answer": "C",
+    "stem": "In right triangle  ABC  shown, angle  B  is a right angle and the measure of angle  A  is  60^\\circ . What is the length, in centimeters, of  \\overline{BC} ?"
+   },
+   {
+    "ref": 188,
+    "fn": "coordPlane",
+    "type": "mcq",
+    "answer": "B",
+    "stem": "Line  L  is shown in the  xy -plane. Line  k  is parallel to line  L  and passes through the point  (3, 4) . What is the  y -coordinate of the point on line  k  whose  x -coordinate is  7 ?"
+   },
+   {
+    "ref": 191,
+    "fn": "coordPlane",
+    "type": "spr",
+    "answer": "3",
+    "stem": "The graph of the function  f  is shown in the  xy -plane. What is the value of  f(0) ?"
+   },
+   {
+    "ref": 195,
+    "fn": "coordPlane",
+    "type": "spr",
+    "answer": "4",
+    "stem": "The graph of the quadratic function  f  is a parabola in the  xy -plane that crosses the  x -axis at  x = 2  and  x = 6 , as shown. The  x -coordinate of the vertex of the parabola is the average of these two  x -intercepts. What is the  x -coordinate of the vertex?"
+   },
+   {
+    "ref": 197,
+    "fn": "triangle",
+    "type": "spr",
+    "answer": "24",
+    "stem": "Triangle  ABC  is shown, with the length of each side given in units. What is the perimeter, in units, of triangle  ABC ?"
+   },
+   {
+    "ref": 205,
+    "fn": "triangle",
+    "type": "spr",
+    "answer": "60",
+    "stem": "The figure shows triangle  ABC , which represents a triangular plot of land with a right angle at  B . Using the dimensions shown in the figure, what is the area, in square meters, of the plot?"
+   },
+   {
+    "ref": 206,
+    "fn": "table",
+    "type": "mcq",
+    "answer": "D",
+    "stem": "A mobile bicycle-repair service charges a one-time service fee plus a constant hourly rate for labor. The table shows the total charge  y , in dollars, for a repair job that requires  x  hours of labor. The total charge is a linear function of the number of hours of labor. What is the total charge, in dollars, for a repair job that requires  11  hours of labor?"
+   },
+   {
+    "ref": 217,
+    "fn": "triangle",
+    "type": "spr",
+    "answer": "60",
+    "stem": "In right triangle  ABC  shown, the right angle is at vertex  B . The length of leg  AB  is  7  units greater than the length of leg  BC . What is the area, in square units, of triangle  ABC ?"
+   },
+   {
+    "ref": 389,
+    "fn": "table",
+    "type": "mcq",
+    "answer": "B",
+    "stem": "A catering company's daily profit  P(t) , in dollars, is a quadratic function of the number of trays  t  it sells in a day. The table gives  P(t)  for three values of  t . What is the maximum possible daily profit, in dollars?"
+   },
+   {
+    "ref": 391,
+    "fn": "parallelLines",
+    "type": "spr",
+    "answer": "104",
+    "stem": "Two parallel lines are cut by a transversal. At the upper intersection, the angle in the lower-right position measures  (3a+b)^\\circ . At the lower intersection, the angle in the lower-right position measures  (5a-b)^\\circ , and these two angles are corresponding angles. Also at the upper intersection, the angle adjacent to the  (3a+b)^\\circ  angle along the same parallel line (its linear pair) measures  (a+50)^\\circ . What is the value of  3a+b ?"
+   },
+   {
+    "ref": 404,
+    "fn": "table",
+    "type": "mcq",
+    "answer": "A",
+    "stem": "A caterer prepares  x  trays of pasta and  y  trays of salad. Each pasta tray costs  $5  and each salad tray costs  $7,  and the total ingredient cost may be at most  $70 . The event also requires that the total number of trays be at least 11. Thus  (x, y)  must satisfy  \\begin{cases} 5x + 7y \\le 70 \\\\ x + y \\ge 11. \\end{cases}  The table lists four candidate plans. Which plan satisfies both conditions?"
+   },
+   {
+    "ref": 410,
+    "fn": "table",
+    "type": "mcq",
+    "answer": "C",
+    "stem": "The table shows three values of the quadratic function  f . What is the value of  f(6) ?"
+   },
+   {
+    "ref": 424,
+    "fn": "parallelLines",
+    "type": "spr",
+    "answer": "98",
+    "stem": "In a bookcase, two shelf edges lie along parallel lines  p  and  q , and a diagonal support brace lies along a transversal that crosses both. The brace forms two interior angles on the same side of the transversal: one measures  (5x+8)^\\circ  where it meets shelf  p , and the other measures  (3x+28)^\\circ  where it meets shelf  q . What is the measure, in degrees, of the larger of these two angles?"
+   },
+   {
+    "ref": 427,
+    "fn": "table",
+    "type": "spr",
+    "answer": "55",
+    "stem": "In a quality-control study, each manufactured part was classified by type (Type I or Type II) and by whether it passed inspection. The counts are given in the table in terms of a positive constant  c . If a total of 121 parts were inspected, how many Type II parts passed inspection?"
+   },
+   {
+    "ref": 428,
+    "fn": "table",
+    "type": "mcq",
+    "answer": "C",
+    "stem": "The table shows three values of the linear function  f , where  a  is a constant. What is the value of  t ?"
+   }
+  ]
+ },
+ {
+  "page": "p04.html",
+  "refs": [
+   {
+    "ref": 431,
+    "fn": "triangle",
+    "type": "spr",
+    "answer": "150",
+    "stem": "In right triangle  ABC , the right angle is at  B , and the lengths of legs  AB  and  BC  are in the ratio  3:4 . The altitude drawn from  B  to the hypotenuse  AC  has length  12 . What is the area of triangle  ABC ?"
+   },
+   {
+    "ref": 435,
+    "fn": "parallelLines",
+    "type": "spr",
+    "answer": "72",
+    "stem": "In a parking lot, two painted boundary lines are parallel to each other and are crossed by a single straight access lane that acts as a transversal. As shown, the access lane forms an interior angle of  (5x+8)^\\circ  on the right side of the upper boundary line and an interior angle of  (3x+12)^\\circ  on the right side of the lower boundary line, where these two marked angles lie on the same side of the access lane. What is the measure, in degrees, of the angle that is supplementary to the  (5x+8)^\\circ  angle?"
+   },
+   {
+    "ref": 451,
+    "fn": "dotPlot",
+    "type": "mcq",
+    "answer": "A",
+    "stem": "The dot plots above show the number of defects found per inspection batch at two factory lines, Line P and Line Q, on the days they each operated. Every value in the Line Q data set is exactly 3 greater than the corresponding value in the Line P data set, and the two data sets have the same shape. Which of the following correctly compares the mean and the standard deviation of the two data sets?"
+   },
+   {
+    "ref": 455,
+    "fn": "parallelLines",
+    "type": "mcq",
+    "answer": "B",
+    "stem": "In the figure, parallel lines  p  and  q  are cut by transversal  t . The angle measures shown are in degrees. What is the value of  x ?"
+   },
+   {
+    "ref": 476,
+    "fn": "triangle",
+    "type": "spr",
+    "answer": "96",
+    "stem": "In triangle  ABC , side  AC  lies along the ground and has length 24. The altitude  BD  is drawn from vertex  B  perpendicular to  AC , meeting  AC  at point  D  between  A  and  C . The base angles satisfy  \\tan A = 1  and  \\tan C = \\frac{1}{2} . What is the area of triangle  ABC ?"
+   },
+   {
+    "ref": 493,
+    "fn": "table",
+    "type": "mcq",
+    "answer": "B",
+    "stem": "In a chemistry lab, a technician runs  x  trials of procedure I and  y  trials of procedure II in one shift. Each trial of procedure I yields 5 units of compound and each trial of procedure II yields 8 units, and the shift must produce at least 120 units total. The equipment allows at most 20 trials combined in the shift. Which pair  (x, y)  in the table satisfies both constraints?"
+   },
+   {
+    "ref": 497,
+    "fn": "table",
+    "type": "spr",
+    "answer": "2/5",
+    "stem": "A garden center surveyed 240 customers about whether they purchased rose plants and whether they purchased tulip plants. The results are shown in the table, where  k  is a positive constant. Of the customers who purchased rose plants, what fraction also purchased tulip plants? Give your answer as a decimal or fraction."
+   },
+   {
+    "ref": 499,
+    "fn": "parallelogram",
+    "type": "mcq",
+    "answer": "B",
+    "stem": "In parallelogram  ABCD  shown, the measure of angle  A  is  (2x+30)^\\circ  and the measure of angle  C  is  (3x-10)^\\circ . What is the measure, in degrees, of angle  B ?"
+   },
+   {
+    "ref": 508,
+    "fn": "scatter",
+    "type": "mcq",
+    "answer": "A",
+    "stem": "In a chemistry lab, students recorded the time, in minutes, for an adhesive to set at several different room temperatures, in degrees Celsius. The scatterplot shows the data along with the line of best fit  y = -2.5x + 60 , where  x  is the temperature in  ^\\circ C and  y  is the setting time in minutes. One trial, conducted at  8\\,^\\circ C, recorded a setting time of  52  minutes. By how many minutes does this observed setting time differ from the time predicted by the line of best fit?"
+   },
+   {
+    "ref": 515,
+    "fn": "table",
+    "type": "mcq",
+    "answer": "C",
+    "stem": "The table gives three values of the linear function  f , where  a  and  c  are constants. What is the value of  c ?"
+   },
+   {
+    "ref": 520,
+    "fn": "table",
+    "type": "mcq",
+    "answer": "C",
+    "stem": "The table gives three values of the quadratic function  P , where  P(t)=at^2+bt+c  and  a ,  b , and  c  are constants. What is the value of  P(8) ?"
+   },
+   {
+    "ref": 524,
+    "fn": "table",
+    "type": "mcq",
+    "answer": "B",
+    "stem": "A technician drains a tank at a constant rate. The table shows the volume of water  V , in gallons, remaining in the tank  t  minutes after draining begins. If draining continues at the same rate, after how many minutes will the tank be empty?"
+   },
+   {
+    "ref": 549,
+    "fn": "scatter",
+    "type": "mcq",
+    "answer": "A",
+    "stem": "A marketing analyst plotted weekly advertising spending (in hundreds of dollars),  x , against that week's sales (in thousands of dollars),  y , for 10 weeks. The scatterplot shows the data and its line of best fit,  y = 2.5x + 6 . One week the company spent  $800  on advertising and recorded  $30,000  in sales, the point  (8, 30)  on the plot. By how much, in thousands of dollars, did that week's actual sales exceed the sales predicted by the line of best fit?"
+   },
+   {
+    "ref": 551,
+    "fn": "table",
+    "type": "mcq",
+    "answer": "A",
+    "stem": "The table gives three values of the quadratic function  g , where  g(t)=at^2+bt+c  and  a ,  b , and  c  are constants. What is the value of  a ?"
+   },
+   {
+    "ref": 554,
+    "fn": "parallelLines",
+    "type": "spr",
+    "answer": "45",
+    "stem": "Lines  m  and  n  are parallel and are cut by a transversal. At line  m , the transversal forms an angle of measure  (a+b)^\\circ . At line  n , the corresponding angle measures  74^\\circ . If  a-b=16 , what is the value of  a ?"
+   }
+  ]
+ },
+ {
+  "page": "p05.html",
+  "refs": [
+   {
+    "ref": 556,
+    "fn": "table",
+    "type": "spr",
+    "answer": "3/5",
+    "stem": "A caterer served 300 guests at an event. Each guest attended exactly one of two seatings (lunch or dinner) and chose exactly one meal type (vegetarian or non-vegetarian). The table shows the distribution. What fraction of all the vegetarian guests attended the dinner seating? Give your answer as a decimal or fraction."
+   },
+   {
+    "ref": 570,
+    "fn": "table",
+    "type": "mcq",
+    "answer": "A",
+    "stem": "Consider the system of inequalities  \\begin{cases} y \\ge 2x - 3 \\\\ 3x + 2y \\le 12 \\end{cases}  The table gives four ordered pairs  (x, y) . Which ordered pair is a solution to the system?"
+   },
+   {
+    "ref": 571,
+    "fn": "dotPlot",
+    "type": "mcq",
+    "answer": "B",
+    "stem": "The dot plots above show the daily high temperature, in degrees Celsius, recorded at two weather stations, Station M and Station N, over the same 14 days. Both data sets have the same minimum value and the same maximum value. Which of the following statements must be true?"
+   },
+   {
+    "ref": 584,
+    "fn": "parallelLines",
+    "type": "spr",
+    "answer": "114",
+    "stem": "On a loading dock, two stripes are painted parallel to each other and are crossed by a single straight guide line acting as a transversal. The guide line forms an exterior angle of  (7x-4)^\\circ  on the left side above the upper stripe and an exterior angle of  (4x+26)^\\circ  on the right side below the lower stripe; these two angles are alternate exterior angles. What is the measure, in degrees, of the angle that forms a linear pair with the  (7x-4)^\\circ  angle?"
+   },
+   {
+    "ref": 594,
+    "fn": "table",
+    "type": "mcq",
+    "answer": "A",
+    "stem": "The function  g  is linear. The table shows two values of  g , where  k  is a constant. In terms of  k , what is the value of  g(0) ?"
+   },
+   {
+    "ref": 595,
+    "fn": "scatter",
+    "type": "mcq",
+    "answer": "A",
+    "stem": "In a biology lab, students recorded the air temperature (in degrees Celsius) and the number of cricket chirps per minute for 9 trials. The scatterplot shows the data and its line of best fit. According to the line of best fit, at what temperature (in  {}^\\circ \\mathrm{C} ) is the predicted number of chirps per minute equal to 96?"
+   },
+   {
+    "ref": 623,
+    "fn": "table",
+    "type": "mcq",
+    "answer": "D",
+    "stem": "In a germination trial, a sample of seeds from two batches was planted and the results are shown in the table. A farmer plans to plant 1,000 seeds from Batch B. Based on the trial, what is the expected number of these 1,000 seeds that will sprout?"
+   },
+   {
+    "ref": 626,
+    "fn": "table",
+    "type": "mcq",
+    "answer": "C",
+    "stem": "The table shows three points that lie on the same line in the  xy -plane. What is the value of  y  when  x=6 ?"
+   },
+   {
+    "ref": 647,
+    "fn": "parallelBend",
+    "type": "mcq",
+    "answer": "C",
+    "stem": "Two parallel beams lie along lines  p  and  q . A cable runs from beam  p  to a pulley located between the beams, then bends at the pulley and continues to beam  q . The cable makes a  55^\\circ  angle with beam  p , and the angle of the bend at the pulley is  130^\\circ , as shown. What is the value of  x , the measure in degrees of the angle the cable makes with beam  q ?"
+   },
+   {
+    "ref": 648,
+    "fn": "scatter",
+    "type": "mcq",
+    "answer": "A",
+    "stem": "An engineer installs strings of identical solar panels and records the predicted daily energy output, in kilowatt-hours (kWh), for arrays of different sizes. The line of best fit for the data shown is  y = 1.5x + 9 , where  x  is the number of panels and  y  is the predicted daily output. The engineer then switches to a newer panel that generates  \\frac{4}{3}  times as much energy per panel as the original, while the fixed baseline output (the value at  x = 0 ) stays the same. Using a line of best fit with this newer panel, how many panels are needed for a predicted daily output of 69 kWh?"
+   },
+   {
+    "ref": 655,
+    "fn": "parallelBend",
+    "type": "spr",
+    "answer": "83",
+    "stem": "Two parallel guide rails on a machine lie along lines  p  and  q . A straight section of cable runs from rail  p  down to a roller located between the rails, and a second straight section continues from the roller to rail  q . The first section makes a  36^\\circ  angle with rail  p , and the second section makes a  47^\\circ  angle with rail  q , as shown. What is the measure, in degrees, of the angle marked  x^\\circ  where the cable bends at the roller?"
+   },
+   {
+    "ref": 663,
+    "fn": "triangle",
+    "type": "spr",
+    "answer": "4",
+    "stem": "In a right triangle, the altitude drawn to the hypotenuse has length 6 and divides the hypotenuse into two segments. One segment has length  k  and the other has length  k+5 . What is the value of  k ?"
+   },
+   {
+    "ref": 664,
+    "fn": "table",
+    "type": "mcq",
+    "answer": "A",
+    "stem": "Consider the system of inequalities  \\begin{cases} y \\ge 2x - 3 \\\\ y < -x + 9 \\end{cases}  The table lists four candidate points  (x, y) . Which of the labeled points is a solution to the system?"
+   },
+   {
+    "ref": 677,
+    "fn": "table",
+    "type": "mcq",
+    "answer": "C",
+    "stem": "The two-way table summarizes the results of a driving test for students enrolled in a morning section and an evening section. The number of morning students who failed is not shown. It is known that if a student is selected at random from all those who failed, the probability the student was in the morning section is  \\frac{5}{8} . If a student is selected at random from all those who passed, what is the probability the student was in the evening section?"
+   },
+   {
+    "ref": 678,
+    "fn": "scatter",
+    "type": "mcq",
+    "answer": "B",
+    "stem": "A dealership recorded the resale value, in thousands of dollars, of a certain model of forklift at several ages, in years. The scatterplot shows the data along with the line of best fit  y = -1.5x + 24 , where  x  is the age in years and  y  is the resale value in thousands of dollars. According to the line of best fit, at what age is the forklift's predicted resale value equal to half of its predicted value when new?"
+   }
+  ]
+ },
+ {
+  "page": "p06.html",
+  "refs": [
+   {
+    "ref": 681,
+    "fn": "dotPlot",
+    "type": "mcq",
+    "answer": "B",
+    "stem": "The dot plots show the number of defects recorded for each of 18 production runs at Factory A and at Factory B during one week. Each value for Factory B is exactly 4 greater than the corresponding value for Factory A. Which of the following correctly compares the two data sets?"
+   },
+   {
+    "ref": 702,
+    "fn": "dotPlot",
+    "type": "mcq",
+    "answer": "C",
+    "stem": "The dot plots show the daily high temperature, in degrees Celsius, recorded on 12 days at Station A and on 12 days at Station B. Each distribution is symmetric. Which statement about the two data sets is true?"
+   },
+   {
+    "ref": 705,
+    "fn": "table",
+    "type": "mcq",
+    "answer": "A",
+    "stem": "A caterer prepares  x  small trays and  y  large trays for an event. Each small tray costs  $15  and each large tray costs  $25,  and the total cost can be at most  $240 . Each small tray provides 4 servings and each large tray provides 10 servings, and at least 80 servings are required. Which row of the table gives a pair  (x, y)  that satisfies both requirements?"
+   },
+   {
+    "ref": 717,
+    "fn": "table",
+    "type": "mcq",
+    "answer": "A",
+    "stem": "The table shows three points that lie on line  \\ell  in the  xy -plane, where  c  is a constant. If line  \\ell  crosses the  y -axis at the point  (0, -5) , what is the value of  c ?"
+   },
+   {
+    "ref": 724,
+    "fn": "triangle",
+    "type": "spr",
+    "answer": "39",
+    "stem": "In right triangle  ABC , the right angle is at vertex  C , and  \\overline{CD}  is the altitude drawn from  C  to the hypotenuse  \\overline{AB} , with point  D  on  \\overline{AB} . The length of  \\overline{AD}  is  4 , and the area of triangle  ACD  is  12 . What is the area of triangle  ABC ?"
+   },
+   {
+    "ref": 726,
+    "fn": "parallelLines",
+    "type": "spr",
+    "answer": "4.4",
+    "stem": "Two parallel guide rails on a machine lie along lines  a  and  b , and a metal rod lies along a transversal cutting both rails. The rod makes an angle of  (8x)^\\circ  with rail  a  and an alternate interior angle of  (3x+22)^\\circ  with rail  b . What is the value of  x ?"
+   },
+   {
+    "ref": 727,
+    "fn": "coordPlane",
+    "type": "mcq",
+    "answer": "B",
+    "stem": "In the  xy -plane, a line passes through the points  (-3,\\ 7)  and  (5,\\ -9) . At what value of  x  does this line cross the  x -axis?"
+   },
+   {
+    "ref": 729,
+    "fn": "scatter",
+    "type": "mcq",
+    "answer": "A",
+    "stem": "A botanist measured, for each of 10 tomato plants, the amount of a fertilizer applied (in grams per plant) and the resulting fruit yield (in grams). The scatterplot shows the data along with its line of best fit. Based on the equation of the line of best fit, which of the following best describes the predicted change in fruit yield associated with each additional 5 grams of fertilizer applied per plant?"
+   },
+   {
+    "ref": 741,
+    "fn": "table",
+    "type": "mcq",
+    "answer": "B",
+    "stem": "A dealership tracks its vehicle inventory in the table shown, where  k  is a positive constant. The dealership has 150 vehicles in total. How many SUVs were sold?"
+   },
+   {
+    "ref": 746,
+    "fn": "table",
+    "type": "mcq",
+    "answer": "D",
+    "stem": "Consider the system of inequalities  \\begin{cases} y > \\tfrac{1}{2}x + 1 \\\\ y \\le -2x + 10. \\end{cases}  The table lists four candidate points. Which point is a solution to the system?"
+   },
+   {
+    "ref": 764,
+    "fn": "dotPlot",
+    "type": "mcq",
+    "answer": "D",
+    "stem": "A commuter recorded the travel time, in minutes, for 12 trips on Route P and 12 trips on Route Q. The dot plots shown summarize the two sets of data. Which of the following statements correctly compares the two data sets?"
+   },
+   {
+    "ref": 801,
+    "fn": "table",
+    "type": "mcq",
+    "answer": "A",
+    "stem": "A point  (x, y)  satisfies the inequality  \\tfrac{3}{4}x - \\tfrac{1}{2}y \\ge 6.  The table lists four candidate points. Which point is in the solution set of the inequality?"
+   },
+   {
+    "ref": 803,
+    "fn": "table",
+    "type": "mcq",
+    "answer": "B",
+    "stem": "The table gives three values of the quadratic function  f , where  f(t)=at^2+bt+c  and  a ,  b , and  c  are constants. The equation  f(t)=0  has two real solutions. What is the smaller of the two solutions?"
+   }
+  ]
+ }
+]

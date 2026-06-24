@@ -1,0 +1,103 @@
+[
+ {
+  "key": "4d08fc32a973f24ba736adce781f37055155a55b",
+  "source": "mod2/test-02",
+  "issues": [
+   "oven internal temp of 37–53°F is absurd for a baking oven (near refrigerator temp)",
+   "temperature values incoherent with industrial oven context"
+  ]
+ },
+ {
+  "key": "09b70a06f476fd0a682a8db250692eaf3813e3b0",
+  "source": "mod2/test-05",
+  "issues": [
+   "page counts (discrete) tied to arbitrary daily pricing constant k allows fractional pages",
+   "incoherent: number of color/B&W pages in a fixed order cannot depend on the morning's cost constant",
+   "k introduced as a cost constant but equations equate it to page counts, not cost"
+  ]
+ },
+ {
+  "key": "13b87d08d101384383021e138a9cecde3d7ce92e",
+  "source": "mod2/test-10",
+  "issues": [
+   "27-ft vertical rise absurd for a loading ramp",
+   "3/4 slope (~37°) far too steep to load anything up"
+  ]
+ },
+ {
+  "key": "7342115a704108e7e443c2b05b97c5b37ea3ce0d",
+  "source": "mod2/test-12",
+  "issues": [
+   "upward-opening parabola (concave up) cannot model a mound cross-section, which should be concave down (hill-shaped)",
+   "no x-intercepts means curve never reaches ground level, incoherent for a mound resting on ground"
+  ]
+ },
+ {
+  "key": "f9fdf2a44b9e1c0e9fcc5dd88837fa6d0697d829",
+  "source": "mod2/test-12",
+  "issues": [
+   "medication in bloodstream modeled over years; drug elimination occurs in hours/days, not years",
+   "timescale physically incoherent for pharmacokinetics"
+  ]
+ },
+ {
+  "key": "bcf4fad1443b46ce7285c7100f5b284d33b88df6",
+  "source": "mod2/test-12",
+  "issues": [
+   "nonzero baseline of 9 kWh at zero panels is physically incoherent for a solar array (zero panels must yield zero output)",
+   "problem reifies this implausible y-intercept as a 'fixed baseline output' central to the model"
+  ]
+ },
+ {
+  "key": "0cc73827cd47e1d5c5f7e443ee5d4d0f2571e680",
+  "source": "mod2/test-13",
+  "issues": [
+   "arch parabola opens upward (a=2>0), giving a minimum not a peak",
+   "vertex height 7 ft is a minimum, so arch never reaches ground",
+   "left base at x=0 sits at 25 ft, not ground level",
+   "model contradicts physical shape of an arch"
+  ]
+ },
+ {
+  "key": "e448652d600e2662587488c9c227fc69cb771b23",
+  "source": "mod2/test-15",
+  "issues": [
+   "flats are discrete countable objects",
+   "6x+15y=9 has no non-negative integer solution for whole flats"
+  ]
+ },
+ {
+  "key": "6be870051aa6fb047b6887c0254b529284a85924",
+  "source": "mod2/test-17",
+  "issues": [
+   "profit model opens upward (a>0) — economically incoherent, profit should be concave-down with a maximum",
+   "positive leading coefficient implies profit grows without bound as price rises",
+   "'number of items priced above the base price' as continuous quadratic variable is contrived"
+  ]
+ },
+ {
+  "key": "734432f948ceb5ff054c11a1e4e3e910f10ca181",
+  "source": "mod2/test-17",
+  "issues": [
+   "4 m² surface cannot enclose 5 m³ (violates isoperimetric limit, max ~0.75 m³)",
+   "36 m² surface cannot hold 135 m³",
+   "tank dimensions physically impossible"
+  ]
+ },
+ {
+  "key": "9edf50c513d53cc0801489d0802c79f54927ae2a",
+  "source": "mod2/test-18",
+  "issues": [
+   "parabola opens upward (vertex min at (3,5)), cannot be an 'arch' which must be concave down"
+  ]
+ },
+ {
+  "key": "9778507a20fa9cea7891b30d7d5526bbd5f32355",
+  "source": "mod2/test-19",
+  "issues": [
+   "travel time = speed + 6/speed is physically incoherent for a fixed route",
+   "adds a speed (x) to a time (hours) — dimensionally inconsistent",
+   "model implies travel time rises as speed increases beyond √6, absurd for a delivery route"
+  ]
+ }
+]

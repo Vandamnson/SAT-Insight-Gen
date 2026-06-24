@@ -1,0 +1,53 @@
+{
+ "count": 8,
+ "drops": [
+  {
+   "idx": 0,
+   "source": "test-01",
+   "skill": "alg1_onestep_solve",
+   "origin": "insight-gen"
+  },
+  {
+   "idx": 1,
+   "source": "test-01",
+   "skill": "alg1_onestep_words",
+   "origin": "insight-gen"
+  },
+  {
+   "idx": 5,
+   "source": "test-01",
+   "skill": "open_algebra_129",
+   "origin": "insight-gen"
+  },
+  {
+   "idx": 123,
+   "source": "test-70",
+   "skill": "lin_onestep_solve",
+   "origin": "insight-gen"
+  },
+  {
+   "idx": 124,
+   "source": "test-70",
+   "skill": "lin_onestep_words",
+   "origin": "insight-gen"
+  },
+  {
+   "idx": 192,
+   "source": "test-81",
+   "skill": "percent_simple",
+   "origin": "insight-gen"
+  },
+  {
+   "idx": 223,
+   "source": "test-91",
+   "skill": "linear_equations_one_variable",
+   "origin": "insight-gen"
+  },
+  {
+   "idx": 252,
+   "source": "test-93",
+   "skill": "linear_equations_one_variable",
+   "origin": "insight-gen"
+  }
+ ]
+}
