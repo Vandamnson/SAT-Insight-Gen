@@ -41,7 +41,7 @@ function g1(r) {
     if (Math.abs(c0) > 10) continue;
     const q = parabolaFromVertex(a, h, vy), arm = a * 4 + vy;   // arm = f(h±2)
     const spec = frameForCurve([h - 2, h, h + 2, 0], [vy, c0, arm, 0]);
-    spec.curves = [q]; spec.points = [{ at: [h, vy], coords: true }];
+    spec.curves = [q]; spec.points = [{ at: [h, vy], coords: true }, { at: [0, c0], coords: true }];   // BOTH the vertex AND the y-intercept labeled — a is recoverable unambiguously (steep arms make an unlabeled crossing a coin-flip)
     if (!legible(spec)) continue;
     const s = pick(r, [4, 5, 6]) * sgn(r), ans = a * (-s - h) ** 2 + vy;   // g(0)=f(-s)
     return finish({
@@ -95,7 +95,7 @@ function g3(r) {
     if (Math.abs(c0) > 10) continue;
     const q = parabolaFromVertex(a, h, vy), arm = a * 4 + vy;
     const spec = frameForCurve([h - 2, h, h + 2, 0], [vy, c0, arm, 0]);
-    spec.curves = [q]; spec.points = [{ at: [h, vy], coords: true }];
+    spec.curves = [q]; spec.points = [{ at: [h, vy], coords: true }, { at: [0, c0], coords: true }];   // vertex AND y-intercept labeled ⇒ a is recoverable unambiguously
     if (!legible(spec)) continue;
     const b = -2 * a * h, ans = b + c0;                 // f = a x^2 + b x + c0
     return finish({

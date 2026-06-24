@@ -221,6 +221,13 @@
                 6
               ],
               "coords": true
+            },
+            {
+              "at": [
+                0,
+                -2
+              ],
+              "coords": true
             }
           ]
         }
@@ -459,6 +466,13 @@
                 7
               ],
               "coords": true
+            },
+            {
+              "at": [
+                0,
+                5
+              ],
+              "coords": true
             }
           ]
         }
@@ -695,6 +709,13 @@
               "at": [
                 -1,
                 -7
+              ],
+              "coords": true
+            },
+            {
+              "at": [
+                0,
+                -4
               ],
               "coords": true
             }
@@ -1635,6 +1656,13 @@
                 -9
               ],
               "coords": true
+            },
+            {
+              "at": [
+                0,
+                -7
+              ],
+              "coords": true
             }
           ]
         }
@@ -1841,6 +1869,13 @@
                 -6
               ],
               "coords": true
+            },
+            {
+              "at": [
+                0,
+                6
+              ],
+              "coords": true
             }
           ]
         }
@@ -2045,6 +2080,13 @@
               "at": [
                 2,
                 -8
+              ],
+              "coords": true
+            },
+            {
+              "at": [
+                0,
+                4
               ],
               "coords": true
             }
