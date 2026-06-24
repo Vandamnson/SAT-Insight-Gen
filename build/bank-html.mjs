@@ -28,43 +28,59 @@ const originOf = (it) => (String(it.source || "").startsWith("mod2/") ? "mod2" :
 /* ---- Desmos seed expressions derived from the item's own stem math ---- */
 const cleanLatex = (l) => l.replace(/\\dfrac/g, "\\frac").replace(/\\,|\\!|\\;|\\ /g, "").replace(/\\left|\\right/g, "").trim();
 const renameVar = (l, v) => (!v || v === "x" ? l : l.replace(new RegExp("(?<![A-Za-z\\\\])" + v + "(?![A-Za-z])", "g"), "x"));
-const hasY = (s) => /(?<![A-Za-z\\])y(?![A-Za-z])/.test(s);
-const nonXYvars = (s) => [...new Set((s.replace(/\\[A-Za-z]+/g, "").match(/[A-Za-z]/g) || []).filter((c) => c !== "x" && c !== "y"))];
-function desmosExprs(item) {
+const stripCmd = (s) => String(s).replace(/\\[A-Za-z]+/g, "");   // drop LaTeX commands so coefficients like "ax" still count as x (but \frac/\sqrt don't)
+const hasY = (s) => /y/.test(stripCmd(s));
+const hasX = (s) => /x/.test(stripCmd(s));
+const nonXYvars = (s) => [...new Set((stripCmd(s).match(/[A-Za-z]/g) || []).filter((c) => c !== "x" && c !== "y"))];
+// a "substantive" equation: exactly one '=', no inequality, and at least one side is
+// more than a lone symbol (so answer-definitions like "x = a" / "x = b" are dropped).
+function substantiveEq(e) {
+  if ((e.match(/=/g) || []).length !== 1 || /[<>≤≥]/.test(e)) return false;
+  const [l, r] = e.split("=");
+  const meaty = (s) => { const t = s.replace(/\s/g, ""); return t.length >= 3 || /\d/.test(t) || /[+\-*/^(){}\\]/.test(t); };
+  return meaty(l) || meaty(r);
+}
+export function desmosExprs(item) {
   const segs = item.stem || [];
   const maths = segs.filter((s) => s.t === "math").map((s) => s.v.trim());
   const blocks = segs.filter((s) => s.t === "mathblock").map((s) => s.v.trim());
   const v0 = item.incidentals?.var_name;
-  // graph an equation: if it already has y it's a relation/line → verbatim; else (one
-  // non-xy variable, or pure-x) split into y=LHS & y=RHS so the intersection = solution.
+  // graph ONE equation: relation-with-y → verbatim; "V = expr(x)" → function (V≡y);
+  // else split into y=LHS & y=RHS so the intersection x = the solution.
   const fromEq = (E) => {
     if (hasY(E)) return { kind: "relation", exprs: [cleanLatex(E)] };
+    const [l, r] = E.split("=").map((s) => s.trim());
     const vs = nonXYvars(E);
+    if (hasX(E) && vs.length === 1) {                     // "P = expr(x)" — treat the lone non-xy var as y
+      if (l === vs[0]) return { kind: "function", exprs: ["y=" + cleanLatex(r)] };
+      if (r === vs[0]) return { kind: "function", exprs: ["y=" + cleanLatex(l)] };
+    }
     if (vs.length > 1) return null;                       // multi-variable literal (e.g. P=9n+5q) → not graphable
-    const v = vs.length ? (v0 || vs[0]) : null, [l, r] = E.split("=");
+    const v = vs.length ? (v0 || vs[0]) : null;
     const g = (s) => (v ? renameVar(cleanLatex(s), v) : cleanLatex(s));
     return { kind: "solve", exprs: ["y=" + g(l), "y=" + g(r)] };
   };
-  // 1) system in \begin{cases}/aligned
+  // collect candidate equations from cases/aligned rows, standalone equation-blocks, and math segs
+  const raw = [];
   for (const b of blocks) {
     if (/\\begin\{(cases|aligned|array)\}/.test(b)) {
       const inner = b.replace(/\\begin\{[a-z]+\}(\{[^}]*\})?/i, "").replace(/\\end\{[a-z]+\}/i, "");
-      const rows = inner.split(/\\\\/).map((r) => r.trim()).filter((r) => r.includes("=") && !/[<>]/.test(r));
-      if (rows.length >= 2) { const joined = rows.join(" "); const vs = nonXYvars(joined);
-        return { kind: "system", exprs: hasY(joined) || vs.length !== 1 ? rows.map(cleanLatex) : rows.map((r) => renameVar(cleanLatex(r), v0 || vs[0])) }; }
-    }
+      inner.split(/\\\\/).forEach((r) => raw.push(r.trim()));
+    } else raw.push(b);
   }
-  // 2) two or more y= lines (e.g. a linear–nonlinear system)
-  const ylines = maths.filter((m) => /^y\s*=/.test(m) && !/[<>]/.test(m));
-  if (ylines.length >= 2) return { kind: "system", exprs: ylines.map(cleanLatex) };
-  // 3) a function definition  f(arg)=expr
+  maths.forEach((m) => raw.push(m));
+  // a function definition f(arg)=expr takes precedence (highest-precision case)
   for (const m of maths) {
     const fm = m.match(/^[A-Za-z]\s*\(\s*([A-Za-z])\s*\)\s*=\s*(.+)$/);
     if (fm) return { kind: "function", exprs: [renameVar("y=" + cleanLatex(fm[2]), fm[1])] };
   }
-  // 4) a single equation → graph it (relation verbatim, or both sides for a 1-var solve)
-  const eqs = maths.filter((m) => (m.match(/=/g) || []).length === 1 && !/[<>]/.test(m));
+  const eqs = raw.filter(substantiveEq);
   if (eqs.length === 1) return fromEq(eqs[0]) || { kind: null, exprs: [] };
+  if (eqs.length >= 2) {                                  // graph the relations that actually involve x or y
+    const rel = eqs.filter((e) => hasX(e) || hasY(e));
+    if (rel.length >= 2) return { kind: "system", exprs: rel.map(cleanLatex) };
+    if (rel.length === 1) return fromEq(rel[0]) || { kind: null, exprs: [] };
+  }
   return { kind: null, exprs: [] };
 }
 // the fast Desmos method per item category (Desmos is allowed on the digital SAT)
@@ -185,4 +201,4 @@ ${cards}
   console.log(`  origin: ${JSON.stringify(counts.origin)}`);
 }
 
-main();
+if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) main();
