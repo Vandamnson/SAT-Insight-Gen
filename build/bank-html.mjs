@@ -125,7 +125,6 @@ function main() {
   }).join("\n");
 
   const opt = (v, label, n) => `<option value="${v}">${label}${n != null ? ` (${n})` : ""}</option>`;
-  const originOpts = `<option value="all">All sources</option>` + Object.keys(counts.origin).sort().map((o) => opt(o, ORIGIN_LABEL[o] || o, counts.origin[o])).join("");
   const domOpts = `<option value="all">All domains</option>` + dorder.filter((d) => counts.domain[d]).map((d) => opt(d, DOMAIN_LABEL[d], counts.domain[d])).join("");
   const bandKeys = Object.keys(counts.band).sort((a, b) => ((a === "M2") - (b === "M2")) || a.localeCompare(b));
   const bandOpts = `<option value="all">All bands</option>` + bandKeys.map((b) => opt(b, b, counts.band[b])).join("");
@@ -134,7 +133,10 @@ function main() {
   .bankbar{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid #d7dde6;padding:12px 0;margin:0 0 18px;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
   .bankbar select,.bankbar input{font:14px inherit;padding:6px 9px;border:1px solid #c3ccd8;border-radius:8px;background:#fff}
   .bankbar input{min-width:200px;flex:1}
-  .bankbar .count{margin-left:auto;color:#647084;font-size:13px;white-space:nowrap}
+  .bankbar input[type=search]{min-width:240px;flex:2}
+  .bankbar .bk-clear{font:13px inherit;color:#647084;background:#f1f4f8;border:1px solid #c3ccd8;border-radius:8px;padding:6px 12px;cursor:pointer}
+  .bankbar .bk-clear:hover{background:#e7ebf1}
+  .bankbar .count{margin-left:auto;color:#647084;font-size:13px;white-space:nowrap;font-variant-numeric:tabular-nums}
   .bankitem{margin:0 0 14px}
   .bk-meta{display:flex;gap:8px;flex-wrap:wrap;align-items:center;font-size:12px;color:#647084;margin:0 0 -6px}
   .bk-meta span{background:#eef2f7;border-radius:5px;padding:1px 7px}
@@ -153,13 +155,15 @@ function main() {
   const filterJS = `<script>
   (function(){
     const items=[].slice.call(document.querySelectorAll('.bankitem'));
-    const o=document.getElementById('f-origin'),d=document.getElementById('f-domain'),b=document.getElementById('f-band'),t=document.getElementById('f-type'),q=document.getElementById('f-search'),c=document.getElementById('f-count');
+    const d=document.getElementById('f-domain'),b=document.getElementById('f-band'),t=document.getElementById('f-type'),q=document.getElementById('f-search'),c=document.getElementById('f-count'),clr=document.getElementById('f-clear');
     function apply(){
-      const ov=o.value,dv=d.value,bv=b.value,tv=t.value,qv=q.value.toLowerCase().trim();let n=0;
-      for(const el of items){const ok=(ov==='all'||el.dataset.origin===ov)&&(dv==='all'||el.dataset.domain===dv)&&(bv==='all'||el.dataset.band===bv)&&(tv==='all'||el.dataset.type===tv)&&(!qv||el.dataset.q.indexOf(qv)>=0);el.classList.toggle('hide',!ok);if(ok)n++;}
-      c.textContent='showing '+n+' of '+items.length;
+      const dv=d.value,bv=b.value,tv=t.value,qv=q.value.toLowerCase().trim();let n=0;
+      for(const el of items){const ok=(dv==='all'||el.dataset.domain===dv)&&(bv==='all'||el.dataset.band===bv)&&(tv==='all'||el.dataset.type===tv)&&(!qv||el.dataset.q.indexOf(qv)>=0);el.classList.toggle('hide',!ok);if(ok)n++;}
+      c.textContent=n===items.length?(items.length+' items'):(n+' of '+items.length);
     }
-    [o,d,b,t].forEach(e=>e.addEventListener('change',apply));q.addEventListener('input',apply);apply();
+    [d,b,t].forEach(e=>e.addEventListener('change',apply));q.addEventListener('input',apply);
+    if(clr)clr.addEventListener('click',function(){d.value='all';b.value='all';t.value='all';q.value='';apply();q.focus();});
+    apply();
   })();</script>`;
 
   // Desmos: lazy-instantiate a calculator the first time a "Graph in Desmos" button is clicked.
@@ -175,15 +179,14 @@ function main() {
     try{(JSON.parse(g.dataset.dz||'[]')).forEach((l,i)=>calc.setExpression({id:'e'+i,latex:l}));}catch(err){}
   });</script>`;
 
-  const srcSummary = Object.entries(counts.origin).map(([k, v]) => `${ORIGIN_LABEL[k]} ${v}`).join(" · ");
   const indexHtml = head(`Item Bank (${items.length}) — SAT-Insight-Gen`, 2) + FIG_OPT_CSS + CSS + `
-<header class="masthead"><h1>Item Bank</h1><p class="sub">${items.length} items · ${srcSummary} · ${Object.keys(counts.domain).length} domains · worked solutions inline · ${withDesmos} with Desmos graphs</p></header>
+<header class="masthead"><h1>Item Bank</h1><p class="sub">${items.length} items · ${Object.keys(counts.domain).length} domains · bands B1–B7 · worked solutions + Desmos shortcuts</p></header>
 <div class="bankbar">
-  <select id="f-origin">${originOpts}</select>
+  <input id="f-search" type="search" placeholder="Search stems &amp; skills…" autocomplete="off">
   <select id="f-domain">${domOpts}</select>
   <select id="f-band">${bandOpts}</select>
   <select id="f-type"><option value="all">All types</option><option value="mcq">Multiple choice</option><option value="spr">Student-response</option></select>
-  <input id="f-search" type="search" placeholder="search stems / skills…" autocomplete="off">
+  <button id="f-clear" type="button" class="bk-clear">Clear</button>
   <span class="count" id="f-count"></span>
 </div>
 <main class="qs">
