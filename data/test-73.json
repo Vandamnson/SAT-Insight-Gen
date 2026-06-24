@@ -107,10 +107,11 @@
       "figure": {
         "fn": "rectangle",
         "spec": {
-          "length": 9,
-          "width": 6,
-          "lengthLabel": "9 m",
-          "widthLabel": "6 m"
+          "labels": {
+            "bottom": "9 m",
+            "left": "6 m"
+          },
+          "title": "rectangle (not to scale)"
         },
         "caption": "A rectangular observation pool with a width of 6 meters."
       },
@@ -523,21 +524,22 @@
       "figure": {
         "fn": "parallelLines",
         "spec": {
-          "lines": [
-            "m",
-            "n"
-          ],
-          "transversal": "t",
-          "given": {
-            "at": "m",
-            "position": "upper-right",
-            "value": 118
-          },
-          "unknown": {
-            "at": "n",
-            "position": "upper-right",
-            "label": "x"
-          }
+          "transversalAngleDeg": 58,
+          "upperLabel": "m",
+          "lowerLabel": "n",
+          "transversalLabel": "t",
+          "angles": [
+            {
+              "at": "upper",
+              "pos": "top-right",
+              "text": "118°"
+            },
+            {
+              "at": "lower",
+              "pos": "top-right",
+              "text": "x°"
+            }
+          ]
         },
         "caption": "Parallel lines m and n are crossed by transversal t."
       },

@@ -17,3 +17,18 @@ _2026-06-23 · 88 figure-bearing items rendered + screenshotted; each judged aga
 | #726 | **nit** | mod2 · parallelLines · angles_parallel | Alternate-interior config correct; caption has a stray '·' separator | Remove the trailing '·' in the caption |
 
 > Blockers/major are items whose figure fails to depict the problem (missing line/grid/label) — they should be fixed or dropped in the follow-up pass. Nits are cosmetic. All other 79 figures correctly match their stem + answer.
+
+## Resolution (2026-06-24) — all real defects fixed; 2 "blockers" were screenshot artifacts
+
+Re-rendered each flagged item **isolated at full resolution** before editing. Root cause of the real defects: early-Insight-Gen items carried **old figure-spec formats** the current `figures.js` renderers don't read.
+
+| ref | verdict | fix |
+|---|---|---|
+| #22, #30 (+ a 3rd: test-70) | **real** — coordPlane curves were bare `{m,b}` with no `type`, so `renderCurve` skipped them | **Renderer fix**: `renderCurve` now treats a typeless `{m,b}` as a line (`figures/figures.js`). Lines/systems now draw. |
+| #156 | **real** — rectangle spec used `lengthLabel/widthLabel` (renderer wants `labels.{bottom,left}`) | **Spec patch**: now labels "9 m" / "6 m"; 9×6=54 ✓ (`build/fig-patch.mjs`). |
+| #159 | **real** — parallelLines spec used old `{lines,transversal,given,unknown}` (renderer wants `{upperLabel,lowerLabel,angles[]}`) | **Spec patch**: now lines m/n, transversal t, 118° + x° as corresponding angles ⇒ x=118 ✓. |
+| #681 | **FALSE POSITIVE** — spec is correct (A & B both 18 dots, B = A shifted +4); agent miscounted from the downscaled full-page screenshot | none (verified at full res). |
+| #554 | **FALSE POSITIVE** — spec places both angles bottom-right (corresponding); the agent misread the wedge at low res | none. |
+| #163, #455, #726 | cosmetic nits (unlabeled lines / caption "·") | left as-is. |
+
+Verified: `figures/verify-all.mjs` gate passes (no regression); fixed items re-rendered + visually confirmed. **Lesson:** run figure-vs-problem vision checks on **isolated, full-resolution** renders — downscaled multi-item page screenshots cause dot-miscounts and wedge misreads.

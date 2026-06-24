@@ -176,6 +176,7 @@ export function coordPlane(spec) {
 }
 
 function renderCurve(c, sx, sy, xmin, xmax, ymin, ymax) {
+  if (!c.type && typeof c.m === "number") c = { ...c, type: "line" };   // legacy specs: bare {m,b} ⇒ a line
   if (c.type === "line" || c.type === "line2pt") {
     let m, b;
     if (c.type === "line2pt") { m = (c.p2[1] - c.p1[1]) / (c.p2[0] - c.p1[0]); b = c.p1[1] - m * c.p1[0]; }
