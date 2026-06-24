@@ -18,7 +18,7 @@ import { dirname, join } from "node:path";
 import { drawCell } from "./cell.mjs";
 import { rationale } from "./rationale.mjs";
 import { authorItem } from "./author2.mjs";
-import { verifyAndGate, surfaceDup } from "./selector.mjs";
+import { verifyAndGate, surfaceDup, seedBankDedup } from "./selector.mjs";
 import { appendToBank } from "./bank.mjs";
 import { measureFromRadicals, radicalsForBand, BANDS, bandIndex } from "../difficulty/lltm.mjs";
 
@@ -259,6 +259,12 @@ export async function generateDomain(domain, { perCell = 1, bands = BANDS, testN
 
 async function main() {
   console.log(`BUILD_SPEC four-agent pipeline — over-generate ×${OVER}, concurrency ${CAP}`);
+  if (process.env.SIG_BANK_DEDUP === "1") {
+    const bankFile = join(ROOT, "data", "item-bank.jsonl");
+    const bankItems = existsSync(bankFile) ? readFileSync(bankFile, "utf8").trim().split("\n").filter(Boolean).map((l) => JSON.parse(l)) : [];
+    const seeded = seedBankDedup(bankItems);
+    console.log(`bank-dedup ON — seeded ${seeded.surface} surface shingles + ${seeded.structural} structural fingerprints from ${bankItems.length} bank items`);
+  }
   if (process.argv[2] === "--domain") {
     const domain = process.argv[3] || "algebra";
     const perCell = Number(process.argv[4] || 1);

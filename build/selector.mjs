@@ -22,6 +22,7 @@ import { fingerprint, structuralDistance } from "./fingerprint.mjs";
 // solve-path; a clone is routed to the double-gate to be revised into a different
 // structure. Enabled by SIG_STRUCT_DEDUP=1 (or whenever SIG_RESKIN_FLOOR is set).
 const seenFingerprints = new Set();
+const bankShingles = [];   // surface shingles of the persistent bank, seeded for cross-run dedup
 const STRUCT_DEDUP = process.env.SIG_STRUCT_DEDUP === "1" || process.env.SIG_RESKIN_FLOOR != null;
 // real-world plausibility gate (context items only) — ON by default; SIG_PLAUSIBILITY=0 disables.
 const PLAUSIBILITY = process.env.SIG_PLAUSIBILITY !== "0";
@@ -37,10 +38,27 @@ function shingles(text) {
 }
 function jaccard(a, b) { let i = 0; for (const x of a) if (b.has(x)) i++; const u = a.size + b.size - i; return u ? i / u : 0; }
 
-/** surfaceDup(cand, kept, threshold) -> true if too close to an already-kept item. */
+/** surfaceDup(cand, kept, threshold) -> true if too close to an already-kept item
+ *  OR (when seeded) to any item in the persistent bank. */
 export function surfaceDup(cand, kept, threshold = Number(process.env.SIG_DEDUP ?? 0.6)) {
-  const sh = shingles(cand.statement || "");
+  const sh = cand._sh || (cand._sh = shingles(cand.statement || ""));
+  if (bankShingles.some((b) => jaccard(sh, b) >= threshold)) return true;
   return kept.some((k) => jaccard(sh, k._sh || (k._sh = shingles(k.statement || ""))) >= threshold);
+}
+
+/** seedBankDedup(items) — load the persistent bank's surface shingles + structural
+ *  fingerprints so generation dedups against the WHOLE bank, not just this run.
+ *  (Bank items store `stem` segments + a `fingerprint` op-array; Mod2 items lack a
+ *  fingerprint so they contribute surface-only.) Call before generating. */
+export function seedBankDedup(items) {
+  const stemText = (stem) => (Array.isArray(stem) ? stem : []).map((s) => s.v || "").join(" ");
+  let s = 0, f = 0;
+  for (const it of items) {
+    const txt = stemText(it.stem); if (txt) { bankShingles.push(shingles(txt)); s++; }
+    const fp = Array.isArray(it.fingerprint) ? it.fingerprint : null;
+    if (fp && fp.length) { seenFingerprints.add(fp.join(">")); f++; }
+  }
+  return { surface: s, structural: f };
 }
 
 /** verifyAndGate(cand, cell) -> { keep, stage, ... }. The per-candidate gate:
