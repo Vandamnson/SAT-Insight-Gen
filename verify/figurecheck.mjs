@@ -12,6 +12,13 @@
 const EPS = 1e-9;
 const lines = (spec) => (spec.curves || []).filter((c) => c.type === "line");
 const onLine = (c, x, y) => Math.abs(c.m * x + c.b - y) < EPS;
+// nonlinear curves (ADV-2)
+const quads = (spec) => (spec.curves || []).filter((c) => c.type === "quadratic");
+const exps = (spec) => (spec.curves || []).filter((c) => c.type === "exponential");
+const onQuad = (c, x, y) => Math.abs(c.a * x * x + c.b * x + c.c - y) < 1e-6;
+const onExp = (c, x, y) => Math.abs(c.a * Math.pow(c.b, x) + (c.k || 0) - y) < 1e-6 * Math.max(1, Math.abs(y));
+const vtxOf = (c) => { const h = -c.b / (2 * c.a); return [h, c.a * h * h + c.b * h + c.c]; };
+const NONLINEAR = new Set(["read_yint", "read_feature", "interpret_feature_graph", "connect_translation_graph"]);
 
 export function figureCheck(cell) {
   const num0 = cell?.incidentals?.numbers;
@@ -24,6 +31,14 @@ export function figureCheck(cell) {
     if (opts.length !== 4) return { keep: false, reason: `expected 4 option figures, got ${opts.length}` };
     if (ci < 0 || ci > 3) return { keep: false, reason: `bad correct_choice "${num0.correct_choice}"` };
     const matches = (spec) => {
+      if (t.kind === "parabola") {   // graph_from_eq (parabola): match leading sign + vertex
+        const q = (spec.curves || []).find((c) => c.type === "quadratic"); if (!q) return false;
+        const [h, k] = vtxOf(q); return q.a === t.a && Math.abs(h - t.h) < EPS && Math.abs(k - t.k) < EPS;
+      }
+      if (t.kind === "exp") {        // graph_from_eq (exponential): match coefficient, base, asymptote
+        const e = (spec.curves || []).find((c) => c.type === "exponential"); if (!e) return false;
+        return e.a === t.a && e.b === t.b && (e.k || 0) === (t.k || 0);
+      }
       const cs = (spec.curves || []).filter((c) => c.type === "line");
       if (t.lines) {   // system_to_graph: the line SET must match (unordered)
         return cs.length === t.lines.length
@@ -43,11 +58,15 @@ export function figureCheck(cell) {
 
   const fig = num0?.figure;
   if (!fig || fig.fn !== "coordPlane") return { keep: false, reason: "graph item missing coordPlane figure" };
-  const spec = fig.spec, ls = lines(spec);
+  const spec = fig.spec;
+  const num = cell.incidentals.numbers, task = num.task;
+
+  // nonlinear graph tasks (ADV-2): parabola / exponential — no line required
+  if (NONLINEAR.has(task)) return checkNonlinear(task, num, spec);
+
+  const ls = lines(spec);
   if (!ls.length) return { keep: false, reason: "graph figure has no line" };
   for (const c of ls) if (typeof c.m !== "number" || typeof c.b !== "number") return { keep: false, reason: "line missing m/b" };
-
-  const num = cell.incidentals.numbers, task = num.task;
 
   // "which point is a solution" (point_in_region / feasible_region): the figure shows
   // the shaded region(s); the OPTIONS are points. Each region's boundary must be drawn,
@@ -93,6 +112,57 @@ export function figureCheck(cell) {
     if (!ls.some((c) => c.m === m && c.b === b)) return { keep: false, reason: "boundary line does not match the shaded line" };
   }
 
+  return { keep: true };
+}
+
+/* ADV-2 nonlinear single-figure self-consistency (parabola / exponential). The answer is
+   known by construction; this guards drawer bugs: the asked feature is actually the
+   figure's feature, and any marked point lies on a drawn curve. */
+function checkNonlinear(task, num, spec) {
+  const qs = quads(spec), es = exps(spec), ls = lines(spec);
+  if (!qs.length && !es.length) return { keep: false, reason: "nonlinear graph has no parabola/exponential curve" };
+  const okChoice = ["A", "B", "C", "D"].includes(num.correct_choice);
+
+  if (task === "read_yint") {
+    const curve = qs[0] || es[0];
+    const yint = qs.length ? curve.c : curve.a + (curve.k || 0);   // parabola: c; exponential: a + k
+    if (String(yint) !== String(num.answer)) return { keep: false, reason: `figure y-intercept ${yint} != answer ${num.answer}` };
+    return { keep: true };
+  }
+
+  if (task === "read_feature") {
+    for (const p of (spec.points || [])) {     // every marked point lies on a drawn curve
+      const on = qs.some((c) => onQuad(c, p.at[0], p.at[1])) || es.some((c) => onExp(c, p.at[0], p.at[1])) || ls.some((c) => onLine(c, p.at[0], p.at[1]));
+      if (!on) return { keep: false, reason: `marked point ${JSON.stringify(p.at)} off every curve` };
+    }
+    const ans = Number(num.answer), fp = num.fingerprint || [];
+    if (fp.includes("vertex")) {
+      const [h, k] = vtxOf(qs[0]);
+      if (ans !== h && ans !== k) return { keep: false, reason: `vertex answer ${ans} is neither h=${h} nor k=${k}` };
+    } else if (fp.includes("zero")) {
+      if (!qs.length || Math.abs(qs[0].a * ans * ans + qs[0].b * ans + qs[0].c) > 1e-6) return { keep: false, reason: `x=${ans} is not a zero of the parabola` };
+    } else if (fp.includes("intersection")) {
+      const L = ls[0];
+      if (!L || !qs.length) return { keep: false, reason: "intersection feature needs a line and a parabola" };
+      const yL = L.m * ans + L.b, yQ = qs[0].a * ans * ans + qs[0].b * ans + qs[0].c;
+      if (Math.abs(yL - yQ) > 1e-6) return { keep: false, reason: `x=${ans} is not an intersection (line ${yL} vs parabola ${yQ})` };
+    }
+    return { keep: true };
+  }
+
+  if (task === "interpret_feature_graph") {   // text-choice MCQ; correct_choice set by construction
+    if (!okChoice) return { keep: false, reason: `bad correct_choice "${num.correct_choice}"` };
+    return { keep: true };
+  }
+
+  if (task === "connect_translation_graph") {  // drawn parabola's vertex+leading must equal the keyed equation's
+    const t = num.target || {};
+    if (!qs.length) return { keep: false, reason: "connect item has no parabola" };
+    const [h, k] = vtxOf(qs[0]);
+    if (qs[0].a !== t.a || Math.abs(h - t.h) > EPS || Math.abs(k - t.k) > EPS) return { keep: false, reason: `drawn vertex (${h},${k},a=${qs[0].a}) != target (${t.h},${t.k},a=${t.a})` };
+    if (!okChoice) return { keep: false, reason: `bad correct_choice "${num.correct_choice}"` };
+    return { keep: true };
+  }
   return { keep: true };
 }
 

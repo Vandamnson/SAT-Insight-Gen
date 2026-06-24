@@ -152,6 +152,20 @@ export function coordPlane(spec) {
     }
   }
 
+  // dashed reference guides — axis of symmetry (kind "v") / asymptote (kind "h").
+  // drawn under the curves (the solid curve overlays) but over the grid/axes.
+  for (const g of spec.guides || []) {
+    if (g.kind === "v") {
+      const gx = sx(g.at);
+      out.push(line(gx, T, gx, B, "fig-stroke fig-dash"));
+      if (g.label) { const w = textW(g.label); out.push(txt(gx + 5, T + 7, g.label, { anchor: "start", baseline: "hanging" })); placer.reserve(gx + 4, T + 1, gx + 6 + w, T + 15); }   // beside the line, not struck through by it
+    } else if (g.kind === "h") {
+      const gy = sy(g.at);
+      out.push(line(L, gy, R, gy, "fig-stroke fig-dash"));
+      if (g.label) { const w = textW(g.label); out.push(txt(R - 3, gy - 5, g.label, { anchor: "end" })); placer.reserve(R - 3 - w, gy - 13, R - 3, gy - 1); }
+    }
+  }
+
   // curves — render, and reserve obstacle boxes along them so point labels dodge the line
   for (const c of spec.curves || []) {
     out.push(renderCurve(c, sx, sy, xmin, xmax, ymin, ymax));
@@ -162,14 +176,15 @@ export function coordPlane(spec) {
   for (const p of spec.points || []) {
     const [px, py] = [sx(p.at[0]), sy(p.at[1])];
     out.push(p.fill === "open" ? circ(px, py, 3.2, "fig-open", `stroke-width="1.4"`) : circ(px, py, 3.2, "fig-marker"));
-    if (p.label) {
-      const pos = placer.place(px, py, p.label, { gap: 10, bounds: { x0: 2, y0: 2, x1: W - 2, y1: H - 2 } });
+    const labelText = p.coords ? `(${fmt(p.at[0])}, ${fmt(p.at[1])})` : p.label;   // coords:true → label the point with its coordinates
+    if (labelText) {
+      const pos = placer.place(px, py, labelText, { gap: 10, bounds: { x0: 2, y0: 2, x1: W - 2, y1: H - 2 } });
       // hard clamp the label box inside the frame so an edge point can never clip
-      const lw = textW(p.label, FONT - 0.5), lh = FONT - 0.5;
+      const lw = textW(labelText, FONT - 0.5), lh = FONT - 0.5;
       const bx0 = pos.anchor === "end" ? pos.x - lw : pos.anchor === "middle" ? pos.x - lw / 2 : pos.x;
       let dx = 0; if (bx0 < 2) dx = 2 - bx0; else if (bx0 + lw > W - 2) dx = (W - 2) - (bx0 + lw);
       let dy = 0; if (pos.y - lh / 2 < 2) dy = 2 - (pos.y - lh / 2); else if (pos.y + lh / 2 > H - 2) dy = (H - 2) - (pos.y + lh / 2);
-      out.push(txt(pos.x + dx, pos.y + dy, p.label, { anchor: pos.anchor, size: FONT - 0.5 }));
+      out.push(txt(pos.x + dx, pos.y + dy, labelText, { anchor: pos.anchor, size: FONT - 0.5 }));
     }
   }
   return svg(W, H, defs() + out.join(""), { aria: spec.title || "coordinate plane" });
@@ -189,9 +204,10 @@ function renderCurve(c, sx, sy, xmin, xmax, ymin, ymax) {
   if (c.type === "segment") {
     return line(sx(c.p1[0]), sy(c.p1[1]), sx(c.p2[0]), sy(c.p2[1]), "fig-stroke fig-curve", c.dash ? `stroke-dasharray="4 3"` : "");
   }
-  if (c.type === "fn" || c.type === "quadratic" || c.type === "cubic") {
-    const f = c.f || (c.type === "quadratic"
-      ? (x) => c.a * x * x + c.b * x + c.c
+  if (c.type === "fn" || c.type === "quadratic" || c.type === "cubic" || c.type === "exponential") {
+    const f = c.f || (
+      c.type === "quadratic" ? (x) => c.a * x * x + c.b * x + c.c
+      : c.type === "exponential" ? (x) => c.a * Math.pow(c.b, x) + (c.k || 0)   // y = a·b^x + k  (asymptote y = k)
       : (x) => c.a * x ** 3 + c.b * x ** 2 + c.c * x + c.d);
     const N = c.samples || 80;
     const pts = [];

@@ -192,6 +192,11 @@ function drawRadicalRational(rad, { context }) {
   return mf("Give a complex equation or formula relating several variables (with a square, a root, or a fraction); ask which expression equals a specified variable of interest when solved for it.", ctx, { mcq: true });
 }
 
+/* ===== advanced math: nonlinear GRAPHS (Tier C, construct-backward in graph.mjs) =====
+   All tasks are graph tasks — the harness pins figure + answer (+ distractors); NO LLM.
+   Difficulty is set by the cell's LLTM task weight, not here. */
+function drawNonlinearGraph(rad, { r, band }) { return drawGraphItem(rad.task, band, r); }
+
 const DRAWERS = {
   linear_equations_one_variable: drawOneVar,
   linear_equations_two_variables: drawTwoVar,
@@ -201,6 +206,7 @@ const DRAWERS = {
   nonlinear_functions_models: drawNonlinearModel,
   polynomial_expressions: drawPolyExpr,
   radical_rational_equations: drawRadicalRational,
+  nonlinear_graphs: drawNonlinearGraph,
 };
 
 // tasks the real SAT poses ABSTRACTLY (bare equation/lines, no scenario) — they ask

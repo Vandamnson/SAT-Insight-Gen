@@ -15,9 +15,11 @@ import { dirname, join } from "node:path";
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const BANK = join(ROOT, "data", "item-bank.jsonl");
 
-// content identity — two items with the same domain/band/type/stem/options/answer are the same item
+// content identity — two items with the same domain/band/type/stem/options/answer are the same
+// item. The figure is part of the identity too: graph items (templated stems, same answer) differ
+// ONLY in their figure, so without it distinct graphs would collapse to one.
 const keyOf = (q) => createHash("sha1")
-  .update(JSON.stringify({ d: q.domain, b: q.band || q.target_band, t: q.type, stem: q.stem, options: q.options || null, answer: q.answer }))
+  .update(JSON.stringify({ d: q.domain, b: q.band || q.target_band, t: q.type, stem: q.stem, options: q.options || null, answer: q.answer, fig: q.figure || null }))
   .digest("hex");
 
 export function loadBankKeys() {

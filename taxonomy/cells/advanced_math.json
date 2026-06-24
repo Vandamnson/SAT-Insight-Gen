@@ -1,5 +1,5 @@
 {
-  "_note": "CELL SCHEMA — ADVANCED MATH. `task` is the rubric attribute (primary difficulty radical); boolean modifiers nudge ±1 band. `statementByTask` maps each task to its exact Skills-Insight statement (so interpret≠create, rewrite≠solve, and a skill's statement reflects its rubric home regardless of measured band); `statementByBand` is the fallback. LLTM weight places each task at its rubric band. task_tier routes Tier A (PROVE) / B (self-consistency). figureLoad:req statements (ADV.B1.s1, ADV.B2.s1) are Phase ADV-2. KNOWN GAP (deferred): exponential models — exp_model_use/create_model(exp) tasks exist but are quadratic-dominated in practice; force exponential draws when generating.",
+  "_note": "CELL SCHEMA — ADVANCED MATH. `task` is the rubric attribute (primary difficulty radical); boolean modifiers nudge ±1 band. `statementByTask` maps each task to its exact Skills-Insight statement (so interpret≠create, rewrite≠solve, and a skill's statement reflects its rubric home regardless of measured band); `statementByBand` is the fallback. LLTM weight places each task at its rubric band. task_tier routes Tier A (PROVE) / B (self-consistency) / C (figure self-consistency, construct-backward). figureLoad:req statements (ADV.B1.s1, ADV.B2.s1) are served by the nonlinear_graphs subdomain (Phase ADV-2). KNOWN GAP (deferred): exponential models — exp_model_use/create_model(exp) tasks exist but are quadratic-dominated in practice; force exponential draws when generating.",
   "domain": "advanced_math",
   "tier": "A",
   "band_cuts": { "edges": [370, 420, 470, 550, 610, 680] },
@@ -68,6 +68,27 @@
       "task_tier": { "solve_abs_value": "A", "solve_radical": "A", "solve_rational": "A", "nonlinear_system": "A", "unknown_constant": "A", "solve_formula": "A" },
       "canonical_fingerprint": ["isolate_radical", "square_both_sides"],
       "op_vocab": ["isolate_radical", "square_both_sides", "check_extraneous", "clear_denominator", "cross_multiply", "split_absolute_value", "substitute_eliminate", "solve_quadratic", "back_substitute", "isolate_variable", "apply_condition"]
+    },
+    "nonlinear_graphs": {
+      "label": "Reading & connecting nonlinear graphs (parabola / exponential)",
+      "target": "read a feature off a nonlinear graph, match a graph to its equation, or interpret/connect a graph",
+      "_note": "Tier C (construct-backward, NO LLM): the FIGURE is the source of truth, so the harness pins figure+answer(+distractors) and the selector checks figure self-consistency + legibility. Band is set by the task radical alone (anchors B1/B2/B5/B6); curve type (parabola/exponential), context, and single-vs-(lin+nonlinear)-system are picked INSIDE the builder — all rubric-equivalent within their band (ADV.B2.s1 bundles 'a nonlinear function OR a system of a linear and a nonlinear function'). Closes the figureLoad:req statements ADV.B1.s1 + ADV.B2.s1.",
+      "statementByBand": { "B1": "ADV.B1.s1", "B2": "ADV.B2.s1", "B5": "ADV.B5.s1", "B6": "ADV.B6.s2" },
+      "statementByTask": {
+        "read_yint": "ADV.B1.s1",
+        "read_feature": "ADV.B2.s1",
+        "graph_from_eq": "ADV.B5.s1",
+        "interpret_feature_graph": "ADV.B6.s2",
+        "connect_translation_graph": "ADV.B6.s3"
+      },
+      "radical_axes": {
+        "task": ["read_yint", "read_feature", "graph_from_eq", "interpret_feature_graph", "connect_translation_graph"]
+      },
+      "incidental_axes": { "context": "@contexts", "var_name": ["x", "t", "n"], "coefficient_range": [1, 3], "constant_range": [1, 9] },
+      "lltm": { "weights": { "w0": 340, "task": { "read_yint": 0, "read_feature": 55, "graph_from_eq": 240, "interpret_feature_graph": 305, "connect_translation_graph": 305 } } },
+      "task_tier": { "read_yint": "C", "read_feature": "C", "graph_from_eq": "C", "interpret_feature_graph": "C", "connect_translation_graph": "C" },
+      "canonical_fingerprint": ["read_graph"],
+      "op_vocab": ["read_graph", "identify_intercept", "find_vertex", "identify_asymptote", "find_zero", "read_intersection", "match_representation", "apply_translation", "interpret_meaning"]
     }
   }
 }

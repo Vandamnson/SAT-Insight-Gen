@@ -13,7 +13,9 @@
    solve_path, fingerprint, figure:{fn:"coordPlane", spec}, harness:true }.
    ============================================================================ */
 
-export const GRAPH_TASKS = ["read_value", "slope_from_points", "connect_graph", "system_read", "system_count", "inequality_region", "parallel_perp_graph", "equation_to_graph", "inequality_to_graph", "system_to_graph", "point_in_region", "feasible_region", "interpret_graph_context"];
+export const GRAPH_TASKS = ["read_value", "slope_from_points", "connect_graph", "system_read", "system_count", "inequality_region", "parallel_perp_graph", "equation_to_graph", "inequality_to_graph", "system_to_graph", "point_in_region", "feasible_region", "interpret_graph_context",
+  // advanced math (ADV-2) — nonlinear graphs
+  "read_yint", "read_feature", "graph_from_eq", "interpret_feature_graph", "connect_translation_graph"];
 
 /* ---- small helpers ---- */
 const randint = (r, lo, hi) => lo + Math.floor(r() * (hi - lo + 1));
@@ -412,6 +414,257 @@ function gInterpretGraphContext(r) {
   };
 }
 
+/* ======================= ADVANCED-MATH nonlinear graphs (ADV-2) =======================
+   Construct-backward parabola/exponential GRAPH items — same Tier-C contract as the linear
+   builders above (figure pins the answer; which-graph items pin the distractors too). Curve
+   type (parabola/exponential), context, and single-vs-(line+parabola) are chosen HERE — all
+   rubric-equivalent within the band (ADV.B2.s1 bundles "a nonlinear function OR a system of a
+   linear and a nonlinear function"); the cell's LLTM task weight sets the band. ----------- */
+
+// exact integer-coefficient curve construction
+const parabolaFromRoots = (a, r1, r2) => ({ type: "quadratic", a, b: -a * (r1 + r2), c: a * r1 * r2 });
+const parabolaFromVertex = (a, h, k) => ({ type: "quadratic", a, b: -2 * a * h, c: a * h * h + k });
+const parabVertex = (q) => { const h = -q.b / (2 * q.a); return [h, q.a * h * h + q.b * h + q.c]; };
+const expCurve = (a, b, k = 0) => ({ type: "exponential", a, b, k });
+
+// tex: standard form "ax^2 + bx + c", vertex form "a(x-h)^2 + k", exponential "a·b^x + k"
+function quadTex(q, v = "x") {
+  const { a, b, c } = q;
+  let s = a === 1 ? `${v}^2` : a === -1 ? `-${v}^2` : `${a}${v}^2`;
+  if (b) s += ` ${b < 0 ? "-" : "+"} ${Math.abs(b) === 1 ? "" : Math.abs(b)}${v}`;
+  if (c) s += ` ${c < 0 ? "-" : "+"} ${Math.abs(c)}`;
+  return s;
+}
+function vertexTex(a, h, k, v = "x") {
+  const inside = h === 0 ? v : `${v} ${h < 0 ? "+" : "-"} ${Math.abs(h)}`;
+  const lead = a === 1 ? "" : a === -1 ? "-" : `${a}`;
+  let s = `${lead}(${inside})^2`;
+  if (k) s += ` ${k < 0 ? "-" : "+"} ${Math.abs(k)}`;
+  return s;
+}
+const baseTex = (b) => (b === 0.5 ? "\\left(\\tfrac{1}{2}\\right)" : `${b}`);
+function expTex(e, v = "x") {
+  let s = e.a === 1 ? `${baseTex(e.b)}^{${v}}` : `${e.a}(${baseTex(e.b)})^{${v}}`;
+  if (e.k) s += ` ${e.k < 0 ? "-" : "+"} ${Math.abs(e.k)}`;
+  return s;
+}
+
+// frame so the listed feature x's / y's are visible (small by construction); the curve's
+// arms clip naturally — exactly how the real SAT crops a nonlinear graph.
+function frameForCurve(xMust, yMust) {
+  // the listed feature points DEFINE the bounds (+1 pad) — never cropped, so a marked
+  // vertex/intercept is always on-screen. Builders bound their params so the span stays
+  // legible (<=20); a rare over-spread item is caught by legibilityCheck and re-drawn.
+  const xlo = Math.floor(Math.min(-1, ...xMust)) - 1, xhi = Math.ceil(Math.max(1, ...xMust)) + 1;
+  const ylo = Math.floor(Math.min(-1, ...yMust)) - 1, yhi = Math.ceil(Math.max(1, ...yMust)) + 1;
+  return { xRange: [xlo, xhi], yRange: [ylo, yhi], xStep: xhi - xlo > 12 ? 2 : 1, yStep: yhi - ylo > 12 ? 2 : 1, origin: true, axisLabels: ["x", "y"] };
+}
+
+/* ADV.B1.s1 (B1) — read the y-intercept off a nonlinear (parabola | exponential) graph */
+function gReadYint(r) {
+  if (r() < 0.45) {                                   // exponential
+    const a = randint(r, 2, 5), b = pick(r, [2, 3]), k = pick(r, [0, 0, 0, sgn(r) * randint(r, 1, 3)]);
+    const e = expCurve(a, b, k), yint = a + k;
+    const spec = frameForCurve([-2, 0, 2], [k, yint, Math.min(yint + 6, k + 10)]);   // cap height ⇒ unit grid, y-intercept lands on a gridline
+    spec.curves = [e];
+    if (k !== 0) spec.guides = [{ kind: "h", at: k, label: `y = ${k}` }];             // show the asymptote only when it is not the x-axis
+    return {
+      task: "read_yint", format: "spr", answer: String(yint),
+      statement: "The graph of the exponential function \\(f\\) is shown in the \\(xy\\)-plane. What is the \\(y\\)-coordinate of the \\(y\\)-intercept of the graph of \\(f\\)?",
+      solve_path: sp({ op: "identify_intercept", detail: `The graph crosses the \\(y\\)-axis at \\((0, ${yint})\\).` }),
+      fingerprint: ["read_yint", "exp", k === 0 ? "asym0" : "asymk", "1curve"],
+      figure: { fn: "coordPlane", spec },
+    };
+  }
+  const a = pick(r, [1, -1, 2, -2]);                  // parabola, |a|<=2 for legibility
+  let r1, r2; do { r1 = sgn(r) * randint(r, 1, 3); r2 = sgn(r) * randint(r, 1, 3); } while (r1 === r2 || Math.abs(a * r1 * r2) > 6);
+  const q = parabolaFromRoots(a, r1, r2), yint = q.c, [vx, vy] = parabVertex(q);
+  const spec = frameForCurve([r1, r2, vx, 0], [vy, yint, 0]);
+  spec.curves = [q];
+  return {
+    task: "read_yint", format: "spr", answer: String(yint),
+    statement: "The graph of the quadratic function \\(f\\) is shown in the \\(xy\\)-plane. What is the \\(y\\)-coordinate of the \\(y\\)-intercept of the graph of \\(f\\)?",
+    solve_path: sp({ op: "identify_intercept", detail: `The graph crosses the \\(y\\)-axis at \\((0, ${yint})\\).` }),
+    fingerprint: ["read_yint", "parab", yint > 0 ? "ypos" : "yneg", "1curve"],
+    figure: { fn: "coordPlane", spec },
+  };
+}
+
+/* ADV.B2.s1 (B2) — read a key feature: a zero, a vertex coord, or a line∩parabola intersection */
+function gReadFeature(r) {
+  const kind = pick(r, ["zero", "zero", "vertex", "vertex", "intersection"]);
+  if (kind === "vertex") {
+    const a = pick(r, [1, -1, 2, -2]), h = sgn(r) * randint(r, 1, 3), k = sgn(r) * randint(r, 1, 4);
+    const q = parabolaFromVertex(a, h, k), arm = 4 * a + k;   // y at x = h±2 (shows the opening) — not the distant y-intercept
+    const spec = frameForCurve([h - 2, h, h + 2, 0], [k, arm, 0]);
+    spec.curves = [q];
+    spec.guides = [{ kind: "v", at: h, label: `x = ${h}` }];
+    spec.points = [{ at: [h, k], coords: true }];
+    const askX = r() < 0.5;
+    return {
+      task: "read_feature", format: "spr", answer: String(askX ? h : k),
+      statement: `The graph of the quadratic function \\(f\\) is shown in the \\(xy\\)-plane. ${askX ? "What is the \\(x\\)-coordinate of the vertex of the graph?" : `What is the ${a > 0 ? "minimum" : "maximum"} value of \\(f\\)?`}`,
+      solve_path: sp({ op: "find_vertex", detail: `The vertex of the graph is \\((${h}, ${k})\\).` }),
+      fingerprint: ["read_feature", "vertex", askX ? "vx" : "vy", "parab"],
+      figure: { fn: "coordPlane", spec },
+    };
+  }
+  if (kind === "intersection") {
+    const a = pick(r, [1, -1]);
+    let r1, r2, p1, p2, q, fP, yi1, yi2;
+    let ok = false;
+    for (let t = 0; t < 200 && !ok; t++) {
+      r1 = sgn(r) * randint(r, 1, 3); r2 = sgn(r) * randint(r, 1, 3);
+      p1 = sgn(r) * randint(r, 1, 3); p2 = sgn(r) * randint(r, 1, 3);
+      if (r1 === r2 || p1 === p2) continue;
+      q = parabolaFromRoots(a, r1, r2); fP = (x) => a * (x - r1) * (x - r2);
+      yi1 = fP(p1); yi2 = fP(p2);
+      if (Math.abs(yi1) <= 8 && Math.abs(yi2) <= 8) ok = true;        // keep intersections legible
+    }
+    if (!ok) return gReadFeature(r);                                   // (vanishingly rare) re-roll a different feature
+    const m = a * (p1 + p2 - r1 - r2), lc = a * (r1 * r2 - p1 * p2);   // line y=mx+lc meets the parabola exactly at x=p1,p2
+    const [, vy] = parabVertex(q);
+    const spec = frameForCurve([r1, r2, p1, p2, 0], [yi1, yi2, vy, 0]);  // frame the arc + intersections; the line's y-axis crossing may clip off-window
+    spec.curves = [q, lineCurve(m, lc)];
+    spec.points = [{ at: [p1, yi1], label: "A" }, { at: [p2, yi2], label: "B" }];
+    const askGreater = r() < 0.5, X = askGreater ? Math.max(p1, p2) : Math.min(p1, p2);
+    return {
+      task: "read_feature", format: "spr", answer: String(X),
+      statement: `In the \\(xy\\)-plane, the graph of a quadratic function and the graph of a linear function intersect at the points \\(A\\) and \\(B\\) shown. What is the \\(x\\)-coordinate of the point of intersection with the ${askGreater ? "greater" : "lesser"} \\(x\\)-coordinate?`,
+      solve_path: sp({ op: "read_intersection", detail: `The graphs intersect at \\(x = ${Math.min(p1, p2)}\\) and \\(x = ${Math.max(p1, p2)}\\).` }),
+      fingerprint: ["read_feature", "intersection", askGreater ? "greater" : "lesser", "line+parab"],
+      figure: { fn: "coordPlane", spec },
+    };
+  }
+  const a = pick(r, [1, -1]);                         // zero (x-intercept) — |a|=1 keeps the vertex shallow & framable
+  let r1, r2; do { r1 = sgn(r) * randint(r, 1, 3); r2 = sgn(r) * randint(r, 1, 3); } while (r1 === r2);
+  const q = parabolaFromRoots(a, r1, r2), [vx, vy] = parabVertex(q);
+  const lo = Math.min(r1, r2), hi = Math.max(r1, r2);
+  const spec = frameForCurve([r1, r2, vx, 0], [vy, q.c, 0]);
+  spec.curves = [q];
+  const askGreater = r() < 0.5;
+  return {
+    task: "read_feature", format: "spr", answer: String(askGreater ? hi : lo),
+    statement: `The graph of the quadratic function \\(f\\) is shown in the \\(xy\\)-plane. What is the \\(x\\)-coordinate of the ${askGreater ? "greater" : "lesser"} of the two \\(x\\)-intercepts of the graph?`,
+    solve_path: sp({ op: "find_zero", detail: `The graph crosses the \\(x\\)-axis at \\(x = ${lo}\\) and \\(x = ${hi}\\).` }),
+    fingerprint: ["read_feature", "zero", askGreater ? "greater" : "lesser", "parab"],
+    figure: { fn: "coordPlane", spec },
+  };
+}
+
+/* ADV.B5.s1 (B5) — which of 4 graphs matches a given quadratic/exponential equation */
+function gGraphFromEq(r) {
+  if (r() < 0.45) {                                   // exponential — fixed shared window (small multiples)
+    const a = randint(r, 1, 3), b = pick(r, [2, 3]);
+    const correct = expCurve(a, b, 0);
+    const dC = [expCurve(a, 0.5, 0), expCurve(-a, b, 0), expCurve(a, b, sgn(r) * randint(r, 2, 4))];
+    const win = { xRange: [-3, 4], yRange: [-6, 10], xStep: 1, yStep: 2, origin: true, axisLabels: ["x", "y"] };
+    const optSpec = (e) => ({ ...win, curves: [e] });
+    const { optionFigures, correct_choice } = mcqFigures(optSpec(correct), dC.map(optSpec), r);
+    return {
+      task: "graph_from_eq", format: "mcq", correct_choice, answer: tex(`y = ${expTex(correct)}`),
+      statement: `Which of the following could be the graph in the \\(xy\\)-plane of \\(y = ${expTex(correct)}\\)?`,
+      optionFigures, target: { kind: "exp", a, b, k: 0 }, figure: null,
+      solve_path: sp({ op: "match_representation", detail: `Growth (\\(b = ${b} > 1\\)); \\(y\\)-intercept \\(${a}\\); above the \\(x\\)-axis.` }),
+      fingerprint: ["graph_from_eq", "exp", "growth", "4opt"],
+    };
+  }
+  const a = pick(r, [1, -1]), h = sgn(r) * randint(r, 1, 2), k = sgn(r) * randint(r, 1, 2);   // |a|=1, small vertex ⇒ arms read clearly
+  const correct = parabolaFromVertex(a, h, k);
+  const dQ = [parabolaFromVertex(-a, h, k), parabolaFromVertex(a, -h, k), parabolaFromVertex(a, h, -k)];
+  const win = { xRange: [-6, 6], yRange: [-7, 9], xStep: 2, yStep: 2, origin: true, axisLabels: ["x", "y"] };
+  const optSpec = (q) => ({ ...win, curves: [q] });
+  const { optionFigures, correct_choice } = mcqFigures(optSpec(correct), dQ.map(optSpec), r);
+  return {
+    task: "graph_from_eq", format: "mcq", correct_choice, answer: tex(`y = ${vertexTex(a, h, k)}`),
+    statement: `Which of the following could be the graph in the \\(xy\\)-plane of \\(y = ${vertexTex(a, h, k)}\\)?`,
+    optionFigures, target: { kind: "parabola", a, h, k }, figure: null,
+    solve_path: sp({ op: "match_representation", detail: `Vertex \\((${h}, ${k})\\); opens ${a > 0 ? "upward" : "downward"}.` }),
+    fingerprint: ["graph_from_eq", "parab", a > 0 ? "up" : "down", "4opt"],
+  };
+}
+
+/* ADV.B6.s2 (B6) — within a context, interpret a key feature of a quadratic/exponential graph */
+const PROJ_CTX = [
+  { y: "height of a ball", yu: "feet", x: "seconds", verb: "thrown" },
+  { y: "height of a rocket", yu: "meters", x: "seconds", verb: "launched" },
+  { y: "height of a diver above the water", yu: "feet", x: "seconds", verb: "released from the board" },
+];
+const EXP_CTX = [
+  { y: "number of bacteria in a sample (in thousands)", x: "hours", xu: "hour", grow: true },
+  { y: "value of an investment (in hundreds of dollars)", x: "years", xu: "year", grow: true },
+  { y: "amount of a medication in the bloodstream (in milligrams)", x: "hours", xu: "hour", grow: false },
+];
+function gInterpretFeatureGraph(r) {
+  if (r() < 0.5) {                                    // parabola: vertex meaning (physically sensible projectile)
+    const c = pick(r, PROJ_CTX), h = randint(r, 2, 3), d = randint(r, 1, 4), k = h * h + d;   // launch height d>=1; max height k at time h
+    const q = parabolaFromVertex(-1, h, k);            // y-intercept = -h^2 + k = d (height when launched, >=1)
+    const spec = frameForCurve([0, h, 2 * h], [0, d, k]);
+    spec.curves = [q];
+    spec.guides = [{ kind: "v", at: h }];
+    spec.points = [{ at: [h, k], coords: true }];
+    const correct = `The ${c.y} reaches its maximum, ${k} ${c.yu}, ${h} ${c.x} after the object is ${c.verb}.`;
+    const distractors = [
+      `The ${c.y} is ${k} ${c.yu} when the object is ${c.verb}.`,
+      `The ${c.y} reaches its maximum, ${h} ${c.yu}, ${k} ${c.x} after the object is ${c.verb}.`,
+      `The object is ${c.verb} from a height of ${h} ${c.yu}.`,
+    ];
+    const { choices, correct_choice } = mcq(correct, distractors, r);
+    return {
+      task: "interpret_feature_graph", format: "mcq", choices, correct_choice, answer: correct,
+      statement: `The graph shown models the ${c.y}, \\(y\\), in ${c.yu}, \\(x\\) ${c.x} after it is ${c.verb}. What is the best interpretation of the vertex of the graph?`,
+      figure: { fn: "coordPlane", spec },
+      solve_path: sp({ op: "interpret_meaning", detail: `Vertex \\((${h}, ${k})\\): the maximum ${c.y} of ${k} at ${c.x.replace(/s$/, "")} ${h}.` }),
+      fingerprint: ["interpret_feature_graph", "parab", "vertex", "context"],
+    };
+  }
+  const c = pick(r, EXP_CTX), a = randint(r, 2, 5), b = c.grow ? pick(r, [2, 3]) : 0.5;
+  const e = expCurve(a, b, 0);
+  const spec = frameForCurve([-1, 0, 1, 2], [0, a, Math.min(a * b, 12)]);
+  spec.curves = [e];
+  spec.points = [{ at: [0, a], label: "P" }];   // asymptote is the x-axis (k=0) — no redundant guide
+  const correct = `The initial ${c.y}, which is ${a}.`;
+  const distractors = [
+    `The ${c.y} ${c.grow ? "increases" : "decreases"} by ${a} each ${c.xu}.`,
+    `The ${c.y} after ${b} ${c.x}.`,
+    `The factor by which the ${c.y} changes each ${c.xu}.`,
+  ];
+  const { choices, correct_choice } = mcq(correct, distractors, r);
+  return {
+    task: "interpret_feature_graph", format: "mcq", choices, correct_choice, answer: correct,
+    statement: `The graph shown models the ${c.y}, \\(y\\), after \\(x\\) ${c.x}. What is the best interpretation of the \\(y\\)-intercept of the graph?`,
+    figure: { fn: "coordPlane", spec },
+    solve_path: sp({ op: "interpret_meaning", detail: `\\(y\\)-intercept \\(${a}\\) = the initial ${c.y}.` }),
+    fingerprint: ["interpret_feature_graph", "exp", "yint", "context"],
+  };
+}
+
+/* ADV.B6.s3 (B6) — connect a graph to its algebraic representation (a translation of a parent) */
+function gConnectTranslationGraph(r) {
+  const a = pick(r, [1, -1, 2]);
+  const h = sgn(r) * randint(r, 1, a === 2 ? 2 : 3), k = sgn(r) * randint(r, 1, 3);   // bound |h| when steep so the vertex stays framable
+  const q = parabolaFromVertex(a, h, k);
+  const spec = frameForCurve([h - 2, h, h + 2, 0], [k, q.c, 0]);
+  spec.curves = [q];
+  spec.guides = [{ kind: "v", at: h }];
+  spec.points = [{ at: [h, k], coords: true }];
+  const correct = tex(`f(x) = ${vertexTex(a, h, k)}`);
+  const distractors = [
+    tex(`f(x) = ${vertexTex(a, -h, k)}`),
+    tex(`f(x) = ${vertexTex(a, h, -k)}`),
+    tex(`f(x) = ${vertexTex(-a, h, k)}`),
+  ];
+  const { choices, correct_choice } = mcq(correct, distractors, r);
+  return {
+    task: "connect_translation_graph", format: "mcq", choices, correct_choice, answer: correct,
+    statement: `The graph of the function \\(f\\) shown in the \\(xy\\)-plane is a translation of the parent function \\(y = ${a === 1 ? "" : a === -1 ? "-" : a}x^2\\). Which equation defines \\(f\\)?`,
+    figure: { fn: "coordPlane", spec },
+    target: { kind: "parabola", a, h, k },
+    solve_path: sp({ op: "apply_translation", detail: `Vertex \\((${h}, ${k})\\) ⇒ \\(${vertexTex(a, h, k)}\\).` }),
+    fingerprint: ["connect_translation_graph", "parab", `${h < 0 ? "L" : "R"}${k < 0 ? "D" : "U"}`, "4opt"],
+  };
+}
+
 const BUILDERS = {
   read_value: gReadValue,
   slope_from_points: gSlopeFromPoints,
@@ -426,13 +679,20 @@ const BUILDERS = {
   point_in_region: gPointInRegion,
   feasible_region: gFeasibleRegion,
   interpret_graph_context: gInterpretGraphContext,
+  // advanced math (ADV-2) — nonlinear graphs
+  read_yint: gReadYint,
+  read_feature: gReadFeature,
+  graph_from_eq: gGraphFromEq,
+  interpret_feature_graph: gInterpretFeatureGraph,
+  connect_translation_graph: gConnectTranslationGraph,
 };
 
 /** drawGraphItem(task, band, r) — a complete, correct-by-construction graph candidate.
  *  `band` is accepted for signature symmetry (difficulty is set by the cell's LLTM task
  *  weight, not here). Marks the result `harness:true` so the pipeline skips the LLM. */
 export function drawGraphItem(task, band, r) {
-  const build = BUILDERS[task] || gReadValue;
+  const build = BUILDERS[task];
+  if (!build) throw new Error(`drawGraphItem: no builder registered for graph task "${task}"`);   // never silently fall back to a LINE builder
   const item = build(r);
   return { ...item, harness: true };
 }

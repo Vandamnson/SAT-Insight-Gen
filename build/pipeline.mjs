@@ -184,7 +184,17 @@ async function generateCell(domain, subdomain, n, bands, ctr) {
   const verified = (await pool(tasks, CAP)).filter(Boolean);
   // 3 sequential: surface dedup over the growing kept pool
   const unique = [];
-  for (const s of verified) { if (surfaceDup(s.cand, unique.map((u) => u.cand))) { reasons.push(`dedup [B${s.cell.band}]`); continue; } unique.push(s); }
+  const seenFig = new Set();
+  for (const s of verified) {
+    if (s.cell.tier === "C") {   // graph items: identity is the FIGURE, not the templated stem (surface shingles would falsely collapse them)
+      const num = s.cell.incidentals.numbers;
+      const sig = JSON.stringify({ f: num.figure?.spec?.curves ?? (num.optionFigures || []).map((o) => o.curves), a: num.answer, c: num.correct_choice });
+      if (seenFig.has(sig)) { reasons.push(`figdup [B${s.cell.band}]`); continue; }
+      seenFig.add(sig); unique.push(s); continue;
+    }
+    if (surfaceDup(s.cand, unique.map((u) => u.cand))) { reasons.push(`dedup [B${s.cell.band}]`); continue; }
+    unique.push(s);
+  }
   const kept = pickBalanced(unique, n, bands);
   console.log(`  → ${verified.length}/${draws} passed gate · ${unique.length} unique · keeping ${kept.length}/${n}`);
   reasons.slice(0, 8).forEach((r) => console.log(`     ✗ ${r}`));
