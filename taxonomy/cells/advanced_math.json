@@ -1,5 +1,5 @@
 {
-  "_note": "CELL SCHEMA — ADVANCED MATH (quadratics, exponential/quadratic models, polynomial rewriting, radical/rational equations). Mirrors algebra.json. `task` is the rubric attribute (the primary difficulty radical); boolean modifiers nudge within ±1 band. Each task's LLTM weight places it at its Skills-Insight rubric band (band_anchors are the midpoints; see verification step 2). task_tier routes each task to Tier A (PROVE, sympy) or Tier B (self-consistency, for interpretive/modeling MCQ). TEXT/algebraic core only — the two figureLoad:req nonlinear-graph statements (ADV.B1.s1, ADV.B2.s1) and figure-optional graph features are Phase ADV-2 (Tier C, build/graph.mjs analog).",
+  "_note": "CELL SCHEMA — ADVANCED MATH. `task` is the rubric attribute (primary difficulty radical); boolean modifiers nudge ±1 band. `statementByTask` maps each task to its exact Skills-Insight statement (so interpret≠create, rewrite≠solve, and a skill's statement reflects its rubric home regardless of measured band); `statementByBand` is the fallback. LLTM weight places each task at its rubric band. task_tier routes Tier A (PROVE) / B (self-consistency). figureLoad:req statements (ADV.B1.s1, ADV.B2.s1) are Phase ADV-2. KNOWN GAP (deferred): exponential models — exp_model_use/create_model(exp) tasks exist but are quadratic-dominated in practice; force exponential draws when generating.",
   "domain": "advanced_math",
   "tier": "A",
   "band_cuts": { "edges": [370, 420, 470, 550, 610, 680] },
@@ -9,6 +9,7 @@
       "label": "Quadratic equations in one variable",
       "target": "solve / analyze / create-and-solve a quadratic equation",
       "statementByBand": { "B3": "ADV.B3.s1", "B4": "ADV.B4.s2", "B5": "ADV.B5.s1", "B6": "ADV.B6.s1", "B7": "ADV.B6.s1" },
+      "statementByTask": { "solve_factored": "ADV.B3.s1", "solve_by_factoring": "ADV.B4.s2", "solve_formula": "ADV.B4.s2", "discriminant": "ADV.B5.s1", "vertex": "ADV.B5.s1", "create_solve": "ADV.B6.s1" },
       "radical_axes": {
         "task": ["solve_factored", "solve_by_factoring", "solve_formula", "discriminant", "vertex", "create_solve"],
         "has_fraction_or_irrational": [false, true],
@@ -22,38 +23,41 @@
     },
     "nonlinear_functions_models": {
       "label": "Quadratic & exponential functions and models",
-      "target": "use / create / interpret a quadratic or exponential model",
-      "statementByBand": { "B4": "ADV.B4.s1", "B5": "ADV.B5.s1", "B6": "ADV.B6.s1", "B7": "ADV.B6.s2" },
+      "target": "use / create / interpret / connect a quadratic or exponential model",
+      "statementByBand": { "B4": "ADV.B4.s1", "B5": "ADV.B5.s1", "B6": "ADV.B6.s2", "B7": "ADV.B6.s2" },
+      "statementByTask": { "quad_model_use": "ADV.B4.s1", "exp_model_use": "ADV.B4.s1", "identify_feature": "ADV.B5.s1", "create_model": "ADV.B4.s1", "interpret_feature": "ADV.B6.s2", "translate_connect": "ADV.B6.s3" },
       "radical_axes": {
-        "task": ["quad_model_use", "exp_model_use", "identify_feature", "create_model", "interpret_feature"],
+        "task": ["quad_model_use", "exp_model_use", "identify_feature", "create_model", "interpret_feature", "translate_connect"],
         "from_context": [false, true],
         "uses_exponential": [false, true]
       },
       "incidental_axes": { "context": "@contexts", "var_name": ["x", "t", "n", "p"], "coefficient_range": [2, 12], "constant_range": [1, 200] },
-      "lltm": { "weights": { "w0": 410, "task": { "quad_model_use": 95, "exp_model_use": 85, "identify_feature": 170, "create_model": 215, "interpret_feature": 205 }, "from_context": 30, "uses_exponential": 20 } },
-      "task_tier": { "quad_model_use": "A", "exp_model_use": "A", "identify_feature": "B", "create_model": "B", "interpret_feature": "B" },
+      "lltm": { "weights": { "w0": 410, "task": { "quad_model_use": 95, "exp_model_use": 85, "identify_feature": 170, "create_model": 215, "interpret_feature": 205, "translate_connect": 235 }, "from_context": 30, "uses_exponential": 20 } },
+      "task_tier": { "quad_model_use": "A", "exp_model_use": "A", "identify_feature": "B", "create_model": "B", "interpret_feature": "B", "translate_connect": "A" },
       "canonical_fingerprint": ["substitute", "evaluate"],
-      "op_vocab": ["substitute", "evaluate", "apply_growth_factor", "find_vertex", "identify_intercept", "identify_asymptote", "interpret_meaning", "model_equation", "match_representation"]
+      "op_vocab": ["substitute", "evaluate", "apply_growth_factor", "find_vertex", "identify_intercept", "identify_asymptote", "interpret_meaning", "model_equation", "match_representation", "apply_translation", "shift_graph"]
     },
     "polynomial_expressions": {
       "label": "Polynomial & equivalent-expression rewriting",
-      "target": "rewrite / combine / factor / solve-for-a-variable a polynomial expression",
+      "target": "rewrite / combine / factor / solve-for-a-variable a polynomial or exponent/radical expression",
       "statementByBand": { "B1": "ADV.B1.s2", "B2": "ADV.B2.s2", "B3": "ADV.B3.s2", "B4": "ADV.B3.s2", "B5": "ADV.B5.s2", "B6": "ADV.B5.s2", "B7": "ADV.B7.s2" },
+      "statementByTask": { "combine_like_terms": "ADV.B1.s2", "distribute": "ADV.B2.s2", "factor_gcf": "ADV.B2.s2", "sum_polynomials": "ADV.B3.s2", "solve_for_variable": "ADV.B3.s2", "product_mono_bin": "ADV.B5.s2", "product_bin_bin": "ADV.B5.s2", "factor": "ADV.B5.s2", "choose_form": "ADV.B7.s2", "rewrite_exponent": "ADV.B7.s2" },
       "radical_axes": {
-        "task": ["combine_like_terms", "distribute", "factor_gcf", "sum_polynomials", "solve_for_variable", "product_mono_bin", "product_bin_bin", "factor", "choose_form"],
+        "task": ["combine_like_terms", "distribute", "factor_gcf", "sum_polynomials", "solve_for_variable", "product_mono_bin", "product_bin_bin", "factor", "choose_form", "rewrite_exponent"],
         "more_terms": [false, true],
         "has_fraction": [false, true]
       },
       "incidental_axes": { "context": "@contexts", "var_name": ["x", "y", "n", "t"], "coefficient_range": [1, 9], "constant_range": [1, 20] },
-      "lltm": { "weights": { "w0": 300, "task": { "combine_like_terms": 40, "distribute": 95, "factor_gcf": 100, "sum_polynomials": 145, "solve_for_variable": 150, "product_mono_bin": 260, "product_bin_bin": 285, "factor": 290, "choose_form": 425 }, "more_terms": 35, "has_fraction": 30 } },
-      "task_tier": { "combine_like_terms": "A", "distribute": "A", "factor_gcf": "A", "sum_polynomials": "A", "solve_for_variable": "A", "product_mono_bin": "A", "product_bin_bin": "A", "factor": "A", "choose_form": "B" },
+      "lltm": { "weights": { "w0": 300, "task": { "combine_like_terms": 40, "distribute": 95, "factor_gcf": 100, "sum_polynomials": 145, "solve_for_variable": 150, "product_mono_bin": 260, "product_bin_bin": 285, "factor": 290, "choose_form": 425, "rewrite_exponent": 425 }, "more_terms": 35, "has_fraction": 30 } },
+      "task_tier": { "combine_like_terms": "A", "distribute": "A", "factor_gcf": "A", "sum_polynomials": "A", "solve_for_variable": "A", "product_mono_bin": "A", "product_bin_bin": "A", "factor": "A", "choose_form": "B", "rewrite_exponent": "A" },
       "canonical_fingerprint": ["combine_like_terms"],
-      "op_vocab": ["combine_like_terms", "distribute", "factor_gcf", "foil", "expand", "factor_trinomial", "add_polynomials", "subtract_polynomials", "rearrange_formula", "isolate_variable", "rewrite_equivalent", "identify_form"]
+      "op_vocab": ["combine_like_terms", "distribute", "factor_gcf", "foil", "expand", "factor_trinomial", "add_polynomials", "subtract_polynomials", "rearrange_formula", "isolate_variable", "rewrite_equivalent", "identify_form", "apply_exponent_rule", "simplify_radical", "rationalize"]
     },
     "radical_rational_equations": {
       "label": "Radical, rational, absolute-value & nonlinear-system equations",
       "target": "solve radical / rational / absolute-value / nonlinear-system / unknown-constant problems",
       "statementByBand": { "B3": "ADV.B3.s1", "B4": "ADV.B4.s2", "B5": "ADV.B4.s2", "B6": "ADV.B4.s2", "B7": "ADV.B7.s1" },
+      "statementByTask": { "solve_abs_value": "ADV.B3.s1", "solve_radical": "ADV.B3.s1", "solve_rational": "ADV.B4.s2", "nonlinear_system": "ADV.B4.s2", "unknown_constant": "ADV.B7.s1", "solve_formula": "ADV.B7.s2" },
       "radical_axes": {
         "task": ["solve_abs_value", "solve_radical", "solve_rational", "nonlinear_system", "unknown_constant", "solve_formula"],
         "extraneous_check": [false, true],

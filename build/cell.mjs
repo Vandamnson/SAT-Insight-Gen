@@ -160,6 +160,7 @@ function drawNonlinearModel(rad, { context }) {
   if (task === "exp_model_use") return mf("Give an EXPONENTIAL model in context (a quantity changing by a constant factor/percent per period, \\(y=a\\cdot b^{t}\\)); ask the student to use it to find a value.", ctx);
   if (task === "identify_feature") return mf(`Give ${exp ? "an exponential" : "a quadratic"} FUNCTION as an equation; ask which statement correctly identifies a key feature of its graph (the vertex/maximum, the y-intercept, or the ${exp ? "end behavior / horizontal asymptote" : "zeros"}). Pose it abstractly.`, ctx, { mcq: true });
   if (task === "create_model") return mf(`Describe a situation with ${exp ? "constant-percent growth or decay" : "a quadratic relationship"} between two quantities; ask WHICH equation models it.`, ctx, { mcq: true });
+  if (task === "translate_connect") return mf(`Give a ${exp ? "exponential" : "quadratic"} parent function in function notation and apply a TRANSLATION (a horizontal shift, a vertical shift, or both); ask WHICH equation defines the translated function — or, given the translated equation, how the graph moved. Pose it abstractly with function notation (e.g. \\(g(x)=f(x-3)+2\\)).`, ctx, { mcq: true });
   return mf("Give a quadratic or exponential model in context; ask the student to INTERPRET the meaning of one specific feature (the initial value, the growth/decay factor, or the vertex) in terms of the situation.", ctx, { mcq: true });
 }
 
@@ -174,6 +175,7 @@ const POLY_DIRECTIVE = {
   product_bin_bin: "Give the product of two binomials; ask which expression is its expanded equivalent.",
   factor: "Give a quadratic trinomial; ask which factored form is equivalent.",
   choose_form: "Give a quadratic or exponential expression; ask which EQUIVALENT form most clearly displays a stated feature (the zeros, the vertex/extreme value, the y-intercept, or the growth factor).",
+  rewrite_exponent: "Give a complex expression involving properties of EXPONENTS, RADICALS, or RATIONAL expressions (e.g. a power of a product or quotient, a fractional/negative exponent, a radical to simplify, or a quotient of powers); ask which expression is equivalent after correctly applying those properties.",
 };
 function drawPolyExpr(rad, { context }) {
   return mf(POLY_DIRECTIVE[rad.task] || POLY_DIRECTIVE.combine_like_terms, ctxLineMF(context), { mcq: true });
@@ -212,6 +214,7 @@ const ABSTRACT_TASKS = new Set([
   "combine_like_terms", "distribute", "factor_gcf", "sum_polynomials", "solve_for_variable",
   "product_mono_bin", "product_bin_bin", "factor", "choose_form",
   "solve_abs_value", "solve_radical", "solve_rational", "nonlinear_system", "unknown_constant", "solve_formula",
+  "translate_connect", "rewrite_exponent",
 ]);
 
 /* ============================ the draw ============================ */
@@ -236,7 +239,7 @@ export function drawCell(domain, subdomain, band, idx = 0) {
   const tier = (sub.task_tier || {})[radicals.task] || dom.tier || "A";
   return {
     domain, subdomain, target: sub.target, band: bandNum,
-    statementId: (sub.statementByBand || {})[bandStr] || null,
+    statementId: (sub.statementByTask || {})[radicals.task] || (sub.statementByBand || {})[bandStr] || null,
     radicals, incidentals: { context, var_name: varName, format, numbers }, tier,
     predicted_scale: predictDifficulty(radicals, domain, subdomain),
     canonical_fingerprint: sub.canonical_fingerprint || [], op_vocab: sub.op_vocab || [],
