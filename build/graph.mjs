@@ -698,4 +698,7 @@ export function drawGraphItem(task, band, r) {
   return { ...item, harness: true };
 }
 
+// curve/frame/tex helpers reused by the ADV Band-7 figure-capstone generator (build/advfig.mjs)
+export { parabolaFromRoots, parabolaFromVertex, parabVertex, expCurve, frameForCurve, quadTex, vertexTex, expTex };
+
 export default { drawGraphItem, GRAPH_TASKS };

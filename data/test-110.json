@@ -1,0 +1,5451 @@
+{
+  "number": 110,
+  "title": "Band 7 — cross-skill algebra (fill)",
+  "questions": [
+    {
+      "id": 1,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "ALG.B7.s1",
+      "type": "spr",
+      "tier": "cross-skill",
+      "difficulty": {
+        "scalePoint": 760,
+        "band": "B7",
+        "method": "curated"
+      },
+      "verify": {
+        "tier": "cross-skill",
+        "correctness": "construct-backward + sympy"
+      },
+      "chain": "C1",
+      "skill": "systems_of_linear_equations",
+      "scalePoint": 760,
+      "stem": [
+        {
+          "t": "mathblock",
+          "v": "\\begin{cases} -3x + 2y = -8 \\\\ -4x + 4y = -8 \\end{cases}"
+        },
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "The solution to the given system of equations is "
+            },
+            {
+              "t": "math",
+              "v": "(x, y)"
+            },
+            {
+              "t": "text",
+              "v": ". If "
+            },
+            {
+              "t": "math",
+              "v": "ax + 2y = -12"
+            },
+            {
+              "t": "text",
+              "v": ", what is the value of "
+            },
+            {
+              "t": "math",
+              "v": "a"
+            },
+            {
+              "t": "text",
+              "v": "?"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "accept": [
+          "-4"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "Solve the system (e.g. by elimination): "
+            },
+            {
+              "t": "math",
+              "v": "(x, y) = (4, 2)"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "Substitute into "
+            },
+            {
+              "t": "math",
+              "v": "ax + 2y = -12"
+            },
+            {
+              "t": "text",
+              "v": ":  "
+            },
+            {
+              "t": "math",
+              "v": "a(4) + 2(2) = -12"
+            },
+            {
+              "t": "text",
+              "v": ",  so  "
+            },
+            {
+              "t": "math",
+              "v": "a = -4"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        }
+      ],
+      "fingerprint": [
+        "cross_skill",
+        "C1",
+        "system+coeff"
+      ],
+      "_p": {
+        "kind": "C1",
+        "a1": -3,
+        "b1": 2,
+        "c1c": -8,
+        "a2": -4,
+        "b2": 4,
+        "c2c": -8,
+        "q": 2,
+        "rr": -12,
+        "ans": -4
+      }
+    },
+    {
+      "id": 2,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "ALG.B7.s1",
+      "type": "spr",
+      "tier": "cross-skill",
+      "difficulty": {
+        "scalePoint": 760,
+        "band": "B7",
+        "method": "curated"
+      },
+      "verify": {
+        "tier": "cross-skill",
+        "correctness": "construct-backward + sympy"
+      },
+      "chain": "C1",
+      "skill": "systems_of_linear_equations",
+      "scalePoint": 760,
+      "stem": [
+        {
+          "t": "mathblock",
+          "v": "\\begin{cases} 2x - 4y = -24 \\\\ -3x - 3y = -9 \\end{cases}"
+        },
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "The solution to the given system of equations is "
+            },
+            {
+              "t": "math",
+              "v": "(x, y)"
+            },
+            {
+              "t": "text",
+              "v": ". If "
+            },
+            {
+              "t": "math",
+              "v": "ax - 2y = -16"
+            },
+            {
+              "t": "text",
+              "v": ", what is the value of "
+            },
+            {
+              "t": "math",
+              "v": "a"
+            },
+            {
+              "t": "text",
+              "v": "?"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "accept": [
+          "3"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "Solve the system (e.g. by elimination): "
+            },
+            {
+              "t": "math",
+              "v": "(x, y) = (-2, 5)"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "Substitute into "
+            },
+            {
+              "t": "math",
+              "v": "ax - 2y = -16"
+            },
+            {
+              "t": "text",
+              "v": ":  "
+            },
+            {
+              "t": "math",
+              "v": "a(-2) - 2(5) = -16"
+            },
+            {
+              "t": "text",
+              "v": ",  so  "
+            },
+            {
+              "t": "math",
+              "v": "a = 3"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        }
+      ],
+      "fingerprint": [
+        "cross_skill",
+        "C1",
+        "system+coeff"
+      ],
+      "_p": {
+        "kind": "C1",
+        "a1": 2,
+        "b1": -4,
+        "c1c": -24,
+        "a2": -3,
+        "b2": -3,
+        "c2c": -9,
+        "q": -2,
+        "rr": -16,
+        "ans": 3
+      }
+    },
+    {
+      "id": 3,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "ALG.B7.s1",
+      "type": "spr",
+      "tier": "cross-skill",
+      "difficulty": {
+        "scalePoint": 760,
+        "band": "B7",
+        "method": "curated"
+      },
+      "verify": {
+        "tier": "cross-skill",
+        "correctness": "construct-backward + sympy"
+      },
+      "chain": "C1",
+      "skill": "systems_of_linear_equations",
+      "scalePoint": 760,
+      "stem": [
+        {
+          "t": "mathblock",
+          "v": "\\begin{cases} -3x - 2y = -1 \\\\ -4x - y = 7 \\end{cases}"
+        },
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "The solution to the given system of equations is "
+            },
+            {
+              "t": "math",
+              "v": "(x, y)"
+            },
+            {
+              "t": "text",
+              "v": ". If "
+            },
+            {
+              "t": "math",
+              "v": "ax + 4y = 11"
+            },
+            {
+              "t": "text",
+              "v": ", what is the value of "
+            },
+            {
+              "t": "math",
+              "v": "a"
+            },
+            {
+              "t": "text",
+              "v": "?"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "accept": [
+          "3"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "Solve the system (e.g. by elimination): "
+            },
+            {
+              "t": "math",
+              "v": "(x, y) = (-3, 5)"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "Substitute into "
+            },
+            {
+              "t": "math",
+              "v": "ax + 4y = 11"
+            },
+            {
+              "t": "text",
+              "v": ":  "
+            },
+            {
+              "t": "math",
+              "v": "a(-3) + 4(5) = 11"
+            },
+            {
+              "t": "text",
+              "v": ",  so  "
+            },
+            {
+              "t": "math",
+              "v": "a = 3"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        }
+      ],
+      "fingerprint": [
+        "cross_skill",
+        "C1",
+        "system+coeff"
+      ],
+      "_p": {
+        "kind": "C1",
+        "a1": -3,
+        "b1": -2,
+        "c1c": -1,
+        "a2": -4,
+        "b2": -1,
+        "c2c": 7,
+        "q": 4,
+        "rr": 11,
+        "ans": 3
+      }
+    },
+    {
+      "id": 4,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "ALG.B7.s1",
+      "type": "spr",
+      "tier": "cross-skill",
+      "difficulty": {
+        "scalePoint": 760,
+        "band": "B7",
+        "method": "curated"
+      },
+      "verify": {
+        "tier": "cross-skill",
+        "correctness": "construct-backward + sympy"
+      },
+      "chain": "C1",
+      "skill": "systems_of_linear_equations",
+      "scalePoint": 760,
+      "stem": [
+        {
+          "t": "mathblock",
+          "v": "\\begin{cases} -x + 3y = -7 \\\\ -4x + 4y = -4 \\end{cases}"
+        },
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "The solution to the given system of equations is "
+            },
+            {
+              "t": "math",
+              "v": "(x, y)"
+            },
+            {
+              "t": "text",
+              "v": ". If "
+            },
+            {
+              "t": "math",
+              "v": "ax - 2y = 12"
+            },
+            {
+              "t": "text",
+              "v": ", what is the value of "
+            },
+            {
+              "t": "math",
+              "v": "a"
+            },
+            {
+              "t": "text",
+              "v": "?"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "accept": [
+          "-3"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "Solve the system (e.g. by elimination): "
+            },
+            {
+              "t": "math",
+              "v": "(x, y) = (-2, -3)"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "Substitute into "
+            },
+            {
+              "t": "math",
+              "v": "ax - 2y = 12"
+            },
+            {
+              "t": "text",
+              "v": ":  "
+            },
+            {
+              "t": "math",
+              "v": "a(-2) - 2(-3) = 12"
+            },
+            {
+              "t": "text",
+              "v": ",  so  "
+            },
+            {
+              "t": "math",
+              "v": "a = -3"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        }
+      ],
+      "fingerprint": [
+        "cross_skill",
+        "C1",
+        "system+coeff"
+      ],
+      "_p": {
+        "kind": "C1",
+        "a1": -1,
+        "b1": 3,
+        "c1c": -7,
+        "a2": -4,
+        "b2": 4,
+        "c2c": -4,
+        "q": -2,
+        "rr": 12,
+        "ans": -3
+      }
+    },
+    {
+      "id": 5,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "ALG.B7.s1",
+      "type": "spr",
+      "tier": "cross-skill",
+      "difficulty": {
+        "scalePoint": 760,
+        "band": "B7",
+        "method": "curated"
+      },
+      "verify": {
+        "tier": "cross-skill",
+        "correctness": "construct-backward + sympy"
+      },
+      "chain": "C1",
+      "skill": "systems_of_linear_equations",
+      "scalePoint": 760,
+      "stem": [
+        {
+          "t": "mathblock",
+          "v": "\\begin{cases} -3x + 3y = -30 \\\\ -2x - 3y = 10 \\end{cases}"
+        },
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "The solution to the given system of equations is "
+            },
+            {
+              "t": "math",
+              "v": "(x, y)"
+            },
+            {
+              "t": "text",
+              "v": ". If "
+            },
+            {
+              "t": "math",
+              "v": "ax + 4y = -40"
+            },
+            {
+              "t": "text",
+              "v": ", what is the value of "
+            },
+            {
+              "t": "math",
+              "v": "a"
+            },
+            {
+              "t": "text",
+              "v": "?"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "accept": [
+          "-4"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "Solve the system (e.g. by elimination): "
+            },
+            {
+              "t": "math",
+              "v": "(x, y) = (4, -6)"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "Substitute into "
+            },
+            {
+              "t": "math",
+              "v": "ax + 4y = -40"
+            },
+            {
+              "t": "text",
+              "v": ":  "
+            },
+            {
+              "t": "math",
+              "v": "a(4) + 4(-6) = -40"
+            },
+            {
+              "t": "text",
+              "v": ",  so  "
+            },
+            {
+              "t": "math",
+              "v": "a = -4"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        }
+      ],
+      "fingerprint": [
+        "cross_skill",
+        "C1",
+        "system+coeff"
+      ],
+      "_p": {
+        "kind": "C1",
+        "a1": -3,
+        "b1": 3,
+        "c1c": -30,
+        "a2": -2,
+        "b2": -3,
+        "c2c": 10,
+        "q": 4,
+        "rr": -40,
+        "ans": -4
+      }
+    },
+    {
+      "id": 6,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "ALG.B7.s1",
+      "type": "spr",
+      "tier": "cross-skill",
+      "difficulty": {
+        "scalePoint": 790,
+        "band": "B7",
+        "method": "curated"
+      },
+      "verify": {
+        "tier": "cross-skill",
+        "correctness": "construct-backward + sympy"
+      },
+      "chain": "C2",
+      "skill": "systems_of_linear_equations",
+      "scalePoint": 790,
+      "stem": [
+        {
+          "t": "mathblock",
+          "v": "\\begin{cases} -2x - 2y = -5 \\\\ kx - 4y = -3 \\end{cases}"
+        },
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "In the given system of equations, "
+            },
+            {
+              "t": "math",
+              "v": "k"
+            },
+            {
+              "t": "text",
+              "v": " is a constant and the system has no solution. For that value of "
+            },
+            {
+              "t": "math",
+              "v": "k"
+            },
+            {
+              "t": "text",
+              "v": ", what value of "
+            },
+            {
+              "t": "math",
+              "v": "x"
+            },
+            {
+              "t": "text",
+              "v": " satisfies "
+            },
+            {
+              "t": "math",
+              "v": "kx + 4 = -x + 13"
+            },
+            {
+              "t": "text",
+              "v": "?"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "accept": [
+          "-3"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "No solution ⇒ the lines are parallel: equal slopes. Matching coefficients, "
+            },
+            {
+              "t": "math",
+              "v": "k = -4"
+            },
+            {
+              "t": "text",
+              "v": "  (and the constants are not proportional, so it is truly no solution, not coincident)."
+            }
+          ]
+        },
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "Substitute "
+            },
+            {
+              "t": "math",
+              "v": "k = -4"
+            },
+            {
+              "t": "text",
+              "v": ":  "
+            },
+            {
+              "t": "math",
+              "v": "-4x + 4 = -x + 13"
+            },
+            {
+              "t": "text",
+              "v": ",  so  "
+            },
+            {
+              "t": "math",
+              "v": "x = -3"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        }
+      ],
+      "fingerprint": [
+        "cross_skill",
+        "C2",
+        "nosol-k+solve"
+      ],
+      "_p": {
+        "kind": "C2",
+        "a1": -2,
+        "b1": -2,
+        "c1c": -5,
+        "b2": -4,
+        "c2c": -3,
+        "k": -4,
+        "e": 4,
+        "f": -1,
+        "g": 13,
+        "xT": -3
+      }
+    },
+    {
+      "id": 7,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "ALG.B7.s1",
+      "type": "spr",
+      "tier": "cross-skill",
+      "difficulty": {
+        "scalePoint": 790,
+        "band": "B7",
+        "method": "curated"
+      },
+      "verify": {
+        "tier": "cross-skill",
+        "correctness": "construct-backward + sympy"
+      },
+      "chain": "C2",
+      "skill": "systems_of_linear_equations",
+      "scalePoint": 790,
+      "stem": [
+        {
+          "t": "mathblock",
+          "v": "\\begin{cases} -x + 2y = -7 \\\\ kx + 4y = -9 \\end{cases}"
+        },
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "In the given system of equations, "
+            },
+            {
+              "t": "math",
+              "v": "k"
+            },
+            {
+              "t": "text",
+              "v": " is a constant and the system has no solution. For that value of "
+            },
+            {
+              "t": "math",
+              "v": "k"
+            },
+            {
+              "t": "text",
+              "v": ", what value of "
+            },
+            {
+              "t": "math",
+              "v": "x"
+            },
+            {
+              "t": "text",
+              "v": " satisfies "
+            },
+            {
+              "t": "math",
+              "v": "kx - 4 = 3x - 34"
+            },
+            {
+              "t": "text",
+              "v": "?"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "accept": [
+          "6"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "No solution ⇒ the lines are parallel: equal slopes. Matching coefficients, "
+            },
+            {
+              "t": "math",
+              "v": "k = -2"
+            },
+            {
+              "t": "text",
+              "v": "  (and the constants are not proportional, so it is truly no solution, not coincident)."
+            }
+          ]
+        },
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "Substitute "
+            },
+            {
+              "t": "math",
+              "v": "k = -2"
+            },
+            {
+              "t": "text",
+              "v": ":  "
+            },
+            {
+              "t": "math",
+              "v": "-2x - 4 = 3x - 34"
+            },
+            {
+              "t": "text",
+              "v": ",  so  "
+            },
+            {
+              "t": "math",
+              "v": "x = 6"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        }
+      ],
+      "fingerprint": [
+        "cross_skill",
+        "C2",
+        "nosol-k+solve"
+      ],
+      "_p": {
+        "kind": "C2",
+        "a1": -1,
+        "b1": 2,
+        "c1c": -7,
+        "b2": 4,
+        "c2c": -9,
+        "k": -2,
+        "e": -4,
+        "f": 3,
+        "g": -34,
+        "xT": 6
+      }
+    },
+    {
+      "id": 8,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "ALG.B7.s1",
+      "type": "spr",
+      "tier": "cross-skill",
+      "difficulty": {
+        "scalePoint": 790,
+        "band": "B7",
+        "method": "curated"
+      },
+      "verify": {
+        "tier": "cross-skill",
+        "correctness": "construct-backward + sympy"
+      },
+      "chain": "C2",
+      "skill": "systems_of_linear_equations",
+      "scalePoint": 790,
+      "stem": [
+        {
+          "t": "mathblock",
+          "v": "\\begin{cases} -x + y = -6 \\\\ kx + 3y = -4 \\end{cases}"
+        },
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "In the given system of equations, "
+            },
+            {
+              "t": "math",
+              "v": "k"
+            },
+            {
+              "t": "text",
+              "v": " is a constant and the system has no solution. For that value of "
+            },
+            {
+              "t": "math",
+              "v": "k"
+            },
+            {
+              "t": "text",
+              "v": ", what value of "
+            },
+            {
+              "t": "math",
+              "v": "x"
+            },
+            {
+              "t": "text",
+              "v": " satisfies "
+            },
+            {
+              "t": "math",
+              "v": "kx - 3 = -4x - 1"
+            },
+            {
+              "t": "text",
+              "v": "?"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "accept": [
+          "2"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "No solution ⇒ the lines are parallel: equal slopes. Matching coefficients, "
+            },
+            {
+              "t": "math",
+              "v": "k = -3"
+            },
+            {
+              "t": "text",
+              "v": "  (and the constants are not proportional, so it is truly no solution, not coincident)."
+            }
+          ]
+        },
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "Substitute "
+            },
+            {
+              "t": "math",
+              "v": "k = -3"
+            },
+            {
+              "t": "text",
+              "v": ":  "
+            },
+            {
+              "t": "math",
+              "v": "-3x - 3 = -4x - 1"
+            },
+            {
+              "t": "text",
+              "v": ",  so  "
+            },
+            {
+              "t": "math",
+              "v": "x = 2"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        }
+      ],
+      "fingerprint": [
+        "cross_skill",
+        "C2",
+        "nosol-k+solve"
+      ],
+      "_p": {
+        "kind": "C2",
+        "a1": -1,
+        "b1": 1,
+        "c1c": -6,
+        "b2": 3,
+        "c2c": -4,
+        "k": -3,
+        "e": -3,
+        "f": -4,
+        "g": -1,
+        "xT": 2
+      }
+    },
+    {
+      "id": 9,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "ALG.B7.s1",
+      "type": "spr",
+      "tier": "cross-skill",
+      "difficulty": {
+        "scalePoint": 790,
+        "band": "B7",
+        "method": "curated"
+      },
+      "verify": {
+        "tier": "cross-skill",
+        "correctness": "construct-backward + sympy"
+      },
+      "chain": "C2",
+      "skill": "systems_of_linear_equations",
+      "scalePoint": 790,
+      "stem": [
+        {
+          "t": "mathblock",
+          "v": "\\begin{cases} -x + y = 7 \\\\ kx - 4y = -9 \\end{cases}"
+        },
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "In the given system of equations, "
+            },
+            {
+              "t": "math",
+              "v": "k"
+            },
+            {
+              "t": "text",
+              "v": " is a constant and the system has no solution. For that value of "
+            },
+            {
+              "t": "math",
+              "v": "k"
+            },
+            {
+              "t": "text",
+              "v": ", what value of "
+            },
+            {
+              "t": "math",
+              "v": "x"
+            },
+            {
+              "t": "text",
+              "v": " satisfies "
+            },
+            {
+              "t": "math",
+              "v": "kx + 3 = -5x + 30"
+            },
+            {
+              "t": "text",
+              "v": "?"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "accept": [
+          "3"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "No solution ⇒ the lines are parallel: equal slopes. Matching coefficients, "
+            },
+            {
+              "t": "math",
+              "v": "k = 4"
+            },
+            {
+              "t": "text",
+              "v": "  (and the constants are not proportional, so it is truly no solution, not coincident)."
+            }
+          ]
+        },
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "Substitute "
+            },
+            {
+              "t": "math",
+              "v": "k = 4"
+            },
+            {
+              "t": "text",
+              "v": ":  "
+            },
+            {
+              "t": "math",
+              "v": "4x + 3 = -5x + 30"
+            },
+            {
+              "t": "text",
+              "v": ",  so  "
+            },
+            {
+              "t": "math",
+              "v": "x = 3"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        }
+      ],
+      "fingerprint": [
+        "cross_skill",
+        "C2",
+        "nosol-k+solve"
+      ],
+      "_p": {
+        "kind": "C2",
+        "a1": -1,
+        "b1": 1,
+        "c1c": 7,
+        "b2": -4,
+        "c2c": -9,
+        "k": 4,
+        "e": 3,
+        "f": -5,
+        "g": 30,
+        "xT": 3
+      }
+    },
+    {
+      "id": 10,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "ALG.B7.s1",
+      "type": "spr",
+      "tier": "cross-skill",
+      "difficulty": {
+        "scalePoint": 790,
+        "band": "B7",
+        "method": "curated"
+      },
+      "verify": {
+        "tier": "cross-skill",
+        "correctness": "construct-backward + sympy"
+      },
+      "chain": "C2",
+      "skill": "systems_of_linear_equations",
+      "scalePoint": 790,
+      "stem": [
+        {
+          "t": "mathblock",
+          "v": "\\begin{cases} -4x - 2y = -6 \\\\ kx + 2y = 1 \\end{cases}"
+        },
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "In the given system of equations, "
+            },
+            {
+              "t": "math",
+              "v": "k"
+            },
+            {
+              "t": "text",
+              "v": " is a constant and the system has no solution. For that value of "
+            },
+            {
+              "t": "math",
+              "v": "k"
+            },
+            {
+              "t": "text",
+              "v": ", what value of "
+            },
+            {
+              "t": "math",
+              "v": "x"
+            },
+            {
+              "t": "text",
+              "v": " satisfies "
+            },
+            {
+              "t": "math",
+              "v": "kx - 1 = -3x - 36"
+            },
+            {
+              "t": "text",
+              "v": "?"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "accept": [
+          "-5"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "No solution ⇒ the lines are parallel: equal slopes. Matching coefficients, "
+            },
+            {
+              "t": "math",
+              "v": "k = 4"
+            },
+            {
+              "t": "text",
+              "v": "  (and the constants are not proportional, so it is truly no solution, not coincident)."
+            }
+          ]
+        },
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "Substitute "
+            },
+            {
+              "t": "math",
+              "v": "k = 4"
+            },
+            {
+              "t": "text",
+              "v": ":  "
+            },
+            {
+              "t": "math",
+              "v": "4x - 1 = -3x - 36"
+            },
+            {
+              "t": "text",
+              "v": ",  so  "
+            },
+            {
+              "t": "math",
+              "v": "x = -5"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        }
+      ],
+      "fingerprint": [
+        "cross_skill",
+        "C2",
+        "nosol-k+solve"
+      ],
+      "_p": {
+        "kind": "C2",
+        "a1": -4,
+        "b1": -2,
+        "c1c": -6,
+        "b2": 2,
+        "c2c": 1,
+        "k": 4,
+        "e": -1,
+        "f": -3,
+        "g": -36,
+        "xT": -5
+      }
+    },
+    {
+      "id": 11,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "ALG.B7.s1",
+      "type": "spr",
+      "tier": "cross-skill",
+      "difficulty": {
+        "scalePoint": 750,
+        "band": "B7",
+        "method": "curated"
+      },
+      "verify": {
+        "tier": "cross-skill",
+        "correctness": "construct-backward + sympy"
+      },
+      "chain": "C3",
+      "skill": "systems_of_linear_equations",
+      "scalePoint": 750,
+      "stem": [
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "At a book fair, hardcover books cost $7 each and paperback books cost $5 each. A total of "
+            },
+            {
+              "t": "math",
+              "v": "21"
+            },
+            {
+              "t": "text",
+              "v": " were sold for $133. How many more hardcover books than paperback books were sold?"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "accept": [
+          "7"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "Let the counts be "
+            },
+            {
+              "t": "math",
+              "v": "x"
+            },
+            {
+              "t": "text",
+              "v": " and "
+            },
+            {
+              "t": "math",
+              "v": "y"
+            },
+            {
+              "t": "text",
+              "v": ". System:  "
+            },
+            {
+              "t": "math",
+              "v": "x + y = 21"
+            },
+            {
+              "t": "text",
+              "v": ",  "
+            },
+            {
+              "t": "math",
+              "v": "7x + 5y = 133"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "Solve: "
+            },
+            {
+              "t": "math",
+              "v": "x = 14"
+            },
+            {
+              "t": "text",
+              "v": ", "
+            },
+            {
+              "t": "math",
+              "v": "y = 7"
+            },
+            {
+              "t": "text",
+              "v": ".  The difference is  "
+            },
+            {
+              "t": "math",
+              "v": "x - y = 7"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        }
+      ],
+      "fingerprint": [
+        "cross_skill",
+        "C3",
+        "model-system-derived"
+      ],
+      "_p": {
+        "kind": "C3",
+        "p1": 7,
+        "p2": 5,
+        "T": 21,
+        "R": 133,
+        "x": 14,
+        "y": 7,
+        "ans": 7
+      }
+    },
+    {
+      "id": 12,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "ALG.B7.s1",
+      "type": "spr",
+      "tier": "cross-skill",
+      "difficulty": {
+        "scalePoint": 750,
+        "band": "B7",
+        "method": "curated"
+      },
+      "verify": {
+        "tier": "cross-skill",
+        "correctness": "construct-backward + sympy"
+      },
+      "chain": "C3",
+      "skill": "systems_of_linear_equations",
+      "scalePoint": 750,
+      "stem": [
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "At a craft fundraiser, large candles cost $7 each and small candles cost $6 each. A total of "
+            },
+            {
+              "t": "math",
+              "v": "30"
+            },
+            {
+              "t": "text",
+              "v": " were sold for $196. How many more large candles than small candles were sold?"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "accept": [
+          "2"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "Let the counts be "
+            },
+            {
+              "t": "math",
+              "v": "x"
+            },
+            {
+              "t": "text",
+              "v": " and "
+            },
+            {
+              "t": "math",
+              "v": "y"
+            },
+            {
+              "t": "text",
+              "v": ". System:  "
+            },
+            {
+              "t": "math",
+              "v": "x + y = 30"
+            },
+            {
+              "t": "text",
+              "v": ",  "
+            },
+            {
+              "t": "math",
+              "v": "7x + 6y = 196"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "Solve: "
+            },
+            {
+              "t": "math",
+              "v": "x = 16"
+            },
+            {
+              "t": "text",
+              "v": ", "
+            },
+            {
+              "t": "math",
+              "v": "y = 14"
+            },
+            {
+              "t": "text",
+              "v": ".  The difference is  "
+            },
+            {
+              "t": "math",
+              "v": "x - y = 2"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        }
+      ],
+      "fingerprint": [
+        "cross_skill",
+        "C3",
+        "model-system-derived"
+      ],
+      "_p": {
+        "kind": "C3",
+        "p1": 7,
+        "p2": 6,
+        "T": 30,
+        "R": 196,
+        "x": 16,
+        "y": 14,
+        "ans": 2
+      }
+    },
+    {
+      "id": 13,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "ALG.B7.s1",
+      "type": "spr",
+      "tier": "cross-skill",
+      "difficulty": {
+        "scalePoint": 750,
+        "band": "B7",
+        "method": "curated"
+      },
+      "verify": {
+        "tier": "cross-skill",
+        "correctness": "construct-backward + sympy"
+      },
+      "chain": "C3",
+      "skill": "systems_of_linear_equations",
+      "scalePoint": 750,
+      "stem": [
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "At an expo, premium passes cost $9 each and basic passes cost $3 each. A total of "
+            },
+            {
+              "t": "math",
+              "v": "17"
+            },
+            {
+              "t": "text",
+              "v": " were sold for $111. How many more premium passes than basic passes were sold?"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "accept": [
+          "3"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "Let the counts be "
+            },
+            {
+              "t": "math",
+              "v": "x"
+            },
+            {
+              "t": "text",
+              "v": " and "
+            },
+            {
+              "t": "math",
+              "v": "y"
+            },
+            {
+              "t": "text",
+              "v": ". System:  "
+            },
+            {
+              "t": "math",
+              "v": "x + y = 17"
+            },
+            {
+              "t": "text",
+              "v": ",  "
+            },
+            {
+              "t": "math",
+              "v": "9x + 3y = 111"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "Solve: "
+            },
+            {
+              "t": "math",
+              "v": "x = 10"
+            },
+            {
+              "t": "text",
+              "v": ", "
+            },
+            {
+              "t": "math",
+              "v": "y = 7"
+            },
+            {
+              "t": "text",
+              "v": ".  The difference is  "
+            },
+            {
+              "t": "math",
+              "v": "x - y = 3"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        }
+      ],
+      "fingerprint": [
+        "cross_skill",
+        "C3",
+        "model-system-derived"
+      ],
+      "_p": {
+        "kind": "C3",
+        "p1": 9,
+        "p2": 3,
+        "T": 17,
+        "R": 111,
+        "x": 10,
+        "y": 7,
+        "ans": 3
+      }
+    },
+    {
+      "id": 14,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "ALG.B7.s1",
+      "type": "spr",
+      "tier": "cross-skill",
+      "difficulty": {
+        "scalePoint": 750,
+        "band": "B7",
+        "method": "curated"
+      },
+      "verify": {
+        "tier": "cross-skill",
+        "correctness": "construct-backward + sympy"
+      },
+      "chain": "C3",
+      "skill": "systems_of_linear_equations",
+      "scalePoint": 750,
+      "stem": [
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "At a craft fundraiser, large candles cost $6 each and small candles cost $5 each. A total of "
+            },
+            {
+              "t": "math",
+              "v": "26"
+            },
+            {
+              "t": "text",
+              "v": " were sold for $145. How many more large candles than small candles were sold?"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "accept": [
+          "4"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "Let the counts be "
+            },
+            {
+              "t": "math",
+              "v": "x"
+            },
+            {
+              "t": "text",
+              "v": " and "
+            },
+            {
+              "t": "math",
+              "v": "y"
+            },
+            {
+              "t": "text",
+              "v": ". System:  "
+            },
+            {
+              "t": "math",
+              "v": "x + y = 26"
+            },
+            {
+              "t": "text",
+              "v": ",  "
+            },
+            {
+              "t": "math",
+              "v": "6x + 5y = 145"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "Solve: "
+            },
+            {
+              "t": "math",
+              "v": "x = 15"
+            },
+            {
+              "t": "text",
+              "v": ", "
+            },
+            {
+              "t": "math",
+              "v": "y = 11"
+            },
+            {
+              "t": "text",
+              "v": ".  The difference is  "
+            },
+            {
+              "t": "math",
+              "v": "x - y = 4"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        }
+      ],
+      "fingerprint": [
+        "cross_skill",
+        "C3",
+        "model-system-derived"
+      ],
+      "_p": {
+        "kind": "C3",
+        "p1": 6,
+        "p2": 5,
+        "T": 26,
+        "R": 145,
+        "x": 15,
+        "y": 11,
+        "ans": 4
+      }
+    },
+    {
+      "id": 15,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "ALG.B7.s1",
+      "type": "spr",
+      "tier": "cross-skill",
+      "difficulty": {
+        "scalePoint": 750,
+        "band": "B7",
+        "method": "curated"
+      },
+      "verify": {
+        "tier": "cross-skill",
+        "correctness": "construct-backward + sympy"
+      },
+      "chain": "C3",
+      "skill": "systems_of_linear_equations",
+      "scalePoint": 750,
+      "stem": [
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "At an expo, premium passes cost $5 each and basic passes cost $2 each. A total of "
+            },
+            {
+              "t": "math",
+              "v": "26"
+            },
+            {
+              "t": "text",
+              "v": " were sold for $97. How many more premium passes than basic passes were sold?"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "accept": [
+          "4"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "Let the counts be "
+            },
+            {
+              "t": "math",
+              "v": "x"
+            },
+            {
+              "t": "text",
+              "v": " and "
+            },
+            {
+              "t": "math",
+              "v": "y"
+            },
+            {
+              "t": "text",
+              "v": ". System:  "
+            },
+            {
+              "t": "math",
+              "v": "x + y = 26"
+            },
+            {
+              "t": "text",
+              "v": ",  "
+            },
+            {
+              "t": "math",
+              "v": "5x + 2y = 97"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "Solve: "
+            },
+            {
+              "t": "math",
+              "v": "x = 15"
+            },
+            {
+              "t": "text",
+              "v": ", "
+            },
+            {
+              "t": "math",
+              "v": "y = 11"
+            },
+            {
+              "t": "text",
+              "v": ".  The difference is  "
+            },
+            {
+              "t": "math",
+              "v": "x - y = 4"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        }
+      ],
+      "fingerprint": [
+        "cross_skill",
+        "C3",
+        "model-system-derived"
+      ],
+      "_p": {
+        "kind": "C3",
+        "p1": 5,
+        "p2": 2,
+        "T": 26,
+        "R": 97,
+        "x": 15,
+        "y": 11,
+        "ans": 4
+      }
+    },
+    {
+      "id": 16,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "ALG.B7.s1",
+      "type": "spr",
+      "tier": "cross-skill",
+      "difficulty": {
+        "scalePoint": 785,
+        "band": "B7",
+        "method": "curated"
+      },
+      "verify": {
+        "tier": "cross-skill",
+        "correctness": "construct-backward + sympy"
+      },
+      "chain": "C4",
+      "skill": "linear_equations_two_variables",
+      "scalePoint": 785,
+      "stem": [
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "The function "
+            },
+            {
+              "t": "math",
+              "v": "f"
+            },
+            {
+              "t": "text",
+              "v": " is defined by "
+            },
+            {
+              "t": "math",
+              "v": "f(x) = -x + 4"
+            },
+            {
+              "t": "text",
+              "v": ". The function "
+            },
+            {
+              "t": "math",
+              "v": "g"
+            },
+            {
+              "t": "text",
+              "v": " is defined by "
+            },
+            {
+              "t": "math",
+              "v": "g(x) = f(x) + k"
+            },
+            {
+              "t": "text",
+              "v": ", where "
+            },
+            {
+              "t": "math",
+              "v": "k"
+            },
+            {
+              "t": "text",
+              "v": " is a constant. In the "
+            },
+            {
+              "t": "math",
+              "v": "xy"
+            },
+            {
+              "t": "text",
+              "v": "-plane, the graph of "
+            },
+            {
+              "t": "math",
+              "v": "y = g(x)"
+            },
+            {
+              "t": "text",
+              "v": " and the line "
+            },
+            {
+              "t": "math",
+              "v": "y = 2x - 8"
+            },
+            {
+              "t": "text",
+              "v": " intersect at a point on the "
+            },
+            {
+              "t": "math",
+              "v": "x"
+            },
+            {
+              "t": "text",
+              "v": "-axis. What is the value of "
+            },
+            {
+              "t": "math",
+              "v": "k"
+            },
+            {
+              "t": "text",
+              "v": "?"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "accept": [
+          "0"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "The line "
+            },
+            {
+              "t": "math",
+              "v": "y = 2x - 8"
+            },
+            {
+              "t": "text",
+              "v": " meets the "
+            },
+            {
+              "t": "math",
+              "v": "x"
+            },
+            {
+              "t": "text",
+              "v": "-axis where "
+            },
+            {
+              "t": "math",
+              "v": "2x - 8 = 0"
+            },
+            {
+              "t": "text",
+              "v": ", i.e. "
+            },
+            {
+              "t": "math",
+              "v": "x = 4"
+            },
+            {
+              "t": "text",
+              "v": ". So the common point is "
+            },
+            {
+              "t": "math",
+              "v": "(4, 0)"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "Then "
+            },
+            {
+              "t": "math",
+              "v": "g(4) = f(4) + k = 0"
+            },
+            {
+              "t": "text",
+              "v": ":  "
+            },
+            {
+              "t": "math",
+              "v": "(0) + k = 0"
+            },
+            {
+              "t": "text",
+              "v": ",  so  "
+            },
+            {
+              "t": "math",
+              "v": "k = 0"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        }
+      ],
+      "fingerprint": [
+        "cross_skill",
+        "C4",
+        "translate-xintercept"
+      ],
+      "_p": {
+        "kind": "C4",
+        "m": -1,
+        "b": 4,
+        "n": 2,
+        "d": -8,
+        "x0": 4,
+        "k": 0
+      }
+    },
+    {
+      "id": 17,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "ALG.B7.s1",
+      "type": "spr",
+      "tier": "cross-skill",
+      "difficulty": {
+        "scalePoint": 785,
+        "band": "B7",
+        "method": "curated"
+      },
+      "verify": {
+        "tier": "cross-skill",
+        "correctness": "construct-backward + sympy"
+      },
+      "chain": "C4",
+      "skill": "linear_equations_two_variables",
+      "scalePoint": 785,
+      "stem": [
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "The function "
+            },
+            {
+              "t": "math",
+              "v": "f"
+            },
+            {
+              "t": "text",
+              "v": " is defined by "
+            },
+            {
+              "t": "math",
+              "v": "f(x) = -3x - 3"
+            },
+            {
+              "t": "text",
+              "v": ". The function "
+            },
+            {
+              "t": "math",
+              "v": "g"
+            },
+            {
+              "t": "text",
+              "v": " is defined by "
+            },
+            {
+              "t": "math",
+              "v": "g(x) = f(x) + k"
+            },
+            {
+              "t": "text",
+              "v": ", where "
+            },
+            {
+              "t": "math",
+              "v": "k"
+            },
+            {
+              "t": "text",
+              "v": " is a constant. In the "
+            },
+            {
+              "t": "math",
+              "v": "xy"
+            },
+            {
+              "t": "text",
+              "v": "-plane, the graph of "
+            },
+            {
+              "t": "math",
+              "v": "y = g(x)"
+            },
+            {
+              "t": "text",
+              "v": " and the line "
+            },
+            {
+              "t": "math",
+              "v": "y = -2x - 8"
+            },
+            {
+              "t": "text",
+              "v": " intersect at a point on the "
+            },
+            {
+              "t": "math",
+              "v": "x"
+            },
+            {
+              "t": "text",
+              "v": "-axis. What is the value of "
+            },
+            {
+              "t": "math",
+              "v": "k"
+            },
+            {
+              "t": "text",
+              "v": "?"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "accept": [
+          "-9"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "The line "
+            },
+            {
+              "t": "math",
+              "v": "y = -2x - 8"
+            },
+            {
+              "t": "text",
+              "v": " meets the "
+            },
+            {
+              "t": "math",
+              "v": "x"
+            },
+            {
+              "t": "text",
+              "v": "-axis where "
+            },
+            {
+              "t": "math",
+              "v": "-2x - 8 = 0"
+            },
+            {
+              "t": "text",
+              "v": ", i.e. "
+            },
+            {
+              "t": "math",
+              "v": "x = -4"
+            },
+            {
+              "t": "text",
+              "v": ". So the common point is "
+            },
+            {
+              "t": "math",
+              "v": "(-4, 0)"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "Then "
+            },
+            {
+              "t": "math",
+              "v": "g(-4) = f(-4) + k = 0"
+            },
+            {
+              "t": "text",
+              "v": ":  "
+            },
+            {
+              "t": "math",
+              "v": "(9) + k = 0"
+            },
+            {
+              "t": "text",
+              "v": ",  so  "
+            },
+            {
+              "t": "math",
+              "v": "k = -9"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        }
+      ],
+      "fingerprint": [
+        "cross_skill",
+        "C4",
+        "translate-xintercept"
+      ],
+      "_p": {
+        "kind": "C4",
+        "m": -3,
+        "b": -3,
+        "n": -2,
+        "d": -8,
+        "x0": -4,
+        "k": -9
+      }
+    },
+    {
+      "id": 18,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "ALG.B7.s1",
+      "type": "spr",
+      "tier": "cross-skill",
+      "difficulty": {
+        "scalePoint": 785,
+        "band": "B7",
+        "method": "curated"
+      },
+      "verify": {
+        "tier": "cross-skill",
+        "correctness": "construct-backward + sympy"
+      },
+      "chain": "C4",
+      "skill": "linear_equations_two_variables",
+      "scalePoint": 785,
+      "stem": [
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "The function "
+            },
+            {
+              "t": "math",
+              "v": "f"
+            },
+            {
+              "t": "text",
+              "v": " is defined by "
+            },
+            {
+              "t": "math",
+              "v": "f(x) = -4x - 1"
+            },
+            {
+              "t": "text",
+              "v": ". The function "
+            },
+            {
+              "t": "math",
+              "v": "g"
+            },
+            {
+              "t": "text",
+              "v": " is defined by "
+            },
+            {
+              "t": "math",
+              "v": "g(x) = f(x) + k"
+            },
+            {
+              "t": "text",
+              "v": ", where "
+            },
+            {
+              "t": "math",
+              "v": "k"
+            },
+            {
+              "t": "text",
+              "v": " is a constant. In the "
+            },
+            {
+              "t": "math",
+              "v": "xy"
+            },
+            {
+              "t": "text",
+              "v": "-plane, the graph of "
+            },
+            {
+              "t": "math",
+              "v": "y = g(x)"
+            },
+            {
+              "t": "text",
+              "v": " and the line "
+            },
+            {
+              "t": "math",
+              "v": "y = x + 4"
+            },
+            {
+              "t": "text",
+              "v": " intersect at a point on the "
+            },
+            {
+              "t": "math",
+              "v": "x"
+            },
+            {
+              "t": "text",
+              "v": "-axis. What is the value of "
+            },
+            {
+              "t": "math",
+              "v": "k"
+            },
+            {
+              "t": "text",
+              "v": "?"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "accept": [
+          "-15"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "The line "
+            },
+            {
+              "t": "math",
+              "v": "y = x + 4"
+            },
+            {
+              "t": "text",
+              "v": " meets the "
+            },
+            {
+              "t": "math",
+              "v": "x"
+            },
+            {
+              "t": "text",
+              "v": "-axis where "
+            },
+            {
+              "t": "math",
+              "v": "x + 4 = 0"
+            },
+            {
+              "t": "text",
+              "v": ", i.e. "
+            },
+            {
+              "t": "math",
+              "v": "x = -4"
+            },
+            {
+              "t": "text",
+              "v": ". So the common point is "
+            },
+            {
+              "t": "math",
+              "v": "(-4, 0)"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "Then "
+            },
+            {
+              "t": "math",
+              "v": "g(-4) = f(-4) + k = 0"
+            },
+            {
+              "t": "text",
+              "v": ":  "
+            },
+            {
+              "t": "math",
+              "v": "(15) + k = 0"
+            },
+            {
+              "t": "text",
+              "v": ",  so  "
+            },
+            {
+              "t": "math",
+              "v": "k = -15"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        }
+      ],
+      "fingerprint": [
+        "cross_skill",
+        "C4",
+        "translate-xintercept"
+      ],
+      "_p": {
+        "kind": "C4",
+        "m": -4,
+        "b": -1,
+        "n": 1,
+        "d": 4,
+        "x0": -4,
+        "k": -15
+      }
+    },
+    {
+      "id": 19,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "ALG.B7.s1",
+      "type": "spr",
+      "tier": "cross-skill",
+      "difficulty": {
+        "scalePoint": 785,
+        "band": "B7",
+        "method": "curated"
+      },
+      "verify": {
+        "tier": "cross-skill",
+        "correctness": "construct-backward + sympy"
+      },
+      "chain": "C4",
+      "skill": "linear_equations_two_variables",
+      "scalePoint": 785,
+      "stem": [
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "The function "
+            },
+            {
+              "t": "math",
+              "v": "f"
+            },
+            {
+              "t": "text",
+              "v": " is defined by "
+            },
+            {
+              "t": "math",
+              "v": "f(x) = 3x - 6"
+            },
+            {
+              "t": "text",
+              "v": ". The function "
+            },
+            {
+              "t": "math",
+              "v": "g"
+            },
+            {
+              "t": "text",
+              "v": " is defined by "
+            },
+            {
+              "t": "math",
+              "v": "g(x) = f(x) + k"
+            },
+            {
+              "t": "text",
+              "v": ", where "
+            },
+            {
+              "t": "math",
+              "v": "k"
+            },
+            {
+              "t": "text",
+              "v": " is a constant. In the "
+            },
+            {
+              "t": "math",
+              "v": "xy"
+            },
+            {
+              "t": "text",
+              "v": "-plane, the graph of "
+            },
+            {
+              "t": "math",
+              "v": "y = g(x)"
+            },
+            {
+              "t": "text",
+              "v": " and the line "
+            },
+            {
+              "t": "math",
+              "v": "y = -2x + 4"
+            },
+            {
+              "t": "text",
+              "v": " intersect at a point on the "
+            },
+            {
+              "t": "math",
+              "v": "x"
+            },
+            {
+              "t": "text",
+              "v": "-axis. What is the value of "
+            },
+            {
+              "t": "math",
+              "v": "k"
+            },
+            {
+              "t": "text",
+              "v": "?"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "accept": [
+          "0"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "The line "
+            },
+            {
+              "t": "math",
+              "v": "y = -2x + 4"
+            },
+            {
+              "t": "text",
+              "v": " meets the "
+            },
+            {
+              "t": "math",
+              "v": "x"
+            },
+            {
+              "t": "text",
+              "v": "-axis where "
+            },
+            {
+              "t": "math",
+              "v": "-2x + 4 = 0"
+            },
+            {
+              "t": "text",
+              "v": ", i.e. "
+            },
+            {
+              "t": "math",
+              "v": "x = 2"
+            },
+            {
+              "t": "text",
+              "v": ". So the common point is "
+            },
+            {
+              "t": "math",
+              "v": "(2, 0)"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "Then "
+            },
+            {
+              "t": "math",
+              "v": "g(2) = f(2) + k = 0"
+            },
+            {
+              "t": "text",
+              "v": ":  "
+            },
+            {
+              "t": "math",
+              "v": "(0) + k = 0"
+            },
+            {
+              "t": "text",
+              "v": ",  so  "
+            },
+            {
+              "t": "math",
+              "v": "k = 0"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        }
+      ],
+      "fingerprint": [
+        "cross_skill",
+        "C4",
+        "translate-xintercept"
+      ],
+      "_p": {
+        "kind": "C4",
+        "m": 3,
+        "b": -6,
+        "n": -2,
+        "d": 4,
+        "x0": 2,
+        "k": 0
+      }
+    },
+    {
+      "id": 20,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "ALG.B7.s1",
+      "type": "spr",
+      "tier": "cross-skill",
+      "difficulty": {
+        "scalePoint": 785,
+        "band": "B7",
+        "method": "curated"
+      },
+      "verify": {
+        "tier": "cross-skill",
+        "correctness": "construct-backward + sympy"
+      },
+      "chain": "C4",
+      "skill": "linear_equations_two_variables",
+      "scalePoint": 785,
+      "stem": [
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "The function "
+            },
+            {
+              "t": "math",
+              "v": "f"
+            },
+            {
+              "t": "text",
+              "v": " is defined by "
+            },
+            {
+              "t": "math",
+              "v": "f(x) = 2x - 5"
+            },
+            {
+              "t": "text",
+              "v": ". The function "
+            },
+            {
+              "t": "math",
+              "v": "g"
+            },
+            {
+              "t": "text",
+              "v": " is defined by "
+            },
+            {
+              "t": "math",
+              "v": "g(x) = f(x) + k"
+            },
+            {
+              "t": "text",
+              "v": ", where "
+            },
+            {
+              "t": "math",
+              "v": "k"
+            },
+            {
+              "t": "text",
+              "v": " is a constant. In the "
+            },
+            {
+              "t": "math",
+              "v": "xy"
+            },
+            {
+              "t": "text",
+              "v": "-plane, the graph of "
+            },
+            {
+              "t": "math",
+              "v": "y = g(x)"
+            },
+            {
+              "t": "text",
+              "v": " and the line "
+            },
+            {
+              "t": "math",
+              "v": "y = x + 3"
+            },
+            {
+              "t": "text",
+              "v": " intersect at a point on the "
+            },
+            {
+              "t": "math",
+              "v": "x"
+            },
+            {
+              "t": "text",
+              "v": "-axis. What is the value of "
+            },
+            {
+              "t": "math",
+              "v": "k"
+            },
+            {
+              "t": "text",
+              "v": "?"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "accept": [
+          "11"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "The line "
+            },
+            {
+              "t": "math",
+              "v": "y = x + 3"
+            },
+            {
+              "t": "text",
+              "v": " meets the "
+            },
+            {
+              "t": "math",
+              "v": "x"
+            },
+            {
+              "t": "text",
+              "v": "-axis where "
+            },
+            {
+              "t": "math",
+              "v": "x + 3 = 0"
+            },
+            {
+              "t": "text",
+              "v": ", i.e. "
+            },
+            {
+              "t": "math",
+              "v": "x = -3"
+            },
+            {
+              "t": "text",
+              "v": ". So the common point is "
+            },
+            {
+              "t": "math",
+              "v": "(-3, 0)"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "Then "
+            },
+            {
+              "t": "math",
+              "v": "g(-3) = f(-3) + k = 0"
+            },
+            {
+              "t": "text",
+              "v": ":  "
+            },
+            {
+              "t": "math",
+              "v": "(-11) + k = 0"
+            },
+            {
+              "t": "text",
+              "v": ",  so  "
+            },
+            {
+              "t": "math",
+              "v": "k = 11"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        }
+      ],
+      "fingerprint": [
+        "cross_skill",
+        "C4",
+        "translate-xintercept"
+      ],
+      "_p": {
+        "kind": "C4",
+        "m": 2,
+        "b": -5,
+        "n": 1,
+        "d": 3,
+        "x0": -3,
+        "k": 11
+      }
+    },
+    {
+      "id": 21,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "ALG.B7.s1",
+      "type": "spr",
+      "tier": "cross-skill",
+      "difficulty": {
+        "scalePoint": 770,
+        "band": "B7",
+        "method": "curated"
+      },
+      "verify": {
+        "tier": "cross-skill",
+        "correctness": "construct-backward + sympy"
+      },
+      "chain": "C5",
+      "skill": "linear_inequalities",
+      "scalePoint": 770,
+      "stem": [
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "A group buys premium seats at $8 each and standard seats at $4 each, for a total of "
+            },
+            {
+              "t": "math",
+              "v": "8"
+            },
+            {
+              "t": "text",
+              "v": " items. If the total cost is at most $51, what is the greatest number of premium seats that can be bought?"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "accept": [
+          "4"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "Let "
+            },
+            {
+              "t": "math",
+              "v": "x"
+            },
+            {
+              "t": "text",
+              "v": " be the number of premium seats; then standard seats number "
+            },
+            {
+              "t": "math",
+              "v": "8 - x"
+            },
+            {
+              "t": "text",
+              "v": ". Cost:  "
+            },
+            {
+              "t": "math",
+              "v": "8x + 4(8 - x) \\le 51"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "Simplify:  "
+            },
+            {
+              "t": "math",
+              "v": "4x \\le 19"
+            },
+            {
+              "t": "text",
+              "v": ",  so  "
+            },
+            {
+              "t": "math",
+              "v": "x \\le 4.75"
+            },
+            {
+              "t": "text",
+              "v": ".  The greatest whole number is  "
+            },
+            {
+              "t": "math",
+              "v": "x = 4"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        }
+      ],
+      "fingerprint": [
+        "cross_skill",
+        "C5",
+        "budget-optimize"
+      ],
+      "_p": {
+        "kind": "C5",
+        "p": 8,
+        "q": 4,
+        "T": 8,
+        "B": 51,
+        "ans": 4
+      }
+    },
+    {
+      "id": 22,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "ALG.B7.s1",
+      "type": "spr",
+      "tier": "cross-skill",
+      "difficulty": {
+        "scalePoint": 770,
+        "band": "B7",
+        "method": "curated"
+      },
+      "verify": {
+        "tier": "cross-skill",
+        "correctness": "construct-backward + sympy"
+      },
+      "chain": "C5",
+      "skill": "linear_inequalities",
+      "scalePoint": 770,
+      "stem": [
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "A landscaper buys large trees at $9 each and small trees at $2 each, for a total of "
+            },
+            {
+              "t": "math",
+              "v": "12"
+            },
+            {
+              "t": "text",
+              "v": " items. If the total cost is at most $55, what is the greatest number of large trees that can be bought?"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "accept": [
+          "4"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "Let "
+            },
+            {
+              "t": "math",
+              "v": "x"
+            },
+            {
+              "t": "text",
+              "v": " be the number of large trees; then small trees number "
+            },
+            {
+              "t": "math",
+              "v": "12 - x"
+            },
+            {
+              "t": "text",
+              "v": ". Cost:  "
+            },
+            {
+              "t": "math",
+              "v": "9x + 2(12 - x) \\le 55"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "Simplify:  "
+            },
+            {
+              "t": "math",
+              "v": "7x \\le 31"
+            },
+            {
+              "t": "text",
+              "v": ",  so  "
+            },
+            {
+              "t": "math",
+              "v": "x \\le 4.43"
+            },
+            {
+              "t": "text",
+              "v": ".  The greatest whole number is  "
+            },
+            {
+              "t": "math",
+              "v": "x = 4"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        }
+      ],
+      "fingerprint": [
+        "cross_skill",
+        "C5",
+        "budget-optimize"
+      ],
+      "_p": {
+        "kind": "C5",
+        "p": 9,
+        "q": 2,
+        "T": 12,
+        "B": 55,
+        "ans": 4
+      }
+    },
+    {
+      "id": 23,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "ALG.B7.s1",
+      "type": "spr",
+      "tier": "cross-skill",
+      "difficulty": {
+        "scalePoint": 770,
+        "band": "B7",
+        "method": "curated"
+      },
+      "verify": {
+        "tier": "cross-skill",
+        "correctness": "construct-backward + sympy"
+      },
+      "chain": "C5",
+      "skill": "linear_inequalities",
+      "scalePoint": 770,
+      "stem": [
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "A group buys premium seats at $9 each and standard seats at $6 each, for a total of "
+            },
+            {
+              "t": "math",
+              "v": "8"
+            },
+            {
+              "t": "text",
+              "v": " items. If the total cost is at most $61, what is the greatest number of premium seats that can be bought?"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "accept": [
+          "4"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "Let "
+            },
+            {
+              "t": "math",
+              "v": "x"
+            },
+            {
+              "t": "text",
+              "v": " be the number of premium seats; then standard seats number "
+            },
+            {
+              "t": "math",
+              "v": "8 - x"
+            },
+            {
+              "t": "text",
+              "v": ". Cost:  "
+            },
+            {
+              "t": "math",
+              "v": "9x + 6(8 - x) \\le 61"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "Simplify:  "
+            },
+            {
+              "t": "math",
+              "v": "3x \\le 13"
+            },
+            {
+              "t": "text",
+              "v": ",  so  "
+            },
+            {
+              "t": "math",
+              "v": "x \\le 4.33"
+            },
+            {
+              "t": "text",
+              "v": ".  The greatest whole number is  "
+            },
+            {
+              "t": "math",
+              "v": "x = 4"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        }
+      ],
+      "fingerprint": [
+        "cross_skill",
+        "C5",
+        "budget-optimize"
+      ],
+      "_p": {
+        "kind": "C5",
+        "p": 9,
+        "q": 6,
+        "T": 8,
+        "B": 61,
+        "ans": 4
+      }
+    },
+    {
+      "id": 24,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "ALG.B7.s1",
+      "type": "spr",
+      "tier": "cross-skill",
+      "difficulty": {
+        "scalePoint": 770,
+        "band": "B7",
+        "method": "curated"
+      },
+      "verify": {
+        "tier": "cross-skill",
+        "correctness": "construct-backward + sympy"
+      },
+      "chain": "C5",
+      "skill": "linear_inequalities",
+      "scalePoint": 770,
+      "stem": [
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "A group buys premium seats at $7 each and standard seats at $2 each, for a total of "
+            },
+            {
+              "t": "math",
+              "v": "10"
+            },
+            {
+              "t": "text",
+              "v": " items. If the total cost is at most $51, what is the greatest number of premium seats that can be bought?"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "accept": [
+          "6"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "Let "
+            },
+            {
+              "t": "math",
+              "v": "x"
+            },
+            {
+              "t": "text",
+              "v": " be the number of premium seats; then standard seats number "
+            },
+            {
+              "t": "math",
+              "v": "10 - x"
+            },
+            {
+              "t": "text",
+              "v": ". Cost:  "
+            },
+            {
+              "t": "math",
+              "v": "7x + 2(10 - x) \\le 51"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "Simplify:  "
+            },
+            {
+              "t": "math",
+              "v": "5x \\le 31"
+            },
+            {
+              "t": "text",
+              "v": ",  so  "
+            },
+            {
+              "t": "math",
+              "v": "x \\le 6.20"
+            },
+            {
+              "t": "text",
+              "v": ".  The greatest whole number is  "
+            },
+            {
+              "t": "math",
+              "v": "x = 6"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        }
+      ],
+      "fingerprint": [
+        "cross_skill",
+        "C5",
+        "budget-optimize"
+      ],
+      "_p": {
+        "kind": "C5",
+        "p": 7,
+        "q": 2,
+        "T": 10,
+        "B": 51,
+        "ans": 6
+      }
+    },
+    {
+      "id": 25,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "ALG.B7.s1",
+      "type": "spr",
+      "tier": "cross-skill",
+      "difficulty": {
+        "scalePoint": 770,
+        "band": "B7",
+        "method": "curated"
+      },
+      "verify": {
+        "tier": "cross-skill",
+        "correctness": "construct-backward + sympy"
+      },
+      "chain": "C5",
+      "skill": "linear_inequalities",
+      "scalePoint": 770,
+      "stem": [
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "A buyer buys front-row tickets at $8 each and balcony tickets at $6 each, for a total of "
+            },
+            {
+              "t": "math",
+              "v": "11"
+            },
+            {
+              "t": "text",
+              "v": " items. If the total cost is at most $79, what is the greatest number of front-row tickets that can be bought?"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "accept": [
+          "6"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "Let "
+            },
+            {
+              "t": "math",
+              "v": "x"
+            },
+            {
+              "t": "text",
+              "v": " be the number of front-row tickets; then balcony tickets number "
+            },
+            {
+              "t": "math",
+              "v": "11 - x"
+            },
+            {
+              "t": "text",
+              "v": ". Cost:  "
+            },
+            {
+              "t": "math",
+              "v": "8x + 6(11 - x) \\le 79"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "Simplify:  "
+            },
+            {
+              "t": "math",
+              "v": "2x \\le 13"
+            },
+            {
+              "t": "text",
+              "v": ",  so  "
+            },
+            {
+              "t": "math",
+              "v": "x \\le 6.50"
+            },
+            {
+              "t": "text",
+              "v": ".  The greatest whole number is  "
+            },
+            {
+              "t": "math",
+              "v": "x = 6"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        }
+      ],
+      "fingerprint": [
+        "cross_skill",
+        "C5",
+        "budget-optimize"
+      ],
+      "_p": {
+        "kind": "C5",
+        "p": 8,
+        "q": 6,
+        "T": 11,
+        "B": 79,
+        "ans": 6
+      }
+    },
+    {
+      "id": 26,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "ALG.B7.s1",
+      "type": "spr",
+      "tier": "cross-skill",
+      "difficulty": {
+        "scalePoint": 795,
+        "band": "B7",
+        "method": "curated"
+      },
+      "verify": {
+        "tier": "cross-skill",
+        "correctness": "construct-backward + sympy"
+      },
+      "chain": "C6",
+      "skill": "systems_of_linear_equations",
+      "scalePoint": 795,
+      "stem": [
+        {
+          "t": "mathblock",
+          "v": "\\begin{cases} x + ky = 7 \\\\ kx + 4y = -6 \\end{cases}"
+        },
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "In the given system of equations, "
+            },
+            {
+              "t": "math",
+              "v": "k"
+            },
+            {
+              "t": "text",
+              "v": " is a positive constant and the system has no solution. In the "
+            },
+            {
+              "t": "math",
+              "v": "xy"
+            },
+            {
+              "t": "text",
+              "v": "-plane, the line with slope "
+            },
+            {
+              "t": "math",
+              "v": "k"
+            },
+            {
+              "t": "text",
+              "v": " that passes through "
+            },
+            {
+              "t": "math",
+              "v": "(-3, 2)"
+            },
+            {
+              "t": "text",
+              "v": " has what "
+            },
+            {
+              "t": "math",
+              "v": "y"
+            },
+            {
+              "t": "text",
+              "v": "-intercept?"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "accept": [
+          "8"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "No solution ⇒ the lines are parallel ⇒ the coefficient rows are proportional:  "
+            },
+            {
+              "t": "math",
+              "v": "\\dfrac{1}{k} = \\dfrac{k}{4}"
+            },
+            {
+              "t": "text",
+              "v": ",  so  "
+            },
+            {
+              "t": "math",
+              "v": "k^2 = 4"
+            },
+            {
+              "t": "text",
+              "v": "  and (positive) "
+            },
+            {
+              "t": "math",
+              "v": "k = 2"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "The line with slope "
+            },
+            {
+              "t": "math",
+              "v": "2"
+            },
+            {
+              "t": "text",
+              "v": " through "
+            },
+            {
+              "t": "math",
+              "v": "(-3, 2)"
+            },
+            {
+              "t": "text",
+              "v": ":  "
+            },
+            {
+              "t": "math",
+              "v": "b = 2 - 2(-3) = 8"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        }
+      ],
+      "fingerprint": [
+        "cross_skill",
+        "C6",
+        "quadratic-param+slope"
+      ],
+      "_p": {
+        "kind": "C6",
+        "a": 1,
+        "d": 4,
+        "c1": 7,
+        "c2": -6,
+        "k": 2,
+        "m": -3,
+        "n": 2,
+        "ans": 8
+      }
+    },
+    {
+      "id": 27,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "ALG.B7.s1",
+      "type": "spr",
+      "tier": "cross-skill",
+      "difficulty": {
+        "scalePoint": 795,
+        "band": "B7",
+        "method": "curated"
+      },
+      "verify": {
+        "tier": "cross-skill",
+        "correctness": "construct-backward + sympy"
+      },
+      "chain": "C6",
+      "skill": "systems_of_linear_equations",
+      "scalePoint": 795,
+      "stem": [
+        {
+          "t": "mathblock",
+          "v": "\\begin{cases} 2x + ky = 6 \\\\ kx + 8y = -5 \\end{cases}"
+        },
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "In the given system of equations, "
+            },
+            {
+              "t": "math",
+              "v": "k"
+            },
+            {
+              "t": "text",
+              "v": " is a positive constant and the system has no solution. In the "
+            },
+            {
+              "t": "math",
+              "v": "xy"
+            },
+            {
+              "t": "text",
+              "v": "-plane, the line with slope "
+            },
+            {
+              "t": "math",
+              "v": "k"
+            },
+            {
+              "t": "text",
+              "v": " that passes through "
+            },
+            {
+              "t": "math",
+              "v": "(-5, -2)"
+            },
+            {
+              "t": "text",
+              "v": " has what "
+            },
+            {
+              "t": "math",
+              "v": "y"
+            },
+            {
+              "t": "text",
+              "v": "-intercept?"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "accept": [
+          "18"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "No solution ⇒ the lines are parallel ⇒ the coefficient rows are proportional:  "
+            },
+            {
+              "t": "math",
+              "v": "\\dfrac{2}{k} = \\dfrac{k}{8}"
+            },
+            {
+              "t": "text",
+              "v": ",  so  "
+            },
+            {
+              "t": "math",
+              "v": "k^2 = 16"
+            },
+            {
+              "t": "text",
+              "v": "  and (positive) "
+            },
+            {
+              "t": "math",
+              "v": "k = 4"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "The line with slope "
+            },
+            {
+              "t": "math",
+              "v": "4"
+            },
+            {
+              "t": "text",
+              "v": " through "
+            },
+            {
+              "t": "math",
+              "v": "(-5, -2)"
+            },
+            {
+              "t": "text",
+              "v": ":  "
+            },
+            {
+              "t": "math",
+              "v": "b = -2 - 4(-5) = 18"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        }
+      ],
+      "fingerprint": [
+        "cross_skill",
+        "C6",
+        "quadratic-param+slope"
+      ],
+      "_p": {
+        "kind": "C6",
+        "a": 2,
+        "d": 8,
+        "c1": 6,
+        "c2": -5,
+        "k": 4,
+        "m": -5,
+        "n": -2,
+        "ans": 18
+      }
+    },
+    {
+      "id": 28,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "ALG.B7.s1",
+      "type": "spr",
+      "tier": "cross-skill",
+      "difficulty": {
+        "scalePoint": 795,
+        "band": "B7",
+        "method": "curated"
+      },
+      "verify": {
+        "tier": "cross-skill",
+        "correctness": "construct-backward + sympy"
+      },
+      "chain": "C6",
+      "skill": "systems_of_linear_equations",
+      "scalePoint": 795,
+      "stem": [
+        {
+          "t": "mathblock",
+          "v": "\\begin{cases} 9x + ky = 2 \\\\ kx + 4y = -9 \\end{cases}"
+        },
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "In the given system of equations, "
+            },
+            {
+              "t": "math",
+              "v": "k"
+            },
+            {
+              "t": "text",
+              "v": " is a positive constant and the system has no solution. In the "
+            },
+            {
+              "t": "math",
+              "v": "xy"
+            },
+            {
+              "t": "text",
+              "v": "-plane, the line with slope "
+            },
+            {
+              "t": "math",
+              "v": "k"
+            },
+            {
+              "t": "text",
+              "v": " that passes through "
+            },
+            {
+              "t": "math",
+              "v": "(-2, -1)"
+            },
+            {
+              "t": "text",
+              "v": " has what "
+            },
+            {
+              "t": "math",
+              "v": "y"
+            },
+            {
+              "t": "text",
+              "v": "-intercept?"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "accept": [
+          "11"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "No solution ⇒ the lines are parallel ⇒ the coefficient rows are proportional:  "
+            },
+            {
+              "t": "math",
+              "v": "\\dfrac{9}{k} = \\dfrac{k}{4}"
+            },
+            {
+              "t": "text",
+              "v": ",  so  "
+            },
+            {
+              "t": "math",
+              "v": "k^2 = 36"
+            },
+            {
+              "t": "text",
+              "v": "  and (positive) "
+            },
+            {
+              "t": "math",
+              "v": "k = 6"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "The line with slope "
+            },
+            {
+              "t": "math",
+              "v": "6"
+            },
+            {
+              "t": "text",
+              "v": " through "
+            },
+            {
+              "t": "math",
+              "v": "(-2, -1)"
+            },
+            {
+              "t": "text",
+              "v": ":  "
+            },
+            {
+              "t": "math",
+              "v": "b = -1 - 6(-2) = 11"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        }
+      ],
+      "fingerprint": [
+        "cross_skill",
+        "C6",
+        "quadratic-param+slope"
+      ],
+      "_p": {
+        "kind": "C6",
+        "a": 9,
+        "d": 4,
+        "c1": 2,
+        "c2": -9,
+        "k": 6,
+        "m": -2,
+        "n": -1,
+        "ans": 11
+      }
+    },
+    {
+      "id": 29,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "ALG.B7.s1",
+      "type": "spr",
+      "tier": "cross-skill",
+      "difficulty": {
+        "scalePoint": 795,
+        "band": "B7",
+        "method": "curated"
+      },
+      "verify": {
+        "tier": "cross-skill",
+        "correctness": "construct-backward + sympy"
+      },
+      "chain": "C6",
+      "skill": "systems_of_linear_equations",
+      "scalePoint": 795,
+      "stem": [
+        {
+          "t": "mathblock",
+          "v": "\\begin{cases} 9x + ky = -7 \\\\ kx + 4y = 1 \\end{cases}"
+        },
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "In the given system of equations, "
+            },
+            {
+              "t": "math",
+              "v": "k"
+            },
+            {
+              "t": "text",
+              "v": " is a positive constant and the system has no solution. In the "
+            },
+            {
+              "t": "math",
+              "v": "xy"
+            },
+            {
+              "t": "text",
+              "v": "-plane, the line with slope "
+            },
+            {
+              "t": "math",
+              "v": "k"
+            },
+            {
+              "t": "text",
+              "v": " that passes through "
+            },
+            {
+              "t": "math",
+              "v": "(2, -6)"
+            },
+            {
+              "t": "text",
+              "v": " has what "
+            },
+            {
+              "t": "math",
+              "v": "y"
+            },
+            {
+              "t": "text",
+              "v": "-intercept?"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "accept": [
+          "-18"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "No solution ⇒ the lines are parallel ⇒ the coefficient rows are proportional:  "
+            },
+            {
+              "t": "math",
+              "v": "\\dfrac{9}{k} = \\dfrac{k}{4}"
+            },
+            {
+              "t": "text",
+              "v": ",  so  "
+            },
+            {
+              "t": "math",
+              "v": "k^2 = 36"
+            },
+            {
+              "t": "text",
+              "v": "  and (positive) "
+            },
+            {
+              "t": "math",
+              "v": "k = 6"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "The line with slope "
+            },
+            {
+              "t": "math",
+              "v": "6"
+            },
+            {
+              "t": "text",
+              "v": " through "
+            },
+            {
+              "t": "math",
+              "v": "(2, -6)"
+            },
+            {
+              "t": "text",
+              "v": ":  "
+            },
+            {
+              "t": "math",
+              "v": "b = -6 - 6(2) = -18"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        }
+      ],
+      "fingerprint": [
+        "cross_skill",
+        "C6",
+        "quadratic-param+slope"
+      ],
+      "_p": {
+        "kind": "C6",
+        "a": 9,
+        "d": 4,
+        "c1": -7,
+        "c2": 1,
+        "k": 6,
+        "m": 2,
+        "n": -6,
+        "ans": -18
+      }
+    },
+    {
+      "id": 30,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "ALG.B7.s1",
+      "type": "spr",
+      "tier": "cross-skill",
+      "difficulty": {
+        "scalePoint": 795,
+        "band": "B7",
+        "method": "curated"
+      },
+      "verify": {
+        "tier": "cross-skill",
+        "correctness": "construct-backward + sympy"
+      },
+      "chain": "C6",
+      "skill": "systems_of_linear_equations",
+      "scalePoint": 795,
+      "stem": [
+        {
+          "t": "mathblock",
+          "v": "\\begin{cases} x + ky = -6 \\\\ kx + 4y = 8 \\end{cases}"
+        },
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "In the given system of equations, "
+            },
+            {
+              "t": "math",
+              "v": "k"
+            },
+            {
+              "t": "text",
+              "v": " is a positive constant and the system has no solution. In the "
+            },
+            {
+              "t": "math",
+              "v": "xy"
+            },
+            {
+              "t": "text",
+              "v": "-plane, the line with slope "
+            },
+            {
+              "t": "math",
+              "v": "k"
+            },
+            {
+              "t": "text",
+              "v": " that passes through "
+            },
+            {
+              "t": "math",
+              "v": "(-1, -2)"
+            },
+            {
+              "t": "text",
+              "v": " has what "
+            },
+            {
+              "t": "math",
+              "v": "y"
+            },
+            {
+              "t": "text",
+              "v": "-intercept?"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "accept": [
+          "0"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "No solution ⇒ the lines are parallel ⇒ the coefficient rows are proportional:  "
+            },
+            {
+              "t": "math",
+              "v": "\\dfrac{1}{k} = \\dfrac{k}{4}"
+            },
+            {
+              "t": "text",
+              "v": ",  so  "
+            },
+            {
+              "t": "math",
+              "v": "k^2 = 4"
+            },
+            {
+              "t": "text",
+              "v": "  and (positive) "
+            },
+            {
+              "t": "math",
+              "v": "k = 2"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "The line with slope "
+            },
+            {
+              "t": "math",
+              "v": "2"
+            },
+            {
+              "t": "text",
+              "v": " through "
+            },
+            {
+              "t": "math",
+              "v": "(-1, -2)"
+            },
+            {
+              "t": "text",
+              "v": ":  "
+            },
+            {
+              "t": "math",
+              "v": "b = -2 - 2(-1) = 0"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        }
+      ],
+      "fingerprint": [
+        "cross_skill",
+        "C6",
+        "quadratic-param+slope"
+      ],
+      "_p": {
+        "kind": "C6",
+        "a": 1,
+        "d": 4,
+        "c1": -6,
+        "c2": 8,
+        "k": 2,
+        "m": -1,
+        "n": -2,
+        "ans": 0
+      }
+    },
+    {
+      "id": 31,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "ALG.B7.s1",
+      "type": "spr",
+      "tier": "cross-skill",
+      "difficulty": {
+        "scalePoint": 800,
+        "band": "B7",
+        "method": "curated"
+      },
+      "verify": {
+        "tier": "cross-skill",
+        "correctness": "construct-backward + sympy"
+      },
+      "chain": "C7",
+      "skill": "linear_inequalities",
+      "scalePoint": 800,
+      "stem": [
+        {
+          "t": "mathblock",
+          "v": "\\begin{cases} y \\ge 3x + 1 \\\\ y \\le 2x + k \\end{cases}"
+        },
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "In the given system of inequalities, "
+            },
+            {
+              "t": "math",
+              "v": "k"
+            },
+            {
+              "t": "text",
+              "v": " is a constant. The point "
+            },
+            {
+              "t": "math",
+              "v": "(1, 8)"
+            },
+            {
+              "t": "text",
+              "v": " is a solution to the system and lies on the line "
+            },
+            {
+              "t": "math",
+              "v": "y = 2x + k"
+            },
+            {
+              "t": "text",
+              "v": ". What is the greatest value of "
+            },
+            {
+              "t": "math",
+              "v": "x"
+            },
+            {
+              "t": "text",
+              "v": " for which the system has a solution?"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "accept": [
+          "5"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "The point lies on the upper boundary:  "
+            },
+            {
+              "t": "math",
+              "v": "8 = 2(1) + k"
+            },
+            {
+              "t": "text",
+              "v": ",  so  "
+            },
+            {
+              "t": "math",
+              "v": "k = 6"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "A solution exists only where the lower bound ≤ the upper bound:  "
+            },
+            {
+              "t": "math",
+              "v": "3x + 1 \\le 2x + 6"
+            },
+            {
+              "t": "text",
+              "v": ",  i.e.  "
+            },
+            {
+              "t": "math",
+              "v": "1x \\le 5"
+            },
+            {
+              "t": "text",
+              "v": ",  so  "
+            },
+            {
+              "t": "math",
+              "v": "x \\le 5"
+            },
+            {
+              "t": "text",
+              "v": ".  Greatest "
+            },
+            {
+              "t": "math",
+              "v": "x = 5"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        }
+      ],
+      "fingerprint": [
+        "cross_skill",
+        "C7",
+        "ineq-system+varconst"
+      ],
+      "_p": {
+        "kind": "C7",
+        "m1": 3,
+        "m2": 2,
+        "b1": 1,
+        "k": 6,
+        "p": 1,
+        "q": 8,
+        "ans": 5
+      }
+    },
+    {
+      "id": 32,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "ALG.B7.s1",
+      "type": "spr",
+      "tier": "cross-skill",
+      "difficulty": {
+        "scalePoint": 800,
+        "band": "B7",
+        "method": "curated"
+      },
+      "verify": {
+        "tier": "cross-skill",
+        "correctness": "construct-backward + sympy"
+      },
+      "chain": "C7",
+      "skill": "linear_inequalities",
+      "scalePoint": 800,
+      "stem": [
+        {
+          "t": "mathblock",
+          "v": "\\begin{cases} y \\ge x + 4 \\\\ y \\le -2x + k \\end{cases}"
+        },
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "In the given system of inequalities, "
+            },
+            {
+              "t": "math",
+              "v": "k"
+            },
+            {
+              "t": "text",
+              "v": " is a constant. The point "
+            },
+            {
+              "t": "math",
+              "v": "(1, 21)"
+            },
+            {
+              "t": "text",
+              "v": " is a solution to the system and lies on the line "
+            },
+            {
+              "t": "math",
+              "v": "y = -2x + k"
+            },
+            {
+              "t": "text",
+              "v": ". What is the greatest value of "
+            },
+            {
+              "t": "math",
+              "v": "x"
+            },
+            {
+              "t": "text",
+              "v": " for which the system has a solution?"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "accept": [
+          "6"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "The point lies on the upper boundary:  "
+            },
+            {
+              "t": "math",
+              "v": "21 = -2(1) + k"
+            },
+            {
+              "t": "text",
+              "v": ",  so  "
+            },
+            {
+              "t": "math",
+              "v": "k = 23"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "A solution exists only where the lower bound ≤ the upper bound:  "
+            },
+            {
+              "t": "math",
+              "v": "x + 4 \\le -2x + 23"
+            },
+            {
+              "t": "text",
+              "v": ",  i.e.  "
+            },
+            {
+              "t": "math",
+              "v": "3x \\le 19"
+            },
+            {
+              "t": "text",
+              "v": ",  so  "
+            },
+            {
+              "t": "math",
+              "v": "x \\le 6.33"
+            },
+            {
+              "t": "text",
+              "v": ".  Greatest "
+            },
+            {
+              "t": "math",
+              "v": "x = 6"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        }
+      ],
+      "fingerprint": [
+        "cross_skill",
+        "C7",
+        "ineq-system+varconst"
+      ],
+      "_p": {
+        "kind": "C7",
+        "m1": 1,
+        "m2": -2,
+        "b1": 4,
+        "k": 23,
+        "p": 1,
+        "q": 21,
+        "ans": 6
+      }
+    },
+    {
+      "id": 33,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "ALG.B7.s1",
+      "type": "spr",
+      "tier": "cross-skill",
+      "difficulty": {
+        "scalePoint": 800,
+        "band": "B7",
+        "method": "curated"
+      },
+      "verify": {
+        "tier": "cross-skill",
+        "correctness": "construct-backward + sympy"
+      },
+      "chain": "C7",
+      "skill": "linear_inequalities",
+      "scalePoint": 800,
+      "stem": [
+        {
+          "t": "mathblock",
+          "v": "\\begin{cases} y \\ge 3x + 1 \\\\ y \\le x + k \\end{cases}"
+        },
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "In the given system of inequalities, "
+            },
+            {
+              "t": "math",
+              "v": "k"
+            },
+            {
+              "t": "text",
+              "v": " is a constant. The point "
+            },
+            {
+              "t": "math",
+              "v": "(6, 24)"
+            },
+            {
+              "t": "text",
+              "v": " is a solution to the system and lies on the line "
+            },
+            {
+              "t": "math",
+              "v": "y = x + k"
+            },
+            {
+              "t": "text",
+              "v": ". What is the greatest value of "
+            },
+            {
+              "t": "math",
+              "v": "x"
+            },
+            {
+              "t": "text",
+              "v": " for which the system has a solution?"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "accept": [
+          "8"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "The point lies on the upper boundary:  "
+            },
+            {
+              "t": "math",
+              "v": "24 = 1(6) + k"
+            },
+            {
+              "t": "text",
+              "v": ",  so  "
+            },
+            {
+              "t": "math",
+              "v": "k = 18"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "A solution exists only where the lower bound ≤ the upper bound:  "
+            },
+            {
+              "t": "math",
+              "v": "3x + 1 \\le x + 18"
+            },
+            {
+              "t": "text",
+              "v": ",  i.e.  "
+            },
+            {
+              "t": "math",
+              "v": "2x \\le 17"
+            },
+            {
+              "t": "text",
+              "v": ",  so  "
+            },
+            {
+              "t": "math",
+              "v": "x \\le 8.50"
+            },
+            {
+              "t": "text",
+              "v": ".  Greatest "
+            },
+            {
+              "t": "math",
+              "v": "x = 8"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        }
+      ],
+      "fingerprint": [
+        "cross_skill",
+        "C7",
+        "ineq-system+varconst"
+      ],
+      "_p": {
+        "kind": "C7",
+        "m1": 3,
+        "m2": 1,
+        "b1": 1,
+        "k": 18,
+        "p": 6,
+        "q": 24,
+        "ans": 8
+      }
+    },
+    {
+      "id": 34,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "ALG.B7.s1",
+      "type": "spr",
+      "tier": "cross-skill",
+      "difficulty": {
+        "scalePoint": 800,
+        "band": "B7",
+        "method": "curated"
+      },
+      "verify": {
+        "tier": "cross-skill",
+        "correctness": "construct-backward + sympy"
+      },
+      "chain": "C7",
+      "skill": "linear_inequalities",
+      "scalePoint": 800,
+      "stem": [
+        {
+          "t": "mathblock",
+          "v": "\\begin{cases} y \\ge 2x + 2 \\\\ y \\le x + k \\end{cases}"
+        },
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "In the given system of inequalities, "
+            },
+            {
+              "t": "math",
+              "v": "k"
+            },
+            {
+              "t": "text",
+              "v": " is a constant. The point "
+            },
+            {
+              "t": "math",
+              "v": "(4, 14)"
+            },
+            {
+              "t": "text",
+              "v": " is a solution to the system and lies on the line "
+            },
+            {
+              "t": "math",
+              "v": "y = x + k"
+            },
+            {
+              "t": "text",
+              "v": ". What is the greatest value of "
+            },
+            {
+              "t": "math",
+              "v": "x"
+            },
+            {
+              "t": "text",
+              "v": " for which the system has a solution?"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "accept": [
+          "8"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "The point lies on the upper boundary:  "
+            },
+            {
+              "t": "math",
+              "v": "14 = 1(4) + k"
+            },
+            {
+              "t": "text",
+              "v": ",  so  "
+            },
+            {
+              "t": "math",
+              "v": "k = 10"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "A solution exists only where the lower bound ≤ the upper bound:  "
+            },
+            {
+              "t": "math",
+              "v": "2x + 2 \\le x + 10"
+            },
+            {
+              "t": "text",
+              "v": ",  i.e.  "
+            },
+            {
+              "t": "math",
+              "v": "1x \\le 8"
+            },
+            {
+              "t": "text",
+              "v": ",  so  "
+            },
+            {
+              "t": "math",
+              "v": "x \\le 8"
+            },
+            {
+              "t": "text",
+              "v": ".  Greatest "
+            },
+            {
+              "t": "math",
+              "v": "x = 8"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        }
+      ],
+      "fingerprint": [
+        "cross_skill",
+        "C7",
+        "ineq-system+varconst"
+      ],
+      "_p": {
+        "kind": "C7",
+        "m1": 2,
+        "m2": 1,
+        "b1": 2,
+        "k": 10,
+        "p": 4,
+        "q": 14,
+        "ans": 8
+      }
+    },
+    {
+      "id": 35,
+      "program": "SAT",
+      "domain": "algebra",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "ALG.B7.s1",
+      "type": "spr",
+      "tier": "cross-skill",
+      "difficulty": {
+        "scalePoint": 800,
+        "band": "B7",
+        "method": "curated"
+      },
+      "verify": {
+        "tier": "cross-skill",
+        "correctness": "construct-backward + sympy"
+      },
+      "chain": "C7",
+      "skill": "linear_inequalities",
+      "scalePoint": 800,
+      "stem": [
+        {
+          "t": "mathblock",
+          "v": "\\begin{cases} y \\ge 2x + 2 \\\\ y \\le x + k \\end{cases}"
+        },
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "In the given system of inequalities, "
+            },
+            {
+              "t": "math",
+              "v": "k"
+            },
+            {
+              "t": "text",
+              "v": " is a constant. The point "
+            },
+            {
+              "t": "math",
+              "v": "(4, 14)"
+            },
+            {
+              "t": "text",
+              "v": " is a solution to the system and lies on the line "
+            },
+            {
+              "t": "math",
+              "v": "y = x + k"
+            },
+            {
+              "t": "text",
+              "v": ". What is the greatest value of "
+            },
+            {
+              "t": "math",
+              "v": "x"
+            },
+            {
+              "t": "text",
+              "v": " for which the system has a solution?"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "accept": [
+          "8"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "The point lies on the upper boundary:  "
+            },
+            {
+              "t": "math",
+              "v": "14 = 1(4) + k"
+            },
+            {
+              "t": "text",
+              "v": ",  so  "
+            },
+            {
+              "t": "math",
+              "v": "k = 10"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "t": "p",
+          "segs": [
+            {
+              "t": "text",
+              "v": "A solution exists only where the lower bound ≤ the upper bound:  "
+            },
+            {
+              "t": "math",
+              "v": "2x + 2 \\le x + 10"
+            },
+            {
+              "t": "text",
+              "v": ",  i.e.  "
+            },
+            {
+              "t": "math",
+              "v": "1x \\le 8"
+            },
+            {
+              "t": "text",
+              "v": ",  so  "
+            },
+            {
+              "t": "math",
+              "v": "x \\le 8"
+            },
+            {
+              "t": "text",
+              "v": ".  Greatest "
+            },
+            {
+              "t": "math",
+              "v": "x = 8"
+            },
+            {
+              "t": "text",
+              "v": "."
+            }
+          ]
+        }
+      ],
+      "fingerprint": [
+        "cross_skill",
+        "C7",
+        "ineq-system+varconst"
+      ],
+      "_p": {
+        "kind": "C7",
+        "m1": 2,
+        "m2": 1,
+        "b1": 2,
+        "k": 10,
+        "p": 4,
+        "q": 14,
+        "ans": 8
+      }
+    }
+  ]
+}
