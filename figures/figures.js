@@ -105,7 +105,7 @@ export function coordPlane(spec) {
   const ax = (ymin <= 0 && ymax >= 0) ? sy(0) : B;       // x-axis screen y
   const ay = (xmin <= 0 && xmax >= 0) ? sx(0) : L;       // y-axis screen x
   out.push(line(L - ext, ax, R + ext, ax, "fig-axis", `marker-start="url(#arrowL)" marker-end="url(#arrow)" stroke-width="1.3"`));
-  out.push(line(ay, B + ext, ay, T - ext, "fig-axis", `marker-end="url(#arrowU)" stroke-width="1.3"`));
+  out.push(line(ay, B + ext, ay, T - ext, "fig-axis", `marker-start="url(#arrowD)" marker-end="url(#arrowU)" stroke-width="1.3"`));   // arrowheads on BOTH ends of the y-axis (4-way axes)
   const [xl, yl] = spec.axisLabels || ["x", "y"];
   out.push(txt(R + ext + 4, ax, xl, { anchor: "start", style: 'font-style="italic"' }));   // on the axis line, past the arrow
   out.push(txt(ay + 9, T - ext + 1, yl, { anchor: "start", baseline: "hanging", style: 'font-style="italic"' }));

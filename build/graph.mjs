@@ -457,7 +457,8 @@ function frameForCurve(xMust, yMust) {
   // legible (<=20); a rare over-spread item is caught by legibilityCheck and re-drawn.
   const xlo = Math.floor(Math.min(-1, ...xMust)) - 1, xhi = Math.ceil(Math.max(1, ...xMust)) + 1;
   const ylo = Math.floor(Math.min(-1, ...yMust)) - 1, yhi = Math.ceil(Math.max(1, ...yMust)) + 1;
-  return { xRange: [xlo, xhi], yRange: [ylo, yhi], xStep: xhi - xlo > 14 ? 2 : 1, yStep: yhi - ylo > 14 ? 2 : 1, origin: true, axisLabels: ["x", "y"] };   // prefer a UNIT grid (read features land on labeled gridlines); step 2 only for genuinely tall windows
+  const step = Math.max(xhi - xlo, yhi - ylo) > 14 ? 2 : 1;   // ONE step on both axes ⇒ SQUARE grid cells (standardized); unit grid unless the window is genuinely tall
+  return { xRange: [xlo, xhi], yRange: [ylo, yhi], xStep: step, yStep: step, origin: true, axisLabels: ["x", "y"] };
 }
 
 /* ADV.B1.s1 (B1) — read the y-intercept off a nonlinear (parabola | exponential) graph */
@@ -558,7 +559,7 @@ function gGraphFromEq(r) {
     const a = randint(r, 1, 3), b = pick(r, [2, 3]);
     const correct = expCurve(a, b, 0);
     const dC = [expCurve(a, 0.5, 0), expCurve(-a, b, 0), expCurve(a, b, sgn(r) * randint(r, 2, 4))];
-    const win = { xRange: [-3, 4], yRange: [-6, 10], xStep: 1, yStep: 2, origin: true, axisLabels: ["x", "y"] };
+    const win = { xRange: [-4, 4], yRange: [-8, 8], xStep: 2, yStep: 2, origin: true, axisLabels: ["x", "y"] };   // square cells
     const optSpec = (e) => ({ ...win, curves: [e] });
     const { optionFigures, correct_choice } = mcqFigures(optSpec(correct), dC.map(optSpec), r);
     return {

@@ -1712,14 +1712,14 @@
             "fn": "coordPlane",
             "spec": {
               "xRange": [
-                -3,
+                -4,
                 4
               ],
               "yRange": [
-                -6,
-                10
+                -8,
+                8
               ],
-              "xStep": 1,
+              "xStep": 2,
               "yStep": 2,
               "origin": true,
               "axisLabels": [
@@ -1743,14 +1743,14 @@
             "fn": "coordPlane",
             "spec": {
               "xRange": [
-                -3,
+                -4,
                 4
               ],
               "yRange": [
-                -6,
-                10
+                -8,
+                8
               ],
-              "xStep": 1,
+              "xStep": 2,
               "yStep": 2,
               "origin": true,
               "axisLabels": [
@@ -1774,14 +1774,14 @@
             "fn": "coordPlane",
             "spec": {
               "xRange": [
-                -3,
+                -4,
                 4
               ],
               "yRange": [
-                -6,
-                10
+                -8,
+                8
               ],
-              "xStep": 1,
+              "xStep": 2,
               "yStep": 2,
               "origin": true,
               "axisLabels": [
@@ -1805,14 +1805,14 @@
             "fn": "coordPlane",
             "spec": {
               "xRange": [
-                -3,
+                -4,
                 4
               ],
               "yRange": [
-                -6,
-                10
+                -8,
+                8
               ],
-              "xStep": 1,
+              "xStep": 2,
               "yStep": 2,
               "origin": true,
               "axisLabels": [
@@ -2148,14 +2148,14 @@
             "fn": "coordPlane",
             "spec": {
               "xRange": [
-                -3,
+                -4,
                 4
               ],
               "yRange": [
-                -6,
-                10
+                -8,
+                8
               ],
-              "xStep": 1,
+              "xStep": 2,
               "yStep": 2,
               "origin": true,
               "axisLabels": [
@@ -2179,14 +2179,14 @@
             "fn": "coordPlane",
             "spec": {
               "xRange": [
-                -3,
+                -4,
                 4
               ],
               "yRange": [
-                -6,
-                10
+                -8,
+                8
               ],
-              "xStep": 1,
+              "xStep": 2,
               "yStep": 2,
               "origin": true,
               "axisLabels": [
@@ -2210,14 +2210,14 @@
             "fn": "coordPlane",
             "spec": {
               "xRange": [
-                -3,
+                -4,
                 4
               ],
               "yRange": [
-                -6,
-                10
+                -8,
+                8
               ],
-              "xStep": 1,
+              "xStep": 2,
               "yStep": 2,
               "origin": true,
               "axisLabels": [
@@ -2241,14 +2241,14 @@
             "fn": "coordPlane",
             "spec": {
               "xRange": [
-                -3,
+                -4,
                 4
               ],
               "yRange": [
-                -6,
-                10
+                -8,
+                8
               ],
-              "xStep": 1,
+              "xStep": 2,
               "yStep": 2,
               "origin": true,
               "axisLabels": [
