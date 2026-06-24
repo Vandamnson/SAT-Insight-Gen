@@ -213,8 +213,10 @@ const ABSTRACT_TASKS = new Set([
   "solve_factored", "solve_by_factoring", "solve_formula", "discriminant", "vertex", "identify_feature",
   "combine_like_terms", "distribute", "factor_gcf", "sum_polynomials", "solve_for_variable",
   "product_mono_bin", "product_bin_bin", "factor", "choose_form",
-  "solve_abs_value", "solve_radical", "solve_rational", "nonlinear_system", "unknown_constant", "solve_formula",
+  "solve_abs_value", "solve_radical", "solve_rational", "nonlinear_system", "solve_formula",
   "translate_connect", "rewrite_exponent",
+  // NOTE: unknown_constant (ADV.B7.s1) is deliberately NOT forced abstract — its rubric
+  // statement reads "with or without context", so the draw may make it contextual.
 ]);
 
 /* ============================ the draw ============================ */
