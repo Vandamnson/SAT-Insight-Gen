@@ -186,9 +186,15 @@ async function generateCell(domain, subdomain, n, bands, ctr) {
   const unique = [];
   const seenFig = new Set();
   for (const s of verified) {
-    if (s.cell.tier === "C") {   // graph items: identity is the FIGURE, not the templated stem (surface shingles would falsely collapse them)
-      const num = s.cell.incidentals.numbers;
-      const sig = JSON.stringify({ f: num.figure?.spec?.curves ?? (num.optionFigures || []).map((o) => o.curves), a: num.answer, c: num.correct_choice });
+    if (s.cell.tier === "C") {   // figure items: identity is the FIGURE, not the templated stem (surface shingles would falsely collapse them)
+      const num = s.cell.incidentals.numbers, sp = num.figure?.spec;
+      // figure key: graph curves verbatim; prism/solid dims CANONICALIZED (sorted) so a
+      // relabeled/permuted solid (3×4×7 vs 7×3×4) collides, while two distinct boxes that
+      // merely share a volume do NOT (answer alone is not the identity).
+      const fkey = sp?.curves ? sp.curves
+        : sp?.dims ? Object.values(sp.dims).map(String).sort()
+        : (num.optionFigures || []).map((o) => o.curves);
+      const sig = JSON.stringify({ f: fkey, a: num.answer, c: num.correct_choice });
       if (seenFig.has(sig)) { reasons.push(`figdup [B${s.cell.band}]`); continue; }
       seenFig.add(sig); unique.push(s); continue;
     }

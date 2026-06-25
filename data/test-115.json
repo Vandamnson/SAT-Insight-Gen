@@ -30,7 +30,7 @@
         },
         {
           "t": "math",
-          "v": "V = \\ell wh = 7\\cdot 3\\cdot 4 = 84"
+          "v": "V = \\ell wh = 3\\cdot 4\\cdot 7 = 84"
         },
         {
           "t": "text",
@@ -44,14 +44,14 @@
         "fn": "prism",
         "spec": {
           "dims": {
-            "l": 7,
-            "w": 3,
-            "h": 4
+            "l": 3,
+            "w": 4,
+            "h": 7
           },
           "labels": {
-            "l": "7",
-            "w": "3",
-            "h": "4"
+            "l": "3",
+            "w": "4",
+            "h": "7"
           }
         }
       },
@@ -73,7 +73,7 @@
       "fingerprint": [
         "solid_fig",
         "prism_volume",
-        "7x3x4",
+        "3x4x7",
         "3d"
       ],
       "reskinDistance": 1,
@@ -107,7 +107,7 @@
         },
         {
           "t": "math",
-          "v": "V = \\ell wh = 8\\cdot 5\\cdot 6 = 240"
+          "v": "V = \\ell wh = 5\\cdot 6\\cdot 8 = 240"
         },
         {
           "t": "text",
@@ -121,14 +121,14 @@
         "fn": "prism",
         "spec": {
           "dims": {
-            "l": 8,
-            "w": 5,
-            "h": 6
+            "l": 5,
+            "w": 6,
+            "h": 8
           },
           "labels": {
-            "l": "8",
-            "w": "5",
-            "h": "6"
+            "l": "5",
+            "w": "6",
+            "h": "8"
           }
         }
       },
@@ -150,7 +150,7 @@
       "fingerprint": [
         "solid_fig",
         "prism_volume",
-        "8x5x6",
+        "5x6x8",
         "3d"
       ],
       "reskinDistance": 1,
@@ -158,6 +158,83 @@
     },
     {
       "id": 3,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B1",
+      "target_band": "B1",
+      "statementId": "GEO.B1.s1",
+      "skill": "solid_figures",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The right rectangular prism shown has the edge lengths marked, in centimeters. What is the volume of the prism, in cubic centimeters?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "24"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. apply volume formula: "
+        },
+        {
+          "t": "math",
+          "v": "V = \\ell wh = 2\\cdot 3\\cdot 4 = 24"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "prism",
+        "spec": {
+          "dims": {
+            "l": 2,
+            "w": 3,
+            "h": 4
+          },
+          "labels": {
+            "l": "2",
+            "w": "3",
+            "h": "4"
+          }
+        }
+      },
+      "difficulty": {
+        "scalePoint": 340,
+        "band": "B1",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "prism_volume_fig"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "prism_volume_fig"
+      },
+      "fingerprint": [
+        "solid_fig",
+        "prism_volume",
+        "2x3x4",
+        "3d"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 4,
       "program": "SAT",
       "domain": "geometry_trig",
       "band": "B1",
@@ -184,7 +261,7 @@
         },
         {
           "t": "math",
-          "v": "V = \\ell wh = 4\\cdot 9\\cdot 8 = 288"
+          "v": "V = \\ell wh = 4\\cdot 8\\cdot 9 = 288"
         },
         {
           "t": "text",
@@ -199,13 +276,13 @@
         "spec": {
           "dims": {
             "l": 4,
-            "w": 9,
-            "h": 8
+            "w": 8,
+            "h": 9
           },
           "labels": {
             "l": "4",
-            "w": "9",
-            "h": "8"
+            "w": "8",
+            "h": "9"
           }
         }
       },
@@ -227,14 +304,14 @@
       "fingerprint": [
         "solid_fig",
         "prism_volume",
-        "4x9x8",
+        "4x8x9",
         "3d"
       ],
       "reskinDistance": 1,
       "tier": "build-spec"
     },
     {
-      "id": 4,
+      "id": 5,
       "program": "SAT",
       "domain": "geometry_trig",
       "band": "B1",
@@ -261,7 +338,7 @@
         },
         {
           "t": "math",
-          "v": "V = \\ell wh = 8\\cdot 2\\cdot 8 = 128"
+          "v": "V = \\ell wh = 2\\cdot 8\\cdot 8 = 128"
         },
         {
           "t": "text",
@@ -275,13 +352,13 @@
         "fn": "prism",
         "spec": {
           "dims": {
-            "l": 8,
-            "w": 2,
+            "l": 2,
+            "w": 8,
             "h": 8
           },
           "labels": {
-            "l": "8",
-            "w": "2",
+            "l": "2",
+            "w": "8",
             "h": "8"
           }
         }
@@ -304,14 +381,14 @@
       "fingerprint": [
         "solid_fig",
         "prism_volume",
-        "8x2x8",
+        "2x8x8",
         "3d"
       ],
       "reskinDistance": 1,
       "tier": "build-spec"
     },
     {
-      "id": 5,
+      "id": 6,
       "program": "SAT",
       "domain": "geometry_trig",
       "band": "B1",
@@ -338,7 +415,7 @@
         },
         {
           "t": "math",
-          "v": "V = \\ell wh = 7\\cdot 4\\cdot 6 = 168"
+          "v": "V = \\ell wh = 4\\cdot 6\\cdot 7 = 168"
         },
         {
           "t": "text",
@@ -352,91 +429,14 @@
         "fn": "prism",
         "spec": {
           "dims": {
-            "l": 7,
-            "w": 4,
-            "h": 6
-          },
-          "labels": {
-            "l": "7",
-            "w": "4",
-            "h": "6"
-          }
-        }
-      },
-      "difficulty": {
-        "scalePoint": 340,
-        "band": "B1",
-        "method": "apriori_v1",
-        "feature_vector": {
-          "task": "prism_volume_fig"
-        }
-      },
-      "verify": {
-        "tier": "C",
-        "correctness": "prove:pass"
-      },
-      "radicals": {
-        "task": "prism_volume_fig"
-      },
-      "fingerprint": [
-        "solid_fig",
-        "prism_volume",
-        "7x4x6",
-        "3d"
-      ],
-      "reskinDistance": 1,
-      "tier": "build-spec"
-    },
-    {
-      "id": 6,
-      "program": "SAT",
-      "domain": "geometry_trig",
-      "band": "B1",
-      "target_band": "B1",
-      "statementId": "GEO.B1.s1",
-      "skill": "solid_figures",
-      "type": "spr",
-      "stem": [
-        {
-          "t": "text",
-          "v": "The right rectangular prism shown has the edge lengths marked, in centimeters. What is the volume of the prism, in cubic centimeters?"
-        }
-      ],
-      "answer": {
-        "accept": [
-          "120"
-        ],
-        "tol": 0
-      },
-      "solution": [
-        {
-          "t": "text",
-          "v": "1. apply volume formula: "
-        },
-        {
-          "t": "math",
-          "v": "V = \\ell wh = 5\\cdot 6\\cdot 4 = 120"
-        },
-        {
-          "t": "text",
-          "v": "."
-        },
-        {
-          "t": "br"
-        }
-      ],
-      "figure": {
-        "fn": "prism",
-        "spec": {
-          "dims": {
-            "l": 5,
+            "l": 4,
             "w": 6,
-            "h": 4
+            "h": 7
           },
           "labels": {
-            "l": "5",
+            "l": "4",
             "w": "6",
-            "h": "4"
+            "h": "7"
           }
         }
       },
@@ -458,7 +458,7 @@
       "fingerprint": [
         "solid_fig",
         "prism_volume",
-        "5x6x4",
+        "4x6x7",
         "3d"
       ],
       "reskinDistance": 1,
@@ -877,7 +877,7 @@
         },
         {
           "t": "math",
-          "v": "SA = 2(\\ell w + \\ell h + wh) = 2(12 + 42 + 14) = 136"
+          "v": "SA = 2(\\ell w + \\ell h + wh) = 2(12 + 14 + 42) = 136"
         },
         {
           "t": "text",
@@ -891,13 +891,13 @@
         "fn": "prism",
         "spec": {
           "dims": {
-            "l": 6,
-            "w": 2,
+            "l": 2,
+            "w": 6,
             "h": 7
           },
           "labels": {
-            "l": "6",
-            "w": "2",
+            "l": "2",
+            "w": "6",
             "h": "7"
           }
         }
@@ -920,7 +920,7 @@
       "fingerprint": [
         "solid_fig",
         "prism_surface",
-        "6x2x7",
+        "2x6x7",
         "3d"
       ],
       "reskinDistance": 1,
@@ -1047,7 +1047,7 @@
         },
         {
           "t": "math",
-          "v": "h = \\dfrac{V}{\\ell w} = \\dfrac{98}{7\\cdot 2} = 7"
+          "v": "h = \\dfrac{V}{\\ell w} = \\dfrac{98}{2\\cdot 7} = 7"
         },
         {
           "t": "text",
@@ -1061,13 +1061,13 @@
         "fn": "prism",
         "spec": {
           "dims": {
-            "l": 7,
-            "w": 2,
+            "l": 2,
+            "w": 7,
             "h": 7
           },
           "labels": {
-            "l": "7",
-            "w": "2",
+            "l": "2",
+            "w": "7",
             "h": "h"
           }
         }
@@ -1090,7 +1090,7 @@
       "fingerprint": [
         "solid_fig",
         "prism_solve_dim",
-        "7x2",
+        "2x7",
         "3d"
       ],
       "reskinDistance": 1,
@@ -1124,7 +1124,7 @@
         },
         {
           "t": "math",
-          "v": "SA = 2(\\ell w + \\ell h + wh) = 2(21 + 9 + 21) = 102"
+          "v": "SA = 2(\\ell w + \\ell h + wh) = 2(9 + 21 + 21) = 102"
         },
         {
           "t": "text",
@@ -1139,13 +1139,13 @@
         "spec": {
           "dims": {
             "l": 3,
-            "w": 7,
-            "h": 3
+            "w": 3,
+            "h": 7
           },
           "labels": {
             "l": "3",
-            "w": "7",
-            "h": "3"
+            "w": "3",
+            "h": "7"
           }
         }
       },
@@ -1167,7 +1167,7 @@
       "fingerprint": [
         "solid_fig",
         "prism_surface",
-        "3x7x3",
+        "3x3x7",
         "3d"
       ],
       "reskinDistance": 1,

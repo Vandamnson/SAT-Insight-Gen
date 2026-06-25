@@ -10,7 +10,8 @@ const sp = (...d) => d.map((s, i) => ({ step: i + 1, op: s.op, detail: s.detail 
 
 /* B1 — read the labeled edges, compute the volume */
 function gPrismVolume(r) {
-  const l = randint(r, 2, 9), w = randint(r, 2, 9), h = randint(r, 2, 9), V = l * w * h;
+  const e = [randint(r, 2, 9), randint(r, 2, 9), randint(r, 2, 9)].sort((a, b) => a - b);   // canonical (sorted) ⇒ permuted/relabeled boxes never bank twice
+  const l = e[0], w = e[1], h = e[2], V = l * w * h;
   return {
     task: "prism_volume_fig", format: "spr", answer: String(V),
     statement: "The right rectangular prism shown has the edge lengths marked, in centimeters. What is the volume of the prism, in cubic centimeters?",
@@ -34,7 +35,8 @@ function gCube(r) {
 
 /* B6 — prism surface area */
 function gPrismSurface(r) {
-  const l = randint(r, 2, 8), w = randint(r, 2, 8), h = randint(r, 2, 8), SA = 2 * (l * w + l * h + w * h);
+  const e = [randint(r, 2, 8), randint(r, 2, 8), randint(r, 2, 8)].sort((a, b) => a - b);   // canonical (sorted)
+  const l = e[0], w = e[1], h = e[2], SA = 2 * (l * w + l * h + w * h);
   return {
     task: "prism_surface_fig", format: "spr", answer: String(SA),
     statement: "The right rectangular prism shown has the edge lengths marked, in meters. What is the surface area of the prism, in square meters?",
@@ -46,7 +48,8 @@ function gPrismSurface(r) {
 
 /* B6 — given two edges + the volume (in the figure/stem), solve for the third (h) */
 function gPrismSolveDim(r) {
-  const l = randint(r, 2, 9), w = randint(r, 2, 9), h = randint(r, 2, 12), V = l * w * h;
+  const [l, w] = [randint(r, 2, 9), randint(r, 2, 9)].sort((a, b) => a - b);   // canonical labeled pair; h is the unknown
+  const h = randint(r, 2, 12), V = l * w * h;
   return {
     task: "prism_solve_dim_fig", format: "spr", answer: String(h),
     statement: `The right rectangular prism shown has a volume of ${V} cubic feet. Two of its edge lengths are marked, in feet. What is the value of \\(h\\)?`,
