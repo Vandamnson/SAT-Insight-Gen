@@ -204,7 +204,8 @@ async function generateCell(domain, subdomain, n, bands, ctr) {
       // figure key: graph curves verbatim; prism/solid dims CANONICALIZED (sorted) so a
       // relabeled/permuted solid (3×4×7 vs 7×3×4) collides, while two distinct boxes that
       // merely share a volume do NOT (answer alone is not the identity).
-      const fkey = sp?.curves ? sp.curves
+      const fkey = num.composite ? Object.values(num.composite).map(String)   // skill-composition: dedup on the givens
+        : sp?.curves ? sp.curves
         : sp?.dims ? Object.values(sp.dims).map(String).sort()
         : sp?.sector ? [sp.sector.from, sp.sector.to, sp.sector.radiusLabel]
         : sp?.inscribed ? [sp.inscribed.A, sp.inscribed.B, sp.inscribed.C]

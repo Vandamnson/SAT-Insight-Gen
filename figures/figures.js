@@ -955,6 +955,68 @@ function angAt(V, P, Q, ar, label) {
   return frag;
 }
 
+// circumcircle through 3 points (math coords)
+function circumcircle(A, B, C) {
+  const [ax, ay] = A, [bx, by] = B, [cx, cy] = C;
+  const d = 2 * (ax * (by - cy) + bx * (cy - ay) + cx * (ay - by)) || 1e-9;
+  const a2 = ax * ax + ay * ay, b2 = bx * bx + by * by, c2 = cx * cx + cy * cy;
+  const ux = (a2 * (by - cy) + b2 * (cy - ay) + c2 * (ay - by)) / d;
+  const uy = (a2 * (cx - bx) + b2 * (ax - cx) + c2 * (bx - ax)) / d;
+  return { c: [ux, uy], r: Math.hypot(ax - ux, ay - uy) };
+}
+// n congruence tick marks across the midpoint of screen segment PA–PB
+function tickMarks(PA, PB, n) {
+  const mx = (PA[0] + PB[0]) / 2, my = (PA[1] + PB[1]) / 2, L = Math.hypot(PB[0] - PA[0], PB[1] - PA[1]) || 1;
+  const dx = (PB[0] - PA[0]) / L, dy = (PB[1] - PA[1]) / L, px = -dy, py = dx, out = [];
+  for (let i = 0; i < n; i++) { const o = (i - (n - 1) / 2) * 3.6, cxp = mx + dx * o, cyp = my + dy * o; out.push(line(cxp - px * 5, cyp - py * 5, cxp + px * 5, cyp + py * 5, "fig-stroke", `stroke-width="1.2"`)); }
+  return out.join("");
+}
+
+/* SCENE — a general 2D diagram. Points in MATH coords (y up), auto-fit + flipped to
+   the viewBox. Composes the primitives a skill-composition item needs: an optional
+   circle (explicit, or the circumcircle through 3 points), segments (label / tick /
+   dashed), angle arcs (incl. right-angle squares), shaded fills, and collision-light
+   point/segment labels placed away from the figure centroid. Schematic by default
+   ("figure not drawn to scale") — the marked values carry the data, not the pixels. */
+export function scene(spec) {
+  const W = spec.w || 300, H = spec.h || 250, pad = 40, P = spec.pts || {};
+  let circle = spec.circle?.through ? circumcircle(...spec.circle.through.map((id) => P[id])) : (spec.circle ? { c: spec.circle.c, r: spec.circle.r } : null);
+  const xs = [], ys = [];
+  for (const id in P) { xs.push(P[id][0]); ys.push(P[id][1]); }
+  if (circle) { xs.push(circle.c[0] - circle.r, circle.c[0] + circle.r); ys.push(circle.c[1] - circle.r, circle.c[1] + circle.r); }
+  const minx = Math.min(...xs), maxx = Math.max(...xs), miny = Math.min(...ys), maxy = Math.max(...ys);
+  const bw = maxx - minx || 1, bh = maxy - miny || 1, s = Math.min((W - 2 * pad) / bw, (H - 2 * pad) / bh);
+  const ox = (W - s * bw) / 2, oy = (H - s * bh) / 2, T = (p) => [ox + (p[0] - minx) * s, H - (oy + (p[1] - miny) * s)];
+  const sp = {}; for (const id in P) sp[id] = T(P[id]);
+  const cen = [Object.values(sp).reduce((a, p) => a + p[0], 0) / (Object.keys(sp).length || 1), Object.values(sp).reduce((a, p) => a + p[1], 0) / (Object.keys(sp).length || 1)];
+  const out = [];
+  if (circle) { const cc = T(circle.c); out.push(`<circle cx="${fmt(cc[0])}" cy="${fmt(cc[1])}" r="${fmt(circle.r * s)}" class="fig-stroke" stroke-width="1.4"/>`); if (spec.showCenter) { out.push(circ(cc[0], cc[1], 2, "fig-marker")); if (spec.centerLabel) out.push(txt(cc[0] - 7, cc[1] + 10, spec.centerLabel, { anchor: "end", style: 'font-style="italic"' })); } }
+  for (const poly of spec.fills || []) out.push(`<polygon points="${poly.map((id) => sp[id].map(fmt).join(",")).join(" ")}" class="fig-fill" opacity="0.4"/>`);
+  for (const [a, b, o = {}] of spec.segs || []) {
+    const PA = sp[a], PB = sp[b];
+    out.push(line(PA[0], PA[1], PB[0], PB[1], "fig-stroke", `stroke-width="1.5"${o.dashed ? ' stroke-dasharray="4 3"' : ""}`));
+    if (o.tick) out.push(tickMarks(PA, PB, o.tick));
+    if (o.label) {
+      const m = [(PA[0] + PB[0]) / 2, (PA[1] + PB[1]) / 2], L = Math.hypot(PB[0] - PA[0], PB[1] - PA[1]) || 1;
+      let px = -(PB[1] - PA[1]) / L, py = (PB[0] - PA[0]) / L;
+      if ((m[0] + px - cen[0]) ** 2 + (m[1] + py - cen[1]) ** 2 < (m[0] - px - cen[0]) ** 2 + (m[1] - py - cen[1]) ** 2) { px = -px; py = -py; }   // away from centroid
+      out.push(txt(m[0] + px * 12, m[1] + py * 12, o.label, { size: FONT }));
+    }
+  }
+  for (const ang of spec.angles || []) {
+    const V = sp[ang.at], Pf = sp[ang.from], Pq = sp[ang.to];
+    out.push(ang.right ? rightAngleMark(V, Pf, Pq) : angAt(V, Pf, Pq, ang.r || 20, ang.label));
+  }
+  if (!spec.hidePoints) for (const id in sp) out.push(circ(sp[id][0], sp[id][1], 2.2, "fig-marker"));
+  const lbl = spec.ptLabels || Object.fromEntries(Object.keys(P).map((k) => [k, k]));
+  for (const id in lbl) {
+    if (!lbl[id] || !sp[id]) continue;
+    const dx = sp[id][0] - cen[0], dy = sp[id][1] - cen[1], n = Math.hypot(dx, dy) || 1;
+    out.push(txt(sp[id][0] + (dx / n) * 13, sp[id][1] + (dy / n) * 13, lbl[id], { style: 'font-style="italic"' }));
+  }
+  return svg(W, H, defs() + out.join(""), { aria: spec.title || "geometry diagram" });
+}
+
 /* ---- HTML tables (not SVG: reflow + print-clean) ------------------------- */
 export function table(spec) {
   // spec.kind: 'xy'|'frequency'|'twoway'|'value' ; headers:[...]; rows:[[...]]

@@ -111,6 +111,19 @@
       "task_tier": { "arc_length_fig": "C", "sector_area_fig": "C", "inscribed_angle_fig": "C" },
       "canonical_fingerprint": ["read_circle"],
       "op_vocab": ["apply_arc_length", "apply_sector_area", "apply_inscribed_angle"]
+    },
+    "composite_figures": {
+      "label": "skill-composition figures (combine two geometry skills in one item)",
+      "target": "read a figure that composes primitives — parallelogram+diagonal, triangle-in-semicircle, rectangle+diagonal, triangle with a parallel line — and apply the combined theorems",
+      "_note": "GEO-2 Tier C (construct-backward, NO LLM): build/compositefig.mjs picks clean givens, computes the answer via the COMPOSED theorem, and emits a `scene` figure (schematic for angle-chases, metric for lengths). figureCheck recomputes from the stored givens. Variety here comes from COMBINING skills, not reskinning one formula — each composition is a distinct structure, so the per-structure quota is no longer the variety ceiling.",
+      "statementByBand": { "B4": "GEO.B4.s3", "B6": "GEO.B6.s2", "B7": "GEO.B7.s3" },
+      "statementByTask": { "rectangle_diagonal_fig": "GEO.B4.s3", "parallelogram_diagonal_fig": "GEO.B6.s2", "similar_parallel_fig": "GEO.B6.s2", "triangle_semicircle_fig": "GEO.B7.s3" },
+      "radical_axes": { "task": ["rectangle_diagonal_fig", "parallelogram_diagonal_fig", "similar_parallel_fig", "triangle_semicircle_fig"] },
+      "incidental_axes": { "context": "@contexts", "var_name": ["x", "d"], "coefficient_range": [2, 24], "constant_range": [1, 180] },
+      "lltm": { "weights": { "w0": 470, "task": { "rectangle_diagonal_fig": 0, "parallelogram_diagonal_fig": 160, "similar_parallel_fig": 160, "triangle_semicircle_fig": 230 } } },
+      "task_tier": { "rectangle_diagonal_fig": "C", "parallelogram_diagonal_fig": "C", "similar_parallel_fig": "C", "triangle_semicircle_fig": "C" },
+      "canonical_fingerprint": ["read_composite"],
+      "op_vocab": ["consecutive_angles", "angle_in_semicircle", "triangle_angle_sum", "pythagorean", "similar_proportion", "angle_subtract"]
     }
   }
 }

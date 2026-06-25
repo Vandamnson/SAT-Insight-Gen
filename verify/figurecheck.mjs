@@ -64,6 +64,10 @@ export function figureCheck(cell) {
   // inscribed-angle configuration — verify the marked geometry yields the answer.
   if (num0?.figure?.fn === "circle") return checkCircleFig(cell.incidentals.numbers);
 
+  // Skill-composition figure items (GEO-2): recompute the answer from the stored givens
+  // via the composed theorem (the figure is schematic for angle-chases).
+  if (num0?.composite) return checkComposite(cell.incidentals.numbers);
+
   const fig = num0?.figure;
   if (!fig || fig.fn !== "coordPlane") return { keep: false, reason: "graph item missing coordPlane figure" };
   const spec = fig.spec;
@@ -220,6 +224,26 @@ function checkCircleFig(num) {
     return Number.isInteger(exp) && exp === ans ? { keep: true } : { keep: false, reason: `inscribed: ½·${central} = ${exp} ≠ answer ${ans}` };
   }
   return { keep: false, reason: `unknown circle task ${t}` };
+}
+
+/* GEO-2 skill-composition self-consistency: recompute the answer from the stored givens
+   via the composed theorem. Guards the builder's arithmetic; for angle-chase items the
+   figure is schematic, so the givens (not the pixels) are the source of truth. */
+function checkComposite(num) {
+  const c = num.composite, t = num.task, ans = Number(num.answer);
+  if (!c) return { keep: false, reason: `${t}: no composite givens` };
+  let exp;
+  if (t === "parallelogram_diagonal_fig") exp = 180 - c.b - c.p;                 // consecutive supplementary, then subtract
+  else if (t === "triangle_semicircle_fig") exp = 90 - c.a;                       // Thales + angle sum
+  else if (t === "rectangle_diagonal_fig") {
+    if (c.L * c.L + c.w * c.w !== ans * ans) return { keep: false, reason: `rectangle diagonal: ${ans}² ≠ ${c.L}² + ${c.w}²` };
+    exp = ans;
+  } else if (t === "similar_parallel_fig") {
+    if ((c.AE * c.DB) % c.AD !== 0) return { keep: false, reason: `similar: EC = ${c.AE}·${c.DB}/${c.AD} is not an integer` };
+    exp = c.AE * c.DB / c.AD;
+  } else return { keep: false, reason: `unknown composite task ${t}` };
+  if (!(exp > 0)) return { keep: false, reason: `${t}: degenerate answer ${exp}` };
+  return Number.isInteger(exp) && exp === ans ? { keep: true } : { keep: false, reason: `${t}: recompute ${exp} ≠ answer ${ans}` };
 }
 
 export default { figureCheck };

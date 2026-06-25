@@ -73,11 +73,26 @@ The circle figure gap (GEO.B7.s3) is built as **three distinct structures**, con
 
 > The per-structure quota's grouping key was generalized in this slice: it now keys on the **task** (the skill = the structure) rather than parsing the fingerprint, since circle params (`90deg_r4`, `c80`) aren't pure-numeric tokens. This fixed the circle quota (the first run leaked 7 sector + 10 inscribed) and is exact for every figure family without per-pattern guessing.
 
+## GEO-2 (figures) — skill-COMPOSITION figures ✅ (the variety engine)
+The real source of variety isn't a bigger per-structure cap (that just re-admits number-reskins) — it's **composing skills** so each combination is a genuinely distinct structure. This slice adds the engine for that.
+- **`figures.js scene()`** — a general 2D diagram renderer: points in math coords (auto-fit + y-flip to the viewBox), an optional circle (explicit or the **circumcircle through 3 points**), segments (label / congruence-tick / dashed), angle arcs (incl. right-angle squares) via the shared `angAt`, shaded fills, and centroid-aware point/segment labels. Schematic by default ("figure not drawn to scale" — the marked values carry the data). This is the substrate for all future composition + the remaining trig/congruence slices.
+- **`build/compositefig.mjs`** — four construct-backward compositions, each combining two skills:
+  - `rectangle_diagonal_fig` (B4) — rectangle **+** Pythagorean: diagonal = √(L²+W²).
+  - `parallelogram_diagonal_fig` (B6) — parallelogram consecutive-angle **+** angle subtraction: ∠CAB = (180−∠B) − ∠DAC. *Schematic.*
+  - `similar_parallel_fig` (B6) — a line **parallel** to a side **+** similar-triangle proportion: EC = AE·DB/AD. (DE is drawn genuinely parallel — placed metrically.)
+  - `triangle_semicircle_fig` (B7) — inscribed-angle/**Thales** **+** triangle angle sum: ∠ABC = 90 − ∠BAC.
+- **`verify/figurecheck.mjs checkComposite`** — recomputes the answer from the stored givens via the composed theorem (and rejects a non-integer / degenerate result).
+- New `composite_figures` subdomain (Tier C); LLTM band sanity **green** (B4/B6/B7). **12 items banked** (test-117), 3 of each composition. Bank → 878.
+- **Blind QA (vision):** an independent agent solved all 12 from the figures alone — **12/12 correct**. It confirmed it used the labeled values + theorems (not measurement) on the schematic angle-chases, and that the parallelogram angle marks sit at the named vertices/rays. No issues.
+
+> **On the quota:** kept at 3 per (structure, band) — it stops number-reskins *within* a structure. Composition supplies variety *between* structures, so the cap is no longer the ceiling: the four compositions could be extended to dozens (every primitive-pair × asked-relationship) without touching the cap. The "too stringent" feeling was a symptom of a flat task list, not the quota.
+
 ### GEO-2 remaining (next)
-- **Right-triangle trig & special-triangle labeling** (opp/adj/hyp, 30-60-90 / 45-45-90) — GEO.B6.s3 / B7.s2.
-- **Congruence / similarity tick marks** + angle arcs on `triangle()` — GEO.B4.s2 polish.
-- **Solids backlog:** cone (pairs with cylinder), sphere, composite solids (B7); cylinder/cone MCQ with π-form options.
-- **Circles backlog:** tangent-line configurations, chord/secant lengths, sector-perimeter; sector_fraction as an SPR fraction.
+- **More compositions** (the scene engine makes these cheap): circle-inscribed-square / square-in-circle, right-triangle altitude-to-hypotenuse (geometric mean), cevian/median angle-chases, two-similar-triangles (shared vertex), composite areas (shape − shape), trapezoid + diagonal.
+- **Right-triangle trig & special-triangle labeling** (opp/adj/hyp, 30-60-90 / 45-45-90) — GEO.B6.s3 / B7.s2 — now buildable on `scene()`.
+- **Congruence / similarity tick marks** on `scene()` segments — GEO.B4.s2 (tick support already in `scene`).
+- **Solids backlog:** cone, sphere, composite solids (B7); cylinder/cone MCQ with π-form options.
+- **Circles backlog:** tangent-line configurations, chord/secant lengths; sector_fraction as an SPR fraction.
 
 ## Deferred — GEO-2 (figures)
 Reuse `figures.js` triangle/polygon/circle/parallelLines/parallelogram; build the real gaps — **3D solids** (prism/cube/pyramid/cylinder, none exist), **circle arcs/sectors + labels**, **right-triangle trig & special-triangle labeling**, **angle arcs on `triangle`**, **congruence ticks** — then construct-backward "read-from-figure" (Tier C) variants + geometry `figurecheck`/`legibility` arms. (`gen/diagramgen.mjs` is DISABLED and not SAT-aligned — supersede, don't revive.)

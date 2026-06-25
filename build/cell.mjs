@@ -16,6 +16,7 @@ import { schemaFor, radicalsForBand, nearestRadicals, predictDifficulty } from "
 import { drawGraphItem, GRAPH_TASKS } from "./graph.mjs";
 import { drawSolidFig } from "./solidfig.mjs";
 import { drawCircleFig } from "./circlefig.mjs";
+import { drawCompositeFig } from "./compositefig.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const CONTEXTS = (() => { const c = JSON.parse(readFileSync(join(ROOT, "taxonomy", "contexts.json"), "utf8")); return (c.contexts || c).map(String); })();
@@ -253,6 +254,8 @@ function drawRightTrig(rad, { context }) {
 function drawSolidFigure(rad, { r, band }) { return drawSolidFig(rad.task, band, r); }
 /* geometry GEO-2: CIRCLE FIGURE items (Tier C, construct-backward in circlefig.mjs) */
 function drawCircleFigure(rad, { r, band }) { return drawCircleFig(rad.task, band, r); }
+/* geometry GEO-2: SKILL-COMPOSITION FIGURE items (Tier C, construct-backward in compositefig.mjs) */
+function drawCompositeFigure(rad, { r, band }) { return drawCompositeFig(rad.task, band, r); }
 
 function drawCircles(rad, { context }) {
   const ctx = ctxLineMF(context);
@@ -282,6 +285,7 @@ const DRAWERS = {
   circles: drawCircles,
   solid_figures: drawSolidFigure,
   circle_figures: drawCircleFigure,
+  composite_figures: drawCompositeFigure,
 };
 
 // tasks the real SAT poses ABSTRACTLY (bare equation/lines, no scenario) — they ask
