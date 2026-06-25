@@ -99,7 +99,7 @@
           "inscribed": {
             "A": 150,
             "B": 214,
-            "C": 315,
+            "C": 349,
             "centralLabel": "64°",
             "inscribedLabel": "x°"
           }
@@ -652,7 +652,7 @@
           "inscribed": {
             "A": 40,
             "B": 114,
-            "C": 208,
+            "C": 240,
             "centralLabel": "74°",
             "inscribedLabel": "x°"
           }
@@ -779,7 +779,7 @@
           "inscribed": {
             "A": 350,
             "B": 38,
-            "C": 184,
+            "C": 193,
             "centralLabel": "48°",
             "inscribedLabel": "x°"
           }

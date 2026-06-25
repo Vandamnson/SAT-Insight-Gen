@@ -46,7 +46,11 @@ function gSectorArea(r) {
 function gInscribedAngle(r) {
   const central = 2 * randint(r, 20, 80);            // even ⇒ ½ is integer; 40..160 (< 180)
   const A = baseAngle(r), B = A + central;            // central ∠AOB = minor arc A→B
-  const C = A + central + Math.round((360 - central) * (0.32 + 0.36 * r()));   // C on the major arc
+  // Pin C to the MAJOR-arc midpoint (± a small jitter): this sits central/2 ≥ 20° away
+  // from the points antipodal to A and B, so neither chord CA nor CB can look like a
+  // diameter through O (the degenerate case that made AC read as a straight line).
+  const J = Math.min(Math.floor(central / 2) - 18, 18), jit = J > 0 ? randint(r, -J, J) : 0;
+  const C = A + 180 + central / 2 + jit;             // major-arc midpoint, clear of both antipodes
   return {
     task: "inscribed_angle_fig", format: "spr", answer: String(central / 2),
     statement: "In circle \\(O\\) shown, \\(\\overline{CA}\\) and \\(\\overline{CB}\\) are chords and the central angle \\(\\angle AOB\\) is marked. What is the measure, in degrees, of the inscribed angle \\(\\angle ACB\\) (marked \\(x^\\circ\\))?",
