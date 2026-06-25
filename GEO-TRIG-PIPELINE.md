@@ -44,17 +44,28 @@ Four blind agents independently solved all 40 banked items **from the question t
 - **Nits (no fix):** occasional verbose `@contexts` framing and a "diameter h" naming; cosmetic, consistent with the other domains.
 - **Refinement noted:** the prompt pack's "never decimals" rule is right for MCQ (exact radical options) but, for SPR with an irrational value, gridding as a rounded decimal with a "round to…" instruction is the correct SAT form — the author already does this; the rule could say so explicitly.
 
-## GEO-2 (figures) — in progress: 3D solids ✅
-The biggest figure gap (4 statements: volume & surface area) is now built.
-- **`figures.js prism`** — rectangular box / cube in cabinet oblique projection (front face true-size, depth receding up-right at half scale), dashed hidden edges, edge labels (width-bottom, height-left, length-top), proportions clamped so no edge becomes a sliver (extreme-geometry rule). Auto-wired via `import * as FIG`. Visually verified across cube / 3-4-5 box / flat slab / tall column.
-- **`build/solidfig.mjs`** — Tier-C construct-backward builders (the figure pins the dims AND the answer, no LLM): `prism_volume_fig` (B1), `cube_fig` volume/SA (B4), `prism_surface_fig` (B6), `prism_solve_dim_fig` (B6, two edges + volume → find h).
-- **`verify/figurecheck.mjs`** — a `prism` arm: the labeled edges must yield the stated volume / surface area / solved dimension.
-- New `solid_figures` subdomain in the schema (Tier C); LLTM sanity green (B1/B4/B6). **16 items banked** (test-115), all 4 tasks; rendered + spot-verified correct (volume 84, surface 136, cube SA 96, solve-dim h=5). Bank → 852.
+## GEO-2 (figures) — in progress: 3D solids ✅ (FIVE structures)
+The biggest figure gap (volume & surface area, GEO.B1.s1 / B4.s1 / B5.s3 / B6.s1) is built as **five genuinely distinct solid structures**, not number-reskins of one box.
+- **`figures.js`** — five cabinet-oblique renderers, each clamped so no edge/face becomes a sliver (extreme-geometry rule), auto-wired via `import * as FIG`, all image-verified across normal + extreme proportions:
+  - `prism` — rectangular box / cube (depth receding up-right at half scale, dashed hidden edges, labels width-bottom/height-left/length-top).
+  - `pyramid` — rectangular base + apex over the centroid, dashed back edges + dashed altitude.
+  - `triPrism` — triangular cross-section extruded, only the back-bottom edge hidden, dashed front-face altitude.
+  - `cylinder` — solid top rim, dashed back-arc + solid front-arc on the base, radius across the top, height on the left.
+- **`build/solidfig.mjs`** — Tier-C construct-backward builders (the figure pins the dims AND the answer, no LLM): `prism_volume_fig` (B1), `cube_fig` volume-only (B4), `pyramid_volume_fig` V=⅓·lwh (B4), `triprism_volume_fig` V=½·b·hₜ·L (B5), `prism_surface_fig` (B6), `prism_solve_dim_fig` (B6), `cylinder_volume_fig` V=kπ→grid k=r²h (B6). All integer-clean / gridable by construction.
+- **`verify/figurecheck.mjs`** — a `checkSolid` arm: per task, the labeled dimensions must recompute the stated answer (volume / surface area / solved dimension / cylinder coefficient).
+- New tasks in the `solid_figures` schema (all Tier C); LLTM sanity **green** (B1/B4/B5/B6). **21 items banked** (test-115), **3 of each of the 7 structures**; bank → 857.
+
+### The structural-duplicate fix (why this slice was rebuilt)
+The first 3D-solid pass banked **6 box-volume + 5 cube** items — distinct numbers, but **one structure each** (a number-reskin, not variety). Root cause: the only dedup a Tier-C figure item traverses is the figure-signature gate, which keys on `(figure, answer)` and so treats *different numbers* as a *different item*; surface dedup is bypassed (the stem is a constant template) and structural dedup is off by default (and prism fingerprints bake the dims, so it wouldn't collapse them anyway). Fix, two levers:
+1. **Per-structure quota** (`build/pipeline.mjs`, `SIG_FIG_QUOTA`, default 3): in the Tier-C dedup pass, cap kept items per `(structure, band)` where *structure* = the fingerprint with numeric/dimension tokens stripped. Logged as `figquota` drops — no silent capping. A band with only one structure is now bounded by the quota (earn more by adding **structures**, not numbers).
+2. **More structures** — pyramid, triangular prism, cylinder (above), so the bank earns breadth honestly.
+- **Blind QA (vision):** an independent agent solved the 9 new-structure items reading **only the rendered figures** (no answers, no dims in text) — **9/9 correct**, all figures legible, and it naturally produced `k=r²h` for the cylinders (the `kπ` SPR phrasing is well-posed). Confirms legibility + correctness + well-posedness from pixels alone.
 
 ### GEO-2 remaining (next)
 - **Circle arcs / sectors** (+ arc-length & sector labels, inscribed/central angle arcs) — the rest of GEO.B7.s3.
 - **Right-triangle trig & special-triangle labeling** (opp/adj/hyp, 30-60-90 / 45-45-90) — GEO.B6.s3 / B7.s2.
 - **Congruence / similarity tick marks** + angle arcs on `triangle()` — GEO.B4.s2 polish.
+- **Solids backlog:** cone (pairs with cylinder), sphere, composite solids (B7); cylinder/cone MCQ with π-form options.
 
 ## Deferred — GEO-2 (figures)
 Reuse `figures.js` triangle/polygon/circle/parallelLines/parallelogram; build the real gaps — **3D solids** (prism/cube/pyramid/cylinder, none exist), **circle arcs/sectors + labels**, **right-triangle trig & special-triangle labeling**, **angle arcs on `triangle`**, **congruence ticks** — then construct-backward "read-from-figure" (Tier C) variants + geometry `figurecheck`/`legibility` arms. (`gen/diagramgen.mjs` is DISABLED and not SAT-aligned — supersede, don't revive.)

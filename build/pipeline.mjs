@@ -182,9 +182,20 @@ async function generateCell(domain, subdomain, n, bands, ctr) {
     return null;
   });
   const verified = (await pool(tasks, CAP)).filter(Boolean);
-  // 3 sequential: surface dedup over the growing kept pool
+  // 3 sequential: surface dedup over the growing kept pool. Tier-C figure items also get a
+  // PER-STRUCTURE QUOTA: the figure-signature gate only catches an *exact* figure repeat, so
+  // "same structure, new numbers" (6 prism-volume boxes, 5 cubes) would all survive — that is
+  // a number-reskin, not variety. Cap the count per (structure, band), where structure = the
+  // fingerprint with numeric/dimension tokens stripped, so one skill can't flood a band. The
+  // honest consequence: a band with only one solid structure is bounded by the quota — earn
+  // more by adding STRUCTURES, not numbers. (Surface/structural dedup don't reach these items:
+  // the stem is a constant template and a figure's solve-path is one op.)
+  const FIG_QUOTA = Number(process.env.SIG_FIG_QUOTA ?? 3);
+  const isDimTok = (t) => /^\d+(?:x\d+)*$/.test(String(t));   // "3x4x7", "7x8", "5" — the number-reskin slot
+  const structKey = (fp, band) => (Array.isArray(fp) ? fp.filter((t) => !isDimTok(t)) : []).join("|") + "@B" + band;
   const unique = [];
   const seenFig = new Set();
+  const structCount = new Map();
   for (const s of verified) {
     if (s.cell.tier === "C") {   // figure items: identity is the FIGURE, not the templated stem (surface shingles would falsely collapse them)
       const num = s.cell.incidentals.numbers, sp = num.figure?.spec;
@@ -196,7 +207,9 @@ async function generateCell(domain, subdomain, n, bands, ctr) {
         : (num.optionFigures || []).map((o) => o.curves);
       const sig = JSON.stringify({ f: fkey, a: num.answer, c: num.correct_choice });
       if (seenFig.has(sig)) { reasons.push(`figdup [B${s.cell.band}]`); continue; }
-      seenFig.add(sig); unique.push(s); continue;
+      const sk = structKey(num.fingerprint, s.cell.band);
+      if ((structCount.get(sk) || 0) >= FIG_QUOTA) { reasons.push(`figquota [${sk}] ≥${FIG_QUOTA}`); continue; }
+      seenFig.add(sig); structCount.set(sk, (structCount.get(sk) || 0) + 1); unique.push(s); continue;
     }
     if (surfaceDup(s.cand, unique.map((u) => u.cand))) { reasons.push(`dedup [B${s.cell.band}]`); continue; }
     unique.push(s);

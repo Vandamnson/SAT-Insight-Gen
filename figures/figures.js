@@ -543,6 +543,86 @@ export function prism(spec) {
   return svg(W, H, defs() + out.join(""), { aria: spec.title || "rectangular prism" });
 }
 
+// CYLINDER (cabinet-oblique): top ellipse solid, bottom front-arc solid + back-arc
+// dashed (hidden), vertical sides; radius drawn across the top, height on the left.
+export function cylinder(spec) {
+  const d = spec.dims || { r: 1, h: 1 };
+  const maxd = Math.max(d.r * 2, d.h) || 1;
+  const base = 150, clamp = (v) => Math.max(0.34, Math.min(1, v / maxd));
+  const rx = base * clamp(d.r * 2) / 2;            // horizontal (visual) radius
+  const ry = Math.max(9, rx * 0.30);               // perspective squash of the ellipses
+  const bh = base * clamp(d.h);                    // body height
+  const W = rx * 2 + 92, H = bh + ry * 2 + 44, cx = 50 + rx, topY = 24 + ry, botY = topY + bh;
+  const L = spec.labels || {};
+  const ell = (cy, cls, extra = "") => `<ellipse cx="${fmt(cx)}" cy="${fmt(cy)}" rx="${fmt(rx)}" ry="${fmt(ry)}" class="${cls}" fill="none" stroke-width="1.5" ${extra}/>`;
+  const arc = (sweep, dash) => path(`M ${fmt(cx - rx)},${fmt(botY)} A ${fmt(rx)},${fmt(ry)} 0 0 ${sweep} ${fmt(cx + rx)},${fmt(botY)}`, "fig-stroke", `stroke-width="1.5"${dash ? ' stroke-dasharray="4 3"' : ""}`);
+  const out = [
+    arc(1, 1),                                       // bottom BACK half — hidden (dashed)
+    line(cx - rx, topY, cx - rx, botY, "fig-stroke", `stroke-width="1.5"`),   // left side
+    line(cx + rx, topY, cx + rx, botY, "fig-stroke", `stroke-width="1.5"`),   // right side
+    arc(0, 0),                                       // bottom FRONT half — visible (solid)
+    ell(topY, "fig-stroke"),                         // top rim (solid)
+  ];
+  if (L.r) { out.push(line(cx, topY, cx + rx, topY, "fig-stroke", `stroke-width="1"`), circ(cx, topY, 1.8, "fig-marker"), txt(cx + rx / 2, topY - 6, L.r, { size: FONT })); }
+  if (L.h) out.push(txt(cx - rx - 9, (topY + botY) / 2, L.h, { anchor: "end", size: FONT }));
+  return svg(W, H, defs() + out.join(""), { aria: spec.title || "cylinder" });
+}
+
+// PYRAMID (rectangular base, cabinet-oblique): base parallelogram, apex above the
+// base centroid, lateral edges to each corner (the back-left one dashed), dashed
+// altitude to the centroid. Labels: base length l, depth w, height h (the altitude).
+export function pyramid(spec) {
+  const d = spec.dims || { l: 1, w: 1, h: 1 };
+  const maxd = Math.max(d.l, d.w, d.h) || 1;
+  const base = 118, clamp = (v) => Math.max(0.4, Math.min(1, v / maxd));
+  const fw = base * clamp(d.l), dp = base * clamp(d.w) * 0.5, ph = base * clamp(d.h);
+  const W = fw + dp + 92, H = ph + dp + 60, ox = 46, oy = H - 30;
+  const FBL = [ox, oy], FBR = [ox + fw, oy], off = (p) => [p[0] + dp, p[1] - dp];
+  const BBL = off(FBL), BBR = off(FBR);
+  const ctr = [(FBL[0] + FBR[0] + BBL[0] + BBR[0]) / 4, (FBL[1] + FBR[1] + BBL[1] + BBR[1]) / 4];
+  const APX = [ctr[0], ctr[1] - ph];
+  const seg = (a, b, dash) => line(a[0], a[1], b[0], b[1], "fig-stroke", `stroke-width="1.5"${dash ? ' stroke-dasharray="4 3"' : ""}`);
+  const L = spec.labels || {};
+  const out = [
+    seg(BBL, BBR, 1), seg(BBL, FBL, 1),              // hidden base edges (back + back-left)
+    seg(APX, BBL, 1),                                // hidden lateral edge (to back-left)
+    seg(APX, ctr, 1),                                // dashed altitude (apex → centroid)
+    seg(FBL, FBR), seg(FBR, BBR),                    // visible base edges
+    seg(APX, FBL), seg(APX, FBR), seg(APX, BBR),     // visible lateral edges
+  ];
+  if (L.l) out.push(txt((FBL[0] + FBR[0]) / 2, oy + 15, L.l, { size: FONT }));
+  if (L.w) { const m = [(FBR[0] + BBR[0]) / 2, (FBR[1] + BBR[1]) / 2]; out.push(txt(m[0] + 8, m[1] + 2, L.w, { anchor: "start", size: FONT })); }
+  if (L.h) out.push(txt((APX[0] + ctr[0]) / 2 - 6, (APX[1] + ctr[1]) / 2, L.h, { anchor: "end", size: FONT }));
+  return svg(W, H, defs() + out.join(""), { aria: spec.title || "rectangular pyramid" });
+}
+
+// TRIANGULAR PRISM (cabinet-oblique): front triangle extruded back; only the
+// back-bottom edge is hidden (dashed). Labels: base b, triangle height ht (dashed
+// altitude on the front face), prism length L (a receding edge).
+export function triPrism(spec) {
+  const d = spec.dims || { b: 1, ht: 1, L: 1 };
+  const maxd = Math.max(d.b, d.ht, d.L) || 1;
+  const base = 120, clamp = (v) => Math.max(0.4, Math.min(1, v / maxd));
+  const tw = base * clamp(d.b), th = base * clamp(d.ht), dp = base * clamp(d.L) * 0.5;
+  const W = tw + dp + 96, H = th + dp + 64, ox = 46, oy = H - 32;
+  const FA = [ox, oy], FB = [ox + tw, oy], FC = [ox + tw / 2, oy - th], off = (p) => [p[0] + dp, p[1] - dp];
+  const BA = off(FA), BB = off(FB), BC = off(FC);
+  const seg = (a, b, dash, w = 1.5) => line(a[0], a[1], b[0], b[1], "fig-stroke", `stroke-width="${w}"${dash ? ' stroke-dasharray="4 3"' : ""}`);
+  const L = spec.labels || {};
+  const M = [(FA[0] + FB[0]) / 2, oy];                // foot of the front-face altitude
+  const out = [
+    seg(BA, BB, 1),                                  // back-bottom edge — hidden
+    seg(FA, FB), seg(FB, FC), seg(FC, FA),           // front triangle (solid)
+    seg(FA, BA), seg(FB, BB), seg(FC, BC),           // receding edges (visible silhouette)
+    seg(BA, BC), seg(BB, BC),                         // back triangle upper edges (visible)
+    seg(FC, M, 1, 1),                                // front-face altitude (dashed)
+  ];
+  if (L.b) out.push(txt((FA[0] + FB[0]) / 2, oy + 15, L.b, { size: FONT }));
+  if (L.ht) out.push(txt(FC[0] + 5, (FC[1] + M[1]) / 2, L.ht, { anchor: "start", size: FONT }));
+  if (L.L) { const m = [(FB[0] + BB[0]) / 2, (FB[1] + BB[1]) / 2]; out.push(txt(m[0] + 8, m[1] + 2, L.L, { anchor: "start", size: FONT })); }
+  return svg(W, H, defs() + out.join(""), { aria: spec.title || "triangular prism" });
+}
+
 // arrowhead as a path (rule 1: compute-don't-eyeball). Legs are the back-
 // direction (unit vector pointing FROM the tip back into the line) rotated by
 // +-halfAngle, so the head stays symmetric about the line's axis at ANY slope.

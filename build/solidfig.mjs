@@ -60,7 +60,51 @@ function gPrismSolveDim(r) {
   };
 }
 
-const BUILDERS = { prism_volume_fig: gPrismVolume, cube_fig: gCube, prism_surface_fig: gPrismSurface, prism_solve_dim_fig: gPrismSolveDim };
+/* B4 — pyramid VOLUME (GEO.B4.s1 "volume of a cube or pyramid"). Rectangular base
+   l×w, height h; V = ⅓·l·w·h. Dims chosen so the product is divisible by 3 ⇒ V is a
+   clean integer (gridable SPR). A genuinely different STRUCTURE from the box (the ⅓). */
+function gPyramidVolume(r) {
+  const [l, w] = [randint(r, 2, 9), randint(r, 2, 9)].sort((a, b) => a - b);   // canonical base
+  const h = (l * w) % 3 === 0 ? randint(r, 2, 9) : 3 * randint(r, 1, 3);       // force l·w·h divisible by 3
+  const V = (l * w * h) / 3;
+  return {
+    task: "pyramid_volume_fig", format: "spr", answer: String(V),
+    statement: "The right rectangular pyramid shown has the base edge lengths and height marked, in centimeters. What is the volume of the pyramid, in cubic centimeters?",
+    figure: { fn: "pyramid", spec: { dims: { l, w, h }, labels: { l: String(l), w: String(w), h: String(h) } } },
+    solve_path: sp({ op: "apply_volume_formula", detail: `\\(V = \\tfrac13\\ell wh = \\tfrac13\\cdot ${l}\\cdot ${w}\\cdot ${h} = ${V}\\).` }),
+    fingerprint: ["solid_fig", "pyramid_volume", `${l}x${w}x${h}`, "3d"],
+  };
+}
+
+/* B5 — triangular-prism VOLUME (GEO.B5.s3). Triangular cross-section (base b, height
+   ht) extruded a length L; V = ½·b·ht·L. b is even ⇒ ½·b·ht is an integer ⇒ clean V. */
+function gTriPrismVolume(r) {
+  const b = 2 * randint(r, 1, 4), ht = randint(r, 2, 9), L = randint(r, 3, 12);   // b even ⇒ integer V
+  const V = (b * ht / 2) * L;
+  return {
+    task: "triprism_volume_fig", format: "spr", answer: String(V),
+    statement: "The right triangular prism shown has a triangular cross-section with the base and height marked, and a length marked, in feet. What is the volume of the prism, in cubic feet?",
+    figure: { fn: "triPrism", spec: { dims: { b, ht, L }, labels: { b: String(b), ht: String(ht), L: String(L) } } },
+    solve_path: sp({ op: "apply_volume_formula", detail: `\\(V = \\tfrac12 b\\,h_t\\cdot L = \\tfrac12\\cdot ${b}\\cdot ${ht}\\cdot ${L} = ${V}\\).` }),
+    fingerprint: ["solid_fig", "triprism_volume", `${b}x${ht}x${L}`, "3d"],
+  };
+}
+
+/* B6 — cylinder VOLUME (GEO.B6.s1, includes cylinders). V = πr²h, reported in terms
+   of π: the volume is kπ, grid k = r²h (the SAT "in terms of π" SPR form). The π makes
+   this a structurally distinct answer from the integer-multiply solids. */
+function gCylinderVolume(r) {
+  const rad = randint(r, 2, 7), h = randint(r, 2, 9), k = rad * rad * h;
+  return {
+    task: "cylinder_volume_fig", format: "spr", answer: String(k),
+    statement: "The cylinder shown has the radius and height marked, in centimeters. The volume of the cylinder is \\(k\\pi\\) cubic centimeters. What is the value of \\(k\\)?",
+    figure: { fn: "cylinder", spec: { dims: { r: rad, h }, labels: { r: String(rad), h: String(h) } } },
+    solve_path: sp({ op: "apply_volume_formula", detail: `\\(V = \\pi r^2 h = \\pi\\cdot ${rad}^2\\cdot ${h} = ${k}\\pi\\), so \\(k = ${rad}^2\\cdot ${h} = ${k}\\).` }),
+    fingerprint: ["solid_fig", "cylinder_volume", `${rad}x${h}`, "3d"],
+  };
+}
+
+const BUILDERS = { prism_volume_fig: gPrismVolume, cube_fig: gCube, pyramid_volume_fig: gPyramidVolume, triprism_volume_fig: gTriPrismVolume, prism_surface_fig: gPrismSurface, prism_solve_dim_fig: gPrismSolveDim, cylinder_volume_fig: gCylinderVolume };
 
 /** drawSolidFig(task, band, r) — a complete, correct-by-construction 3D-solid figure item. */
 export function drawSolidFig(task, band, r) {

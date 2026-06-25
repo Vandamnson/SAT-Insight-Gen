@@ -56,8 +56,9 @@ export function figureCheck(cell) {
     return { keep: true };
   }
 
-  // 3D-solid figure items (GEO-2): a labeled prism/cube — verify the labels yield the answer.
-  if (num0?.figure?.fn === "prism") return checkPrism(cell.incidentals.numbers);
+  // 3D-solid figure items (GEO-2): a labeled prism/cube/pyramid/triangular-prism/
+  // cylinder — verify the labeled dimensions actually yield the stated answer.
+  if (["prism", "pyramid", "triPrism", "cylinder"].includes(num0?.figure?.fn)) return checkSolid(cell.incidentals.numbers);
 
   const fig = num0?.figure;
   if (!fig || fig.fn !== "coordPlane") return { keep: false, reason: "graph item missing coordPlane figure" };
@@ -169,18 +170,25 @@ function checkNonlinear(task, num, spec) {
   return { keep: true };
 }
 
-/* GEO-2 prism/cube self-consistency: the labeled edge lengths must yield the stated
-   volume / surface area / solved dimension. Correct by construction; this guards drawer bugs. */
-function checkPrism(num) {
-  const d = num.figure?.spec?.dims;
-  if (!d || ![d.l, d.w, d.h].every(Number.isFinite)) return { keep: false, reason: "prism missing numeric dims" };
-  const { l, w, h } = d, ans = Number(num.answer), t = num.task;
-  let ok = true;
-  if (t === "prism_volume_fig") ok = l * w * h === ans;
-  else if (t === "cube_fig") ok = l === w && w === h && ans === l ** 3;   // cube task is volume-only (B4.s1)
-  else if (t === "prism_surface_fig") ok = 2 * (l * w + l * h + w * h) === ans;
-  else if (t === "prism_solve_dim_fig") ok = h === ans;
-  return ok ? { keep: true } : { keep: false, reason: `prism ${t}: dims ${l}×${w}×${h} don't yield answer ${ans}` };
+/* GEO-2 solid self-consistency: the labeled dimensions must yield the stated answer
+   (volume / surface area / solved dimension / cylinder coefficient). Correct by
+   construction; this guards drawer bugs. Each task names which dims it reads. */
+function checkSolid(num) {
+  const d = num.figure?.spec?.dims, t = num.task, ans = Number(num.answer);
+  if (!d) return { keep: false, reason: `solid ${t}: missing dims` };
+  const fin = (...ks) => ks.every((k) => Number.isFinite(d[k]));
+  let exp;
+  switch (t) {
+    case "prism_volume_fig": if (!fin("l", "w", "h")) return { keep: false, reason: "prism missing numeric dims" }; exp = d.l * d.w * d.h; break;
+    case "cube_fig": if (!fin("l", "w", "h")) return { keep: false, reason: "cube missing numeric dims" }; if (!(d.l === d.w && d.w === d.h)) return { keep: false, reason: `cube not equilateral ${d.l}×${d.w}×${d.h}` }; exp = d.l ** 3; break;   // volume-only (B4.s1)
+    case "pyramid_volume_fig": if (!fin("l", "w", "h")) return { keep: false, reason: "pyramid missing numeric dims" }; exp = (d.l * d.w * d.h) / 3; break;
+    case "triprism_volume_fig": if (!fin("b", "ht", "L")) return { keep: false, reason: "triPrism missing numeric dims" }; exp = (d.b * d.ht / 2) * d.L; break;
+    case "prism_surface_fig": if (!fin("l", "w", "h")) return { keep: false, reason: "prism missing numeric dims" }; exp = 2 * (d.l * d.w + d.l * d.h + d.w * d.h); break;
+    case "prism_solve_dim_fig": if (!fin("l", "w", "h")) return { keep: false, reason: "prism missing numeric dims" }; exp = d.h; break;
+    case "cylinder_volume_fig": if (!fin("r", "h")) return { keep: false, reason: "cylinder missing numeric dims" }; exp = d.r * d.r * d.h; break;   // k where V = kπ
+    default: return { keep: false, reason: `unknown solid task ${t}` };
+  }
+  return Number.isFinite(exp) && exp === ans ? { keep: true } : { keep: false, reason: `solid ${t}: dims don't yield answer ${ans} (expected ${exp})` };
 }
 
 export default { figureCheck };

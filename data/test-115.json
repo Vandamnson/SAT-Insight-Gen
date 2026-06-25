@@ -1,6 +1,6 @@
 {
   "number": 115,
-  "title": "GEO-2 — 3D solids (figure)",
+  "title": "GEO-2 — 3D solids (figure): box · cube · pyramid · triangular prism · cylinder",
   "questions": [
     {
       "id": 1,
@@ -96,7 +96,7 @@
       ],
       "answer": {
         "accept": [
-          "240"
+          "126"
         ],
         "tol": 0
       },
@@ -107,7 +107,7 @@
         },
         {
           "t": "math",
-          "v": "V = \\ell wh = 5\\cdot 6\\cdot 8 = 240"
+          "v": "V = \\ell wh = 3\\cdot 6\\cdot 7 = 126"
         },
         {
           "t": "text",
@@ -121,320 +121,12 @@
         "fn": "prism",
         "spec": {
           "dims": {
-            "l": 5,
-            "w": 6,
-            "h": 8
-          },
-          "labels": {
-            "l": "5",
-            "w": "6",
-            "h": "8"
-          }
-        }
-      },
-      "difficulty": {
-        "scalePoint": 340,
-        "band": "B1",
-        "method": "apriori_v1",
-        "feature_vector": {
-          "task": "prism_volume_fig"
-        }
-      },
-      "verify": {
-        "tier": "C",
-        "correctness": "prove:pass"
-      },
-      "radicals": {
-        "task": "prism_volume_fig"
-      },
-      "fingerprint": [
-        "solid_fig",
-        "prism_volume",
-        "5x6x8",
-        "3d"
-      ],
-      "reskinDistance": 1,
-      "tier": "build-spec"
-    },
-    {
-      "id": 3,
-      "program": "SAT",
-      "domain": "geometry_trig",
-      "band": "B1",
-      "target_band": "B1",
-      "statementId": "GEO.B1.s1",
-      "skill": "solid_figures",
-      "type": "spr",
-      "stem": [
-        {
-          "t": "text",
-          "v": "The right rectangular prism shown has the edge lengths marked, in centimeters. What is the volume of the prism, in cubic centimeters?"
-        }
-      ],
-      "answer": {
-        "accept": [
-          "24"
-        ],
-        "tol": 0
-      },
-      "solution": [
-        {
-          "t": "text",
-          "v": "1. apply volume formula: "
-        },
-        {
-          "t": "math",
-          "v": "V = \\ell wh = 2\\cdot 3\\cdot 4 = 24"
-        },
-        {
-          "t": "text",
-          "v": "."
-        },
-        {
-          "t": "br"
-        }
-      ],
-      "figure": {
-        "fn": "prism",
-        "spec": {
-          "dims": {
-            "l": 2,
-            "w": 3,
-            "h": 4
-          },
-          "labels": {
-            "l": "2",
-            "w": "3",
-            "h": "4"
-          }
-        }
-      },
-      "difficulty": {
-        "scalePoint": 340,
-        "band": "B1",
-        "method": "apriori_v1",
-        "feature_vector": {
-          "task": "prism_volume_fig"
-        }
-      },
-      "verify": {
-        "tier": "C",
-        "correctness": "prove:pass"
-      },
-      "radicals": {
-        "task": "prism_volume_fig"
-      },
-      "fingerprint": [
-        "solid_fig",
-        "prism_volume",
-        "2x3x4",
-        "3d"
-      ],
-      "reskinDistance": 1,
-      "tier": "build-spec"
-    },
-    {
-      "id": 4,
-      "program": "SAT",
-      "domain": "geometry_trig",
-      "band": "B1",
-      "target_band": "B1",
-      "statementId": "GEO.B1.s1",
-      "skill": "solid_figures",
-      "type": "spr",
-      "stem": [
-        {
-          "t": "text",
-          "v": "The right rectangular prism shown has the edge lengths marked, in centimeters. What is the volume of the prism, in cubic centimeters?"
-        }
-      ],
-      "answer": {
-        "accept": [
-          "288"
-        ],
-        "tol": 0
-      },
-      "solution": [
-        {
-          "t": "text",
-          "v": "1. apply volume formula: "
-        },
-        {
-          "t": "math",
-          "v": "V = \\ell wh = 4\\cdot 8\\cdot 9 = 288"
-        },
-        {
-          "t": "text",
-          "v": "."
-        },
-        {
-          "t": "br"
-        }
-      ],
-      "figure": {
-        "fn": "prism",
-        "spec": {
-          "dims": {
-            "l": 4,
-            "w": 8,
-            "h": 9
-          },
-          "labels": {
-            "l": "4",
-            "w": "8",
-            "h": "9"
-          }
-        }
-      },
-      "difficulty": {
-        "scalePoint": 340,
-        "band": "B1",
-        "method": "apriori_v1",
-        "feature_vector": {
-          "task": "prism_volume_fig"
-        }
-      },
-      "verify": {
-        "tier": "C",
-        "correctness": "prove:pass"
-      },
-      "radicals": {
-        "task": "prism_volume_fig"
-      },
-      "fingerprint": [
-        "solid_fig",
-        "prism_volume",
-        "4x8x9",
-        "3d"
-      ],
-      "reskinDistance": 1,
-      "tier": "build-spec"
-    },
-    {
-      "id": 5,
-      "program": "SAT",
-      "domain": "geometry_trig",
-      "band": "B1",
-      "target_band": "B1",
-      "statementId": "GEO.B1.s1",
-      "skill": "solid_figures",
-      "type": "spr",
-      "stem": [
-        {
-          "t": "text",
-          "v": "The right rectangular prism shown has the edge lengths marked, in centimeters. What is the volume of the prism, in cubic centimeters?"
-        }
-      ],
-      "answer": {
-        "accept": [
-          "128"
-        ],
-        "tol": 0
-      },
-      "solution": [
-        {
-          "t": "text",
-          "v": "1. apply volume formula: "
-        },
-        {
-          "t": "math",
-          "v": "V = \\ell wh = 2\\cdot 8\\cdot 8 = 128"
-        },
-        {
-          "t": "text",
-          "v": "."
-        },
-        {
-          "t": "br"
-        }
-      ],
-      "figure": {
-        "fn": "prism",
-        "spec": {
-          "dims": {
-            "l": 2,
-            "w": 8,
-            "h": 8
-          },
-          "labels": {
-            "l": "2",
-            "w": "8",
-            "h": "8"
-          }
-        }
-      },
-      "difficulty": {
-        "scalePoint": 340,
-        "band": "B1",
-        "method": "apriori_v1",
-        "feature_vector": {
-          "task": "prism_volume_fig"
-        }
-      },
-      "verify": {
-        "tier": "C",
-        "correctness": "prove:pass"
-      },
-      "radicals": {
-        "task": "prism_volume_fig"
-      },
-      "fingerprint": [
-        "solid_fig",
-        "prism_volume",
-        "2x8x8",
-        "3d"
-      ],
-      "reskinDistance": 1,
-      "tier": "build-spec"
-    },
-    {
-      "id": 6,
-      "program": "SAT",
-      "domain": "geometry_trig",
-      "band": "B1",
-      "target_band": "B1",
-      "statementId": "GEO.B1.s1",
-      "skill": "solid_figures",
-      "type": "spr",
-      "stem": [
-        {
-          "t": "text",
-          "v": "The right rectangular prism shown has the edge lengths marked, in centimeters. What is the volume of the prism, in cubic centimeters?"
-        }
-      ],
-      "answer": {
-        "accept": [
-          "168"
-        ],
-        "tol": 0
-      },
-      "solution": [
-        {
-          "t": "text",
-          "v": "1. apply volume formula: "
-        },
-        {
-          "t": "math",
-          "v": "V = \\ell wh = 4\\cdot 6\\cdot 7 = 168"
-        },
-        {
-          "t": "text",
-          "v": "."
-        },
-        {
-          "t": "br"
-        }
-      ],
-      "figure": {
-        "fn": "prism",
-        "spec": {
-          "dims": {
-            "l": 4,
+            "l": 3,
             "w": 6,
             "h": 7
           },
           "labels": {
-            "l": "4",
+            "l": "3",
             "w": "6",
             "h": "7"
           }
@@ -458,14 +150,168 @@
       "fingerprint": [
         "solid_fig",
         "prism_volume",
-        "4x6x7",
+        "3x6x7",
         "3d"
       ],
       "reskinDistance": 1,
       "tier": "build-spec"
     },
     {
-      "id": 7,
+      "id": 3,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B1",
+      "target_band": "B1",
+      "statementId": "GEO.B1.s1",
+      "skill": "solid_figures",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The right rectangular prism shown has the edge lengths marked, in centimeters. What is the volume of the prism, in cubic centimeters?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "252"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. apply volume formula: "
+        },
+        {
+          "t": "math",
+          "v": "V = \\ell wh = 4\\cdot 7\\cdot 9 = 252"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "prism",
+        "spec": {
+          "dims": {
+            "l": 4,
+            "w": 7,
+            "h": 9
+          },
+          "labels": {
+            "l": "4",
+            "w": "7",
+            "h": "9"
+          }
+        }
+      },
+      "difficulty": {
+        "scalePoint": 340,
+        "band": "B1",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "prism_volume_fig"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "prism_volume_fig"
+      },
+      "fingerprint": [
+        "solid_fig",
+        "prism_volume",
+        "4x7x9",
+        "3d"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 4,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B4",
+      "target_band": "B4",
+      "statementId": "GEO.B4.s1",
+      "skill": "solid_figures",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The right rectangular pyramid shown has the base edge lengths and height marked, in centimeters. What is the volume of the pyramid, in cubic centimeters?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "72"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. apply volume formula: "
+        },
+        {
+          "t": "math",
+          "v": "V = \\tfrac13\\ell wh = \\tfrac13\\cdot 4\\cdot 9\\cdot 6 = 72"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "pyramid",
+        "spec": {
+          "dims": {
+            "l": 4,
+            "w": 9,
+            "h": 6
+          },
+          "labels": {
+            "l": "4",
+            "w": "9",
+            "h": "6"
+          }
+        }
+      },
+      "difficulty": {
+        "scalePoint": 510,
+        "band": "B4",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "pyramid_volume_fig"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "pyramid_volume_fig"
+      },
+      "fingerprint": [
+        "solid_fig",
+        "pyramid_volume",
+        "4x9x6",
+        "3d"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 5,
       "program": "SAT",
       "domain": "geometry_trig",
       "band": "B4",
@@ -542,7 +388,84 @@
       "tier": "build-spec"
     },
     {
-      "id": 8,
+      "id": 6,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B4",
+      "target_band": "B4",
+      "statementId": "GEO.B4.s1",
+      "skill": "solid_figures",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The right rectangular pyramid shown has the base edge lengths and height marked, in centimeters. What is the volume of the pyramid, in cubic centimeters?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "63"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. apply volume formula: "
+        },
+        {
+          "t": "math",
+          "v": "V = \\tfrac13\\ell wh = \\tfrac13\\cdot 3\\cdot 9\\cdot 7 = 63"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "pyramid",
+        "spec": {
+          "dims": {
+            "l": 3,
+            "w": 9,
+            "h": 7
+          },
+          "labels": {
+            "l": "3",
+            "w": "9",
+            "h": "7"
+          }
+        }
+      },
+      "difficulty": {
+        "scalePoint": 510,
+        "band": "B4",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "pyramid_volume_fig"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "pyramid_volume_fig"
+      },
+      "fingerprint": [
+        "solid_fig",
+        "pyramid_volume",
+        "3x9x7",
+        "3d"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 7,
       "program": "SAT",
       "domain": "geometry_trig",
       "band": "B4",
@@ -619,7 +542,7 @@
       "tier": "build-spec"
     },
     {
-      "id": 9,
+      "id": 8,
       "program": "SAT",
       "domain": "geometry_trig",
       "band": "B4",
@@ -630,12 +553,12 @@
       "stem": [
         {
           "t": "text",
-          "v": "The cube shown has its edge length marked, in inches. What is the volume of the cube, in cubic inches?"
+          "v": "The right rectangular pyramid shown has the base edge lengths and height marked, in centimeters. What is the volume of the pyramid, in cubic centimeters?"
         }
       ],
       "answer": {
         "accept": [
-          "125"
+          "20"
         ],
         "tol": 0
       },
@@ -646,7 +569,7 @@
         },
         {
           "t": "math",
-          "v": "V = s^3 = 5^3 = 125"
+          "v": "V = \\tfrac13\\ell wh = \\tfrac13\\cdot 4\\cdot 5\\cdot 3 = 20"
         },
         {
           "t": "text",
@@ -657,17 +580,17 @@
         }
       ],
       "figure": {
-        "fn": "prism",
+        "fn": "pyramid",
         "spec": {
           "dims": {
-            "l": 5,
+            "l": 4,
             "w": 5,
-            "h": 5
+            "h": 3
           },
           "labels": {
-            "l": "5",
+            "l": "4",
             "w": "5",
-            "h": "5"
+            "h": "3"
           }
         }
       },
@@ -676,7 +599,7 @@
         "band": "B4",
         "method": "apriori_v1",
         "feature_vector": {
-          "task": "cube_fig"
+          "task": "pyramid_volume_fig"
         }
       },
       "verify": {
@@ -684,19 +607,19 @@
         "correctness": "prove:pass"
       },
       "radicals": {
-        "task": "cube_fig"
+        "task": "pyramid_volume_fig"
       },
       "fingerprint": [
         "solid_fig",
-        "cube",
-        "vol",
+        "pyramid_volume",
+        "4x5x3",
         "3d"
       ],
       "reskinDistance": 1,
       "tier": "build-spec"
     },
     {
-      "id": 10,
+      "id": 9,
       "program": "SAT",
       "domain": "geometry_trig",
       "band": "B4",
@@ -773,23 +696,23 @@
       "tier": "build-spec"
     },
     {
-      "id": 11,
+      "id": 10,
       "program": "SAT",
       "domain": "geometry_trig",
-      "band": "B4",
-      "target_band": "B4",
-      "statementId": "GEO.B4.s1",
+      "band": "B5",
+      "target_band": "B5",
+      "statementId": "GEO.B5.s3",
       "skill": "solid_figures",
       "type": "spr",
       "stem": [
         {
           "t": "text",
-          "v": "The cube shown has its edge length marked, in inches. What is the volume of the cube, in cubic inches?"
+          "v": "The right triangular prism shown has a triangular cross-section with the base and height marked, and a length marked, in feet. What is the volume of the prism, in cubic feet?"
         }
       ],
       "answer": {
         "accept": [
-          "343"
+          "24"
         ],
         "tol": 0
       },
@@ -800,7 +723,7 @@
         },
         {
           "t": "math",
-          "v": "V = s^3 = 7^3 = 343"
+          "v": "V = \\tfrac12 b\\,h_t\\cdot L = \\tfrac12\\cdot 2\\cdot 4\\cdot 6 = 24"
         },
         {
           "t": "text",
@@ -811,26 +734,26 @@
         }
       ],
       "figure": {
-        "fn": "prism",
+        "fn": "triPrism",
         "spec": {
           "dims": {
-            "l": 7,
-            "w": 7,
-            "h": 7
+            "b": 2,
+            "ht": 4,
+            "L": 6
           },
           "labels": {
-            "l": "7",
-            "w": "7",
-            "h": "7"
+            "b": "2",
+            "ht": "4",
+            "L": "6"
           }
         }
       },
       "difficulty": {
-        "scalePoint": 510,
-        "band": "B4",
+        "scalePoint": 570,
+        "band": "B5",
         "method": "apriori_v1",
         "feature_vector": {
-          "task": "cube_fig"
+          "task": "triprism_volume_fig"
         }
       },
       "verify": {
@@ -838,12 +761,89 @@
         "correctness": "prove:pass"
       },
       "radicals": {
-        "task": "cube_fig"
+        "task": "triprism_volume_fig"
       },
       "fingerprint": [
         "solid_fig",
-        "cube",
-        "vol",
+        "triprism_volume",
+        "2x4x6",
+        "3d"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 11,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B5",
+      "target_band": "B5",
+      "statementId": "GEO.B5.s3",
+      "skill": "solid_figures",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The right triangular prism shown has a triangular cross-section with the base and height marked, and a length marked, in feet. What is the volume of the prism, in cubic feet?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "40"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. apply volume formula: "
+        },
+        {
+          "t": "math",
+          "v": "V = \\tfrac12 b\\,h_t\\cdot L = \\tfrac12\\cdot 2\\cdot 4\\cdot 10 = 40"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "triPrism",
+        "spec": {
+          "dims": {
+            "b": 2,
+            "ht": 4,
+            "L": 10
+          },
+          "labels": {
+            "b": "2",
+            "ht": "4",
+            "L": "10"
+          }
+        }
+      },
+      "difficulty": {
+        "scalePoint": 570,
+        "band": "B5",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "triprism_volume_fig"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "triprism_volume_fig"
+      },
+      "fingerprint": [
+        "solid_fig",
+        "triprism_volume",
+        "2x4x10",
         "3d"
       ],
       "reskinDistance": 1,
@@ -853,31 +853,31 @@
       "id": 12,
       "program": "SAT",
       "domain": "geometry_trig",
-      "band": "B6",
-      "target_band": "B6",
-      "statementId": "GEO.B6.s1",
+      "band": "B5",
+      "target_band": "B5",
+      "statementId": "GEO.B5.s3",
       "skill": "solid_figures",
       "type": "spr",
       "stem": [
         {
           "t": "text",
-          "v": "The right rectangular prism shown has the edge lengths marked, in meters. What is the surface area of the prism, in square meters?"
+          "v": "The right triangular prism shown has a triangular cross-section with the base and height marked, and a length marked, in feet. What is the volume of the prism, in cubic feet?"
         }
       ],
       "answer": {
         "accept": [
-          "136"
+          "16"
         ],
         "tol": 0
       },
       "solution": [
         {
           "t": "text",
-          "v": "1. apply surface area: "
+          "v": "1. apply volume formula: "
         },
         {
           "t": "math",
-          "v": "SA = 2(\\ell w + \\ell h + wh) = 2(12 + 14 + 42) = 136"
+          "v": "V = \\tfrac12 b\\,h_t\\cdot L = \\tfrac12\\cdot 4\\cdot 2\\cdot 4 = 16"
         },
         {
           "t": "text",
@@ -888,26 +888,26 @@
         }
       ],
       "figure": {
-        "fn": "prism",
+        "fn": "triPrism",
         "spec": {
           "dims": {
-            "l": 2,
-            "w": 6,
-            "h": 7
+            "b": 4,
+            "ht": 2,
+            "L": 4
           },
           "labels": {
-            "l": "2",
-            "w": "6",
-            "h": "7"
+            "b": "4",
+            "ht": "2",
+            "L": "4"
           }
         }
       },
       "difficulty": {
-        "scalePoint": 645,
-        "band": "B6",
+        "scalePoint": 570,
+        "band": "B5",
         "method": "apriori_v1",
         "feature_vector": {
-          "task": "prism_surface_fig"
+          "task": "triprism_volume_fig"
         }
       },
       "verify": {
@@ -915,12 +915,12 @@
         "correctness": "prove:pass"
       },
       "radicals": {
-        "task": "prism_surface_fig"
+        "task": "triprism_volume_fig"
       },
       "fingerprint": [
         "solid_fig",
-        "prism_surface",
-        "2x6x7",
+        "triprism_volume",
+        "4x2x4",
         "3d"
       ],
       "reskinDistance": 1,
@@ -938,7 +938,7 @@
       "stem": [
         {
           "t": "text",
-          "v": "The right rectangular prism shown has a volume of 280 cubic feet. Two of its edge lengths are marked, in feet. What is the value of "
+          "v": "The right rectangular prism shown has a volume of 24 cubic feet. Two of its edge lengths are marked, in feet. What is the value of "
         },
         {
           "t": "math",
@@ -951,7 +951,7 @@
       ],
       "answer": {
         "accept": [
-          "5"
+          "2"
         ],
         "tol": 0
       },
@@ -962,7 +962,7 @@
         },
         {
           "t": "math",
-          "v": "h = \\dfrac{V}{\\ell w} = \\dfrac{280}{7\\cdot 8} = 5"
+          "v": "h = \\dfrac{V}{\\ell w} = \\dfrac{24}{2\\cdot 6} = 2"
         },
         {
           "t": "text",
@@ -976,13 +976,13 @@
         "fn": "prism",
         "spec": {
           "dims": {
-            "l": 7,
-            "w": 8,
-            "h": 5
+            "l": 2,
+            "w": 6,
+            "h": 2
           },
           "labels": {
-            "l": "7",
-            "w": "8",
+            "l": "2",
+            "w": "6",
             "h": "h"
           }
         }
@@ -1005,7 +1005,7 @@
       "fingerprint": [
         "solid_fig",
         "prism_solve_dim",
-        "7x8",
+        "2x6",
         "3d"
       ],
       "reskinDistance": 1,
@@ -1023,11 +1023,19 @@
       "stem": [
         {
           "t": "text",
-          "v": "The right rectangular prism shown has a volume of 98 cubic feet. Two of its edge lengths are marked, in feet. What is the value of "
+          "v": "The cylinder shown has the radius and height marked, in centimeters. The volume of the cylinder is "
         },
         {
           "t": "math",
-          "v": "h"
+          "v": "k\\pi"
+        },
+        {
+          "t": "text",
+          "v": " cubic centimeters. What is the value of "
+        },
+        {
+          "t": "math",
+          "v": "k"
         },
         {
           "t": "text",
@@ -1036,18 +1044,26 @@
       ],
       "answer": {
         "accept": [
-          "7"
+          "28"
         ],
         "tol": 0
       },
       "solution": [
         {
           "t": "text",
-          "v": "1. isolate dimension: "
+          "v": "1. apply volume formula: "
         },
         {
           "t": "math",
-          "v": "h = \\dfrac{V}{\\ell w} = \\dfrac{98}{2\\cdot 7} = 7"
+          "v": "V = \\pi r^2 h = \\pi\\cdot 2^2\\cdot 7 = 28\\pi"
+        },
+        {
+          "t": "text",
+          "v": ", so "
+        },
+        {
+          "t": "math",
+          "v": "k = 2^2\\cdot 7 = 28"
         },
         {
           "t": "text",
@@ -1058,17 +1074,15 @@
         }
       ],
       "figure": {
-        "fn": "prism",
+        "fn": "cylinder",
         "spec": {
           "dims": {
-            "l": 2,
-            "w": 7,
+            "r": 2,
             "h": 7
           },
           "labels": {
-            "l": "2",
-            "w": "7",
-            "h": "h"
+            "r": "2",
+            "h": "7"
           }
         }
       },
@@ -1077,7 +1091,7 @@
         "band": "B6",
         "method": "apriori_v1",
         "feature_vector": {
-          "task": "prism_solve_dim_fig"
+          "task": "cylinder_volume_fig"
         }
       },
       "verify": {
@@ -1085,11 +1099,11 @@
         "correctness": "prove:pass"
       },
       "radicals": {
-        "task": "prism_solve_dim_fig"
+        "task": "cylinder_volume_fig"
       },
       "fingerprint": [
         "solid_fig",
-        "prism_solve_dim",
+        "cylinder_volume",
         "2x7",
         "3d"
       ],
@@ -1185,23 +1199,31 @@
       "stem": [
         {
           "t": "text",
-          "v": "The right rectangular prism shown has the edge lengths marked, in meters. What is the surface area of the prism, in square meters?"
+          "v": "The right rectangular prism shown has a volume of 64 cubic feet. Two of its edge lengths are marked, in feet. What is the value of "
+        },
+        {
+          "t": "math",
+          "v": "h"
+        },
+        {
+          "t": "text",
+          "v": "?"
         }
       ],
       "answer": {
         "accept": [
-          "190"
+          "2"
         ],
         "tol": 0
       },
       "solution": [
         {
           "t": "text",
-          "v": "1. apply surface area: "
+          "v": "1. isolate dimension: "
         },
         {
           "t": "math",
-          "v": "SA = 2(\\ell w + \\ell h + wh) = 2(25 + 35 + 35) = 190"
+          "v": "h = \\dfrac{V}{\\ell w} = \\dfrac{64}{4\\cdot 8} = 2"
         },
         {
           "t": "text",
@@ -1215,14 +1237,190 @@
         "fn": "prism",
         "spec": {
           "dims": {
-            "l": 5,
-            "w": 5,
+            "l": 4,
+            "w": 8,
+            "h": 2
+          },
+          "labels": {
+            "l": "4",
+            "w": "8",
+            "h": "h"
+          }
+        }
+      },
+      "difficulty": {
+        "scalePoint": 645,
+        "band": "B6",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "prism_solve_dim_fig"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "prism_solve_dim_fig"
+      },
+      "fingerprint": [
+        "solid_fig",
+        "prism_solve_dim",
+        "4x8",
+        "3d"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 17,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B6",
+      "target_band": "B6",
+      "statementId": "GEO.B6.s1",
+      "skill": "solid_figures",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The cylinder shown has the radius and height marked, in centimeters. The volume of the cylinder is "
+        },
+        {
+          "t": "math",
+          "v": "k\\pi"
+        },
+        {
+          "t": "text",
+          "v": " cubic centimeters. What is the value of "
+        },
+        {
+          "t": "math",
+          "v": "k"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "112"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. apply volume formula: "
+        },
+        {
+          "t": "math",
+          "v": "V = \\pi r^2 h = \\pi\\cdot 4^2\\cdot 7 = 112\\pi"
+        },
+        {
+          "t": "text",
+          "v": ", so "
+        },
+        {
+          "t": "math",
+          "v": "k = 4^2\\cdot 7 = 112"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "cylinder",
+        "spec": {
+          "dims": {
+            "r": 4,
             "h": 7
           },
           "labels": {
-            "l": "5",
-            "w": "5",
+            "r": "4",
             "h": "7"
+          }
+        }
+      },
+      "difficulty": {
+        "scalePoint": 645,
+        "band": "B6",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "cylinder_volume_fig"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "cylinder_volume_fig"
+      },
+      "fingerprint": [
+        "solid_fig",
+        "cylinder_volume",
+        "4x7",
+        "3d"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 18,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B6",
+      "target_band": "B6",
+      "statementId": "GEO.B6.s1",
+      "skill": "solid_figures",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The right rectangular prism shown has the edge lengths marked, in meters. What is the surface area of the prism, in square meters?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "80"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. apply surface area: "
+        },
+        {
+          "t": "math",
+          "v": "SA = 2(\\ell w + \\ell h + wh) = 2(12 + 12 + 16) = 80"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "prism",
+        "spec": {
+          "dims": {
+            "l": 3,
+            "w": 4,
+            "h": 4
+          },
+          "labels": {
+            "l": "3",
+            "w": "4",
+            "h": "4"
           }
         }
       },
@@ -1244,7 +1442,268 @@
       "fingerprint": [
         "solid_fig",
         "prism_surface",
-        "5x5x7",
+        "3x4x4",
+        "3d"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 19,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B6",
+      "target_band": "B6",
+      "statementId": "GEO.B6.s1",
+      "skill": "solid_figures",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The cylinder shown has the radius and height marked, in centimeters. The volume of the cylinder is "
+        },
+        {
+          "t": "math",
+          "v": "k\\pi"
+        },
+        {
+          "t": "text",
+          "v": " cubic centimeters. What is the value of "
+        },
+        {
+          "t": "math",
+          "v": "k"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "392"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. apply volume formula: "
+        },
+        {
+          "t": "math",
+          "v": "V = \\pi r^2 h = \\pi\\cdot 7^2\\cdot 8 = 392\\pi"
+        },
+        {
+          "t": "text",
+          "v": ", so "
+        },
+        {
+          "t": "math",
+          "v": "k = 7^2\\cdot 8 = 392"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "cylinder",
+        "spec": {
+          "dims": {
+            "r": 7,
+            "h": 8
+          },
+          "labels": {
+            "r": "7",
+            "h": "8"
+          }
+        }
+      },
+      "difficulty": {
+        "scalePoint": 645,
+        "band": "B6",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "cylinder_volume_fig"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "cylinder_volume_fig"
+      },
+      "fingerprint": [
+        "solid_fig",
+        "cylinder_volume",
+        "7x8",
+        "3d"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 20,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B6",
+      "target_band": "B6",
+      "statementId": "GEO.B6.s1",
+      "skill": "solid_figures",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The right rectangular prism shown has the edge lengths marked, in meters. What is the surface area of the prism, in square meters?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "288"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. apply surface area: "
+        },
+        {
+          "t": "math",
+          "v": "SA = 2(\\ell w + \\ell h + wh) = 2(40 + 40 + 64) = 288"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "prism",
+        "spec": {
+          "dims": {
+            "l": 5,
+            "w": 8,
+            "h": 8
+          },
+          "labels": {
+            "l": "5",
+            "w": "8",
+            "h": "8"
+          }
+        }
+      },
+      "difficulty": {
+        "scalePoint": 645,
+        "band": "B6",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "prism_surface_fig"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "prism_surface_fig"
+      },
+      "fingerprint": [
+        "solid_fig",
+        "prism_surface",
+        "5x8x8",
+        "3d"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 21,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B6",
+      "target_band": "B6",
+      "statementId": "GEO.B6.s1",
+      "skill": "solid_figures",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The right rectangular prism shown has a volume of 126 cubic feet. Two of its edge lengths are marked, in feet. What is the value of "
+        },
+        {
+          "t": "math",
+          "v": "h"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "3"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. isolate dimension: "
+        },
+        {
+          "t": "math",
+          "v": "h = \\dfrac{V}{\\ell w} = \\dfrac{126}{6\\cdot 7} = 3"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "prism",
+        "spec": {
+          "dims": {
+            "l": 6,
+            "w": 7,
+            "h": 3
+          },
+          "labels": {
+            "l": "6",
+            "w": "7",
+            "h": "h"
+          }
+        }
+      },
+      "difficulty": {
+        "scalePoint": 645,
+        "band": "B6",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "prism_solve_dim_fig"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "prism_solve_dim_fig"
+      },
+      "fingerprint": [
+        "solid_fig",
+        "prism_solve_dim",
+        "6x7",
         "3d"
       ],
       "reskinDistance": 1,
