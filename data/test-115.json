@@ -476,23 +476,23 @@
       "stem": [
         {
           "t": "text",
-          "v": "The cube shown has its edge length marked, in inches. What is the surface area of the cube, in square inches?"
+          "v": "The cube shown has its edge length marked, in inches. What is the volume of the cube, in cubic inches?"
         }
       ],
       "answer": {
         "accept": [
-          "96"
+          "64"
         ],
         "tol": 0
       },
       "solution": [
         {
           "t": "text",
-          "v": "1. apply surface area: "
+          "v": "1. apply volume formula: "
         },
         {
           "t": "math",
-          "v": "SA = 6s^2 = 6\\cdot 4^2 = 96"
+          "v": "V = s^3 = 4^3 = 64"
         },
         {
           "t": "text",
@@ -535,7 +535,7 @@
       "fingerprint": [
         "solid_fig",
         "cube",
-        "sa",
+        "vol",
         "3d"
       ],
       "reskinDistance": 1,
@@ -553,23 +553,23 @@
       "stem": [
         {
           "t": "text",
-          "v": "The cube shown has its edge length marked, in inches. What is the surface area of the cube, in square inches?"
+          "v": "The cube shown has its edge length marked, in inches. What is the volume of the cube, in cubic inches?"
         }
       ],
       "answer": {
         "accept": [
-          "24"
+          "8"
         ],
         "tol": 0
       },
       "solution": [
         {
           "t": "text",
-          "v": "1. apply surface area: "
+          "v": "1. apply volume formula: "
         },
         {
           "t": "math",
-          "v": "SA = 6s^2 = 6\\cdot 2^2 = 24"
+          "v": "V = s^3 = 2^3 = 8"
         },
         {
           "t": "text",
@@ -612,7 +612,7 @@
       "fingerprint": [
         "solid_fig",
         "cube",
-        "sa",
+        "vol",
         "3d"
       ],
       "reskinDistance": 1,
@@ -630,23 +630,23 @@
       "stem": [
         {
           "t": "text",
-          "v": "The cube shown has its edge length marked, in inches. What is the surface area of the cube, in square inches?"
+          "v": "The cube shown has its edge length marked, in inches. What is the volume of the cube, in cubic inches?"
         }
       ],
       "answer": {
         "accept": [
-          "150"
+          "125"
         ],
         "tol": 0
       },
       "solution": [
         {
           "t": "text",
-          "v": "1. apply surface area: "
+          "v": "1. apply volume formula: "
         },
         {
           "t": "math",
-          "v": "SA = 6s^2 = 6\\cdot 5^2 = 150"
+          "v": "V = s^3 = 5^3 = 125"
         },
         {
           "t": "text",
@@ -689,7 +689,7 @@
       "fingerprint": [
         "solid_fig",
         "cube",
-        "sa",
+        "vol",
         "3d"
       ],
       "reskinDistance": 1,

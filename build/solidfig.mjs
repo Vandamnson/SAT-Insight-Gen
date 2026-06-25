@@ -21,15 +21,16 @@ function gPrismVolume(r) {
   };
 }
 
-/* B4 — cube: volume s^3 or surface area 6s^2 */
+/* B4 — cube VOLUME (GEO.B4.s1 is "the volume of a cube or pyramid"; surface area is a
+   B6 prism skill, covered by prism_surface — so the cube task is volume-only). */
 function gCube(r) {
-  const s = randint(r, 2, 9), vol = r() < 0.5, ans = vol ? s ** 3 : 6 * s * s;
+  const s = randint(r, 2, 9), V = s ** 3;
   return {
-    task: "cube_fig", format: "spr", answer: String(ans),
-    statement: `The cube shown has its edge length marked, in inches. What is the ${vol ? "volume of the cube, in cubic inches" : "surface area of the cube, in square inches"}?`,
+    task: "cube_fig", format: "spr", answer: String(V),
+    statement: "The cube shown has its edge length marked, in inches. What is the volume of the cube, in cubic inches?",
     figure: { fn: "prism", spec: { dims: { l: s, w: s, h: s }, labels: { l: String(s), w: String(s), h: String(s) } } },
-    solve_path: sp({ op: vol ? "apply_volume_formula" : "apply_surface_area", detail: vol ? `\\(V = s^3 = ${s}^3 = ${ans}\\).` : `\\(SA = 6s^2 = 6\\cdot ${s}^2 = ${ans}\\).` }),
-    fingerprint: ["solid_fig", "cube", vol ? "vol" : "sa", "3d"],
+    solve_path: sp({ op: "apply_volume_formula", detail: `\\(V = s^3 = ${s}^3 = ${V}\\).` }),
+    fingerprint: ["solid_fig", "cube", "vol", "3d"],
   };
 }
 

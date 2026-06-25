@@ -177,7 +177,7 @@ function checkPrism(num) {
   const { l, w, h } = d, ans = Number(num.answer), t = num.task;
   let ok = true;
   if (t === "prism_volume_fig") ok = l * w * h === ans;
-  else if (t === "cube_fig") ok = l === w && w === h && (ans === l ** 3 || ans === 6 * l * l);
+  else if (t === "cube_fig") ok = l === w && w === h && ans === l ** 3;   // cube task is volume-only (B4.s1)
   else if (t === "prism_surface_fig") ok = 2 * (l * w + l * h + w * h) === ans;
   else if (t === "prism_solve_dim_fig") ok = h === ans;
   return ok ? { keep: true } : { keep: false, reason: `prism ${t}: dims ${l}×${w}×${h} don't yield answer ${ans}` };
