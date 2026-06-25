@@ -191,8 +191,10 @@ async function generateCell(domain, subdomain, n, bands, ctr) {
   // more by adding STRUCTURES, not numbers. (Surface/structural dedup don't reach these items:
   // the stem is a constant template and a figure's solve-path is one op.)
   const FIG_QUOTA = Number(process.env.SIG_FIG_QUOTA ?? 3);
-  const isDimTok = (t) => /^\d+(?:x\d+)*$/.test(String(t));   // "3x4x7", "7x8", "5" — the number-reskin slot
-  const structKey = (fp, band) => (Array.isArray(fp) ? fp.filter((t) => !isDimTok(t)) : []).join("|") + "@B" + band;
+  // structure = the TASK (the skill), which for a construct-backward figure item IS its
+  // structure (prism_volume, arc_length_fig, …). Falls back to the fingerprint minus any
+  // number-bearing token (the reskin slot) when a task isn't set. Keyed per band.
+  const structKey = (num, band) => (num.task || (Array.isArray(num.fingerprint) ? num.fingerprint.filter((t) => !/\d/.test(String(t))).join("|") : "")) + "@B" + band;
   const unique = [];
   const seenFig = new Set();
   const structCount = new Map();
@@ -204,10 +206,12 @@ async function generateCell(domain, subdomain, n, bands, ctr) {
       // merely share a volume do NOT (answer alone is not the identity).
       const fkey = sp?.curves ? sp.curves
         : sp?.dims ? Object.values(sp.dims).map(String).sort()
+        : sp?.sector ? [sp.sector.from, sp.sector.to, sp.sector.radiusLabel]
+        : sp?.inscribed ? [sp.inscribed.A, sp.inscribed.B, sp.inscribed.C]
         : (num.optionFigures || []).map((o) => o.curves);
       const sig = JSON.stringify({ f: fkey, a: num.answer, c: num.correct_choice });
       if (seenFig.has(sig)) { reasons.push(`figdup [B${s.cell.band}]`); continue; }
-      const sk = structKey(num.fingerprint, s.cell.band);
+      const sk = structKey(num, s.cell.band);
       if ((structCount.get(sk) || 0) >= FIG_QUOTA) { reasons.push(`figquota [${sk}] ≥${FIG_QUOTA}`); continue; }
       seenFig.add(sig); structCount.set(sk, (structCount.get(sk) || 0) + 1); unique.push(s); continue;
     }

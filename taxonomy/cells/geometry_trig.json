@@ -98,6 +98,19 @@
       "task_tier": { "prism_volume_fig": "C", "cube_fig": "C", "pyramid_volume_fig": "C", "triprism_volume_fig": "C", "prism_surface_fig": "C", "prism_solve_dim_fig": "C", "cylinder_volume_fig": "C" },
       "canonical_fingerprint": ["read_solid"],
       "op_vocab": ["apply_volume_formula", "apply_surface_area", "isolate_dimension"]
+    },
+    "circle_figures": {
+      "label": "circle arcs / sectors / inscribed angles shown with a labeled figure",
+      "target": "read a labeled circle figure (shaded sector + central angle + radius, or an inscribed-angle configuration) and compute an arc length, sector area, or angle measure",
+      "_note": "GEO-2 Tier C (construct-backward, NO LLM): the figures.js `circle` figure (sector or inscribed-angle spec) pins the geometry AND the answer; the selector gates with figureCheck's circle arm + legibility. The FIGURE form of GEO.B7.s3 (arcs, sectors, circle angles). Arc length & sector area are reported as kπ (the SAT 'in terms of π' SPR form): grid the integer k. Distinct STRUCTURES (arc length, sector area, inscribed angle); the per-structure quota caps reskins per band.",
+      "statementByBand": { "B7": "GEO.B7.s3" },
+      "statementByTask": { "arc_length_fig": "GEO.B7.s3", "sector_area_fig": "GEO.B7.s3", "inscribed_angle_fig": "GEO.B7.s3" },
+      "radical_axes": { "task": ["arc_length_fig", "sector_area_fig", "inscribed_angle_fig"] },
+      "incidental_axes": { "context": "@contexts", "var_name": ["r", "k", "x"], "coefficient_range": [2, 12], "constant_range": [1, 360] },
+      "lltm": { "weights": { "w0": 580, "task": { "arc_length_fig": 160, "sector_area_fig": 160, "inscribed_angle_fig": 160 } } },
+      "task_tier": { "arc_length_fig": "C", "sector_area_fig": "C", "inscribed_angle_fig": "C" },
+      "canonical_fingerprint": ["read_circle"],
+      "op_vocab": ["apply_arc_length", "apply_sector_area", "apply_inscribed_angle"]
     }
   }
 }

@@ -60,6 +60,10 @@ export function figureCheck(cell) {
   // cylinder — verify the labeled dimensions actually yield the stated answer.
   if (["prism", "pyramid", "triPrism", "cylinder"].includes(num0?.figure?.fn)) return checkSolid(cell.incidentals.numbers);
 
+  // Circle figure items (GEO-2): a labeled sector (arc length / sector area) or an
+  // inscribed-angle configuration — verify the marked geometry yields the answer.
+  if (num0?.figure?.fn === "circle") return checkCircleFig(cell.incidentals.numbers);
+
   const fig = num0?.figure;
   if (!fig || fig.fn !== "coordPlane") return { keep: false, reason: "graph item missing coordPlane figure" };
   const spec = fig.spec;
@@ -189,6 +193,33 @@ function checkSolid(num) {
     default: return { keep: false, reason: `unknown solid task ${t}` };
   }
   return Number.isFinite(exp) && exp === ans ? { keep: true } : { keep: false, reason: `solid ${t}: dims don't yield answer ${ans} (expected ${exp})` };
+}
+
+/* GEO-2 circle self-consistency. Sector items: the marked central angle θ and radius
+   r must reproduce arc length kπ (k=θr/180) or sector area kπ (k=θr²/360), and the
+   drawn angle label must equal the geometric span. Inscribed item: the vertex C must
+   lie on the MAJOR arc and ∠ACB = ½·(central ∠AOB). Correct by construction. */
+function checkCircleFig(num) {
+  const sp = num.figure?.spec, t = num.task, ans = Number(num.answer);
+  const digits = (s) => String(s).replace(/[^0-9]/g, "");
+  if (t === "arc_length_fig" || t === "sector_area_fig") {
+    const s = sp?.sector; if (!s) return { keep: false, reason: `${t}: no sector spec` };
+    const theta = ((s.to - s.from) % 360 + 360) % 360, r = Number(s.radiusLabel);
+    if (!Number.isFinite(r) || r <= 0) return { keep: false, reason: `${t}: bad radius "${s.radiusLabel}"` };
+    if (digits(s.label) !== String(theta)) return { keep: false, reason: `${t}: angle label "${s.label}" ≠ drawn span ${theta}°` };
+    const k = t === "arc_length_fig" ? theta * r / 180 : theta * r * r / 360;
+    return Number.isInteger(k) && k === ans ? { keep: true } : { keep: false, reason: `${t}: recompute k=${k} (θ=${theta}, r=${r}) ≠ answer ${ans}` };
+  }
+  if (t === "inscribed_angle_fig") {
+    const I = sp?.inscribed; if (!I) return { keep: false, reason: "inscribed: no spec" };
+    const central = ((I.B - I.A) % 360 + 360) % 360;          // central ∠AOB = minor arc A→B (CCW)
+    const cRel = ((I.C - I.A) % 360 + 360) % 360;             // C relative to A
+    if (!(cRel > central)) return { keep: false, reason: `inscribed: C (${I.C}°) not on the major arc (A=${I.A}°, B=${I.B}°)` };
+    if (digits(I.centralLabel) !== String(central)) return { keep: false, reason: `inscribed: central label "${I.centralLabel}" ≠ ${central}°` };
+    const exp = central / 2;
+    return Number.isInteger(exp) && exp === ans ? { keep: true } : { keep: false, reason: `inscribed: ½·${central} = ${exp} ≠ answer ${ans}` };
+  }
+  return { keep: false, reason: `unknown circle task ${t}` };
 }
 
 export default { figureCheck };

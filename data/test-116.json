@@ -1,0 +1,1026 @@
+{
+  "number": 116,
+  "title": "GEO-2 — circle figures: arc length · sector area · inscribed angle",
+  "questions": [
+    {
+      "id": 1,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "GEO.B7.s3",
+      "skill": "circle_figures",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "In circle "
+        },
+        {
+          "t": "math",
+          "v": "O"
+        },
+        {
+          "t": "text",
+          "v": " shown, "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{CA}"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{CB}"
+        },
+        {
+          "t": "text",
+          "v": " are chords and the central angle "
+        },
+        {
+          "t": "math",
+          "v": "\\angle AOB"
+        },
+        {
+          "t": "text",
+          "v": " is marked. What is the measure, in degrees, of the inscribed angle "
+        },
+        {
+          "t": "math",
+          "v": "\\angle ACB"
+        },
+        {
+          "t": "text",
+          "v": " (marked "
+        },
+        {
+          "t": "math",
+          "v": "x^\\circ"
+        },
+        {
+          "t": "text",
+          "v": ")?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "32"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. apply inscribed angle: "
+        },
+        {
+          "t": "text",
+          "v": "An inscribed angle is half the central angle on the same arc: "
+        },
+        {
+          "t": "math",
+          "v": "x = \\tfrac12\\cdot 64 = 32"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "circle",
+        "spec": {
+          "R": 92,
+          "inscribed": {
+            "A": 150,
+            "B": 214,
+            "C": 315,
+            "centralLabel": "64°",
+            "inscribedLabel": "x°"
+          }
+        }
+      },
+      "difficulty": {
+        "scalePoint": 740,
+        "band": "B7",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "inscribed_angle_fig"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "inscribed_angle_fig"
+      },
+      "fingerprint": [
+        "circle_fig",
+        "inscribed_angle",
+        "c64",
+        "2d"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 2,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "GEO.B7.s3",
+      "skill": "circle_figures",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "In the circle shown with center "
+        },
+        {
+          "t": "math",
+          "v": "O"
+        },
+        {
+          "t": "text",
+          "v": ", the marked central angle subtends the bold arc, and the radius is marked. The length of the bold arc is "
+        },
+        {
+          "t": "math",
+          "v": "k\\pi"
+        },
+        {
+          "t": "text",
+          "v": ". What is the value of "
+        },
+        {
+          "t": "math",
+          "v": "k"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "5"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. apply arc length: "
+        },
+        {
+          "t": "math",
+          "v": "\\text{arc} = \\dfrac{180}{360}\\cdot 2\\pi(5) = 5\\pi"
+        },
+        {
+          "t": "text",
+          "v": ", so "
+        },
+        {
+          "t": "math",
+          "v": "k = 5"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "circle",
+        "spec": {
+          "R": 92,
+          "sector": {
+            "from": 100,
+            "to": 280,
+            "label": "180°",
+            "radiusLabel": "5"
+          }
+        }
+      },
+      "difficulty": {
+        "scalePoint": 740,
+        "band": "B7",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "arc_length_fig"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "arc_length_fig"
+      },
+      "fingerprint": [
+        "circle_fig",
+        "arc_length",
+        "180deg_r5",
+        "2d"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 3,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "GEO.B7.s3",
+      "skill": "circle_figures",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "In the circle shown with center "
+        },
+        {
+          "t": "math",
+          "v": "O"
+        },
+        {
+          "t": "text",
+          "v": ", the shaded sector has the marked central angle and radius. The area of the shaded sector is "
+        },
+        {
+          "t": "math",
+          "v": "k\\pi"
+        },
+        {
+          "t": "text",
+          "v": ". What is the value of "
+        },
+        {
+          "t": "math",
+          "v": "k"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "8"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. apply sector area: "
+        },
+        {
+          "t": "math",
+          "v": "\\text{area} = \\dfrac{45}{360}\\cdot \\pi(8)^2 = 8\\pi"
+        },
+        {
+          "t": "text",
+          "v": ", so "
+        },
+        {
+          "t": "math",
+          "v": "k = 8"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "circle",
+        "spec": {
+          "R": 92,
+          "sector": {
+            "from": 300,
+            "to": 345,
+            "label": "45°",
+            "radiusLabel": "8",
+            "shade": true
+          }
+        }
+      },
+      "difficulty": {
+        "scalePoint": 740,
+        "band": "B7",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "sector_area_fig"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "sector_area_fig"
+      },
+      "fingerprint": [
+        "circle_fig",
+        "sector_area",
+        "45deg_r8",
+        "2d"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 4,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "GEO.B7.s3",
+      "skill": "circle_figures",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "In the circle shown with center "
+        },
+        {
+          "t": "math",
+          "v": "O"
+        },
+        {
+          "t": "text",
+          "v": ", the shaded sector has the marked central angle and radius. The area of the shaded sector is "
+        },
+        {
+          "t": "math",
+          "v": "k\\pi"
+        },
+        {
+          "t": "text",
+          "v": ". What is the value of "
+        },
+        {
+          "t": "math",
+          "v": "k"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "3"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. apply sector area: "
+        },
+        {
+          "t": "math",
+          "v": "\\text{area} = \\dfrac{120}{360}\\cdot \\pi(3)^2 = 3\\pi"
+        },
+        {
+          "t": "text",
+          "v": ", so "
+        },
+        {
+          "t": "math",
+          "v": "k = 3"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "circle",
+        "spec": {
+          "R": 92,
+          "sector": {
+            "from": 10,
+            "to": 130,
+            "label": "120°",
+            "radiusLabel": "3",
+            "shade": true
+          }
+        }
+      },
+      "difficulty": {
+        "scalePoint": 740,
+        "band": "B7",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "sector_area_fig"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "sector_area_fig"
+      },
+      "fingerprint": [
+        "circle_fig",
+        "sector_area",
+        "120deg_r3",
+        "2d"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 5,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "GEO.B7.s3",
+      "skill": "circle_figures",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "In the circle shown with center "
+        },
+        {
+          "t": "math",
+          "v": "O"
+        },
+        {
+          "t": "text",
+          "v": ", the marked central angle subtends the bold arc, and the radius is marked. The length of the bold arc is "
+        },
+        {
+          "t": "math",
+          "v": "k\\pi"
+        },
+        {
+          "t": "text",
+          "v": ". What is the value of "
+        },
+        {
+          "t": "math",
+          "v": "k"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "3"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. apply arc length: "
+        },
+        {
+          "t": "math",
+          "v": "\\text{arc} = \\dfrac{135}{360}\\cdot 2\\pi(4) = 3\\pi"
+        },
+        {
+          "t": "text",
+          "v": ", so "
+        },
+        {
+          "t": "math",
+          "v": "k = 3"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "circle",
+        "spec": {
+          "R": 92,
+          "sector": {
+            "from": 270,
+            "to": 405,
+            "label": "135°",
+            "radiusLabel": "4"
+          }
+        }
+      },
+      "difficulty": {
+        "scalePoint": 740,
+        "band": "B7",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "arc_length_fig"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "arc_length_fig"
+      },
+      "fingerprint": [
+        "circle_fig",
+        "arc_length",
+        "135deg_r4",
+        "2d"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 6,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "GEO.B7.s3",
+      "skill": "circle_figures",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "In circle "
+        },
+        {
+          "t": "math",
+          "v": "O"
+        },
+        {
+          "t": "text",
+          "v": " shown, "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{CA}"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{CB}"
+        },
+        {
+          "t": "text",
+          "v": " are chords and the central angle "
+        },
+        {
+          "t": "math",
+          "v": "\\angle AOB"
+        },
+        {
+          "t": "text",
+          "v": " is marked. What is the measure, in degrees, of the inscribed angle "
+        },
+        {
+          "t": "math",
+          "v": "\\angle ACB"
+        },
+        {
+          "t": "text",
+          "v": " (marked "
+        },
+        {
+          "t": "math",
+          "v": "x^\\circ"
+        },
+        {
+          "t": "text",
+          "v": ")?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "37"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. apply inscribed angle: "
+        },
+        {
+          "t": "text",
+          "v": "An inscribed angle is half the central angle on the same arc: "
+        },
+        {
+          "t": "math",
+          "v": "x = \\tfrac12\\cdot 74 = 37"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "circle",
+        "spec": {
+          "R": 92,
+          "inscribed": {
+            "A": 40,
+            "B": 114,
+            "C": 208,
+            "centralLabel": "74°",
+            "inscribedLabel": "x°"
+          }
+        }
+      },
+      "difficulty": {
+        "scalePoint": 740,
+        "band": "B7",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "inscribed_angle_fig"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "inscribed_angle_fig"
+      },
+      "fingerprint": [
+        "circle_fig",
+        "inscribed_angle",
+        "c74",
+        "2d"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 7,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "GEO.B7.s3",
+      "skill": "circle_figures",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "In circle "
+        },
+        {
+          "t": "math",
+          "v": "O"
+        },
+        {
+          "t": "text",
+          "v": " shown, "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{CA}"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{CB}"
+        },
+        {
+          "t": "text",
+          "v": " are chords and the central angle "
+        },
+        {
+          "t": "math",
+          "v": "\\angle AOB"
+        },
+        {
+          "t": "text",
+          "v": " is marked. What is the measure, in degrees, of the inscribed angle "
+        },
+        {
+          "t": "math",
+          "v": "\\angle ACB"
+        },
+        {
+          "t": "text",
+          "v": " (marked "
+        },
+        {
+          "t": "math",
+          "v": "x^\\circ"
+        },
+        {
+          "t": "text",
+          "v": ")?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "24"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. apply inscribed angle: "
+        },
+        {
+          "t": "text",
+          "v": "An inscribed angle is half the central angle on the same arc: "
+        },
+        {
+          "t": "math",
+          "v": "x = \\tfrac12\\cdot 48 = 24"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "circle",
+        "spec": {
+          "R": 92,
+          "inscribed": {
+            "A": 350,
+            "B": 38,
+            "C": 184,
+            "centralLabel": "48°",
+            "inscribedLabel": "x°"
+          }
+        }
+      },
+      "difficulty": {
+        "scalePoint": 740,
+        "band": "B7",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "inscribed_angle_fig"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "inscribed_angle_fig"
+      },
+      "fingerprint": [
+        "circle_fig",
+        "inscribed_angle",
+        "c48",
+        "2d"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 8,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "GEO.B7.s3",
+      "skill": "circle_figures",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "In the circle shown with center "
+        },
+        {
+          "t": "math",
+          "v": "O"
+        },
+        {
+          "t": "text",
+          "v": ", the marked central angle subtends the bold arc, and the radius is marked. The length of the bold arc is "
+        },
+        {
+          "t": "math",
+          "v": "k\\pi"
+        },
+        {
+          "t": "text",
+          "v": ". What is the value of "
+        },
+        {
+          "t": "math",
+          "v": "k"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "2"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. apply arc length: "
+        },
+        {
+          "t": "math",
+          "v": "\\text{arc} = \\dfrac{90}{360}\\cdot 2\\pi(4) = 2\\pi"
+        },
+        {
+          "t": "text",
+          "v": ", so "
+        },
+        {
+          "t": "math",
+          "v": "k = 2"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "circle",
+        "spec": {
+          "R": 92,
+          "sector": {
+            "from": 10,
+            "to": 100,
+            "label": "90°",
+            "radiusLabel": "4"
+          }
+        }
+      },
+      "difficulty": {
+        "scalePoint": 740,
+        "band": "B7",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "arc_length_fig"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "arc_length_fig"
+      },
+      "fingerprint": [
+        "circle_fig",
+        "arc_length",
+        "90deg_r4",
+        "2d"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 9,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "GEO.B7.s3",
+      "skill": "circle_figures",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "In the circle shown with center "
+        },
+        {
+          "t": "math",
+          "v": "O"
+        },
+        {
+          "t": "text",
+          "v": ", the shaded sector has the marked central angle and radius. The area of the shaded sector is "
+        },
+        {
+          "t": "math",
+          "v": "k\\pi"
+        },
+        {
+          "t": "text",
+          "v": ". What is the value of "
+        },
+        {
+          "t": "math",
+          "v": "k"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "2"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. apply sector area: "
+        },
+        {
+          "t": "math",
+          "v": "\\text{area} = \\dfrac{45}{360}\\cdot \\pi(4)^2 = 2\\pi"
+        },
+        {
+          "t": "text",
+          "v": ", so "
+        },
+        {
+          "t": "math",
+          "v": "k = 2"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "circle",
+        "spec": {
+          "R": 92,
+          "sector": {
+            "from": 270,
+            "to": 315,
+            "label": "45°",
+            "radiusLabel": "4",
+            "shade": true
+          }
+        }
+      },
+      "difficulty": {
+        "scalePoint": 740,
+        "band": "B7",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "sector_area_fig"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "sector_area_fig"
+      },
+      "fingerprint": [
+        "circle_fig",
+        "sector_area",
+        "45deg_r4",
+        "2d"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    }
+  ]
+}

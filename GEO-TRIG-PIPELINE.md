@@ -61,11 +61,23 @@ The first 3D-solid pass banked **6 box-volume + 5 cube** items — distinct numb
 2. **More structures** — pyramid, triangular prism, cylinder (above), so the bank earns breadth honestly.
 - **Blind QA (vision):** an independent agent solved the 9 new-structure items reading **only the rendered figures** (no answers, no dims in text) — **9/9 correct**, all figures legible, and it naturally produced `k=r²h` for the cylinders (the `kπ` SPR phrasing is well-posed). Confirms legibility + correctness + well-posedness from pixels alone.
 
+## GEO-2 (figures) — circle arcs / sectors / inscribed angles ✅
+The circle figure gap (GEO.B7.s3) is built as **three distinct structures**, construct-backward (Tier C, no LLM):
+- **`figures.js circle`** — two new branches (image-verified across acute/obtuse/reflex angles and radii):
+  - **sector** — two radii from O, the wedge shaded, the arc emphasized, the central angle arced+labelled at O, one radius labelled with its length; the radius label is pushed off the wedge bisector so it never crowds the angle label.
+  - **inscribed** — central ∠AOB at O (radii, marked) plus the inscribed ∠ACB at a vertex C on the **major** arc (chords CA, CB), with a shared `angAt` angle-arc helper.
+- **`build/circlefig.mjs`** — `arc_length_fig` (s = kπ → grid k = θr/180), `sector_area_fig` (A = kπ → grid k = θr²/360), `inscribed_angle_fig` (∠ACB = ½·∠AOB). Curated (θ, r) tables keep k a clean integer; the kπ form is the SAT "in terms of π" SPR.
+- **`verify/figurecheck.mjs`** — a `checkCircleFig` arm: the marked angle label must equal the drawn span, the recomputed kπ coefficient (or ½·central) must equal the answer, and the inscribed vertex C must lie on the major arc.
+- New `circle_figures` subdomain (Tier C, all GEO.B7.s3); LLTM sanity **green** (B7). **9 items banked** (test-116), 3 of each structure (the per-structure quota holds). Bank → 866.
+- **Blind QA (vision):** an independent agent solved all 9 reading only the rendered figures — **9/9 correct**, and it verified every shaded wedge/bold arc matches its labelled central angle and every inscribed figure uses the standard ½ configuration. No issues flagged.
+
+> The per-structure quota's grouping key was generalized in this slice: it now keys on the **task** (the skill = the structure) rather than parsing the fingerprint, since circle params (`90deg_r4`, `c80`) aren't pure-numeric tokens. This fixed the circle quota (the first run leaked 7 sector + 10 inscribed) and is exact for every figure family without per-pattern guessing.
+
 ### GEO-2 remaining (next)
-- **Circle arcs / sectors** (+ arc-length & sector labels, inscribed/central angle arcs) — the rest of GEO.B7.s3.
 - **Right-triangle trig & special-triangle labeling** (opp/adj/hyp, 30-60-90 / 45-45-90) — GEO.B6.s3 / B7.s2.
 - **Congruence / similarity tick marks** + angle arcs on `triangle()` — GEO.B4.s2 polish.
 - **Solids backlog:** cone (pairs with cylinder), sphere, composite solids (B7); cylinder/cone MCQ with π-form options.
+- **Circles backlog:** tangent-line configurations, chord/secant lengths, sector-perimeter; sector_fraction as an SPR fraction.
 
 ## Deferred — GEO-2 (figures)
 Reuse `figures.js` triangle/polygon/circle/parallelLines/parallelogram; build the real gaps — **3D solids** (prism/cube/pyramid/cylinder, none exist), **circle arcs/sectors + labels**, **right-triangle trig & special-triangle labeling**, **angle arcs on `triangle`**, **congruence ticks** — then construct-backward "read-from-figure" (Tier C) variants + geometry `figurecheck`/`legibility` arms. (`gen/diagramgen.mjs` is DISABLED and not SAT-aligned — supersede, don't revive.)

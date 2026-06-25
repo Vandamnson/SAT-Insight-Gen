@@ -911,7 +911,48 @@ export function circle(spec) {
     out.push(line(px, py, ext[0], ext[1], "fig-stroke"));
     if (t.label) out.push(txt(ext[0], ext[1] + 12, t.label, { style: 'font-style="italic"' }));
   }
+  const pt = (deg) => [cx + R * Math.cos(deg * Math.PI / 180), cy - R * Math.sin(deg * Math.PI / 180)];
+
+  // SECTOR (arc length / sector area): two radii from O, the wedge shaded, the arc
+  // emphasized, the central angle marked at O, one radius labeled with its length.
+  if (spec.sector) {
+    const s = spec.sector, Pf = pt(s.from), Pt = pt(s.to);
+    let cang = ((s.to - s.from) % 360 + 360) % 360;             // CCW span f→t in degrees
+    const large = cang > 180 ? 1 : 0, sweep = 0;                 // y-flipped: CCW-math = SVG sweep 0
+    if (s.shade !== false) out.push(`<path d="M${fmt(cx)} ${fmt(cy)} L${fmt(Pf[0])} ${fmt(Pf[1])} A${fmt(R)} ${fmt(R)} 0 ${large} ${sweep} ${fmt(Pt[0])} ${fmt(Pt[1])} Z" class="fig-fill" opacity="0.45"/>`);
+    out.push(line(cx, cy, Pf[0], Pf[1], "fig-stroke", `stroke-width="1.5"`), line(cx, cy, Pt[0], Pt[1], "fig-stroke", `stroke-width="1.5"`));
+    out.push(`<path d="M${fmt(Pf[0])} ${fmt(Pf[1])} A${fmt(R)} ${fmt(R)} 0 ${large} ${sweep} ${fmt(Pt[0])} ${fmt(Pt[1])}" class="fig-stroke" fill="none" stroke-width="2.6"/>`);
+    const ar = Math.min(26, R * 0.34), af = [cx + ar * Math.cos(s.from * Math.PI / 180), cy - ar * Math.sin(s.from * Math.PI / 180)], at = [cx + ar * Math.cos(s.to * Math.PI / 180), cy - ar * Math.sin(s.to * Math.PI / 180)];
+    out.push(`<path d="M${fmt(af[0])} ${fmt(af[1])} A${fmt(ar)} ${fmt(ar)} 0 ${large} ${sweep} ${fmt(at[0])} ${fmt(at[1])}" class="fig-stroke" fill="none" stroke-width="1"/>`);
+    const bis = (s.from + cang / 2) * Math.PI / 180, bdir = [Math.cos(bis), -Math.sin(bis)];   // screen-space wedge bisector
+    if (s.label) out.push(txt(cx + (ar + 13) * bdir[0], cy + (ar + 13) * bdir[1], s.label, { size: FONT }));
+    // radius label at the from-radius midpoint, nudged AWAY from the bisector so it never crowds the angle label
+    if (s.radiusLabel) { const mid = [(cx + Pf[0]) / 2, (cy + Pf[1]) / 2]; out.push(txt(mid[0] - 13 * bdir[0], mid[1] - 13 * bdir[1], s.radiusLabel, { size: FONT })); }
+  }
+
+  // INSCRIBED ANGLE: central angle AOB at O (radii, marked) and the inscribed angle
+  // ACB at a vertex C on the far arc (chords CA, CB, marked). ACB = ½·AOB.
+  if (spec.inscribed) {
+    const I = spec.inscribed, A = pt(I.A), B = pt(I.B), C = pt(I.C);
+    out.push(line(cx, cy, A[0], A[1], "fig-stroke"), line(cx, cy, B[0], B[1], "fig-stroke"));   // radii OA, OB
+    out.push(line(C[0], C[1], A[0], A[1], "fig-stroke"), line(C[0], C[1], B[0], B[1], "fig-stroke"));   // chords CA, CB
+    for (const [p, l, off] of [[A, "A", I.A], [B, "B", I.B], [C, "C", I.C]]) { out.push(circ(p[0], p[1], 2.6, "fig-marker")); out.push(txt(p[0] + 13 * Math.cos(off * Math.PI / 180), p[1] - 13 * Math.sin(off * Math.PI / 180), l, { style: 'font-style="italic"' })); }
+    out.push(angAt([cx, cy], A, B, 24, I.centralLabel));     // central angle at O
+    out.push(angAt(C, A, B, 20, I.inscribedLabel));          // inscribed angle at C
+  }
   return svg(W, H, defs() + out.join(""), { aria: spec.title || "circle" });
+}
+
+// angle arc + bisector label at vertex V, between rays V→P and V→Q (SHORTER side).
+// Pure screen-space (y already down). Returns an SVG fragment string.
+function angAt(V, P, Q, ar, label) {
+  const aP = Math.atan2(P[1] - V[1], P[0] - V[0]), aQ = Math.atan2(Q[1] - V[1], Q[0] - V[0]);
+  let d = aQ - aP; while (d > Math.PI) d -= 2 * Math.PI; while (d < -Math.PI) d += 2 * Math.PI;
+  const sweep = d > 0 ? 1 : 0;
+  const eP = [V[0] + ar * Math.cos(aP), V[1] + ar * Math.sin(aP)], eQ = [V[0] + ar * Math.cos(aQ), V[1] + ar * Math.sin(aQ)];
+  let frag = `<path d="M${fmt(eP[0])} ${fmt(eP[1])} A${fmt(ar)} ${fmt(ar)} 0 0 ${sweep} ${fmt(eQ[0])} ${fmt(eQ[1])}" class="fig-stroke" fill="none" stroke-width="1"/>`;
+  if (label) { const bis = aP + d / 2; frag += txt(V[0] + (ar + 13) * Math.cos(bis), V[1] + (ar + 13) * Math.sin(bis), label, { size: FONT }); }
+  return frag;
 }
 
 /* ---- HTML tables (not SVG: reflow + print-clean) ------------------------- */
