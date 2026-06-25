@@ -233,7 +233,7 @@ function checkComposite(num) {
   const c = num.composite, t = num.task, ans = Number(num.answer);
   if (!c) return { keep: false, reason: `${t}: no composite givens` };
   let exp;
-  if (t === "parallelogram_diagonal_fig") exp = 180 - c.b - c.p;                 // consecutive supplementary, then subtract
+  if (t === "parallelogram_diagonal_fig") { exp = 180 - c.b - c.p; if (!(180 - c.b - c.p > 0 && 180 - c.b > c.p)) return { keep: false, reason: `parallelogram: ∠CAB not positive (b=${c.b}, p=${c.p})` }; }   // consecutive supplementary, then subtract
   else if (t === "triangle_semicircle_fig") exp = 90 - c.a;                       // Thales + angle sum
   else if (t === "rectangle_diagonal_fig") {
     if (c.L * c.L + c.w * c.w !== ans * ans) return { keep: false, reason: `rectangle diagonal: ${ans}² ≠ ${c.L}² + ${c.w}²` };
@@ -241,7 +241,16 @@ function checkComposite(num) {
   } else if (t === "similar_parallel_fig") {
     if ((c.AE * c.DB) % c.AD !== 0) return { keep: false, reason: `similar: EC = ${c.AE}·${c.DB}/${c.AD} is not an integer` };
     exp = c.AE * c.DB / c.AD;
-  } else return { keep: false, reason: `unknown composite task ${t}` };
+  }
+  else if (t === "exterior_angle_fig") { exp = c.a + c.b; if (!(180 - c.a - c.b > 0)) return { keep: false, reason: `exterior: ∠C = 180−${c.a}−${c.b} not positive` }; }   // exterior = sum of remote interiors
+  else if (t === "trapezoid_midsegment_fig") { if ((c.b1 + c.b2) % 2) return { keep: false, reason: `trapezoid: (${c.b1}+${c.b2})/2 not integer` }; exp = (c.b1 + c.b2) / 2; }
+  else if (t === "square_in_circle_fig") exp = 2 * c.r * c.r;                      // diagonal = 2r ⇒ area = 2r²
+  else if (t === "circle_in_square_fig") { if (c.s % 2) return { keep: false, reason: `circle-in-square: side ${c.s} odd ⇒ k not integer` }; exp = (c.s / 2) * (c.s / 2); }
+  else if (t === "rhombus_diagonal_fig") { if (c.a * c.a + c.b * c.b !== c.s * c.s) return { keep: false, reason: `rhombus: ${c.a}²+${c.b}² ≠ ${c.s}²` }; exp = 2 * c.b; }
+  else if (t === "right_triangle_altitude_fig") { const h = Math.sqrt(c.p * c.q); if (!Number.isInteger(h)) return { keep: false, reason: `altitude: √(${c.p}·${c.q}) not integer` }; exp = h; }
+  else if (t === "tangent_length_fig") { const pt = Math.round(Math.sqrt(c.d * c.d - c.r * c.r)); if (c.r * c.r + pt * pt !== c.d * c.d) return { keep: false, reason: `tangent: ${c.r}²+PT² ≠ ${c.d}²` }; exp = pt; }
+  else if (t === "intersecting_chords_fig") { if (c.AP * c.PB !== c.CP * c.PD) return { keep: false, reason: `chords: ${c.AP}·${c.PB} ≠ ${c.CP}·${c.PD}` }; exp = c.AP * c.PB / c.CP; }
+  else return { keep: false, reason: `unknown composite task ${t}` };
   if (!(exp > 0)) return { keep: false, reason: `${t}: degenerate answer ${exp}` };
   return Number.isInteger(exp) && exp === ans ? { keep: true } : { keep: false, reason: `${t}: recompute ${exp} ≠ answer ${ans}` };
 }

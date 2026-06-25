@@ -139,6 +139,350 @@
       "domain": "geometry_trig",
       "band": "B4",
       "target_band": "B4",
+      "statementId": "GEO.B4.s2",
+      "skill": "composite_figures",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "In triangle "
+        },
+        {
+          "t": "math",
+          "v": "ABC"
+        },
+        {
+          "t": "text",
+          "v": " shown (not drawn to scale), side "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{BC}"
+        },
+        {
+          "t": "text",
+          "v": " is extended to "
+        },
+        {
+          "t": "math",
+          "v": "D"
+        },
+        {
+          "t": "text",
+          "v": ". If "
+        },
+        {
+          "t": "math",
+          "v": "m\\angle A = 68^\\circ"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "m\\angle B = 55^\\circ"
+        },
+        {
+          "t": "text",
+          "v": ", what is the measure, in degrees, of exterior angle "
+        },
+        {
+          "t": "math",
+          "v": "\\angle ACD"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "123"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. exterior angle theorem: "
+        },
+        {
+          "t": "text",
+          "v": "The exterior angle equals the sum of the two remote interior angles: "
+        },
+        {
+          "t": "math",
+          "v": "68 + 55 = 123^\\circ"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "scene",
+        "spec": {
+          "w": 330,
+          "h": 210,
+          "pts": {
+            "A": [
+              1.4,
+              2.6
+            ],
+            "B": [
+              0,
+              0
+            ],
+            "C": [
+              3,
+              0
+            ],
+            "D": [
+              4.7,
+              0
+            ]
+          },
+          "segs": [
+            [
+              "B",
+              "C"
+            ],
+            [
+              "C",
+              "D"
+            ],
+            [
+              "A",
+              "B"
+            ],
+            [
+              "A",
+              "C"
+            ]
+          ],
+          "angles": [
+            {
+              "at": "A",
+              "from": "B",
+              "to": "C",
+              "label": "68°",
+              "r": 16
+            },
+            {
+              "at": "B",
+              "from": "A",
+              "to": "C",
+              "label": "55°"
+            }
+          ]
+        }
+      },
+      "difficulty": {
+        "scalePoint": 470,
+        "band": "B4",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "exterior_angle_fig"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "exterior_angle_fig"
+      },
+      "fingerprint": [
+        "composite_fig",
+        "exterior_angle",
+        "a68_b55",
+        "2d"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 3,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B4",
+      "target_band": "B4",
+      "statementId": "GEO.B4.s2",
+      "skill": "composite_figures",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "In triangle "
+        },
+        {
+          "t": "math",
+          "v": "ABC"
+        },
+        {
+          "t": "text",
+          "v": " shown (not drawn to scale), side "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{BC}"
+        },
+        {
+          "t": "text",
+          "v": " is extended to "
+        },
+        {
+          "t": "math",
+          "v": "D"
+        },
+        {
+          "t": "text",
+          "v": ". If "
+        },
+        {
+          "t": "math",
+          "v": "m\\angle A = 33^\\circ"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "m\\angle B = 47^\\circ"
+        },
+        {
+          "t": "text",
+          "v": ", what is the measure, in degrees, of exterior angle "
+        },
+        {
+          "t": "math",
+          "v": "\\angle ACD"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "80"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. exterior angle theorem: "
+        },
+        {
+          "t": "text",
+          "v": "The exterior angle equals the sum of the two remote interior angles: "
+        },
+        {
+          "t": "math",
+          "v": "33 + 47 = 80^\\circ"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "scene",
+        "spec": {
+          "w": 330,
+          "h": 210,
+          "pts": {
+            "A": [
+              1.4,
+              2.6
+            ],
+            "B": [
+              0,
+              0
+            ],
+            "C": [
+              3,
+              0
+            ],
+            "D": [
+              4.7,
+              0
+            ]
+          },
+          "segs": [
+            [
+              "B",
+              "C"
+            ],
+            [
+              "C",
+              "D"
+            ],
+            [
+              "A",
+              "B"
+            ],
+            [
+              "A",
+              "C"
+            ]
+          ],
+          "angles": [
+            {
+              "at": "A",
+              "from": "B",
+              "to": "C",
+              "label": "33°",
+              "r": 16
+            },
+            {
+              "at": "B",
+              "from": "A",
+              "to": "C",
+              "label": "47°"
+            }
+          ]
+        }
+      },
+      "difficulty": {
+        "scalePoint": 470,
+        "band": "B4",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "exterior_angle_fig"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "exterior_angle_fig"
+      },
+      "fingerprint": [
+        "composite_fig",
+        "exterior_angle",
+        "a33_b47",
+        "2d"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 4,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B4",
+      "target_band": "B4",
       "statementId": "GEO.B4.s3",
       "skill": "composite_figures",
       "type": "spr",
@@ -265,7 +609,179 @@
       "tier": "build-spec"
     },
     {
-      "id": 3,
+      "id": 5,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B4",
+      "target_band": "B4",
+      "statementId": "GEO.B4.s2",
+      "skill": "composite_figures",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "In triangle "
+        },
+        {
+          "t": "math",
+          "v": "ABC"
+        },
+        {
+          "t": "text",
+          "v": " shown (not drawn to scale), side "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{BC}"
+        },
+        {
+          "t": "text",
+          "v": " is extended to "
+        },
+        {
+          "t": "math",
+          "v": "D"
+        },
+        {
+          "t": "text",
+          "v": ". If "
+        },
+        {
+          "t": "math",
+          "v": "m\\angle A = 31^\\circ"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "m\\angle B = 36^\\circ"
+        },
+        {
+          "t": "text",
+          "v": ", what is the measure, in degrees, of exterior angle "
+        },
+        {
+          "t": "math",
+          "v": "\\angle ACD"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "67"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. exterior angle theorem: "
+        },
+        {
+          "t": "text",
+          "v": "The exterior angle equals the sum of the two remote interior angles: "
+        },
+        {
+          "t": "math",
+          "v": "31 + 36 = 67^\\circ"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "scene",
+        "spec": {
+          "w": 330,
+          "h": 210,
+          "pts": {
+            "A": [
+              1.4,
+              2.6
+            ],
+            "B": [
+              0,
+              0
+            ],
+            "C": [
+              3,
+              0
+            ],
+            "D": [
+              4.7,
+              0
+            ]
+          },
+          "segs": [
+            [
+              "B",
+              "C"
+            ],
+            [
+              "C",
+              "D"
+            ],
+            [
+              "A",
+              "B"
+            ],
+            [
+              "A",
+              "C"
+            ]
+          ],
+          "angles": [
+            {
+              "at": "A",
+              "from": "B",
+              "to": "C",
+              "label": "31°",
+              "r": 16
+            },
+            {
+              "at": "B",
+              "from": "A",
+              "to": "C",
+              "label": "36°"
+            }
+          ]
+        }
+      },
+      "difficulty": {
+        "scalePoint": 470,
+        "band": "B4",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "exterior_angle_fig"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "exterior_angle_fig"
+      },
+      "fingerprint": [
+        "composite_fig",
+        "exterior_angle",
+        "a31_b36",
+        "2d"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 6,
       "program": "SAT",
       "domain": "geometry_trig",
       "band": "B4",
@@ -297,7 +813,7 @@
       ],
       "answer": {
         "accept": [
-          "17"
+          "13"
         ],
         "tol": 0
       },
@@ -308,7 +824,7 @@
         },
         {
           "t": "math",
-          "v": "AC = \\sqrt{8^2 + 15^2} = \\sqrt{289} = 17"
+          "v": "AC = \\sqrt{5^2 + 12^2} = \\sqrt{169} = 13"
         },
         {
           "t": "text",
@@ -329,16 +845,16 @@
               0
             ],
             "B": [
-              8,
+              5,
               0
             ],
             "C": [
-              8,
-              15
+              5,
+              12
             ],
             "D": [
               0,
-              15
+              12
             ]
           },
           "segs": [
@@ -346,14 +862,14 @@
               "A",
               "B",
               {
-                "label": "8"
+                "label": "5"
               }
             ],
             [
               "B",
               "C",
               {
-                "label": "15"
+                "label": "12"
               }
             ],
             [
@@ -389,554 +905,7 @@
       "fingerprint": [
         "composite_fig",
         "rectangle_diagonal",
-        "8x15",
-        "2d"
-      ],
-      "reskinDistance": 1,
-      "tier": "build-spec"
-    },
-    {
-      "id": 4,
-      "program": "SAT",
-      "domain": "geometry_trig",
-      "band": "B6",
-      "target_band": "B6",
-      "statementId": "GEO.B6.s2",
-      "skill": "composite_figures",
-      "type": "spr",
-      "stem": [
-        {
-          "t": "text",
-          "v": "In parallelogram "
-        },
-        {
-          "t": "math",
-          "v": "ABCD"
-        },
-        {
-          "t": "text",
-          "v": " shown (not drawn to scale), diagonal "
-        },
-        {
-          "t": "math",
-          "v": "\\overline{AC}"
-        },
-        {
-          "t": "text",
-          "v": " is drawn. If "
-        },
-        {
-          "t": "math",
-          "v": "m\\angle ABC = 66^\\circ"
-        },
-        {
-          "t": "text",
-          "v": " and "
-        },
-        {
-          "t": "math",
-          "v": "m\\angle DAC = 65^\\circ"
-        },
-        {
-          "t": "text",
-          "v": ", what is the measure, in degrees, of "
-        },
-        {
-          "t": "math",
-          "v": "\\angle CAB"
-        },
-        {
-          "t": "text",
-          "v": "?"
-        }
-      ],
-      "answer": {
-        "accept": [
-          "49"
-        ],
-        "tol": 0
-      },
-      "solution": [
-        {
-          "t": "text",
-          "v": "1. consecutive angles: "
-        },
-        {
-          "t": "text",
-          "v": "Consecutive angles of a parallelogram are supplementary: "
-        },
-        {
-          "t": "math",
-          "v": "m\\angle DAB = 180 - 66 = 114^\\circ"
-        },
-        {
-          "t": "text",
-          "v": "."
-        },
-        {
-          "t": "br"
-        },
-        {
-          "t": "text",
-          "v": "2. angle subtract: "
-        },
-        {
-          "t": "math",
-          "v": "m\\angle CAB = m\\angle DAB - m\\angle DAC = 114 - 65 = 49^\\circ"
-        },
-        {
-          "t": "text",
-          "v": "."
-        },
-        {
-          "t": "br"
-        }
-      ],
-      "figure": {
-        "fn": "scene",
-        "spec": {
-          "w": 320,
-          "h": 220,
-          "pts": {
-            "A": [
-              0,
-              0
-            ],
-            "B": [
-              5,
-              0
-            ],
-            "C": [
-              6.5,
-              2.4
-            ],
-            "D": [
-              1.5,
-              2.4
-            ]
-          },
-          "segs": [
-            [
-              "A",
-              "B"
-            ],
-            [
-              "B",
-              "C"
-            ],
-            [
-              "C",
-              "D"
-            ],
-            [
-              "D",
-              "A"
-            ],
-            [
-              "A",
-              "C"
-            ]
-          ],
-          "angles": [
-            {
-              "at": "B",
-              "from": "A",
-              "to": "C",
-              "label": "66°"
-            },
-            {
-              "at": "A",
-              "from": "D",
-              "to": "C",
-              "label": "65°",
-              "r": 16
-            }
-          ]
-        }
-      },
-      "difficulty": {
-        "scalePoint": 630,
-        "band": "B6",
-        "method": "apriori_v1",
-        "feature_vector": {
-          "task": "parallelogram_diagonal_fig"
-        }
-      },
-      "verify": {
-        "tier": "C",
-        "correctness": "prove:pass"
-      },
-      "radicals": {
-        "task": "parallelogram_diagonal_fig"
-      },
-      "fingerprint": [
-        "composite_fig",
-        "parallelogram_diagonal",
-        "b66_p65",
-        "2d"
-      ],
-      "reskinDistance": 1,
-      "tier": "build-spec"
-    },
-    {
-      "id": 5,
-      "program": "SAT",
-      "domain": "geometry_trig",
-      "band": "B6",
-      "target_band": "B6",
-      "statementId": "GEO.B6.s2",
-      "skill": "composite_figures",
-      "type": "spr",
-      "stem": [
-        {
-          "t": "text",
-          "v": "In triangle "
-        },
-        {
-          "t": "math",
-          "v": "ABC"
-        },
-        {
-          "t": "text",
-          "v": " shown, "
-        },
-        {
-          "t": "math",
-          "v": "\\overline{DE}\\parallel\\overline{BC}"
-        },
-        {
-          "t": "text",
-          "v": " with "
-        },
-        {
-          "t": "math",
-          "v": "D"
-        },
-        {
-          "t": "text",
-          "v": " on "
-        },
-        {
-          "t": "math",
-          "v": "\\overline{AB}"
-        },
-        {
-          "t": "text",
-          "v": " and "
-        },
-        {
-          "t": "math",
-          "v": "E"
-        },
-        {
-          "t": "text",
-          "v": " on "
-        },
-        {
-          "t": "math",
-          "v": "\\overline{AC}"
-        },
-        {
-          "t": "text",
-          "v": ". The marked lengths are in centimeters. What is the length, in centimeters, of "
-        },
-        {
-          "t": "math",
-          "v": "\\overline{EC}"
-        },
-        {
-          "t": "text",
-          "v": "?"
-        }
-      ],
-      "answer": {
-        "accept": [
-          "9"
-        ],
-        "tol": 0
-      },
-      "solution": [
-        {
-          "t": "text",
-          "v": "1. similar proportion: "
-        },
-        {
-          "t": "math",
-          "v": "\\dfrac{AD}{DB} = \\dfrac{AE}{EC}\\Rightarrow EC = \\dfrac{AE\\cdot DB}{AD} = \\dfrac{6\\cdot 6}{4} = 9"
-        },
-        {
-          "t": "text",
-          "v": "."
-        },
-        {
-          "t": "br"
-        }
-      ],
-      "figure": {
-        "fn": "scene",
-        "spec": {
-          "w": 300,
-          "h": 230,
-          "pts": {
-            "A": [
-              0,
-              7
-            ],
-            "B": [
-              -5,
-              0
-            ],
-            "C": [
-              6,
-              0
-            ],
-            "D": [
-              -2,
-              4.199999999999999
-            ],
-            "E": [
-              2.4000000000000004,
-              4.199999999999999
-            ]
-          },
-          "segs": [
-            [
-              "A",
-              "D",
-              {
-                "label": "4"
-              }
-            ],
-            [
-              "D",
-              "B",
-              {
-                "label": "6"
-              }
-            ],
-            [
-              "A",
-              "E",
-              {
-                "label": "6"
-              }
-            ],
-            [
-              "E",
-              "C"
-            ],
-            [
-              "B",
-              "C"
-            ],
-            [
-              "D",
-              "E"
-            ]
-          ]
-        }
-      },
-      "difficulty": {
-        "scalePoint": 630,
-        "band": "B6",
-        "method": "apriori_v1",
-        "feature_vector": {
-          "task": "similar_parallel_fig"
-        }
-      },
-      "verify": {
-        "tier": "C",
-        "correctness": "prove:pass"
-      },
-      "radicals": {
-        "task": "similar_parallel_fig"
-      },
-      "fingerprint": [
-        "composite_fig",
-        "similar_parallel",
-        "4_6_6",
-        "2d"
-      ],
-      "reskinDistance": 1,
-      "tier": "build-spec"
-    },
-    {
-      "id": 6,
-      "program": "SAT",
-      "domain": "geometry_trig",
-      "band": "B6",
-      "target_band": "B6",
-      "statementId": "GEO.B6.s2",
-      "skill": "composite_figures",
-      "type": "spr",
-      "stem": [
-        {
-          "t": "text",
-          "v": "In triangle "
-        },
-        {
-          "t": "math",
-          "v": "ABC"
-        },
-        {
-          "t": "text",
-          "v": " shown, "
-        },
-        {
-          "t": "math",
-          "v": "\\overline{DE}\\parallel\\overline{BC}"
-        },
-        {
-          "t": "text",
-          "v": " with "
-        },
-        {
-          "t": "math",
-          "v": "D"
-        },
-        {
-          "t": "text",
-          "v": " on "
-        },
-        {
-          "t": "math",
-          "v": "\\overline{AB}"
-        },
-        {
-          "t": "text",
-          "v": " and "
-        },
-        {
-          "t": "math",
-          "v": "E"
-        },
-        {
-          "t": "text",
-          "v": " on "
-        },
-        {
-          "t": "math",
-          "v": "\\overline{AC}"
-        },
-        {
-          "t": "text",
-          "v": ". The marked lengths are in centimeters. What is the length, in centimeters, of "
-        },
-        {
-          "t": "math",
-          "v": "\\overline{EC}"
-        },
-        {
-          "t": "text",
-          "v": "?"
-        }
-      ],
-      "answer": {
-        "accept": [
-          "8"
-        ],
-        "tol": 0
-      },
-      "solution": [
-        {
-          "t": "text",
-          "v": "1. similar proportion: "
-        },
-        {
-          "t": "math",
-          "v": "\\dfrac{AD}{DB} = \\dfrac{AE}{EC}\\Rightarrow EC = \\dfrac{AE\\cdot DB}{AD} = \\dfrac{4\\cdot 6}{3} = 8"
-        },
-        {
-          "t": "text",
-          "v": "."
-        },
-        {
-          "t": "br"
-        }
-      ],
-      "figure": {
-        "fn": "scene",
-        "spec": {
-          "w": 300,
-          "h": 230,
-          "pts": {
-            "A": [
-              0,
-              7
-            ],
-            "B": [
-              -5,
-              0
-            ],
-            "C": [
-              6,
-              0
-            ],
-            "D": [
-              -1.6666666666666665,
-              4.666666666666667
-            ],
-            "E": [
-              2,
-              4.666666666666667
-            ]
-          },
-          "segs": [
-            [
-              "A",
-              "D",
-              {
-                "label": "3"
-              }
-            ],
-            [
-              "D",
-              "B",
-              {
-                "label": "6"
-              }
-            ],
-            [
-              "A",
-              "E",
-              {
-                "label": "4"
-              }
-            ],
-            [
-              "E",
-              "C"
-            ],
-            [
-              "B",
-              "C"
-            ],
-            [
-              "D",
-              "E"
-            ]
-          ]
-        }
-      },
-      "difficulty": {
-        "scalePoint": 630,
-        "band": "B6",
-        "method": "apriori_v1",
-        "feature_vector": {
-          "task": "similar_parallel_fig"
-        }
-      },
-      "verify": {
-        "tier": "C",
-        "correctness": "prove:pass"
-      },
-      "radicals": {
-        "task": "similar_parallel_fig"
-      },
-      "fingerprint": [
-        "composite_fig",
-        "similar_parallel",
-        "3_6_4",
+        "5x12",
         "2d"
       ],
       "reskinDistance": 1,
@@ -946,15 +915,15 @@
       "id": 7,
       "program": "SAT",
       "domain": "geometry_trig",
-      "band": "B6",
-      "target_band": "B6",
-      "statementId": "GEO.B6.s2",
+      "band": "B5",
+      "target_band": "B5",
+      "statementId": "GEO.B5.s3",
       "skill": "composite_figures",
       "type": "spr",
       "stem": [
         {
           "t": "text",
-          "v": "In parallelogram "
+          "v": "In trapezoid "
         },
         {
           "t": "math",
@@ -962,19 +931,19 @@
         },
         {
           "t": "text",
-          "v": " shown (not drawn to scale), diagonal "
+          "v": " shown, "
         },
         {
           "t": "math",
-          "v": "\\overline{AC}"
+          "v": "\\overline{AB}\\parallel\\overline{DC}"
         },
         {
           "t": "text",
-          "v": " is drawn. If "
+          "v": " with "
         },
         {
           "t": "math",
-          "v": "m\\angle ABC = 67^\\circ"
+          "v": "AB = 8"
         },
         {
           "t": "text",
@@ -982,15 +951,23 @@
         },
         {
           "t": "math",
-          "v": "m\\angle DAC = 25^\\circ"
+          "v": "DC = 12"
         },
         {
           "t": "text",
-          "v": ", what is the measure, in degrees, of "
+          "v": " (in centimeters). The midsegment "
         },
         {
           "t": "math",
-          "v": "\\angle CAB"
+          "v": "\\overline{MN}"
+        },
+        {
+          "t": "text",
+          "v": " joins the midpoints of the two legs. What is the length, in centimeters, of "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{MN}"
         },
         {
           "t": "text",
@@ -999,37 +976,18 @@
       ],
       "answer": {
         "accept": [
-          "88"
+          "10"
         ],
         "tol": 0
       },
       "solution": [
         {
           "t": "text",
-          "v": "1. consecutive angles: "
-        },
-        {
-          "t": "text",
-          "v": "Consecutive angles of a parallelogram are supplementary: "
+          "v": "1. midsegment: "
         },
         {
           "t": "math",
-          "v": "m\\angle DAB = 180 - 67 = 113^\\circ"
-        },
-        {
-          "t": "text",
-          "v": "."
-        },
-        {
-          "t": "br"
-        },
-        {
-          "t": "text",
-          "v": "2. angle subtract: "
-        },
-        {
-          "t": "math",
-          "v": "m\\angle CAB = m\\angle DAB - m\\angle DAC = 113 - 25 = 88^\\circ"
+          "v": "MN = \\dfrac{AB + DC}{2} = \\dfrac{8 + 12}{2} = 10"
         },
         {
           "t": "text",
@@ -1042,30 +1000,41 @@
       "figure": {
         "fn": "scene",
         "spec": {
-          "w": 320,
-          "h": 220,
+          "w": 330,
+          "h": 190,
           "pts": {
             "A": [
               0,
               0
             ],
             "B": [
-              5,
+              8,
               0
             ],
             "C": [
-              6.5,
-              2.4
+              10,
+              4.2
             ],
             "D": [
-              1.5,
-              2.4
+              -2,
+              4.2
+            ],
+            "M": [
+              -1,
+              2.1
+            ],
+            "N": [
+              9,
+              2.1
             ]
           },
           "segs": [
             [
               "A",
-              "B"
+              "B",
+              {
+                "label": "8"
+              }
             ],
             [
               "B",
@@ -1073,40 +1042,31 @@
             ],
             [
               "C",
-              "D"
+              "D",
+              {
+                "label": "12"
+              }
             ],
             [
               "D",
               "A"
             ],
             [
-              "A",
-              "C"
+              "M",
+              "N",
+              {
+                "dashed": true
+              }
             ]
-          ],
-          "angles": [
-            {
-              "at": "B",
-              "from": "A",
-              "to": "C",
-              "label": "67°"
-            },
-            {
-              "at": "A",
-              "from": "D",
-              "to": "C",
-              "label": "25°",
-              "r": 16
-            }
           ]
         }
       },
       "difficulty": {
-        "scalePoint": 630,
-        "band": "B6",
+        "scalePoint": 570,
+        "band": "B5",
         "method": "apriori_v1",
         "feature_vector": {
-          "task": "parallelogram_diagonal_fig"
+          "task": "trapezoid_midsegment_fig"
         }
       },
       "verify": {
@@ -1114,12 +1074,12 @@
         "correctness": "prove:pass"
       },
       "radicals": {
-        "task": "parallelogram_diagonal_fig"
+        "task": "trapezoid_midsegment_fig"
       },
       "fingerprint": [
         "composite_fig",
-        "parallelogram_diagonal",
-        "b67_p25",
+        "trapezoid_midsegment",
+        "8_12",
         "2d"
       ],
       "reskinDistance": 1,
@@ -1127,6 +1087,354 @@
     },
     {
       "id": 8,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B5",
+      "target_band": "B5",
+      "statementId": "GEO.B5.s3",
+      "skill": "composite_figures",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "In trapezoid "
+        },
+        {
+          "t": "math",
+          "v": "ABCD"
+        },
+        {
+          "t": "text",
+          "v": " shown, "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{AB}\\parallel\\overline{DC}"
+        },
+        {
+          "t": "text",
+          "v": " with "
+        },
+        {
+          "t": "math",
+          "v": "AB = 18"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "DC = 10"
+        },
+        {
+          "t": "text",
+          "v": " (in centimeters). The midsegment "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{MN}"
+        },
+        {
+          "t": "text",
+          "v": " joins the midpoints of the two legs. What is the length, in centimeters, of "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{MN}"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "14"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. midsegment: "
+        },
+        {
+          "t": "math",
+          "v": "MN = \\dfrac{AB + DC}{2} = \\dfrac{18 + 10}{2} = 14"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "scene",
+        "spec": {
+          "w": 330,
+          "h": 190,
+          "pts": {
+            "A": [
+              0,
+              0
+            ],
+            "B": [
+              18,
+              0
+            ],
+            "C": [
+              14,
+              4.2
+            ],
+            "D": [
+              4,
+              4.2
+            ],
+            "M": [
+              2,
+              2.1
+            ],
+            "N": [
+              16,
+              2.1
+            ]
+          },
+          "segs": [
+            [
+              "A",
+              "B",
+              {
+                "label": "18"
+              }
+            ],
+            [
+              "B",
+              "C"
+            ],
+            [
+              "C",
+              "D",
+              {
+                "label": "10"
+              }
+            ],
+            [
+              "D",
+              "A"
+            ],
+            [
+              "M",
+              "N",
+              {
+                "dashed": true
+              }
+            ]
+          ]
+        }
+      },
+      "difficulty": {
+        "scalePoint": 570,
+        "band": "B5",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "trapezoid_midsegment_fig"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "trapezoid_midsegment_fig"
+      },
+      "fingerprint": [
+        "composite_fig",
+        "trapezoid_midsegment",
+        "18_10",
+        "2d"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 9,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B5",
+      "target_band": "B5",
+      "statementId": "GEO.B5.s3",
+      "skill": "composite_figures",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "In trapezoid "
+        },
+        {
+          "t": "math",
+          "v": "ABCD"
+        },
+        {
+          "t": "text",
+          "v": " shown, "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{AB}\\parallel\\overline{DC}"
+        },
+        {
+          "t": "text",
+          "v": " with "
+        },
+        {
+          "t": "math",
+          "v": "AB = 9"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "DC = 13"
+        },
+        {
+          "t": "text",
+          "v": " (in centimeters). The midsegment "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{MN}"
+        },
+        {
+          "t": "text",
+          "v": " joins the midpoints of the two legs. What is the length, in centimeters, of "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{MN}"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "11"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. midsegment: "
+        },
+        {
+          "t": "math",
+          "v": "MN = \\dfrac{AB + DC}{2} = \\dfrac{9 + 13}{2} = 11"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "scene",
+        "spec": {
+          "w": 330,
+          "h": 190,
+          "pts": {
+            "A": [
+              0,
+              0
+            ],
+            "B": [
+              9,
+              0
+            ],
+            "C": [
+              11,
+              4.2
+            ],
+            "D": [
+              -2,
+              4.2
+            ],
+            "M": [
+              -1,
+              2.1
+            ],
+            "N": [
+              10,
+              2.1
+            ]
+          },
+          "segs": [
+            [
+              "A",
+              "B",
+              {
+                "label": "9"
+              }
+            ],
+            [
+              "B",
+              "C"
+            ],
+            [
+              "C",
+              "D",
+              {
+                "label": "13"
+              }
+            ],
+            [
+              "D",
+              "A"
+            ],
+            [
+              "M",
+              "N",
+              {
+                "dashed": true
+              }
+            ]
+          ]
+        }
+      },
+      "difficulty": {
+        "scalePoint": 570,
+        "band": "B5",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "trapezoid_midsegment_fig"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "trapezoid_midsegment_fig"
+      },
+      "fingerprint": [
+        "composite_fig",
+        "trapezoid_midsegment",
+        "9_13",
+        "2d"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 10,
       "program": "SAT",
       "domain": "geometry_trig",
       "band": "B6",
@@ -1209,7 +1517,7 @@
         },
         {
           "t": "math",
-          "v": "\\dfrac{AD}{DB} = \\dfrac{AE}{EC}\\Rightarrow EC = \\dfrac{AE\\cdot DB}{AD} = \\dfrac{9\\cdot 4}{6} = 6"
+          "v": "\\dfrac{AD}{DB} = \\dfrac{AE}{EC}\\Rightarrow EC = \\dfrac{AE\\cdot DB}{AD} = \\dfrac{4\\cdot 9}{6} = 6"
         },
         {
           "t": "text",
@@ -1238,12 +1546,12 @@
               0
             ],
             "D": [
-              -3,
-              2.8
+              -2,
+              4.199999999999999
             ],
             "E": [
-              3.5999999999999996,
-              2.8
+              2.4000000000000004,
+              4.199999999999999
             ]
           },
           "segs": [
@@ -1258,14 +1566,14 @@
               "D",
               "B",
               {
-                "label": "4"
+                "label": "9"
               }
             ],
             [
               "A",
               "E",
               {
-                "label": "9"
+                "label": "4"
               }
             ],
             [
@@ -1301,14 +1609,14 @@
       "fingerprint": [
         "composite_fig",
         "similar_parallel",
-        "6_4_9",
+        "6_9_4",
         "2d"
       ],
       "reskinDistance": 1,
       "tier": "build-spec"
     },
     {
-      "id": 9,
+      "id": 11,
       "program": "SAT",
       "domain": "geometry_trig",
       "band": "B6",
@@ -1339,7 +1647,7 @@
         },
         {
           "t": "math",
-          "v": "m\\angle ABC = 55^\\circ"
+          "v": "m\\angle ABC = 72^\\circ"
         },
         {
           "t": "text",
@@ -1347,7 +1655,7 @@
         },
         {
           "t": "math",
-          "v": "m\\angle DAC = 86^\\circ"
+          "v": "m\\angle DAC = 65^\\circ"
         },
         {
           "t": "text",
@@ -1364,7 +1672,7 @@
       ],
       "answer": {
         "accept": [
-          "39"
+          "43"
         ],
         "tol": 0
       },
@@ -1379,7 +1687,7 @@
         },
         {
           "t": "math",
-          "v": "m\\angle DAB = 180 - 55 = 125^\\circ"
+          "v": "m\\angle DAB = 180 - 72 = 108^\\circ"
         },
         {
           "t": "text",
@@ -1394,7 +1702,7 @@
         },
         {
           "t": "math",
-          "v": "m\\angle CAB = m\\angle DAB - m\\angle DAC = 125 - 86 = 39^\\circ"
+          "v": "m\\angle CAB = m\\angle DAB - m\\angle DAC = 108 - 65 = 43^\\circ"
         },
         {
           "t": "text",
@@ -1454,13 +1762,13 @@
               "at": "B",
               "from": "A",
               "to": "C",
-              "label": "55°"
+              "label": "72°"
             },
             {
               "at": "A",
               "from": "D",
               "to": "C",
-              "label": "86°",
+              "label": "65°",
               "r": 16
             }
           ]
@@ -1484,355 +1792,7 @@
       "fingerprint": [
         "composite_fig",
         "parallelogram_diagonal",
-        "b55_p86",
-        "2d"
-      ],
-      "reskinDistance": 1,
-      "tier": "build-spec"
-    },
-    {
-      "id": 10,
-      "program": "SAT",
-      "domain": "geometry_trig",
-      "band": "B7",
-      "target_band": "B7",
-      "statementId": "GEO.B7.s3",
-      "skill": "composite_figures",
-      "type": "spr",
-      "stem": [
-        {
-          "t": "text",
-          "v": "In the circle with center "
-        },
-        {
-          "t": "math",
-          "v": "O"
-        },
-        {
-          "t": "text",
-          "v": " shown, "
-        },
-        {
-          "t": "math",
-          "v": "\\overline{AB}"
-        },
-        {
-          "t": "text",
-          "v": " is a diameter and "
-        },
-        {
-          "t": "math",
-          "v": "C"
-        },
-        {
-          "t": "text",
-          "v": " lies on the circle. If "
-        },
-        {
-          "t": "math",
-          "v": "m\\angle BAC = 51^\\circ"
-        },
-        {
-          "t": "text",
-          "v": ", what is the measure, in degrees, of "
-        },
-        {
-          "t": "math",
-          "v": "\\angle ABC"
-        },
-        {
-          "t": "text",
-          "v": "?"
-        }
-      ],
-      "answer": {
-        "accept": [
-          "39"
-        ],
-        "tol": 0
-      },
-      "solution": [
-        {
-          "t": "text",
-          "v": "1. angle in semicircle: "
-        },
-        {
-          "t": "text",
-          "v": "An angle inscribed in a semicircle is right: "
-        },
-        {
-          "t": "math",
-          "v": "m\\angle ACB = 90^\\circ"
-        },
-        {
-          "t": "text",
-          "v": "."
-        },
-        {
-          "t": "br"
-        },
-        {
-          "t": "text",
-          "v": "2. triangle angle sum: "
-        },
-        {
-          "t": "math",
-          "v": "m\\angle ABC = 180 - 90 - 51 = 39^\\circ"
-        },
-        {
-          "t": "text",
-          "v": "."
-        },
-        {
-          "t": "br"
-        }
-      ],
-      "figure": {
-        "fn": "scene",
-        "spec": {
-          "w": 300,
-          "h": 210,
-          "showCenter": true,
-          "centerLabel": "O",
-          "circle": {
-            "through": [
-              "A",
-              "B",
-              "C"
-            ]
-          },
-          "pts": {
-            "A": [
-              -1,
-              0
-            ],
-            "B": [
-              1,
-              0
-            ],
-            "C": [
-              -0.20791169081775934,
-              0.9781476007338057
-            ]
-          },
-          "segs": [
-            [
-              "A",
-              "B"
-            ],
-            [
-              "A",
-              "C"
-            ],
-            [
-              "B",
-              "C"
-            ]
-          ],
-          "angles": [
-            {
-              "at": "A",
-              "from": "B",
-              "to": "C",
-              "label": "51°",
-              "r": 18
-            }
-          ]
-        }
-      },
-      "difficulty": {
-        "scalePoint": 700,
-        "band": "B7",
-        "method": "apriori_v1",
-        "feature_vector": {
-          "task": "triangle_semicircle_fig"
-        }
-      },
-      "verify": {
-        "tier": "C",
-        "correctness": "prove:pass"
-      },
-      "radicals": {
-        "task": "triangle_semicircle_fig"
-      },
-      "fingerprint": [
-        "composite_fig",
-        "triangle_semicircle",
-        "a51",
-        "2d"
-      ],
-      "reskinDistance": 1,
-      "tier": "build-spec"
-    },
-    {
-      "id": 11,
-      "program": "SAT",
-      "domain": "geometry_trig",
-      "band": "B7",
-      "target_band": "B7",
-      "statementId": "GEO.B7.s3",
-      "skill": "composite_figures",
-      "type": "spr",
-      "stem": [
-        {
-          "t": "text",
-          "v": "In the circle with center "
-        },
-        {
-          "t": "math",
-          "v": "O"
-        },
-        {
-          "t": "text",
-          "v": " shown, "
-        },
-        {
-          "t": "math",
-          "v": "\\overline{AB}"
-        },
-        {
-          "t": "text",
-          "v": " is a diameter and "
-        },
-        {
-          "t": "math",
-          "v": "C"
-        },
-        {
-          "t": "text",
-          "v": " lies on the circle. If "
-        },
-        {
-          "t": "math",
-          "v": "m\\angle BAC = 52^\\circ"
-        },
-        {
-          "t": "text",
-          "v": ", what is the measure, in degrees, of "
-        },
-        {
-          "t": "math",
-          "v": "\\angle ABC"
-        },
-        {
-          "t": "text",
-          "v": "?"
-        }
-      ],
-      "answer": {
-        "accept": [
-          "38"
-        ],
-        "tol": 0
-      },
-      "solution": [
-        {
-          "t": "text",
-          "v": "1. angle in semicircle: "
-        },
-        {
-          "t": "text",
-          "v": "An angle inscribed in a semicircle is right: "
-        },
-        {
-          "t": "math",
-          "v": "m\\angle ACB = 90^\\circ"
-        },
-        {
-          "t": "text",
-          "v": "."
-        },
-        {
-          "t": "br"
-        },
-        {
-          "t": "text",
-          "v": "2. triangle angle sum: "
-        },
-        {
-          "t": "math",
-          "v": "m\\angle ABC = 180 - 90 - 52 = 38^\\circ"
-        },
-        {
-          "t": "text",
-          "v": "."
-        },
-        {
-          "t": "br"
-        }
-      ],
-      "figure": {
-        "fn": "scene",
-        "spec": {
-          "w": 300,
-          "h": 210,
-          "showCenter": true,
-          "centerLabel": "O",
-          "circle": {
-            "through": [
-              "A",
-              "B",
-              "C"
-            ]
-          },
-          "pts": {
-            "A": [
-              -1,
-              0
-            ],
-            "B": [
-              1,
-              0
-            ],
-            "C": [
-              -0.24192189559966779,
-              0.9702957262759965
-            ]
-          },
-          "segs": [
-            [
-              "A",
-              "B"
-            ],
-            [
-              "A",
-              "C"
-            ],
-            [
-              "B",
-              "C"
-            ]
-          ],
-          "angles": [
-            {
-              "at": "A",
-              "from": "B",
-              "to": "C",
-              "label": "52°",
-              "r": 18
-            }
-          ]
-        }
-      },
-      "difficulty": {
-        "scalePoint": 700,
-        "band": "B7",
-        "method": "apriori_v1",
-        "feature_vector": {
-          "task": "triangle_semicircle_fig"
-        }
-      },
-      "verify": {
-        "tier": "C",
-        "correctness": "prove:pass"
-      },
-      "radicals": {
-        "task": "triangle_semicircle_fig"
-      },
-      "fingerprint": [
-        "composite_fig",
-        "triangle_semicircle",
-        "a52",
+        "b72_p65",
         "2d"
       ],
       "reskinDistance": 1,
@@ -1842,6 +1802,1810 @@
       "id": 12,
       "program": "SAT",
       "domain": "geometry_trig",
+      "band": "B6",
+      "target_band": "B6",
+      "statementId": "GEO.B6.s1",
+      "skill": "composite_figures",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "A square is inscribed in a circle of radius "
+        },
+        {
+          "t": "math",
+          "v": "7"
+        },
+        {
+          "t": "text",
+          "v": " (shown), with all four vertices on the circle. What is the area of the square?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "98"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. diagonal area: "
+        },
+        {
+          "t": "text",
+          "v": "The diagonal equals the diameter "
+        },
+        {
+          "t": "math",
+          "v": "= 2(7) = 14"
+        },
+        {
+          "t": "text",
+          "v": "; area "
+        },
+        {
+          "t": "math",
+          "v": "= \\tfrac12 d^2 = \\tfrac12(14)^2 = 98"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "scene",
+        "spec": {
+          "w": 250,
+          "h": 250,
+          "circle": {
+            "c": [
+              0,
+              0
+            ],
+            "r": 7
+          },
+          "pts": {
+            "O": [
+              0,
+              0
+            ],
+            "P": [
+              4.949747468305833,
+              4.949747468305833
+            ],
+            "Q": [
+              -4.949747468305833,
+              4.949747468305833
+            ],
+            "R": [
+              -4.949747468305833,
+              -4.949747468305833
+            ],
+            "S": [
+              4.949747468305833,
+              -4.949747468305833
+            ]
+          },
+          "segs": [
+            [
+              "P",
+              "Q"
+            ],
+            [
+              "Q",
+              "R"
+            ],
+            [
+              "R",
+              "S"
+            ],
+            [
+              "S",
+              "P"
+            ],
+            [
+              "O",
+              "P",
+              {
+                "label": "7"
+              }
+            ]
+          ],
+          "ptLabels": {
+            "O": "O",
+            "P": "",
+            "Q": "",
+            "R": "",
+            "S": ""
+          }
+        }
+      },
+      "difficulty": {
+        "scalePoint": 630,
+        "band": "B6",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "square_in_circle_fig"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "square_in_circle_fig"
+      },
+      "fingerprint": [
+        "composite_fig",
+        "square_in_circle",
+        "r7",
+        "2d"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 13,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B6",
+      "target_band": "B6",
+      "statementId": "GEO.B6.s1",
+      "skill": "composite_figures",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "A circle is inscribed in a square with side length "
+        },
+        {
+          "t": "math",
+          "v": "14"
+        },
+        {
+          "t": "text",
+          "v": " (shown), touching all four sides. The area of the circle is "
+        },
+        {
+          "t": "math",
+          "v": "k\\pi"
+        },
+        {
+          "t": "text",
+          "v": ". What is the value of "
+        },
+        {
+          "t": "math",
+          "v": "k"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "49"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. inscribed circle: "
+        },
+        {
+          "t": "math",
+          "v": "r = \\tfrac{14}{2} = 7"
+        },
+        {
+          "t": "text",
+          "v": "; area "
+        },
+        {
+          "t": "math",
+          "v": "= \\pi r^2 = 49\\pi"
+        },
+        {
+          "t": "text",
+          "v": ", so "
+        },
+        {
+          "t": "math",
+          "v": "k = 49"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "scene",
+        "spec": {
+          "w": 240,
+          "h": 240,
+          "circle": {
+            "c": [
+              7,
+              7
+            ],
+            "r": 7
+          },
+          "pts": {
+            "A": [
+              0,
+              0
+            ],
+            "B": [
+              14,
+              0
+            ],
+            "C": [
+              14,
+              14
+            ],
+            "D": [
+              0,
+              14
+            ]
+          },
+          "segs": [
+            [
+              "A",
+              "B",
+              {
+                "label": "14"
+              }
+            ],
+            [
+              "B",
+              "C"
+            ],
+            [
+              "C",
+              "D"
+            ],
+            [
+              "D",
+              "A"
+            ]
+          ]
+        }
+      },
+      "difficulty": {
+        "scalePoint": 630,
+        "band": "B6",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "circle_in_square_fig"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "circle_in_square_fig"
+      },
+      "fingerprint": [
+        "composite_fig",
+        "circle_in_square",
+        "s14",
+        "2d"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 14,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B6",
+      "target_band": "B6",
+      "statementId": "GEO.B6.s2",
+      "skill": "composite_figures",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The rhombus shown has perpendicular diagonals. One diagonal has length "
+        },
+        {
+          "t": "math",
+          "v": "24"
+        },
+        {
+          "t": "text",
+          "v": " and each side has length "
+        },
+        {
+          "t": "math",
+          "v": "13"
+        },
+        {
+          "t": "text",
+          "v": " (in inches). What is the length, in inches, of the other diagonal?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "10"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. rhombus pythagorean: "
+        },
+        {
+          "t": "text",
+          "v": "Half-diagonals: "
+        },
+        {
+          "t": "math",
+          "v": "(24/2)^2 + x^2 = 13^2 \\Rightarrow x = 5"
+        },
+        {
+          "t": "text",
+          "v": "; the other diagonal "
+        },
+        {
+          "t": "math",
+          "v": "= 2(5) = 10"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "scene",
+        "spec": {
+          "w": 240,
+          "h": 240,
+          "pts": {
+            "R": [
+              12,
+              0
+            ],
+            "T": [
+              0,
+              5
+            ],
+            "L": [
+              -12,
+              0
+            ],
+            "B": [
+              0,
+              -5
+            ],
+            "O": [
+              0,
+              0
+            ]
+          },
+          "segs": [
+            [
+              "R",
+              "T",
+              {
+                "label": "13"
+              }
+            ],
+            [
+              "T",
+              "L"
+            ],
+            [
+              "L",
+              "B"
+            ],
+            [
+              "B",
+              "R"
+            ],
+            [
+              "R",
+              "L",
+              {
+                "label": "24"
+              }
+            ],
+            [
+              "T",
+              "B"
+            ]
+          ],
+          "angles": [
+            {
+              "at": "O",
+              "from": "R",
+              "to": "T",
+              "right": true
+            }
+          ],
+          "ptLabels": {
+            "R": "",
+            "T": "",
+            "L": "",
+            "B": "",
+            "O": ""
+          }
+        }
+      },
+      "difficulty": {
+        "scalePoint": 630,
+        "band": "B6",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "rhombus_diagonal_fig"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "rhombus_diagonal_fig"
+      },
+      "fingerprint": [
+        "composite_fig",
+        "rhombus_diagonal",
+        "12_5_13",
+        "2d"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 15,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B6",
+      "target_band": "B6",
+      "statementId": "GEO.B6.s1",
+      "skill": "composite_figures",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "A circle is inscribed in a square with side length "
+        },
+        {
+          "t": "math",
+          "v": "10"
+        },
+        {
+          "t": "text",
+          "v": " (shown), touching all four sides. The area of the circle is "
+        },
+        {
+          "t": "math",
+          "v": "k\\pi"
+        },
+        {
+          "t": "text",
+          "v": ". What is the value of "
+        },
+        {
+          "t": "math",
+          "v": "k"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "25"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. inscribed circle: "
+        },
+        {
+          "t": "math",
+          "v": "r = \\tfrac{10}{2} = 5"
+        },
+        {
+          "t": "text",
+          "v": "; area "
+        },
+        {
+          "t": "math",
+          "v": "= \\pi r^2 = 25\\pi"
+        },
+        {
+          "t": "text",
+          "v": ", so "
+        },
+        {
+          "t": "math",
+          "v": "k = 25"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "scene",
+        "spec": {
+          "w": 240,
+          "h": 240,
+          "circle": {
+            "c": [
+              5,
+              5
+            ],
+            "r": 5
+          },
+          "pts": {
+            "A": [
+              0,
+              0
+            ],
+            "B": [
+              10,
+              0
+            ],
+            "C": [
+              10,
+              10
+            ],
+            "D": [
+              0,
+              10
+            ]
+          },
+          "segs": [
+            [
+              "A",
+              "B",
+              {
+                "label": "10"
+              }
+            ],
+            [
+              "B",
+              "C"
+            ],
+            [
+              "C",
+              "D"
+            ],
+            [
+              "D",
+              "A"
+            ]
+          ]
+        }
+      },
+      "difficulty": {
+        "scalePoint": 630,
+        "band": "B6",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "circle_in_square_fig"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "circle_in_square_fig"
+      },
+      "fingerprint": [
+        "composite_fig",
+        "circle_in_square",
+        "s10",
+        "2d"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 16,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B6",
+      "target_band": "B6",
+      "statementId": "GEO.B6.s2",
+      "skill": "composite_figures",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "In parallelogram "
+        },
+        {
+          "t": "math",
+          "v": "ABCD"
+        },
+        {
+          "t": "text",
+          "v": " shown (not drawn to scale), diagonal "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{AC}"
+        },
+        {
+          "t": "text",
+          "v": " is drawn. If "
+        },
+        {
+          "t": "math",
+          "v": "m\\angle ABC = 50^\\circ"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "m\\angle DAC = 51^\\circ"
+        },
+        {
+          "t": "text",
+          "v": ", what is the measure, in degrees, of "
+        },
+        {
+          "t": "math",
+          "v": "\\angle CAB"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "79"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. consecutive angles: "
+        },
+        {
+          "t": "text",
+          "v": "Consecutive angles of a parallelogram are supplementary: "
+        },
+        {
+          "t": "math",
+          "v": "m\\angle DAB = 180 - 50 = 130^\\circ"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. angle subtract: "
+        },
+        {
+          "t": "math",
+          "v": "m\\angle CAB = m\\angle DAB - m\\angle DAC = 130 - 51 = 79^\\circ"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "scene",
+        "spec": {
+          "w": 320,
+          "h": 220,
+          "pts": {
+            "A": [
+              0,
+              0
+            ],
+            "B": [
+              5,
+              0
+            ],
+            "C": [
+              6.5,
+              2.4
+            ],
+            "D": [
+              1.5,
+              2.4
+            ]
+          },
+          "segs": [
+            [
+              "A",
+              "B"
+            ],
+            [
+              "B",
+              "C"
+            ],
+            [
+              "C",
+              "D"
+            ],
+            [
+              "D",
+              "A"
+            ],
+            [
+              "A",
+              "C"
+            ]
+          ],
+          "angles": [
+            {
+              "at": "B",
+              "from": "A",
+              "to": "C",
+              "label": "50°"
+            },
+            {
+              "at": "A",
+              "from": "D",
+              "to": "C",
+              "label": "51°",
+              "r": 16
+            }
+          ]
+        }
+      },
+      "difficulty": {
+        "scalePoint": 630,
+        "band": "B6",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "parallelogram_diagonal_fig"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "parallelogram_diagonal_fig"
+      },
+      "fingerprint": [
+        "composite_fig",
+        "parallelogram_diagonal",
+        "b50_p51",
+        "2d"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 17,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B6",
+      "target_band": "B6",
+      "statementId": "GEO.B6.s1",
+      "skill": "composite_figures",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "A square is inscribed in a circle of radius "
+        },
+        {
+          "t": "math",
+          "v": "3"
+        },
+        {
+          "t": "text",
+          "v": " (shown), with all four vertices on the circle. What is the area of the square?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "18"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. diagonal area: "
+        },
+        {
+          "t": "text",
+          "v": "The diagonal equals the diameter "
+        },
+        {
+          "t": "math",
+          "v": "= 2(3) = 6"
+        },
+        {
+          "t": "text",
+          "v": "; area "
+        },
+        {
+          "t": "math",
+          "v": "= \\tfrac12 d^2 = \\tfrac12(6)^2 = 18"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "scene",
+        "spec": {
+          "w": 250,
+          "h": 250,
+          "circle": {
+            "c": [
+              0,
+              0
+            ],
+            "r": 3
+          },
+          "pts": {
+            "O": [
+              0,
+              0
+            ],
+            "P": [
+              2.1213203435596424,
+              2.1213203435596424
+            ],
+            "Q": [
+              -2.1213203435596424,
+              2.1213203435596424
+            ],
+            "R": [
+              -2.1213203435596424,
+              -2.1213203435596424
+            ],
+            "S": [
+              2.1213203435596424,
+              -2.1213203435596424
+            ]
+          },
+          "segs": [
+            [
+              "P",
+              "Q"
+            ],
+            [
+              "Q",
+              "R"
+            ],
+            [
+              "R",
+              "S"
+            ],
+            [
+              "S",
+              "P"
+            ],
+            [
+              "O",
+              "P",
+              {
+                "label": "3"
+              }
+            ]
+          ],
+          "ptLabels": {
+            "O": "O",
+            "P": "",
+            "Q": "",
+            "R": "",
+            "S": ""
+          }
+        }
+      },
+      "difficulty": {
+        "scalePoint": 630,
+        "band": "B6",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "square_in_circle_fig"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "square_in_circle_fig"
+      },
+      "fingerprint": [
+        "composite_fig",
+        "square_in_circle",
+        "r3",
+        "2d"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 18,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B6",
+      "target_band": "B6",
+      "statementId": "GEO.B6.s2",
+      "skill": "composite_figures",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The rhombus shown has perpendicular diagonals. One diagonal has length "
+        },
+        {
+          "t": "math",
+          "v": "16"
+        },
+        {
+          "t": "text",
+          "v": " and each side has length "
+        },
+        {
+          "t": "math",
+          "v": "17"
+        },
+        {
+          "t": "text",
+          "v": " (in inches). What is the length, in inches, of the other diagonal?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "30"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. rhombus pythagorean: "
+        },
+        {
+          "t": "text",
+          "v": "Half-diagonals: "
+        },
+        {
+          "t": "math",
+          "v": "(16/2)^2 + x^2 = 17^2 \\Rightarrow x = 15"
+        },
+        {
+          "t": "text",
+          "v": "; the other diagonal "
+        },
+        {
+          "t": "math",
+          "v": "= 2(15) = 30"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "scene",
+        "spec": {
+          "w": 240,
+          "h": 240,
+          "pts": {
+            "R": [
+              8,
+              0
+            ],
+            "T": [
+              0,
+              15
+            ],
+            "L": [
+              -8,
+              0
+            ],
+            "B": [
+              0,
+              -15
+            ],
+            "O": [
+              0,
+              0
+            ]
+          },
+          "segs": [
+            [
+              "R",
+              "T",
+              {
+                "label": "17"
+              }
+            ],
+            [
+              "T",
+              "L"
+            ],
+            [
+              "L",
+              "B"
+            ],
+            [
+              "B",
+              "R"
+            ],
+            [
+              "R",
+              "L",
+              {
+                "label": "16"
+              }
+            ],
+            [
+              "T",
+              "B"
+            ]
+          ],
+          "angles": [
+            {
+              "at": "O",
+              "from": "R",
+              "to": "T",
+              "right": true
+            }
+          ],
+          "ptLabels": {
+            "R": "",
+            "T": "",
+            "L": "",
+            "B": "",
+            "O": ""
+          }
+        }
+      },
+      "difficulty": {
+        "scalePoint": 630,
+        "band": "B6",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "rhombus_diagonal_fig"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "rhombus_diagonal_fig"
+      },
+      "fingerprint": [
+        "composite_fig",
+        "rhombus_diagonal",
+        "8_15_17",
+        "2d"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 19,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B6",
+      "target_band": "B6",
+      "statementId": "GEO.B6.s1",
+      "skill": "composite_figures",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "A circle is inscribed in a square with side length "
+        },
+        {
+          "t": "math",
+          "v": "4"
+        },
+        {
+          "t": "text",
+          "v": " (shown), touching all four sides. The area of the circle is "
+        },
+        {
+          "t": "math",
+          "v": "k\\pi"
+        },
+        {
+          "t": "text",
+          "v": ". What is the value of "
+        },
+        {
+          "t": "math",
+          "v": "k"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "4"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. inscribed circle: "
+        },
+        {
+          "t": "math",
+          "v": "r = \\tfrac{4}{2} = 2"
+        },
+        {
+          "t": "text",
+          "v": "; area "
+        },
+        {
+          "t": "math",
+          "v": "= \\pi r^2 = 4\\pi"
+        },
+        {
+          "t": "text",
+          "v": ", so "
+        },
+        {
+          "t": "math",
+          "v": "k = 4"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "scene",
+        "spec": {
+          "w": 240,
+          "h": 240,
+          "circle": {
+            "c": [
+              2,
+              2
+            ],
+            "r": 2
+          },
+          "pts": {
+            "A": [
+              0,
+              0
+            ],
+            "B": [
+              4,
+              0
+            ],
+            "C": [
+              4,
+              4
+            ],
+            "D": [
+              0,
+              4
+            ]
+          },
+          "segs": [
+            [
+              "A",
+              "B",
+              {
+                "label": "4"
+              }
+            ],
+            [
+              "B",
+              "C"
+            ],
+            [
+              "C",
+              "D"
+            ],
+            [
+              "D",
+              "A"
+            ]
+          ]
+        }
+      },
+      "difficulty": {
+        "scalePoint": 630,
+        "band": "B6",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "circle_in_square_fig"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "circle_in_square_fig"
+      },
+      "fingerprint": [
+        "composite_fig",
+        "circle_in_square",
+        "s4",
+        "2d"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 20,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "GEO.B7.s2",
+      "skill": "composite_figures",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "In right triangle "
+        },
+        {
+          "t": "math",
+          "v": "ABC"
+        },
+        {
+          "t": "text",
+          "v": " shown, the altitude from the right angle at "
+        },
+        {
+          "t": "math",
+          "v": "C"
+        },
+        {
+          "t": "text",
+          "v": " meets the hypotenuse "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{AB}"
+        },
+        {
+          "t": "text",
+          "v": " at "
+        },
+        {
+          "t": "math",
+          "v": "H"
+        },
+        {
+          "t": "text",
+          "v": ". If "
+        },
+        {
+          "t": "math",
+          "v": "AH = 4"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "HB = 25"
+        },
+        {
+          "t": "text",
+          "v": ", what is the length of "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{CH}"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "10"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. geometric mean: "
+        },
+        {
+          "t": "math",
+          "v": "CH = \\sqrt{AH\\cdot HB} = \\sqrt{4\\cdot 25} = \\sqrt{100} = 10"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "scene",
+        "spec": {
+          "w": 330,
+          "h": 210,
+          "pts": {
+            "A": [
+              0,
+              0
+            ],
+            "B": [
+              29,
+              0
+            ],
+            "C": [
+              4,
+              10
+            ],
+            "H": [
+              4,
+              0
+            ]
+          },
+          "segs": [
+            [
+              "A",
+              "H",
+              {
+                "label": "4"
+              }
+            ],
+            [
+              "H",
+              "B",
+              {
+                "label": "25"
+              }
+            ],
+            [
+              "A",
+              "C"
+            ],
+            [
+              "C",
+              "B"
+            ],
+            [
+              "C",
+              "H"
+            ]
+          ],
+          "angles": [
+            {
+              "at": "C",
+              "from": "A",
+              "to": "B",
+              "right": true
+            },
+            {
+              "at": "H",
+              "from": "C",
+              "to": "B",
+              "right": true
+            }
+          ]
+        }
+      },
+      "difficulty": {
+        "scalePoint": 700,
+        "band": "B7",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "right_triangle_altitude_fig"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "right_triangle_altitude_fig"
+      },
+      "fingerprint": [
+        "composite_fig",
+        "right_triangle_altitude",
+        "4_25",
+        "2d"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 21,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "GEO.B7.s3",
+      "skill": "composite_figures",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "Chords "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{AB}"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{CD}"
+        },
+        {
+          "t": "text",
+          "v": " intersect at point "
+        },
+        {
+          "t": "math",
+          "v": "P"
+        },
+        {
+          "t": "text",
+          "v": " inside the circle (shown). Using the marked segment lengths, what is the length of "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{PD}"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "3"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. intersecting chords: "
+        },
+        {
+          "t": "math",
+          "v": "AP\\cdot PB = CP\\cdot PD \\Rightarrow PD = \\dfrac{6\\cdot 2}{4} = 3"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "scene",
+        "spec": {
+          "w": 280,
+          "h": 280,
+          "circle": {
+            "through": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "pts": {
+            "A": [
+              5.636236277084273,
+              2.057386844732708
+            ],
+            "B": [
+              -1.8787454256947578,
+              -0.6857956149109027
+            ],
+            "C": [
+              -1.4807233254051475,
+              3.7158388600154773
+            ],
+            "D": [
+              1.1105424940538606,
+              -2.786879145011608
+            ],
+            "P": [
+              0,
+              0
+            ]
+          },
+          "segs": [
+            [
+              "A",
+              "P",
+              {
+                "label": "6"
+              }
+            ],
+            [
+              "P",
+              "B",
+              {
+                "label": "2"
+              }
+            ],
+            [
+              "C",
+              "P",
+              {
+                "label": "4"
+              }
+            ],
+            [
+              "P",
+              "D"
+            ]
+          ]
+        }
+      },
+      "difficulty": {
+        "scalePoint": 700,
+        "band": "B7",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "intersecting_chords_fig"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "intersecting_chords_fig"
+      },
+      "fingerprint": [
+        "composite_fig",
+        "intersecting_chords",
+        "6_2_4",
+        "2d"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 22,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "GEO.B7.s3",
+      "skill": "composite_figures",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "From external point "
+        },
+        {
+          "t": "math",
+          "v": "P"
+        },
+        {
+          "t": "text",
+          "v": ", segment "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{PT}"
+        },
+        {
+          "t": "text",
+          "v": " is tangent to the circle with center "
+        },
+        {
+          "t": "math",
+          "v": "O"
+        },
+        {
+          "t": "text",
+          "v": " at "
+        },
+        {
+          "t": "math",
+          "v": "T"
+        },
+        {
+          "t": "text",
+          "v": " (so "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{PT}\\perp\\overline{OT}"
+        },
+        {
+          "t": "text",
+          "v": "). If the radius is "
+        },
+        {
+          "t": "math",
+          "v": "5"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "OP = 13"
+        },
+        {
+          "t": "text",
+          "v": " (shown), what is the length of "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{PT}"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "12"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. tangent pythagorean: "
+        },
+        {
+          "t": "math",
+          "v": "PT = \\sqrt{OP^2 - r^2} = \\sqrt{13^2 - 5^2} = \\sqrt{144} = 12"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "scene",
+        "spec": {
+          "w": 300,
+          "h": 230,
+          "circle": {
+            "c": [
+              0,
+              0
+            ],
+            "r": 5
+          },
+          "pts": {
+            "O": [
+              0,
+              0
+            ],
+            "P": [
+              13,
+              0
+            ],
+            "T": [
+              1.9230769230769231,
+              4.615384615384615
+            ]
+          },
+          "segs": [
+            [
+              "O",
+              "T",
+              {
+                "label": "5"
+              }
+            ],
+            [
+              "O",
+              "P",
+              {
+                "label": "13"
+              }
+            ],
+            [
+              "P",
+              "T"
+            ]
+          ],
+          "angles": [
+            {
+              "at": "T",
+              "from": "O",
+              "to": "P",
+              "right": true
+            }
+          ]
+        }
+      },
+      "difficulty": {
+        "scalePoint": 700,
+        "band": "B7",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "tangent_length_fig"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "tangent_length_fig"
+      },
+      "fingerprint": [
+        "composite_fig",
+        "tangent_length",
+        "r5_d13",
+        "2d"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 23,
+      "program": "SAT",
+      "domain": "geometry_trig",
       "band": "B7",
       "target_band": "B7",
       "statementId": "GEO.B7.s3",
@@ -1878,7 +3642,7 @@
         },
         {
           "t": "math",
-          "v": "m\\angle BAC = 28^\\circ"
+          "v": "m\\angle BAC = 46^\\circ"
         },
         {
           "t": "text",
@@ -1895,7 +3659,7 @@
       ],
       "answer": {
         "accept": [
-          "62"
+          "44"
         ],
         "tol": 0
       },
@@ -1925,7 +3689,7 @@
         },
         {
           "t": "math",
-          "v": "m\\angle ABC = 180 - 90 - 28 = 62^\\circ"
+          "v": "m\\angle ABC = 180 - 90 - 46 = 44^\\circ"
         },
         {
           "t": "text",
@@ -1959,8 +3723,8 @@
               0
             ],
             "C": [
-              0.5591929034707468,
-              0.8290375725550417
+              -0.034899496702500955,
+              0.9993908270190958
             ]
           },
           "segs": [
@@ -1982,7 +3746,7 @@
               "at": "A",
               "from": "B",
               "to": "C",
-              "label": "28°",
+              "label": "46°",
               "r": 18
             }
           ]
@@ -2006,7 +3770,2266 @@
       "fingerprint": [
         "composite_fig",
         "triangle_semicircle",
-        "a28",
+        "a46",
+        "2d"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 24,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "GEO.B7.s3",
+      "skill": "composite_figures",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "Chords "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{AB}"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{CD}"
+        },
+        {
+          "t": "text",
+          "v": " intersect at point "
+        },
+        {
+          "t": "math",
+          "v": "P"
+        },
+        {
+          "t": "text",
+          "v": " inside the circle (shown). Using the marked segment lengths, what is the length of "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{PD}"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "5"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. intersecting chords: "
+        },
+        {
+          "t": "math",
+          "v": "AP\\cdot PB = CP\\cdot PD \\Rightarrow PD = \\dfrac{10\\cdot 3}{6} = 5"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "scene",
+        "spec": {
+          "w": 280,
+          "h": 280,
+          "circle": {
+            "through": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "pts": {
+            "A": [
+              9.393727128473788,
+              3.4289780745545135
+            ],
+            "B": [
+              -2.8181181385421366,
+              -1.028693422366354
+            ],
+            "C": [
+              -2.2210849881077213,
+              5.573758290023216
+            ],
+            "D": [
+              1.8509041567564344,
+              -4.644798575019347
+            ],
+            "P": [
+              0,
+              0
+            ]
+          },
+          "segs": [
+            [
+              "A",
+              "P",
+              {
+                "label": "10"
+              }
+            ],
+            [
+              "P",
+              "B",
+              {
+                "label": "3"
+              }
+            ],
+            [
+              "C",
+              "P",
+              {
+                "label": "6"
+              }
+            ],
+            [
+              "P",
+              "D"
+            ]
+          ]
+        }
+      },
+      "difficulty": {
+        "scalePoint": 700,
+        "band": "B7",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "intersecting_chords_fig"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "intersecting_chords_fig"
+      },
+      "fingerprint": [
+        "composite_fig",
+        "intersecting_chords",
+        "10_3_6",
+        "2d"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 25,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "GEO.B7.s3",
+      "skill": "composite_figures",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "From external point "
+        },
+        {
+          "t": "math",
+          "v": "P"
+        },
+        {
+          "t": "text",
+          "v": ", segment "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{PT}"
+        },
+        {
+          "t": "text",
+          "v": " is tangent to the circle with center "
+        },
+        {
+          "t": "math",
+          "v": "O"
+        },
+        {
+          "t": "text",
+          "v": " at "
+        },
+        {
+          "t": "math",
+          "v": "T"
+        },
+        {
+          "t": "text",
+          "v": " (so "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{PT}\\perp\\overline{OT}"
+        },
+        {
+          "t": "text",
+          "v": "). If the radius is "
+        },
+        {
+          "t": "math",
+          "v": "9"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "OP = 15"
+        },
+        {
+          "t": "text",
+          "v": " (shown), what is the length of "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{PT}"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "12"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. tangent pythagorean: "
+        },
+        {
+          "t": "math",
+          "v": "PT = \\sqrt{OP^2 - r^2} = \\sqrt{15^2 - 9^2} = \\sqrt{144} = 12"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "scene",
+        "spec": {
+          "w": 300,
+          "h": 230,
+          "circle": {
+            "c": [
+              0,
+              0
+            ],
+            "r": 9
+          },
+          "pts": {
+            "O": [
+              0,
+              0
+            ],
+            "P": [
+              15,
+              0
+            ],
+            "T": [
+              5.4,
+              7.2
+            ]
+          },
+          "segs": [
+            [
+              "O",
+              "T",
+              {
+                "label": "9"
+              }
+            ],
+            [
+              "O",
+              "P",
+              {
+                "label": "15"
+              }
+            ],
+            [
+              "P",
+              "T"
+            ]
+          ],
+          "angles": [
+            {
+              "at": "T",
+              "from": "O",
+              "to": "P",
+              "right": true
+            }
+          ]
+        }
+      },
+      "difficulty": {
+        "scalePoint": 700,
+        "band": "B7",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "tangent_length_fig"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "tangent_length_fig"
+      },
+      "fingerprint": [
+        "composite_fig",
+        "tangent_length",
+        "r9_d15",
+        "2d"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 26,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "GEO.B7.s3",
+      "skill": "composite_figures",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "In the circle with center "
+        },
+        {
+          "t": "math",
+          "v": "O"
+        },
+        {
+          "t": "text",
+          "v": " shown, "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{AB}"
+        },
+        {
+          "t": "text",
+          "v": " is a diameter and "
+        },
+        {
+          "t": "math",
+          "v": "C"
+        },
+        {
+          "t": "text",
+          "v": " lies on the circle. If "
+        },
+        {
+          "t": "math",
+          "v": "m\\angle BAC = 59^\\circ"
+        },
+        {
+          "t": "text",
+          "v": ", what is the measure, in degrees, of "
+        },
+        {
+          "t": "math",
+          "v": "\\angle ABC"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "31"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. angle in semicircle: "
+        },
+        {
+          "t": "text",
+          "v": "An angle inscribed in a semicircle is right: "
+        },
+        {
+          "t": "math",
+          "v": "m\\angle ACB = 90^\\circ"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. triangle angle sum: "
+        },
+        {
+          "t": "math",
+          "v": "m\\angle ABC = 180 - 90 - 59 = 31^\\circ"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "scene",
+        "spec": {
+          "w": 300,
+          "h": 210,
+          "showCenter": true,
+          "centerLabel": "O",
+          "circle": {
+            "through": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "pts": {
+            "A": [
+              -1,
+              0
+            ],
+            "B": [
+              1,
+              0
+            ],
+            "C": [
+              -0.4694715627858909,
+              0.8829475928589269
+            ]
+          },
+          "segs": [
+            [
+              "A",
+              "B"
+            ],
+            [
+              "A",
+              "C"
+            ],
+            [
+              "B",
+              "C"
+            ]
+          ],
+          "angles": [
+            {
+              "at": "A",
+              "from": "B",
+              "to": "C",
+              "label": "59°",
+              "r": 18
+            }
+          ]
+        }
+      },
+      "difficulty": {
+        "scalePoint": 700,
+        "band": "B7",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "triangle_semicircle_fig"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "triangle_semicircle_fig"
+      },
+      "fingerprint": [
+        "composite_fig",
+        "triangle_semicircle",
+        "a59",
+        "2d"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 27,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "GEO.B7.s2",
+      "skill": "composite_figures",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "In right triangle "
+        },
+        {
+          "t": "math",
+          "v": "ABC"
+        },
+        {
+          "t": "text",
+          "v": " shown, the altitude from the right angle at "
+        },
+        {
+          "t": "math",
+          "v": "C"
+        },
+        {
+          "t": "text",
+          "v": " meets the hypotenuse "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{AB}"
+        },
+        {
+          "t": "text",
+          "v": " at "
+        },
+        {
+          "t": "math",
+          "v": "H"
+        },
+        {
+          "t": "text",
+          "v": ". If "
+        },
+        {
+          "t": "math",
+          "v": "AH = 5"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "HB = 20"
+        },
+        {
+          "t": "text",
+          "v": ", what is the length of "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{CH}"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "10"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. geometric mean: "
+        },
+        {
+          "t": "math",
+          "v": "CH = \\sqrt{AH\\cdot HB} = \\sqrt{5\\cdot 20} = \\sqrt{100} = 10"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "scene",
+        "spec": {
+          "w": 330,
+          "h": 210,
+          "pts": {
+            "A": [
+              0,
+              0
+            ],
+            "B": [
+              25,
+              0
+            ],
+            "C": [
+              5,
+              10
+            ],
+            "H": [
+              5,
+              0
+            ]
+          },
+          "segs": [
+            [
+              "A",
+              "H",
+              {
+                "label": "5"
+              }
+            ],
+            [
+              "H",
+              "B",
+              {
+                "label": "20"
+              }
+            ],
+            [
+              "A",
+              "C"
+            ],
+            [
+              "C",
+              "B"
+            ],
+            [
+              "C",
+              "H"
+            ]
+          ],
+          "angles": [
+            {
+              "at": "C",
+              "from": "A",
+              "to": "B",
+              "right": true
+            },
+            {
+              "at": "H",
+              "from": "C",
+              "to": "B",
+              "right": true
+            }
+          ]
+        }
+      },
+      "difficulty": {
+        "scalePoint": 700,
+        "band": "B7",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "right_triangle_altitude_fig"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "right_triangle_altitude_fig"
+      },
+      "fingerprint": [
+        "composite_fig",
+        "right_triangle_altitude",
+        "5_20",
+        "2d"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 28,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "GEO.B7.s3",
+      "skill": "composite_figures",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "Chords "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{AB}"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{CD}"
+        },
+        {
+          "t": "text",
+          "v": " intersect at point "
+        },
+        {
+          "t": "math",
+          "v": "P"
+        },
+        {
+          "t": "text",
+          "v": " inside the circle (shown). Using the marked segment lengths, what is the length of "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{PD}"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "3"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. intersecting chords: "
+        },
+        {
+          "t": "math",
+          "v": "AP\\cdot PB = CP\\cdot PD \\Rightarrow PD = \\dfrac{9\\cdot 2}{6} = 3"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "scene",
+        "spec": {
+          "w": 280,
+          "h": 280,
+          "circle": {
+            "through": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "pts": {
+            "A": [
+              8.45435441562641,
+              3.086080267099062
+            ],
+            "B": [
+              -1.8787454256947578,
+              -0.6857956149109027
+            ],
+            "C": [
+              -2.2210849881077213,
+              5.573758290023216
+            ],
+            "D": [
+              1.1105424940538606,
+              -2.786879145011608
+            ],
+            "P": [
+              0,
+              0
+            ]
+          },
+          "segs": [
+            [
+              "A",
+              "P",
+              {
+                "label": "9"
+              }
+            ],
+            [
+              "P",
+              "B",
+              {
+                "label": "2"
+              }
+            ],
+            [
+              "C",
+              "P",
+              {
+                "label": "6"
+              }
+            ],
+            [
+              "P",
+              "D"
+            ]
+          ]
+        }
+      },
+      "difficulty": {
+        "scalePoint": 700,
+        "band": "B7",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "intersecting_chords_fig"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "intersecting_chords_fig"
+      },
+      "fingerprint": [
+        "composite_fig",
+        "intersecting_chords",
+        "9_2_6",
+        "2d"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 29,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "GEO.B7.s3",
+      "skill": "composite_figures",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "From external point "
+        },
+        {
+          "t": "math",
+          "v": "P"
+        },
+        {
+          "t": "text",
+          "v": ", segment "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{PT}"
+        },
+        {
+          "t": "text",
+          "v": " is tangent to the circle with center "
+        },
+        {
+          "t": "math",
+          "v": "O"
+        },
+        {
+          "t": "text",
+          "v": " at "
+        },
+        {
+          "t": "math",
+          "v": "T"
+        },
+        {
+          "t": "text",
+          "v": " (so "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{PT}\\perp\\overline{OT}"
+        },
+        {
+          "t": "text",
+          "v": "). If the radius is "
+        },
+        {
+          "t": "math",
+          "v": "3"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "OP = 5"
+        },
+        {
+          "t": "text",
+          "v": " (shown), what is the length of "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{PT}"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "4"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. tangent pythagorean: "
+        },
+        {
+          "t": "math",
+          "v": "PT = \\sqrt{OP^2 - r^2} = \\sqrt{5^2 - 3^2} = \\sqrt{16} = 4"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "scene",
+        "spec": {
+          "w": 300,
+          "h": 230,
+          "circle": {
+            "c": [
+              0,
+              0
+            ],
+            "r": 3
+          },
+          "pts": {
+            "O": [
+              0,
+              0
+            ],
+            "P": [
+              5,
+              0
+            ],
+            "T": [
+              1.8,
+              2.4
+            ]
+          },
+          "segs": [
+            [
+              "O",
+              "T",
+              {
+                "label": "3"
+              }
+            ],
+            [
+              "O",
+              "P",
+              {
+                "label": "5"
+              }
+            ],
+            [
+              "P",
+              "T"
+            ]
+          ],
+          "angles": [
+            {
+              "at": "T",
+              "from": "O",
+              "to": "P",
+              "right": true
+            }
+          ]
+        }
+      },
+      "difficulty": {
+        "scalePoint": 700,
+        "band": "B7",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "tangent_length_fig"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "tangent_length_fig"
+      },
+      "fingerprint": [
+        "composite_fig",
+        "tangent_length",
+        "r3_d5",
+        "2d"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 30,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "GEO.B7.s2",
+      "skill": "composite_figures",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "In right triangle "
+        },
+        {
+          "t": "math",
+          "v": "ABC"
+        },
+        {
+          "t": "text",
+          "v": " shown, the altitude from the right angle at "
+        },
+        {
+          "t": "math",
+          "v": "C"
+        },
+        {
+          "t": "text",
+          "v": " meets the hypotenuse "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{AB}"
+        },
+        {
+          "t": "text",
+          "v": " at "
+        },
+        {
+          "t": "math",
+          "v": "H"
+        },
+        {
+          "t": "text",
+          "v": ". If "
+        },
+        {
+          "t": "math",
+          "v": "AH = 3"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "HB = 12"
+        },
+        {
+          "t": "text",
+          "v": ", what is the length of "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{CH}"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "6"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. geometric mean: "
+        },
+        {
+          "t": "math",
+          "v": "CH = \\sqrt{AH\\cdot HB} = \\sqrt{3\\cdot 12} = \\sqrt{36} = 6"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "scene",
+        "spec": {
+          "w": 330,
+          "h": 210,
+          "pts": {
+            "A": [
+              0,
+              0
+            ],
+            "B": [
+              15,
+              0
+            ],
+            "C": [
+              3,
+              6
+            ],
+            "H": [
+              3,
+              0
+            ]
+          },
+          "segs": [
+            [
+              "A",
+              "H",
+              {
+                "label": "3"
+              }
+            ],
+            [
+              "H",
+              "B",
+              {
+                "label": "12"
+              }
+            ],
+            [
+              "A",
+              "C"
+            ],
+            [
+              "C",
+              "B"
+            ],
+            [
+              "C",
+              "H"
+            ]
+          ],
+          "angles": [
+            {
+              "at": "C",
+              "from": "A",
+              "to": "B",
+              "right": true
+            },
+            {
+              "at": "H",
+              "from": "C",
+              "to": "B",
+              "right": true
+            }
+          ]
+        }
+      },
+      "difficulty": {
+        "scalePoint": 700,
+        "band": "B7",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "right_triangle_altitude_fig"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "right_triangle_altitude_fig"
+      },
+      "fingerprint": [
+        "composite_fig",
+        "right_triangle_altitude",
+        "3_12",
+        "2d"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 31,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B6",
+      "target_band": "B6",
+      "statementId": "GEO.B6.s2",
+      "skill": "composite_figures",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The rhombus shown has perpendicular diagonals. One diagonal has length "
+        },
+        {
+          "t": "math",
+          "v": "12"
+        },
+        {
+          "t": "text",
+          "v": " and each side has length "
+        },
+        {
+          "t": "math",
+          "v": "10"
+        },
+        {
+          "t": "text",
+          "v": " (in inches). What is the length, in inches, of the other diagonal?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "16"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. rhombus pythagorean: "
+        },
+        {
+          "t": "text",
+          "v": "Half-diagonals: "
+        },
+        {
+          "t": "math",
+          "v": "(12/2)^2 + x^2 = 10^2 \\Rightarrow x = 8"
+        },
+        {
+          "t": "text",
+          "v": "; the other diagonal "
+        },
+        {
+          "t": "math",
+          "v": "= 2(8) = 16"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "scene",
+        "spec": {
+          "w": 240,
+          "h": 240,
+          "pts": {
+            "R": [
+              6,
+              0
+            ],
+            "T": [
+              0,
+              8
+            ],
+            "L": [
+              -6,
+              0
+            ],
+            "B": [
+              0,
+              -8
+            ],
+            "O": [
+              0,
+              0
+            ]
+          },
+          "segs": [
+            [
+              "R",
+              "T",
+              {
+                "label": "10"
+              }
+            ],
+            [
+              "T",
+              "L"
+            ],
+            [
+              "L",
+              "B"
+            ],
+            [
+              "B",
+              "R"
+            ],
+            [
+              "R",
+              "L",
+              {
+                "label": "12"
+              }
+            ],
+            [
+              "T",
+              "B"
+            ]
+          ],
+          "angles": [
+            {
+              "at": "O",
+              "from": "R",
+              "to": "T",
+              "right": true
+            }
+          ],
+          "ptLabels": {
+            "R": "",
+            "T": "",
+            "L": "",
+            "B": "",
+            "O": ""
+          }
+        }
+      },
+      "difficulty": {
+        "scalePoint": 630,
+        "band": "B6",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "rhombus_diagonal_fig"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "rhombus_diagonal_fig"
+      },
+      "fingerprint": [
+        "composite_fig",
+        "rhombus_diagonal",
+        "6_8_10",
+        "2d"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 32,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "GEO.B7.s3",
+      "skill": "composite_figures",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "In the circle with center "
+        },
+        {
+          "t": "math",
+          "v": "O"
+        },
+        {
+          "t": "text",
+          "v": " shown, "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{AB}"
+        },
+        {
+          "t": "text",
+          "v": " is a diameter and "
+        },
+        {
+          "t": "math",
+          "v": "C"
+        },
+        {
+          "t": "text",
+          "v": " lies on the circle. If "
+        },
+        {
+          "t": "math",
+          "v": "m\\angle BAC = 43^\\circ"
+        },
+        {
+          "t": "text",
+          "v": ", what is the measure, in degrees, of "
+        },
+        {
+          "t": "math",
+          "v": "\\angle ABC"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "47"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. angle in semicircle: "
+        },
+        {
+          "t": "text",
+          "v": "An angle inscribed in a semicircle is right: "
+        },
+        {
+          "t": "math",
+          "v": "m\\angle ACB = 90^\\circ"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. triangle angle sum: "
+        },
+        {
+          "t": "math",
+          "v": "m\\angle ABC = 180 - 90 - 43 = 47^\\circ"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "scene",
+        "spec": {
+          "w": 300,
+          "h": 210,
+          "showCenter": true,
+          "centerLabel": "O",
+          "circle": {
+            "through": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "pts": {
+            "A": [
+              -1,
+              0
+            ],
+            "B": [
+              1,
+              0
+            ],
+            "C": [
+              0.06975647374412523,
+              0.9975640502598242
+            ]
+          },
+          "segs": [
+            [
+              "A",
+              "B"
+            ],
+            [
+              "A",
+              "C"
+            ],
+            [
+              "B",
+              "C"
+            ]
+          ],
+          "angles": [
+            {
+              "at": "A",
+              "from": "B",
+              "to": "C",
+              "label": "43°",
+              "r": 18
+            }
+          ]
+        }
+      },
+      "difficulty": {
+        "scalePoint": 700,
+        "band": "B7",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "triangle_semicircle_fig"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "triangle_semicircle_fig"
+      },
+      "fingerprint": [
+        "composite_fig",
+        "triangle_semicircle",
+        "a43",
+        "2d"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 33,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B6",
+      "target_band": "B6",
+      "statementId": "GEO.B6.s2",
+      "skill": "composite_figures",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "In triangle "
+        },
+        {
+          "t": "math",
+          "v": "ABC"
+        },
+        {
+          "t": "text",
+          "v": " shown, "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{DE}\\parallel\\overline{BC}"
+        },
+        {
+          "t": "text",
+          "v": " with "
+        },
+        {
+          "t": "math",
+          "v": "D"
+        },
+        {
+          "t": "text",
+          "v": " on "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{AB}"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "E"
+        },
+        {
+          "t": "text",
+          "v": " on "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{AC}"
+        },
+        {
+          "t": "text",
+          "v": ". The marked lengths are in centimeters. What is the length, in centimeters, of "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{EC}"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "6"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. similar proportion: "
+        },
+        {
+          "t": "math",
+          "v": "\\dfrac{AD}{DB} = \\dfrac{AE}{EC}\\Rightarrow EC = \\dfrac{AE\\cdot DB}{AD} = \\dfrac{3\\cdot 8}{4} = 6"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "scene",
+        "spec": {
+          "w": 300,
+          "h": 230,
+          "pts": {
+            "A": [
+              0,
+              7
+            ],
+            "B": [
+              -5,
+              0
+            ],
+            "C": [
+              6,
+              0
+            ],
+            "D": [
+              -1.6666666666666665,
+              4.666666666666667
+            ],
+            "E": [
+              2,
+              4.666666666666667
+            ]
+          },
+          "segs": [
+            [
+              "A",
+              "D",
+              {
+                "label": "4"
+              }
+            ],
+            [
+              "D",
+              "B",
+              {
+                "label": "8"
+              }
+            ],
+            [
+              "A",
+              "E",
+              {
+                "label": "3"
+              }
+            ],
+            [
+              "E",
+              "C"
+            ],
+            [
+              "B",
+              "C"
+            ],
+            [
+              "D",
+              "E"
+            ]
+          ]
+        }
+      },
+      "difficulty": {
+        "scalePoint": 630,
+        "band": "B6",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "similar_parallel_fig"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "similar_parallel_fig"
+      },
+      "fingerprint": [
+        "composite_fig",
+        "similar_parallel",
+        "4_8_3",
+        "2d"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 34,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B6",
+      "target_band": "B6",
+      "statementId": "GEO.B6.s1",
+      "skill": "composite_figures",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "A square is inscribed in a circle of radius "
+        },
+        {
+          "t": "math",
+          "v": "9"
+        },
+        {
+          "t": "text",
+          "v": " (shown), with all four vertices on the circle. What is the area of the square?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "162"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. diagonal area: "
+        },
+        {
+          "t": "text",
+          "v": "The diagonal equals the diameter "
+        },
+        {
+          "t": "math",
+          "v": "= 2(9) = 18"
+        },
+        {
+          "t": "text",
+          "v": "; area "
+        },
+        {
+          "t": "math",
+          "v": "= \\tfrac12 d^2 = \\tfrac12(18)^2 = 162"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "scene",
+        "spec": {
+          "w": 250,
+          "h": 250,
+          "circle": {
+            "c": [
+              0,
+              0
+            ],
+            "r": 9
+          },
+          "pts": {
+            "O": [
+              0,
+              0
+            ],
+            "P": [
+              6.363961030678928,
+              6.363961030678928
+            ],
+            "Q": [
+              -6.363961030678928,
+              6.363961030678928
+            ],
+            "R": [
+              -6.363961030678928,
+              -6.363961030678928
+            ],
+            "S": [
+              6.363961030678928,
+              -6.363961030678928
+            ]
+          },
+          "segs": [
+            [
+              "P",
+              "Q"
+            ],
+            [
+              "Q",
+              "R"
+            ],
+            [
+              "R",
+              "S"
+            ],
+            [
+              "S",
+              "P"
+            ],
+            [
+              "O",
+              "P",
+              {
+                "label": "9"
+              }
+            ]
+          ],
+          "ptLabels": {
+            "O": "O",
+            "P": "",
+            "Q": "",
+            "R": "",
+            "S": ""
+          }
+        }
+      },
+      "difficulty": {
+        "scalePoint": 630,
+        "band": "B6",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "square_in_circle_fig"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "square_in_circle_fig"
+      },
+      "fingerprint": [
+        "composite_fig",
+        "square_in_circle",
+        "r9",
+        "2d"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 35,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B6",
+      "target_band": "B6",
+      "statementId": "GEO.B6.s2",
+      "skill": "composite_figures",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "In parallelogram "
+        },
+        {
+          "t": "math",
+          "v": "ABCD"
+        },
+        {
+          "t": "text",
+          "v": " shown (not drawn to scale), diagonal "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{AC}"
+        },
+        {
+          "t": "text",
+          "v": " is drawn. If "
+        },
+        {
+          "t": "math",
+          "v": "m\\angle ABC = 75^\\circ"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "m\\angle DAC = 33^\\circ"
+        },
+        {
+          "t": "text",
+          "v": ", what is the measure, in degrees, of "
+        },
+        {
+          "t": "math",
+          "v": "\\angle CAB"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "72"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. consecutive angles: "
+        },
+        {
+          "t": "text",
+          "v": "Consecutive angles of a parallelogram are supplementary: "
+        },
+        {
+          "t": "math",
+          "v": "m\\angle DAB = 180 - 75 = 105^\\circ"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. angle subtract: "
+        },
+        {
+          "t": "math",
+          "v": "m\\angle CAB = m\\angle DAB - m\\angle DAC = 105 - 33 = 72^\\circ"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "scene",
+        "spec": {
+          "w": 320,
+          "h": 220,
+          "pts": {
+            "A": [
+              0,
+              0
+            ],
+            "B": [
+              5,
+              0
+            ],
+            "C": [
+              6.5,
+              2.4
+            ],
+            "D": [
+              1.5,
+              2.4
+            ]
+          },
+          "segs": [
+            [
+              "A",
+              "B"
+            ],
+            [
+              "B",
+              "C"
+            ],
+            [
+              "C",
+              "D"
+            ],
+            [
+              "D",
+              "A"
+            ],
+            [
+              "A",
+              "C"
+            ]
+          ],
+          "angles": [
+            {
+              "at": "B",
+              "from": "A",
+              "to": "C",
+              "label": "75°"
+            },
+            {
+              "at": "A",
+              "from": "D",
+              "to": "C",
+              "label": "33°",
+              "r": 16
+            }
+          ]
+        }
+      },
+      "difficulty": {
+        "scalePoint": 630,
+        "band": "B6",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "parallelogram_diagonal_fig"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "parallelogram_diagonal_fig"
+      },
+      "fingerprint": [
+        "composite_fig",
+        "parallelogram_diagonal",
+        "b75_p33",
+        "2d"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 36,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B6",
+      "target_band": "B6",
+      "statementId": "GEO.B6.s2",
+      "skill": "composite_figures",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "In triangle "
+        },
+        {
+          "t": "math",
+          "v": "ABC"
+        },
+        {
+          "t": "text",
+          "v": " shown, "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{DE}\\parallel\\overline{BC}"
+        },
+        {
+          "t": "text",
+          "v": " with "
+        },
+        {
+          "t": "math",
+          "v": "D"
+        },
+        {
+          "t": "text",
+          "v": " on "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{AB}"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "E"
+        },
+        {
+          "t": "text",
+          "v": " on "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{AC}"
+        },
+        {
+          "t": "text",
+          "v": ". The marked lengths are in centimeters. What is the length, in centimeters, of "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{EC}"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "8"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. similar proportion: "
+        },
+        {
+          "t": "math",
+          "v": "\\dfrac{AD}{DB} = \\dfrac{AE}{EC}\\Rightarrow EC = \\dfrac{AE\\cdot DB}{AD} = \\dfrac{4\\cdot 10}{5} = 8"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "scene",
+        "spec": {
+          "w": 300,
+          "h": 230,
+          "pts": {
+            "A": [
+              0,
+              7
+            ],
+            "B": [
+              -5,
+              0
+            ],
+            "C": [
+              6,
+              0
+            ],
+            "D": [
+              -1.6666666666666665,
+              4.666666666666667
+            ],
+            "E": [
+              2,
+              4.666666666666667
+            ]
+          },
+          "segs": [
+            [
+              "A",
+              "D",
+              {
+                "label": "5"
+              }
+            ],
+            [
+              "D",
+              "B",
+              {
+                "label": "10"
+              }
+            ],
+            [
+              "A",
+              "E",
+              {
+                "label": "4"
+              }
+            ],
+            [
+              "E",
+              "C"
+            ],
+            [
+              "B",
+              "C"
+            ],
+            [
+              "D",
+              "E"
+            ]
+          ]
+        }
+      },
+      "difficulty": {
+        "scalePoint": 630,
+        "band": "B6",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "similar_parallel_fig"
+        }
+      },
+      "verify": {
+        "tier": "C",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "similar_parallel_fig"
+      },
+      "fingerprint": [
+        "composite_fig",
+        "similar_parallel",
+        "5_10_4",
         "2d"
       ],
       "reskinDistance": 1,

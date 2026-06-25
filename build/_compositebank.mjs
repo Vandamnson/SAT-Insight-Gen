@@ -14,8 +14,8 @@ const stripped = before.filter((l) => !isComp(l));
 writeFileSync(BANK, stripped.join("\n") + "\n");
 console.log(`bank: ${before.length} → ${stripped.length} (removed ${before.length - stripped.length} old composite_fig items)`);
 
-const N = Number(process.argv[2] || 24);
-const kept = await generateCell("geometry_trig", "composite_figures", N, ["B4", "B6", "B7"], { i: 0 });
+const N = Number(process.argv[2] || 40);
+const kept = await generateCell("geometry_trig", "composite_figures", N, ["B4", "B5", "B6", "B7"], { i: 0 });
 const qs = kept.map((s, i) => toRenderItem(s, i + 1));
 
 writeFileSync(join(ROOT, "data", "test-117.json"),
