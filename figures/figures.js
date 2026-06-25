@@ -510,6 +510,39 @@ export function rectangle(spec) {
   return svg(W, H, out.join(""), { aria: spec.title || "rectangle" });
 }
 
+/* =========================================================================
+   prism — a rectangular box (right rectangular prism / cube) in cabinet oblique
+   projection: front face true-size, depth receding up-right at 45° at half scale.
+   Hidden back edges dashed. Edge labels: width (front-bottom), height (front-left),
+   length/depth (top receding edge). spec.dims {l,w,h} set the DRAWN proportions
+   (clamped so no edge becomes a sliver — the extreme-geometry rule); spec.labels
+   {l,w,h} are the displayed measures. cube => pass equal dims.
+   ========================================================================= */
+export function prism(spec) {
+  const d = spec.dims || { l: 1, w: 1, h: 1 };
+  const maxd = Math.max(d.l, d.w, d.h) || 1;
+  const base = 130, clamp = (v) => Math.max(0.4, Math.min(1, v / maxd));
+  const fw = base * clamp(d.w), fh = base * clamp(d.h), dp = base * clamp(d.l) * 0.5;   // dp = receding half-depth (cabinet)
+  const W = fw + dp + 96, H = fh + dp + 70, ox = 48, oy = H - 36;                        // front-bottom-left
+  const FBL = [ox, oy], FBR = [ox + fw, oy], FTR = [ox + fw, oy - fh], FTL = [ox, oy - fh];
+  const off = (p) => [p[0] + dp, p[1] - dp];
+  const BBL = off(FBL), BBR = off(FBR), BTR = off(FTR), BTL = off(FTL);
+  const seg = (a, b, dash) => line(a[0], a[1], b[0], b[1], "fig-stroke", `stroke-width="1.5"${dash ? ' stroke-dasharray="4 3"' : ""}`);
+  const L = spec.labels || {};
+  const out = [
+    // hidden back edges first (dashed), so solid edges overlay
+    seg(FBL, BBL, 1), seg(BBL, BBR, 1), seg(BBL, BTL, 1),
+    // front face
+    seg(FBL, FBR), seg(FBR, FTR), seg(FTR, FTL), seg(FTL, FBL),
+    // receding + back-visible edges
+    seg(FTL, BTL), seg(FTR, BTR), seg(BTL, BTR), seg(FBR, BBR), seg(BBR, BTR),
+  ];
+  if (L.w) out.push(txt((FBL[0] + FBR[0]) / 2, oy + 15, L.w, { size: FONT }));
+  if (L.h) out.push(txt(ox - 9, oy - fh / 2, L.h, { anchor: "end", size: FONT }));
+  if (L.l) { const m = [(FTR[0] + BTR[0]) / 2, (FTR[1] + BTR[1]) / 2]; out.push(txt(m[0] + 8, m[1] - 4, L.l, { anchor: "start", size: FONT })); }
+  return svg(W, H, defs() + out.join(""), { aria: spec.title || "rectangular prism" });
+}
+
 // arrowhead as a path (rule 1: compute-don't-eyeball). Legs are the back-
 // direction (unit vector pointing FROM the tip back into the line) rotated by
 // +-halfAngle, so the head stays symmetric about the line's axis at ANY slope.

@@ -56,6 +56,9 @@ export function figureCheck(cell) {
     return { keep: true };
   }
 
+  // 3D-solid figure items (GEO-2): a labeled prism/cube — verify the labels yield the answer.
+  if (num0?.figure?.fn === "prism") return checkPrism(cell.incidentals.numbers);
+
   const fig = num0?.figure;
   if (!fig || fig.fn !== "coordPlane") return { keep: false, reason: "graph item missing coordPlane figure" };
   const spec = fig.spec;
@@ -164,6 +167,20 @@ function checkNonlinear(task, num, spec) {
     return { keep: true };
   }
   return { keep: true };
+}
+
+/* GEO-2 prism/cube self-consistency: the labeled edge lengths must yield the stated
+   volume / surface area / solved dimension. Correct by construction; this guards drawer bugs. */
+function checkPrism(num) {
+  const d = num.figure?.spec?.dims;
+  if (!d || ![d.l, d.w, d.h].every(Number.isFinite)) return { keep: false, reason: "prism missing numeric dims" };
+  const { l, w, h } = d, ans = Number(num.answer), t = num.task;
+  let ok = true;
+  if (t === "prism_volume_fig") ok = l * w * h === ans;
+  else if (t === "cube_fig") ok = l === w && w === h && (ans === l ** 3 || ans === 6 * l * l);
+  else if (t === "prism_surface_fig") ok = 2 * (l * w + l * h + w * h) === ans;
+  else if (t === "prism_solve_dim_fig") ok = h === ans;
+  return ok ? { keep: true } : { keep: false, reason: `prism ${t}: dims ${l}×${w}×${h} don't yield answer ${ans}` };
 }
 
 export default { figureCheck };

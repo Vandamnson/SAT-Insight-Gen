@@ -85,6 +85,19 @@
       "task_tier": { "circle_equation": "A", "arc_length": "A", "sector_area": "A", "circle_angle": "B", "tangent": "B" },
       "canonical_fingerprint": ["apply_circle_formula"],
       "op_vocab": ["apply_circle_formula", "distance_radius", "arc_length_formula", "sector_area_formula", "central_inscribed_angle", "tangent_property", "evaluate"]
+    },
+    "solid_figures": {
+      "label": "3D solids shown with a labeled figure (volume, surface area)",
+      "target": "read a labeled prism/cube figure and compute a volume, surface area, or missing dimension",
+      "_note": "GEO-2 Tier C (construct-backward, NO LLM): the figures.js `prism` figure pins the dimensions AND the answer; the selector gates with figureCheck's prism arm + legibility. The FIGURE form of the volume/surface-area statements GEO.B1.s1 / B4.s1 / B6.s1.",
+      "statementByBand": { "B1": "GEO.B1.s1", "B4": "GEO.B4.s1", "B6": "GEO.B6.s1" },
+      "statementByTask": { "prism_volume_fig": "GEO.B1.s1", "cube_fig": "GEO.B4.s1", "prism_surface_fig": "GEO.B6.s1", "prism_solve_dim_fig": "GEO.B6.s1" },
+      "radical_axes": { "task": ["prism_volume_fig", "cube_fig", "prism_surface_fig", "prism_solve_dim_fig"] },
+      "incidental_axes": { "context": "@contexts", "var_name": ["l", "w", "h", "s"], "coefficient_range": [2, 9], "constant_range": [1, 50] },
+      "lltm": { "weights": { "w0": 340, "task": { "prism_volume_fig": 0, "cube_fig": 170, "prism_surface_fig": 305, "prism_solve_dim_fig": 305 } } },
+      "task_tier": { "prism_volume_fig": "C", "cube_fig": "C", "prism_surface_fig": "C", "prism_solve_dim_fig": "C" },
+      "canonical_fingerprint": ["read_solid"],
+      "op_vocab": ["apply_volume_formula", "apply_surface_area", "isolate_dimension"]
     }
   }
 }

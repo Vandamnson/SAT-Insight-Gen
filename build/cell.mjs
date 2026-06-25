@@ -14,6 +14,7 @@ import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 import { schemaFor, radicalsForBand, nearestRadicals, predictDifficulty } from "../difficulty/lltm.mjs";
 import { drawGraphItem, GRAPH_TASKS } from "./graph.mjs";
+import { drawSolidFig } from "./solidfig.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const CONTEXTS = (() => { const c = JSON.parse(readFileSync(join(ROOT, "taxonomy", "contexts.json"), "utf8")); return (c.contexts || c).map(String); })();
@@ -247,6 +248,9 @@ function drawRightTrig(rad, { context }) {
   };
   return mf(D[rad.task] || D.pythagorean_hyp, ctx);
 }
+/* geometry GEO-2: 3D-solid FIGURE items (Tier C, construct-backward in solidfig.mjs) */
+function drawSolidFigure(rad, { r, band }) { return drawSolidFig(rad.task, band, r); }
+
 function drawCircles(rad, { context }) {
   const ctx = ctxLineMF(context);
   const D = {
@@ -273,6 +277,7 @@ const DRAWERS = {
   lines_angles_triangles: drawLinesAngles,
   right_triangles_trig: drawRightTrig,
   circles: drawCircles,
+  solid_figures: drawSolidFigure,
 };
 
 // tasks the real SAT poses ABSTRACTLY (bare equation/lines, no scenario) — they ask
