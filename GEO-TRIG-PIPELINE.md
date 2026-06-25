@@ -37,5 +37,12 @@ Geometry plugs into the existing engine with **no mechanism changes**:
 - **B1 is structurally thin** — only one subdomain (area_volume) reaches Band 1, so low-band volume is bounded by that subdomain's task variety. Generation is weighted toward B1–B4 to correct the Mod2 import's B6/B7 skew, but B1 stays the hardest to fill.
 - **Authoring nits** — the model-first author occasionally over-contextualizes (a triangle area set "over a swimming pool") or names a gratuitous variable (`height h = 8`); cosmetic, consistent with the other domains.
 
+## Blind QA pass (40-item module, 2026-06-25)
+Four blind agents independently solved all 40 banked items **from the question text alone** (no answer, no figure — the GEO-1 premise under test), adjudicated against the construction key.
+- **Correctness: 40/40.** Three apparent mismatches were all equivalences: unicode `√` vs `\sqrt` (Q17 `4√11`, Q32 `3√13/13`) and an exact-vs-gridded-decimal SPR (Q39: √325 = `5√13` ≈ `18.03`, where the stem correctly says "round to the nearest hundredth" — an irrational student-produced response must be gridded as a decimal).
+- **Well-posedness: clean.** 37 clean + 3 "minor-doubt" (dense angle-position / intersecting-segment phrasing in Q05/Q30/Q37) — **all three still solved correctly**, confirming no item secretly depends on a figure. The Tier-B consistency gate's well-posedness filter held.
+- **Nits (no fix):** occasional verbose `@contexts` framing and a "diameter h" naming; cosmetic, consistent with the other domains.
+- **Refinement noted:** the prompt pack's "never decimals" rule is right for MCQ (exact radical options) but, for SPR with an irrational value, gridding as a rounded decimal with a "round to…" instruction is the correct SAT form — the author already does this; the rule could say so explicitly.
+
 ## Deferred — GEO-2 (figures)
 Reuse `figures.js` triangle/polygon/circle/parallelLines/parallelogram; build the real gaps — **3D solids** (prism/cube/pyramid/cylinder, none exist), **circle arcs/sectors + labels**, **right-triangle trig & special-triangle labeling**, **angle arcs on `triangle`**, **congruence ticks** — then construct-backward "read-from-figure" (Tier C) variants + geometry `figurecheck`/`legibility` arms. (`gen/diagramgen.mjs` is DISABLED and not SAT-aligned — supersede, don't revive.)
