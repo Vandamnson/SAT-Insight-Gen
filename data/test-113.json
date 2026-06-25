@@ -1,0 +1,9132 @@
+{
+  "number": 113,
+  "title": "BUILD_SPEC · geometry_trig (whole domain, B1–B7)",
+  "questions": [
+    {
+      "id": 1,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B1",
+      "target_band": "B1",
+      "statementId": "GEO.B1.s1",
+      "skill": "area_volume",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "A vinyl shop's record bin is a rectangular box "
+        },
+        {
+          "t": "math",
+          "v": "16"
+        },
+        {
+          "t": "text",
+          "v": " inches long, "
+        },
+        {
+          "t": "math",
+          "v": "13"
+        },
+        {
+          "t": "text",
+          "v": " inches wide, and "
+        },
+        {
+          "t": "math",
+          "v": "11"
+        },
+        {
+          "t": "text",
+          "v": " inches tall. What is the volume, in cubic inches, of the bin?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "40"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "527"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "1{,}054"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "2{,}288"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "D"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. apply volume formula: "
+        },
+        {
+          "t": "text",
+          "v": "For a right rectangular prism, volume "
+        },
+        {
+          "t": "math",
+          "v": "V = \\ell w h"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. substitute: "
+        },
+        {
+          "t": "text",
+          "v": "Substitute the edge lengths: "
+        },
+        {
+          "t": "math",
+          "v": "V = 16 \\cdot 13 \\cdot 11"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. evaluate: "
+        },
+        {
+          "t": "text",
+          "v": "Multiply "
+        },
+        {
+          "t": "math",
+          "v": "16 \\cdot 13 = 208"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "4. evaluate: "
+        },
+        {
+          "t": "text",
+          "v": "Multiply "
+        },
+        {
+          "t": "math",
+          "v": "208 \\cdot 11 = 2288"
+        },
+        {
+          "t": "text",
+          "v": " cubic inches."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 355,
+        "band": "B1",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "prism_volume",
+          "from_context": true,
+          "has_fraction_or_irrational": false
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "prism_volume",
+        "from_context": true,
+        "has_fraction_or_irrational": false
+      },
+      "fingerprint": [
+        "apply_volume_formula",
+        "substitute",
+        "evaluate",
+        "evaluate"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 2,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B1",
+      "target_band": "B1",
+      "statementId": "GEO.B1.s2",
+      "skill": "area_volume",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "A rectangle has length "
+        },
+        {
+          "t": "math",
+          "v": "17"
+        },
+        {
+          "t": "text",
+          "v": " and width "
+        },
+        {
+          "t": "math",
+          "v": "12"
+        },
+        {
+          "t": "text",
+          "v": ". What is the area of the rectangle?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "29"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "58"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "204"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "408"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "C"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. apply area formula: "
+        },
+        {
+          "t": "text",
+          "v": "Area of a rectangle is "
+        },
+        {
+          "t": "math",
+          "v": "A = \\ell \\times w"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. substitute: "
+        },
+        {
+          "t": "text",
+          "v": "Substitute "
+        },
+        {
+          "t": "math",
+          "v": "\\ell = 17"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "w = 12"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "math",
+          "v": "A = 17 \\times 12"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. evaluate: "
+        },
+        {
+          "t": "text",
+          "v": "Multiply: "
+        },
+        {
+          "t": "math",
+          "v": "17 \\times 12 = 204"
+        },
+        {
+          "t": "text",
+          "v": ". Reject "
+        },
+        {
+          "t": "math",
+          "v": "58 = 2(17+12)"
+        },
+        {
+          "t": "text",
+          "v": " perimeter, "
+        },
+        {
+          "t": "math",
+          "v": "29 = 17+12"
+        },
+        {
+          "t": "text",
+          "v": " sum, "
+        },
+        {
+          "t": "math",
+          "v": "408 = 2\\ell w"
+        },
+        {
+          "t": "text",
+          "v": " doubled area."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 340,
+        "band": "B1",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "rect_area",
+          "from_context": false,
+          "has_fraction_or_irrational": false
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "rect_area",
+        "from_context": false,
+        "has_fraction_or_irrational": false
+      },
+      "fingerprint": [
+        "apply_area_formula",
+        "substitute",
+        "evaluate"
+      ],
+      "reskinDistance": 0.667,
+      "tier": "build-spec"
+    },
+    {
+      "id": 3,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B2",
+      "target_band": "B2",
+      "statementId": "GEO.B2.s1",
+      "skill": "area_volume",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "A rectangle has a length of "
+        },
+        {
+          "t": "math",
+          "v": "17"
+        },
+        {
+          "t": "text",
+          "v": " and a width of "
+        },
+        {
+          "t": "math",
+          "v": "12"
+        },
+        {
+          "t": "text",
+          "v": ". What is the perimeter of the rectangle?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "29"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "46"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "58"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "204"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "C"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. apply perimeter formula: "
+        },
+        {
+          "t": "text",
+          "v": "Use the rectangle perimeter formula "
+        },
+        {
+          "t": "math",
+          "v": "P = 2(l + w)"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. substitute: "
+        },
+        {
+          "t": "text",
+          "v": "Substitute "
+        },
+        {
+          "t": "math",
+          "v": "l = 17"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "w = 12"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "math",
+          "v": "P = 2(17 + 12)"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. evaluate: "
+        },
+        {
+          "t": "text",
+          "v": "Add length and width: "
+        },
+        {
+          "t": "math",
+          "v": "17 + 12 = 29"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "4. evaluate: "
+        },
+        {
+          "t": "text",
+          "v": "Double the sum: "
+        },
+        {
+          "t": "math",
+          "v": "2 \\times 29 = 58"
+        },
+        {
+          "t": "text",
+          "v": ". Distractors: "
+        },
+        {
+          "t": "math",
+          "v": "29"
+        },
+        {
+          "t": "text",
+          "v": " forgets to double, "
+        },
+        {
+          "t": "math",
+          "v": "46 = 2l + w"
+        },
+        {
+          "t": "text",
+          "v": " counts only three sides, "
+        },
+        {
+          "t": "math",
+          "v": "204 = 17 \\cdot 12"
+        },
+        {
+          "t": "text",
+          "v": " is the area."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 395,
+        "band": "B2",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "perimeter",
+          "from_context": false,
+          "has_fraction_or_irrational": false
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "perimeter",
+        "from_context": false,
+        "has_fraction_or_irrational": false
+      },
+      "fingerprint": [
+        "apply_perimeter_formula",
+        "substitute",
+        "evaluate",
+        "evaluate"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 4,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B2",
+      "target_band": "B2",
+      "statementId": "GEO.B2.s1",
+      "skill": "area_volume",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "In triangle "
+        },
+        {
+          "t": "math",
+          "v": "ABC"
+        },
+        {
+          "t": "text",
+          "v": ", "
+        },
+        {
+          "t": "math",
+          "v": "AB = 19"
+        },
+        {
+          "t": "text",
+          "v": ", "
+        },
+        {
+          "t": "math",
+          "v": "BC = 26"
+        },
+        {
+          "t": "text",
+          "v": ", and "
+        },
+        {
+          "t": "math",
+          "v": "CA = 34"
+        },
+        {
+          "t": "text",
+          "v": ". What is the perimeter of triangle "
+        },
+        {
+          "t": "math",
+          "v": "ABC"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "79"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. apply perimeter formula: "
+        },
+        {
+          "t": "text",
+          "v": "Perimeter of a triangle equals the sum of its three side lengths: "
+        },
+        {
+          "t": "math",
+          "v": "P = AB + BC + CA"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. substitute: "
+        },
+        {
+          "t": "text",
+          "v": "Substitute the given side lengths: "
+        },
+        {
+          "t": "math",
+          "v": "P = 19 + 26 + 34"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. evaluate: "
+        },
+        {
+          "t": "text",
+          "v": "Add: "
+        },
+        {
+          "t": "math",
+          "v": "19 + 26 = 45"
+        },
+        {
+          "t": "text",
+          "v": ", then "
+        },
+        {
+          "t": "math",
+          "v": "45 + 34 = 79"
+        },
+        {
+          "t": "text",
+          "v": ". (Check: "
+        },
+        {
+          "t": "math",
+          "v": "19 + 26 = 45 > 34"
+        },
+        {
+          "t": "text",
+          "v": ", a valid triangle.)"
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 395,
+        "band": "B2",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "perimeter",
+          "from_context": false,
+          "has_fraction_or_irrational": false
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "perimeter",
+        "from_context": false,
+        "has_fraction_or_irrational": false
+      },
+      "fingerprint": [
+        "apply_perimeter_formula",
+        "substitute",
+        "evaluate"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 5,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B2",
+      "target_band": "B2",
+      "statementId": "GEO.B2.s2",
+      "skill": "lines_angles_triangles",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "Parallel lines "
+        },
+        {
+          "t": "math",
+          "v": "\\ell"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "m"
+        },
+        {
+          "t": "text",
+          "v": " are cut by transversal "
+        },
+        {
+          "t": "math",
+          "v": "t"
+        },
+        {
+          "t": "text",
+          "v": ", meeting "
+        },
+        {
+          "t": "math",
+          "v": "\\ell"
+        },
+        {
+          "t": "text",
+          "v": " at "
+        },
+        {
+          "t": "math",
+          "v": "A"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "m"
+        },
+        {
+          "t": "text",
+          "v": " at "
+        },
+        {
+          "t": "math",
+          "v": "B"
+        },
+        {
+          "t": "text",
+          "v": ". The angle at "
+        },
+        {
+          "t": "math",
+          "v": "A"
+        },
+        {
+          "t": "text",
+          "v": " lying below "
+        },
+        {
+          "t": "math",
+          "v": "\\ell"
+        },
+        {
+          "t": "text",
+          "v": " and to the right of "
+        },
+        {
+          "t": "math",
+          "v": "t"
+        },
+        {
+          "t": "text",
+          "v": " measures "
+        },
+        {
+          "t": "math",
+          "v": "124^\\circ"
+        },
+        {
+          "t": "text",
+          "v": ". What is the measure of the angle at "
+        },
+        {
+          "t": "math",
+          "v": "B"
+        },
+        {
+          "t": "text",
+          "v": " lying below "
+        },
+        {
+          "t": "math",
+          "v": "m"
+        },
+        {
+          "t": "text",
+          "v": " and to the left of "
+        },
+        {
+          "t": "math",
+          "v": "t"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "28^\\circ"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "56^\\circ"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "64^\\circ"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "124^\\circ"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "B"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. parallel transversal rule: "
+        },
+        {
+          "t": "text",
+          "v": "The angle at "
+        },
+        {
+          "t": "math",
+          "v": "B"
+        },
+        {
+          "t": "text",
+          "v": " below "
+        },
+        {
+          "t": "math",
+          "v": "m"
+        },
+        {
+          "t": "text",
+          "v": " and right of "
+        },
+        {
+          "t": "math",
+          "v": "t"
+        },
+        {
+          "t": "text",
+          "v": " is corresponding to the "
+        },
+        {
+          "t": "math",
+          "v": "124^\\circ"
+        },
+        {
+          "t": "text",
+          "v": " angle at "
+        },
+        {
+          "t": "math",
+          "v": "A"
+        },
+        {
+          "t": "text",
+          "v": ", so it also equals "
+        },
+        {
+          "t": "math",
+          "v": "124^\\circ"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. vertical supplementary: "
+        },
+        {
+          "t": "text",
+          "v": "At "
+        },
+        {
+          "t": "math",
+          "v": "B"
+        },
+        {
+          "t": "text",
+          "v": ", the requested angle (below "
+        },
+        {
+          "t": "math",
+          "v": "m"
+        },
+        {
+          "t": "text",
+          "v": ", left of "
+        },
+        {
+          "t": "math",
+          "v": "t"
+        },
+        {
+          "t": "text",
+          "v": ") forms a linear pair with the "
+        },
+        {
+          "t": "math",
+          "v": "124^\\circ"
+        },
+        {
+          "t": "text",
+          "v": " angle (below "
+        },
+        {
+          "t": "math",
+          "v": "m"
+        },
+        {
+          "t": "text",
+          "v": ", right of "
+        },
+        {
+          "t": "math",
+          "v": "t"
+        },
+        {
+          "t": "text",
+          "v": "), so they are supplementary."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. solve for unknown: "
+        },
+        {
+          "t": "text",
+          "v": "Compute "
+        },
+        {
+          "t": "math",
+          "v": "180^\\circ - 124^\\circ = 56^\\circ"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 415,
+        "band": "B2",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "parallel_transversal",
+          "multi_step": true,
+          "has_variable": false
+        }
+      },
+      "verify": {
+        "tier": "B",
+        "correctness": "consistency 5/4"
+      },
+      "radicals": {
+        "task": "parallel_transversal",
+        "multi_step": true,
+        "has_variable": false
+      },
+      "fingerprint": [
+        "parallel_transversal_rule",
+        "vertical_supplementary",
+        "solve_for_unknown"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 6,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B2",
+      "target_band": "B2",
+      "statementId": "GEO.B2.s2",
+      "skill": "lines_angles_triangles",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "Parallel lines "
+        },
+        {
+          "t": "math",
+          "v": "\\ell"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "m"
+        },
+        {
+          "t": "text",
+          "v": " are cut by transversal "
+        },
+        {
+          "t": "math",
+          "v": "t"
+        },
+        {
+          "t": "text",
+          "v": ". Two interior angles lie on the same side of "
+        },
+        {
+          "t": "math",
+          "v": "t"
+        },
+        {
+          "t": "text",
+          "v": ": one measures "
+        },
+        {
+          "t": "math",
+          "v": "73^\\circ"
+        },
+        {
+          "t": "text",
+          "v": " and the other measures "
+        },
+        {
+          "t": "math",
+          "v": "y^\\circ"
+        },
+        {
+          "t": "text",
+          "v": ". What is the value of "
+        },
+        {
+          "t": "math",
+          "v": "y"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "107"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. parallel transversal rule: "
+        },
+        {
+          "t": "text",
+          "v": "The two given angles are interior angles on the same side of the transversal (co-interior / same-side interior angles) of two parallel lines, so they are supplementary and sum to "
+        },
+        {
+          "t": "math",
+          "v": "180^\\circ"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. solve for unknown: "
+        },
+        {
+          "t": "text",
+          "v": "Set up "
+        },
+        {
+          "t": "math",
+          "v": "y + 73 = 180"
+        },
+        {
+          "t": "text",
+          "v": " and solve: "
+        },
+        {
+          "t": "math",
+          "v": "y = 180 - 73 = 107"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 395,
+        "band": "B2",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "parallel_transversal",
+          "multi_step": false,
+          "has_variable": false
+        }
+      },
+      "verify": {
+        "tier": "B",
+        "correctness": "consistency 5/4"
+      },
+      "radicals": {
+        "task": "parallel_transversal",
+        "multi_step": false,
+        "has_variable": false
+      },
+      "fingerprint": [
+        "parallel_transversal_rule",
+        "solve_for_unknown"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 7,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B3",
+      "target_band": "B3",
+      "statementId": "GEO.B3.s1",
+      "skill": "area_volume",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "A farmers market vendor displays heirloom tomatoes on a circular wooden platter of diameter "
+        },
+        {
+          "t": "math",
+          "v": "h = 22"
+        },
+        {
+          "t": "text",
+          "v": " inches. What is the area of the platter's top, in square inches, in terms of "
+        },
+        {
+          "t": "math",
+          "v": "\\pi"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "22\\pi"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "44\\pi"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "121\\pi"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "484\\pi"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "C"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. isolate dimension: "
+        },
+        {
+          "t": "text",
+          "v": "The diameter is "
+        },
+        {
+          "t": "math",
+          "v": "h = 22"
+        },
+        {
+          "t": "text",
+          "v": ", so the radius is "
+        },
+        {
+          "t": "math",
+          "v": "r = \\frac{22}{2} = 11"
+        },
+        {
+          "t": "text",
+          "v": " inches."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. apply area formula: "
+        },
+        {
+          "t": "text",
+          "v": "Area of a circle is "
+        },
+        {
+          "t": "math",
+          "v": "A = \\pi r^2"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. substitute: "
+        },
+        {
+          "t": "text",
+          "v": "Substitute "
+        },
+        {
+          "t": "math",
+          "v": "r = 11"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "math",
+          "v": "A = \\pi (11)^2"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "4. evaluate: "
+        },
+        {
+          "t": "math",
+          "v": "A = 121\\pi"
+        },
+        {
+          "t": "text",
+          "v": " square inches."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 460,
+        "band": "B3",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "circle_area",
+          "from_context": true,
+          "has_fraction_or_irrational": false
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "circle_area",
+        "from_context": true,
+        "has_fraction_or_irrational": false
+      },
+      "fingerprint": [
+        "isolate_dimension",
+        "apply_area_formula",
+        "substitute",
+        "evaluate"
+      ],
+      "reskinDistance": 0.75,
+      "tier": "build-spec"
+    },
+    {
+      "id": 8,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B3",
+      "target_band": "B3",
+      "statementId": "GEO.B3.s1",
+      "skill": "area_volume",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "In triangle "
+        },
+        {
+          "t": "math",
+          "v": "PQR"
+        },
+        {
+          "t": "text",
+          "v": ", the base "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{PQ}"
+        },
+        {
+          "t": "text",
+          "v": " has length "
+        },
+        {
+          "t": "math",
+          "v": "14"
+        },
+        {
+          "t": "text",
+          "v": ", and the height drawn perpendicular to "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{PQ}"
+        },
+        {
+          "t": "text",
+          "v": " measures "
+        },
+        {
+          "t": "math",
+          "v": "9"
+        },
+        {
+          "t": "text",
+          "v": ". What is the area, in square units, of triangle "
+        },
+        {
+          "t": "math",
+          "v": "PQR"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "63"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. apply area formula: "
+        },
+        {
+          "t": "text",
+          "v": "Use the triangle-area formula "
+        },
+        {
+          "t": "math",
+          "v": "A=\\tfrac12\\cdot\\text{base}\\cdot\\text{height}"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. substitute: "
+        },
+        {
+          "t": "text",
+          "v": "Substitute base "
+        },
+        {
+          "t": "math",
+          "v": "=14"
+        },
+        {
+          "t": "text",
+          "v": " and perpendicular height "
+        },
+        {
+          "t": "math",
+          "v": "=9"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "math",
+          "v": "A=\\tfrac12\\cdot 14\\cdot 9"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. evaluate: "
+        },
+        {
+          "t": "text",
+          "v": "Simplify "
+        },
+        {
+          "t": "math",
+          "v": "\\tfrac12\\cdot 14 = 7"
+        },
+        {
+          "t": "text",
+          "v": ", then "
+        },
+        {
+          "t": "math",
+          "v": "7\\cdot 9 = 63"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 445,
+        "band": "B3",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "triangle_area",
+          "from_context": false,
+          "has_fraction_or_irrational": false
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "triangle_area",
+        "from_context": false,
+        "has_fraction_or_irrational": false
+      },
+      "fingerprint": [
+        "apply_area_formula",
+        "substitute",
+        "evaluate"
+      ],
+      "reskinDistance": 0.667,
+      "tier": "build-spec"
+    },
+    {
+      "id": 9,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B3",
+      "target_band": "B3",
+      "statementId": "GEO.B3.s2",
+      "skill": "lines_angles_triangles",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "Two lines intersect at a single point. One of the four angles formed measures "
+        },
+        {
+          "t": "math",
+          "v": "(6y - 5)^\\circ"
+        },
+        {
+          "t": "text",
+          "v": ", and the angle vertical to it measures "
+        },
+        {
+          "t": "math",
+          "v": "79^\\circ"
+        },
+        {
+          "t": "text",
+          "v": ". What is the value of "
+        },
+        {
+          "t": "math",
+          "v": "y"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "14"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. apply angle theorem: "
+        },
+        {
+          "t": "text",
+          "v": "The two named angles are vertical angles, so by the vertical-angle theorem they are congruent."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. vertical supplementary: "
+        },
+        {
+          "t": "text",
+          "v": "Set the expressions equal: "
+        },
+        {
+          "t": "math",
+          "v": "6y - 5 = 79"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. solve for unknown: "
+        },
+        {
+          "t": "text",
+          "v": "Add 5 to both sides: "
+        },
+        {
+          "t": "math",
+          "v": "6y = 84"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "4. solve for unknown: "
+        },
+        {
+          "t": "text",
+          "v": "Divide both sides by 6: "
+        },
+        {
+          "t": "math",
+          "v": "y = 14"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 465,
+        "band": "B3",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "intersecting_angles",
+          "multi_step": false,
+          "has_variable": true
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "intersecting_angles",
+        "multi_step": false,
+        "has_variable": true
+      },
+      "fingerprint": [
+        "apply_angle_theorem",
+        "vertical_supplementary",
+        "solve_for_unknown",
+        "solve_for_unknown"
+      ],
+      "reskinDistance": 0.75,
+      "tier": "build-spec"
+    },
+    {
+      "id": 10,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B3",
+      "target_band": "B3",
+      "statementId": "GEO.B3.s2",
+      "skill": "lines_angles_triangles",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "In triangle "
+        },
+        {
+          "t": "math",
+          "v": "ABC"
+        },
+        {
+          "t": "text",
+          "v": ", the measure of angle "
+        },
+        {
+          "t": "math",
+          "v": "A"
+        },
+        {
+          "t": "text",
+          "v": " is "
+        },
+        {
+          "t": "math",
+          "v": "53^\\circ"
+        },
+        {
+          "t": "text",
+          "v": " and the measure of angle "
+        },
+        {
+          "t": "math",
+          "v": "B"
+        },
+        {
+          "t": "text",
+          "v": " is "
+        },
+        {
+          "t": "math",
+          "v": "68^\\circ"
+        },
+        {
+          "t": "text",
+          "v": ". What is the measure of angle "
+        },
+        {
+          "t": "math",
+          "v": "C"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "15^\\circ"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "59^\\circ"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "112^\\circ"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "121^\\circ"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "B"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. triangle angle sum: "
+        },
+        {
+          "t": "text",
+          "v": "The interior angles of a triangle satisfy "
+        },
+        {
+          "t": "math",
+          "v": "\\angle A + \\angle B + \\angle C = 180^\\circ"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. apply angle theorem: "
+        },
+        {
+          "t": "text",
+          "v": "Add the two known measures: "
+        },
+        {
+          "t": "math",
+          "v": "53^\\circ + 68^\\circ = 121^\\circ"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. solve for unknown: "
+        },
+        {
+          "t": "text",
+          "v": "Subtract from "
+        },
+        {
+          "t": "math",
+          "v": "180^\\circ"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "math",
+          "v": "180^\\circ - 121^\\circ = 59^\\circ"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 465,
+        "band": "B3",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "triangle_angle_sum",
+          "multi_step": true,
+          "has_variable": false
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "triangle_angle_sum",
+        "multi_step": true,
+        "has_variable": false
+      },
+      "fingerprint": [
+        "triangle_angle_sum",
+        "apply_angle_theorem",
+        "solve_for_unknown"
+      ],
+      "reskinDistance": 0.667,
+      "tier": "build-spec"
+    },
+    {
+      "id": 11,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B3",
+      "target_band": "B3",
+      "statementId": "GEO.B3.s3",
+      "skill": "right_triangles_trig",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "A triangular kiln shelf for cooling freshly fired mugs has two perpendicular edges of length "
+        },
+        {
+          "t": "math",
+          "v": "8"
+        },
+        {
+          "t": "text",
+          "v": " inches and "
+        },
+        {
+          "t": "math",
+          "v": "15"
+        },
+        {
+          "t": "text",
+          "v": " inches. The slanted third edge has length "
+        },
+        {
+          "t": "math",
+          "v": "a"
+        },
+        {
+          "t": "text",
+          "v": " inches. What is the value of "
+        },
+        {
+          "t": "math",
+          "v": "a"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "7"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "13"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "17"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "23"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "C"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. apply pythagorean: "
+        },
+        {
+          "t": "text",
+          "v": "The two perpendicular edges are the legs of a right triangle and the slanted edge "
+        },
+        {
+          "t": "math",
+          "v": "a"
+        },
+        {
+          "t": "text",
+          "v": " is the hypotenuse: "
+        },
+        {
+          "t": "math",
+          "v": "a^2 = 8^2 + 15^2"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. apply pythagorean: "
+        },
+        {
+          "t": "text",
+          "v": "Evaluate the squares and sum: "
+        },
+        {
+          "t": "math",
+          "v": "64 + 225 = 289"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. solve for unknown: "
+        },
+        {
+          "t": "text",
+          "v": "Take the positive square root: "
+        },
+        {
+          "t": "math",
+          "v": "a = \\sqrt{289} = 17"
+        },
+        {
+          "t": "text",
+          "v": "; check "
+        },
+        {
+          "t": "math",
+          "v": "17 > 15 > 8"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 460,
+        "band": "B3",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "pythagorean_hyp",
+          "from_context": true,
+          "irrational_answer": false
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "pythagorean_hyp",
+        "from_context": true,
+        "irrational_answer": false
+      },
+      "fingerprint": [
+        "apply_pythagorean",
+        "apply_pythagorean",
+        "solve_for_unknown"
+      ],
+      "reskinDistance": 0.667,
+      "tier": "build-spec"
+    },
+    {
+      "id": 12,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B3",
+      "target_band": "B3",
+      "statementId": "GEO.B3.s3",
+      "skill": "right_triangles_trig",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "In a right triangle, the two legs have lengths "
+        },
+        {
+          "t": "math",
+          "v": "8"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "15"
+        },
+        {
+          "t": "text",
+          "v": ". What is the length "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": " of the hypotenuse, the side opposite the right angle?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "\\sqrt{161}"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "17"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "23"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "289"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "B"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. apply pythagorean: "
+        },
+        {
+          "t": "text",
+          "v": "The two given lengths are the legs and "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": " is the hypotenuse, so "
+        },
+        {
+          "t": "math",
+          "v": "x^2 = 8^2 + 15^2"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. apply pythagorean: "
+        },
+        {
+          "t": "text",
+          "v": "Square each leg: "
+        },
+        {
+          "t": "math",
+          "v": "x^2 = 64 + 225"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. solve for unknown: "
+        },
+        {
+          "t": "text",
+          "v": "Sum the squares: "
+        },
+        {
+          "t": "math",
+          "v": "x^2 = 289"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "4. solve for unknown: "
+        },
+        {
+          "t": "text",
+          "v": "Take the positive square root: "
+        },
+        {
+          "t": "math",
+          "v": "x = \\sqrt{289} = 17"
+        },
+        {
+          "t": "text",
+          "v": " (the "
+        },
+        {
+          "t": "math",
+          "v": "8"
+        },
+        {
+          "t": "text",
+          "v": "-"
+        },
+        {
+          "t": "math",
+          "v": "15"
+        },
+        {
+          "t": "text",
+          "v": "-"
+        },
+        {
+          "t": "math",
+          "v": "17"
+        },
+        {
+          "t": "text",
+          "v": " Pythagorean triple). Distractors: "
+        },
+        {
+          "t": "math",
+          "v": "\\sqrt{161}=\\sqrt{15^2-8^2}"
+        },
+        {
+          "t": "text",
+          "v": " treats a leg as the hypotenuse, "
+        },
+        {
+          "t": "math",
+          "v": "23=8+15"
+        },
+        {
+          "t": "text",
+          "v": " adds the legs, "
+        },
+        {
+          "t": "math",
+          "v": "289"
+        },
+        {
+          "t": "text",
+          "v": " omits the square root."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 445,
+        "band": "B3",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "pythagorean_hyp",
+          "from_context": false,
+          "irrational_answer": false
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "pythagorean_hyp",
+        "from_context": false,
+        "irrational_answer": false
+      },
+      "fingerprint": [
+        "apply_pythagorean",
+        "apply_pythagorean",
+        "solve_for_unknown",
+        "solve_for_unknown"
+      ],
+      "reskinDistance": 0.75,
+      "tier": "build-spec"
+    },
+    {
+      "id": 13,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B4",
+      "target_band": "B4",
+      "statementId": "GEO.B4.s1",
+      "skill": "area_volume",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "A right pyramid has a square base with side length "
+        },
+        {
+          "t": "math",
+          "v": "s=5"
+        },
+        {
+          "t": "text",
+          "v": " and a height of "
+        },
+        {
+          "t": "math",
+          "v": "7"
+        },
+        {
+          "t": "text",
+          "v": ". What is the volume of the pyramid?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "\\frac{35}{3}"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "\\frac{175}{3}"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "175"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "525"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "B"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. apply area formula: "
+        },
+        {
+          "t": "text",
+          "v": "Base is a square of side "
+        },
+        {
+          "t": "math",
+          "v": "s=5"
+        },
+        {
+          "t": "text",
+          "v": ", so base area "
+        },
+        {
+          "t": "math",
+          "v": "=s^2=5^2=25"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. apply volume formula: "
+        },
+        {
+          "t": "text",
+          "v": "Pyramid volume formula: "
+        },
+        {
+          "t": "math",
+          "v": "V=\\frac{1}{3}\\cdot(\\text{base area})\\cdot h"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. substitute: "
+        },
+        {
+          "t": "text",
+          "v": "Substitute base area "
+        },
+        {
+          "t": "math",
+          "v": "=25"
+        },
+        {
+          "t": "text",
+          "v": " and height "
+        },
+        {
+          "t": "math",
+          "v": "h=7"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "math",
+          "v": "V=\\frac{1}{3}(25)(7)"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "4. evaluate: "
+        },
+        {
+          "t": "text",
+          "v": "Multiply: "
+        },
+        {
+          "t": "math",
+          "v": "25\\cdot 7=175"
+        },
+        {
+          "t": "text",
+          "v": ", then apply the "
+        },
+        {
+          "t": "math",
+          "v": "\\frac{1}{3}"
+        },
+        {
+          "t": "text",
+          "v": " factor to get "
+        },
+        {
+          "t": "math",
+          "v": "V=\\frac{175}{3}"
+        },
+        {
+          "t": "text",
+          "v": ". Since "
+        },
+        {
+          "t": "math",
+          "v": "175"
+        },
+        {
+          "t": "text",
+          "v": " is not divisible by "
+        },
+        {
+          "t": "math",
+          "v": "3"
+        },
+        {
+          "t": "text",
+          "v": ", leave it as the exact fraction."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 535,
+        "band": "B4",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "pyramid_volume",
+          "from_context": false,
+          "has_fraction_or_irrational": true
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "pyramid_volume",
+        "from_context": false,
+        "has_fraction_or_irrational": true
+      },
+      "fingerprint": [
+        "apply_area_formula",
+        "apply_volume_formula",
+        "substitute",
+        "evaluate"
+      ],
+      "reskinDistance": 0.75,
+      "tier": "build-spec"
+    },
+    {
+      "id": 14,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B4",
+      "target_band": "B4",
+      "statementId": "GEO.B4.s1",
+      "skill": "area_volume",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "A cube has edge length "
+        },
+        {
+          "t": "math",
+          "v": "s = 3\\sqrt{2}"
+        },
+        {
+          "t": "text",
+          "v": ". What is the volume of the cube?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "9\\sqrt{2}"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "27\\sqrt{2}"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "54"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "54\\sqrt{2}"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "D"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. apply volume formula: "
+        },
+        {
+          "t": "text",
+          "v": "Volume of a cube: "
+        },
+        {
+          "t": "math",
+          "v": "V = s^3"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. substitute: "
+        },
+        {
+          "t": "text",
+          "v": "Substitute the edge length: "
+        },
+        {
+          "t": "math",
+          "v": "V = \\left(3\\sqrt{2}\\right)^3"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. evaluate: "
+        },
+        {
+          "t": "text",
+          "v": "Cube coefficient and radical separately: "
+        },
+        {
+          "t": "math",
+          "v": "3^3 = 27"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "\\left(\\sqrt{2}\\right)^3 = (\\sqrt{2})^2\\cdot\\sqrt{2} = 2\\sqrt{2}"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "4. evaluate: "
+        },
+        {
+          "t": "text",
+          "v": "Multiply the parts: "
+        },
+        {
+          "t": "math",
+          "v": "V = 27 \\cdot 2\\sqrt{2} = 54\\sqrt{2}"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 535,
+        "band": "B4",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "cube_volume",
+          "from_context": false,
+          "has_fraction_or_irrational": true
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "cube_volume",
+        "from_context": false,
+        "has_fraction_or_irrational": true
+      },
+      "fingerprint": [
+        "apply_volume_formula",
+        "substitute",
+        "evaluate",
+        "evaluate"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 15,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B4",
+      "target_band": "B4",
+      "statementId": "GEO.B4.s2",
+      "skill": "lines_angles_triangles",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "In the similar triangles "
+        },
+        {
+          "t": "math",
+          "v": "\\triangle ABC \\sim \\triangle DEF"
+        },
+        {
+          "t": "text",
+          "v": ", the vertices correspond as "
+        },
+        {
+          "t": "math",
+          "v": "A\\leftrightarrow D"
+        },
+        {
+          "t": "text",
+          "v": ", "
+        },
+        {
+          "t": "math",
+          "v": "B\\leftrightarrow E"
+        },
+        {
+          "t": "text",
+          "v": ", and "
+        },
+        {
+          "t": "math",
+          "v": "C\\leftrightarrow F"
+        },
+        {
+          "t": "text",
+          "v": ". Given "
+        },
+        {
+          "t": "math",
+          "v": "AB = 12"
+        },
+        {
+          "t": "text",
+          "v": ", "
+        },
+        {
+          "t": "math",
+          "v": "BC = 10"
+        },
+        {
+          "t": "text",
+          "v": ", "
+        },
+        {
+          "t": "math",
+          "v": "DE = 15"
+        },
+        {
+          "t": "text",
+          "v": ", and "
+        },
+        {
+          "t": "math",
+          "v": "EF = b"
+        },
+        {
+          "t": "text",
+          "v": ", what is the value of "
+        },
+        {
+          "t": "math",
+          "v": "b"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "8"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "12.5"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "13"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "18"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "B"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. apply similarity: "
+        },
+        {
+          "t": "text",
+          "v": "Because "
+        },
+        {
+          "t": "math",
+          "v": "\\triangle ABC \\sim \\triangle DEF"
+        },
+        {
+          "t": "text",
+          "v": " with "
+        },
+        {
+          "t": "math",
+          "v": "A\\leftrightarrow D,\\ B\\leftrightarrow E,\\ C\\leftrightarrow F"
+        },
+        {
+          "t": "text",
+          "v": ", corresponding sides are proportional: "
+        },
+        {
+          "t": "math",
+          "v": "AB"
+        },
+        {
+          "t": "text",
+          "v": " matches "
+        },
+        {
+          "t": "math",
+          "v": "DE"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "BC"
+        },
+        {
+          "t": "text",
+          "v": " matches "
+        },
+        {
+          "t": "math",
+          "v": "EF"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. set proportion: "
+        },
+        {
+          "t": "text",
+          "v": "Write the proportion "
+        },
+        {
+          "t": "math",
+          "v": "\\dfrac{AB}{DE} = \\dfrac{BC}{EF}"
+        },
+        {
+          "t": "text",
+          "v": ", i.e. "
+        },
+        {
+          "t": "math",
+          "v": "\\dfrac{12}{15} = \\dfrac{10}{b}"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. solve for unknown: "
+        },
+        {
+          "t": "text",
+          "v": "Cross-multiply: "
+        },
+        {
+          "t": "math",
+          "v": "12b = 10 \\times 15 = 150"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "4. solve for unknown: "
+        },
+        {
+          "t": "text",
+          "v": "Solve: "
+        },
+        {
+          "t": "math",
+          "v": "b = \\dfrac{150}{12} = \\dfrac{25}{2} = 12.5"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 530,
+        "band": "B4",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "similarity",
+          "multi_step": false,
+          "has_variable": true
+        }
+      },
+      "verify": {
+        "tier": "B",
+        "correctness": "consistency 5/4"
+      },
+      "radicals": {
+        "task": "similarity",
+        "multi_step": false,
+        "has_variable": true
+      },
+      "fingerprint": [
+        "apply_similarity",
+        "set_proportion",
+        "solve_for_unknown",
+        "solve_for_unknown"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 16,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B4",
+      "target_band": "B4",
+      "statementId": "GEO.B4.s2",
+      "skill": "lines_angles_triangles",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "Triangle "
+        },
+        {
+          "t": "math",
+          "v": "ABC"
+        },
+        {
+          "t": "text",
+          "v": " is similar to triangle "
+        },
+        {
+          "t": "math",
+          "v": "DEF"
+        },
+        {
+          "t": "text",
+          "v": ", where vertices "
+        },
+        {
+          "t": "math",
+          "v": "A"
+        },
+        {
+          "t": "text",
+          "v": ", "
+        },
+        {
+          "t": "math",
+          "v": "B"
+        },
+        {
+          "t": "text",
+          "v": ", and "
+        },
+        {
+          "t": "math",
+          "v": "C"
+        },
+        {
+          "t": "text",
+          "v": " correspond to vertices "
+        },
+        {
+          "t": "math",
+          "v": "D"
+        },
+        {
+          "t": "text",
+          "v": ", "
+        },
+        {
+          "t": "math",
+          "v": "E"
+        },
+        {
+          "t": "text",
+          "v": ", and "
+        },
+        {
+          "t": "math",
+          "v": "F"
+        },
+        {
+          "t": "text",
+          "v": ", respectively. Side "
+        },
+        {
+          "t": "math",
+          "v": "AB"
+        },
+        {
+          "t": "text",
+          "v": " has length "
+        },
+        {
+          "t": "math",
+          "v": "6"
+        },
+        {
+          "t": "text",
+          "v": " and the corresponding side "
+        },
+        {
+          "t": "math",
+          "v": "DE"
+        },
+        {
+          "t": "text",
+          "v": " has length "
+        },
+        {
+          "t": "math",
+          "v": "9"
+        },
+        {
+          "t": "text",
+          "v": ". If the area of triangle "
+        },
+        {
+          "t": "math",
+          "v": "ABC"
+        },
+        {
+          "t": "text",
+          "v": " is "
+        },
+        {
+          "t": "math",
+          "v": "8y"
+        },
+        {
+          "t": "text",
+          "v": ", what is the area of triangle "
+        },
+        {
+          "t": "math",
+          "v": "DEF"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "12y"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "16y"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "18y"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "27y"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "C"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. scale factor ratio: "
+        },
+        {
+          "t": "text",
+          "v": "Read the linear similarity ratio from the corresponding sides: "
+        },
+        {
+          "t": "math",
+          "v": "\\frac{DE}{AB} = \\frac{9}{6} = \\frac{3}{2}"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. apply similarity: "
+        },
+        {
+          "t": "text",
+          "v": "Areas of similar figures scale by the square of the linear ratio: "
+        },
+        {
+          "t": "math",
+          "v": "\\left(\\frac{3}{2}\\right)^2 = \\frac{9}{4}"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. solve for unknown: "
+        },
+        {
+          "t": "text",
+          "v": "Multiply the given area by the area ratio: "
+        },
+        {
+          "t": "math",
+          "v": "\\frac{9}{4}\\cdot 8y = 18y"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 530,
+        "band": "B4",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "scale_factor",
+          "multi_step": false,
+          "has_variable": true
+        }
+      },
+      "verify": {
+        "tier": "B",
+        "correctness": "consistency 5/4"
+      },
+      "radicals": {
+        "task": "scale_factor",
+        "multi_step": false,
+        "has_variable": true
+      },
+      "fingerprint": [
+        "scale_factor_ratio",
+        "apply_similarity",
+        "solve_for_unknown"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 17,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B4",
+      "target_band": "B4",
+      "statementId": "GEO.B4.s3",
+      "skill": "right_triangles_trig",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "In right triangle "
+        },
+        {
+          "t": "math",
+          "v": "PQR"
+        },
+        {
+          "t": "text",
+          "v": ", the right angle is at "
+        },
+        {
+          "t": "math",
+          "v": "Q"
+        },
+        {
+          "t": "text",
+          "v": ". The hypotenuse "
+        },
+        {
+          "t": "math",
+          "v": "PR"
+        },
+        {
+          "t": "text",
+          "v": " has length "
+        },
+        {
+          "t": "math",
+          "v": "15"
+        },
+        {
+          "t": "text",
+          "v": ", and leg "
+        },
+        {
+          "t": "math",
+          "v": "PQ"
+        },
+        {
+          "t": "text",
+          "v": " has length "
+        },
+        {
+          "t": "math",
+          "v": "7"
+        },
+        {
+          "t": "text",
+          "v": ". What is the exact length of leg "
+        },
+        {
+          "t": "math",
+          "v": "QR"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "4√11"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. apply pythagorean: "
+        },
+        {
+          "t": "text",
+          "v": "With legs "
+        },
+        {
+          "t": "math",
+          "v": "PQ"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "QR"
+        },
+        {
+          "t": "text",
+          "v": " and hypotenuse "
+        },
+        {
+          "t": "math",
+          "v": "PR"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "math",
+          "v": "PQ^2 + QR^2 = PR^2"
+        },
+        {
+          "t": "text",
+          "v": ", so "
+        },
+        {
+          "t": "math",
+          "v": "7^2 + QR^2 = 15^2"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. solve for unknown: "
+        },
+        {
+          "t": "text",
+          "v": "Evaluate and isolate: "
+        },
+        {
+          "t": "math",
+          "v": "49 + QR^2 = 225 \\Rightarrow QR^2 = 176"
+        },
+        {
+          "t": "text",
+          "v": ", so "
+        },
+        {
+          "t": "math",
+          "v": "QR = \\sqrt{176}"
+        },
+        {
+          "t": "text",
+          "v": " (positive length)."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. simplify radical: "
+        },
+        {
+          "t": "math",
+          "v": "\\sqrt{176} = \\sqrt{16\\cdot 11} = 4\\sqrt{11}"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 525,
+        "band": "B4",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "pythagorean_leg",
+          "from_context": false,
+          "irrational_answer": true
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "pythagorean_leg",
+        "from_context": false,
+        "irrational_answer": true
+      },
+      "fingerprint": [
+        "apply_pythagorean",
+        "solve_for_unknown",
+        "simplify_radical"
+      ],
+      "reskinDistance": 0.667,
+      "tier": "build-spec"
+    },
+    {
+      "id": 18,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B4",
+      "target_band": "B4",
+      "statementId": "GEO.B4.s3",
+      "skill": "right_triangles_trig",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "In an isosceles right triangle, each of the two congruent legs has length "
+        },
+        {
+          "t": "math",
+          "v": "11\\sqrt{2}"
+        },
+        {
+          "t": "text",
+          "v": ". What is the length "
+        },
+        {
+          "t": "math",
+          "v": "h"
+        },
+        {
+          "t": "text",
+          "v": " of the hypotenuse?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "11"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "11\\sqrt{2}"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "22"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "44"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "C"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. special triangle ratio: "
+        },
+        {
+          "t": "text",
+          "v": "An isosceles right triangle is a "
+        },
+        {
+          "t": "math",
+          "v": "45^\\circ\\!-\\!45^\\circ\\!-\\!90^\\circ"
+        },
+        {
+          "t": "text",
+          "v": " triangle, so leg:leg:hyp "
+        },
+        {
+          "t": "math",
+          "v": "= 1:1:\\sqrt{2}"
+        },
+        {
+          "t": "text",
+          "v": ", giving "
+        },
+        {
+          "t": "math",
+          "v": "h = (\\text{leg})\\cdot\\sqrt{2}"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. solve for unknown: "
+        },
+        {
+          "t": "text",
+          "v": "Substitute the given leg: "
+        },
+        {
+          "t": "math",
+          "v": "h = 11\\sqrt{2}\\cdot\\sqrt{2}"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. simplify radical: "
+        },
+        {
+          "t": "text",
+          "v": "Apply "
+        },
+        {
+          "t": "math",
+          "v": "\\sqrt{2}\\cdot\\sqrt{2}=2"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "math",
+          "v": "h = 11\\cdot 2 = 22"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 510,
+        "band": "B4",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "special_45_45_90",
+          "from_context": false,
+          "irrational_answer": false
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "special_45_45_90",
+        "from_context": false,
+        "irrational_answer": false
+      },
+      "fingerprint": [
+        "special_triangle_ratio",
+        "solve_for_unknown",
+        "simplify_radical"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 19,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B5",
+      "target_band": "B5",
+      "statementId": "GEO.B5.s3",
+      "skill": "area_volume",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "A square with side length "
+        },
+        {
+          "t": "math",
+          "v": "s"
+        },
+        {
+          "t": "text",
+          "v": " has an area of "
+        },
+        {
+          "t": "math",
+          "v": "72"
+        },
+        {
+          "t": "text",
+          "v": " square units. What is the perimeter, in units, of the square?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "6\\sqrt{2}"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "12\\sqrt{2}"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "24\\sqrt{2}"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "288"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "C"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. apply area formula: "
+        },
+        {
+          "t": "text",
+          "v": "For a square, area "
+        },
+        {
+          "t": "math",
+          "v": "= s^2"
+        },
+        {
+          "t": "text",
+          "v": ", so "
+        },
+        {
+          "t": "math",
+          "v": "s^2 = 72"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. isolate dimension: "
+        },
+        {
+          "t": "text",
+          "v": "Solve for the side: "
+        },
+        {
+          "t": "math",
+          "v": "s = \\sqrt{72} = \\sqrt{36 \\cdot 2} = 6\\sqrt{2}"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. apply perimeter formula: "
+        },
+        {
+          "t": "text",
+          "v": "Perimeter of a square "
+        },
+        {
+          "t": "math",
+          "v": "= 4s"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "4. evaluate: "
+        },
+        {
+          "t": "math",
+          "v": "P = 4 \\cdot 6\\sqrt{2} = 24\\sqrt{2}"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 605,
+        "band": "B5",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "multistep_area_perimeter",
+          "from_context": false,
+          "has_fraction_or_irrational": true
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "multistep_area_perimeter",
+        "from_context": false,
+        "has_fraction_or_irrational": true
+      },
+      "fingerprint": [
+        "apply_area_formula",
+        "isolate_dimension",
+        "apply_perimeter_formula",
+        "evaluate"
+      ],
+      "reskinDistance": 0.75,
+      "tier": "build-spec"
+    },
+    {
+      "id": 20,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B5",
+      "target_band": "B5",
+      "statementId": "GEO.B5.s3",
+      "skill": "area_volume",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "A rectangle has an area of "
+        },
+        {
+          "t": "math",
+          "v": "252"
+        },
+        {
+          "t": "text",
+          "v": " and one side of length "
+        },
+        {
+          "t": "math",
+          "v": "14"
+        },
+        {
+          "t": "text",
+          "v": ". What is the perimeter of the rectangle?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "18"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "32"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "64"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "252"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "C"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. apply area formula: "
+        },
+        {
+          "t": "text",
+          "v": "For the rectangle, "
+        },
+        {
+          "t": "math",
+          "v": "A = 14 \\cdot s"
+        },
+        {
+          "t": "text",
+          "v": ", with "
+        },
+        {
+          "t": "math",
+          "v": "A = 252"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. isolate dimension: "
+        },
+        {
+          "t": "text",
+          "v": "Solve for the missing side: "
+        },
+        {
+          "t": "math",
+          "v": "s = \\frac{252}{14} = 18"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. apply perimeter formula: "
+        },
+        {
+          "t": "text",
+          "v": "Use "
+        },
+        {
+          "t": "math",
+          "v": "P = 2(l + w) = 2(14 + 18)"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "4. substitute: "
+        },
+        {
+          "t": "text",
+          "v": "Add the two side lengths: "
+        },
+        {
+          "t": "math",
+          "v": "14 + 18 = 32"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "5. evaluate: "
+        },
+        {
+          "t": "text",
+          "v": "Double the sum: "
+        },
+        {
+          "t": "math",
+          "v": "P = 2 \\cdot 32 = 64"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 580,
+        "band": "B5",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "multistep_area_perimeter",
+          "from_context": false,
+          "has_fraction_or_irrational": false
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "multistep_area_perimeter",
+        "from_context": false,
+        "has_fraction_or_irrational": false
+      },
+      "fingerprint": [
+        "apply_area_formula",
+        "isolate_dimension",
+        "apply_perimeter_formula",
+        "substitute",
+        "evaluate"
+      ],
+      "reskinDistance": 0.8,
+      "tier": "build-spec"
+    },
+    {
+      "id": 21,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B5",
+      "target_band": "B5",
+      "statementId": "GEO.B5.s2",
+      "skill": "circles",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "In the "
+        },
+        {
+          "t": "math",
+          "v": "xy"
+        },
+        {
+          "t": "text",
+          "v": "-plane, a circle has its center at "
+        },
+        {
+          "t": "math",
+          "v": "(-7, 2)"
+        },
+        {
+          "t": "text",
+          "v": ", and the point "
+        },
+        {
+          "t": "math",
+          "v": "(-2, 14)"
+        },
+        {
+          "t": "text",
+          "v": " lies on the circle. Which equation represents this circle?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "(x+7)^2+(y-2)^2=13"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "(x+7)^2+(y-2)^2=169"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "(x-7)^2+(y+2)^2=169"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "(x+7)^2+(y-2)^2=289"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "B"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. distance radius: "
+        },
+        {
+          "t": "text",
+          "v": "Use the center "
+        },
+        {
+          "t": "math",
+          "v": "(h,k)=(-7,2)"
+        },
+        {
+          "t": "text",
+          "v": " and the point "
+        },
+        {
+          "t": "math",
+          "v": "(-2,14)"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "math",
+          "v": "r^2=(-2-(-7))^2+(14-2)^2=5^2+12^2"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. evaluate: "
+        },
+        {
+          "t": "text",
+          "v": "Compute "
+        },
+        {
+          "t": "math",
+          "v": "r^2=25+144=169"
+        },
+        {
+          "t": "text",
+          "v": " (a 5–12–13 relationship, so "
+        },
+        {
+          "t": "math",
+          "v": "r=13"
+        },
+        {
+          "t": "text",
+          "v": ")."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. apply circle formula: "
+        },
+        {
+          "t": "text",
+          "v": "Substitute into "
+        },
+        {
+          "t": "math",
+          "v": "(x-h)^2+(y-k)^2=r^2"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "math",
+          "v": "(x-(-7))^2+(y-2)^2=169"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "4. evaluate: "
+        },
+        {
+          "t": "text",
+          "v": "Simplify the sign on "
+        },
+        {
+          "t": "math",
+          "v": "h"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "math",
+          "v": "(x+7)^2+(y-2)^2=169"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 590,
+        "band": "B5",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "circle_equation",
+          "from_context": false,
+          "radians": true
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "circle_equation",
+        "from_context": false,
+        "radians": true
+      },
+      "fingerprint": [
+        "distance_radius",
+        "evaluate",
+        "apply_circle_formula",
+        "evaluate"
+      ],
+      "reskinDistance": 0.75,
+      "tier": "build-spec"
+    },
+    {
+      "id": 22,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B5",
+      "target_band": "B5",
+      "statementId": "GEO.B5.s2",
+      "skill": "circles",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "In the "
+        },
+        {
+          "t": "math",
+          "v": "xy"
+        },
+        {
+          "t": "text",
+          "v": "-plane, a circle has its center at "
+        },
+        {
+          "t": "math",
+          "v": "(6,-5)"
+        },
+        {
+          "t": "text",
+          "v": " and passes through the point "
+        },
+        {
+          "t": "math",
+          "v": "(-2,-3)"
+        },
+        {
+          "t": "text",
+          "v": ". Write an equation of the circle in the form "
+        },
+        {
+          "t": "math",
+          "v": "(x-h)^2+(y-k)^2=r^2"
+        },
+        {
+          "t": "text",
+          "v": "."
+        }
+      ],
+      "answer": {
+        "accept": [
+          "(x-6)^2+(y+5)^2=68"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. distance radius: "
+        },
+        {
+          "t": "text",
+          "v": "The radius equals the distance from the center "
+        },
+        {
+          "t": "math",
+          "v": "(6,-5)"
+        },
+        {
+          "t": "text",
+          "v": " to the point "
+        },
+        {
+          "t": "math",
+          "v": "(-2,-3)"
+        },
+        {
+          "t": "text",
+          "v": ", so "
+        },
+        {
+          "t": "math",
+          "v": "r^2=(-2-6)^2+(-3-(-5))^2"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. evaluate: "
+        },
+        {
+          "t": "text",
+          "v": "Evaluate: "
+        },
+        {
+          "t": "math",
+          "v": "(-8)^2+(2)^2=64+4=68"
+        },
+        {
+          "t": "text",
+          "v": ", so "
+        },
+        {
+          "t": "math",
+          "v": "r^2=68"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. apply circle formula: "
+        },
+        {
+          "t": "text",
+          "v": "Substitute "
+        },
+        {
+          "t": "math",
+          "v": "(h,k)=(6,-5)"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "r^2=68"
+        },
+        {
+          "t": "text",
+          "v": " into "
+        },
+        {
+          "t": "math",
+          "v": "(x-h)^2+(y-k)^2=r^2"
+        },
+        {
+          "t": "text",
+          "v": ", resolving "
+        },
+        {
+          "t": "math",
+          "v": "(y-(-5))"
+        },
+        {
+          "t": "text",
+          "v": " to "
+        },
+        {
+          "t": "math",
+          "v": "(y+5)"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "math",
+          "v": "(x-6)^2+(y+5)^2=68"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 580,
+        "band": "B5",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "circle_equation",
+          "from_context": false,
+          "radians": false
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "circle_equation",
+        "from_context": false,
+        "radians": false
+      },
+      "fingerprint": [
+        "distance_radius",
+        "evaluate",
+        "apply_circle_formula"
+      ],
+      "reskinDistance": 0.667,
+      "tier": "build-spec"
+    },
+    {
+      "id": 23,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B5",
+      "target_band": "B5",
+      "statementId": "GEO.B4.s2",
+      "skill": "lines_angles_triangles",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "Segments "
+        },
+        {
+          "t": "math",
+          "v": "AC"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "BD"
+        },
+        {
+          "t": "text",
+          "v": " intersect at point "
+        },
+        {
+          "t": "math",
+          "v": "M"
+        },
+        {
+          "t": "text",
+          "v": " so that "
+        },
+        {
+          "t": "math",
+          "v": "AM = CM"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "BM = DM"
+        },
+        {
+          "t": "text",
+          "v": ". In the two triangles formed, "
+        },
+        {
+          "t": "math",
+          "v": "AB = 5y - 9"
+        },
+        {
+          "t": "text",
+          "v": ", "
+        },
+        {
+          "t": "math",
+          "v": "CD = 26"
+        },
+        {
+          "t": "text",
+          "v": ", and the measure of "
+        },
+        {
+          "t": "math",
+          "v": "\\angle MAB"
+        },
+        {
+          "t": "text",
+          "v": " is "
+        },
+        {
+          "t": "math",
+          "v": "(4y + 6)^\\circ"
+        },
+        {
+          "t": "text",
+          "v": ". What is the measure of "
+        },
+        {
+          "t": "math",
+          "v": "\\angle MCD"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "7^\\circ"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "28^\\circ"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "34^\\circ"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "146^\\circ"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "C"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. apply angle theorem: "
+        },
+        {
+          "t": "text",
+          "v": "Since A, M, C are collinear and B, M, D are collinear, "
+        },
+        {
+          "t": "math",
+          "v": "\\angle AMB"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "\\angle CMD"
+        },
+        {
+          "t": "text",
+          "v": " are vertical angles, so "
+        },
+        {
+          "t": "math",
+          "v": "\\angle AMB \\cong \\angle CMD"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. apply congruence: "
+        },
+        {
+          "t": "text",
+          "v": "With "
+        },
+        {
+          "t": "math",
+          "v": "AM = CM"
+        },
+        {
+          "t": "text",
+          "v": ", "
+        },
+        {
+          "t": "math",
+          "v": "\\angle AMB \\cong \\angle CMD"
+        },
+        {
+          "t": "text",
+          "v": ", and "
+        },
+        {
+          "t": "math",
+          "v": "BM = DM"
+        },
+        {
+          "t": "text",
+          "v": ", SAS gives "
+        },
+        {
+          "t": "math",
+          "v": "\\triangle AMB \\cong \\triangle CMD"
+        },
+        {
+          "t": "text",
+          "v": " (A↔C, M↔M, B↔D)."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. apply congruence: "
+        },
+        {
+          "t": "text",
+          "v": "By CPCTC the corresponding sides are equal: "
+        },
+        {
+          "t": "math",
+          "v": "AB = CD"
+        },
+        {
+          "t": "text",
+          "v": ", so "
+        },
+        {
+          "t": "math",
+          "v": "5y - 9 = 26"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "4. solve for unknown: "
+        },
+        {
+          "t": "math",
+          "v": "5y = 35 \\Rightarrow y = 7"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "5. apply congruence: "
+        },
+        {
+          "t": "text",
+          "v": "By CPCTC the corresponding angles are equal: "
+        },
+        {
+          "t": "math",
+          "v": "\\angle MCD \\cong \\angle MAB"
+        },
+        {
+          "t": "text",
+          "v": ", so "
+        },
+        {
+          "t": "math",
+          "v": "m\\angle MCD = (4y + 6)^\\circ"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "6. solve for unknown: "
+        },
+        {
+          "t": "text",
+          "v": "Back-substitute: "
+        },
+        {
+          "t": "math",
+          "v": "m\\angle MCD = 4(7) + 6 = 34^\\circ"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 550,
+        "band": "B5",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "congruence",
+          "multi_step": true,
+          "has_variable": true
+        }
+      },
+      "verify": {
+        "tier": "B",
+        "correctness": "consistency 5/4"
+      },
+      "radicals": {
+        "task": "congruence",
+        "multi_step": true,
+        "has_variable": true
+      },
+      "fingerprint": [
+        "apply_angle_theorem",
+        "apply_congruence",
+        "apply_congruence",
+        "solve_for_unknown",
+        "apply_congruence",
+        "solve_for_unknown"
+      ],
+      "reskinDistance": 0.833,
+      "tier": "build-spec"
+    },
+    {
+      "id": 24,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B5",
+      "target_band": "B5",
+      "statementId": "GEO.B4.s2",
+      "skill": "lines_angles_triangles",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "Triangle "
+        },
+        {
+          "t": "math",
+          "v": "ABC"
+        },
+        {
+          "t": "text",
+          "v": " is similar to triangle "
+        },
+        {
+          "t": "math",
+          "v": "DEF"
+        },
+        {
+          "t": "text",
+          "v": ", where side "
+        },
+        {
+          "t": "math",
+          "v": "AB"
+        },
+        {
+          "t": "text",
+          "v": " corresponds to side "
+        },
+        {
+          "t": "math",
+          "v": "DE"
+        },
+        {
+          "t": "text",
+          "v": ". The length of "
+        },
+        {
+          "t": "math",
+          "v": "AB"
+        },
+        {
+          "t": "text",
+          "v": " is "
+        },
+        {
+          "t": "math",
+          "v": "6"
+        },
+        {
+          "t": "text",
+          "v": " and the length of "
+        },
+        {
+          "t": "math",
+          "v": "DE"
+        },
+        {
+          "t": "text",
+          "v": " is "
+        },
+        {
+          "t": "math",
+          "v": "15"
+        },
+        {
+          "t": "text",
+          "v": ". The area of triangle "
+        },
+        {
+          "t": "math",
+          "v": "ABC"
+        },
+        {
+          "t": "text",
+          "v": " is "
+        },
+        {
+          "t": "math",
+          "v": "8a"
+        },
+        {
+          "t": "text",
+          "v": ". What is the area of triangle "
+        },
+        {
+          "t": "math",
+          "v": "DEF"
+        },
+        {
+          "t": "text",
+          "v": ", in terms of "
+        },
+        {
+          "t": "math",
+          "v": "a"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "\\frac{32a}{25}"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "20a"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "50a"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "125a"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "C"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. scale factor ratio: "
+        },
+        {
+          "t": "text",
+          "v": "The scale factor from "
+        },
+        {
+          "t": "math",
+          "v": "ABC"
+        },
+        {
+          "t": "text",
+          "v": " to "
+        },
+        {
+          "t": "math",
+          "v": "DEF"
+        },
+        {
+          "t": "text",
+          "v": " is the ratio of corresponding sides: "
+        },
+        {
+          "t": "math",
+          "v": "\\frac{DE}{AB}=\\frac{15}{6}=\\frac{5}{2}"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. apply similarity: "
+        },
+        {
+          "t": "text",
+          "v": "For similar figures, areas scale by the square of the linear scale factor: "
+        },
+        {
+          "t": "math",
+          "v": "\\left(\\frac{5}{2}\\right)^2=\\frac{25}{4}"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. solve for unknown: "
+        },
+        {
+          "t": "text",
+          "v": "Multiply the area of "
+        },
+        {
+          "t": "math",
+          "v": "ABC"
+        },
+        {
+          "t": "text",
+          "v": " by the area factor: "
+        },
+        {
+          "t": "math",
+          "v": "8a\\cdot\\frac{25}{4}=50a"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 550,
+        "band": "B5",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "scale_factor",
+          "multi_step": true,
+          "has_variable": true
+        }
+      },
+      "verify": {
+        "tier": "B",
+        "correctness": "consistency 5/4"
+      },
+      "radicals": {
+        "task": "scale_factor",
+        "multi_step": true,
+        "has_variable": true
+      },
+      "fingerprint": [
+        "scale_factor_ratio",
+        "apply_similarity",
+        "solve_for_unknown"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 25,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B5",
+      "target_band": "B5",
+      "statementId": "GEO.B5.s1",
+      "skill": "right_triangles_trig",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "An angle has a measure of "
+        },
+        {
+          "t": "math",
+          "v": "156^\\circ"
+        },
+        {
+          "t": "text",
+          "v": ". If "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": " is the radian measure of this angle, what is the value of "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "\\frac{13\\pi}{30}"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "\\frac{13\\pi}{15}"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "\\frac{15\\pi}{13}"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "\\frac{26\\pi}{15}"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "B"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. degree radian convert: "
+        },
+        {
+          "t": "text",
+          "v": "Multiply the degree measure by "
+        },
+        {
+          "t": "math",
+          "v": "\\frac{\\pi}{180}"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "math",
+          "v": "156\\cdot\\frac{\\pi}{180}=\\frac{156\\pi}{180}"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. solve for unknown: "
+        },
+        {
+          "t": "text",
+          "v": "Reduce "
+        },
+        {
+          "t": "math",
+          "v": "\\frac{156\\pi}{180}"
+        },
+        {
+          "t": "text",
+          "v": " using "
+        },
+        {
+          "t": "math",
+          "v": "\\gcd(156,180)=12"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "math",
+          "v": "\\frac{156\\div12}{180\\div12}\\pi=\\frac{13\\pi}{15}"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 580,
+        "band": "B5",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "radian_convert",
+          "from_context": false,
+          "irrational_answer": false
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "radian_convert",
+        "from_context": false,
+        "irrational_answer": false
+      },
+      "fingerprint": [
+        "degree_radian_convert",
+        "solve_for_unknown"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 26,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B5",
+      "target_band": "B5",
+      "statementId": "GEO.B5.s1",
+      "skill": "right_triangles_trig",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "In the equation "
+        },
+        {
+          "t": "math",
+          "v": "\\sin(x^\\circ)=\\cos(58^\\circ)"
+        },
+        {
+          "t": "text",
+          "v": ", the value of "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": " satisfies "
+        },
+        {
+          "t": "math",
+          "v": "0<x<90"
+        },
+        {
+          "t": "text",
+          "v": ". What is the value of "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "32"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. complementary identity: "
+        },
+        {
+          "t": "text",
+          "v": "Apply "
+        },
+        {
+          "t": "math",
+          "v": "\\cos\\theta=\\sin(90^\\circ-\\theta)"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "math",
+          "v": "\\cos(58^\\circ)=\\sin(90^\\circ-58^\\circ)=\\sin(32^\\circ)"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. solve for unknown: "
+        },
+        {
+          "t": "text",
+          "v": "The equation becomes "
+        },
+        {
+          "t": "math",
+          "v": "\\sin(x^\\circ)=\\sin(32^\\circ)"
+        },
+        {
+          "t": "text",
+          "v": "; since sine is one-to-one on "
+        },
+        {
+          "t": "math",
+          "v": "0<x<90"
+        },
+        {
+          "t": "text",
+          "v": ", the arguments are equal, so "
+        },
+        {
+          "t": "math",
+          "v": "x=32"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 580,
+        "band": "B5",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "sin_cos_complementary",
+          "from_context": false,
+          "irrational_answer": false
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "sin_cos_complementary",
+        "from_context": false,
+        "irrational_answer": false
+      },
+      "fingerprint": [
+        "complementary_identity",
+        "solve_for_unknown"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 27,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B6",
+      "target_band": "B6",
+      "statementId": "GEO.B6.s1",
+      "skill": "area_volume",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "A right rectangular prism has a length of "
+        },
+        {
+          "t": "math",
+          "v": "17"
+        },
+        {
+          "t": "text",
+          "v": " and a width of "
+        },
+        {
+          "t": "math",
+          "v": "8"
+        },
+        {
+          "t": "text",
+          "v": ". The volume of the prism is "
+        },
+        {
+          "t": "math",
+          "v": "816"
+        },
+        {
+          "t": "text",
+          "v": ". What is the height, "
+        },
+        {
+          "t": "math",
+          "v": "h"
+        },
+        {
+          "t": "text",
+          "v": ", of the prism?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "6"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. apply volume formula: "
+        },
+        {
+          "t": "text",
+          "v": "Volume of a right rectangular prism: "
+        },
+        {
+          "t": "math",
+          "v": "V = l\\,w\\,h"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. substitute: "
+        },
+        {
+          "t": "text",
+          "v": "Substitute the given values: "
+        },
+        {
+          "t": "math",
+          "v": "816 = 17 \\cdot 8 \\cdot h"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. evaluate: "
+        },
+        {
+          "t": "text",
+          "v": "Compute the base area: "
+        },
+        {
+          "t": "math",
+          "v": "17 \\cdot 8 = 136"
+        },
+        {
+          "t": "text",
+          "v": ", so "
+        },
+        {
+          "t": "math",
+          "v": "816 = 136h"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "4. isolate dimension: "
+        },
+        {
+          "t": "text",
+          "v": "Divide both sides by "
+        },
+        {
+          "t": "math",
+          "v": "136"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "math",
+          "v": "h = \\dfrac{816}{136}"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "5. evaluate: "
+        },
+        {
+          "t": "text",
+          "v": "Evaluate: "
+        },
+        {
+          "t": "math",
+          "v": "h = 6"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 645,
+        "band": "B6",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "solve_dimension",
+          "from_context": false,
+          "has_fraction_or_irrational": false
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "solve_dimension",
+        "from_context": false,
+        "has_fraction_or_irrational": false
+      },
+      "fingerprint": [
+        "apply_volume_formula",
+        "substitute",
+        "evaluate",
+        "isolate_dimension",
+        "evaluate"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 28,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B6",
+      "target_band": "B6",
+      "statementId": "GEO.B6.s1",
+      "skill": "area_volume",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "A right rectangular prism has a length of "
+        },
+        {
+          "t": "math",
+          "v": "8"
+        },
+        {
+          "t": "text",
+          "v": " units, a width of "
+        },
+        {
+          "t": "math",
+          "v": "5"
+        },
+        {
+          "t": "text",
+          "v": " units, and a height of "
+        },
+        {
+          "t": "math",
+          "v": "11"
+        },
+        {
+          "t": "text",
+          "v": " units. What is the surface area, in square units, of the prism?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "183"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "286"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "366"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "440"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "C"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. apply surface area: "
+        },
+        {
+          "t": "text",
+          "v": "Recall the surface-area formula for a right rectangular prism: "
+        },
+        {
+          "t": "math",
+          "v": "SA = 2(\\ell w + \\ell h + wh)"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. substitute: "
+        },
+        {
+          "t": "text",
+          "v": "Substitute "
+        },
+        {
+          "t": "math",
+          "v": "\\ell = 8"
+        },
+        {
+          "t": "text",
+          "v": ", "
+        },
+        {
+          "t": "math",
+          "v": "w = 5"
+        },
+        {
+          "t": "text",
+          "v": ", "
+        },
+        {
+          "t": "math",
+          "v": "h = 11"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. evaluate: "
+        },
+        {
+          "t": "text",
+          "v": "Compute the three distinct face-area products: "
+        },
+        {
+          "t": "math",
+          "v": "\\ell w = 40"
+        },
+        {
+          "t": "text",
+          "v": ", "
+        },
+        {
+          "t": "math",
+          "v": "\\ell h = 88"
+        },
+        {
+          "t": "text",
+          "v": ", "
+        },
+        {
+          "t": "math",
+          "v": "wh = 55"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "4. evaluate: "
+        },
+        {
+          "t": "text",
+          "v": "Sum the three products: "
+        },
+        {
+          "t": "math",
+          "v": "40 + 88 + 55 = 183"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "5. evaluate: "
+        },
+        {
+          "t": "text",
+          "v": "Double the sum: "
+        },
+        {
+          "t": "math",
+          "v": "2 \\times 183 = 366"
+        },
+        {
+          "t": "text",
+          "v": " square units."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 645,
+        "band": "B6",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "surface_area",
+          "from_context": false,
+          "has_fraction_or_irrational": false
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "surface_area",
+        "from_context": false,
+        "has_fraction_or_irrational": false
+      },
+      "fingerprint": [
+        "apply_surface_area",
+        "substitute",
+        "evaluate",
+        "evaluate",
+        "evaluate"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 29,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B6",
+      "target_band": "B6",
+      "statementId": "GEO.B6.s3",
+      "skill": "lines_angles_triangles",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "In right triangle "
+        },
+        {
+          "t": "math",
+          "v": "ABC"
+        },
+        {
+          "t": "text",
+          "v": ", the right angle is at "
+        },
+        {
+          "t": "math",
+          "v": "C"
+        },
+        {
+          "t": "text",
+          "v": ". The altitude from "
+        },
+        {
+          "t": "math",
+          "v": "C"
+        },
+        {
+          "t": "text",
+          "v": " meets the hypotenuse "
+        },
+        {
+          "t": "math",
+          "v": "AB"
+        },
+        {
+          "t": "text",
+          "v": " at point "
+        },
+        {
+          "t": "math",
+          "v": "D"
+        },
+        {
+          "t": "text",
+          "v": ", dividing it so that "
+        },
+        {
+          "t": "math",
+          "v": "AD = 6"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "DB = 15"
+        },
+        {
+          "t": "text",
+          "v": ". What is the length of "
+        },
+        {
+          "t": "math",
+          "v": "CD"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "\\sqrt{21}"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "3\\sqrt{10}"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "\\frac{21}{2}"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "90"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "B"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. apply similarity: "
+        },
+        {
+          "t": "text",
+          "v": "The altitude from the right-angle vertex C to the hypotenuse splits triangle ABC into triangles ADC and CDB, each similar to the other by AA (a shared acute angle plus the right angle at D)."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. set proportion: "
+        },
+        {
+          "t": "text",
+          "v": "Matching corresponding sides of the two similar sub-triangles gives "
+        },
+        {
+          "t": "math",
+          "v": "\\frac{AD}{CD}=\\frac{CD}{DB}"
+        },
+        {
+          "t": "text",
+          "v": ", i.e. "
+        },
+        {
+          "t": "math",
+          "v": "\\frac{6}{CD}=\\frac{CD}{15}"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. solve for unknown: "
+        },
+        {
+          "t": "text",
+          "v": "Cross-multiply to get the geometric-mean relation "
+        },
+        {
+          "t": "math",
+          "v": "CD^2 = 6\\cdot 15 = 90"
+        },
+        {
+          "t": "text",
+          "v": ", so "
+        },
+        {
+          "t": "math",
+          "v": "CD=\\sqrt{90}=3\\sqrt{10}"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 645,
+        "band": "B6",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "similarity_right",
+          "multi_step": false,
+          "has_variable": false
+        }
+      },
+      "verify": {
+        "tier": "B",
+        "correctness": "consistency 5/4"
+      },
+      "radicals": {
+        "task": "similarity_right",
+        "multi_step": false,
+        "has_variable": false
+      },
+      "fingerprint": [
+        "apply_similarity",
+        "set_proportion",
+        "solve_for_unknown"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 30,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B6",
+      "target_band": "B6",
+      "statementId": "GEO.B6.s2",
+      "skill": "lines_angles_triangles",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "Lines "
+        },
+        {
+          "t": "math",
+          "v": "\\ell"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "m"
+        },
+        {
+          "t": "text",
+          "v": " are parallel, with "
+        },
+        {
+          "t": "math",
+          "v": "\\ell"
+        },
+        {
+          "t": "text",
+          "v": " through "
+        },
+        {
+          "t": "math",
+          "v": "P"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "A"
+        },
+        {
+          "t": "text",
+          "v": ". Line "
+        },
+        {
+          "t": "math",
+          "v": "m"
+        },
+        {
+          "t": "text",
+          "v": " contains side "
+        },
+        {
+          "t": "math",
+          "v": "BC"
+        },
+        {
+          "t": "text",
+          "v": " of triangle "
+        },
+        {
+          "t": "math",
+          "v": "ABC"
+        },
+        {
+          "t": "text",
+          "v": ", and "
+        },
+        {
+          "t": "math",
+          "v": "A"
+        },
+        {
+          "t": "text",
+          "v": " lies on "
+        },
+        {
+          "t": "math",
+          "v": "\\ell"
+        },
+        {
+          "t": "text",
+          "v": ". "
+        },
+        {
+          "t": "math",
+          "v": "\\angle PAB=63^\\circ"
+        },
+        {
+          "t": "text",
+          "v": ", where "
+        },
+        {
+          "t": "math",
+          "v": "P"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "C"
+        },
+        {
+          "t": "text",
+          "v": " are on opposite sides of "
+        },
+        {
+          "t": "math",
+          "v": "AB"
+        },
+        {
+          "t": "text",
+          "v": ". Sides "
+        },
+        {
+          "t": "math",
+          "v": "AC"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "BC"
+        },
+        {
+          "t": "text",
+          "v": " are extended beyond "
+        },
+        {
+          "t": "math",
+          "v": "C"
+        },
+        {
+          "t": "text",
+          "v": " to "
+        },
+        {
+          "t": "math",
+          "v": "D"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "E"
+        },
+        {
+          "t": "text",
+          "v": " so that "
+        },
+        {
+          "t": "math",
+          "v": "\\angle DCE=49^\\circ"
+        },
+        {
+          "t": "text",
+          "v": ". What is the measure of "
+        },
+        {
+          "t": "math",
+          "v": "\\angle BAC"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "68^\\circ"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "112^\\circ"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "117^\\circ"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "131^\\circ"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "A"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. parallel transversal rule: "
+        },
+        {
+          "t": "text",
+          "v": "Transversal "
+        },
+        {
+          "t": "math",
+          "v": "AB"
+        },
+        {
+          "t": "text",
+          "v": " cuts the parallel lines "
+        },
+        {
+          "t": "math",
+          "v": "\\ell"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "m"
+        },
+        {
+          "t": "text",
+          "v": ". Since "
+        },
+        {
+          "t": "math",
+          "v": "P"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "C"
+        },
+        {
+          "t": "text",
+          "v": " lie on opposite sides of "
+        },
+        {
+          "t": "math",
+          "v": "AB"
+        },
+        {
+          "t": "text",
+          "v": ", "
+        },
+        {
+          "t": "math",
+          "v": "\\angle PAB"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "\\angle ABC"
+        },
+        {
+          "t": "text",
+          "v": " are alternate interior angles, so "
+        },
+        {
+          "t": "math",
+          "v": "\\angle ABC=63^\\circ"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. vertical supplementary: "
+        },
+        {
+          "t": "text",
+          "v": "Extending "
+        },
+        {
+          "t": "math",
+          "v": "AC"
+        },
+        {
+          "t": "text",
+          "v": " to "
+        },
+        {
+          "t": "math",
+          "v": "D"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "BC"
+        },
+        {
+          "t": "text",
+          "v": " to "
+        },
+        {
+          "t": "math",
+          "v": "E"
+        },
+        {
+          "t": "text",
+          "v": " makes "
+        },
+        {
+          "t": "math",
+          "v": "\\angle DCE"
+        },
+        {
+          "t": "text",
+          "v": " vertical to "
+        },
+        {
+          "t": "math",
+          "v": "\\angle ACB"
+        },
+        {
+          "t": "text",
+          "v": "; equal vertical angles give "
+        },
+        {
+          "t": "math",
+          "v": "\\angle ACB=49^\\circ"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. triangle angle sum: "
+        },
+        {
+          "t": "text",
+          "v": "The interior angles of "
+        },
+        {
+          "t": "math",
+          "v": "\\triangle ABC"
+        },
+        {
+          "t": "text",
+          "v": " sum to "
+        },
+        {
+          "t": "math",
+          "v": "180^\\circ"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "math",
+          "v": "\\angle BAC=180^\\circ-63^\\circ-49^\\circ"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "4. solve for unknown: "
+        },
+        {
+          "t": "math",
+          "v": "180^\\circ-112^\\circ=68^\\circ"
+        },
+        {
+          "t": "text",
+          "v": ", so "
+        },
+        {
+          "t": "math",
+          "v": "\\angle BAC=68^\\circ"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 645,
+        "band": "B6",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "angle_complex",
+          "multi_step": false,
+          "has_variable": false
+        }
+      },
+      "verify": {
+        "tier": "B",
+        "correctness": "consistency 5/4"
+      },
+      "radicals": {
+        "task": "angle_complex",
+        "multi_step": false,
+        "has_variable": false
+      },
+      "fingerprint": [
+        "parallel_transversal_rule",
+        "vertical_supplementary",
+        "triangle_angle_sum",
+        "solve_for_unknown"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 31,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B6",
+      "target_band": "B6",
+      "statementId": "GEO.B6.s3",
+      "skill": "right_triangles_trig",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "In right triangle "
+        },
+        {
+          "t": "math",
+          "v": "ABC"
+        },
+        {
+          "t": "text",
+          "v": ", the right angle is at vertex "
+        },
+        {
+          "t": "math",
+          "v": "B"
+        },
+        {
+          "t": "text",
+          "v": ". Leg "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{BC}"
+        },
+        {
+          "t": "text",
+          "v": " has length "
+        },
+        {
+          "t": "math",
+          "v": "8"
+        },
+        {
+          "t": "text",
+          "v": ", leg "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{AB}"
+        },
+        {
+          "t": "text",
+          "v": " has length "
+        },
+        {
+          "t": "math",
+          "v": "15"
+        },
+        {
+          "t": "text",
+          "v": ", and the hypotenuse "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{AC}"
+        },
+        {
+          "t": "text",
+          "v": " has length "
+        },
+        {
+          "t": "math",
+          "v": "h"
+        },
+        {
+          "t": "text",
+          "v": ". What is the value of "
+        },
+        {
+          "t": "math",
+          "v": "\\sin A"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "\\frac{8}{15}"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "\\frac{8}{17}"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "\\frac{15}{17}"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "\\frac{17}{8}"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "B"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. apply pythagorean: "
+        },
+        {
+          "t": "text",
+          "v": "The legs are 8 and 15 and the hypotenuse is h: "
+        },
+        {
+          "t": "math",
+          "v": "h=\\sqrt{8^2+15^2}=\\sqrt{64+225}=\\sqrt{289}=17"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. trig ratio soscahtoa: "
+        },
+        {
+          "t": "text",
+          "v": "Angle A is opposite leg "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{BC}"
+        },
+        {
+          "t": "text",
+          "v": " of length 8, so "
+        },
+        {
+          "t": "math",
+          "v": "\\sin A=\\frac{\\text{opposite}}{\\text{hypotenuse}}=\\frac{8}{h}=\\frac{8}{17}"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 645,
+        "band": "B6",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "trig_ratio",
+          "from_context": false,
+          "irrational_answer": false
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "trig_ratio",
+        "from_context": false,
+        "irrational_answer": false
+      },
+      "fingerprint": [
+        "apply_pythagorean",
+        "trig_ratio_soscahtoa"
+      ],
+      "reskinDistance": 0.5,
+      "tier": "build-spec"
+    },
+    {
+      "id": 32,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B6",
+      "target_band": "B6",
+      "statementId": "GEO.B6.s3",
+      "skill": "right_triangles_trig",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "In right triangle "
+        },
+        {
+          "t": "math",
+          "v": "PQR"
+        },
+        {
+          "t": "text",
+          "v": ", angle "
+        },
+        {
+          "t": "math",
+          "v": "Q"
+        },
+        {
+          "t": "text",
+          "v": " measures "
+        },
+        {
+          "t": "math",
+          "v": "90^\\circ"
+        },
+        {
+          "t": "text",
+          "v": ", and the legs have lengths "
+        },
+        {
+          "t": "math",
+          "v": "PQ = 12"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "QR = 8"
+        },
+        {
+          "t": "text",
+          "v": ". If the measure of acute angle "
+        },
+        {
+          "t": "math",
+          "v": "P"
+        },
+        {
+          "t": "text",
+          "v": " is "
+        },
+        {
+          "t": "math",
+          "v": "a"
+        },
+        {
+          "t": "text",
+          "v": ", what is the value of "
+        },
+        {
+          "t": "math",
+          "v": "\\cos a"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "3√13/13"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. apply pythagorean: "
+        },
+        {
+          "t": "text",
+          "v": "Hypotenuse "
+        },
+        {
+          "t": "math",
+          "v": "PR"
+        },
+        {
+          "t": "text",
+          "v": " is opposite the right angle at "
+        },
+        {
+          "t": "math",
+          "v": "Q"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "math",
+          "v": "PR=\\sqrt{12^2+8^2}=\\sqrt{144+64}=\\sqrt{208}"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. simplify radical: "
+        },
+        {
+          "t": "math",
+          "v": "\\sqrt{208}=\\sqrt{16\\cdot 13}=4\\sqrt{13}"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. trig ratio soscahtoa: "
+        },
+        {
+          "t": "text",
+          "v": "For angle "
+        },
+        {
+          "t": "math",
+          "v": "P"
+        },
+        {
+          "t": "text",
+          "v": ", the adjacent leg is "
+        },
+        {
+          "t": "math",
+          "v": "PQ=12"
+        },
+        {
+          "t": "text",
+          "v": " and the hypotenuse is "
+        },
+        {
+          "t": "math",
+          "v": "PR=4\\sqrt{13}"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "math",
+          "v": "\\cos a=\\dfrac{12}{4\\sqrt{13}}=\\dfrac{3}{\\sqrt{13}}"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "4. simplify radical: "
+        },
+        {
+          "t": "text",
+          "v": "Rationalize the denominator: "
+        },
+        {
+          "t": "math",
+          "v": "\\dfrac{3}{\\sqrt{13}}=\\dfrac{3\\sqrt{13}}{13}"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 660,
+        "band": "B6",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "trig_ratio",
+          "from_context": false,
+          "irrational_answer": true
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "trig_ratio",
+        "from_context": false,
+        "irrational_answer": true
+      },
+      "fingerprint": [
+        "apply_pythagorean",
+        "simplify_radical",
+        "trig_ratio_soscahtoa",
+        "simplify_radical"
+      ],
+      "reskinDistance": 0.75,
+      "tier": "build-spec"
+    },
+    {
+      "id": 33,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "GEO.B7.s1",
+      "skill": "area_volume",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "A figure consists of a rectangle together with a semicircle attached to each of its two shorter sides. The rectangle measures "
+        },
+        {
+          "t": "math",
+          "v": "26"
+        },
+        {
+          "t": "text",
+          "v": " by "
+        },
+        {
+          "t": "math",
+          "v": "2r"
+        },
+        {
+          "t": "text",
+          "v": ", and each semicircle has radius "
+        },
+        {
+          "t": "math",
+          "v": "r"
+        },
+        {
+          "t": "text",
+          "v": " with its diameter coinciding with a shorter side. If "
+        },
+        {
+          "t": "math",
+          "v": "r = 6"
+        },
+        {
+          "t": "text",
+          "v": ", what is the total area of the figure, in square units?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "156 + 36\\pi"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "312 + 36\\pi"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "312 + 18\\pi"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "312 + 144\\pi"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "B"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. decompose figure: "
+        },
+        {
+          "t": "text",
+          "v": "Separate the region into a rectangle "
+        },
+        {
+          "t": "math",
+          "v": "26 \\times 2r"
+        },
+        {
+          "t": "text",
+          "v": " plus two semicircles of radius "
+        },
+        {
+          "t": "math",
+          "v": "r"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. substitute: "
+        },
+        {
+          "t": "text",
+          "v": "Substitute "
+        },
+        {
+          "t": "math",
+          "v": "r = 6"
+        },
+        {
+          "t": "text",
+          "v": ": the rectangle is "
+        },
+        {
+          "t": "math",
+          "v": "26 \\times 12"
+        },
+        {
+          "t": "text",
+          "v": " and each semicircle has radius "
+        },
+        {
+          "t": "math",
+          "v": "6"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. apply area formula: "
+        },
+        {
+          "t": "text",
+          "v": "Rectangle area: "
+        },
+        {
+          "t": "math",
+          "v": "26 \\times 12 = 312"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "4. apply area formula: "
+        },
+        {
+          "t": "text",
+          "v": "Two semicircles of radius "
+        },
+        {
+          "t": "math",
+          "v": "6"
+        },
+        {
+          "t": "text",
+          "v": " form one full circle: "
+        },
+        {
+          "t": "math",
+          "v": "\\pi r^2 = \\pi(6)^2 = 36\\pi"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "5. evaluate: "
+        },
+        {
+          "t": "text",
+          "v": "Add the pieces: "
+        },
+        {
+          "t": "math",
+          "v": "312 + 36\\pi"
+        },
+        {
+          "t": "text",
+          "v": " square units."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 740,
+        "band": "B7",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "composite_2d3d",
+          "from_context": false,
+          "has_fraction_or_irrational": false
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "composite_2d3d",
+        "from_context": false,
+        "has_fraction_or_irrational": false
+      },
+      "fingerprint": [
+        "decompose_figure",
+        "substitute",
+        "apply_area_formula",
+        "apply_area_formula",
+        "evaluate"
+      ],
+      "reskinDistance": 0.8,
+      "tier": "build-spec"
+    },
+    {
+      "id": 34,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "GEO.B7.s1",
+      "skill": "area_volume",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "A marine biologist logs a dolphin pod's spread by outlining a survey zone shaped like a "
+        },
+        {
+          "t": "math",
+          "v": "47"
+        },
+        {
+          "t": "text",
+          "v": " m by "
+        },
+        {
+          "t": "math",
+          "v": "38"
+        },
+        {
+          "t": "text",
+          "v": " m rectangle with a triangular cap attached along one "
+        },
+        {
+          "t": "math",
+          "v": "38"
+        },
+        {
+          "t": "text",
+          "v": " m edge. The triangle's base is that shared "
+        },
+        {
+          "t": "math",
+          "v": "38"
+        },
+        {
+          "t": "text",
+          "v": " m edge, and its height is "
+        },
+        {
+          "t": "math",
+          "v": "s"
+        },
+        {
+          "t": "text",
+          "v": ". If the survey zone's total area is "
+        },
+        {
+          "t": "math",
+          "v": "2204"
+        },
+        {
+          "t": "text",
+          "v": " square meters, what is the value of "
+        },
+        {
+          "t": "math",
+          "v": "s"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "22"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. decompose figure: "
+        },
+        {
+          "t": "text",
+          "v": "Split the survey zone into a "
+        },
+        {
+          "t": "math",
+          "v": "47\\,\\text{m}\\times 38\\,\\text{m}"
+        },
+        {
+          "t": "text",
+          "v": " rectangle and a triangle with base "
+        },
+        {
+          "t": "math",
+          "v": "38\\,\\text{m}"
+        },
+        {
+          "t": "text",
+          "v": " (the shared edge) and height "
+        },
+        {
+          "t": "math",
+          "v": "s"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. apply area formula: "
+        },
+        {
+          "t": "text",
+          "v": "Rectangle area: "
+        },
+        {
+          "t": "math",
+          "v": "47 \\times 38 = 1786"
+        },
+        {
+          "t": "text",
+          "v": " square meters."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. apply area formula: "
+        },
+        {
+          "t": "text",
+          "v": "Triangle area: "
+        },
+        {
+          "t": "math",
+          "v": "\\tfrac12 \\times 38 \\times s = 19s"
+        },
+        {
+          "t": "text",
+          "v": " square meters."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "4. substitute: "
+        },
+        {
+          "t": "text",
+          "v": "Total area equation: "
+        },
+        {
+          "t": "math",
+          "v": "1786 + 19s = 2204"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "5. isolate dimension: "
+        },
+        {
+          "t": "text",
+          "v": "Subtract "
+        },
+        {
+          "t": "math",
+          "v": "1786"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "math",
+          "v": "19s = 418"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "6. evaluate: "
+        },
+        {
+          "t": "text",
+          "v": "Divide by "
+        },
+        {
+          "t": "math",
+          "v": "19"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "math",
+          "v": "s = 22"
+        },
+        {
+          "t": "text",
+          "v": ". Check: "
+        },
+        {
+          "t": "math",
+          "v": "1786 + 19(22) = 1786 + 418 = 2204"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 755,
+        "band": "B7",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "composite_2d3d",
+          "from_context": true,
+          "has_fraction_or_irrational": false
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "composite_2d3d",
+        "from_context": true,
+        "has_fraction_or_irrational": false
+      },
+      "fingerprint": [
+        "decompose_figure",
+        "apply_area_formula",
+        "apply_area_formula",
+        "substitute",
+        "isolate_dimension",
+        "evaluate"
+      ],
+      "reskinDistance": 0.833,
+      "tier": "build-spec"
+    },
+    {
+      "id": 35,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "GEO.B7.s3",
+      "skill": "circles",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "In a circle with center "
+        },
+        {
+          "t": "math",
+          "v": "O"
+        },
+        {
+          "t": "text",
+          "v": ", points "
+        },
+        {
+          "t": "math",
+          "v": "A"
+        },
+        {
+          "t": "text",
+          "v": ", "
+        },
+        {
+          "t": "math",
+          "v": "B"
+        },
+        {
+          "t": "text",
+          "v": ", and "
+        },
+        {
+          "t": "math",
+          "v": "C"
+        },
+        {
+          "t": "text",
+          "v": " lie on the circle. The central angle "
+        },
+        {
+          "t": "math",
+          "v": "\\angle AOB"
+        },
+        {
+          "t": "text",
+          "v": " measures "
+        },
+        {
+          "t": "math",
+          "v": "122^\\circ"
+        },
+        {
+          "t": "text",
+          "v": ", and point "
+        },
+        {
+          "t": "math",
+          "v": "C"
+        },
+        {
+          "t": "text",
+          "v": " lies on the major arc "
+        },
+        {
+          "t": "math",
+          "v": "AB"
+        },
+        {
+          "t": "text",
+          "v": ". If "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": " is the measure, in degrees, of the inscribed angle "
+        },
+        {
+          "t": "math",
+          "v": "\\angle ACB"
+        },
+        {
+          "t": "text",
+          "v": ", what is the value of "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "61"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. central inscribed angle: "
+        },
+        {
+          "t": "text",
+          "v": "The central angle "
+        },
+        {
+          "t": "math",
+          "v": "\\angle AOB"
+        },
+        {
+          "t": "text",
+          "v": " intercepts minor arc "
+        },
+        {
+          "t": "math",
+          "v": "AB"
+        },
+        {
+          "t": "text",
+          "v": ", so "
+        },
+        {
+          "t": "math",
+          "v": "\\overset{\\frown}{AB} = m\\angle AOB = 122^\\circ"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. central inscribed angle: "
+        },
+        {
+          "t": "text",
+          "v": "Since "
+        },
+        {
+          "t": "math",
+          "v": "C"
+        },
+        {
+          "t": "text",
+          "v": " is on the major arc, inscribed angle "
+        },
+        {
+          "t": "math",
+          "v": "\\angle ACB"
+        },
+        {
+          "t": "text",
+          "v": " intercepts the same minor arc "
+        },
+        {
+          "t": "math",
+          "v": "AB"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. apply circle formula: "
+        },
+        {
+          "t": "text",
+          "v": "Inscribed-angle theorem: "
+        },
+        {
+          "t": "math",
+          "v": "x = \\tfrac{1}{2}\\,\\overset{\\frown}{AB}"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "4. evaluate: "
+        },
+        {
+          "t": "math",
+          "v": "x = \\tfrac{1}{2}(122^\\circ) = 61^\\circ"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 740,
+        "band": "B7",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "circle_angle",
+          "from_context": false,
+          "radians": false
+        }
+      },
+      "verify": {
+        "tier": "B",
+        "correctness": "consistency 5/4"
+      },
+      "radicals": {
+        "task": "circle_angle",
+        "from_context": false,
+        "radians": false
+      },
+      "fingerprint": [
+        "central_inscribed_angle",
+        "central_inscribed_angle",
+        "apply_circle_formula",
+        "evaluate"
+      ],
+      "reskinDistance": 0.75,
+      "tier": "build-spec"
+    },
+    {
+      "id": 36,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "GEO.B7.s3",
+      "skill": "circles",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "A science museum displays a circular \"daylight dial\" infographic of radius "
+        },
+        {
+          "t": "math",
+          "v": "15"
+        },
+        {
+          "t": "text",
+          "v": " inches. On the dial, the stretch of weeks during which daylight increases—from the spring equinox to the summer solstice—is drawn as an arc with a central angle of "
+        },
+        {
+          "t": "math",
+          "v": "\\frac{4\\pi}{9}"
+        },
+        {
+          "t": "text",
+          "v": " radians. What is the length "
+        },
+        {
+          "t": "math",
+          "v": "y"
+        },
+        {
+          "t": "text",
+          "v": ", in inches, of this arc?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "\\frac{4\\pi}{9}"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "\\frac{20\\pi}{3}"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "\\frac{40\\pi}{3}"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "50\\pi"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "B"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. arc length formula: "
+        },
+        {
+          "t": "text",
+          "v": "For a central angle in radians, arc length "
+        },
+        {
+          "t": "math",
+          "v": "s = r\\theta"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. evaluate: "
+        },
+        {
+          "t": "text",
+          "v": "Extract "
+        },
+        {
+          "t": "math",
+          "v": "r = 15"
+        },
+        {
+          "t": "text",
+          "v": " inches and "
+        },
+        {
+          "t": "math",
+          "v": "\\theta = \\frac{4\\pi}{9}"
+        },
+        {
+          "t": "text",
+          "v": " radians."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. evaluate: "
+        },
+        {
+          "t": "math",
+          "v": "y = 15 \\cdot \\frac{4\\pi}{9} = \\frac{60\\pi}{9}"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "4. evaluate: "
+        },
+        {
+          "t": "text",
+          "v": "Simplify: "
+        },
+        {
+          "t": "math",
+          "v": "\\frac{60\\pi}{9} = \\frac{20\\pi}{3}"
+        },
+        {
+          "t": "text",
+          "v": " inches."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 760,
+        "band": "B7",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "arc_length",
+          "from_context": true,
+          "radians": true
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "arc_length",
+        "from_context": true,
+        "radians": true
+      },
+      "fingerprint": [
+        "arc_length_formula",
+        "evaluate",
+        "evaluate",
+        "evaluate"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 37,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "GEO.B7.s2",
+      "skill": "lines_angles_triangles",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "Segments "
+        },
+        {
+          "t": "math",
+          "v": "AE"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "BD"
+        },
+        {
+          "t": "text",
+          "v": " intersect at point "
+        },
+        {
+          "t": "math",
+          "v": "C"
+        },
+        {
+          "t": "text",
+          "v": ". In "
+        },
+        {
+          "t": "math",
+          "v": "\\triangle ABC"
+        },
+        {
+          "t": "text",
+          "v": ", "
+        },
+        {
+          "t": "math",
+          "v": "\\angle BAC = 53^\\circ"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "\\angle ABC = 79^\\circ"
+        },
+        {
+          "t": "text",
+          "v": ", and "
+        },
+        {
+          "t": "math",
+          "v": "\\angle CDE = 79^\\circ"
+        },
+        {
+          "t": "text",
+          "v": ". Given that "
+        },
+        {
+          "t": "math",
+          "v": "AC = 18"
+        },
+        {
+          "t": "text",
+          "v": ", "
+        },
+        {
+          "t": "math",
+          "v": "EC = 24"
+        },
+        {
+          "t": "text",
+          "v": ", and "
+        },
+        {
+          "t": "math",
+          "v": "BC = 21"
+        },
+        {
+          "t": "text",
+          "v": ", what is the length of "
+        },
+        {
+          "t": "math",
+          "v": "DC"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "28"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. triangle angle sum: "
+        },
+        {
+          "t": "text",
+          "v": "In "
+        },
+        {
+          "t": "math",
+          "v": "\\triangle ABC"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "math",
+          "v": "\\angle ACB = 180^\\circ - 53^\\circ - 79^\\circ = 48^\\circ"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. vertical supplementary: "
+        },
+        {
+          "t": "math",
+          "v": "\\angle DCE"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "\\angle ACB"
+        },
+        {
+          "t": "text",
+          "v": " are vertical angles at "
+        },
+        {
+          "t": "math",
+          "v": "C"
+        },
+        {
+          "t": "text",
+          "v": ", so "
+        },
+        {
+          "t": "math",
+          "v": "\\angle DCE = 48^\\circ"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. triangle angle sum: "
+        },
+        {
+          "t": "text",
+          "v": "In "
+        },
+        {
+          "t": "math",
+          "v": "\\triangle EDC"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "math",
+          "v": "\\angle DEC = 180^\\circ - 48^\\circ - 79^\\circ = 53^\\circ"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "4. apply similarity: "
+        },
+        {
+          "t": "text",
+          "v": "Both triangles have angles "
+        },
+        {
+          "t": "math",
+          "v": "53^\\circ, 79^\\circ, 48^\\circ"
+        },
+        {
+          "t": "text",
+          "v": ", so by AA "
+        },
+        {
+          "t": "math",
+          "v": "\\triangle ABC \\sim \\triangle EDC"
+        },
+        {
+          "t": "text",
+          "v": " with correspondence "
+        },
+        {
+          "t": "math",
+          "v": "A\\leftrightarrow E,\\ B\\leftrightarrow D,\\ C\\leftrightarrow C"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "5. set proportion: "
+        },
+        {
+          "t": "text",
+          "v": "Match sides by subtended angle: "
+        },
+        {
+          "t": "math",
+          "v": "BC\\leftrightarrow DC"
+        },
+        {
+          "t": "text",
+          "v": " (opposite "
+        },
+        {
+          "t": "math",
+          "v": "53^\\circ"
+        },
+        {
+          "t": "text",
+          "v": ") and "
+        },
+        {
+          "t": "math",
+          "v": "AC\\leftrightarrow EC"
+        },
+        {
+          "t": "text",
+          "v": " (opposite "
+        },
+        {
+          "t": "math",
+          "v": "79^\\circ"
+        },
+        {
+          "t": "text",
+          "v": "), giving "
+        },
+        {
+          "t": "math",
+          "v": "\\frac{DC}{BC} = \\frac{EC}{AC}"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "6. scale factor ratio: "
+        },
+        {
+          "t": "text",
+          "v": "Scale factor "
+        },
+        {
+          "t": "math",
+          "v": "k = \\frac{EC}{AC} = \\frac{24}{18} = \\frac{4}{3}"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "7. solve for unknown: "
+        },
+        {
+          "t": "math",
+          "v": "DC = BC\\cdot k = 21\\cdot \\frac{4}{3} = 28"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 760,
+        "band": "B7",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "similarity_complex",
+          "multi_step": true,
+          "has_variable": false
+        }
+      },
+      "verify": {
+        "tier": "B",
+        "correctness": "consistency 5/4"
+      },
+      "radicals": {
+        "task": "similarity_complex",
+        "multi_step": true,
+        "has_variable": false
+      },
+      "fingerprint": [
+        "triangle_angle_sum",
+        "vertical_supplementary",
+        "triangle_angle_sum",
+        "apply_similarity",
+        "set_proportion",
+        "scale_factor_ratio",
+        "solve_for_unknown"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 38,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "GEO.B7.s2",
+      "skill": "lines_angles_triangles",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "Segments "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{AD}"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{BC}"
+        },
+        {
+          "t": "text",
+          "v": " intersect at point "
+        },
+        {
+          "t": "math",
+          "v": "E"
+        },
+        {
+          "t": "text",
+          "v": ", forming "
+        },
+        {
+          "t": "math",
+          "v": "\\triangle AEB"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "\\triangle CED"
+        },
+        {
+          "t": "text",
+          "v": ". Given "
+        },
+        {
+          "t": "math",
+          "v": "\\angle AEB = 64^\\circ"
+        },
+        {
+          "t": "text",
+          "v": ", "
+        },
+        {
+          "t": "math",
+          "v": "\\angle ABE = 47^\\circ"
+        },
+        {
+          "t": "text",
+          "v": ", "
+        },
+        {
+          "t": "math",
+          "v": "\\angle CDE = 47^\\circ"
+        },
+        {
+          "t": "text",
+          "v": ", "
+        },
+        {
+          "t": "math",
+          "v": "EA = 18"
+        },
+        {
+          "t": "text",
+          "v": ", "
+        },
+        {
+          "t": "math",
+          "v": "EB = 21"
+        },
+        {
+          "t": "text",
+          "v": ", and "
+        },
+        {
+          "t": "math",
+          "v": "EC = 30"
+        },
+        {
+          "t": "text",
+          "v": ", what is the length of "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{ED}"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "35"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. triangle angle sum: "
+        },
+        {
+          "t": "text",
+          "v": "In "
+        },
+        {
+          "t": "math",
+          "v": "\\triangle AEB"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "math",
+          "v": "\\angle BAE = 180^\\circ - 64^\\circ - 47^\\circ = 69^\\circ"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. vertical supplementary: "
+        },
+        {
+          "t": "text",
+          "v": "Since "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{AD}"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{BC}"
+        },
+        {
+          "t": "text",
+          "v": " cross at "
+        },
+        {
+          "t": "math",
+          "v": "E"
+        },
+        {
+          "t": "text",
+          "v": ", "
+        },
+        {
+          "t": "math",
+          "v": "\\angle CED"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "\\angle AEB"
+        },
+        {
+          "t": "text",
+          "v": " are vertical angles, so "
+        },
+        {
+          "t": "math",
+          "v": "\\angle CED = 64^\\circ"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. triangle angle sum: "
+        },
+        {
+          "t": "text",
+          "v": "In "
+        },
+        {
+          "t": "math",
+          "v": "\\triangle CED"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "math",
+          "v": "\\angle DCE = 180^\\circ - 64^\\circ - 47^\\circ = 69^\\circ"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "4. apply similarity: "
+        },
+        {
+          "t": "math",
+          "v": "\\angle BAE = \\angle DCE = 69^\\circ"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "\\angle AEB = \\angle CED = 64^\\circ"
+        },
+        {
+          "t": "text",
+          "v": ", so by AA "
+        },
+        {
+          "t": "math",
+          "v": "\\triangle AEB \\sim \\triangle CED"
+        },
+        {
+          "t": "text",
+          "v": " with "
+        },
+        {
+          "t": "math",
+          "v": "A\\!\\leftrightarrow\\!C,\\ E\\!\\leftrightarrow\\!E,\\ B\\!\\leftrightarrow\\!D"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "5. scale factor ratio: "
+        },
+        {
+          "t": "text",
+          "v": "Corresponding sides give scale factor "
+        },
+        {
+          "t": "math",
+          "v": "k = \\dfrac{EC}{EA} = \\dfrac{30}{18} = \\dfrac{5}{3}"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "6. set proportion: "
+        },
+        {
+          "t": "math",
+          "v": "EB"
+        },
+        {
+          "t": "text",
+          "v": " corresponds to "
+        },
+        {
+          "t": "math",
+          "v": "ED"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "math",
+          "v": "\\dfrac{EA}{EC} = \\dfrac{EB}{ED}\\Rightarrow \\dfrac{18}{30} = \\dfrac{21}{ED}"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "7. solve for unknown: "
+        },
+        {
+          "t": "math",
+          "v": "ED = k\\cdot EB = \\dfrac{5}{3}\\cdot 21 = 35"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 760,
+        "band": "B7",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "similarity_complex",
+          "multi_step": true,
+          "has_variable": false
+        }
+      },
+      "verify": {
+        "tier": "B",
+        "correctness": "consistency 5/4"
+      },
+      "radicals": {
+        "task": "similarity_complex",
+        "multi_step": true,
+        "has_variable": false
+      },
+      "fingerprint": [
+        "triangle_angle_sum",
+        "vertical_supplementary",
+        "triangle_angle_sum",
+        "apply_similarity",
+        "scale_factor_ratio",
+        "set_proportion",
+        "solve_for_unknown"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 39,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "GEO.B7.s2",
+      "skill": "right_triangles_trig",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "Points "
+        },
+        {
+          "t": "math",
+          "v": "A"
+        },
+        {
+          "t": "text",
+          "v": ", "
+        },
+        {
+          "t": "math",
+          "v": "D"
+        },
+        {
+          "t": "text",
+          "v": ", and "
+        },
+        {
+          "t": "math",
+          "v": "C"
+        },
+        {
+          "t": "text",
+          "v": " lie on a line, with "
+        },
+        {
+          "t": "math",
+          "v": "D"
+        },
+        {
+          "t": "text",
+          "v": " between "
+        },
+        {
+          "t": "math",
+          "v": "A"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "C"
+        },
+        {
+          "t": "text",
+          "v": ", and "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{BD}"
+        },
+        {
+          "t": "text",
+          "v": " is perpendicular to "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{AC}"
+        },
+        {
+          "t": "text",
+          "v": ". In right triangle "
+        },
+        {
+          "t": "math",
+          "v": "ABD"
+        },
+        {
+          "t": "text",
+          "v": ", "
+        },
+        {
+          "t": "math",
+          "v": "\\tan(\\angle A)=\\frac{5}{2}"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "AD=6"
+        },
+        {
+          "t": "text",
+          "v": ". If "
+        },
+        {
+          "t": "math",
+          "v": "DC=10"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "BC=x"
+        },
+        {
+          "t": "text",
+          "v": ", what is the value of "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": "? (Round to the nearest hundredth.)"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "18.03"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. trig ratio soscahtoa: "
+        },
+        {
+          "t": "text",
+          "v": "In right triangle ABD (right angle at D), tan(∠A) = opposite/adjacent = BD/AD, so BD = AD·tan(∠A) = 6·(5/2) = 15."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. apply pythagorean: "
+        },
+        {
+          "t": "text",
+          "v": "Since BD ⊥ AC, angle BDC = 90°, so triangle BDC is right with legs BD and DC. BC² = BD² + DC² = 15² + 10² = 225 + 100 = 325."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. simplify radical: "
+        },
+        {
+          "t": "text",
+          "v": "BC = √325 = √(25·13) = 5√13."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "4. solve for unknown: "
+        },
+        {
+          "t": "text",
+          "v": "x = BC = 5√13 ≈ 18.0278, which rounds to 18.03."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 755,
+        "band": "B7",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "trig_complex",
+          "from_context": false,
+          "irrational_answer": true
+        }
+      },
+      "verify": {
+        "tier": "B",
+        "correctness": "consistency 5/4"
+      },
+      "radicals": {
+        "task": "trig_complex",
+        "from_context": false,
+        "irrational_answer": true
+      },
+      "fingerprint": [
+        "trig_ratio_soscahtoa",
+        "apply_pythagorean",
+        "simplify_radical",
+        "solve_for_unknown"
+      ],
+      "reskinDistance": 0.75,
+      "tier": "build-spec"
+    },
+    {
+      "id": 40,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "GEO.B7.s2",
+      "skill": "right_triangles_trig",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "In right triangle "
+        },
+        {
+          "t": "math",
+          "v": "ABC"
+        },
+        {
+          "t": "text",
+          "v": ", the right angle is at "
+        },
+        {
+          "t": "math",
+          "v": "B"
+        },
+        {
+          "t": "text",
+          "v": ", and "
+        },
+        {
+          "t": "math",
+          "v": "\\theta"
+        },
+        {
+          "t": "text",
+          "v": " is the measure of angle "
+        },
+        {
+          "t": "math",
+          "v": "A"
+        },
+        {
+          "t": "text",
+          "v": ". Given that "
+        },
+        {
+          "t": "math",
+          "v": "\\cos\\theta = \\frac{5}{9}"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "AB = 15"
+        },
+        {
+          "t": "text",
+          "v": ", what is the length of "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{BC}"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "27"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "6\\sqrt{14}"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "3\\sqrt{106}"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "2\\sqrt{14}"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "B"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. trig ratio soscahtoa: "
+        },
+        {
+          "t": "text",
+          "v": "With the right angle at B, side AB is adjacent to angle A and AC is the hypotenuse, so "
+        },
+        {
+          "t": "math",
+          "v": "\\cos\\theta = \\frac{AB}{AC} = \\frac{5}{9}"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. solve for unknown: "
+        },
+        {
+          "t": "text",
+          "v": "From "
+        },
+        {
+          "t": "math",
+          "v": "\\frac{15}{AC} = \\frac{5}{9}"
+        },
+        {
+          "t": "text",
+          "v": ", the hypotenuse is "
+        },
+        {
+          "t": "math",
+          "v": "AC = 15\\cdot\\frac{9}{5} = 27"
+        },
+        {
+          "t": "text",
+          "v": " (rational early-stop distractor 27)."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. apply pythagorean: "
+        },
+        {
+          "t": "text",
+          "v": "Remaining leg: "
+        },
+        {
+          "t": "math",
+          "v": "BC = \\sqrt{AC^2 - AB^2} = \\sqrt{27^2 - 15^2} = \\sqrt{729 - 225} = \\sqrt{504}"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "4. simplify radical: "
+        },
+        {
+          "t": "math",
+          "v": "\\sqrt{504} = \\sqrt{36\\cdot 14} = 6\\sqrt{14}"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 755,
+        "band": "B7",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "trig_complex",
+          "from_context": false,
+          "irrational_answer": true
+        }
+      },
+      "verify": {
+        "tier": "B",
+        "correctness": "consistency 5/4"
+      },
+      "radicals": {
+        "task": "trig_complex",
+        "from_context": false,
+        "irrational_answer": true
+      },
+      "fingerprint": [
+        "trig_ratio_soscahtoa",
+        "solve_for_unknown",
+        "apply_pythagorean",
+        "simplify_radical"
+      ],
+      "reskinDistance": 0.75,
+      "tier": "build-spec"
+    }
+  ]
+}

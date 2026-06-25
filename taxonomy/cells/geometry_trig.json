@@ -1,0 +1,90 @@
+{
+  "_note": "CELL SCHEMA — GEOMETRY & TRIGONOMETRY (GEO-1, text/formula-first). All 19 rubric statements are figure-OPTIONAL (only GEO.B5.s1 is figure-none), so items are self-contained TEXT: the configuration is described in prose, the answer is EXACT (integer, simple fraction, radical surd, or pi-form). task is the primary difficulty radical; modifiers nudge +/-1 band. task_tier routes Tier A (PROVE/sympy, mechanizable) vs Tier B (consistency, theorem/relational). statementByTask pins each task to its Skills-Insight home; LLTM weight places it at that band. Figures are deferred to GEO-2.",
+  "domain": "geometry_trig",
+  "tier": "A",
+  "band_cuts": { "edges": [370, 420, 470, 550, 610, 680] },
+  "band_anchors": { "B1": 340, "B2": 395, "B3": 445, "B4": 510, "B5": 580, "B6": 645, "B7": 740 },
+  "subdomains": {
+    "area_volume": {
+      "label": "Area, perimeter, surface area & volume (2D and 3D)",
+      "target": "compute an area / perimeter / surface area / volume, or solve for a missing dimension",
+      "statementByBand": { "B1": "GEO.B1.s2", "B2": "GEO.B2.s1", "B3": "GEO.B3.s1", "B4": "GEO.B4.s1", "B5": "GEO.B5.s3", "B6": "GEO.B6.s1", "B7": "GEO.B7.s1" },
+      "statementByTask": {
+        "rect_area": "GEO.B1.s2", "prism_volume": "GEO.B1.s1", "perimeter": "GEO.B2.s1",
+        "triangle_area": "GEO.B3.s1", "circle_area": "GEO.B3.s1",
+        "pyramid_volume": "GEO.B4.s1", "cube_volume": "GEO.B4.s1",
+        "multistep_area_perimeter": "GEO.B5.s3", "surface_area": "GEO.B6.s1", "solve_dimension": "GEO.B6.s1",
+        "composite_2d3d": "GEO.B7.s1"
+      },
+      "radical_axes": {
+        "task": ["rect_area", "prism_volume", "perimeter", "triangle_area", "circle_area", "pyramid_volume", "cube_volume", "multistep_area_perimeter", "surface_area", "solve_dimension", "composite_2d3d"],
+        "from_context": [false, true],
+        "has_fraction_or_irrational": [false, true]
+      },
+      "incidental_axes": { "context": "@contexts", "var_name": ["x", "s", "h", "r"], "coefficient_range": [2, 18], "constant_range": [1, 200] },
+      "lltm": { "weights": { "w0": 340, "task": { "rect_area": 0, "prism_volume": 0, "perimeter": 55, "triangle_area": 105, "circle_area": 105, "pyramid_volume": 170, "cube_volume": 170, "multistep_area_perimeter": 240, "surface_area": 305, "solve_dimension": 305, "composite_2d3d": 400 }, "from_context": 15, "has_fraction_or_irrational": 25 } },
+      "task_tier": { "rect_area": "A", "prism_volume": "A", "perimeter": "A", "triangle_area": "A", "circle_area": "A", "pyramid_volume": "A", "cube_volume": "A", "multistep_area_perimeter": "A", "surface_area": "A", "solve_dimension": "A", "composite_2d3d": "A" },
+      "canonical_fingerprint": ["apply_area_formula"],
+      "op_vocab": ["apply_area_formula", "apply_volume_formula", "apply_perimeter_formula", "apply_surface_area", "decompose_figure", "isolate_dimension", "substitute", "evaluate"]
+    },
+    "lines_angles_triangles": {
+      "label": "Angles, parallel lines, triangle theorems, similarity & congruence",
+      "target": "find an angle or length by applying angle/line theorems, similarity, congruence, or a scale factor",
+      "statementByBand": { "B2": "GEO.B2.s2", "B3": "GEO.B3.s2", "B4": "GEO.B4.s2", "B5": "GEO.B4.s2", "B6": "GEO.B6.s2", "B7": "GEO.B7.s2" },
+      "statementByTask": {
+        "parallel_transversal": "GEO.B2.s2", "triangle_angle_sum": "GEO.B3.s2", "intersecting_angles": "GEO.B3.s2",
+        "scale_factor": "GEO.B4.s2", "similarity": "GEO.B4.s2", "congruence": "GEO.B4.s2",
+        "angle_complex": "GEO.B6.s2", "similarity_right": "GEO.B6.s3", "similarity_complex": "GEO.B7.s2"
+      },
+      "radical_axes": {
+        "task": ["parallel_transversal", "triangle_angle_sum", "intersecting_angles", "scale_factor", "similarity", "congruence", "angle_complex", "similarity_right", "similarity_complex"],
+        "multi_step": [false, true],
+        "has_variable": [false, true]
+      },
+      "incidental_axes": { "context": "@contexts", "var_name": ["x", "y", "a", "b"], "coefficient_range": [2, 12], "constant_range": [10, 160] },
+      "lltm": { "weights": { "w0": 395, "task": { "parallel_transversal": 0, "triangle_angle_sum": 50, "intersecting_angles": 50, "scale_factor": 115, "similarity": 115, "congruence": 115, "angle_complex": 250, "similarity_right": 250, "similarity_complex": 345 }, "multi_step": 20, "has_variable": 20 } },
+      "task_tier": { "parallel_transversal": "B", "triangle_angle_sum": "A", "intersecting_angles": "A", "scale_factor": "B", "similarity": "B", "congruence": "B", "angle_complex": "B", "similarity_right": "B", "similarity_complex": "B" },
+      "canonical_fingerprint": ["apply_angle_theorem"],
+      "op_vocab": ["apply_angle_theorem", "triangle_angle_sum", "vertical_supplementary", "parallel_transversal_rule", "apply_similarity", "apply_congruence", "scale_factor_ratio", "set_proportion", "solve_for_unknown"]
+    },
+    "right_triangles_trig": {
+      "label": "Pythagorean theorem, special right triangles & right-triangle trigonometry",
+      "target": "find a side or angle via the Pythagorean theorem, special-right-triangle ratios, or trigonometric ratios",
+      "statementByBand": { "B3": "GEO.B3.s3", "B4": "GEO.B4.s3", "B5": "GEO.B5.s1", "B6": "GEO.B6.s3", "B7": "GEO.B7.s2" },
+      "statementByTask": {
+        "pythagorean_hyp": "GEO.B3.s3", "pythagorean_leg": "GEO.B4.s3", "special_30_60_90": "GEO.B4.s3", "special_45_45_90": "GEO.B4.s3",
+        "sin_cos_complementary": "GEO.B5.s1", "radian_convert": "GEO.B5.s1",
+        "trig_ratio": "GEO.B6.s3", "trig_complex": "GEO.B7.s2"
+      },
+      "radical_axes": {
+        "task": ["pythagorean_hyp", "pythagorean_leg", "special_30_60_90", "special_45_45_90", "sin_cos_complementary", "radian_convert", "trig_ratio", "trig_complex"],
+        "from_context": [false, true],
+        "irrational_answer": [false, true]
+      },
+      "incidental_axes": { "context": "@contexts", "var_name": ["x", "h", "\\theta", "a"], "coefficient_range": [2, 20], "constant_range": [1, 90] },
+      "lltm": { "weights": { "w0": 445, "task": { "pythagorean_hyp": 0, "pythagorean_leg": 65, "special_30_60_90": 65, "special_45_45_90": 65, "sin_cos_complementary": 135, "radian_convert": 135, "trig_ratio": 200, "trig_complex": 295 }, "from_context": 15, "irrational_answer": 15 } },
+      "task_tier": { "pythagorean_hyp": "A", "pythagorean_leg": "A", "special_30_60_90": "A", "special_45_45_90": "A", "sin_cos_complementary": "A", "radian_convert": "A", "trig_ratio": "A", "trig_complex": "B" },
+      "canonical_fingerprint": ["apply_pythagorean"],
+      "op_vocab": ["apply_pythagorean", "special_triangle_ratio", "trig_ratio_soscahtoa", "complementary_identity", "degree_radian_convert", "simplify_radical", "set_proportion", "solve_for_unknown"]
+    },
+    "circles": {
+      "label": "Circles in the xy-plane: equation, arcs, sectors, tangents & angles",
+      "target": "write a circle's equation, or find an arc length, sector area, angle, or tangent relationship",
+      "statementByBand": { "B5": "GEO.B5.s2", "B6": "GEO.B7.s3", "B7": "GEO.B7.s3" },
+      "statementByTask": {
+        "circle_equation": "GEO.B5.s2",
+        "arc_length": "GEO.B7.s3", "sector_area": "GEO.B7.s3", "circle_angle": "GEO.B7.s3", "tangent": "GEO.B7.s3"
+      },
+      "radical_axes": {
+        "task": ["circle_equation", "arc_length", "sector_area", "circle_angle", "tangent"],
+        "from_context": [false, true],
+        "radians": [false, true]
+      },
+      "incidental_axes": { "context": "@contexts", "var_name": ["x", "y", "r", "\\theta"], "coefficient_range": [2, 12], "constant_range": [1, 50] },
+      "lltm": { "weights": { "w0": 580, "task": { "circle_equation": 0, "arc_length": 160, "sector_area": 160, "circle_angle": 160, "tangent": 160 }, "from_context": 10, "radians": 10 } },
+      "task_tier": { "circle_equation": "A", "arc_length": "A", "sector_area": "A", "circle_angle": "B", "tangent": "B" },
+      "canonical_fingerprint": ["apply_circle_formula"],
+      "op_vocab": ["apply_circle_formula", "distance_radius", "arc_length_formula", "sector_area_formula", "central_inscribed_angle", "tangent_property", "evaluate"]
+    }
+  }
+}

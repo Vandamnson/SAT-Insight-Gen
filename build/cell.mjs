@@ -197,6 +197,68 @@ function drawRadicalRational(rad, { context }) {
    Difficulty is set by the cell's LLTM task weight, not here. */
 function drawNonlinearGraph(rad, { r, band }) { return drawGraphItem(rad.task, band, r); }
 
+/* ===================== geometry & trigonometry (GEO-1, text/formula) =====================
+   Figure-OPTIONAL rubric → self-contained TEXT items with EXACT answers (radical surds,
+   pi-forms, integer triples). Tier A (PROVE) for mechanizable formulas, Tier B
+   (consistency) for theorem/relational tasks; routed by the schema's task_tier. */
+function drawAreaVolume(rad, { context }) {
+  const ctx = ctxLineMF(context);
+  const D = {
+    rect_area: "Give a rectangle's length and width; ask for its AREA.",
+    prism_volume: "Give the three edge lengths of a right rectangular prism (a box); ask for its VOLUME.",
+    perimeter: "Give the side lengths of a plane figure (rectangle, triangle, or simple polygon); ask for its PERIMETER.",
+    triangle_area: "Give a triangle's base and height; ask for its AREA.",
+    circle_area: "Give a circle's radius (or diameter); ask for its AREA in terms of \\(\\pi\\).",
+    pyramid_volume: "Give the base dimensions and height of a pyramid; ask for its VOLUME (\\(\\frac{1}{3}\\)·base area·height).",
+    cube_volume: "Give a cube's edge length; ask for its VOLUME or its SURFACE AREA.",
+    multistep_area_perimeter: "Pose a MULTISTEP problem combining area and perimeter (e.g. find a side length from a given area, then compute the perimeter).",
+    surface_area: "Give the dimensions of a right rectangular prism or cube; ask for its SURFACE AREA.",
+    solve_dimension: "Give the VOLUME (or surface area) of a prism, cube, or cylinder and all but one dimension; ask for the MISSING dimension.",
+    composite_2d3d: "Pose a problem about an object modeled by a COMPOSITE or scaled 2D/3D shape; apply area, surface-area, or volume formulas to find a value.",
+  };
+  return mf(D[rad.task] || D.rect_area, ctx);
+}
+function drawLinesAngles(rad, { context }) {
+  const ctx = ctxLineMF(context);
+  const D = {
+    parallel_transversal: "Describe two PARALLEL lines cut by a transversal, with one angle measure given; ask for another angle (corresponding, alternate, or co-interior). State the configuration FULLY in words so it is unambiguous without a figure.",
+    triangle_angle_sum: "Give two angle measures of a triangle (or algebraic expressions for them); ask for the third using the triangle angle-sum (\\(180^\\circ\\)).",
+    intersecting_angles: "Describe two intersecting lines with one angle given; ask for a VERTICAL or SUPPLEMENTARY angle.",
+    scale_factor: "Give two SIMILAR figures with a scale factor (or corresponding lengths); ask how a length, perimeter, area, or volume changes under that factor.",
+    similarity: "Describe two SIMILAR triangles with corresponding side lengths given; ask for a missing side using proportionality. Name the correspondence explicitly.",
+    congruence: "Describe a configuration that forces triangle CONGRUENCE; ask for a corresponding side or angle.",
+    angle_complex: "Pose a COMPLEX multi-step angle problem combining the triangle angle-sum with intersecting-line or parallel-line relationships.",
+    similarity_right: "Use similarity/congruence of RIGHT triangles (e.g. an altitude drawn to the hypotenuse, or nested similar right triangles) to find a length.",
+    similarity_complex: "Pose a COMPLEX multi-step problem using properties of similar/congruent triangles together with angle theorems.",
+  };
+  return mf(D[rad.task] || D.triangle_angle_sum, ctx);
+}
+function drawRightTrig(rad, { context }) {
+  const ctx = ctxLineMF(context);
+  const D = {
+    pythagorean_hyp: "Give the two LEG lengths of a right triangle; ask for the HYPOTENUSE. Use a Pythagorean triple (3-4-5, 5-12-13, 8-15-17) or leave the answer as an exact radical.",
+    pythagorean_leg: "Give the hypotenuse and one leg of a right triangle; ask for the other LEG as an exact value.",
+    special_30_60_90: "Give one side of a 30-60-90 triangle; ask for another side using the \\(1:\\sqrt{3}:2\\) ratio (exact radical).",
+    special_45_45_90: "Give one side of a 45-45-90 (isosceles right) triangle; ask for another side using the \\(1:1:\\sqrt{2}\\) ratio (exact radical).",
+    sin_cos_complementary: "Use \\(\\sin\\theta=\\cos(90^\\circ-\\theta)\\): give one trigonometric value (or angle) and ask for the complementary one. Pose abstractly, no figure.",
+    radian_convert: "Ask to CONVERT a degree measure to radians (or radians to degrees); give the answer as an exact multiple of \\(\\pi\\).",
+    trig_ratio: "Give the side lengths of a right triangle; ask for an exact trigonometric RATIO (sin, cos, or tan) of a named acute angle, as a fraction.",
+    trig_complex: "Pose a MULTISTEP right-triangle trig problem (find a side from a given trig ratio, then use it), or use similarity to relate trigonometric ratios.",
+  };
+  return mf(D[rad.task] || D.pythagorean_hyp, ctx);
+}
+function drawCircles(rad, { context }) {
+  const ctx = ctxLineMF(context);
+  const D = {
+    circle_equation: "Give the CENTER of a circle in the \\(xy\\)-plane and a point on it (or the radius); ask for the EQUATION of the circle in the form \\((x-h)^2+(y-k)^2=r^2\\).",
+    arc_length: "Give a circle's radius and a central angle (degrees or radians); ask for the ARC LENGTH, exact in terms of \\(\\pi\\).",
+    sector_area: "Give a circle's radius and a central angle; ask for the SECTOR AREA, exact in terms of \\(\\pi\\).",
+    circle_angle: "Use a circle theorem relating a CENTRAL angle, an INSCRIBED angle, and/or an arc to find an angle measure.",
+    tangent: "Use the TANGENT property (a tangent is perpendicular to the radius at the point of tangency) to find a length or angle.",
+  };
+  return mf(D[rad.task] || D.circle_equation, ctx);
+}
+
 const DRAWERS = {
   linear_equations_one_variable: drawOneVar,
   linear_equations_two_variables: drawTwoVar,
@@ -207,6 +269,10 @@ const DRAWERS = {
   polynomial_expressions: drawPolyExpr,
   radical_rational_equations: drawRadicalRational,
   nonlinear_graphs: drawNonlinearGraph,
+  area_volume: drawAreaVolume,
+  lines_angles_triangles: drawLinesAngles,
+  right_triangles_trig: drawRightTrig,
+  circles: drawCircles,
 };
 
 // tasks the real SAT poses ABSTRACTLY (bare equation/lines, no scenario) — they ask
@@ -223,6 +289,13 @@ const ABSTRACT_TASKS = new Set([
   "translate_connect", "rewrite_exponent",
   // NOTE: unknown_constant (ADV.B7.s1) is deliberately NOT forced abstract — its rubric
   // statement reads "with or without context", so the draw may make it contextual.
+  // geometry/trig — theorem, coordinate, and pure-trig tasks the SAT poses with a bare
+  // figure/numbers (no scenario). The mensuration tasks + applied Pythagorean are LEFT
+  // contextual (a garden/box/ladder), so the plausibility gate engages on those.
+  "parallel_transversal", "triangle_angle_sum", "intersecting_angles", "scale_factor", "similarity", "congruence",
+  "angle_complex", "similarity_right", "similarity_complex",
+  "special_30_60_90", "special_45_45_90", "sin_cos_complementary", "radian_convert", "trig_ratio", "trig_complex",
+  "circle_equation", "circle_angle", "tangent",
 ]);
 
 /* ============================ the draw ============================ */

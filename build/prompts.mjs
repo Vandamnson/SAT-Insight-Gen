@@ -52,7 +52,31 @@ const advanced_math = {
 - For an MCQ asking which expression is EQUIVALENT, confirm with sympy (expand/factor/simplify, or equality over several random sample points) that the keyed option equals the stem AND the other three do not.`,
 };
 
-const PACKS = { algebra, advanced_math };
+// Geometry & Trigonometry (GEO-1, text/formula-first) — mensuration, angle/line
+// theorems, similarity/congruence, Pythagorean & special right triangles, right-triangle
+// trig, circles. Figures are OPTIONAL, so every configuration is described in self-
+// contained prose; answers are EXACT (integer, simple fraction, radical surd, or pi-form).
+const geometry_trig = {
+  rationaleExtra:
+`\n\nFor GEOMETRY & TRIGONOMETRY the task names the CONCEPT to apply — an area/perimeter/volume/surface-area FORMULA; the triangle angle-sum or angles formed by parallel/intersecting lines; SIMILARITY or CONGRUENCE (a proportion or corresponding parts); the PYTHAGOREAN theorem; a SPECIAL-right-triangle ratio (\\(1:\\sqrt3:2\\), \\(1:1:\\sqrt2\\)); a trigonometric RATIO (SOH-CAH-TOA) or the complementary identity \\(\\sin\\theta=\\cos(90^\\circ-\\theta)\\); a degree↔radian conversion; or a CIRCLE property (equation, arc length, sector area, central/inscribed angle, tangent). The numbered solution path must apply THAT theorem/formula step by step, ending in an exact value. Because no figure is drawn, the stem must describe the configuration COMPLETELY and unambiguously in words.`,
+  authorStyle:
+`- Be CONCISE. Most items are ABSTRACT (a described figure + numbers, no story; the SAT marks these "Figure not drawn to scale"). A mensuration item may get one short clause of real context (a garden, a box, a ramp); pure-theorem, coordinate-circle, and trig items take none.
+- DESCRIBE THE FIGURE IN PROSE so the item is solvable WITHOUT a drawing: name the vertices/lines, state which lines are parallel, which angle is which, and every given length/measure. Never reference "the figure shown".
+- EXACT ANSWERS ONLY — never decimals. Radicals as \\(a\\sqrt{b}\\) in lowest form (special triangles, Pythagorean with non-triple legs); areas/arcs/sectors and radian measures in terms of \\(\\pi\\) (e.g. \\(\\frac{\\pi}{3}\\), \\(6\\pi\\)); Pythagorean triples (3-4-5, 5-12-13, 8-15-17, 7-24-25) for clean integer sides; angles in whole degrees.
+- TRIG: give ratios as exact fractions from the side lengths; for complementary-angle items keep it abstract (\\(\\sin 28^\\circ=\\cos 62^\\circ\\)). For circles in the \\(xy\\)-plane, the equation form is \\((x-h)^2+(y-k)^2=r^2\\).
+- DISTRACTORS (MCQ): use the CANONICAL errors — perimeter for area (or vice versa), forgetting the \\(\\frac12\\) or \\(\\frac13\\) factor, radius/diameter confusion, using a leg as the hypotenuse, the supplement instead of the angle, scale factor applied to area/volume without squaring/cubing, or degrees left unconverted.`,
+  proveHints:
+`\n\nNOTES FOR GEOMETRY/TRIG ANSWERS — recompute exactly with sympy:
+- AREA/PERIMETER/VOLUME/SA: rectangle \\(lw\\), triangle \\(\\tfrac12 bh\\), circle \\(\\pi r^2\\); box \\(lwh\\), cube \\(s^3\\), pyramid \\(\\tfrac13 Bh\\), prism SA \\(2(lw+lh+wh)\\). For a "solve for a dimension" item, isolate it from the formula.
+- PYTHAGOREAN: \\(a^2+b^2=c^2\\); keep surds exact (sympy: \\(\\sqrt{8}=2\\sqrt2\\)). SPECIAL TRIANGLES: 30-60-90 \\(1:\\sqrt3:2\\), 45-45-90 \\(1:1:\\sqrt2\\).
+- ANGLES: a triangle's three angles sum to \\(180^\\circ\\); vertical angles equal, a linear pair sums to \\(180^\\circ\\); for parallel lines cut by a transversal, corresponding/alternate angles are equal and co-interior sum to \\(180^\\circ\\).
+- SIMILARITY: corresponding sides are proportional (set up the ratio); a scale factor \\(k\\) multiplies length by \\(k\\), area by \\(k^2\\), volume by \\(k^3\\).
+- TRIG: \\(\\sin=\\dfrac{\\text{opp}}{\\text{hyp}}\\), \\(\\cos=\\dfrac{\\text{adj}}{\\text{hyp}}\\), \\(\\tan=\\dfrac{\\text{opp}}{\\text{adj}}\\); \\(\\sin\\theta=\\cos(90^\\circ-\\theta)\\); radians \\(=\\) degrees\\(\\times\\dfrac{\\pi}{180}\\).
+- CIRCLE: \\((x-h)^2+(y-k)^2=r^2\\) with \\(r\\) the distance from the center to a point on it; arc length \\(=r\\theta\\) and sector area \\(=\\tfrac12 r^2\\theta\\) (\\(\\theta\\) in radians), or the degree-fraction \\(\\tfrac{\\text{deg}}{360}\\) of \\(2\\pi r\\) / \\(\\pi r^2\\); an inscribed angle is half its central angle.
+- Treat equivalent EXACT forms as equal (\\(2\\sqrt3=\\sqrt{12}\\), \\(\\tfrac{\\pi}{2}=90^\\circ\\) in radians).`,
+};
+
+const PACKS = { algebra, advanced_math, geometry_trig };
 
 /** promptPack(domain) -> { rationaleExtra, authorStyle, proveHints } (base-filled). */
 export function promptPack(domain) {
