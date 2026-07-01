@@ -23,7 +23,9 @@ import { fingerprint, structuralDistance } from "./fingerprint.mjs";
 // structure. Enabled by SIG_STRUCT_DEDUP=1 (or whenever SIG_RESKIN_FLOOR is set).
 const seenFingerprints = new Set();
 const bankShingles = [];   // surface shingles of the persistent bank, seeded for cross-run dedup
-const STRUCT_DEDUP = process.env.SIG_STRUCT_DEDUP === "1" || process.env.SIG_RESKIN_FLOOR != null;
+// E0 seal: SIG_BANK_DEDUP implies the structural check too — the bank seeding logs
+// structural fingerprints, so consulting them must not silently depend on a 2nd flag.
+const STRUCT_DEDUP = process.env.SIG_STRUCT_DEDUP === "1" || process.env.SIG_RESKIN_FLOOR != null || process.env.SIG_BANK_DEDUP === "1";
 // real-world plausibility gate (context items only) — ON by default; SIG_PLAUSIBILITY=0 disables.
 const PLAUSIBILITY = process.env.SIG_PLAUSIBILITY !== "0";
 

@@ -232,7 +232,12 @@ function assemble(kept, testNum, title) {
   const n = String(testNum).padStart(2, "0");
   const fp = join(ROOT, "data", `test-${n}.json`);
   writeFileSync(fp, JSON.stringify({ number: testNum, title: title || `BUILD_SPEC pipeline — test ${n}`, questions }, null, 2));
-  try { const added = appendToBank(questions, { source: `test-${n}` }); console.log(`  banked ${added} new item(s) → data/item-bank.jsonl`); } catch (e) { console.log(`  bank skip: ${e.message}`); }
+  // E0 seal: banking is OPT-IN — experiments/proof runs must not pollute the persistent bank.
+  if (process.env.SIG_BANK === "1") {
+    try { const added = appendToBank(questions, { source: `test-${n}` }); console.log(`  banked ${added} new item(s) → data/item-bank.jsonl`); } catch (e) { console.log(`  bank skip: ${e.message}`); }
+  } else {
+    console.log(`  NOT banked (set SIG_BANK=1 to append survivors to data/item-bank.jsonl)`);
+  }
   const by = {}; questions.forEach((q) => (by[q.target_band] = (by[q.target_band] || 0) + 1));
   const bySub = {}; questions.forEach((q) => (bySub[q.skill] = (bySub[q.skill] || 0) + 1));
   console.log(`\n✓ ${questions.length} items → ${fp}`);
