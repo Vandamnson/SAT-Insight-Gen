@@ -1,0 +1,132 @@
+{
+ "minedAt": "2026-07-01T22:17:52.920Z",
+ "releasedCount": 32,
+ "engineFamilies": 2,
+ "note": "coarse map (~40 released items); rubric matrix is the prior where thin",
+ "cells": {
+  "algebra|B1|context|linear": {
+   "released": 1,
+   "engine": 0
+  },
+  "algebra|B1|abstract|linear": {
+   "released": 1,
+   "engine": 0
+  },
+  "algebra|B3|context|geometry": {
+   "released": 1,
+   "engine": 0
+  },
+  "algebra|B3|abstract|linear": {
+   "released": 1,
+   "engine": 0
+  },
+  "algebra|B4|context|function": {
+   "released": 1,
+   "engine": 0
+  },
+  "algebra|B5|abstract|linear": {
+   "released": 1,
+   "engine": 0
+  },
+  "algebra|B5|context|inequality": {
+   "released": 1,
+   "engine": 0
+  },
+  "algebra|B6|context|function": {
+   "released": 2,
+   "engine": 0
+  },
+  "algebra|B7|context|linear": {
+   "released": 1,
+   "engine": 0
+  },
+  "advanced_math|B1|abstract|linear": {
+   "released": 1,
+   "engine": 0
+  },
+  "advanced_math|B2|abstract|linear": {
+   "released": 1,
+   "engine": 0
+  },
+  "advanced_math|B3|abstract|linear": {
+   "released": 1,
+   "engine": 0
+  },
+  "advanced_math|B3|abstract|function": {
+   "released": 1,
+   "engine": 0
+  },
+  "advanced_math|B4|context|geometry": {
+   "released": 1,
+   "engine": 0
+  },
+  "advanced_math|B4|context|exponential": {
+   "released": 1,
+   "engine": 0
+  },
+  "advanced_math|B5|abstract|linear": {
+   "released": 1,
+   "engine": 0
+  },
+  "advanced_math|B5|abstract|function": {
+   "released": 1,
+   "engine": 0
+  },
+  "advanced_math|B6|context|function": {
+   "released": 1,
+   "engine": 0
+  },
+  "advanced_math|B6|abstract|function": {
+   "released": 1,
+   "engine": 0
+  },
+  "advanced_math|B7|context|quadratic": {
+   "released": 1,
+   "engine": 0
+  },
+  "advanced_math|B7|context|function": {
+   "released": 1,
+   "engine": 0
+  },
+  "psda|B1|context|linear": {
+   "released": 1,
+   "engine": 0
+  },
+  "psda|B1|abstract|linear": {
+   "released": 1,
+   "engine": 0
+  },
+  "psda|B2|abstract|linear": {
+   "released": 1,
+   "engine": 0
+  },
+  "psda|B2|context|linear": {
+   "released": 1,
+   "engine": 0
+  },
+  "psda|B3|context|linear": {
+   "released": 2,
+   "engine": 0
+  },
+  "psda|B4|context|linear": {
+   "released": 1,
+   "engine": 0
+  },
+  "psda|B5|context|linear": {
+   "released": 1,
+   "engine": 0
+  },
+  "psda|B5|abstract|linear": {
+   "released": 1,
+   "engine": 0
+  },
+  "psda|B6|context|linear": {
+   "released": 1,
+   "engine": 0
+  },
+  "algebra|B7|abstract|inequality": {
+   "released": 0,
+   "engine": 2
+  }
+ }
+}

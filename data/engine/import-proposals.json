@@ -1,0 +1,2619 @@
+{
+ "generatedAt": "2026-07-01T22:19:27.868Z",
+ "note": "PROPOSALS ONLY — nothing imported; mod2/misc require blind adjudication",
+ "proposals": [
+  {
+   "proposedFamilyKey": "legacy:open_algebra_102:",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "b5dfd2abb3d398d13ec2bd8f4884cb0afa227fdd"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:alg1_twostep_solve:a,b,c",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "56d55f62785f9e397c3c55f135233c2750c6a69c"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:alg2_read_graph_point:b,m,report,x0",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "245132949449aef9d3c8022658e5ccc3a1cf2f40"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:alg1_onestep_context:a,b,c",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "f105e9f75901c29efd1397929273bac5ec5d7ad7"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:geo_rect_area:l,report,shape,w",
+   "confidence": "medium",
+   "memberCount": 2,
+   "members": [
+    "2a2f1490bab711932de0e2e2b223c276716f41e9",
+    "cf9268a580c01f68e129e6fe9344d66a8b83803e"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:geo_prism_volume:h,l,shape,w",
+   "confidence": "medium",
+   "memberCount": 2,
+   "members": [
+    "3d9e5439cac6e99cd1c754bb6b53efecd613de52",
+    "66f9ffe29cad646462cd137483f4c28ec377eeac"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:adv_feature_from_graph:a,b,c",
+   "confidence": "medium",
+   "memberCount": 2,
+   "members": [
+    "37db76adf08c75eae8bd273fdab041bde28ea290",
+    "55bf5508b4de47ed0b4bd19289114d8b11a8cd66"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:adv_sum_polynomials:evaluate_at,f,g,operation,report",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "1c866d3b86650d36463e31ec0b07d7b031adaecf"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:adv_solve_for_variable:equation,givens,report,solve_for",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "d8da60382a38601a63eb3c4e89fb4ee240bedefb"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:open_advanced_math_117:",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "83597dac914f16f8f5ac0b46dd6f4f31f5912583"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:adv_quad_factored_solve:a,b,c,root_select",
+   "confidence": "medium",
+   "memberCount": 2,
+   "members": [
+    "827feeb0be573953742ac462e0bc798054d56457",
+    "b98d8faad712cf1f8a88997d314ef02ff792bba3"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:adv_solve_radical:a,b,c,mode",
+   "confidence": "medium",
+   "memberCount": 2,
+   "members": [
+    "35826f29657885d615eac28a88442547ade0b2f6",
+    "fbf22dfbe40ee21dd1bb63b16153f6f0baf12ccc"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:open_advanced_math_120:",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "70ee5f8146116079e857556cec1e2157db6018b0"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:psda_percent_over100:base,mode,percent",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "112b750899307639a09b1bb9b5e61e94fe9a2da2"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:psda_margin_error:margin_of_error,sample_mean",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "952c7f36c2176893c8ca66b04f6a218e8986d5d0"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:psda_mean:known,mean,mode,n",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "6921a547af1cdea23ea14ffcf9a0db4e75311434"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:geo_cube_volume:s,shape",
+   "confidence": "medium",
+   "memberCount": 2,
+   "members": [
+    "1cf9dbde1f9008f13dca41f5623af1e6b7e2fac2",
+    "0a1de2c8503bf64302b21f663e0e6be9db96b1ec"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:rectangle_area:length,measure,shape,width",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "0bdcd17bf6394ae854451433a27cc538e5bd82c1"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:solid_measure:height,length,measure,shape,width",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "895eb400394aa48765943287fd0003927a740420"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:read_graph_point:b,m,report,x0",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "c66e79c38df057cc1e5e5f6789dbf171b5fbd5b4"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:median_ordered:data,stat",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "2fecb2e0357a533e59caf4ed236b4c0b0f50f10c"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:lin_interpret:b,m,report,x0",
+   "confidence": "medium",
+   "memberCount": 2,
+   "members": [
+    "b8143454d4352acd7e4e5052e57d1a797ea450a2",
+    "9c898ee5ecb46a259861ae9344c4a215041bf689"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:poly_operations:claimed,original,sample_xs",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "ee507520b6f01618bead576452cc02c6169d4a67"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:angles_parallel:knowns,rule",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "89739da977ae36adc74be3b3c0eaf320a2426f9a"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:lin_from_graph:b,m,report,x0",
+   "confidence": "medium",
+   "memberCount": 2,
+   "members": [
+    "ea8d799ab67ae81067541bc5102359e29e5a2920",
+    "e0262b860bcc32d67906124f17985848e391d3f3"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:lin_intercepts:b,m,report,x0",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "a423f67d2916a9e70e818e3c8cdc11d21b981edb"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:system_graph_solution:a1,a2,b1,b2,c1,c2,solve_for",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "ed14460e53bf74d260a120037aff1c7fa7d4c2e0"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:lin_function_model:b,m,report,x0",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "b7610f1883b80f8ee429e07a0d99fb26330a33d7"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:abs_value:a,b,c,mode,select",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "3c285e75ef6122b443fb2fbf39b16158866bfc27"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:radical_simple:lhs_coeff,mode,radicand,rhs",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "90bcfa4b0a6fba48da7ca6773cabd37b0e0b1a87"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:rational_rearrange:denominator,mode,numerator,value,variable",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "cb5efc45704de0aa0a0e4e699b1e47c63926fd2a"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:quad_factored:a,b,c,root_select",
+   "confidence": "medium",
+   "memberCount": 2,
+   "members": [
+    "0892b593cd73c54c3110016e9a9044098b0da85c",
+    "cd102732f264e82440ff6cd8bfb78dbbcb7e3c71"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:nonlinear_system:a,b,c,root_select",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "9bbaeb824428c46f87258cd90cda415a15958c4b"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:poly_factor:leading,roots,target",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "96fb1f4b4abf8c37219a635952319fab09d88a81"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:ratio_rate:a,b,scale",
+   "confidence": "medium",
+   "memberCount": 3,
+   "members": [
+    "ef449a65c322bdf2178913cf64607c92478b9ced",
+    "ed271cf9b906f51d4ae8e39495085c00714854e3",
+    "5ab1d64d356fb4306e9722ea95b17c259dc3ae23"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:linear_equations_one_variable:solve",
+   "confidence": "medium",
+   "memberCount": 5,
+   "members": [
+    "5a59f3c5080d14e9eb39f59d61d2f33386008565",
+    "4df73c29cc4b6faf9dd9c660994eb6d416bc0b36",
+    "ec269bead57240f2374676df5c8c2ea1cb465fa3",
+    "27f726ab52064036cc1c49432a92a99a0888e1a5",
+    "cb55dfe924dc7d0914627c2fc7fca8e2a26e64b7"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:linear_equations_two_variables:find_intercept",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "e145d80f273ee8248771d908b683ec18da43496b"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:linear_equations_one_variable:create_solve",
+   "confidence": "medium",
+   "memberCount": 16,
+   "members": [
+    "0cea2c1b45ffbb98af63016239a9a6514cb15df5",
+    "a786fec4b517ff1427d0a6e1631d2add6a6e688f",
+    "2671bafab3fe875409f258bf8dce3501749a35f5",
+    "59464ae80e9f5dc7dc225a47db2ee560b6eb2f15",
+    "d9c6e866b9a0fe8c96391ca02e2443d25edb925b",
+    "3b672589f1b9349f734dd6ca406a4445994f4c58",
+    "dbac9eb46984c8c0c3006c184610e5218414fcb2",
+    "1c334a2add5eb6bbec01fd16c8888aa442df217d",
+    "2980e26caad0b8be316bcae251fb962f787bb748",
+    "93de0faf6d6af51b80d8835edf676c21d8d7e583",
+    "0053ec4d7a07af560f440f0e036160c0c41ed699",
+    "dbc1dfd496269809b156a9129ca2eb0f6fe3b00f",
+    "478965febb48e3a28c727a247528771d98374d60",
+    "b473cef804f5954987cc63b90a58652a9497f391",
+    "05a76da33a54b300c7bb1c40df6da25e2f1e4d15",
+    "0b212c36521d424ce55df7eb0d70b8a4743679da"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:linear_equations_two_variables:solve_given",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "257b1b34ce909ea62ca8ec470154da7b3db5f46f"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:linear_inequalities:solve_boundary",
+   "confidence": "medium",
+   "memberCount": 4,
+   "members": [
+    "1a83581b73da5d9a6cec9bc1d5d27054065aaf9d",
+    "69a10df9c19906df6538b28508dcace40b2b9858",
+    "224ba162288ba32cded6c8756e6f002a84ff3f0e",
+    "a1536aee1195d9545e53137ce020f56d965da453"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:linear_equations_two_variables:rate_of_change",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "f87658596bbacb8ab86e2160c60a9e7ba9e0ef04"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:linear_inequalities:min_int",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "f401915cf00c3451b91d2502dcda8a28c93dbd42"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:systems_of_linear_equations:solve",
+   "confidence": "medium",
+   "memberCount": 6,
+   "members": [
+    "da35cf51bd0597c3d762c5d6fb47bcdddc45280b",
+    "a8188971f7c6d0976a35cb4d0d84b319fceee70e",
+    "2c6de3a0fd4a9694340960bd5609282e3d3a31a9",
+    "7f1e69d531dff5cdfea4206fbb520e4990af8608",
+    "c2634958a38d824ec1bc7ff0b7bb3a315ab760dc",
+    "f25af19b358d994d01abdf5f7854c93441faa16c"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:linear_equations_two_variables:interpret_part",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "d5e4ee4b5eb1d5384ce7cbc9539ae06daf2eb661"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:linear_inequalities:create_twovar",
+   "confidence": "medium",
+   "memberCount": 4,
+   "members": [
+    "af96a981a643ef1008dd9e4988f613a8928e33ec",
+    "1153bd520b3ab1a111faadd720c9e49347901be8",
+    "863cf4cfb5c54b0125a30dd4a9d8185ec826df17",
+    "2c476f1581d72ac74de4f9046c517e3a931094fc"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:linear_equations_one_variable:missing_coeff",
+   "confidence": "medium",
+   "memberCount": 3,
+   "members": [
+    "bbbccf1accebccab568f0e2cf1a85cd9d323dc77",
+    "3a44a0ddd8c3050f10324308c3b58f475e41784b",
+    "feb796148366fa73dc2dd7c2a88f78edf4a02556"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:linear_equations_two_variables:connect",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "068a2a22ad64135d0e7648a04b4650cc2d26044f"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:linear_inequalities:variable_constants",
+   "confidence": "medium",
+   "memberCount": 4,
+   "members": [
+    "af4ee5b9b9aaf95f3e9b6af65d8f7ae65844f9d9",
+    "423eb9ab72051558d90f898e11e0ecdfe9286c83",
+    "fff2c04b159af68e768d2f23227223e5d17d2c29",
+    "054be270c3253e0f85bbfeb49dbf9388ee965d2a"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:systems_of_linear_equations:number_of_solutions",
+   "confidence": "medium",
+   "memberCount": 4,
+   "members": [
+    "9c670c1066d9b79901d266a9c7d1364746e9eafd",
+    "665a0c8a404302c252329c21ae753bc1496c27b9",
+    "12de63113b87663f43c4e412f2e9cc82cab1a84f",
+    "9e7cddc971b46ba315bc817cfb8f5ff565499154"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:linear_equations_two_variables:read_value",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "de63d5b1a32e0be155131e9f1632600baf87457f"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:linear_equations_two_variables:slope_from_points",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "47c73cafc3aa9e256ac10be02c3087c30cea982d"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:linear_equations_two_variables:connect_graph",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "d8d32fc1482cba0749ad2852e841a4f6cafbf7fe"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:linear_equations_two_variables:system_read",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "36393e7710c6fefa8475a6781a1319637e1546d9"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:linear_equations_two_variables:system_count",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "341e798b307f8df2e660f142ba3c2a64148469c4"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:linear_equations_two_variables:inequality_region",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "ef783f0ce85505acc63c90946bfa1e4e53521b13"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:linear_equations_two_variables:parallel_perp_graph",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "2363eb7e0513bfbfb66fbc420641344f48038ef1"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:linear_equations_two_variables:equation_to_graph",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "fc2b438123c09b496ec7a55bf2d985aea7db5ca2"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:linear_equations_two_variables:inequality_to_graph",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "103c6c5c38e70d94d8ac9f9d050536768aef0943"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:linear_equations_two_variables:system_to_graph",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "335d2a7e18100414ecba74ca6cc9fde8f822d4c0"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:linear_equations_two_variables:point_in_region",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "bab327451cd50af5697bf00060a7dc3c6b68d6a1"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:linear_equations_two_variables:feasible_region",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "84d59bfdb46c29589fca0f46a70e2c9df321cf9d"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:linear_equations_two_variables:interpret_graph_context",
+   "confidence": "medium",
+   "memberCount": 2,
+   "members": [
+    "4d0922ebc857f414dae08754c5a26d7dbbe66092",
+    "18fd17d8a3df601ac1bd669fe10754c51eee42fd"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:linear_equations_two_variables:parallel_perp",
+   "confidence": "medium",
+   "memberCount": 2,
+   "members": [
+    "65e7a8e3582f219f2a17f3678f138741e717a1ac",
+    "77e58256c54ec877ff66923c33284ad66fd97db5"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:systems_of_linear_equations:missing_coefficient",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "9ff2682b562a5dcb816c65b6e31a54837a4f196f"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:lin_onestep_context:a,b,c",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "8518ffb63f5df003e44064863e9a3389698cea2d"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:lin_twostep_solve:a,b,c",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "5b53dedb392829a0f7183f0e208ed60954450701"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:lin_eval_from_2pairs:b,m,report,x0",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "d1abdab87ee5a1a81da867b227df31088070b87c"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:lin_read_graph_point:b,m,report,x0",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "3a164065a02b54a573d35d5a422710f460e59de4"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:lin_xint_from_feature:a,b,c",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "edeb600148d3d043923b364b91ce1b45657903e5"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:lin_identify_equation:b,m",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "91103f7fd14dc02c899670152827331d8064de1a"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:lin_create_equation:b,m",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "25ce5df8618271283e5380d9fddf88606b0f4d96"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:lin_invert_context:a,b,c",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "6a86e54769aee219ef407ad19b5ae7802e2fc62b"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:lin_combine_solve:a,b,c",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "e2f2752dff24f05625d67089a5517e1128948eb2"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:lin_bothsides_solve:a,b,c",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "08ef96c8862b87a904867a5609d5ddbc9722919a"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:lin_distribute_solve:a,b,c",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "84a91829a3286ecb95387aeec782adba69ef54f1"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:lin_interpret_coeff:b,m",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "30496f80b96c8d5c05a46110a95b04a1addf9459"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:lin_interpret_pair:b,m,x0",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "55c6654b4661d0265ff97a92864195281cf33756"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:lin_parallel_perp:b,m",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "217b8bdf34d268fce2fe8ce922656fe82f9eff38"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:lin_yint_from_slope_pt:a,b,c",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "395b7c6b26fd4aa5aeca25378dcbd5a1cff23276"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:adv_yint_from_graph:a,b,c,target",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "4599729eb26f74223cfb951850efa7696b1cc634"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:adv_combine_like_terms:claimed,original,sample_xs",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "153445eb44645ce912463c1021bfee18b72d4cec"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:adv_factor_gcf:claimed,original,sample_xs",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "69d56f88bf918a249774e35c24a1d97978e2fecf"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:adv_quad_factored_root:a,b,c,root_select",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "6aa381589812003f2f17d5bdb5b138aa8f9a9412"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:adv_solve_absvalue:a,b,c",
+   "confidence": "medium",
+   "memberCount": 2,
+   "members": [
+    "67b86476e98907aa427ae0045058ab99c13db594",
+    "ec97d55b552ad83f2d256c2491ba0a26cae47a17"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:adv_solve_for_var:",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "f3d6fd557c26f7a46067fc2d0eb8072e875283f3"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:adv_quad_solve_std:a,b,c,root_select",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "683fda423d6388c2187e90a7c3c3be6eec37da3e"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:adv_quad_vertex:a,b,c,target",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "062b557bf970060dad2961dab07d75092beb1326"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:adv_quad_discriminant:a,b,c,root_select",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "b443af8683c26b2c570e0df877412ab9d66ecf4b"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:adv_create_quadratic:a,b,c",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "874b0acfa66427532e2f738a2a29e44a39691041"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:adv_create_exponential:a,b",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "a9ae06de2c77de64798f77da4f54782b88b07ac1"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:adv_rational_solve:den,mode,num,x0",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "e57fbea09037604de09afe34f6974fd17daf7e5c"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:adv_lin_nonlin_system:linear,quadratic,report,select",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "5f80058f06b8cd04485617f008439580bb0018d9"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:adv_poly_factor_zeros:leading,roots,target",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "de41eb326bd03030897ffc8e3e1aa10704f9eb05"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:geo_perimeter:l,perimeter,report,shape,w",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "37548302ea1d0b7037e41203e581af32942ede6f"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:geo_parallel_transversal:given_angle,relationship",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "720e37f7f9e913a6cd59f039ba1cb06be5548a52"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:geo_triangle_area:base,height,report,shape",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "b84af2f396221d5f2a655fc5fa989e34663e8e2b"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:geo_composite_area:bounding_rectangle,method,removed_rectangle,units",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "3513c041179e824a09a2913143460a660b241bb6"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:geo_triangle_angle_sum:a,b,report,shape",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "c4bfa3690651ad8e99aef288737cd5c8e56e7314"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:geo_intersecting_angles:",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "3253ba4a99a6cb76df6fcf9daed7615724d60320"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:geo_pythagorean_hyp:leg1,leg2,report,shape",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "dc8a44f9468d702602b5d6eaefc387d276d7502b"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:geo_pyramid_volume:h,l,shape,w",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "a86fa24a2b9cf7982fda3f752d8730b895b3ce66"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:geo_pythagorean_leg:hyp,leg,report,shape",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "4f7c69db72141777118ae9e2f36a51a0e844db17"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:geo_similar_triangles:find_side,given_triangle,image_triangle,relation,report",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "f0bc76566bca1152042569038539dcefb0a714f8"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:geo_scale_factor:elevation_is,given_horizontal_run_m,given_hypotenuse_m,report,scale_dimension,scale_factor,scaled_quantity,shape",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "cf98dad6a6024f35fc07114acfb3dbfda50a46ff"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:geo_special_right:",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "d5940f714eb4e4039992f1f85642cea65bbaecf9"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:adv_quad_standard_solve:a,b,c,root_select",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "4dbdbe07c9c82c7c7ef41b0a61102ed9d52504bd"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:adv_rational_solve:",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "8cc6edaaba7ef71aa0fe65cf92a04844ebd995c8"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:adv_lin_nonlin_system:coordinate,linear,nonlinear,report,select",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "2186fefbce3b208ff41c6152d41483acacbf3969"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:adv_poly_factor_solve:leading,roots,target",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "302e76906e7c046e3944ec3b3cbd1539378a2c68"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:adv_unknown_constant:",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "753a308cdf3d928874766dd7be84e91d239c2fe1"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:open_nonlinear_equations_systems_0:",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "b7b2e86b0f8cbf56963562daabe9e0083940fbef"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:open_nonlinear_equations_systems_1:",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "95111ad32f71fd9646e3aff0733b98ea0f37ddce"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:open_nonlinear_equations_systems_2:",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "2c89cecc2596f334deaf209733ff01b14f9dfa5a"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:open_nonlinear_equations_systems_3:",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "bc1a9c20f0bf9f1582775cf1936982d90bdd9eb1"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:open_nonlinear_equations_systems_4:",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "55f3e0f34f8a1f4ec38f4cb919ec426c165862f4"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:open_nonlinear_equations_systems_5:",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "f44179a64054974ac60a27451bf45251abfdee9f"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:open_nonlinear_equations_systems_6:",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "458a7d0b9e9706b379dc546989d7e6e3b2e46172"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:open_nonlinear_equations_systems_7:",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "674dfd5ac6c1f6a0e139d98d38e0780281953f6a"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:lin_solve_value:a,b,c",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "500f33cabc6d2c19ad08bd0cd0909025aa795fef"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:lin_from_2pt:b,m,report,x0",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "b89d9a4967a13c09f335a03245a0d923e02752ad"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:system_solve:a1,a2,b1,b2,c1,c2,solve_for",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "dd3c2830fb43628b2b318cc88450f77351788eef"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:lin_context_one_step:a,b,c",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "88acbc4aac2217ffab5df089ecef624104c9497a"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:read_graph_intercept:a,b,c,target",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "af2efd1746fde9d101b78284c594d935c54eb27d"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:read_nonlinear_feature:a,b,c,target",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "d70e11ddc5852af0d86678dccc2797e127dd3a63"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:percent_chain:base,mode,pct",
+   "confidence": "medium",
+   "memberCount": 2,
+   "members": [
+    "7f42a8735d65f8b0b78dde217c5298ff662981eb",
+    "88316a54c8b5dd01f1211ac3c12f4f4acf1ea437"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:perimeter_sides:measure,shape,sides",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "e94111e6360297f9ca75b89ef05e4b6f23dfac91"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:lin_create_1or2var:a,b,c",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "7b1f803e54139375e5d05391a561ca054fc3d926"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:area_sides:area,measure,shape",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "9bdb0592bbacc0f51cf547cafe7a3e209573c4ff"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:lin_interpret_complex:b,m,report,x0",
+   "confidence": "medium",
+   "memberCount": 2,
+   "members": [
+    "3a9998cd79dacb061ac5e3e9de53f25bfab9cc83",
+    "7292eeb71da173c827a49a1308bf76fd91fb1bf8"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:quad_use:a,b,c,target",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "c6e61797085bfbfb0d0325348ca27fda2d22f6df"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:area_sides:hypotenuse,leg,measure,shape",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "246126fe6ffa218d44eb6a1ec617e120d444da0f"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:linear_from_data:b,m,report,x0",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "90c062158da699c09988591ea464cd9f8a7c4729"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:quad_vertex:a,b,c,target",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "d4ab86f93e8e81c59733d12e0a104edea5546c96"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:growth_factor:base,mode,pct",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "c0f33dcf2d4206c7642e33548630ec19f1ec1381"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:trig_cofunction:adjacent,angle_deg,hypotenuse,opposite,report",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "c78fa96cd106b8f3f1c7e88ad2e2f3a64174c377"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:quad_from_area:a,b,c,root_select,target",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "43ecfc4f3509f0010e194b4889a9a60bc833baa0"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:solid_measure:length,measure,shape,volume,width",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "4c543922e9f2db6e1b698b4a3308cd26b46430b5"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:lin_create_solve:a,b,c",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "963ca26e79713afeba105a846633fd20d5d6f1bc"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:nonlinear_unknown_const:a,b,c,root_select",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "3953bace0b8195b2bcdddd65b39ee6385b69e162"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:data_effect_change:data,stat",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "0d8f29f524824a361ab55527cd5b746b3ea5bb52"
+   ]
+  },
+  {
+   "proposedFamilyKey": "legacy:area_sides:leg1,leg2,measure,shape",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "52d1800e8a16c71646fd7a1363e1a3d226cdd058"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:linear_equations_two_variables:find_slope",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "95a12f71f3d9ae40f2b55c221b5c4f37a2580a78"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:linear_equations_two_variables:interpret_io",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "099c9cdd17b99305d0a875ce0dea37b6f4bfac0b"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:linear_inequalities:max_int",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "3a1aea712aa9bd6d0222e474956a5de3061f973d"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:linear_equations_one_variable:num_solutions",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "9b5230e690c8f4b4084b748631f4f63284196cf2"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:linear_equations_two_variables:create_from_translation",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "d56ffa42d0e6bf98d712b9c47bd7d0fe1f9c37fc"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:linear_equations_two_variables:evaluate",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "d10a9e3c1a7a9e40c5ee738889e9f3e1b2028bf5"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:linear_equations_two_variables:create_equation",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "6527d0ee2b7ca4a91c6774f9531af949bc76a6a4"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:systems_of_linear_equations:create_solve",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "35d6ed75d4d5398bf70aa858081e6a249b3ae387"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:linear_equations_two_variables:create_from_pairs",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "564ded0daca89f23249c949dfff0364623232de7"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:linear_inequalities:create_onevar",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "9fc6215ed71941a235efdbf234585270fc0e0383"
+   ]
+  },
+  {
+   "proposedFamilyKey": "capstone:C1",
+   "confidence": "high",
+   "memberCount": 6,
+   "members": [
+    "bf368a9f769b70dfa8e2123dcc3b36a3e6231660",
+    "b72c8a634693f4d525411f45675b8a3f308196c5",
+    "68eaba96e571431bd224c7cb3a58d0706ad077c5",
+    "b1e2c3a4772ccc13316f0caf5578075e9bf7795f",
+    "6e69d4e0ea7cf64283eef094c0eced2337d4e0e4",
+    "3b085fa3c7453f06096889cbe6b8dfb89bfded43"
+   ]
+  },
+  {
+   "proposedFamilyKey": "capstone:C3",
+   "confidence": "high",
+   "memberCount": 6,
+   "members": [
+    "80ee51e50412725b3767182aab679c2dabc285d2",
+    "9d52cd514987e98350ca72a6495bd775f9bc1faa",
+    "d75d80d564ba858b6af3d35e5fd49230c5462593",
+    "dfb6b0a5df6d397fe12198bb71f2736ca28b4242",
+    "4ae3dd917d1b43646d41ef161f838bab9a747679",
+    "562009eeac76997483556954498e2e533cb5ee5b"
+   ]
+  },
+  {
+   "proposedFamilyKey": "capstone:C4",
+   "confidence": "high",
+   "memberCount": 6,
+   "members": [
+    "26666bc43e3e1c5f90cca2e5b74e453ac247d155",
+    "f9df09365e618d0521877a682e18e7700c39fbe8",
+    "ba84d2232fcdb7580e234b9b8c5d3e0113a27ef6",
+    "e85fe980b87c183aaca69a4022f71521ce0a50c2",
+    "894682b70bdc20795bcac10114a50c1c70faec14",
+    "bd09b5c0f9d28fd7b399adb75561817762cd680e"
+   ]
+  },
+  {
+   "proposedFamilyKey": "capstone:C5",
+   "confidence": "high",
+   "memberCount": 6,
+   "members": [
+    "6db207d2f746d1b7ccc7ae80639d18d7633b5b7d",
+    "e603506869c7ab46a1b5c40514b6adae65cb7870",
+    "ea8a578eefb08596ada4499f47b332a12ab33fe0",
+    "483ec7f7da4bab6fee755167b9efd147b2a0feaa",
+    "eb49a6a4d7db7ef6a65b3fd5c54979b19f4e8790",
+    "0aa8010935ac9530fe7a61290ba702214fb39c2f"
+   ]
+  },
+  {
+   "proposedFamilyKey": "capstone:C7",
+   "confidence": "high",
+   "memberCount": 5,
+   "members": [
+    "bbefd99bf53f07264196f84cdccc04c0faa89379",
+    "412166513fbe54915e7ba29147ac3cb2d8772a1a",
+    "fc799fa48d41000712147e1f6c0f18a7a1096acf",
+    "278596535e8878d39964dcfc45392ed153dffeca",
+    "715f5d89b66c8f72fa7bbe159e2812654bed03df"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:polynomial_expressions:sum_polynomials",
+   "confidence": "medium",
+   "memberCount": 2,
+   "members": [
+    "a22fb512b4110bd49f090ca5da4e660060b691f0",
+    "2c8f284605b5b938ac46ded5680ca1c66628d2ba"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:quadratic_equations:solve_factored",
+   "confidence": "medium",
+   "memberCount": 5,
+   "members": [
+    "57bbe3429618aece8cba2d5e9f121003b772b5b2",
+    "076a79c3da261f6189e58856e69164c9558d8534",
+    "0712bfa56e84fd7ae866078e007cf47d0e939c9b",
+    "02d9cfdf1ca5424c95a5c81c716c527efe03dcd8",
+    "444b4a4eb7a04e1aaa22d74619caa0c54be1da49"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:radical_rational_equations:solve_radical",
+   "confidence": "medium",
+   "memberCount": 3,
+   "members": [
+    "d2b82d5a78310cc9f771610144f74cbd3602346a",
+    "98678663dac341e40c63951e7ce89598e895ae75",
+    "75d9597066d940287d1d1d0645e50f241cfb9ffb"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:nonlinear_functions_models:quad_model_use",
+   "confidence": "medium",
+   "memberCount": 4,
+   "members": [
+    "dddf770c911fbe1a8f1e09a3aca6353c5bb180df",
+    "7e2bed7f264561ddb5ed6aaa91c43808d61f7316",
+    "f1c0616e3117ac8b152c1cf8898dfc5aaddbc6b1",
+    "bd6f275d99187eb37a5971dfac02a5cf5466e814"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:polynomial_expressions:solve_for_variable",
+   "confidence": "medium",
+   "memberCount": 6,
+   "members": [
+    "a6fdbbfb86ee20edd3eada2821f0c331a4b3fe0b",
+    "1e29eb983f0d29cebb2537d76c7fffafa565c744",
+    "e5ce33252b02765e357f7cf041e176710bce25ba",
+    "432f2de298ce395223bc22f7ed15d7ce10d61594",
+    "d80c317d8abb8fb9e4f11773987aac31132bb276",
+    "4da28f022461fadfdca95f01cbb9ad5b462e07dd"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:quadratic_equations:solve_by_factoring",
+   "confidence": "medium",
+   "memberCount": 3,
+   "members": [
+    "41ba08fa4ff7e7261db0c256624eaecea68ef797",
+    "3e4a2a3bb4b387881408fd120d5d370a2294211a",
+    "0200b43385238b50e431d9882a732ec0b8144271"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:radical_rational_equations:nonlinear_system",
+   "confidence": "medium",
+   "memberCount": 3,
+   "members": [
+    "7cffc2b2406bc0b4017b6da244ec3c8bd18a2c2b",
+    "26795cb6b0208385056e28fd47118935b65ccd51",
+    "01ff23a3cbaf54077d8eb07be10bfd536b0acadc"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:polynomial_expressions:combine_like_terms",
+   "confidence": "medium",
+   "memberCount": 4,
+   "members": [
+    "46cd238ea3950678ab82b4abe3c123142b1db00f",
+    "155d92683d31dc1cb0c9c7646dcc1f6b1634985b",
+    "8db9dcd8b36c32cefcf3283699cfaa98ec5f92bc",
+    "e9c89884c26e88ac8948bb471fe2b65f7919e3a9"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:polynomial_expressions:factor_gcf",
+   "confidence": "medium",
+   "memberCount": 3,
+   "members": [
+    "89700151d149c25c2e5ea151c359e904ccfbcfe6",
+    "8274f9c4d0c42170e13987db0e9948386354e16f",
+    "e944ff63121ae7d0340ed8507c3694c8ca7c7fa4"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:radical_rational_equations:solve_rational",
+   "confidence": "medium",
+   "memberCount": 4,
+   "members": [
+    "9610cf32d53ce274507a47b66dd6ba3d158ed377",
+    "fd4ca572a5bab70ea938d7698acb40b863938344",
+    "d2cd0f4c66b65c83d4553a9bb862df82c6ecb1d4",
+    "04019a06c9c5f67d21d0aaed46ee509b6e75aa18"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:nonlinear_functions_models:identify_feature",
+   "confidence": "medium",
+   "memberCount": 3,
+   "members": [
+    "56cd94edb3c470a203d3c4156d9e87a8ebc6039e",
+    "83769ecc630b69576de31c73b9ba37a4272ed5ab",
+    "3c785479fccc194e4401f6f4fd7082ae15be568b"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:polynomial_expressions:product_bin_bin",
+   "confidence": "medium",
+   "memberCount": 3,
+   "members": [
+    "b21f69bfb049555d6954e779308d0eb2bf91b760",
+    "0cdda74bff8c508de9fd82a6a571406e7c81e5d5",
+    "384a47a71eb6f4c209ea2c2246c31fc2680526b7"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:quadratic_equations:vertex",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "f361adc1336342b64e3e5bfa79c3724395b15aa2"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:nonlinear_functions_models:interpret_feature",
+   "confidence": "medium",
+   "memberCount": 2,
+   "members": [
+    "70d06c0684ca3824c882c1b7a5df8b5d0f8937bc",
+    "3a00704c279ae8dcd6c627c2e2879a0d6c52fbf6"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:polynomial_expressions:product_mono_bin",
+   "confidence": "medium",
+   "memberCount": 3,
+   "members": [
+    "aef7dcf317affb5b3514a153c4aa7be3f9a7621a",
+    "3f8e81cc4c43970ecaef6482be74302855d8a0ca",
+    "63bae5a157b7c1315cec24ebe484b29392adec9b"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:quadratic_equations:create_solve",
+   "confidence": "medium",
+   "memberCount": 6,
+   "members": [
+    "3c7c9ff356a19bfca445f8edd3c1aa3ce1c4dd15",
+    "c2ab85a7da76db8ed4a3717f0b45efd166417873",
+    "422633dfa9dd87f7bb13da83fc8f082a9ca933ff",
+    "c2403c2711186eb92e247b752a4061ad3667bd53",
+    "6233002614bc0b6388ca3eeba1d28fc7b67bdfff",
+    "8950c1a10b5ccf18a4a4c6c4ab6eac8e1d17bb04"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:polynomial_expressions:choose_form",
+   "confidence": "medium",
+   "memberCount": 2,
+   "members": [
+    "46c19fbd32a3321eaf1867156eee19e2f041b723",
+    "b767473da4633bfda6aa56f85465e769110225a7"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:radical_rational_equations:unknown_constant",
+   "confidence": "medium",
+   "memberCount": 2,
+   "members": [
+    "61180deb2e917492410207b3fdaaf81f2bb82d11",
+    "a25724c2252028e12805f8d18d62268d3b3d928b"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:radical_rational_equations:solve_abs_value",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "855f006cdf0a83a0dba77b0fa3a50dc5a32c6a0c"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:nonlinear_functions_models:exp_model_use",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "7f72faf29976964409643e31bb4202d2028f3cb5"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:quadratic_equations:solve_formula",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "922f1ab20fb4cc23cbf0c0f5e9f864078876c2b5"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:quadratic_equations:discriminant",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "aff4c7cddb82f6b4aeb87156bf433ed929460203"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:nonlinear_functions_models:translate_connect",
+   "confidence": "medium",
+   "memberCount": 2,
+   "members": [
+    "fda9588ec964e79e2c4cbc992cab7514c9ff36a0",
+    "b8b96cdb998801c520b54239af62d1db7f190cbd"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:polynomial_expressions:rewrite_exponent",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "42c6f8a20973bcf5b6f6d4c7cfc39c4d8c867ad0"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:nonlinear_graphs:read_yint",
+   "confidence": "medium",
+   "memberCount": 6,
+   "members": [
+    "f54a2a3f805622b74f0476e048beba711aef305d",
+    "0c42f8744b791fe4ce27ebfebc94b62417d0a84e",
+    "893c4d41272d63f25a0e3aa047a6856eca283cf7",
+    "bc6c2af9643e6a539f69da044c8ac1d22e9cffef",
+    "c058a3b4f2d91ed014fa3dbeaacdba813633f2b5",
+    "a5d7837acb1dfc1ac4f65c48603546675d134d2f"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:nonlinear_graphs:read_feature",
+   "confidence": "medium",
+   "memberCount": 6,
+   "members": [
+    "2718a389f91e15cc02b770dd509e415593d94ea5",
+    "f555615c822b62200ee69d652920fd6565a97feb",
+    "148e3543566f9d64a88b9282fa8ee9ab7a133b32",
+    "561dc9c3cf3cadabcc73f6fa1adf2f8a93293dd6",
+    "923c856644d79ec370d4cf85a2e339d23fdb7415",
+    "d69523508212d6c7718e0710851dd50fa41e443e"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:nonlinear_graphs:graph_from_eq",
+   "confidence": "medium",
+   "memberCount": 6,
+   "members": [
+    "8122b5da2c3beecbb079ebc108dab271d975a134",
+    "590de967dae1494a7e9ab73a9e921620f670902a",
+    "fd1c7af0f173f6163de9eb6c3f181c6c0072bb41",
+    "127b94edfdf127c2f335e6faeab652c6189c233e",
+    "3c5085cedbab9cff73284b9c1003b22f37a928f3",
+    "4d4bc3579576507f841198c81539968416bdb35b"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:nonlinear_graphs:interpret_feature_graph",
+   "confidence": "medium",
+   "memberCount": 3,
+   "members": [
+    "d288547085c9c8fdbf25bdac9063fe1c3ad080cf",
+    "4d44492247605fcce4128607d66923bc5093fe0f",
+    "2d0a38c2b4184b9763ce28e541825cd1cf44a36a"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:nonlinear_graphs:connect_translation_graph",
+   "confidence": "medium",
+   "memberCount": 3,
+   "members": [
+    "fdd09e2cc93578a5a6c327c5cbcd4375266de6a8",
+    "b296363dc98f73712d92ffb3f7590a82971a572c",
+    "60d755c1dbc4e0060ea675bf343c442a4e51935e"
+   ]
+  },
+  {
+   "proposedFamilyKey": "capstone:C2",
+   "confidence": "high",
+   "memberCount": 5,
+   "members": [
+    "b73da93f64a456f122dd4e75e414e24e49d7096e",
+    "7c233dbc61c70a4ff99831592a2c60e0a04bb0c7",
+    "9052722c5e337c205c98a85ca00425de3fea18b5",
+    "60b0e7d1e4961a8d13c235f6524417147ef3543f",
+    "bda7d1342ff3c974917610d70d5ab03982a808d8"
+   ]
+  },
+  {
+   "proposedFamilyKey": "capstone:C6",
+   "confidence": "high",
+   "memberCount": 5,
+   "members": [
+    "6d82c2a9e06c70520a056fbfb56a0a0133c55ef0",
+    "1cafe1ec704a872536d51fff3647cf0cb82443a0",
+    "ed1bcba14ee821295c3d07555d39a9654429f3ac",
+    "90e555efa25a0403aba710153399d0f1a7893243",
+    "800bfb9f64b8b27a9106ecb884383683dc461790"
+   ]
+  },
+  {
+   "proposedFamilyKey": "capstone:G1",
+   "confidence": "high",
+   "memberCount": 3,
+   "members": [
+    "e2e070be9a0fd784ad168a5b4a936d8ab93b6a73",
+    "118c1c44b1430c825818cf875570a68ec48e982c",
+    "a525d05f60722062a554ee530f5e9f440b456ce9"
+   ]
+  },
+  {
+   "proposedFamilyKey": "capstone:G2",
+   "confidence": "high",
+   "memberCount": 3,
+   "members": [
+    "26c83a79dc9cbd1897c4c33716a31d5233eb1fa8",
+    "1e4378f68d28e68fab46dd8912c01b2698755deb",
+    "8c3a7f457267d068eeebdc28290fba212923882e"
+   ]
+  },
+  {
+   "proposedFamilyKey": "capstone:G3",
+   "confidence": "high",
+   "memberCount": 3,
+   "members": [
+    "df21f87824fc2e0637050be06df81f60b1550c56",
+    "89ca93dc14b2a9440c78dc6434ceefa4695a3736",
+    "99b768a2ff48a508ff7f524b7fa0c36ca3b69020"
+   ]
+  },
+  {
+   "proposedFamilyKey": "capstone:G4",
+   "confidence": "high",
+   "memberCount": 1,
+   "members": [
+    "f8cd6c7ebca54e10ba0db4c1804f4932ea02a426"
+   ]
+  },
+  {
+   "proposedFamilyKey": "capstone:G5",
+   "confidence": "high",
+   "memberCount": 2,
+   "members": [
+    "be0e560f3129a4be6bdd7af4e8f72806c0ba2496",
+    "4d2e23920ac37002701e327c99be5fa2e304580e"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:area_volume:prism_volume",
+   "confidence": "medium",
+   "memberCount": 5,
+   "members": [
+    "2bf13e72c4cc46471f5ff0ca2eb9fd5715b53af1",
+    "05cec270795201ba00ec12ccf7ebbf5d56150b1d",
+    "b3f090ef699b4c59f00a9aab4295861400f1a277",
+    "bf71c9ece38a8d1918c5a9842e2cc6d7905ed9c1",
+    "1882e586e13f17e8fa89e7afa89c4843e097969a"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:area_volume:rect_area",
+   "confidence": "medium",
+   "memberCount": 5,
+   "members": [
+    "467fda3413e4f5dc350c1b057c1f1d0f00e6b4f7",
+    "615232617a2ecc3989fda95ab86b6e6116c7e0d8",
+    "fb0981d922087dff92f9bb79da13eba54fd8e853",
+    "d4938539997c62f60219b49a137da254011b73b0",
+    "eb693b34573d8056acf0e587463af9de8a27cb87"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:area_volume:perimeter",
+   "confidence": "medium",
+   "memberCount": 6,
+   "members": [
+    "03054aa1e58e6312958ecab6b41851be3f7e1d6c",
+    "4fcefb508ae2ba4c0cba5c9545c63816a56f70b7",
+    "5060d0c275134bfce298d13cb1cc5719e50933c8",
+    "64146305075c988047c868b070303cdd54ce0e56",
+    "89465d3bf8e1ca635ac0b9b1b71435aeae10515d",
+    "68581fe669143307f6253017cb4524d09df821e1"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:lines_angles_triangles:parallel_transversal",
+   "confidence": "medium",
+   "memberCount": 8,
+   "members": [
+    "3a8c4ead0f4676c83baed39bc660b037d94b1e0c",
+    "0bbf131a2941493efd1deb1281cc6cbdd1f82c38",
+    "573ddf48bbb4634e258889c3b75994fe726860d5",
+    "adbd5ed7a3359172bf7d3909542d9b261567f679",
+    "0e4bfcdc1d36c0a9e16875de29a1b637543f8e32",
+    "1d13539f5c99fac29c8f038319e7563ddb7cde3a",
+    "a501d1ef583a7f847234c65bf0b1b22379a5ac14",
+    "b58e2f773737f6e2d02a90dd97cf36d58688f6d6"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:area_volume:circle_area",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "7d39c134e591c3e0112740ae24de5f46994087e4"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:area_volume:triangle_area",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "d10f1cb3020c7b802f144393c52c97674b87a004"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:lines_angles_triangles:intersecting_angles",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "fd82e60158f67130a446e10cace882a0c8ec6e8a"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:lines_angles_triangles:triangle_angle_sum",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "01ca4e41bfbdb57a43feb09f1e478f0347d3bc29"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:right_triangles_trig:pythagorean_hyp",
+   "confidence": "medium",
+   "memberCount": 2,
+   "members": [
+    "eae87137e5841378528f17afd5bc63be3aca1e4c",
+    "5018528833f87b7a4d35543dcd16aff9b10f5cfd"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:area_volume:pyramid_volume",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "e7dd5ad4776175b376651a3c80b10010e326c8fd"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:area_volume:cube_volume",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "65f62512f50a95bcb97c6cbef3a786e3aacb90c8"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:lines_angles_triangles:similarity",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "1280850638187c6eb620617a66df293d378916e0"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:lines_angles_triangles:scale_factor",
+   "confidence": "medium",
+   "memberCount": 2,
+   "members": [
+    "0c72cfe11819f71df51af7b4a5788fccce014db7",
+    "444c9657360b91454826590fd16081734f8e1562"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:right_triangles_trig:pythagorean_leg",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "04f12ec0fbf4acacd4f6a9723ab09975bcb06757"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:right_triangles_trig:special_45_45_90",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "94c283a59b6eca109bacf0a433486ca388334a63"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:area_volume:multistep_area_perimeter",
+   "confidence": "medium",
+   "memberCount": 2,
+   "members": [
+    "923b4841906c50fe7f5156bdc8340801b6fd3ad4",
+    "7496685f4259f4bbbae3dad6aac587ca732ba504"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:circles:circle_equation",
+   "confidence": "medium",
+   "memberCount": 2,
+   "members": [
+    "4045f44ad65228f92afcb7541862cc4f5ed96744",
+    "6bfa120e12d55bd0910c8807991a7435decbef51"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:lines_angles_triangles:congruence",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "79366476f5d1c3d78f76f79706130a91ae6aa32a"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:right_triangles_trig:radian_convert",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "dd874b5e67a976f6811f85e403c5ac2f147bc35d"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:right_triangles_trig:sin_cos_complementary",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "9ae1fa86b8fbbf23db10a911f82966d75d04d10c"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:area_volume:solve_dimension",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "5f318c0b3514ecdb3cffa82034e7456082bdb196"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:area_volume:surface_area",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "e308475457f49634ad319bae548e1fe14e9ec765"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:lines_angles_triangles:similarity_right",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "d5ebdd01a0ff062dc20cc55a8b0760fcabfcc245"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:lines_angles_triangles:angle_complex",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "8523d3e370f83c83c3aa93501cb36bfc06d046f1"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:right_triangles_trig:trig_ratio",
+   "confidence": "medium",
+   "memberCount": 2,
+   "members": [
+    "cb67e1804a57824660a55d1e59c9d0a2f5969caf",
+    "8df8292d2bb69e5e730e497746c3733213e49494"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:area_volume:composite_2d3d",
+   "confidence": "medium",
+   "memberCount": 2,
+   "members": [
+    "88e9de4ae0c803006e92be73bc47a8866a85b55f",
+    "7afabe8d2819d256bb869c55a51e5de4e16f7c64"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:circles:circle_angle",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "88e23823472dff238b23ad6994b58a006bd1e553"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:circles:arc_length",
+   "confidence": "medium",
+   "memberCount": 1,
+   "members": [
+    "fe05a0b047fea547f69e1279ba388d81185351c2"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:lines_angles_triangles:similarity_complex",
+   "confidence": "medium",
+   "memberCount": 2,
+   "members": [
+    "12135209050bf14c6b32ec1397beb9fe2e6a7a1b",
+    "d21377dedcc6dfa9206b49973b2057862baa48fd"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:right_triangles_trig:trig_complex",
+   "confidence": "medium",
+   "memberCount": 2,
+   "members": [
+    "89c5be3530f0b83490fb215317a65c27545572a8",
+    "ab22ce89b65a15a2acc3f26349025f4ffbddd452"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:solid_figures:prism_volume_fig",
+   "confidence": "medium",
+   "memberCount": 3,
+   "members": [
+    "15f140271e068ae5c702b1a78169a9075e81bc99",
+    "8c54433711ed1885c062cd81e077c24426061e7f",
+    "f4b1fdc725a928130ad41d8e3dc7ff87071c6ff6"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:solid_figures:pyramid_volume_fig",
+   "confidence": "medium",
+   "memberCount": 3,
+   "members": [
+    "c4eb7d777b047e81ac6c7fc9d349237a710eada0",
+    "af58afce07623a834217b010d8fe65869c3afb4f",
+    "cfece1809ef7d506d352f40ef6cc29c24875b43f"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:solid_figures:cube_fig",
+   "confidence": "medium",
+   "memberCount": 3,
+   "members": [
+    "ec14067d3f4722d11ccf6d7727a774ce00b0560e",
+    "bd5a02bd0ef89da528980718e3e95c382906ba94",
+    "ee48f07a68f1e1f5131e11d90f2c8c656c068d86"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:solid_figures:triprism_volume_fig",
+   "confidence": "medium",
+   "memberCount": 3,
+   "members": [
+    "3e90f6512f36deb9f52291e85695c256fa99725c",
+    "353fb8e60d3ca36dbc4e1cdb76663d30f425590c",
+    "0c7dce8ec6d1ecc0107b6d728b339f6867b94422"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:solid_figures:prism_solve_dim_fig",
+   "confidence": "medium",
+   "memberCount": 3,
+   "members": [
+    "29453152cf51fda65030107436688a5d53e49d00",
+    "adb6c4f5553e48a6b53bdabd08edafa29e410abc",
+    "96764fac466f9c92109ce241e044693fd6e3a806"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:solid_figures:cylinder_volume_fig",
+   "confidence": "medium",
+   "memberCount": 3,
+   "members": [
+    "ce7a6274e51896ab4ab1868b042dc97d2ca54e04",
+    "487703540257cb8b344b6fd0919c5f43fb90534d",
+    "42eabf98c2c4ad252edb1f6dfdbf9325473387c9"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:solid_figures:prism_surface_fig",
+   "confidence": "medium",
+   "memberCount": 3,
+   "members": [
+    "6f2aeaa10a53f8fca938015618360083cfc1c537",
+    "295f9afc65c305f41ed55f57caa8658add9a75f7",
+    "996d2ceb2662535e776cb80053fafbc565d84cb2"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:composite_figures:rectangle_diagonal_fig",
+   "confidence": "medium",
+   "memberCount": 3,
+   "members": [
+    "921bd7aaff80cc34af5533c052c0c6acf0e19dd9",
+    "74ee20d969c8cf8b6e78f8a292a7ba5a77c1482f",
+    "6e4e54728227a5da17d8ca0b69fca54e89667058"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:composite_figures:exterior_angle_fig",
+   "confidence": "medium",
+   "memberCount": 3,
+   "members": [
+    "d1585d0d06a9fca99f6e6c8e56726b6522020c70",
+    "2f5d2bebb6ad38e360a8253707f7126b4f49a75c",
+    "e76002eea651487f781cfd27f22e3df4f7934b05"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:composite_figures:trapezoid_midsegment_fig",
+   "confidence": "medium",
+   "memberCount": 3,
+   "members": [
+    "c58a4467dbf46251553f4a9de582cfa891fe09c4",
+    "7fc3aa2f32a4dbf956dd10920e06a35e1c8ccb73",
+    "bdf1eb2f2df24d47f2543f99b3be98d52754a4bd"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:composite_figures:similar_parallel_fig",
+   "confidence": "medium",
+   "memberCount": 3,
+   "members": [
+    "cb8162d82b6757fb75e1bf021993040d0fab2926",
+    "3d5c5fcd8a084c38beaa1cc78fa75fd4d48f0d79",
+    "08e7bed9b29184badbc89807a9d2bb8a2ba92fd4"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:composite_figures:parallelogram_diagonal_fig",
+   "confidence": "medium",
+   "memberCount": 3,
+   "members": [
+    "525cc4a1d782af682f96f496aa208846a7ad57ee",
+    "11ebf2507f72accd2f2925600c085cb4323bca68",
+    "99ebdee40d574874737dd9b05e32c149f803dcd2"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:composite_figures:square_in_circle_fig",
+   "confidence": "medium",
+   "memberCount": 3,
+   "members": [
+    "2bb7559443ad4077a5ce030c15b99791b5eb4cfb",
+    "1a14628224706969b8fd9aaae5e5ce64200d1c11",
+    "f6a808786fbcef2a071629621bf7fd862caeeeb9"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:composite_figures:circle_in_square_fig",
+   "confidence": "medium",
+   "memberCount": 3,
+   "members": [
+    "5b28b6d9ebb09212691e087c73cca96f5d5158a3",
+    "6624d07cfea0dc0eb0c762c4b9361d90d685a159",
+    "680fba6375fc8862e8aaae0df8edc211da705564"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:composite_figures:rhombus_diagonal_fig",
+   "confidence": "medium",
+   "memberCount": 3,
+   "members": [
+    "2c8d964746a782d710af5a2135d534e8bc09e5af",
+    "34038bf8fe2ef58b3e3757e82925fe14b514dc3b",
+    "218f3601b633ab1d63573a4ec3374ad5aa41194b"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:composite_figures:right_triangle_altitude_fig",
+   "confidence": "medium",
+   "memberCount": 3,
+   "members": [
+    "d1113ad87f37c1a17f8e6a91131cf517e7c2f1fd",
+    "6fc45a89c3a8665f945114dd44df6762f62aae06",
+    "271fc1dff8a4a7b4940a10255419b540876c911c"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:composite_figures:intersecting_chords_fig",
+   "confidence": "medium",
+   "memberCount": 3,
+   "members": [
+    "35052964f256de3551ff68f95ea68e8c233f6527",
+    "1dbfdf395b499ee4b2468a237feca5d8860fd0f2",
+    "282963428d2448d68dec992ebdc64814bf9d78b8"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:composite_figures:tangent_length_fig",
+   "confidence": "medium",
+   "memberCount": 3,
+   "members": [
+    "8a9d4b925f87a622a322e8f0c7d473b80f5e1a9e",
+    "6bb4b73398e5e72334c0fec99d120b3e4ba4d0ba",
+    "c308b224879f78ac775bb39bdb01c252447930a2"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:composite_figures:triangle_semicircle_fig",
+   "confidence": "medium",
+   "memberCount": 3,
+   "members": [
+    "617f930a0cc5683fb273defebb9ec89307824ade",
+    "3ddfb3e6bcb07776dcfd97fc93dfa229855051cd",
+    "4d45ee1bf8212cbdb451a158828573316c8337b3"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:circle_figures:inscribed_angle_fig",
+   "confidence": "medium",
+   "memberCount": 3,
+   "members": [
+    "ae98e14ea7ed143f6f8a4330ad8d4e148bdaf07e",
+    "de42170557013c563c90fe8012237f87748fabec",
+    "d19636284ee93e894975d4cf95e85b07f3ce7a2b"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:circle_figures:arc_length_fig",
+   "confidence": "medium",
+   "memberCount": 3,
+   "members": [
+    "96e6f56f219eec4645c8de766e7355337f5b7afb",
+    "e99f450599288cf655cefabf5fd9081c3bdbcbc4",
+    "7fa7ca3365df50a046c7e3e5a84ca3299c61a6c4"
+   ]
+  },
+  {
+   "proposedFamilyKey": "cell:circle_figures:sector_area_fig",
+   "confidence": "medium",
+   "memberCount": 3,
+   "members": [
+    "2ba16012aba6acb0af2d72e63279ceb8b5c1ee17",
+    "d008fd63431fb26322995ab47bf55eb6e5e2d5ac",
+    "1eb0f9cdc0a5ed9c01e65b85a33ad64e9b45c39e"
+   ]
+  }
+ ],
+ "unresolvedCount": 432,
+ "unresolved": [
+  "4fdf7b0c9d83f33853dad4b6022a2eb77dda7bab",
+  "cf66c0251a04892e7f2e8298825a1f077ac028d0",
+  "fe7ce64839b3aa1e5ac20c34fd6b8df90f08ed5e",
+  "8ff39fd48137b3dc2bbf76480da8861849ba5f20",
+  "4c5fb4865e3400705f7da75d02b9462d842d2a4d",
+  "de95b692178f349def7779a73dbd57167aeafa7b",
+  "3781bf3701214d079d5a7c60797bfae149f33dfd",
+  "ae075f03d3facb12c53dc904d35000ea0f05109c",
+  "f483586a7955bad5cf9c733de7384a3f20814c9f",
+  "97c87c73c1331ca63e5c1843e7666b0e0b349353",
+  "f04f4132cf97e56c8e54a22e7657d58b33a3518d",
+  "69420a74b6f622fe78be24a0069ae717e2f3aed3",
+  "237f2e6714e7c87c4232bd2c3697da9b9876168c",
+  "235e11546a2359e9759d4f30675a79c7b5b4bc29",
+  "51e8184acd9d8d5bef03927c2d793ba62b88999a",
+  "1b229e9f3599ebffd9f3f18d2daeecfba56a169b",
+  "84fb1767924b8cdd20c07b7f3d857e54df766691",
+  "34dc31e48a18a28e71ec2909566f9b707b6c4801",
+  "08546363b8c9b0380de0e1c8cb3aae4ab38b3683",
+  "fa142b9d8ff7451cf2eb47c49608184cd0d219b4",
+  "9e89a136e477885dddda254fa19bf832c82a9bd0",
+  "cb87fbe709f96e9104b693b17406399b7f5076bc",
+  "ad4cc55b336a921c91d5f41091fb3adedf416bbe",
+  "dc49e89a5cce3c79946273b336088da3814716f7",
+  "f4539918c370c84b9f2b16f1460855b58a8e49ed",
+  "0fabf15156b80f0b03624f373690ca0e58e84ae4",
+  "18a5eb9334a6e3d3b78264561a76e7f9720a4fe9",
+  "11d8f46e02177ac6a08791faed90c4d6c8b9e930",
+  "8f4e6f71f52d658a7ac793cf57e0405fd18a25cc",
+  "4eaf48be4e88253794736f9dda152598a022dd33",
+  "aa47c142b2586fee5645e4f078d34863d74e91cd",
+  "116738b5178a2e4737afaf0db957ce7f1b6268e3",
+  "924421e9e6d98985ac9b37cc097825fe32c8dc32",
+  "6fca4aec2c24521ae9caf468c554a4c6f67fd2b1",
+  "075ee6bd38f4ce35430630761fbe060f7d8a6141",
+  "a69a9a978bfe7eee4d4faec160d440a7804843d0",
+  "6fb8c1c28a2eb232a51efc895c478475a0259659",
+  "9325a525f8948af3a8eaeef2ac5887a42c261ce8",
+  "59e76d738d50c5b2bd8eb4528227f147053ec2cf",
+  "979a238412f2007e6a8b5911f07f66dd7403c5ca",
+  "2e9740ba89dd3d1ee5b535537a3fe26ef2554970",
+  "d9f26bb96f93e0f1e2057de14a874a1aa2ce7427",
+  "245740f763d16b91d2513fc881e4b6a4758dcf84",
+  "91eb727df5593e3efd1e773eb66d0805b927bd77",
+  "be38014c8e82a315323ce1b98e35deb2eb852274",
+  "94f07dee6374fef15c3dde6160c78179064767be",
+  "0fc1d1fec3078a491dc2206e7c5b7dfef982fa89",
+  "3f49236688c833e6823da7ea35a8ccfabb7795b9",
+  "4a75567b38313416c398dbe50ad70a3657fc0452",
+  "db84bfe37ed7411ba01bb0e3e3c15d06d98ee591",
+  "fb76ba3ea6125f5592d626958917f48fe22d6b8a",
+  "2d35d6903e85e8fd4aee1cc1c76c590a6b5bb66c",
+  "d1d83c10c99be56c36c130ffa6381d9e7e8cc714",
+  "a9386a6a0d911a4d1ef78b58e1692de56a505665",
+  "0be04e6c341b315466dd5b4b4026f7612425faca",
+  "0efab831710c56669d8ee1f4580a2a6cbe2eef0f",
+  "5a2cf30ae93b461fb7f664aca2cd84b63baa3fc9",
+  "3236c8a6dc73fdef1fc1db676443b923d0f8c835",
+  "65d57dd14392e7ea0cdcb20d6688754b5cd00c71",
+  "74552b8f5ea92bdc2bcaa3f1cbbdc73ea66e4e8a",
+  "6a3a58459eae714e38ca58e9a598b0d89bbbc91d",
+  "a31c8ceeb423a391370d584f1fa7b1d89bc05bf7",
+  "2b0b3772815cd34ea727f6bb33aec7791022c645",
+  "95b2674fba18d94f92317420c50e1fb12a9924a0",
+  "561a2b63413b38a73777107b9e2778878cb85499",
+  "c644508dd98e9db61d6895eab26a1c2145028216",
+  "c5ebd3f540060d8663a068959faa73cfc7a1507c",
+  "787a4d41fcacea9fa3257210b163cff3c6efe970",
+  "2f9d4bfb5e177aacb2a38c0863e892548eec77bf",
+  "3100e930b18237c8b863f6262c3b17ba12ba3391",
+  "d939d3462be81272060542ffae70047766b542c9",
+  "d4e228b5199ca32b7f4a023219040d0bb3b4f55d",
+  "536ba869f41dc79c77708ed8e6b549a4c04941c9",
+  "ca030dd6dca067f179534844c96c6db78f5a52f5",
+  "1da34a70144f6b90b92d8e5fb54aba26ebb946c2",
+  "315d377b274056109eeaeaa5d91c006b0edd9335",
+  "8986e68b8a9e7c88a3e5bfa025159afb6977aa68",
+  "2f509424b3dfb80140ac895a14d0be87ef77a433",
+  "6d6dba3f5115ed2e51b3562c361c0771bf98346a",
+  "2601968431623533e2921e88f936193e969a22c4",
+  "96ae8d5b0ee31792ec34ad201a51926ec52d2470",
+  "6b63ab387f4cb1e384730d553fb7ffb0ea9defa4",
+  "4dd2c68f2ac3b431fcf6b5f8716c470463cd9758",
+  "110555069b3abea42bc5d1fe008d5bc5a20b3311",
+  "caa0064ecb0b6c4ec5e8c2b49f9fc9f076a7256d",
+  "a53d73a37c25f4abd92934b05dd4d84d44ce5830",
+  "6138f6a3620de07161bcca7292e66cd1fb2f617b",
+  "709d5af6264001a7b58b651af120960afe4159b5",
+  "3bdc9b208328e2aac2a619f959199857ee26b194",
+  "3205e93f67cb4a7827178b1ea15c41f27974cf9f",
+  "708240a1f162771d19a92940e423221afb7c4cd2",
+  "74972e0bfff1e6fdcb8680a5ae090980d214f9f7",
+  "7a8522b2cabc5a4277f5ed192af36b7ca6593cba",
+  "91c9a98452aae16f034215a2f56566c01b019f78",
+  "2be56d1ccd5836cd2b7fc3c41e0d41937633217e",
+  "794a12beb3be5d672c1428977a0a2a094f6230d5",
+  "9b5704630be16a4a64c34ea30551c2c27b2885ca",
+  "33fb81e5b14de2461d3ab077da62d4b36d95333c",
+  "425ac7143764a790e932c978cedbf8810ea6d18d",
+  "7c0601798dd32f84ec1a012ea431f63298e8ded4",
+  "39f5045bbe9b3447f587d7734b3543ebf9951aa9",
+  "f7171ce1aef70eb667df99723ae288c6b4a06098",
+  "b6bb1a365f58de1ddf6b35315217054e76e4ca47",
+  "0cb0349aa939fab6d0b6ddcf52dbd3928e0e86cc",
+  "dbbdfb43e6fe9893a4360b3db6a9d81b0c268c1a",
+  "2c1682ae52d26d113c80f68c2ab08c30f642f3b9",
+  "2918188450bd66daa031954629ef52255696a2f5",
+  "71ef550c560c3fd7113b7815b63d3a945922add1",
+  "01b94f503b35aec4dbbb41a638ea70d772cba255",
+  "abf5b1120e8721e1cf5b21f7a280010724460f9d",
+  "57ba9a63502138949ab9d19e27613e255035d2e0",
+  "ec47df958b69250713fe6390f365fa568c2e2864",
+  "6f552828761e42c54c8bcb6ebf89355a16774c10",
+  "40a1615a70884259efefa7bb2b3a466894452661",
+  "86b6e9e8dbadf9d3d1d1e318fbe6b293a22d0805",
+  "04753b88ff4abe2d5b02bab4577fea14d2efcd02",
+  "b1636b7583af551ceffac3961fe651dcdbdd90e3",
+  "5688eb4baf282ba285ad51b1a069d1e9dc1a8f4e",
+  "ed065caec735e6b83b137cd0d4d140934d7d0aa1",
+  "f12bcd62ae6381ed36600a009b104886960470e9",
+  "da50e0aee029be5a6ba927c2717675a63a41bcb0",
+  "57e7146790f85c45ba4a89e2bbe31d3cd9b3c331",
+  "8b1d6ca2ec94c32351fb50918be8a1416a6e961e",
+  "4d056a60c7afa2de2451ff7c1c497cc53f382874",
+  "acd9607090fde6e08a19ac7592d4ff1503019575",
+  "9a6c4958474413d113053d55920b2c8158ed9b34",
+  "a348e13ed97ea629c906abfb95427d11bf8f5273",
+  "b4fdf3acf2b04dbe423b041e02277e5c4909e84a",
+  "dc73056c5ed82f9076bb884449e2ca8bbb1eef97",
+  "38c6de4bdd891f608a81a513fb86cea826e71158",
+  "a98d9e2d3c0efcbd6c2164efa006282da1c34f80",
+  "e98dfe0035d28ccdfc660360ef2b2a9490afb911",
+  "94df352b23bf5d7cf195fd05d0d14b3329c51dda",
+  "f13cced6c28ca62dd2fb9e987bb6a330e5d66da4",
+  "9fff3805592287feed8f20c165ffb52913fff58e",
+  "fbeaf44bafc32c663919e97f96579cdb51966741",
+  "4cd9ae29168c6b7ee49dcc0661744fd538b14348",
+  "962392201379d6f670190f930c06a3de7cac57e8",
+  "c3972282778c1d8dac137b784e53c8869c3ce521",
+  "53ec5033df347e623cee552d456af3b9a1a83126",
+  "efcd08acd65f47f97acb4e869133c173759d9bd3",
+  "be3e9050fd2c0fdc3c22f1b3c7b0d021a2bdeeef",
+  "ad56f41ab63421b2b594aacdb95bb584b931e87e",
+  "639d6d61455c3aedf17a25068fea03dc9256cf40",
+  "9c8396a0784ade7ba000d6419a38c3c3ebd889bb",
+  "bb6de115de5c2372e428ee5ab33870c78f571927",
+  "949f1e8b3074efbd36899cebbea6a0797b1f754e",
+  "ec268e97478a2c0350a65022bd072047a8cb2fab",
+  "166e0bbd68ffe70977b089852bd29d560582242a",
+  "9b903e06f47d63b0a35e2bc50a8fb0593aa89dc0",
+  "bf582dcadcb5f1698ea4dc6e3e4b68727b28ca82",
+  "e36bc63b875988037861a7ee0a7d70461f128ab5",
+  "1acf4836f1d8b0828b62c67af4fb4463573925d4",
+  "39d4a5e8201a1c4c9357406c4e0faaffb9f9926a",
+  "4db87c58b38451c74c1db8aa9cade2cd87a060cc",
+  "9aeca1352791927e5f6cabdeb45735f11a56df04",
+  "effebe7c35d53f4067b285643c906ebfa30cded9",
+  "148827ce509148dc9e5feea64cbb1a2bc42f6df4",
+  "5c05d97529abdea20d5b60c129ce04be3070f336",
+  "976c682f11e4f1a8fb39bffb9790c343f1badafb",
+  "092f2dd62a240c34a3eba97a22be8e6d268cb6f6",
+  "27a3a52d3a5a553c43df6c13eb26dd38e1c90d07",
+  "d62feb625c8176bdefe30371e4c2239c60326cf2",
+  "da1c8df61c81544a116b2322af21211f778ab162",
+  "8be6cf697e177faadb2c6fc3e06137499e5b30d4",
+  "4836792ccd97ef3ba1d1fd343bd2921a834f6c5b",
+  "f0a9b9ceb1ad5e8f7ad9d518ce2514c3af8361f3",
+  "5f201425647118c5fcd57f93cfc68420a550f514",
+  "8a0bad231a0040851a91da3429ec00b635abb9ac",
+  "4854b769533dc97ea67edd832cca6722bcb4ba64",
+  "7747508bd77184e678947a6b9aeee5ba2e1d4cf4",
+  "305e7b1a7312333151aa509f5dc26b0609881a8c",
+  "7b4e8f68fe595a77eb9ffd2a2c0a6d75d30c3953",
+  "d301e447df7b38fb65f0e8af2236d1ebe3434281",
+  "e59c346d57f38b86df26b451ccb561dda1dd2ea8",
+  "f97e2c19ad15d6a05e7df5eaf13585207feac61e",
+  "09a9c535a1675f95e9c001661ca6461e5e74bca5",
+  "52c8a7fee80b5da7aa5954e8b8bb74850648bf58",
+  "fdfdcc156b6a3c71a54a086bdff6e95b95fe4542",
+  "45b827bdb69ff6936890aee402710cc12c1f7793",
+  "55875335081d376f88fcdc4366a46f1da32bab10",
+  "879190a0ac1c67563ae3f5d5f09f1b57952c09f2",
+  "9c709d4ec3049d4f7c50463e4c2ea01e38a6ecc6",
+  "c21db4a05732cc96eb3a507cbcb60fbc6e58fc6c",
+  "482ed122d8c4a62d14134d431438cf81d41006ae",
+  "d128676375427a12091c40c517d14069fff18637",
+  "ae86ebf6e7b55777f154803a9498c9b3cbe4b6d5",
+  "0154705203280de2f8ca89b474adc9efd1785431",
+  "ff3bc641ffc2ad9d8b24adc4013a68cd79ac99f0",
+  "19fd480ffc36b4ec6bfe5b9648287f40ad309f3e",
+  "f676f286bf460479884f646f236e6e066958114b",
+  "d039bca77abe9c3fe93c68ecf52bebf17a969e6a",
+  "79367f2e7baa2ee51f5a328f2ab05df713cc0b38",
+  "55d4bb505418237cd50b5a0ad3a5a99e75e65a70",
+  "edf27b3d53e9f603c42c95c0ee4256f23b4e2ab9",
+  "f479f2cfca2916d980d408d3b95d1ad2076857eb",
+  "aa2c7f7ee2a13cb4b05b8d7a4a9857a5fb12fc69",
+  "9a379d3ec4f2dca4559f48e41ad2aa54389b7965",
+  "50b8e5327499a69d29c0fffa7e79ff88f3519008",
+  "a149c4ed55218925bf85f15bb64b807896668f7f",
+  "e20182739e1aa2be340bd071cdc6171e91858dd9",
+  "b9c03c904e324b045db0bd70c7f3325390825a8a",
+  "65f4a64b9c26c08ef04c7f9d9ccc3da32bfa32eb",
+  "4108d9ed03080dbb01edf0a4101c48723c049a95",
+  "d57a97dcddc5f3a37be5d43492d52d3c85db60d3",
+  "4957079af213b4c651faf092ab6721b591101f34",
+  "a1ffd158f26d9e2b2b9d77f0355b62c3eee3bec2",
+  "d9a9b3c8dd8ce7ea60832d3216f5afb2e3be462e",
+  "16fa511dd8d910334e5ec159916e4f6dfc218986",
+  "cb4ec105162c254a0511b1077f7e31c85e62d0cd",
+  "d276d839baf069c30d0e71299980ba54963bbbe6",
+  "5af8722e6ff1d9c9f77f7ffe9e80f61a34d0b025",
+  "3668eb6aac1a38cd4fbe61bf796132c8456c5088",
+  "1f04992ddc9a059327c47854110e9d04552daf4a",
+  "4db97f4a0f034c392e15e3aa3a2d25ad31ff96dd",
+  "dbab5b50aa2dff7883980b88bd45ef881c7f63b4",
+  "8bf9bb45e1c1916130367fb604df6d3cb8031ed3",
+  "02212cd6630bb482ec07e957952fdc300dd20496",
+  "74cf4eee6ea52c6a23eae330e9309a49fe616b2e",
+  "c9dd0253df5962e6b264fa8ea751a74da3ec9a5c",
+  "e626c7c9e5024d24bb204e55592f2bff6f0dcb45",
+  "6d04e5ccaee871c5cd6595c5f2c80f4e3a4a2a3d",
+  "d59e29df50128754e478da503fcb011c1c4a4b4f",
+  "f85d5ed17d98608b3f2a05626def7a5c43a56b24",
+  "cc45a710992d2fb94ca7d8561abb3df67a298406",
+  "c16fd097fca98043627d29c7b78bb8169cf7ccd3",
+  "fac259211464cbe3e491c19bfb594f7bdb6917e8",
+  "1e5fb21825c203766b057d11c145abe820011a58",
+  "a286cf376b18151c2a97f097a2ee7919ca9d65c8",
+  "d41630117afa9e78147825504e2991ccb20159ee",
+  "d80316ec934c3f5370748e5481d8191dbba8ad96",
+  "cac0d515337fb4d64e4ae826226cc4b8f0ad4764",
+  "0b554d5b07790c0baa44fcd75916dc16d16c0466",
+  "d0fca8462ba9192b76b5bd1d51b331d33e566ad3",
+  "0697479cdcd82546d012ee236cfccb26c5c66f3c",
+  "86597c468f697e93afed9fb8ff696afdc1564568",
+  "983ad4eadecd717026f7fbf58d2b92d963f6ba1d",
+  "9e4badb014ec22479d7af2a73e2a01781a5a6c0d",
+  "c91b508bdbecf2fd7b2aeb67e8fc25c36610144d",
+  "b5b897f11a7b4abae8b6fe25a7cac16720fb5d2e",
+  "1bc3b10ca2a3879da4b07098a943f1c94691139f",
+  "a2fa1bb75121ec688002cec18a6a16e60a954a8e",
+  "f36ee1edc77b9610e1c32a1cece1ce8fd461314c",
+  "deec6f4372121886ded6b12dead27dbdc6a6131f",
+  "995d728910c54bfc1966dc1bee5120b918922abb",
+  "9798fe8cabe4c097f21a6b62bb983a8aa5b093c1",
+  "0d511fe26e507be1f4666f310e3e0be923339af9",
+  "dbfa59c2137ff58816aad45d21327762590d5b2a",
+  "eea4e2d74addb6f8f7cdaede6708fd78efb4c641",
+  "ae56343e43082a45fd5bfeb1ea1646990aeef251",
+  "970d25a25e2b4179ec6827633dceb676e2e5c693",
+  "a681b30e33f42b29769d53e493fb36d2cf6d9361",
+  "ff5a17cf07b9faac88824dda80f352b6ad036ca6",
+  "07707be9a3614033ff29602fb88f6f2da87916e7",
+  "6468a674c1e24e60a3b9d8d7e1386ca5a5b9bbd9",
+  "34c769a4e74ac1c299187b0cac486d836dadf59e",
+  "8a4e68cf335c7b28a4f0fde8fe42f3459c233b37",
+  "3190aff4ed39accf2cb73617f5bfbd1b834104be",
+  "11b13391a1e0c8dd3f8aedef20ad211e0c923ee4",
+  "cf333c3f953ad3fa0f529dc719893f8beef00b2b",
+  "e5f5340170d57746873e18a2051d1320c41ad684",
+  "9f327be92effcfcc26e372abf81f96871bb6c0c7",
+  "aba2a06ba867385a9287c19b80002762197cbf6c",
+  "18f760f87fc4dfb5e4eff84c8b0f15c4f41015e1",
+  "be0fa0ac040140e0c29208615606a19fe915db09",
+  "9e35439601d9e4527bfb0e8d6ec0312302fc8d2a",
+  "17534e7737e98556b7829abfe7d7db8c45c883d5",
+  "aee16524dc6419646ae5b9419d61ac1aba1f7205",
+  "c50ae9ab6c832bc2b324702deae3a28f27713bf4",
+  "0c5f2c10b700a07b961adbcf46d5f53df2b992c3",
+  "8e4c2e6265a9037ea6ebc7a9ff433514cdb6c27d",
+  "b4db3bd9c05a1e7d53057cb18960e3718108ecac",
+  "52c569d7e353b8ea8ac0ac13e80e86bbc88ebce7",
+  "10c1a88fb31fb32ec818079dc84cb6fed74383c5",
+  "b08e173b05a90b3e6b1e7ad49b674d4565f9eda4",
+  "03f1d34b5f96486d73ada7fb90b06d7e84d6dfdb",
+  "35e743431afe166496e8ecc506ed94403bdbdd49",
+  "63a4e6e4a144d55d5bca11b2bce242f961fe7805",
+  "8a3898b22049c939e4b79d3be5aa1b51bbec9589",
+  "e1737dc8b0666e63095b78141d9b795b567190c7",
+  "65b501c147af89eaee08b26e510b380fbe432f0e",
+  "e3f42e8e143a542f1143408e9061492fd6e29a45",
+  "3a66cdc11eebd84c86651772471d2c2361145bd5",
+  "bd44831e6460cd344998390c26cdbd8e25a390a7",
+  "c6a0f1d77cff4af9b65a06d22835ffe3a0253a50",
+  "cae23043bdb188bcc4ae7f5f800e0314a856b1ac",
+  "9857f4ce7547b8ad995a461b1c6b2ffbf04b9c3a",
+  "98292c92c290e73d405cd4e892e66cc74c88f893",
+  "ab9842222ee2f6f1859b99318f8631c97d0fe629",
+  "e822437b978d9da77c47e69476c1a09b9c6ab2c8",
+  "b2f1af276900a0067bd43872980d8ce82fa81336",
+  "6138b09e313afa00f61747eb1ff6270db8c9d8a3",
+  "38264a390785a28296864cea3ff21502e30b8fb7",
+  "90e94619f27376c7109e0f7091105b6d09c60646",
+  "e69b52c1b4266d3f542f4522a03f719923fe7c52",
+  "790ddce0ef29fdd7e4c17b3d906dda203e1a1cfb",
+  "a70e4dfd0e37166f7c472898630025bcef62762f",
+  "0108567923c5f31c3b93dad41f0a94ec09a526cd",
+  "7147514657ec17de60f96dc848361698a3a77b05",
+  "b47d54dd19120789741e198257ffd890313ec28d",
+  "c8d89d3425e15ba143bc966183a82e356f97da04",
+  "3817655e4a1a723db0216016de6fee8c8c6357bd",
+  "8835e99aa4a7e6392c220194166c5f8765a41aae",
+  "071cf03421b4beede6ec38e6f086239ac09ba9bf",
+  "8b9a98e15b85bed45583e6c05d5b2bc64284ade2",
+  "cb4deb8ab38cab8f6ae297afd158a3d5af8581aa",
+  "9f064bf07a453be95932674de453cd257b53a480",
+  "d99a9c402674669190a4c45a2da71eeb43567ec1",
+  "1045428365f97c6c224a7626c1e37b4d168a46cc",
+  "e26f5be52a7880a9e3e63041c1949a5a1ee31133",
+  "e70bd72e764dcdd4bdc8ea9a79701e2b39a32f68",
+  "06bd0cbb8bee40dd9e7e2b402ab43e17301213c4",
+  "a7ef8dc0380886657b3b2b1646d0f92946efc863",
+  "e98adb9eb02664d3a21d2e5e5763148ab21bf7eb",
+  "a498919bb39edc98d309bb7644d7eef098ce4bfa",
+  "08ebfec67366cfd9238f45a1b17ff8af6c90eca8",
+  "f1bcccc913a764e24a0866ec26a99d1e5adeab2a",
+  "50727adf66337904d7f1da529f019ba182f070ac",
+  "4357e6b12d516323e78ff349af80962586800724",
+  "85c328748e1e1374ed3e668efffc97bb7a6641be",
+  "ccdb1d8d7fdc8a089ac7169c3fc38a60c260e8bf",
+  "681967ba078ffa6d920364326deaa1cf346b9a0d",
+  "d0b713782fc82e61433d2ec61924699b015ca2fe",
+  "3c28e522e3a4d2851746bad36cd63d391d6292a2",
+  "0b8082def13e6e5c5268d15da53670a19bcd48a3",
+  "28bef31081835db6cf4bb00bb853f95f155c7485",
+  "6dc6171031e9cd951bf7e52f75bb6052987ce694",
+  "3d1a13b21b17b7ba6eda887335b72e0b39768427",
+  "94195f47d2ad773b473dabc16f74240edd7720e5",
+  "40f523db089069f8da36f74f0da172cb7ff87858",
+  "2433a504d5dc92ac591964835d76077a9b770f63",
+  "44903931463b30180200bcd276a93ba4554c5c37",
+  "52bf1c851a5084ac1bb238bf38eee6346b162b85",
+  "d9b5de7047fab252fc9529424466d5953bd141b4",
+  "4c1f8d69c6825a2a7dfefdc7179dfc4ba975a588",
+  "9833d492d93e7dd8bd551d5b6e5b0b609dc9fd1b",
+  "e8f0e84bc88440e6233e3ef855862bbacc145a53",
+  "22fad7385539b020bfe927c36f6eee9b7ffa6466",
+  "1af33bd36da35ac606c80f72309833116412029d",
+  "47cb5a008bb0fef8fd9ed72383d824301da513c3",
+  "f4e7ff3a50ea7a3efd7179fa3086a027361186e1",
+  "4626c8495b5839fc677b396b1195de2865f63610",
+  "b5cf7f4ab4fd3dbf2dce6e6727a2cb5d99096a20",
+  "b25adf2f30ed5c4b075531eba346a871cbd08284",
+  "d87f6c1d22c54f874542941b5bb5dd4dc7ebee9b",
+  "64f6c577dad4607062a751bd716276c7d63188b8",
+  "f966dbaadcb33fae7c9334822c8bc9e4cf158a74",
+  "b69463cbd68b6c24ff706bfc95973b7692ae4aa0",
+  "f7de75b141040e5e6d9a13b8adc7098804841e9c",
+  "167696d2808405555cd1e302027d6ce5703d2601",
+  "f454095c6143a6d4875b580d8b9d9d10e1117f35",
+  "cd0a64d6497e4ddcc9d786db7e00d3ba4e125040",
+  "49c12883ce86711951ecc2644ac535222dbb038d",
+  "d7b3882e106b99c620111a3a1d93c8ccf6afbaaa",
+  "c3d277edea4753971fdfa743a9e0a4d2942e8644",
+  "7e60443f1f8b56154a8ea0bdebd95a8b72c375bb",
+  "1fe08a6f942e800fecce70e02dce6ef9fa73d628",
+  "6b0f99333dd0e156deb4dc33d72b1e1cc51d39bd",
+  "585d00d07948842964aad5f5197d95e1dcea8ce8",
+  "67cb79eb69984e41782b8f641148195c1406697d",
+  "df9ccbca32e27db3280201f2aa03b9c79e532275",
+  "f758c65e89bda9a239abf0ee711f995efbbd637a",
+  "630ccc153546bfb74b74df860012d3e7f33a3982",
+  "537ac984b187bbf6cb78a145cb8e914a6b55772a",
+  "ffcd36a5350e098b17ccf9f890ac29f3c8655880",
+  "1302b0b844dcea3253c2b8fc635ee1f2aa00ce47",
+  "15cfa9670da44efa2d99b589fab0c20738cf091d",
+  "47fd5b56124cc163f5a3ab6825cb0e4d175e0ee0",
+  "2513c0b6702d97495f902d5894f4592bf8dc9cc0",
+  "1beb18ac3953586295bfda975187f2d16aa901bb",
+  "f0d45ccb576ba5b4a99ac1c965c32de16c8cc8de",
+  "a9bf670f988bc6e164e9900221d4a1c596ded491",
+  "f850419f8876581ac11ceecd15dbc2c6134f8228",
+  "bb1ff59691e0496a98435a696310a973e16ac959",
+  "a82f44740d2813385e98cdc395397d0854e6c373",
+  "750b0291e86309d5b4ffd3356fe4140729ee1e48",
+  "deec92ebeb47d171b268acb9d32543479d2e25d4",
+  "255670fdd5e201504f29c2486097e0b38047ab97",
+  "69963e8979f73001ad6eebe08f6cbea5476bf751",
+  "d11b819e4fcd6e8b98ccaa9fb291b35ec5845cff",
+  "674f005bc9786b18de3359a19e902ae8d4acabb2",
+  "bf2b3da8cc0cb7b1df6b6050115ab991908cb9f1",
+  "5e3fdbae3ef4c13a28af3a7c663df0c325e10027",
+  "eaf163ab43ba2d57c5cce334da4666ee2d862816",
+  "4de2335e6e38337bbce6e4300959faf2e647a409",
+  "b728665544bb3c21c3e0e9d90cf73e7a869f9ae0",
+  "9f14167819e4a6b43436c133c2785f80096d185b",
+  "e81b9c031c00e274c56d3f7ab6063b08d1dc0f75",
+  "6da51b04bbd33a4c9df44a33d89f304e6457d5ab",
+  "e6ced43a1add688fb5f30fa775c67283008a87c7",
+  "8953274389ca6cbd8ab83921ae7e937d088f9c1c",
+  "7dc5d7f6fc0a8c3e12dedf08842e6bf674f2687d",
+  "9f1132c2a1b141a88c0eeedb01ddde51ee7d78e3",
+  "a29d2da3f2b0057f690b49cbcc3faed2e758f672",
+  "a8cbb3afd537b39545987478ff6cedadd9afce34",
+  "ea1ecc0b432c393322f1866d2b5796971a86dfa5",
+  "b296c1bcedacbe5853ca8c05071bdab477bdfd61",
+  "aee5899a8c701f1d632a5d8465ba9cc42fba32e4",
+  "ee3105f42a15c9a21eab7c66f90b8c3f9b111af0",
+  "75e17be7cde5a9975a11e97a239bd6c408f4f617",
+  "379fd03d3fbf9df8d5ea2b1aeba8bdc54e9d275b",
+  "0a9dee70082ad01a7ba1b443b85c80b90c15fd66",
+  "dc8555bba49734703b1e85df55afbd6dc4f7e345",
+  "d2b24fef29714810556cdacd3e76e0dd22fe3dbc",
+  "f7470dd575c9c31c3dc1ba3c08bd58014903a3ad",
+  "3a695fe6ccb6652399e9e36b9a30268bc3f91f68",
+  "fb9b174b17a4edf9ff406c0cd2a229f22a89bd2b",
+  "a37fdcb382c0699f9c38cb41e4023a08c787e706",
+  "0a7e7929b33b2b55c9e8331709a4a96e583d53fc",
+  "86b9329b3ff3520644b459a6958159b94937bc55",
+  "feba19a44373816d73cadbf7e11cf83eb4e9b12a",
+  "e2e8905a76186e20f5472d4bb0d6fad53b529edd",
+  "fa86c6d8bd67d40d9887369e038055e0ce72ad23",
+  "aa5a502cb4e0e0896620687c2155062385e044b9",
+  "6c34273a9885c60aad07533dbf8b0eb4c2b9d504",
+  "55761c1ae4451caab39ccaad078fd3981a3c795a",
+  "ef52dddc5e39b0ee70d9a3c9b95c55be830436d8",
+  "1f17b96ded1dbf26d0fe3aacc61fcc351565f222",
+  "525eb8d9592cdce957d739716aee17a9e2776f47",
+  "58dfb1451370643e6a86202eada54f50e3302c2c",
+  "1aec1e4353d0facbd56d9601ae9a2edbd3f8477f",
+  "8da15ec3aca8a15c136b767e6176cfe97e3234fb",
+  "9b8988c197c047c18a3288600c0bc487aef9a398",
+  "0a081c631ef1bec36d2498b14de8152f56f9fbf4",
+  "757fa2672055bfb05fb65a7e1c1d98126bc9a6eb",
+  "16c0627453ee38cb4f2c8988966ddbf0761d5b79",
+  "204781659f61a8c9ed76ce8a83c241398b30d350",
+  "600f532cdbd508985d61f5179b0b018839ddeb0b",
+  "f41b54edebfbc9bef117b14680a87bd038032310",
+  "452a2358ca930a920cdc48334feb560387460cef",
+  "4225414d968c340d7de26a44119122ff52d4f4e2",
+  "194c0e9ef0b0f644dbb69369b666654e1ab9ad59"
+ ]
+}

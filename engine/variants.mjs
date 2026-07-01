@@ -107,7 +107,7 @@ const GENERATORS = {
       program: "SAT", domain, band: family.difficulty?.band || band, target_band: band,
       statementId: family.statementId, skill: subdomain, type: cand.choices ? "mcq" : "spr",
       stem: mathSeg(cand.statement),
-      options: cand.choices ? cand.choices.map((c, i) => ({ key: "ABCD"[i], seg: mathSeg(String(c).replace(/^[A-D][).]\s*/, "")) })) : undefined,
+      options: cand.choices ? cand.choices.map((c, i) => { const key = "ABCD"[i]; const o = { key, seg: mathSeg(String(c).replace(/^[A-D][).]\s*/, "")) }; const mis = cand.misconceptions?.[key]; if (mis && key !== cand.correct_choice) o.misconception = mis; return o; }) : undefined,
       answer: cand.choices ? { correct: cand.correct_choice } : { accept: [String(cand.answer)], tol: 0 },
       solution: solutionSegs(cand.solve_path), figure: null, fingerprint: gate.fingerprint || [],
     } : null;

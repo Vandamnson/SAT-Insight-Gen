@@ -61,6 +61,7 @@ Output ONLY valid JSON, no prose, no markdown fences:
     {"step": 1, "op": "distribute", "detail": "..."},
     {"step": 2, "op": "collect_like_terms", "detail": "..."}
   ],
+  "misconceptions": {"A": "sign_slip"},                  // MCQ only, OPTIONAL: for EACH wrong choice, name the single canonical error that produces it (e.g. sign_slip, swapped_roots, dropped_factor, unflipped_inequality, extraneous_kept, off_by_step)
   "radicals_used": { ...echo the radicals... },
   "claimed_band": 3
 }`;
