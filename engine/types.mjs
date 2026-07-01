@@ -36,12 +36,15 @@ export const TYPES = {
   inequality1:  { check: (v) => v && v.lhs && v.rhs && fin(v.lhs.m) && fin(v.lhs.b) && fin(v.rhs.m) && fin(v.rhs.b) && [">", ">=", "<", "<="].includes(v.dir) },
 };
 
-/** qty(type, value) — validated quantity constructor; throws on shape violation. */
-export function qty(type, value) {
+/** qty(type, value, meta?) — validated quantity constructor; throws on shape violation.
+ *  meta.ref (optional) = the PRESENTATION phrase a downstream step's stem may use to
+ *  name this quantity (e.g. "the solution to the given system of equations",
+ *  "the x-intercept of \\ell"). Resolvers ignore it — it is surface only. */
+export function qty(type, value, meta = {}) {
   const t = TYPES[type];
   if (!t) throw new Error(`unknown quantity type '${type}'`);
   if (!t.check(value)) throw new Error(`value does not satisfy type '${type}': ${JSON.stringify(value)}`);
-  return { type, value };
+  return { type, value, ...(meta.ref ? { ref: meta.ref } : {}) };
 }
 
 /* ---- CLOSED named coercions (the only cross-type hops a binding may name) ---- */

@@ -1,0 +1,23 @@
+{
+ "w0_chain": 305,
+ "wLen": 40,
+ "wFig": 25,
+ "fitted": "2026-07-01T22:07:53.646Z",
+ "anchors": [
+  {
+   "anchor": "C1",
+   "scalePoint": 760,
+   "residual": 15
+  },
+  {
+   "anchor": "C2",
+   "scalePoint": 790,
+   "residual": 5
+  },
+  {
+   "anchor": "C4",
+   "scalePoint": 785,
+   "residual": -20
+  }
+ ]
+}
