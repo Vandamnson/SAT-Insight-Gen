@@ -62,14 +62,19 @@
         "3d"
       ],
       "_familyId": "fam_f5163fb7c8",
-      "_variantId": "fam_f5163fb7c8#500714e5"
+      "_variantId": "fam_f5163fb7c8#500714e5",
+      "difficulty": {
+        "scalePoint": 485,
+        "band": "B4",
+        "method": "expert_blind_calibration"
+      }
     },
     {
       "id": 2,
       "program": "SAT",
       "domain": "geometry_trig",
-      "band": "B6",
-      "target_band": "B6",
+      "band": "B5",
+      "target_band": "B5",
       "statementId": "GEO.B6.s1",
       "skill": "solid_figures",
       "type": "spr",
@@ -132,7 +137,12 @@
         "3d"
       ],
       "_familyId": "fam_c13dc21054",
-      "_variantId": "fam_c13dc21054#5aa02895"
+      "_variantId": "fam_c13dc21054#5aa02895",
+      "difficulty": {
+        "scalePoint": 575,
+        "band": "B5",
+        "method": "expert_blind_calibration"
+      }
     },
     {
       "id": 3,
@@ -223,7 +233,12 @@
         "2d"
       ],
       "_familyId": "fam_96680d80fc",
-      "_variantId": "fam_96680d80fc#5aa02895"
+      "_variantId": "fam_96680d80fc#5aa02895",
+      "difficulty": {
+        "scalePoint": 690,
+        "band": "B7",
+        "method": "expert_blind_calibration"
+      }
     },
     {
       "id": 4,
@@ -393,7 +408,12 @@
         "2d"
       ],
       "_familyId": "fam_1c61b12b8e",
-      "_variantId": "fam_1c61b12b8e#764b9c25"
+      "_variantId": "fam_1c61b12b8e#764b9c25",
+      "difficulty": {
+        "scalePoint": 725,
+        "band": "B7",
+        "method": "expert_blind_calibration"
+      }
     },
     {
       "id": 5,
@@ -535,7 +555,12 @@
         "2d"
       ],
       "_familyId": "fam_b03e0bfbdf",
-      "_variantId": "fam_b03e0bfbdf#5aa02895"
+      "_variantId": "fam_b03e0bfbdf#5aa02895",
+      "difficulty": {
+        "scalePoint": 740,
+        "band": "B7",
+        "method": "expert_blind_calibration"
+      }
     }
   ]
 }

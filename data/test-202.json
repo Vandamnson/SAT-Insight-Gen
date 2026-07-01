@@ -66,15 +66,15 @@
       "difficulty": {
         "scalePoint": 340,
         "band": "B1",
-        "method": "rubric_prior"
+        "method": "expert_blind_calibration"
       }
     },
     {
       "id": 2,
       "program": "SAT",
       "domain": "geometry_trig",
-      "band": "B6",
-      "target_band": "B6",
+      "band": "B3",
+      "target_band": "B3",
       "statementId": "GEO.B6.s1",
       "skill": "solid_figures",
       "type": "spr",
@@ -153,9 +153,9 @@
       "_familyId": "fam_771904c643",
       "_variantId": "fam_771904c643#a0a1189c",
       "difficulty": {
-        "scalePoint": 645,
-        "band": "B6",
-        "method": "rubric_prior"
+        "scalePoint": 450,
+        "band": "B3",
+        "method": "expert_blind_calibration"
       }
     },
     {
@@ -250,9 +250,9 @@
       "_familyId": "fam_957b06d804",
       "_variantId": "fam_957b06d804#024062e8",
       "difficulty": {
-        "scalePoint": 740,
+        "scalePoint": 695,
         "band": "B7",
-        "method": "rubric_prior"
+        "method": "expert_blind_calibration"
       }
     },
     {
@@ -367,17 +367,17 @@
       "_familyId": "fam_6dcc4ab426",
       "_variantId": "fam_6dcc4ab426#3a166105",
       "difficulty": {
-        "scalePoint": 740,
+        "scalePoint": 685,
         "band": "B7",
-        "method": "rubric_prior"
+        "method": "expert_blind_calibration"
       }
     },
     {
       "id": 5,
       "program": "SAT",
       "domain": "geometry_trig",
-      "band": "B7",
-      "target_band": "B7",
+      "band": "B4",
+      "target_band": "B4",
       "statementId": "GEO.B7.s3",
       "skill": "composite_figures",
       "type": "spr",
@@ -539,9 +539,9 @@
       "_familyId": "fam_365519ea75",
       "_variantId": "fam_365519ea75#78243b6c",
       "difficulty": {
-        "scalePoint": 740,
-        "band": "B7",
-        "method": "rubric_prior"
+        "scalePoint": 515,
+        "band": "B4",
+        "method": "expert_blind_calibration"
       }
     }
   ]
