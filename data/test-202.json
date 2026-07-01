@@ -1,0 +1,523 @@
+{
+  "number": 202,
+  "title": "ENGINE v2 — 5 geometry figure problems (one per family)",
+  "questions": [
+    {
+      "id": 1,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B4",
+      "target_band": "B4",
+      "statementId": null,
+      "skill": "solid_figures",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The right rectangular prism shown has the edge lengths marked, in centimeters. What is the volume of the prism, in cubic centimeters?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "252"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. apply volume formula: "
+        },
+        {
+          "t": "math",
+          "v": "V = \\ell wh = 4\\cdot 7\\cdot 9 = 252"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "prism",
+        "spec": {
+          "dims": {
+            "l": 4,
+            "w": 7,
+            "h": 9
+          },
+          "labels": {
+            "l": "4",
+            "w": "7",
+            "h": "9"
+          }
+        }
+      },
+      "fingerprint": [
+        "solid_fig",
+        "prism_volume",
+        "4x7x9",
+        "3d"
+      ],
+      "_familyId": "fam_4f3d4a92b3",
+      "_variantId": "fam_4f3d4a92b3#003d84ce"
+    },
+    {
+      "id": 2,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B4",
+      "target_band": "B4",
+      "statementId": null,
+      "skill": "solid_figures",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The cylinder shown has the radius and height marked, in centimeters. The volume of the cylinder is "
+        },
+        {
+          "t": "math",
+          "v": "k\\pi"
+        },
+        {
+          "t": "text",
+          "v": " cubic centimeters. What is the value of "
+        },
+        {
+          "t": "math",
+          "v": "k"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "196"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. apply volume formula: "
+        },
+        {
+          "t": "math",
+          "v": "V = \\pi r^2 h = \\pi\\cdot 7^2\\cdot 4 = 196\\pi"
+        },
+        {
+          "t": "text",
+          "v": ", so "
+        },
+        {
+          "t": "math",
+          "v": "k = 7^2\\cdot 4 = 196"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "cylinder",
+        "spec": {
+          "dims": {
+            "r": 7,
+            "h": 4
+          },
+          "labels": {
+            "r": "7",
+            "h": "4"
+          }
+        }
+      },
+      "fingerprint": [
+        "solid_fig",
+        "cylinder_volume",
+        "7x4",
+        "3d"
+      ],
+      "_familyId": "fam_771904c643",
+      "_variantId": "fam_771904c643#a0a1189c"
+    },
+    {
+      "id": 3,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B5",
+      "target_band": "B5",
+      "statementId": null,
+      "skill": "circle_figures",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "In the circle shown with center "
+        },
+        {
+          "t": "math",
+          "v": "O"
+        },
+        {
+          "t": "text",
+          "v": ", the shaded sector has the marked central angle and radius. The area of the shaded sector is "
+        },
+        {
+          "t": "math",
+          "v": "k\\pi"
+        },
+        {
+          "t": "text",
+          "v": ". What is the value of "
+        },
+        {
+          "t": "math",
+          "v": "k"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "8"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. apply sector area: "
+        },
+        {
+          "t": "math",
+          "v": "\\text{area} = \\dfrac{45}{360}\\cdot \\pi(8)^2 = 8\\pi"
+        },
+        {
+          "t": "text",
+          "v": ", so "
+        },
+        {
+          "t": "math",
+          "v": "k = 8"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "circle",
+        "spec": {
+          "R": 92,
+          "sector": {
+            "from": 50,
+            "to": 95,
+            "label": "45°",
+            "radiusLabel": "8",
+            "shade": true
+          }
+        }
+      },
+      "fingerprint": [
+        "circle_fig",
+        "sector_area",
+        "45deg_r8",
+        "2d"
+      ],
+      "_familyId": "fam_957b06d804",
+      "_variantId": "fam_957b06d804#024062e8"
+    },
+    {
+      "id": 4,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B6",
+      "target_band": "B6",
+      "statementId": null,
+      "skill": "circle_figures",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "In circle "
+        },
+        {
+          "t": "math",
+          "v": "O"
+        },
+        {
+          "t": "text",
+          "v": " shown, "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{CA}"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{CB}"
+        },
+        {
+          "t": "text",
+          "v": " are chords and the central angle "
+        },
+        {
+          "t": "math",
+          "v": "\\angle AOB"
+        },
+        {
+          "t": "text",
+          "v": " is marked. What is the measure, in degrees, of the inscribed angle "
+        },
+        {
+          "t": "math",
+          "v": "\\angle ACB"
+        },
+        {
+          "t": "text",
+          "v": " (marked "
+        },
+        {
+          "t": "math",
+          "v": "x^\\circ"
+        },
+        {
+          "t": "text",
+          "v": ")?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "62"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. apply inscribed angle: "
+        },
+        {
+          "t": "text",
+          "v": "An inscribed angle is half the central angle on the same arc: "
+        },
+        {
+          "t": "math",
+          "v": "x = \\tfrac12\\cdot 124 = 62"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "circle",
+        "spec": {
+          "R": 92,
+          "inscribed": {
+            "A": 210,
+            "B": 334,
+            "C": 88,
+            "centralLabel": "124°",
+            "inscribedLabel": "x°"
+          }
+        }
+      },
+      "fingerprint": [
+        "circle_fig",
+        "inscribed_angle",
+        "c124",
+        "2d"
+      ],
+      "_familyId": "fam_6dcc4ab426",
+      "_variantId": "fam_6dcc4ab426#3a166105"
+    },
+    {
+      "id": 5,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B5",
+      "target_band": "B5",
+      "statementId": null,
+      "skill": "composite_figures",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "From external point "
+        },
+        {
+          "t": "math",
+          "v": "P"
+        },
+        {
+          "t": "text",
+          "v": ", segment "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{PT}"
+        },
+        {
+          "t": "text",
+          "v": " is tangent to the circle with center "
+        },
+        {
+          "t": "math",
+          "v": "O"
+        },
+        {
+          "t": "text",
+          "v": " at "
+        },
+        {
+          "t": "math",
+          "v": "T"
+        },
+        {
+          "t": "text",
+          "v": " (so "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{PT}\\perp\\overline{OT}"
+        },
+        {
+          "t": "text",
+          "v": "). If the radius is "
+        },
+        {
+          "t": "math",
+          "v": "9"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "OP = 15"
+        },
+        {
+          "t": "text",
+          "v": " (shown), what is the length of "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{PT}"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "12"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. tangent pythagorean: "
+        },
+        {
+          "t": "math",
+          "v": "PT = \\sqrt{OP^2 - r^2} = \\sqrt{15^2 - 9^2} = \\sqrt{144} = 12"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "scene",
+        "spec": {
+          "w": 300,
+          "h": 230,
+          "circle": {
+            "c": [
+              0,
+              0
+            ],
+            "r": 9
+          },
+          "pts": {
+            "O": [
+              0,
+              0
+            ],
+            "P": [
+              15,
+              0
+            ],
+            "T": [
+              5.4,
+              7.2
+            ]
+          },
+          "segs": [
+            [
+              "O",
+              "T",
+              {
+                "label": "9"
+              }
+            ],
+            [
+              "O",
+              "P",
+              {
+                "label": "15"
+              }
+            ],
+            [
+              "P",
+              "T"
+            ]
+          ],
+          "angles": [
+            {
+              "at": "T",
+              "from": "O",
+              "to": "P",
+              "right": true
+            }
+          ]
+        }
+      },
+      "fingerprint": [
+        "composite_fig",
+        "tangent_length",
+        "r9_d15",
+        "2d"
+      ],
+      "_familyId": "fam_365519ea75",
+      "_variantId": "fam_365519ea75#78243b6c"
+    }
+  ]
+}
