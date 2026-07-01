@@ -41,24 +41,31 @@ function solve(p) {
   return { ans: NaN, ok: false, essential: false };
 }
 
-let n = 0, bad = 0, trivial = 0, illegible = 0; const samples = {};
-for (const type of FIG_TYPES) {
-  for (let i = 0; i < 80; i++) {
-    const it = drawAdvFig(type, rng(`advfig|${type}|${i}`)); n++;
-    const claimed = Number(it.answer.accept[0]);
-    const v = solve(it._p);
-    if (!v.ok || Math.round(v.ans) !== claimed) { bad++; if (bad <= 6) console.error(`✗ ${type}#${i}: claimed ${claimed}, re-derived ${v.ans} (ok=${v.ok})`); }
-    if (!v.essential) { trivial++; if (trivial <= 4) console.error(`✗ ${type}#${i}: trivial (a=1 / degenerate)`); }
-    const cell = { incidentals: { numbers: { figure: it.figure, task: "read_feature", answer: it.answer.accept[0], fingerprint: [] } } };
-    if (!legibilityCheck(cell).keep) { illegible++; if (illegible <= 4) console.error(`✗ ${type}#${i}: illegible figure`); }
-    if (i === 1) samples[type] = it;
+// exported so the engine's variant re-verifier reuses the SAME independent resolver.
+export { solve as resolveAdvFig };
+
+function main() {
+  let n = 0, bad = 0, trivial = 0, illegible = 0; const samples = {};
+  for (const type of FIG_TYPES) {
+    for (let i = 0; i < 80; i++) {
+      const it = drawAdvFig(type, rng(`advfig|${type}|${i}`)); n++;
+      const claimed = Number(it.answer.accept[0]);
+      const v = solve(it._p);
+      if (!v.ok || Math.round(v.ans) !== claimed) { bad++; if (bad <= 6) console.error(`✗ ${type}#${i}: claimed ${claimed}, re-derived ${v.ans} (ok=${v.ok})`); }
+      if (!v.essential) { trivial++; if (trivial <= 4) console.error(`✗ ${type}#${i}: trivial (a=1 / degenerate)`); }
+      const cell = { incidentals: { numbers: { figure: it.figure, task: "read_feature", answer: it.answer.accept[0], fingerprint: [] } } };
+      if (!legibilityCheck(cell).keep) { illegible++; if (illegible <= 4) console.error(`✗ ${type}#${i}: illegible figure`); }
+      if (i === 1) samples[type] = it;
+    }
   }
+  console.log(`\ndrawn=${n}  answer-mismatches=${bad}  trivial=${trivial}  illegible=${illegible}`);
+  for (const type of FIG_TYPES) {
+    const it = samples[type];
+    const stemTxt = it.stem.map((s) => (s.t === "mathblock" ? `[${s.v}]` : (s.segs || []).map((g) => g.v).join(""))).join(" ");
+    console.log(`\n${type} (scale ${it.difficulty.scalePoint}, ${it.statementId}): ${stemTxt}`);
+    console.log(`   answer = ${it.answer.accept[0]}`);
+  }
+  process.exit(bad || trivial || illegible ? 1 : 0);
 }
-console.log(`\ndrawn=${n}  answer-mismatches=${bad}  trivial=${trivial}  illegible=${illegible}`);
-for (const type of FIG_TYPES) {
-  const it = samples[type];
-  const stemTxt = it.stem.map((s) => (s.t === "mathblock" ? `[${s.v}]` : (s.segs || []).map((g) => g.v).join(""))).join(" ");
-  console.log(`\n${type} (scale ${it.difficulty.scalePoint}, ${it.statementId}): ${stemTxt}`);
-  console.log(`   answer = ${it.answer.accept[0]}`);
-}
-process.exit(bad || trivial || illegible ? 1 : 0);
+import { fileURLToPath } from "node:url";
+if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) main();
