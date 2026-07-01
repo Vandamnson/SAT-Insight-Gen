@@ -1,6 +1,16 @@
 # HANDOFF — SAT-Insight-Gen
 
-_Last updated: 2026-06-23 · Repo is GIT (`main` = old hybrid baseline; BUILD_SPEC on `build-spec-pipeline`; latest work on `opus-double-gate`). NEW ARCHITECTURE per `BUILD_SPEC.md` — see below._
+_Last updated: 2026-06-24 · Repo is GIT (`main` = old hybrid baseline; BUILD_SPEC on `build-spec-pipeline`; v1 content pipeline on `opus-double-gate`; **ENGINE v2 on branch `engine`** — see `ENGINE.md`)._
+
+## ⮕ CURRENT: ENGINE v2 (branch `engine`, 2026-06-24) — the novelty engine
+Mission reframed: **cheap, excellent SAT resource; genuinely novel yet in-distribution items.** Full doctrine + run guide in **`ENGINE.md`**; design plan `~/.claude/plans/cuddly-dazzling-reef.md`; the v1 findings that motivated it in `REPO-REVIEW.md` + `DEDUP-REPORT.md` (73% reskins in thin skills; opt-in gates rot).
+- **Two-tier bank** (`data/engine/`): FAMILIES (verified structures; `family.mjs` THROWS without verification records — the gate is structural) + VARIANTS (near-free re-realizations, re-verified through the same independent resolvers). Mock modules ≤1/family; drill ladders within-family. E1 fixture 10/10.
+- **Path-composition engine** (`engine/steps|edges|composer|verify/`): typed quantities + curated edge allowlist; every step = make() + INDEPENDENT resolve() with mechanical independence enforcement (secret firewall, sensitivity, lint, 200-draw agreement). **Port-proof PASSED** (C1/C2/C4 at 80/80 through the new resolver) and **2 chains that never existed in v1** admitted at 80/80.
+- **Band-pass** (`distance|authenticity|bandpass.mjs`): novelty floor (42/42 known reskins flagged; 32/32 officials pass) + distribution floor (officials 8.3). **HONEST FINDING: template chains score 3–6 authenticity** — the composite phrasing is out-of-voice; chains mint in record mode until the LLM realization pass (`realize/llm.mjs`, NEXT) lifts them past 7. Do NOT lower the floor.
+- **Grammar miner** (`grammar.mjs` → occupancy map + `targets()`), **misconception tags** (author contract, optional per-wrong-choice), **importer stub** (`importer.mjs` — proposals only; 432 mod2/misc need blind adjudication).
+- **Proof run**: 17 families (12 curated capstones + 5 chains incl. 2 novel) · 56 $0 variants · module test-200 (17 items, 17 families, renders clean) + ladder test-201; blind-solve QA in flight at handoff.
+- **NEXT on this branch**: realize/llm.mjs (the authenticity fix), remaining 8 steps of the library, judge-banding for chain families below B7, v1 import adjudication.
+- v1 E0 seals (also on this branch): pipeline banking is **opt-in** (`SIG_BANK=1`); `SIG_BANK_DEDUP=1` now implies the structural check.
 
 ## ⮕ CURRENT: ADVANCED MATH domain — ADV-1 text/algebraic core complete (2026-06-23, branch `opus-double-gate`)
 The 2nd content domain, on the SHARED four-agent pipeline (PROVE primary — no new verifier code). Covers ~13/15 rubric statements: quadratics, quadratic/exponential models, polynomial rewriting, radical/rational/abs-value/nonlinear-system solving. The 2 figureLoad:req nonlinear-graph statements (ADV.B1.s1, ADV.B2.s1) + figure-optional graph features are deferred to **ADV-2**.
