@@ -80,6 +80,8 @@ export function drawChain(chainSpec, r, { maxTries = 400 } = {}) {
       verify: { tier: "cross-skill", correctness: "construct-backward + chain-resolver" },
       fingerprint: ["cross_skill", sig, ...ids.flatMap((id) => step(id).spec.ops)],
       _p: { steps: chain.steps, bindings: chainSpec.bindings },
+      _prose: made.map((m) => m.prose),                    // per-step prose contracts (LLM realization input)
+      _intermediates: chainSpec.bindings.map((b) => { const [fi, fn] = parseRef(b.from); const q = made[fi].outputs[fn]; return { name: fn, value: q.value }; }),
     };
   }
   throw new Error(`drawChain: ${chainSignature(chainSpec)} exhausted ${maxTries} tries`);
