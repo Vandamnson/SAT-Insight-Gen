@@ -123,13 +123,22 @@ export function enumerateChains({ maxLen = 2 } = {}) {
 
 /* register the "chain" generator with the variant realizer: a chain family's spec
    is { chainSpec }; a variant = one verified draw (drawChain verifies internally —
-   resolver + essentialChain — and throws on exhaust, which we surface as null). */
+   resolver + essentialChain). opts.realize === "llm" additionally re-voices the
+   template stem through realize/llm.mjs (answer-pin + PROVE gated) — the A/B-proven
+   fix for the distribution floor; falls back to the template stem if gates fail. */
 import { registerGenerator } from "./variants.mjs";
 import { rng as engineRng } from "./types.mjs";
-registerGenerator("chain", (family, seed) => {
+registerGenerator("chain", async (family, seed, opts = {}) => {
   try {
     const it = drawChain(family.spec.chainSpec, engineRng(seed));
-    return { item: it, params: it._p, verdicts: { resolver: { ok: true, essentialChain: true }, answerPin: true } };
+    const base = { item: it, params: it._p, verdicts: { resolver: { ok: true, essentialChain: true }, answerPin: true } };
+    if (opts.realize === "llm" || family.spec.realize === "llm") {
+      const { realizeChainLLM } = await import("./realize/llm.mjs");
+      const r = await realizeChainLLM(it, { domain: family.domain });
+      if (r) return { item: r.item, params: it._p, verdicts: r.verdicts, realizedLLM: true };
+      return { ...base, realizedLLM: false };            // gates failed → verified template ships
+    }
+    return base;
   } catch { return null; }
 });
 

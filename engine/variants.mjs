@@ -134,7 +134,7 @@ export async function realizeVariant(family, n, opts = {}) {
 /** mintVariants(family, count) → persisted variant records. Retries with salted
  *  seeds when a draw collides with already-banked content (small param spaces DO
  *  collide — the content-dedup catches it; this loop turns the reject into a redraw). */
-export async function mintVariants(family, count, { maxSalt = 8, addVariant } = {}) {
+export async function mintVariants(family, count, { maxSalt = 8, addVariant, ...genOpts } = {}) {
   const add = addVariant ?? (await import("./family.mjs")).addVariant;
   const out = [];
   for (let n = 1; n <= count; n++) {
@@ -142,9 +142,10 @@ export async function mintVariants(family, count, { maxSalt = 8, addVariant } = 
     for (let salt = 0; salt <= maxSalt && !persisted; salt++) {
       const seed = `${family.familyId}|v${n}${salt ? `r${salt}` : ""}`;
       const gen = GENERATORS[family.generator];
-      const o = await gen(family, seed, { idx: n * (salt + 1) });
+      const o = await gen(family, seed, { idx: n * (salt + 1), ...genOpts });
       if (!o || !o.item) continue;
-      const rec = { familyId: family.familyId, seed, item: o.item, params: o.params, verdicts: o.verdicts, answer: o.item.answer, realization: { mode: family.generator === "cell" ? "llm" : "reseed", n, salt } };
+      const mode = o.realizedLLM ? "llm-voice" : family.generator === "cell" ? "llm" : "reseed";
+      const rec = { familyId: family.familyId, seed, item: o.item, params: o.params, verdicts: o.verdicts, answer: o.item.answer, realization: { mode, n, salt } };
       const res = add(rec);
       if (res.added) persisted = { ...rec, variantId: res.variantId };
     }

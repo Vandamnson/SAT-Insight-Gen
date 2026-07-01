@@ -20,13 +20,19 @@ const toQuestion = (v, id) => ({ id, ...v.item, _familyId: v.familyId, _variantI
 
 /** mockModule({n, testNum, title, bands?}) → writes data/test-NN.json.
  *  ≤1 variant per family; spread across subdomains and bands. */
-export function mockModule({ n = 22, testNum = 200, title, bands = null } = {}) {
+export function mockModule({ n = 22, testNum = 200, title, bands = null, includeRecordMode = false } = {}) {
   const fams = Object.fromEntries(loadFamilies().map((f) => [f.familyId, f]));
   let vars = loadVariants().filter((v) => fams[v.familyId] && v.item);
   if (bands) vars = vars.filter((v) => bands.includes(fams[v.familyId].difficulty?.band));
-  // one variant per family (first realized), then diversity-greedy selection
+  // FLOORS RESPECTED: families that failed the strict band-pass ship in drills only,
+  // never in a mock module (unless explicitly overridden).
+  if (!includeRecordMode) vars = vars.filter((v) => fams[v.familyId].bandpass?.strictPass !== false);
+  // one variant per family — prefer LLM-VOICED realizations (the distribution-floor fix)
   const perFam = new Map();
-  for (const v of vars) if (!perFam.has(v.familyId)) perFam.set(v.familyId, v);
+  for (const v of vars) {
+    const cur = perFam.get(v.familyId);
+    if (!cur || (v.realization?.mode === "llm-voice" && cur.realization?.mode !== "llm-voice")) perFam.set(v.familyId, v);
+  }
   const pool = [...perFam.values()];
   const chosen = [], seenSub = {}, seenBand = {};
   pool.sort(() => 0);                                     // stable; diversity handled greedily below

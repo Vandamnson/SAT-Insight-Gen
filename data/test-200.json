@@ -169,113 +169,316 @@
       "band": "B7",
       "target_band": "B7",
       "statementId": null,
+      "skill": "systems_of_linear_equations",
       "type": "spr",
       "tier": "cross-skill",
       "chain": "sys_solve>vertical_shift_through_point[s0.solution→s1.pt]",
-      "skill": "systems_of_linear_equations",
       "stem": [
         {
           "t": "mathblock",
-          "v": "\\begin{cases} -4x + 4y = -16 \\\\ 2x - 4y = 4 \\end{cases}"
+          "v": "\\begin{array}{l} -2x - y = -14 \\\\ x + 4y = 21 \\end{array}"
         },
         {
-          "t": "p",
-          "segs": [
-            {
-              "t": "text",
-              "v": "The graph of "
-            },
-            {
-              "t": "math",
-              "v": "g(x) = f(x) + k"
-            },
-            {
-              "t": "text",
-              "v": ", where "
-            },
-            {
-              "t": "math",
-              "v": "f(x) = 4x + 2"
-            },
-            {
-              "t": "text",
-              "v": " and "
-            },
-            {
-              "t": "math",
-              "v": "k"
-            },
-            {
-              "t": "text",
-              "v": " is a constant, passes through "
-            },
-            {
-              "t": "text",
-              "v": "the solution to the given system of equations"
-            },
-            {
-              "t": "text",
-              "v": ". What is the value of "
-            },
-            {
-              "t": "math",
-              "v": "k"
-            },
-            {
-              "t": "text",
-              "v": "?"
-            }
-          ]
+          "t": "text",
+          "v": "\nThe solution to the given system of equations is "
+        },
+        {
+          "t": "math",
+          "v": "(x, y)"
+        },
+        {
+          "t": "text",
+          "v": ". The function "
+        },
+        {
+          "t": "math",
+          "v": "g"
+        },
+        {
+          "t": "text",
+          "v": " is defined by "
+        },
+        {
+          "t": "math",
+          "v": "g(x) = f(x) + k"
+        },
+        {
+          "t": "text",
+          "v": ", where "
+        },
+        {
+          "t": "math",
+          "v": "f(x) = -x - 1"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "k"
+        },
+        {
+          "t": "text",
+          "v": " is a constant. If the graph of "
+        },
+        {
+          "t": "math",
+          "v": "g"
+        },
+        {
+          "t": "text",
+          "v": " in the "
+        },
+        {
+          "t": "math",
+          "v": "xy"
+        },
+        {
+          "t": "text",
+          "v": "-plane passes through the point "
+        },
+        {
+          "t": "math",
+          "v": "(x, y)"
+        },
+        {
+          "t": "text",
+          "v": ", what is the value of "
+        },
+        {
+          "t": "math",
+          "v": "k"
+        },
+        {
+          "t": "text",
+          "v": "?"
         }
       ],
       "answer": {
         "accept": [
-          "-24"
+          "10"
         ],
         "tol": 0
       },
       "solution": [
         {
-          "t": "p",
-          "segs": [
-            {
-              "t": "text",
-              "v": "Solve the system (e.g. by elimination): "
-            },
-            {
-              "t": "math",
-              "v": "(x, y) = (6, 2)"
-            },
-            {
-              "t": "text",
-              "v": "."
-            }
-          ]
+          "t": "text",
+          "v": "1. elimination: "
         },
         {
-          "t": "p",
-          "segs": [
-            {
-              "t": "text",
-              "v": "At that point, "
-            },
-            {
-              "t": "math",
-              "v": "g(x_0) = y_0"
-            },
-            {
-              "t": "text",
-              "v": ":  "
-            },
-            {
-              "t": "math",
-              "v": "k = -24"
-            },
-            {
-              "t": "text",
-              "v": "."
-            }
-          ]
+          "t": "text",
+          "v": "From "
+        },
+        {
+          "t": "math",
+          "v": "-2x - y = -14"
+        },
+        {
+          "t": "text",
+          "v": ", express "
+        },
+        {
+          "t": "math",
+          "v": "y = 14 - 2x"
+        },
+        {
+          "t": "text",
+          "v": " and substitute into "
+        },
+        {
+          "t": "math",
+          "v": "x + 4y = 21"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "math",
+          "v": "x + 4(14 - 2x) = 21"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. solve single: "
+        },
+        {
+          "t": "text",
+          "v": "Simplify to "
+        },
+        {
+          "t": "math",
+          "v": "-7x + 56 = 21"
+        },
+        {
+          "t": "text",
+          "v": ", so "
+        },
+        {
+          "t": "math",
+          "v": "-7x = -35"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "x = 5"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. back substitute: "
+        },
+        {
+          "t": "text",
+          "v": "Substitute "
+        },
+        {
+          "t": "math",
+          "v": "x = 5"
+        },
+        {
+          "t": "text",
+          "v": " into "
+        },
+        {
+          "t": "math",
+          "v": "y = 14 - 2x"
+        },
+        {
+          "t": "text",
+          "v": " to get "
+        },
+        {
+          "t": "math",
+          "v": "y = 4"
+        },
+        {
+          "t": "text",
+          "v": "; the solution is "
+        },
+        {
+          "t": "math",
+          "v": "(5, 4)"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "4. translate function: "
+        },
+        {
+          "t": "text",
+          "v": "The graph of "
+        },
+        {
+          "t": "math",
+          "v": "g"
+        },
+        {
+          "t": "text",
+          "v": " passing through "
+        },
+        {
+          "t": "math",
+          "v": "(5, 4)"
+        },
+        {
+          "t": "text",
+          "v": " means "
+        },
+        {
+          "t": "math",
+          "v": "g(5) = 4"
+        },
+        {
+          "t": "text",
+          "v": ", i.e., "
+        },
+        {
+          "t": "math",
+          "v": "f(5) + k = 4"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "5. substitute: "
+        },
+        {
+          "t": "text",
+          "v": "Compute "
+        },
+        {
+          "t": "math",
+          "v": "f(5) = -5 - 1 = -6"
+        },
+        {
+          "t": "text",
+          "v": ", giving "
+        },
+        {
+          "t": "math",
+          "v": "-6 + k = 4"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "6. isolate variable: "
+        },
+        {
+          "t": "text",
+          "v": "Solve "
+        },
+        {
+          "t": "math",
+          "v": "-6 + k = 4"
+        },
+        {
+          "t": "text",
+          "v": " to get "
+        },
+        {
+          "t": "math",
+          "v": "k = 10"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
         }
       ],
       "difficulty": {
@@ -285,7 +488,7 @@
       },
       "verify": {
         "tier": "cross-skill",
-        "correctness": "construct-backward + chain-resolver"
+        "correctness": "construct-backward + chain-resolver + prove"
       },
       "fingerprint": [
         "cross_skill",
@@ -302,19 +505,19 @@
           {
             "id": "sys_solve",
             "params": {
-              "a1": -4,
-              "b1": 4,
-              "c1": -16,
-              "a2": 2,
-              "b2": -4,
-              "c2": 4
+              "a1": -2,
+              "b1": -1,
+              "c1": -14,
+              "a2": 1,
+              "b2": 4,
+              "c2": 21
             }
           },
           {
             "id": "vertical_shift_through_point",
             "params": {
-              "m": 4,
-              "b": 2
+              "m": -1,
+              "b": -1
             }
           }
         ],
@@ -327,7 +530,7 @@
         ]
       },
       "_familyId": "fam_e0b59df09b",
-      "_variantId": "fam_e0b59df09b#93caa224"
+      "_variantId": "fam_e0b59df09b#3c30887f"
     },
     {
       "id": 3,
@@ -829,166 +1032,199 @@
       "band": "B7",
       "target_band": "B7",
       "statementId": null,
+      "skill": "linear_equations_two_variables",
       "type": "spr",
       "tier": "cross-skill",
       "chain": "line_x_intercept>coeff_from_point[s0.pt→s1.pt]",
-      "skill": "linear_equations_two_variables",
       "stem": [
         {
-          "t": "p",
-          "segs": [
-            {
-              "t": "text",
-              "v": "In the "
-            },
-            {
-              "t": "math",
-              "v": "xy"
-            },
-            {
-              "t": "text",
-              "v": "-plane, the line "
-            },
-            {
-              "t": "math",
-              "v": "\\ell"
-            },
-            {
-              "t": "text",
-              "v": " is the graph of "
-            },
-            {
-              "t": "math",
-              "v": "y = -x - 2"
-            },
-            {
-              "t": "text",
-              "v": "."
-            }
-          ]
+          "t": "text",
+          "v": "Line "
         },
         {
-          "t": "p",
-          "segs": [
-            {
-              "t": "text",
-              "v": "The "
-            },
-            {
-              "t": "math",
-              "v": "x"
-            },
-            {
-              "t": "text",
-              "v": "-intercept of "
-            },
-            {
-              "t": "math",
-              "v": "\\ell"
-            },
-            {
-              "t": "text",
-              "v": " lies on the graph of "
-            },
-            {
-              "t": "math",
-              "v": "ax - 3y = -10"
-            },
-            {
-              "t": "text",
-              "v": ", where "
-            },
-            {
-              "t": "math",
-              "v": "a"
-            },
-            {
-              "t": "text",
-              "v": " is a constant. What is the value of "
-            },
-            {
-              "t": "math",
-              "v": "a"
-            },
-            {
-              "t": "text",
-              "v": "?"
-            }
-          ]
+          "t": "math",
+          "v": "\\ell"
+        },
+        {
+          "t": "text",
+          "v": " is the graph of "
+        },
+        {
+          "t": "math",
+          "v": "y = -4x - 20"
+        },
+        {
+          "t": "text",
+          "v": " in the xy-plane. The x-intercept of line "
+        },
+        {
+          "t": "math",
+          "v": "\\ell"
+        },
+        {
+          "t": "text",
+          "v": " lies on the graph of "
+        },
+        {
+          "t": "math",
+          "v": "ax - 4y = 15"
+        },
+        {
+          "t": "text",
+          "v": ", where "
+        },
+        {
+          "t": "math",
+          "v": "a"
+        },
+        {
+          "t": "text",
+          "v": " is a constant. What is the value of "
+        },
+        {
+          "t": "math",
+          "v": "a"
+        },
+        {
+          "t": "text",
+          "v": "?"
         }
       ],
       "answer": {
         "accept": [
-          "5"
+          "-3"
         ],
         "tol": 0
       },
       "solution": [
         {
-          "t": "p",
-          "segs": [
-            {
-              "t": "text",
-              "v": "The "
-            },
-            {
-              "t": "math",
-              "v": "x"
-            },
-            {
-              "t": "text",
-              "v": "-intercept of "
-            },
-            {
-              "t": "math",
-              "v": "\\ell"
-            },
-            {
-              "t": "text",
-              "v": ":  "
-            },
-            {
-              "t": "math",
-              "v": "-x - 2 = 0"
-            },
-            {
-              "t": "text",
-              "v": "  ⇒  "
-            },
-            {
-              "t": "math",
-              "v": "x = -2"
-            },
-            {
-              "t": "text",
-              "v": "."
-            }
-          ]
+          "t": "text",
+          "v": "1. find intercept: "
         },
         {
-          "t": "p",
-          "segs": [
-            {
-              "t": "text",
-              "v": "Substitute the solution into "
-            },
-            {
-              "t": "math",
-              "v": "ax - 3y = -10"
-            },
-            {
-              "t": "text",
-              "v": ":  "
-            },
-            {
-              "t": "math",
-              "v": "a = 5"
-            },
-            {
-              "t": "text",
-              "v": "."
-            }
-          ]
+          "t": "text",
+          "v": "Find the x-intercept of line "
+        },
+        {
+          "t": "math",
+          "v": "\\ell"
+        },
+        {
+          "t": "text",
+          "v": ": set "
+        },
+        {
+          "t": "math",
+          "v": "y = 0"
+        },
+        {
+          "t": "text",
+          "v": " in "
+        },
+        {
+          "t": "math",
+          "v": "y = -4x - 20"
+        },
+        {
+          "t": "text",
+          "v": ", giving "
+        },
+        {
+          "t": "math",
+          "v": "0 = -4x - 20"
+        },
+        {
+          "t": "text",
+          "v": ", so "
+        },
+        {
+          "t": "math",
+          "v": "x = -5"
+        },
+        {
+          "t": "text",
+          "v": ". The x-intercept is "
+        },
+        {
+          "t": "math",
+          "v": "(-5, 0)"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. substitute: "
+        },
+        {
+          "t": "text",
+          "v": "Substitute "
+        },
+        {
+          "t": "math",
+          "v": "(-5, 0)"
+        },
+        {
+          "t": "text",
+          "v": " into "
+        },
+        {
+          "t": "math",
+          "v": "ax - 4y = 15"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "math",
+          "v": "a(-5) - 4(0) = 15"
+        },
+        {
+          "t": "text",
+          "v": ", i.e. "
+        },
+        {
+          "t": "math",
+          "v": "-5a = 15"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. isolate variable: "
+        },
+        {
+          "t": "text",
+          "v": "Solve "
+        },
+        {
+          "t": "math",
+          "v": "-5a = 15"
+        },
+        {
+          "t": "text",
+          "v": " to get "
+        },
+        {
+          "t": "math",
+          "v": "a = -3"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
         }
       ],
       "difficulty": {
@@ -998,7 +1234,7 @@
       },
       "verify": {
         "tier": "cross-skill",
-        "correctness": "construct-backward + chain-resolver"
+        "correctness": "construct-backward + chain-resolver + prove"
       },
       "fingerprint": [
         "cross_skill",
@@ -1013,15 +1249,15 @@
           {
             "id": "line_x_intercept",
             "params": {
-              "n": -1,
-              "d": -2
+              "n": -4,
+              "d": -20
             }
           },
           {
             "id": "coeff_from_point",
             "params": {
-              "q": -3,
-              "rr": -10
+              "q": -4,
+              "rr": 15
             }
           }
         ],
@@ -1034,7 +1270,7 @@
         ]
       },
       "_familyId": "fam_e6c1f75079",
-      "_variantId": "fam_e6c1f75079#2cd25dee"
+      "_variantId": "fam_e6c1f75079#be74edeb"
     },
     {
       "id": 6,
@@ -1328,178 +1564,202 @@
       "band": "B7",
       "target_band": "B7",
       "statementId": null,
+      "skill": "linear_equations_two_variables",
       "type": "spr",
       "tier": "cross-skill",
       "chain": "line_x_intercept>vertical_shift_through_point[s0.pt→s1.pt]",
-      "skill": "linear_equations_two_variables",
       "stem": [
         {
-          "t": "p",
-          "segs": [
-            {
-              "t": "text",
-              "v": "In the "
-            },
-            {
-              "t": "math",
-              "v": "xy"
-            },
-            {
-              "t": "text",
-              "v": "-plane, the line "
-            },
-            {
-              "t": "math",
-              "v": "\\ell"
-            },
-            {
-              "t": "text",
-              "v": " is the graph of "
-            },
-            {
-              "t": "math",
-              "v": "y = -4x + 24"
-            },
-            {
-              "t": "text",
-              "v": "."
-            }
-          ]
+          "t": "text",
+          "v": "In the "
         },
         {
-          "t": "p",
-          "segs": [
-            {
-              "t": "text",
-              "v": "The graph of "
-            },
-            {
-              "t": "math",
-              "v": "g(x) = f(x) + k"
-            },
-            {
-              "t": "text",
-              "v": ", where "
-            },
-            {
-              "t": "math",
-              "v": "f(x) = -x + 5"
-            },
-            {
-              "t": "text",
-              "v": " and "
-            },
-            {
-              "t": "math",
-              "v": "k"
-            },
-            {
-              "t": "text",
-              "v": " is a constant, passes through "
-            },
-            {
-              "t": "text",
-              "v": "the "
-            },
-            {
-              "t": "math",
-              "v": "x"
-            },
-            {
-              "t": "text",
-              "v": "-intercept of "
-            },
-            {
-              "t": "math",
-              "v": "\\ell"
-            },
-            {
-              "t": "text",
-              "v": ". What is the value of "
-            },
-            {
-              "t": "math",
-              "v": "k"
-            },
-            {
-              "t": "text",
-              "v": "?"
-            }
-          ]
+          "t": "math",
+          "v": "xy"
+        },
+        {
+          "t": "text",
+          "v": "-plane, line "
+        },
+        {
+          "t": "math",
+          "v": "\\ell"
+        },
+        {
+          "t": "text",
+          "v": " is the graph of "
+        },
+        {
+          "t": "math",
+          "v": "y = 4x + 8"
+        },
+        {
+          "t": "text",
+          "v": ". The graph of "
+        },
+        {
+          "t": "math",
+          "v": "g(x) = f(x) + k"
+        },
+        {
+          "t": "text",
+          "v": ", where "
+        },
+        {
+          "t": "math",
+          "v": "f(x) = -4x - 4"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "k"
+        },
+        {
+          "t": "text",
+          "v": " is a constant, passes through the "
+        },
+        {
+          "t": "math",
+          "v": "x"
+        },
+        {
+          "t": "text",
+          "v": "-intercept of line "
+        },
+        {
+          "t": "math",
+          "v": "\\ell"
+        },
+        {
+          "t": "text",
+          "v": ". What is the value of "
+        },
+        {
+          "t": "math",
+          "v": "k"
+        },
+        {
+          "t": "text",
+          "v": "?"
         }
       ],
       "answer": {
         "accept": [
-          "1"
+          "-4"
         ],
         "tol": 0
       },
       "solution": [
         {
-          "t": "p",
-          "segs": [
-            {
-              "t": "text",
-              "v": "The "
-            },
-            {
-              "t": "math",
-              "v": "x"
-            },
-            {
-              "t": "text",
-              "v": "-intercept of "
-            },
-            {
-              "t": "math",
-              "v": "\\ell"
-            },
-            {
-              "t": "text",
-              "v": ":  "
-            },
-            {
-              "t": "math",
-              "v": "-4x + 24 = 0"
-            },
-            {
-              "t": "text",
-              "v": "  ⇒  "
-            },
-            {
-              "t": "math",
-              "v": "x = 6"
-            },
-            {
-              "t": "text",
-              "v": "."
-            }
-          ]
+          "t": "text",
+          "v": "1. find intercept: "
         },
         {
-          "t": "p",
-          "segs": [
-            {
-              "t": "text",
-              "v": "At that point, "
-            },
-            {
-              "t": "math",
-              "v": "g(x_0) = y_0"
-            },
-            {
-              "t": "text",
-              "v": ":  "
-            },
-            {
-              "t": "math",
-              "v": "k = 1"
-            },
-            {
-              "t": "text",
-              "v": "."
-            }
-          ]
+          "t": "text",
+          "v": "Find the x-intercept of line ℓ: set y = 0 in "
+        },
+        {
+          "t": "math",
+          "v": "0 = 4x + 8"
+        },
+        {
+          "t": "text",
+          "v": ", giving "
+        },
+        {
+          "t": "math",
+          "v": "x = -2"
+        },
+        {
+          "t": "text",
+          "v": ", so the point is "
+        },
+        {
+          "t": "math",
+          "v": "(-2, 0)"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. translate function: "
+        },
+        {
+          "t": "text",
+          "v": "Write "
+        },
+        {
+          "t": "math",
+          "v": "g(x) = f(x) + k = -4x - 4 + k"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. substitute: "
+        },
+        {
+          "t": "text",
+          "v": "Require the graph of g to pass through "
+        },
+        {
+          "t": "math",
+          "v": "(-2, 0)"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "math",
+          "v": "0 = -4(-2) - 4 + k = 8 - 4 + k"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "4. isolate variable: "
+        },
+        {
+          "t": "text",
+          "v": "Simplify to "
+        },
+        {
+          "t": "math",
+          "v": "0 = 4 + k"
+        },
+        {
+          "t": "text",
+          "v": ", so "
+        },
+        {
+          "t": "math",
+          "v": "k = -4"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
         }
       ],
       "difficulty": {
@@ -1509,7 +1769,7 @@
       },
       "verify": {
         "tier": "cross-skill",
-        "correctness": "construct-backward + chain-resolver"
+        "correctness": "construct-backward + chain-resolver + prove"
       },
       "fingerprint": [
         "cross_skill",
@@ -1524,15 +1784,15 @@
           {
             "id": "line_x_intercept",
             "params": {
-              "n": -4,
-              "d": 24
+              "n": 4,
+              "d": 8
             }
           },
           {
             "id": "vertical_shift_through_point",
             "params": {
-              "m": -1,
-              "b": 5
+              "m": -4,
+              "b": -4
             }
           }
         ],
@@ -1545,7 +1805,7 @@
         ]
       },
       "_familyId": "fam_ef1dbb0e0c",
-      "_variantId": "fam_ef1dbb0e0c#04888571"
+      "_variantId": "fam_ef1dbb0e0c#652e73b4"
     },
     {
       "id": 9,
@@ -2004,173 +2264,6 @@
       "domain": "algebra",
       "band": "B7",
       "target_band": "B7",
-      "statementId": null,
-      "type": "spr",
-      "tier": "cross-skill",
-      "chain": "sys_nosol_param>linear_solve_with_param[s0.k→s1.k]",
-      "skill": "systems_of_linear_equations",
-      "stem": [
-        {
-          "t": "mathblock",
-          "v": "\\begin{cases} -x - y = 9 \\\\ kx - 3y = -9 \\end{cases}"
-        },
-        {
-          "t": "p",
-          "segs": [
-            {
-              "t": "text",
-              "v": "In the given system of equations, "
-            },
-            {
-              "t": "math",
-              "v": "k"
-            },
-            {
-              "t": "text",
-              "v": " is a constant and the system has no solution."
-            }
-          ]
-        },
-        {
-          "t": "p",
-          "segs": [
-            {
-              "t": "text",
-              "v": "For that value of "
-            },
-            {
-              "t": "math",
-              "v": "k"
-            },
-            {
-              "t": "text",
-              "v": ", what value of "
-            },
-            {
-              "t": "math",
-              "v": "x"
-            },
-            {
-              "t": "text",
-              "v": " satisfies "
-            },
-            {
-              "t": "math",
-              "v": "kx - 5 = -5x - 3"
-            },
-            {
-              "t": "text",
-              "v": "?"
-            }
-          ]
-        }
-      ],
-      "answer": {
-        "accept": [
-          "1"
-        ],
-        "tol": 0
-      },
-      "solution": [
-        {
-          "t": "p",
-          "segs": [
-            {
-              "t": "text",
-              "v": "No solution ⇒ parallel lines (equal slopes, constants not proportional):  "
-            },
-            {
-              "t": "math",
-              "v": "k = -3"
-            },
-            {
-              "t": "text",
-              "v": "."
-            }
-          ]
-        },
-        {
-          "t": "p",
-          "segs": [
-            {
-              "t": "text",
-              "v": "Substitute "
-            },
-            {
-              "t": "math",
-              "v": "k"
-            },
-            {
-              "t": "text",
-              "v": " and isolate:  "
-            },
-            {
-              "t": "math",
-              "v": "x = 1"
-            },
-            {
-              "t": "text",
-              "v": "."
-            }
-          ]
-        }
-      ],
-      "difficulty": {
-        "scalePoint": 795,
-        "band": "B7",
-        "method": "lltm_chain_v1"
-      },
-      "verify": {
-        "tier": "cross-skill",
-        "correctness": "construct-backward + chain-resolver"
-      },
-      "fingerprint": [
-        "cross_skill",
-        "sys_nosol_param>linear_solve_with_param[s0.k→s1.k]",
-        "compare_slopes",
-        "compare_coefficients",
-        "move_variable_term",
-        "subtract_constant",
-        "divide_coefficient"
-      ],
-      "_p": {
-        "steps": [
-          {
-            "id": "sys_nosol_param",
-            "params": {
-              "a1": -1,
-              "b1": -1,
-              "c1": 9,
-              "b2": -3,
-              "c2": -9
-            }
-          },
-          {
-            "id": "linear_solve_with_param",
-            "params": {
-              "e": -5,
-              "f": -5,
-              "g": -3
-            }
-          }
-        ],
-        "bindings": [
-          {
-            "from": "s0.k",
-            "to": "s1.k",
-            "coerce": null
-          }
-        ]
-      },
-      "_familyId": "fam_4864695142",
-      "_variantId": "fam_4864695142#04888571"
-    },
-    {
-      "id": 12,
-      "program": "SAT",
-      "domain": "algebra",
-      "band": "B7",
-      "target_band": "B7",
       "statementId": "ALG.B7.s1",
       "type": "spr",
       "tier": "cross-skill",
@@ -2306,7 +2399,7 @@
       "_variantId": "fam_edd67cfb39#559fb6a4"
     },
     {
-      "id": 13,
+      "id": 12,
       "program": "SAT",
       "domain": "algebra",
       "band": "B7",
@@ -2525,162 +2618,7 @@
       "_variantId": "fam_acda6095e3#e88a3dd2"
     },
     {
-      "id": 14,
-      "program": "SAT",
-      "domain": "algebra",
-      "band": "B7",
-      "target_band": "B7",
-      "statementId": null,
-      "type": "spr",
-      "tier": "cross-skill",
-      "chain": "sys_solve>coeff_from_point[s0.solution→s1.pt]",
-      "skill": "systems_of_linear_equations",
-      "stem": [
-        {
-          "t": "mathblock",
-          "v": "\\begin{cases} 2x - 3y = -14 \\\\ x + 2y = 14 \\end{cases}"
-        },
-        {
-          "t": "p",
-          "segs": [
-            {
-              "t": "text",
-              "v": "The solution to the given system of equations"
-            },
-            {
-              "t": "text",
-              "v": " is "
-            },
-            {
-              "t": "math",
-              "v": "(x, y)"
-            },
-            {
-              "t": "text",
-              "v": ". If "
-            },
-            {
-              "t": "math",
-              "v": "ax - 2y = -6"
-            },
-            {
-              "t": "text",
-              "v": ", what is the value of "
-            },
-            {
-              "t": "math",
-              "v": "a"
-            },
-            {
-              "t": "text",
-              "v": "?"
-            }
-          ]
-        }
-      ],
-      "answer": {
-        "accept": [
-          "3"
-        ],
-        "tol": 0
-      },
-      "solution": [
-        {
-          "t": "p",
-          "segs": [
-            {
-              "t": "text",
-              "v": "Solve the system (e.g. by elimination): "
-            },
-            {
-              "t": "math",
-              "v": "(x, y) = (2, 6)"
-            },
-            {
-              "t": "text",
-              "v": "."
-            }
-          ]
-        },
-        {
-          "t": "p",
-          "segs": [
-            {
-              "t": "text",
-              "v": "Substitute the solution into "
-            },
-            {
-              "t": "math",
-              "v": "ax - 2y = -6"
-            },
-            {
-              "t": "text",
-              "v": ":  "
-            },
-            {
-              "t": "math",
-              "v": "a = 3"
-            },
-            {
-              "t": "text",
-              "v": "."
-            }
-          ]
-        }
-      ],
-      "difficulty": {
-        "scalePoint": 775,
-        "band": "B7",
-        "method": "lltm_chain_v1"
-      },
-      "verify": {
-        "tier": "cross-skill",
-        "correctness": "construct-backward + chain-resolver"
-      },
-      "fingerprint": [
-        "cross_skill",
-        "sys_solve>coeff_from_point[s0.solution→s1.pt]",
-        "elimination",
-        "solve_single",
-        "back_substitute",
-        "substitute",
-        "isolate_variable",
-        "compare_coefficients"
-      ],
-      "_p": {
-        "steps": [
-          {
-            "id": "sys_solve",
-            "params": {
-              "a1": 2,
-              "b1": -3,
-              "c1": -14,
-              "a2": 1,
-              "b2": 2,
-              "c2": 14
-            }
-          },
-          {
-            "id": "coeff_from_point",
-            "params": {
-              "q": -2,
-              "rr": -6
-            }
-          }
-        ],
-        "bindings": [
-          {
-            "from": "s0.solution",
-            "to": "s1.pt",
-            "coerce": null
-          }
-        ]
-      },
-      "_familyId": "fam_8833b19e59",
-      "_variantId": "fam_8833b19e59#43dd761c"
-    },
-    {
-      "id": 15,
+      "id": 13,
       "program": "SAT",
       "domain": "advanced_math",
       "band": "B7",
@@ -2911,7 +2849,7 @@
       "_variantId": "fam_e6da3e4e48#bbf34112"
     },
     {
-      "id": 16,
+      "id": 14,
       "program": "SAT",
       "domain": "algebra",
       "band": "B7",
@@ -3041,7 +2979,7 @@
       "_variantId": "fam_dd64ac1871#2cd25dee"
     },
     {
-      "id": 17,
+      "id": 15,
       "program": "SAT",
       "domain": "algebra",
       "band": "B7",

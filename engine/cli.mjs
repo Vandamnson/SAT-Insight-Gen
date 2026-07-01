@@ -93,9 +93,29 @@ async function main() {
   if (cmd === "variants") {
     const N = Number(args[0] || 3);
     for (const f of loadFamilies()) {
-      const got = await mintVariants(f, N);
-      console.log(`  ${f.familyId} (${f.stemPreview || f.generator}): +${got.length} variants`);
+      const opts = flag("--llm") && f.generator === "chain" && f.bandpass?.strictPass !== false ? { realize: "llm" } : {};
+      const got = await mintVariants(f, N, opts);
+      const voiced = got.filter((g) => g.realization?.mode === "llm-voice").length;
+      console.log(`  ${f.familyId} (${f.stemPreview || f.generator}): +${got.length} variants${voiced ? ` (${voiced} llm-voiced)` : ""}`);
     }
+    return;
+  }
+  if (cmd === "generate") {
+    // the production loop, one command: families → voiced variants → products
+    const perFam = Number(args[0] || 3), modN = Number(args[1] || 22);
+    console.log("── 1/4 mint capstone families ──"); await mintCapstones();
+    console.log("── 2/4 mint chain families (band-passed) ──"); await mintChains();
+    console.log("── 3/4 variants (chains llm-voiced where strict-pass) ──");
+    for (const f of loadFamilies()) {
+      const opts = f.generator === "chain" && f.bandpass?.strictPass !== false ? { realize: "llm" } : {};
+      const got = await mintVariants(f, perFam, opts);
+      const voiced = got.filter((g) => g.realization?.mode === "llm-voice").length;
+      console.log(`  ${f.familyId}: +${got.length}${voiced ? ` (${voiced} voiced)` : ""}`);
+    }
+    console.log("── 4/4 products ──");
+    const m = mockModule({ testNum: 200, n: modN });
+    console.log(`  module: ${m.count} items / ${m.families} families → ${m.fp}`);
+    console.log(JSON.stringify(summary(), null, 1));
     return;
   }
   if (cmd === "module") { const r = mockModule({ testNum: Number(args[0] || 200), n: Number(args[1] || 22) }); console.log(`module: ${r.count} items from ${r.families} families → ${r.fp}`); return; }
