@@ -1,0 +1,541 @@
+{
+  "number": 203,
+  "title": "ENGINE v2 — 5 new geometry figure problems (batch 2)",
+  "questions": [
+    {
+      "id": 1,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B4",
+      "target_band": "B4",
+      "statementId": "GEO.B4.s1",
+      "skill": "solid_figures",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The right rectangular pyramid shown has the base edge lengths and height marked, in centimeters. What is the volume of the pyramid, in cubic centimeters?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "70"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. apply volume formula: "
+        },
+        {
+          "t": "math",
+          "v": "V = \\tfrac13\\ell wh = \\tfrac13\\cdot 5\\cdot 7\\cdot 6 = 70"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "pyramid",
+        "spec": {
+          "dims": {
+            "l": 5,
+            "w": 7,
+            "h": 6
+          },
+          "labels": {
+            "l": "5",
+            "w": "7",
+            "h": "6"
+          }
+        }
+      },
+      "fingerprint": [
+        "solid_fig",
+        "pyramid_volume",
+        "5x7x6",
+        "3d"
+      ],
+      "_familyId": "fam_f5163fb7c8",
+      "_variantId": "fam_f5163fb7c8#500714e5"
+    },
+    {
+      "id": 2,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B6",
+      "target_band": "B6",
+      "statementId": "GEO.B6.s1",
+      "skill": "solid_figures",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "The right rectangular prism shown has a volume of 196 cubic feet. Two of its edge lengths are marked, in feet. What is the value of "
+        },
+        {
+          "t": "math",
+          "v": "h"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "4"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. isolate dimension: "
+        },
+        {
+          "t": "math",
+          "v": "h = \\dfrac{V}{\\ell w} = \\dfrac{196}{7\\cdot 7} = 4"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "prism",
+        "spec": {
+          "dims": {
+            "l": 7,
+            "w": 7,
+            "h": 4
+          },
+          "labels": {
+            "l": "7",
+            "w": "7",
+            "h": "h"
+          }
+        }
+      },
+      "fingerprint": [
+        "solid_fig",
+        "prism_solve_dim",
+        "7x7",
+        "3d"
+      ],
+      "_familyId": "fam_c13dc21054",
+      "_variantId": "fam_c13dc21054#5aa02895"
+    },
+    {
+      "id": 3,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "GEO.B7.s3",
+      "skill": "circle_figures",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "In the circle shown with center "
+        },
+        {
+          "t": "math",
+          "v": "O"
+        },
+        {
+          "t": "text",
+          "v": ", the marked central angle subtends the bold arc, and the radius is marked. The length of the bold arc is "
+        },
+        {
+          "t": "math",
+          "v": "k\\pi"
+        },
+        {
+          "t": "text",
+          "v": ". What is the value of "
+        },
+        {
+          "t": "math",
+          "v": "k"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "4"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. apply arc length: "
+        },
+        {
+          "t": "math",
+          "v": "\\text{arc} = \\dfrac{120}{360}\\cdot 2\\pi(6) = 4\\pi"
+        },
+        {
+          "t": "text",
+          "v": ", so "
+        },
+        {
+          "t": "math",
+          "v": "k = 4"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "circle",
+        "spec": {
+          "R": 92,
+          "sector": {
+            "from": 180,
+            "to": 300,
+            "label": "120°",
+            "radiusLabel": "6"
+          }
+        }
+      },
+      "fingerprint": [
+        "circle_fig",
+        "arc_length",
+        "120deg_r6",
+        "2d"
+      ],
+      "_familyId": "fam_96680d80fc",
+      "_variantId": "fam_96680d80fc#5aa02895"
+    },
+    {
+      "id": 4,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "GEO.B7.s2",
+      "skill": "composite_figures",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "In right triangle "
+        },
+        {
+          "t": "math",
+          "v": "ABC"
+        },
+        {
+          "t": "text",
+          "v": " shown, the altitude from the right angle at "
+        },
+        {
+          "t": "math",
+          "v": "C"
+        },
+        {
+          "t": "text",
+          "v": " meets the hypotenuse "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{AB}"
+        },
+        {
+          "t": "text",
+          "v": " at "
+        },
+        {
+          "t": "math",
+          "v": "H"
+        },
+        {
+          "t": "text",
+          "v": ". If "
+        },
+        {
+          "t": "math",
+          "v": "AH = 3"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "HB = 27"
+        },
+        {
+          "t": "text",
+          "v": ", what is the length of "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{CH}"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "9"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. geometric mean: "
+        },
+        {
+          "t": "math",
+          "v": "CH = \\sqrt{AH\\cdot HB} = \\sqrt{3\\cdot 27} = \\sqrt{81} = 9"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "scene",
+        "spec": {
+          "w": 330,
+          "h": 210,
+          "pts": {
+            "A": [
+              0,
+              0
+            ],
+            "B": [
+              30,
+              0
+            ],
+            "C": [
+              3,
+              9
+            ],
+            "H": [
+              3,
+              0
+            ]
+          },
+          "segs": [
+            [
+              "A",
+              "H",
+              {
+                "label": "3"
+              }
+            ],
+            [
+              "H",
+              "B",
+              {
+                "label": "27"
+              }
+            ],
+            [
+              "A",
+              "C"
+            ],
+            [
+              "C",
+              "B"
+            ],
+            [
+              "C",
+              "H"
+            ]
+          ],
+          "angles": [
+            {
+              "at": "C",
+              "from": "A",
+              "to": "B",
+              "right": true
+            },
+            {
+              "at": "H",
+              "from": "C",
+              "to": "B",
+              "right": true
+            }
+          ]
+        }
+      },
+      "fingerprint": [
+        "composite_fig",
+        "right_triangle_altitude",
+        "3_27",
+        "2d"
+      ],
+      "_familyId": "fam_1c61b12b8e",
+      "_variantId": "fam_1c61b12b8e#764b9c25"
+    },
+    {
+      "id": 5,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "GEO.B7.s3",
+      "skill": "composite_figures",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "Chords "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{AB}"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{CD}"
+        },
+        {
+          "t": "text",
+          "v": " intersect at point "
+        },
+        {
+          "t": "math",
+          "v": "P"
+        },
+        {
+          "t": "text",
+          "v": " inside the circle (shown). Using the marked segment lengths, what is the length of "
+        },
+        {
+          "t": "math",
+          "v": "\\overline{PD}"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "4"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. intersecting chords: "
+        },
+        {
+          "t": "math",
+          "v": "AP\\cdot PB = CP\\cdot PD \\Rightarrow PD = \\dfrac{8\\cdot 3}{6} = 4"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": {
+        "fn": "scene",
+        "spec": {
+          "w": 280,
+          "h": 280,
+          "circle": {
+            "through": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "pts": {
+            "A": [
+              7.514981702779031,
+              2.7431824596436107
+            ],
+            "B": [
+              -2.8181181385421366,
+              -1.028693422366354
+            ],
+            "C": [
+              -2.2210849881077213,
+              5.573758290023216
+            ],
+            "D": [
+              1.4807233254051475,
+              -3.7158388600154773
+            ],
+            "P": [
+              0,
+              0
+            ]
+          },
+          "segs": [
+            [
+              "A",
+              "P",
+              {
+                "label": "8"
+              }
+            ],
+            [
+              "P",
+              "B",
+              {
+                "label": "3"
+              }
+            ],
+            [
+              "C",
+              "P",
+              {
+                "label": "6"
+              }
+            ],
+            [
+              "P",
+              "D"
+            ]
+          ]
+        }
+      },
+      "fingerprint": [
+        "composite_fig",
+        "intersecting_chords",
+        "8_3_6",
+        "2d"
+      ],
+      "_familyId": "fam_b03e0bfbdf",
+      "_variantId": "fam_b03e0bfbdf#5aa02895"
+    }
+  ]
+}

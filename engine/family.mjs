@@ -51,7 +51,9 @@ function assertFamilyVerified(f) {
   if (!st || st.trivial !== 0) errs.push("selftest.trivial !== 0");
   const d = f.difficulty;
   if (!d || !d.band || !Number.isFinite(d.scalePoint)) errs.push("missing judge/curated difficulty");
-  if (d && !["llm-judge", "curated", "lltm_chain_v1"].includes(d.method)) errs.push(`difficulty.method '${d?.method}' not accepted`);
+  if (d && !["llm-judge", "curated", "lltm_chain_v1", "rubric_prior"].includes(d.method)) errs.push(`difficulty.method '${d?.method}' not accepted`);
+  // rubric_prior is sanctioned ONLY where the judge is uncalibrated (currently GEO — 0 anchors; see ENGINE.md)
+  if (d?.method === "rubric_prior" && f.domain !== "geometry_trig") errs.push("rubric_prior only sanctioned for geometry_trig (judge uncalibrated there)");
   if (!f.bandpass || typeof f.bandpass !== "object") errs.push("missing bandpass record (scores or {mode:'record'})");
   if (errs.length) throw new Error(`family REFUSED (unverified): ${errs.join("; ")}`);
 }
