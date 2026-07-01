@@ -1,0 +1,1136 @@
+{
+  "number": 112,
+  "title": "BUILD_SPEC · geometry_trig (whole domain, B1–B7)",
+  "questions": [
+    {
+      "id": 1,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B1",
+      "target_band": "B1",
+      "statementId": "GEO.B1.s1",
+      "skill": "area_volume",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "A cardboard shipping box is a right rectangular prism with length "
+        },
+        {
+          "t": "math",
+          "v": "17"
+        },
+        {
+          "t": "text",
+          "v": " inches, width "
+        },
+        {
+          "t": "math",
+          "v": "11"
+        },
+        {
+          "t": "text",
+          "v": " inches, and height "
+        },
+        {
+          "t": "math",
+          "v": "h = 8"
+        },
+        {
+          "t": "text",
+          "v": " inches. What is the volume of the box, in cubic inches?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "1496"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. apply volume formula: "
+        },
+        {
+          "t": "text",
+          "v": "The box is a right rectangular prism, so its volume is "
+        },
+        {
+          "t": "math",
+          "v": "V = \\ell \\cdot w \\cdot h"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. substitute: "
+        },
+        {
+          "t": "text",
+          "v": "Read the edges from the stem: "
+        },
+        {
+          "t": "math",
+          "v": "\\ell = 17"
+        },
+        {
+          "t": "text",
+          "v": ", "
+        },
+        {
+          "t": "math",
+          "v": "w = 11"
+        },
+        {
+          "t": "text",
+          "v": ", "
+        },
+        {
+          "t": "math",
+          "v": "h = 8"
+        },
+        {
+          "t": "text",
+          "v": ", giving "
+        },
+        {
+          "t": "math",
+          "v": "V = 17 \\cdot 11 \\cdot 8"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. evaluate: "
+        },
+        {
+          "t": "text",
+          "v": "Multiply two factors at a time: "
+        },
+        {
+          "t": "math",
+          "v": "17 \\cdot 11 = 187"
+        },
+        {
+          "t": "text",
+          "v": ", then "
+        },
+        {
+          "t": "math",
+          "v": "187 \\cdot 8 = 1496"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 355,
+        "band": "B1",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "prism_volume",
+          "from_context": true,
+          "has_fraction_or_irrational": false
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "prism_volume",
+        "from_context": true,
+        "has_fraction_or_irrational": false
+      },
+      "fingerprint": [
+        "apply_volume_formula",
+        "substitute",
+        "evaluate"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 2,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B2",
+      "target_band": "B2",
+      "statementId": "GEO.B2.s1",
+      "skill": "area_volume",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "In triangle "
+        },
+        {
+          "t": "math",
+          "v": "ABC"
+        },
+        {
+          "t": "text",
+          "v": ", the side lengths are "
+        },
+        {
+          "t": "math",
+          "v": "12"
+        },
+        {
+          "t": "text",
+          "v": ", "
+        },
+        {
+          "t": "math",
+          "v": "19"
+        },
+        {
+          "t": "text",
+          "v": ", and "
+        },
+        {
+          "t": "math",
+          "v": "27"
+        },
+        {
+          "t": "text",
+          "v": ". What is the perimeter of triangle "
+        },
+        {
+          "t": "math",
+          "v": "ABC"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "58"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. apply perimeter formula: "
+        },
+        {
+          "t": "text",
+          "v": "For a triangle, perimeter is the sum of all side lengths: "
+        },
+        {
+          "t": "math",
+          "v": "P = a + b + c"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. substitute: "
+        },
+        {
+          "t": "text",
+          "v": "Substitute the three given side lengths: "
+        },
+        {
+          "t": "math",
+          "v": "P = 12 + 19 + 27"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. evaluate: "
+        },
+        {
+          "t": "text",
+          "v": "Add: "
+        },
+        {
+          "t": "math",
+          "v": "12 + 19 + 27 = 58"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 395,
+        "band": "B2",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "perimeter",
+          "from_context": false,
+          "has_fraction_or_irrational": false
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "perimeter",
+        "from_context": false,
+        "has_fraction_or_irrational": false
+      },
+      "fingerprint": [
+        "apply_perimeter_formula",
+        "substitute",
+        "evaluate"
+      ],
+      "reskinDistance": 1,
+      "tier": "build-spec"
+    },
+    {
+      "id": 3,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B2",
+      "target_band": "B2",
+      "statementId": "GEO.B2.s2",
+      "skill": "lines_angles_triangles",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "Parallel lines "
+        },
+        {
+          "t": "math",
+          "v": "m"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "n"
+        },
+        {
+          "t": "text",
+          "v": " are cut by transversal "
+        },
+        {
+          "t": "math",
+          "v": "t"
+        },
+        {
+          "t": "text",
+          "v": ". An interior angle at line "
+        },
+        {
+          "t": "math",
+          "v": "m"
+        },
+        {
+          "t": "text",
+          "v": " measures "
+        },
+        {
+          "t": "math",
+          "v": "47^\\circ"
+        },
+        {
+          "t": "text",
+          "v": ". What is the measure, in degrees, of the interior angle at line "
+        },
+        {
+          "t": "math",
+          "v": "n"
+        },
+        {
+          "t": "text",
+          "v": " that lies on the same side of "
+        },
+        {
+          "t": "math",
+          "v": "t"
+        },
+        {
+          "t": "text",
+          "v": " as the "
+        },
+        {
+          "t": "math",
+          "v": "47^\\circ"
+        },
+        {
+          "t": "text",
+          "v": " angle?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "133"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. parallel transversal rule: "
+        },
+        {
+          "t": "text",
+          "v": "Identify the given "
+        },
+        {
+          "t": "math",
+          "v": "47^\\circ"
+        },
+        {
+          "t": "text",
+          "v": " angle and the requested angle as same-side interior (co-interior) angles formed by transversal "
+        },
+        {
+          "t": "math",
+          "v": "t"
+        },
+        {
+          "t": "text",
+          "v": " crossing parallel lines "
+        },
+        {
+          "t": "math",
+          "v": "m"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "n"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. apply angle theorem: "
+        },
+        {
+          "t": "text",
+          "v": "Same-side interior angles between parallel lines are supplementary, so the two measures sum to "
+        },
+        {
+          "t": "math",
+          "v": "180^\\circ"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. solve for unknown: "
+        },
+        {
+          "t": "text",
+          "v": "Subtract: "
+        },
+        {
+          "t": "math",
+          "v": "180^\\circ - 47^\\circ = 133^\\circ"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 395,
+        "band": "B2",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "parallel_transversal",
+          "multi_step": false,
+          "has_variable": false
+        }
+      },
+      "verify": {
+        "tier": "B",
+        "correctness": "consistency 5/4"
+      },
+      "radicals": {
+        "task": "parallel_transversal",
+        "multi_step": false,
+        "has_variable": false
+      },
+      "fingerprint": [
+        "parallel_transversal_rule",
+        "apply_angle_theorem",
+        "solve_for_unknown"
+      ],
+      "reskinDistance": 0.667,
+      "tier": "build-spec"
+    },
+    {
+      "id": 4,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B3",
+      "target_band": "B3",
+      "statementId": "GEO.B3.s1",
+      "skill": "area_volume",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "A triangular shade sail over a rectangular swimming pool has a base of "
+        },
+        {
+          "t": "math",
+          "v": "16"
+        },
+        {
+          "t": "text",
+          "v": " feet along one pool edge and a perpendicular height of "
+        },
+        {
+          "t": "math",
+          "v": "9"
+        },
+        {
+          "t": "text",
+          "v": " feet. What is the sail's area?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "25"
+            },
+            {
+              "t": "text",
+              "v": " ft"
+            },
+            {
+              "t": "math",
+              "v": "^2"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "50"
+            },
+            {
+              "t": "text",
+              "v": " ft"
+            },
+            {
+              "t": "math",
+              "v": "^2"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "72"
+            },
+            {
+              "t": "text",
+              "v": " ft"
+            },
+            {
+              "t": "math",
+              "v": "^2"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "144"
+            },
+            {
+              "t": "text",
+              "v": " ft"
+            },
+            {
+              "t": "math",
+              "v": "^2"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "C"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. apply area formula: "
+        },
+        {
+          "t": "text",
+          "v": "Triangle area is "
+        },
+        {
+          "t": "math",
+          "v": "A=\\tfrac12 bh"
+        },
+        {
+          "t": "text",
+          "v": ", with base "
+        },
+        {
+          "t": "math",
+          "v": "b=16"
+        },
+        {
+          "t": "text",
+          "v": " ft and perpendicular height "
+        },
+        {
+          "t": "math",
+          "v": "h=9"
+        },
+        {
+          "t": "text",
+          "v": " ft."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. substitute: "
+        },
+        {
+          "t": "text",
+          "v": "Substitute the given lengths: "
+        },
+        {
+          "t": "math",
+          "v": "A=\\tfrac12 \\cdot 16 \\cdot 9"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. evaluate: "
+        },
+        {
+          "t": "text",
+          "v": "Multiply: "
+        },
+        {
+          "t": "math",
+          "v": "16 \\cdot 9 = 144"
+        },
+        {
+          "t": "text",
+          "v": "; halve: "
+        },
+        {
+          "t": "math",
+          "v": "144 \\div 2 = 72"
+        },
+        {
+          "t": "text",
+          "v": ". So "
+        },
+        {
+          "t": "math",
+          "v": "A=72"
+        },
+        {
+          "t": "text",
+          "v": " ft"
+        },
+        {
+          "t": "math",
+          "v": "^2"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 460,
+        "band": "B3",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "triangle_area",
+          "from_context": true,
+          "has_fraction_or_irrational": false
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "triangle_area",
+        "from_context": true,
+        "has_fraction_or_irrational": false
+      },
+      "fingerprint": [
+        "apply_area_formula",
+        "substitute",
+        "evaluate"
+      ],
+      "reskinDistance": 0.667,
+      "tier": "build-spec"
+    },
+    {
+      "id": 5,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B3",
+      "target_band": "B3",
+      "statementId": "GEO.B3.s2",
+      "skill": "lines_angles_triangles",
+      "type": "spr",
+      "stem": [
+        {
+          "t": "text",
+          "v": "Lines "
+        },
+        {
+          "t": "math",
+          "v": "AC"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "BD"
+        },
+        {
+          "t": "text",
+          "v": " intersect at point "
+        },
+        {
+          "t": "math",
+          "v": "P"
+        },
+        {
+          "t": "text",
+          "v": ". If the measure of "
+        },
+        {
+          "t": "math",
+          "v": "\\angle APB"
+        },
+        {
+          "t": "text",
+          "v": " is "
+        },
+        {
+          "t": "math",
+          "v": "47^\\circ"
+        },
+        {
+          "t": "text",
+          "v": ", what is the measure, in degrees, of "
+        },
+        {
+          "t": "math",
+          "v": "\\angle BPC"
+        },
+        {
+          "t": "text",
+          "v": "?"
+        }
+      ],
+      "answer": {
+        "accept": [
+          "133"
+        ],
+        "tol": 0
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. apply angle theorem: "
+        },
+        {
+          "t": "math",
+          "v": "\\angle APB"
+        },
+        {
+          "t": "text",
+          "v": " and "
+        },
+        {
+          "t": "math",
+          "v": "\\angle BPC"
+        },
+        {
+          "t": "text",
+          "v": " share ray "
+        },
+        {
+          "t": "math",
+          "v": "PB"
+        },
+        {
+          "t": "text",
+          "v": " and lie on opposite sides of line "
+        },
+        {
+          "t": "math",
+          "v": "AC"
+        },
+        {
+          "t": "text",
+          "v": ", so they form a linear pair and are supplementary."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. vertical supplementary: "
+        },
+        {
+          "t": "text",
+          "v": "Supplementary angles sum to "
+        },
+        {
+          "t": "math",
+          "v": "180^\\circ"
+        },
+        {
+          "t": "text",
+          "v": ": "
+        },
+        {
+          "t": "math",
+          "v": "\\angle APB + \\angle BPC = 180^\\circ"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. solve for unknown: "
+        },
+        {
+          "t": "text",
+          "v": "Subtract the given measure: "
+        },
+        {
+          "t": "math",
+          "v": "180^\\circ - 47^\\circ = 133^\\circ"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 445,
+        "band": "B3",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "intersecting_angles",
+          "multi_step": false,
+          "has_variable": false
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "intersecting_angles",
+        "multi_step": false,
+        "has_variable": false
+      },
+      "fingerprint": [
+        "apply_angle_theorem",
+        "vertical_supplementary",
+        "solve_for_unknown"
+      ],
+      "reskinDistance": 0.667,
+      "tier": "build-spec"
+    },
+    {
+      "id": 6,
+      "program": "SAT",
+      "domain": "geometry_trig",
+      "band": "B3",
+      "target_band": "B3",
+      "statementId": "GEO.B3.s3",
+      "skill": "right_triangles_trig",
+      "type": "mcq",
+      "stem": [
+        {
+          "t": "text",
+          "v": "A ladder leans against a vertical wall, its top "
+        },
+        {
+          "t": "math",
+          "v": "15"
+        },
+        {
+          "t": "text",
+          "v": " ft up the wall and its base "
+        },
+        {
+          "t": "math",
+          "v": "8"
+        },
+        {
+          "t": "text",
+          "v": " ft out on level ground, making angle "
+        },
+        {
+          "t": "math",
+          "v": "\\theta"
+        },
+        {
+          "t": "text",
+          "v": " with the ground. How long is the ladder?"
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "seg": [
+            {
+              "t": "math",
+              "v": "23"
+            },
+            {
+              "t": "text",
+              "v": " ft"
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "seg": [
+            {
+              "t": "math",
+              "v": "17"
+            },
+            {
+              "t": "text",
+              "v": " ft"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "seg": [
+            {
+              "t": "math",
+              "v": "\\sqrt{161}"
+            },
+            {
+              "t": "text",
+              "v": " ft"
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "seg": [
+            {
+              "t": "math",
+              "v": "289"
+            },
+            {
+              "t": "text",
+              "v": " ft"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "correct": "B"
+      },
+      "solution": [
+        {
+          "t": "text",
+          "v": "1. apply pythagorean: "
+        },
+        {
+          "t": "text",
+          "v": "The vertical wall and the level ground meet at a right angle, so the height up the wall ("
+        },
+        {
+          "t": "math",
+          "v": "15"
+        },
+        {
+          "t": "text",
+          "v": " ft) and the base distance ("
+        },
+        {
+          "t": "math",
+          "v": "8"
+        },
+        {
+          "t": "text",
+          "v": " ft) are the legs and the ladder is the hypotenuse "
+        },
+        {
+          "t": "math",
+          "v": "c"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "2. apply pythagorean: "
+        },
+        {
+          "t": "text",
+          "v": "Write "
+        },
+        {
+          "t": "math",
+          "v": "c^2 = 8^2 + 15^2 = 64 + 225 = 289"
+        },
+        {
+          "t": "text",
+          "v": "."
+        },
+        {
+          "t": "br"
+        },
+        {
+          "t": "text",
+          "v": "3. solve for unknown: "
+        },
+        {
+          "t": "text",
+          "v": "Take the positive square root: "
+        },
+        {
+          "t": "math",
+          "v": "c = \\sqrt{289} = 17"
+        },
+        {
+          "t": "text",
+          "v": " ft (the angle "
+        },
+        {
+          "t": "math",
+          "v": "\\theta"
+        },
+        {
+          "t": "text",
+          "v": " is not needed)."
+        },
+        {
+          "t": "br"
+        }
+      ],
+      "figure": null,
+      "difficulty": {
+        "scalePoint": 460,
+        "band": "B3",
+        "method": "apriori_v1",
+        "feature_vector": {
+          "task": "pythagorean_hyp",
+          "from_context": true,
+          "irrational_answer": false
+        }
+      },
+      "verify": {
+        "tier": "A",
+        "correctness": "prove:pass"
+      },
+      "radicals": {
+        "task": "pythagorean_hyp",
+        "from_context": true,
+        "irrational_answer": false
+      },
+      "fingerprint": [
+        "apply_pythagorean",
+        "apply_pythagorean",
+        "solve_for_unknown"
+      ],
+      "reskinDistance": 0.667,
+      "tier": "build-spec"
+    }
+  ]
+}

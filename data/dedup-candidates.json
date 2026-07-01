@@ -1,27 +1,919 @@
 {
- "bankSize": 686,
+ "bankSize": 902,
  "thresholds": {
   "structural": 0.82,
   "context": 0.55,
   "ctxMinWords": 8
  },
  "structural": {
-  "clusters": 1,
-  "itemsInClusters": 2,
+  "clusters": 38,
+  "itemsInClusters": 107,
   "byspan": {
-   "insight-gen": 1
+   "insight-gen": 38
   }
  },
  "context": {
-  "clusters": 30,
-  "itemsInClusters": 78,
+  "clusters": 64,
+  "itemsInClusters": 188,
   "byspan": {
-   "CROSS": 2,
-   "mod2": 17,
-   "insight-gen": 11
+   "CROSS": 3,
+   "mod2": 16,
+   "insight-gen": 45
   }
  },
  "structClusters": [
+  {
+   "kind": "structural",
+   "size": 6,
+   "span": "insight-gen",
+   "members": [
+    {
+     "idx": 84,
+     "origin": "insight-gen",
+     "domain": "advanced_math",
+     "skill": "adv_yint_from_graph",
+     "source": "test-71",
+     "stem": "The graph of the quadratic function  f  is shown in the  xy -plane. What is the  y -coordinate of the  y -intercept of the graph of  f ?"
+    },
+    {
+     "idx": 708,
+     "origin": "insight-gen",
+     "domain": "advanced_math",
+     "skill": "nonlinear_graphs",
+     "source": "test-109",
+     "stem": "The graph of the quadratic function  f  is shown in the  xy -plane. What is the  y -coordinate of the  y -intercept of the graph of  f ?"
+    },
+    {
+     "idx": 710,
+     "origin": "insight-gen",
+     "domain": "advanced_math",
+     "skill": "nonlinear_graphs",
+     "source": "test-109",
+     "stem": "The graph of the quadratic function  f  is shown in the  xy -plane. What is the  y -coordinate of the  y -intercept of the graph of  f ?"
+    },
+    {
+     "idx": 711,
+     "origin": "insight-gen",
+     "domain": "advanced_math",
+     "skill": "nonlinear_graphs",
+     "source": "test-109",
+     "stem": "The graph of the quadratic function  f  is shown in the  xy -plane. What is the  y -coordinate of the  y -intercept of the graph of  f ?"
+    },
+    {
+     "idx": 712,
+     "origin": "insight-gen",
+     "domain": "advanced_math",
+     "skill": "nonlinear_graphs",
+     "source": "test-109",
+     "stem": "The graph of the quadratic function  f  is shown in the  xy -plane. What is the  y -coordinate of the  y -intercept of the graph of  f ?"
+    },
+    {
+     "idx": 713,
+     "origin": "insight-gen",
+     "domain": "advanced_math",
+     "skill": "nonlinear_graphs",
+     "source": "test-109",
+     "stem": "The graph of the quadratic function  f  is shown in the  xy -plane. What is the  y -coordinate of the  y -intercept of the graph of  f ?"
+    }
+   ]
+  },
+  {
+   "kind": "structural",
+   "size": 4,
+   "span": "insight-gen",
+   "members": [
+    {
+     "idx": 68,
+     "origin": "insight-gen",
+     "domain": "algebra",
+     "skill": "systems_of_linear_equations",
+     "source": "test-103",
+     "stem": "\\begin{cases} 3x - ky = 12 \\\\ kx - 12y = 16 \\end{cases} "
+    },
+    {
+     "idx": 758,
+     "origin": "insight-gen",
+     "domain": "algebra",
+     "skill": "systems_of_linear_equations",
+     "source": "test-110",
+     "stem": "\\begin{cases} 2x + ky = 6 \\\\ kx + 8y = -5 \\end{cases} "
+    },
+    {
+     "idx": 759,
+     "origin": "insight-gen",
+     "domain": "algebra",
+     "skill": "systems_of_linear_equations",
+     "source": "test-110",
+     "stem": "\\begin{cases} 9x + ky = 2 \\\\ kx + 4y = -9 \\end{cases} "
+    },
+    {
+     "idx": 760,
+     "origin": "insight-gen",
+     "domain": "algebra",
+     "skill": "systems_of_linear_equations",
+     "source": "test-110",
+     "stem": "\\begin{cases} 9x + ky = -7 \\\\ kx + 4y = 1 \\end{cases} "
+    }
+   ]
+  },
+  {
+   "kind": "structural",
+   "size": 4,
+   "span": "insight-gen",
+   "members": [
+    {
+     "idx": 721,
+     "origin": "insight-gen",
+     "domain": "advanced_math",
+     "skill": "nonlinear_graphs",
+     "source": "test-109",
+     "stem": "Which of the following could be the graph in the  xy -plane of  y = (x - 2)^2 + 1 ?"
+    },
+    {
+     "idx": 723,
+     "origin": "insight-gen",
+     "domain": "advanced_math",
+     "skill": "nonlinear_graphs",
+     "source": "test-109",
+     "stem": "Which of the following could be the graph in the  xy -plane of  y = -(x - 1)^2 - 1 ?"
+    },
+    {
+     "idx": 724,
+     "origin": "insight-gen",
+     "domain": "advanced_math",
+     "skill": "nonlinear_graphs",
+     "source": "test-109",
+     "stem": "Which of the following could be the graph in the  xy -plane of  y = (x - 1)^2 + 1 ?"
+    },
+    {
+     "idx": 725,
+     "origin": "insight-gen",
+     "domain": "advanced_math",
+     "skill": "nonlinear_graphs",
+     "source": "test-109",
+     "stem": "Which of the following could be the graph in the  xy -plane of  y = (x + 2)^2 + 2 ?"
+    }
+   ]
+  },
+  {
+   "kind": "structural",
+   "size": 3,
+   "span": "insight-gen",
+   "members": [
+    {
+     "idx": 732,
+     "origin": "insight-gen",
+     "domain": "algebra",
+     "skill": "systems_of_linear_equations",
+     "source": "test-110",
+     "stem": "\\begin{cases} -3x + 2y = -8 \\\\ -4x + 4y = -8 \\end{cases} "
+    },
+    {
+     "idx": 733,
+     "origin": "insight-gen",
+     "domain": "algebra",
+     "skill": "systems_of_linear_equations",
+     "source": "test-110",
+     "stem": "\\begin{cases} 2x - 4y = -24 \\\\ -3x - 3y = -9 \\end{cases} "
+    },
+    {
+     "idx": 736,
+     "origin": "insight-gen",
+     "domain": "algebra",
+     "skill": "systems_of_linear_equations",
+     "source": "test-110",
+     "stem": "\\begin{cases} -3x + 3y = -30 \\\\ -2x - 3y = 10 \\end{cases} "
+    }
+   ]
+  },
+  {
+   "kind": "structural",
+   "size": 3,
+   "span": "insight-gen",
+   "members": [
+    {
+     "idx": 836,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "solid_figures",
+     "source": "test-115",
+     "stem": "The right rectangular prism shown has the edge lengths marked, in centimeters. What is the volume of the prism, in cubic centimeters?"
+    },
+    {
+     "idx": 837,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "solid_figures",
+     "source": "test-115",
+     "stem": "The right rectangular prism shown has the edge lengths marked, in centimeters. What is the volume of the prism, in cubic centimeters?"
+    },
+    {
+     "idx": 838,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "solid_figures",
+     "source": "test-115",
+     "stem": "The right rectangular prism shown has the edge lengths marked, in centimeters. What is the volume of the prism, in cubic centimeters?"
+    }
+   ]
+  },
+  {
+   "kind": "structural",
+   "size": 3,
+   "span": "insight-gen",
+   "members": [
+    {
+     "idx": 839,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "solid_figures",
+     "source": "test-115",
+     "stem": "The right rectangular pyramid shown has the base edge lengths and height marked, in centimeters. What is the volume of the pyramid, in cubic centimeters?"
+    },
+    {
+     "idx": 841,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "solid_figures",
+     "source": "test-115",
+     "stem": "The right rectangular pyramid shown has the base edge lengths and height marked, in centimeters. What is the volume of the pyramid, in cubic centimeters?"
+    },
+    {
+     "idx": 843,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "solid_figures",
+     "source": "test-115",
+     "stem": "The right rectangular pyramid shown has the base edge lengths and height marked, in centimeters. What is the volume of the pyramid, in cubic centimeters?"
+    }
+   ]
+  },
+  {
+   "kind": "structural",
+   "size": 3,
+   "span": "insight-gen",
+   "members": [
+    {
+     "idx": 840,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "solid_figures",
+     "source": "test-115",
+     "stem": "The cube shown has its edge length marked, in inches. What is the volume of the cube, in cubic inches?"
+    },
+    {
+     "idx": 842,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "solid_figures",
+     "source": "test-115",
+     "stem": "The cube shown has its edge length marked, in inches. What is the volume of the cube, in cubic inches?"
+    },
+    {
+     "idx": 844,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "solid_figures",
+     "source": "test-115",
+     "stem": "The cube shown has its edge length marked, in inches. What is the volume of the cube, in cubic inches?"
+    }
+   ]
+  },
+  {
+   "kind": "structural",
+   "size": 3,
+   "span": "insight-gen",
+   "members": [
+    {
+     "idx": 845,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "solid_figures",
+     "source": "test-115",
+     "stem": "The right triangular prism shown has a triangular cross-section with the base and height marked, and a length marked, in feet. What is the volume of the prism, in cubic feet?"
+    },
+    {
+     "idx": 846,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "solid_figures",
+     "source": "test-115",
+     "stem": "The right triangular prism shown has a triangular cross-section with the base and height marked, and a length marked, in feet. What is the volume of the prism, in cubic feet?"
+    },
+    {
+     "idx": 847,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "solid_figures",
+     "source": "test-115",
+     "stem": "The right triangular prism shown has a triangular cross-section with the base and height marked, and a length marked, in feet. What is the volume of the prism, in cubic feet?"
+    }
+   ]
+  },
+  {
+   "kind": "structural",
+   "size": 3,
+   "span": "insight-gen",
+   "members": [
+    {
+     "idx": 848,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "solid_figures",
+     "source": "test-115",
+     "stem": "The right rectangular prism shown has a volume of 24 cubic feet. Two of its edge lengths are marked, in feet. What is the value of  h ?"
+    },
+    {
+     "idx": 851,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "solid_figures",
+     "source": "test-115",
+     "stem": "The right rectangular prism shown has a volume of 64 cubic feet. Two of its edge lengths are marked, in feet. What is the value of  h ?"
+    },
+    {
+     "idx": 856,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "solid_figures",
+     "source": "test-115",
+     "stem": "The right rectangular prism shown has a volume of 126 cubic feet. Two of its edge lengths are marked, in feet. What is the value of  h ?"
+    }
+   ]
+  },
+  {
+   "kind": "structural",
+   "size": 3,
+   "span": "insight-gen",
+   "members": [
+    {
+     "idx": 849,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "solid_figures",
+     "source": "test-115",
+     "stem": "The cylinder shown has the radius and height marked, in centimeters. The volume of the cylinder is  k\\pi  cubic centimeters. What is the value of  k ?"
+    },
+    {
+     "idx": 852,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "solid_figures",
+     "source": "test-115",
+     "stem": "The cylinder shown has the radius and height marked, in centimeters. The volume of the cylinder is  k\\pi  cubic centimeters. What is the value of  k ?"
+    },
+    {
+     "idx": 854,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "solid_figures",
+     "source": "test-115",
+     "stem": "The cylinder shown has the radius and height marked, in centimeters. The volume of the cylinder is  k\\pi  cubic centimeters. What is the value of  k ?"
+    }
+   ]
+  },
+  {
+   "kind": "structural",
+   "size": 3,
+   "span": "insight-gen",
+   "members": [
+    {
+     "idx": 850,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "solid_figures",
+     "source": "test-115",
+     "stem": "The right rectangular prism shown has the edge lengths marked, in meters. What is the surface area of the prism, in square meters?"
+    },
+    {
+     "idx": 853,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "solid_figures",
+     "source": "test-115",
+     "stem": "The right rectangular prism shown has the edge lengths marked, in meters. What is the surface area of the prism, in square meters?"
+    },
+    {
+     "idx": 855,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "solid_figures",
+     "source": "test-115",
+     "stem": "The right rectangular prism shown has the edge lengths marked, in meters. What is the surface area of the prism, in square meters?"
+    }
+   ]
+  },
+  {
+   "kind": "structural",
+   "size": 3,
+   "span": "insight-gen",
+   "members": [
+    {
+     "idx": 857,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "Rectangle  ABCD  shown has the side lengths marked, in inches. What is the length, in inches, of diagonal  \\overline{AC} ?"
+    },
+    {
+     "idx": 860,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "Rectangle  ABCD  shown has the side lengths marked, in inches. What is the length, in inches, of diagonal  \\overline{AC} ?"
+    },
+    {
+     "idx": 862,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "Rectangle  ABCD  shown has the side lengths marked, in inches. What is the length, in inches, of diagonal  \\overline{AC} ?"
+    }
+   ]
+  },
+  {
+   "kind": "structural",
+   "size": 3,
+   "span": "insight-gen",
+   "members": [
+    {
+     "idx": 858,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "In triangle  ABC  shown (not drawn to scale), side  \\overline{BC}  is extended to  D . If  m\\angle A = 68^\\circ  and  m\\angle B = 55^\\circ , what is the measure, in degrees, of exterior angle  \\angle ACD ?"
+    },
+    {
+     "idx": 859,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "In triangle  ABC  shown (not drawn to scale), side  \\overline{BC}  is extended to  D . If  m\\angle A = 33^\\circ  and  m\\angle B = 47^\\circ , what is the measure, in degrees, of exterior angle  \\angle ACD ?"
+    },
+    {
+     "idx": 861,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "In triangle  ABC  shown (not drawn to scale), side  \\overline{BC}  is extended to  D . If  m\\angle A = 31^\\circ  and  m\\angle B = 36^\\circ , what is the measure, in degrees, of exterior angle  \\angle ACD ?"
+    }
+   ]
+  },
+  {
+   "kind": "structural",
+   "size": 3,
+   "span": "insight-gen",
+   "members": [
+    {
+     "idx": 863,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "In trapezoid  ABCD  shown,  \\overline{AB}\\parallel\\overline{DC}  with  AB = 8  and  DC = 12  (in centimeters). The midsegment  \\overline{MN}  joins the midpoints of the two legs. What is the length, in centimeters, of  \\overline{MN} ?"
+    },
+    {
+     "idx": 864,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "In trapezoid  ABCD  shown,  \\overline{AB}\\parallel\\overline{DC}  with  AB = 18  and  DC = 10  (in centimeters). The midsegment  \\overline{MN}  joins the midpoints of the two legs. What is the length, in centimeters, of  \\overline{MN} ?"
+    },
+    {
+     "idx": 865,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "In trapezoid  ABCD  shown,  \\overline{AB}\\parallel\\overline{DC}  with  AB = 9  and  DC = 13  (in centimeters). The midsegment  \\overline{MN}  joins the midpoints of the two legs. What is the length, in centimeters, of  \\overline{MN} ?"
+    }
+   ]
+  },
+  {
+   "kind": "structural",
+   "size": 3,
+   "span": "insight-gen",
+   "members": [
+    {
+     "idx": 866,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "In triangle  ABC  shown,  \\overline{DE}\\parallel\\overline{BC}  with  D  on  \\overline{AB}  and  E  on  \\overline{AC} . The marked lengths are in centimeters. What is the length, in centimeters, of  \\overline{EC} ?"
+    },
+    {
+     "idx": 889,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "In triangle  ABC  shown,  \\overline{DE}\\parallel\\overline{BC}  with  D  on  \\overline{AB}  and  E  on  \\overline{AC} . The marked lengths are in centimeters. What is the length, in centimeters, of  \\overline{EC} ?"
+    },
+    {
+     "idx": 892,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "In triangle  ABC  shown,  \\overline{DE}\\parallel\\overline{BC}  with  D  on  \\overline{AB}  and  E  on  \\overline{AC} . The marked lengths are in centimeters. What is the length, in centimeters, of  \\overline{EC} ?"
+    }
+   ]
+  },
+  {
+   "kind": "structural",
+   "size": 3,
+   "span": "insight-gen",
+   "members": [
+    {
+     "idx": 867,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "In parallelogram  ABCD  shown (not drawn to scale), diagonal  \\overline{AC}  is drawn. If  m\\angle ABC = 72^\\circ  and  m\\angle DAC = 65^\\circ , what is the measure, in degrees, of  \\angle CAB ?"
+    },
+    {
+     "idx": 872,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "In parallelogram  ABCD  shown (not drawn to scale), diagonal  \\overline{AC}  is drawn. If  m\\angle ABC = 50^\\circ  and  m\\angle DAC = 51^\\circ , what is the measure, in degrees, of  \\angle CAB ?"
+    },
+    {
+     "idx": 891,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "In parallelogram  ABCD  shown (not drawn to scale), diagonal  \\overline{AC}  is drawn. If  m\\angle ABC = 75^\\circ  and  m\\angle DAC = 33^\\circ , what is the measure, in degrees, of  \\angle CAB ?"
+    }
+   ]
+  },
+  {
+   "kind": "structural",
+   "size": 3,
+   "span": "insight-gen",
+   "members": [
+    {
+     "idx": 868,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "A square is inscribed in a circle of radius  7  (shown), with all four vertices on the circle. What is the area of the square?"
+    },
+    {
+     "idx": 873,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "A square is inscribed in a circle of radius  3  (shown), with all four vertices on the circle. What is the area of the square?"
+    },
+    {
+     "idx": 890,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "A square is inscribed in a circle of radius  9  (shown), with all four vertices on the circle. What is the area of the square?"
+    }
+   ]
+  },
+  {
+   "kind": "structural",
+   "size": 3,
+   "span": "insight-gen",
+   "members": [
+    {
+     "idx": 869,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "A circle is inscribed in a square with side length  14  (shown), touching all four sides. The area of the circle is  k\\pi . What is the value of  k ?"
+    },
+    {
+     "idx": 871,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "A circle is inscribed in a square with side length  10  (shown), touching all four sides. The area of the circle is  k\\pi . What is the value of  k ?"
+    },
+    {
+     "idx": 875,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "A circle is inscribed in a square with side length  4  (shown), touching all four sides. The area of the circle is  k\\pi . What is the value of  k ?"
+    }
+   ]
+  },
+  {
+   "kind": "structural",
+   "size": 3,
+   "span": "insight-gen",
+   "members": [
+    {
+     "idx": 870,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "The rhombus shown has perpendicular diagonals. One diagonal has length  24  and each side has length  13  (in inches). What is the length, in inches, of the other diagonal?"
+    },
+    {
+     "idx": 874,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "The rhombus shown has perpendicular diagonals. One diagonal has length  16  and each side has length  17  (in inches). What is the length, in inches, of the other diagonal?"
+    },
+    {
+     "idx": 887,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "The rhombus shown has perpendicular diagonals. One diagonal has length  12  and each side has length  10  (in inches). What is the length, in inches, of the other diagonal?"
+    }
+   ]
+  },
+  {
+   "kind": "structural",
+   "size": 3,
+   "span": "insight-gen",
+   "members": [
+    {
+     "idx": 876,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "In right triangle  ABC  shown, the altitude from the right angle at  C  meets the hypotenuse  \\overline{AB}  at  H . If  AH = 4  and  HB = 25 , what is the length of  \\overline{CH} ?"
+    },
+    {
+     "idx": 883,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "In right triangle  ABC  shown, the altitude from the right angle at  C  meets the hypotenuse  \\overline{AB}  at  H . If  AH = 5  and  HB = 20 , what is the length of  \\overline{CH} ?"
+    },
+    {
+     "idx": 886,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "In right triangle  ABC  shown, the altitude from the right angle at  C  meets the hypotenuse  \\overline{AB}  at  H . If  AH = 3  and  HB = 12 , what is the length of  \\overline{CH} ?"
+    }
+   ]
+  },
+  {
+   "kind": "structural",
+   "size": 3,
+   "span": "insight-gen",
+   "members": [
+    {
+     "idx": 877,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "Chords  \\overline{AB}  and  \\overline{CD}  intersect at point  P  inside the circle (shown). Using the marked segment lengths, what is the length of  \\overline{PD} ?"
+    },
+    {
+     "idx": 880,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "Chords  \\overline{AB}  and  \\overline{CD}  intersect at point  P  inside the circle (shown). Using the marked segment lengths, what is the length of  \\overline{PD} ?"
+    },
+    {
+     "idx": 884,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "Chords  \\overline{AB}  and  \\overline{CD}  intersect at point  P  inside the circle (shown). Using the marked segment lengths, what is the length of  \\overline{PD} ?"
+    }
+   ]
+  },
+  {
+   "kind": "structural",
+   "size": 3,
+   "span": "insight-gen",
+   "members": [
+    {
+     "idx": 878,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "From external point  P , segment  \\overline{PT}  is tangent to the circle with center  O  at  T  (so  \\overline{PT}\\perp\\overline{OT} ). If the radius is  5  and  OP = 13  (shown), what is the length of  \\overline{PT} ?"
+    },
+    {
+     "idx": 881,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "From external point  P , segment  \\overline{PT}  is tangent to the circle with center  O  at  T  (so  \\overline{PT}\\perp\\overline{OT} ). If the radius is  9  and  OP = 15  (shown), what is the length of  \\overline{PT} ?"
+    },
+    {
+     "idx": 885,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "From external point  P , segment  \\overline{PT}  is tangent to the circle with center  O  at  T  (so  \\overline{PT}\\perp\\overline{OT} ). If the radius is  3  and  OP = 5  (shown), what is the length of  \\overline{PT} ?"
+    }
+   ]
+  },
+  {
+   "kind": "structural",
+   "size": 3,
+   "span": "insight-gen",
+   "members": [
+    {
+     "idx": 879,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "In the circle with center  O  shown,  \\overline{AB}  is a diameter and  C  lies on the circle. If  m\\angle BAC = 46^\\circ , what is the measure, in degrees, of  \\angle ABC ?"
+    },
+    {
+     "idx": 882,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "In the circle with center  O  shown,  \\overline{AB}  is a diameter and  C  lies on the circle. If  m\\angle BAC = 59^\\circ , what is the measure, in degrees, of  \\angle ABC ?"
+    },
+    {
+     "idx": 888,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "In the circle with center  O  shown,  \\overline{AB}  is a diameter and  C  lies on the circle. If  m\\angle BAC = 43^\\circ , what is the measure, in degrees, of  \\angle ABC ?"
+    }
+   ]
+  },
+  {
+   "kind": "structural",
+   "size": 3,
+   "span": "insight-gen",
+   "members": [
+    {
+     "idx": 893,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "circle_figures",
+     "source": "test-116",
+     "stem": "In circle  O  shown,  \\overline{CA}  and  \\overline{CB}  are chords and the central angle  \\angle AOB  is marked. What is the measure, in degrees, of the inscribed angle  \\angle ACB  (marked  x^\\circ )?"
+    },
+    {
+     "idx": 898,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "circle_figures",
+     "source": "test-116",
+     "stem": "In circle  O  shown,  \\overline{CA}  and  \\overline{CB}  are chords and the central angle  \\angle AOB  is marked. What is the measure, in degrees, of the inscribed angle  \\angle ACB  (marked  x^\\circ )?"
+    },
+    {
+     "idx": 899,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "circle_figures",
+     "source": "test-116",
+     "stem": "In circle  O  shown,  \\overline{CA}  and  \\overline{CB}  are chords and the central angle  \\angle AOB  is marked. What is the measure, in degrees, of the inscribed angle  \\angle ACB  (marked  x^\\circ )?"
+    }
+   ]
+  },
+  {
+   "kind": "structural",
+   "size": 3,
+   "span": "insight-gen",
+   "members": [
+    {
+     "idx": 894,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "circle_figures",
+     "source": "test-116",
+     "stem": "In the circle shown with center  O , the marked central angle subtends the bold arc, and the radius is marked. The length of the bold arc is  k\\pi . What is the value of  k ?"
+    },
+    {
+     "idx": 897,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "circle_figures",
+     "source": "test-116",
+     "stem": "In the circle shown with center  O , the marked central angle subtends the bold arc, and the radius is marked. The length of the bold arc is  k\\pi . What is the value of  k ?"
+    },
+    {
+     "idx": 900,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "circle_figures",
+     "source": "test-116",
+     "stem": "In the circle shown with center  O , the marked central angle subtends the bold arc, and the radius is marked. The length of the bold arc is  k\\pi . What is the value of  k ?"
+    }
+   ]
+  },
+  {
+   "kind": "structural",
+   "size": 3,
+   "span": "insight-gen",
+   "members": [
+    {
+     "idx": 895,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "circle_figures",
+     "source": "test-116",
+     "stem": "In the circle shown with center  O , the shaded sector has the marked central angle and radius. The area of the shaded sector is  k\\pi . What is the value of  k ?"
+    },
+    {
+     "idx": 896,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "circle_figures",
+     "source": "test-116",
+     "stem": "In the circle shown with center  O , the shaded sector has the marked central angle and radius. The area of the shaded sector is  k\\pi . What is the value of  k ?"
+    },
+    {
+     "idx": 901,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "circle_figures",
+     "source": "test-116",
+     "stem": "In the circle shown with center  O , the shaded sector has the marked central angle and radius. The area of the shaded sector is  k\\pi . What is the value of  k ?"
+    }
+   ]
+  },
+  {
+   "kind": "structural",
+   "size": 2,
+   "span": "insight-gen",
+   "members": [
+    {
+     "idx": 213,
+     "origin": "insight-gen",
+     "domain": "algebra",
+     "skill": "linear_inequalities",
+     "source": "test-104",
+     "stem": "\\begin{cases} y \\ge 3x - 4 \\\\ y \\le 2x + k \\end{cases} "
+    },
+    {
+     "idx": 762,
+     "origin": "insight-gen",
+     "domain": "algebra",
+     "skill": "linear_inequalities",
+     "source": "test-110",
+     "stem": "\\begin{cases} y \\ge 3x + 1 \\\\ y \\le 2x + k \\end{cases} "
+    }
+   ]
+  },
+  {
+   "kind": "structural",
+   "size": 2,
+   "span": "insight-gen",
+   "members": [
+    {
+     "idx": 221,
+     "origin": "insight-gen",
+     "domain": "advanced_math",
+     "skill": "polynomial_expressions",
+     "source": "test-105",
+     "stem": "Which expression is equivalent to  6x^2 + 9x - 14x^2 - 5 + 2x - 8 ?"
+    },
+    {
+     "idx": 687,
+     "origin": "insight-gen",
+     "domain": "advanced_math",
+     "skill": "polynomial_expressions",
+     "source": "test-108",
+     "stem": "Which expression is equivalent to  4t + 5t^2 - 7 + 9t - 2t^2 + 3 ?"
+    }
+   ]
+  },
   {
    "kind": "structural",
    "size": 2,
@@ -44,9 +936,255 @@
      "stem": "Which expression is equivalent to  7x^2 - 5x + 4 - 2x^2 + 8x - 9 ?"
     }
    ]
+  },
+  {
+   "kind": "structural",
+   "size": 2,
+   "span": "insight-gen",
+   "members": [
+    {
+     "idx": 716,
+     "origin": "insight-gen",
+     "domain": "advanced_math",
+     "skill": "nonlinear_graphs",
+     "source": "test-109",
+     "stem": "The graph of the quadratic function  f  is shown in the  xy -plane. What is the  x -coordinate of the greater of the two  x -intercepts of the graph?"
+    },
+    {
+     "idx": 719,
+     "origin": "insight-gen",
+     "domain": "advanced_math",
+     "skill": "nonlinear_graphs",
+     "source": "test-109",
+     "stem": "The graph of the quadratic function  f  is shown in the  xy -plane. What is the  x -coordinate of the greater of the two  x -intercepts of the graph?"
+    }
+   ]
+  },
+  {
+   "kind": "structural",
+   "size": 2,
+   "span": "insight-gen",
+   "members": [
+    {
+     "idx": 717,
+     "origin": "insight-gen",
+     "domain": "advanced_math",
+     "skill": "nonlinear_graphs",
+     "source": "test-109",
+     "stem": "The graph of the quadratic function  f  is shown in the  xy -plane. What is the maximum value of  f ?"
+    },
+    {
+     "idx": 718,
+     "origin": "insight-gen",
+     "domain": "advanced_math",
+     "skill": "nonlinear_graphs",
+     "source": "test-109",
+     "stem": "The graph of the quadratic function  f  is shown in the  xy -plane. What is the maximum value of  f ?"
+    }
+   ]
+  },
+  {
+   "kind": "structural",
+   "size": 2,
+   "span": "insight-gen",
+   "members": [
+    {
+     "idx": 726,
+     "origin": "insight-gen",
+     "domain": "advanced_math",
+     "skill": "nonlinear_graphs",
+     "source": "test-109",
+     "stem": "The graph shown models the height of a diver above the water,  y , in feet,  x  seconds after it is released from the board. What is the best interpretation of the vertex of the graph?"
+    },
+    {
+     "idx": 731,
+     "origin": "insight-gen",
+     "domain": "advanced_math",
+     "skill": "nonlinear_graphs",
+     "source": "test-109",
+     "stem": "The graph shown models the height of a diver above the water,  y , in feet,  x  seconds after it is released from the board. What is the best interpretation of the vertex of the graph?"
+    }
+   ]
+  },
+  {
+   "kind": "structural",
+   "size": 2,
+   "span": "insight-gen",
+   "members": [
+    {
+     "idx": 727,
+     "origin": "insight-gen",
+     "domain": "advanced_math",
+     "skill": "nonlinear_graphs",
+     "source": "test-109",
+     "stem": "The graph of the function  f  shown in the  xy -plane is a translation of the parent function  y = x^2 . Which equation defines  f ?"
+    },
+    {
+     "idx": 729,
+     "origin": "insight-gen",
+     "domain": "advanced_math",
+     "skill": "nonlinear_graphs",
+     "source": "test-109",
+     "stem": "The graph of the function  f  shown in the  xy -plane is a translation of the parent function  y = -x^2 . Which equation defines  f ?"
+    }
+   ]
+  },
+  {
+   "kind": "structural",
+   "size": 2,
+   "span": "insight-gen",
+   "members": [
+    {
+     "idx": 737,
+     "origin": "insight-gen",
+     "domain": "algebra",
+     "skill": "systems_of_linear_equations",
+     "source": "test-110",
+     "stem": "\\begin{cases} -2x - 2y = -5 \\\\ kx - 4y = -3 \\end{cases} "
+    },
+    {
+     "idx": 741,
+     "origin": "insight-gen",
+     "domain": "algebra",
+     "skill": "systems_of_linear_equations",
+     "source": "test-110",
+     "stem": "\\begin{cases} -4x - 2y = -6 \\\\ kx + 2y = 1 \\end{cases} "
+    }
+   ]
+  },
+  {
+   "kind": "structural",
+   "size": 2,
+   "span": "insight-gen",
+   "members": [
+    {
+     "idx": 739,
+     "origin": "insight-gen",
+     "domain": "algebra",
+     "skill": "systems_of_linear_equations",
+     "source": "test-110",
+     "stem": "\\begin{cases} -x + y = -6 \\\\ kx + 3y = -4 \\end{cases} "
+    },
+    {
+     "idx": 740,
+     "origin": "insight-gen",
+     "domain": "algebra",
+     "skill": "systems_of_linear_equations",
+     "source": "test-110",
+     "stem": "\\begin{cases} -x + y = 7 \\\\ kx - 4y = -9 \\end{cases} "
+    }
+   ]
+  },
+  {
+   "kind": "structural",
+   "size": 2,
+   "span": "insight-gen",
+   "members": [
+    {
+     "idx": 757,
+     "origin": "insight-gen",
+     "domain": "algebra",
+     "skill": "systems_of_linear_equations",
+     "source": "test-110",
+     "stem": "\\begin{cases} x + ky = 7 \\\\ kx + 4y = -6 \\end{cases} "
+    },
+    {
+     "idx": 761,
+     "origin": "insight-gen",
+     "domain": "algebra",
+     "skill": "systems_of_linear_equations",
+     "source": "test-110",
+     "stem": "\\begin{cases} x + ky = -6 \\\\ kx + 4y = 8 \\end{cases} "
+    }
+   ]
+  },
+  {
+   "kind": "structural",
+   "size": 2,
+   "span": "insight-gen",
+   "members": [
+    {
+     "idx": 764,
+     "origin": "insight-gen",
+     "domain": "algebra",
+     "skill": "linear_inequalities",
+     "source": "test-110",
+     "stem": "\\begin{cases} y \\ge 3x + 1 \\\\ y \\le x + k \\end{cases} "
+    },
+    {
+     "idx": 765,
+     "origin": "insight-gen",
+     "domain": "algebra",
+     "skill": "linear_inequalities",
+     "source": "test-110",
+     "stem": "\\begin{cases} y \\ge 2x + 2 \\\\ y \\le x + k \\end{cases} "
+    }
+   ]
+  },
+  {
+   "kind": "structural",
+   "size": 2,
+   "span": "insight-gen",
+   "members": [
+    {
+     "idx": 780,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "area_volume",
+     "source": "test-113",
+     "stem": "A rectangle has a length of  17  and a width of  12 . What is the perimeter of the rectangle?"
+    },
+    {
+     "idx": 825,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "area_volume",
+     "source": "test-114",
+     "stem": "A rectangle has a length of  27  and a width of  14 . What is the perimeter of the rectangle?"
+    }
+   ]
   }
  ],
  "ctxClusters": [
+  {
+   "kind": "context",
+   "size": 4,
+   "span": "CROSS",
+   "members": [
+    {
+     "idx": 404,
+     "origin": "mod2",
+     "domain": "algebra",
+     "skill": "number_of_solutions",
+     "source": "mod2/test-07",
+     "stem": "In the equation  3(4x - 5) - 2x = c(2x + 1) - 7,   c  is a constant. For what value of  c  does the equation have no solution?"
+    },
+    {
+     "idx": 458,
+     "origin": "mod2",
+     "domain": "algebra",
+     "skill": "number_of_solutions",
+     "source": "mod2/test-10",
+     "stem": "In the equation  ax + 11 = 2(a - 3)x + 8 + 3x,   a  is a constant. For which value of  a  does the equation have no solution?"
+    },
+    {
+     "idx": 534,
+     "origin": "mod2",
+     "domain": "algebra",
+     "skill": "number_of_solutions",
+     "source": "mod2/test-13",
+     "stem": "In the equation  7x + 3(x - 1) = k(15x) - 3,   k  is a constant. For what value of  k  does the equation have infinitely many solutions?"
+    },
+    {
+     "idx": 701,
+     "origin": "insight-gen",
+     "domain": "advanced_math",
+     "skill": "quadratic_equations",
+     "source": "test-108",
+     "stem": "In the equation  3x^2 - 18x + k = 0 ,  k  is a constant. For what value of  k  does the equation have exactly one real solution?"
+    }
+   ]
+  },
   {
    "kind": "context",
    "size": 2,
@@ -198,6 +1336,203 @@
   },
   {
    "kind": "context",
+   "size": 10,
+   "span": "insight-gen",
+   "members": [
+    {
+     "idx": 84,
+     "origin": "insight-gen",
+     "domain": "advanced_math",
+     "skill": "adv_yint_from_graph",
+     "source": "test-71",
+     "stem": "The graph of the quadratic function  f  is shown in the  xy -plane. What is the  y -coordinate of the  y -intercept of the graph of  f ?"
+    },
+    {
+     "idx": 708,
+     "origin": "insight-gen",
+     "domain": "advanced_math",
+     "skill": "nonlinear_graphs",
+     "source": "test-109",
+     "stem": "The graph of the quadratic function  f  is shown in the  xy -plane. What is the  y -coordinate of the  y -intercept of the graph of  f ?"
+    },
+    {
+     "idx": 709,
+     "origin": "insight-gen",
+     "domain": "advanced_math",
+     "skill": "nonlinear_graphs",
+     "source": "test-109",
+     "stem": "The graph of the exponential function  f  is shown in the  xy -plane. What is the  y -coordinate of the  y -intercept of the graph of  f ?"
+    },
+    {
+     "idx": 710,
+     "origin": "insight-gen",
+     "domain": "advanced_math",
+     "skill": "nonlinear_graphs",
+     "source": "test-109",
+     "stem": "The graph of the quadratic function  f  is shown in the  xy -plane. What is the  y -coordinate of the  y -intercept of the graph of  f ?"
+    },
+    {
+     "idx": 711,
+     "origin": "insight-gen",
+     "domain": "advanced_math",
+     "skill": "nonlinear_graphs",
+     "source": "test-109",
+     "stem": "The graph of the quadratic function  f  is shown in the  xy -plane. What is the  y -coordinate of the  y -intercept of the graph of  f ?"
+    },
+    {
+     "idx": 712,
+     "origin": "insight-gen",
+     "domain": "advanced_math",
+     "skill": "nonlinear_graphs",
+     "source": "test-109",
+     "stem": "The graph of the quadratic function  f  is shown in the  xy -plane. What is the  y -coordinate of the  y -intercept of the graph of  f ?"
+    },
+    {
+     "idx": 713,
+     "origin": "insight-gen",
+     "domain": "advanced_math",
+     "skill": "nonlinear_graphs",
+     "source": "test-109",
+     "stem": "The graph of the quadratic function  f  is shown in the  xy -plane. What is the  y -coordinate of the  y -intercept of the graph of  f ?"
+    },
+    {
+     "idx": 715,
+     "origin": "insight-gen",
+     "domain": "advanced_math",
+     "skill": "nonlinear_graphs",
+     "source": "test-109",
+     "stem": "The graph of the quadratic function  f  is shown in the  xy -plane. What is the  x -coordinate of the vertex of the graph?"
+    },
+    {
+     "idx": 716,
+     "origin": "insight-gen",
+     "domain": "advanced_math",
+     "skill": "nonlinear_graphs",
+     "source": "test-109",
+     "stem": "The graph of the quadratic function  f  is shown in the  xy -plane. What is the  x -coordinate of the greater of the two  x -intercepts of the graph?"
+    },
+    {
+     "idx": 719,
+     "origin": "insight-gen",
+     "domain": "advanced_math",
+     "skill": "nonlinear_graphs",
+     "source": "test-109",
+     "stem": "The graph of the quadratic function  f  is shown in the  xy -plane. What is the  x -coordinate of the greater of the two  x -intercepts of the graph?"
+    }
+   ]
+  },
+  {
+   "kind": "context",
+   "size": 6,
+   "span": "insight-gen",
+   "members": [
+    {
+     "idx": 87,
+     "origin": "insight-gen",
+     "domain": "advanced_math",
+     "skill": "adv_factor_gcf",
+     "source": "test-71",
+     "stem": "Which of the following expressions is equivalent to  12x^2 + 18x ?"
+    },
+    {
+     "idx": 214,
+     "origin": "insight-gen",
+     "domain": "advanced_math",
+     "skill": "polynomial_expressions",
+     "source": "test-105",
+     "stem": "Which of the following expressions is equivalent to the sum of  8n^2 + 3n - 7  and  5n^2 - 9n + 12 ?"
+    },
+    {
+     "idx": 249,
+     "origin": "insight-gen",
+     "domain": "advanced_math",
+     "skill": "polynomial_expressions",
+     "source": "test-106",
+     "stem": "Which of the following expressions is equivalent to  (4y-7)(2y+5) ?"
+    },
+    {
+     "idx": 700,
+     "origin": "insight-gen",
+     "domain": "advanced_math",
+     "skill": "polynomial_expressions",
+     "source": "test-108",
+     "stem": "Which of the following expressions is equivalent to  -6y^2\\left(7y^4+9y^3\\right) ?"
+    },
+    {
+     "idx": 703,
+     "origin": "insight-gen",
+     "domain": "advanced_math",
+     "skill": "polynomial_expressions",
+     "source": "test-108",
+     "stem": "Which of the following expressions is equivalent to  \\left(\\frac{5}{2}x - 3\\right)(4x + 7) ?"
+    },
+    {
+     "idx": 706,
+     "origin": "insight-gen",
+     "domain": "advanced_math",
+     "skill": "polynomial_expressions",
+     "source": "test-108",
+     "stem": "Which of the following expressions is equivalent to  \\dfrac{x^{\\frac{3}{4}}\\cdot \\sqrt[3]{x^{5}}}{\\sqrt{x}}  for  x>0 ?"
+    }
+   ]
+  },
+  {
+   "kind": "context",
+   "size": 6,
+   "span": "insight-gen",
+   "members": [
+    {
+     "idx": 720,
+     "origin": "insight-gen",
+     "domain": "advanced_math",
+     "skill": "nonlinear_graphs",
+     "source": "test-109",
+     "stem": "Which of the following could be the graph in the  xy -plane of  y = 2(2)^{x} ?"
+    },
+    {
+     "idx": 721,
+     "origin": "insight-gen",
+     "domain": "advanced_math",
+     "skill": "nonlinear_graphs",
+     "source": "test-109",
+     "stem": "Which of the following could be the graph in the  xy -plane of  y = (x - 2)^2 + 1 ?"
+    },
+    {
+     "idx": 722,
+     "origin": "insight-gen",
+     "domain": "advanced_math",
+     "skill": "nonlinear_graphs",
+     "source": "test-109",
+     "stem": "Which of the following could be the graph in the  xy -plane of  y = 2^{x} ?"
+    },
+    {
+     "idx": 723,
+     "origin": "insight-gen",
+     "domain": "advanced_math",
+     "skill": "nonlinear_graphs",
+     "source": "test-109",
+     "stem": "Which of the following could be the graph in the  xy -plane of  y = -(x - 1)^2 - 1 ?"
+    },
+    {
+     "idx": 724,
+     "origin": "insight-gen",
+     "domain": "advanced_math",
+     "skill": "nonlinear_graphs",
+     "source": "test-109",
+     "stem": "Which of the following could be the graph in the  xy -plane of  y = (x - 1)^2 + 1 ?"
+    },
+    {
+     "idx": 725,
+     "origin": "insight-gen",
+     "domain": "advanced_math",
+     "skill": "nonlinear_graphs",
+     "source": "test-109",
+     "stem": "Which of the following could be the graph in the  xy -plane of  y = (x + 2)^2 + 2 ?"
+    }
+   ]
+  },
+  {
+   "kind": "context",
    "size": 4,
    "span": "mod2",
    "members": [
@@ -232,6 +1567,37 @@
      "skill": "function_eval",
      "source": "mod2/test-17",
      "stem": "The function  f  is defined by  f(x) = 2x + a , where  a  is a constant. If  f(f(f(1))) = 43 , what is the value of  f(-2) ?"
+    }
+   ]
+  },
+  {
+   "kind": "context",
+   "size": 3,
+   "span": "insight-gen",
+   "members": [
+    {
+     "idx": 12,
+     "origin": "insight-gen",
+     "domain": "advanced_math",
+     "skill": "open_advanced_math_120",
+     "source": "test-01",
+     "stem": "The equation  (x+9)(2x-8)=0  has two solutions. What is the sum of the two solutions?"
+    },
+    {
+     "idx": 114,
+     "origin": "insight-gen",
+     "domain": "advanced_math",
+     "skill": "adv_quad_factored_solve",
+     "source": "test-74",
+     "stem": "The given equation has two solutions. 2(x-3)(x+5)=0 What is the greater of the two solutions to the given equation?"
+    },
+    {
+     "idx": 696,
+     "origin": "insight-gen",
+     "domain": "advanced_math",
+     "skill": "quadratic_equations",
+     "source": "test-108",
+     "stem": "The equation  6t^2 - 18t - 60 = 0  has two solutions. What is the greater of the two solutions?"
     }
    ]
   },
@@ -300,37 +1666,6 @@
   {
    "kind": "context",
    "size": 3,
-   "span": "insight-gen",
-   "members": [
-    {
-     "idx": 87,
-     "origin": "insight-gen",
-     "domain": "advanced_math",
-     "skill": "adv_factor_gcf",
-     "source": "test-71",
-     "stem": "Which of the following expressions is equivalent to  12x^2 + 18x ?"
-    },
-    {
-     "idx": 214,
-     "origin": "insight-gen",
-     "domain": "advanced_math",
-     "skill": "polynomial_expressions",
-     "source": "test-105",
-     "stem": "Which of the following expressions is equivalent to the sum of  8n^2 + 3n - 7  and  5n^2 - 9n + 12 ?"
-    },
-    {
-     "idx": 249,
-     "origin": "insight-gen",
-     "domain": "advanced_math",
-     "skill": "polynomial_expressions",
-     "source": "test-106",
-     "stem": "Which of the following expressions is equivalent to  (4y-7)(2y+5) ?"
-    }
-   ]
-  },
-  {
-   "kind": "context",
-   "size": 3,
    "span": "mod2",
    "members": [
     {
@@ -365,37 +1700,6 @@
    "span": "mod2",
    "members": [
     {
-     "idx": 404,
-     "origin": "mod2",
-     "domain": "algebra",
-     "skill": "number_of_solutions",
-     "source": "mod2/test-07",
-     "stem": "In the equation  3(4x - 5) - 2x = c(2x + 1) - 7,   c  is a constant. For what value of  c  does the equation have no solution?"
-    },
-    {
-     "idx": 458,
-     "origin": "mod2",
-     "domain": "algebra",
-     "skill": "number_of_solutions",
-     "source": "mod2/test-10",
-     "stem": "In the equation  ax + 11 = 2(a - 3)x + 8 + 3x,   a  is a constant. For which value of  a  does the equation have no solution?"
-    },
-    {
-     "idx": 534,
-     "origin": "mod2",
-     "domain": "algebra",
-     "skill": "number_of_solutions",
-     "source": "mod2/test-13",
-     "stem": "In the equation  7x + 3(x - 1) = k(15x) - 3,   k  is a constant. For what value of  k  does the equation have infinitely many solutions?"
-    }
-   ]
-  },
-  {
-   "kind": "context",
-   "size": 3,
-   "span": "mod2",
-   "members": [
-    {
      "idx": 413,
      "origin": "mod2",
      "domain": "advanced_math",
@@ -418,6 +1722,781 @@
      "skill": "nonlinear_intersection",
      "source": "mod2/test-16",
      "stem": "In the  xy -plane,  c  is a constant and the graphs of  f(x)=x^{2}-cx+5  and  g(x)=6x-cx  intersect at two points. What is the sum of the  x -coordinates of these two points?"
+    }
+   ]
+  },
+  {
+   "kind": "context",
+   "size": 3,
+   "span": "insight-gen",
+   "members": [
+    {
+     "idx": 714,
+     "origin": "insight-gen",
+     "domain": "advanced_math",
+     "skill": "nonlinear_graphs",
+     "source": "test-109",
+     "stem": "The graph of the quadratic function  f  is shown in the  xy -plane. What is the minimum value of  f ?"
+    },
+    {
+     "idx": 717,
+     "origin": "insight-gen",
+     "domain": "advanced_math",
+     "skill": "nonlinear_graphs",
+     "source": "test-109",
+     "stem": "The graph of the quadratic function  f  is shown in the  xy -plane. What is the maximum value of  f ?"
+    },
+    {
+     "idx": 718,
+     "origin": "insight-gen",
+     "domain": "advanced_math",
+     "skill": "nonlinear_graphs",
+     "source": "test-109",
+     "stem": "The graph of the quadratic function  f  is shown in the  xy -plane. What is the maximum value of  f ?"
+    }
+   ]
+  },
+  {
+   "kind": "context",
+   "size": 3,
+   "span": "insight-gen",
+   "members": [
+    {
+     "idx": 727,
+     "origin": "insight-gen",
+     "domain": "advanced_math",
+     "skill": "nonlinear_graphs",
+     "source": "test-109",
+     "stem": "The graph of the function  f  shown in the  xy -plane is a translation of the parent function  y = x^2 . Which equation defines  f ?"
+    },
+    {
+     "idx": 729,
+     "origin": "insight-gen",
+     "domain": "advanced_math",
+     "skill": "nonlinear_graphs",
+     "source": "test-109",
+     "stem": "The graph of the function  f  shown in the  xy -plane is a translation of the parent function  y = -x^2 . Which equation defines  f ?"
+    },
+    {
+     "idx": 730,
+     "origin": "insight-gen",
+     "domain": "advanced_math",
+     "skill": "nonlinear_graphs",
+     "source": "test-109",
+     "stem": "The graph of the function  f  shown in the  xy -plane is a translation of the parent function  y = 2x^2 . Which equation defines  f ?"
+    }
+   ]
+  },
+  {
+   "kind": "context",
+   "size": 3,
+   "span": "insight-gen",
+   "members": [
+    {
+     "idx": 780,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "area_volume",
+     "source": "test-113",
+     "stem": "A rectangle has a length of  17  and a width of  12 . What is the perimeter of the rectangle?"
+    },
+    {
+     "idx": 819,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "area_volume",
+     "source": "test-114",
+     "stem": "A rectangle has a length of  13  and a width of  8 . What is the area of the rectangle?"
+    },
+    {
+     "idx": 825,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "area_volume",
+     "source": "test-114",
+     "stem": "A rectangle has a length of  27  and a width of  14 . What is the perimeter of the rectangle?"
+    }
+   ]
+  },
+  {
+   "kind": "context",
+   "size": 3,
+   "span": "insight-gen",
+   "members": [
+    {
+     "idx": 836,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "solid_figures",
+     "source": "test-115",
+     "stem": "The right rectangular prism shown has the edge lengths marked, in centimeters. What is the volume of the prism, in cubic centimeters?"
+    },
+    {
+     "idx": 837,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "solid_figures",
+     "source": "test-115",
+     "stem": "The right rectangular prism shown has the edge lengths marked, in centimeters. What is the volume of the prism, in cubic centimeters?"
+    },
+    {
+     "idx": 838,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "solid_figures",
+     "source": "test-115",
+     "stem": "The right rectangular prism shown has the edge lengths marked, in centimeters. What is the volume of the prism, in cubic centimeters?"
+    }
+   ]
+  },
+  {
+   "kind": "context",
+   "size": 3,
+   "span": "insight-gen",
+   "members": [
+    {
+     "idx": 839,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "solid_figures",
+     "source": "test-115",
+     "stem": "The right rectangular pyramid shown has the base edge lengths and height marked, in centimeters. What is the volume of the pyramid, in cubic centimeters?"
+    },
+    {
+     "idx": 841,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "solid_figures",
+     "source": "test-115",
+     "stem": "The right rectangular pyramid shown has the base edge lengths and height marked, in centimeters. What is the volume of the pyramid, in cubic centimeters?"
+    },
+    {
+     "idx": 843,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "solid_figures",
+     "source": "test-115",
+     "stem": "The right rectangular pyramid shown has the base edge lengths and height marked, in centimeters. What is the volume of the pyramid, in cubic centimeters?"
+    }
+   ]
+  },
+  {
+   "kind": "context",
+   "size": 3,
+   "span": "insight-gen",
+   "members": [
+    {
+     "idx": 840,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "solid_figures",
+     "source": "test-115",
+     "stem": "The cube shown has its edge length marked, in inches. What is the volume of the cube, in cubic inches?"
+    },
+    {
+     "idx": 842,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "solid_figures",
+     "source": "test-115",
+     "stem": "The cube shown has its edge length marked, in inches. What is the volume of the cube, in cubic inches?"
+    },
+    {
+     "idx": 844,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "solid_figures",
+     "source": "test-115",
+     "stem": "The cube shown has its edge length marked, in inches. What is the volume of the cube, in cubic inches?"
+    }
+   ]
+  },
+  {
+   "kind": "context",
+   "size": 3,
+   "span": "insight-gen",
+   "members": [
+    {
+     "idx": 845,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "solid_figures",
+     "source": "test-115",
+     "stem": "The right triangular prism shown has a triangular cross-section with the base and height marked, and a length marked, in feet. What is the volume of the prism, in cubic feet?"
+    },
+    {
+     "idx": 846,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "solid_figures",
+     "source": "test-115",
+     "stem": "The right triangular prism shown has a triangular cross-section with the base and height marked, and a length marked, in feet. What is the volume of the prism, in cubic feet?"
+    },
+    {
+     "idx": 847,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "solid_figures",
+     "source": "test-115",
+     "stem": "The right triangular prism shown has a triangular cross-section with the base and height marked, and a length marked, in feet. What is the volume of the prism, in cubic feet?"
+    }
+   ]
+  },
+  {
+   "kind": "context",
+   "size": 3,
+   "span": "insight-gen",
+   "members": [
+    {
+     "idx": 848,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "solid_figures",
+     "source": "test-115",
+     "stem": "The right rectangular prism shown has a volume of 24 cubic feet. Two of its edge lengths are marked, in feet. What is the value of  h ?"
+    },
+    {
+     "idx": 851,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "solid_figures",
+     "source": "test-115",
+     "stem": "The right rectangular prism shown has a volume of 64 cubic feet. Two of its edge lengths are marked, in feet. What is the value of  h ?"
+    },
+    {
+     "idx": 856,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "solid_figures",
+     "source": "test-115",
+     "stem": "The right rectangular prism shown has a volume of 126 cubic feet. Two of its edge lengths are marked, in feet. What is the value of  h ?"
+    }
+   ]
+  },
+  {
+   "kind": "context",
+   "size": 3,
+   "span": "insight-gen",
+   "members": [
+    {
+     "idx": 849,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "solid_figures",
+     "source": "test-115",
+     "stem": "The cylinder shown has the radius and height marked, in centimeters. The volume of the cylinder is  k\\pi  cubic centimeters. What is the value of  k ?"
+    },
+    {
+     "idx": 852,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "solid_figures",
+     "source": "test-115",
+     "stem": "The cylinder shown has the radius and height marked, in centimeters. The volume of the cylinder is  k\\pi  cubic centimeters. What is the value of  k ?"
+    },
+    {
+     "idx": 854,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "solid_figures",
+     "source": "test-115",
+     "stem": "The cylinder shown has the radius and height marked, in centimeters. The volume of the cylinder is  k\\pi  cubic centimeters. What is the value of  k ?"
+    }
+   ]
+  },
+  {
+   "kind": "context",
+   "size": 3,
+   "span": "insight-gen",
+   "members": [
+    {
+     "idx": 850,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "solid_figures",
+     "source": "test-115",
+     "stem": "The right rectangular prism shown has the edge lengths marked, in meters. What is the surface area of the prism, in square meters?"
+    },
+    {
+     "idx": 853,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "solid_figures",
+     "source": "test-115",
+     "stem": "The right rectangular prism shown has the edge lengths marked, in meters. What is the surface area of the prism, in square meters?"
+    },
+    {
+     "idx": 855,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "solid_figures",
+     "source": "test-115",
+     "stem": "The right rectangular prism shown has the edge lengths marked, in meters. What is the surface area of the prism, in square meters?"
+    }
+   ]
+  },
+  {
+   "kind": "context",
+   "size": 3,
+   "span": "insight-gen",
+   "members": [
+    {
+     "idx": 857,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "Rectangle  ABCD  shown has the side lengths marked, in inches. What is the length, in inches, of diagonal  \\overline{AC} ?"
+    },
+    {
+     "idx": 860,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "Rectangle  ABCD  shown has the side lengths marked, in inches. What is the length, in inches, of diagonal  \\overline{AC} ?"
+    },
+    {
+     "idx": 862,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "Rectangle  ABCD  shown has the side lengths marked, in inches. What is the length, in inches, of diagonal  \\overline{AC} ?"
+    }
+   ]
+  },
+  {
+   "kind": "context",
+   "size": 3,
+   "span": "insight-gen",
+   "members": [
+    {
+     "idx": 858,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "In triangle  ABC  shown (not drawn to scale), side  \\overline{BC}  is extended to  D . If  m\\angle A = 68^\\circ  and  m\\angle B = 55^\\circ , what is the measure, in degrees, of exterior angle  \\angle ACD ?"
+    },
+    {
+     "idx": 859,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "In triangle  ABC  shown (not drawn to scale), side  \\overline{BC}  is extended to  D . If  m\\angle A = 33^\\circ  and  m\\angle B = 47^\\circ , what is the measure, in degrees, of exterior angle  \\angle ACD ?"
+    },
+    {
+     "idx": 861,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "In triangle  ABC  shown (not drawn to scale), side  \\overline{BC}  is extended to  D . If  m\\angle A = 31^\\circ  and  m\\angle B = 36^\\circ , what is the measure, in degrees, of exterior angle  \\angle ACD ?"
+    }
+   ]
+  },
+  {
+   "kind": "context",
+   "size": 3,
+   "span": "insight-gen",
+   "members": [
+    {
+     "idx": 863,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "In trapezoid  ABCD  shown,  \\overline{AB}\\parallel\\overline{DC}  with  AB = 8  and  DC = 12  (in centimeters). The midsegment  \\overline{MN}  joins the midpoints of the two legs. What is the length, in centimeters, of  \\overline{MN} ?"
+    },
+    {
+     "idx": 864,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "In trapezoid  ABCD  shown,  \\overline{AB}\\parallel\\overline{DC}  with  AB = 18  and  DC = 10  (in centimeters). The midsegment  \\overline{MN}  joins the midpoints of the two legs. What is the length, in centimeters, of  \\overline{MN} ?"
+    },
+    {
+     "idx": 865,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "In trapezoid  ABCD  shown,  \\overline{AB}\\parallel\\overline{DC}  with  AB = 9  and  DC = 13  (in centimeters). The midsegment  \\overline{MN}  joins the midpoints of the two legs. What is the length, in centimeters, of  \\overline{MN} ?"
+    }
+   ]
+  },
+  {
+   "kind": "context",
+   "size": 3,
+   "span": "insight-gen",
+   "members": [
+    {
+     "idx": 866,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "In triangle  ABC  shown,  \\overline{DE}\\parallel\\overline{BC}  with  D  on  \\overline{AB}  and  E  on  \\overline{AC} . The marked lengths are in centimeters. What is the length, in centimeters, of  \\overline{EC} ?"
+    },
+    {
+     "idx": 889,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "In triangle  ABC  shown,  \\overline{DE}\\parallel\\overline{BC}  with  D  on  \\overline{AB}  and  E  on  \\overline{AC} . The marked lengths are in centimeters. What is the length, in centimeters, of  \\overline{EC} ?"
+    },
+    {
+     "idx": 892,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "In triangle  ABC  shown,  \\overline{DE}\\parallel\\overline{BC}  with  D  on  \\overline{AB}  and  E  on  \\overline{AC} . The marked lengths are in centimeters. What is the length, in centimeters, of  \\overline{EC} ?"
+    }
+   ]
+  },
+  {
+   "kind": "context",
+   "size": 3,
+   "span": "insight-gen",
+   "members": [
+    {
+     "idx": 867,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "In parallelogram  ABCD  shown (not drawn to scale), diagonal  \\overline{AC}  is drawn. If  m\\angle ABC = 72^\\circ  and  m\\angle DAC = 65^\\circ , what is the measure, in degrees, of  \\angle CAB ?"
+    },
+    {
+     "idx": 872,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "In parallelogram  ABCD  shown (not drawn to scale), diagonal  \\overline{AC}  is drawn. If  m\\angle ABC = 50^\\circ  and  m\\angle DAC = 51^\\circ , what is the measure, in degrees, of  \\angle CAB ?"
+    },
+    {
+     "idx": 891,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "In parallelogram  ABCD  shown (not drawn to scale), diagonal  \\overline{AC}  is drawn. If  m\\angle ABC = 75^\\circ  and  m\\angle DAC = 33^\\circ , what is the measure, in degrees, of  \\angle CAB ?"
+    }
+   ]
+  },
+  {
+   "kind": "context",
+   "size": 3,
+   "span": "insight-gen",
+   "members": [
+    {
+     "idx": 868,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "A square is inscribed in a circle of radius  7  (shown), with all four vertices on the circle. What is the area of the square?"
+    },
+    {
+     "idx": 873,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "A square is inscribed in a circle of radius  3  (shown), with all four vertices on the circle. What is the area of the square?"
+    },
+    {
+     "idx": 890,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "A square is inscribed in a circle of radius  9  (shown), with all four vertices on the circle. What is the area of the square?"
+    }
+   ]
+  },
+  {
+   "kind": "context",
+   "size": 3,
+   "span": "insight-gen",
+   "members": [
+    {
+     "idx": 869,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "A circle is inscribed in a square with side length  14  (shown), touching all four sides. The area of the circle is  k\\pi . What is the value of  k ?"
+    },
+    {
+     "idx": 871,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "A circle is inscribed in a square with side length  10  (shown), touching all four sides. The area of the circle is  k\\pi . What is the value of  k ?"
+    },
+    {
+     "idx": 875,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "A circle is inscribed in a square with side length  4  (shown), touching all four sides. The area of the circle is  k\\pi . What is the value of  k ?"
+    }
+   ]
+  },
+  {
+   "kind": "context",
+   "size": 3,
+   "span": "insight-gen",
+   "members": [
+    {
+     "idx": 870,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "The rhombus shown has perpendicular diagonals. One diagonal has length  24  and each side has length  13  (in inches). What is the length, in inches, of the other diagonal?"
+    },
+    {
+     "idx": 874,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "The rhombus shown has perpendicular diagonals. One diagonal has length  16  and each side has length  17  (in inches). What is the length, in inches, of the other diagonal?"
+    },
+    {
+     "idx": 887,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "The rhombus shown has perpendicular diagonals. One diagonal has length  12  and each side has length  10  (in inches). What is the length, in inches, of the other diagonal?"
+    }
+   ]
+  },
+  {
+   "kind": "context",
+   "size": 3,
+   "span": "insight-gen",
+   "members": [
+    {
+     "idx": 876,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "In right triangle  ABC  shown, the altitude from the right angle at  C  meets the hypotenuse  \\overline{AB}  at  H . If  AH = 4  and  HB = 25 , what is the length of  \\overline{CH} ?"
+    },
+    {
+     "idx": 883,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "In right triangle  ABC  shown, the altitude from the right angle at  C  meets the hypotenuse  \\overline{AB}  at  H . If  AH = 5  and  HB = 20 , what is the length of  \\overline{CH} ?"
+    },
+    {
+     "idx": 886,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "In right triangle  ABC  shown, the altitude from the right angle at  C  meets the hypotenuse  \\overline{AB}  at  H . If  AH = 3  and  HB = 12 , what is the length of  \\overline{CH} ?"
+    }
+   ]
+  },
+  {
+   "kind": "context",
+   "size": 3,
+   "span": "insight-gen",
+   "members": [
+    {
+     "idx": 877,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "Chords  \\overline{AB}  and  \\overline{CD}  intersect at point  P  inside the circle (shown). Using the marked segment lengths, what is the length of  \\overline{PD} ?"
+    },
+    {
+     "idx": 880,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "Chords  \\overline{AB}  and  \\overline{CD}  intersect at point  P  inside the circle (shown). Using the marked segment lengths, what is the length of  \\overline{PD} ?"
+    },
+    {
+     "idx": 884,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "Chords  \\overline{AB}  and  \\overline{CD}  intersect at point  P  inside the circle (shown). Using the marked segment lengths, what is the length of  \\overline{PD} ?"
+    }
+   ]
+  },
+  {
+   "kind": "context",
+   "size": 3,
+   "span": "insight-gen",
+   "members": [
+    {
+     "idx": 878,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "From external point  P , segment  \\overline{PT}  is tangent to the circle with center  O  at  T  (so  \\overline{PT}\\perp\\overline{OT} ). If the radius is  5  and  OP = 13  (shown), what is the length of  \\overline{PT} ?"
+    },
+    {
+     "idx": 881,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "From external point  P , segment  \\overline{PT}  is tangent to the circle with center  O  at  T  (so  \\overline{PT}\\perp\\overline{OT} ). If the radius is  9  and  OP = 15  (shown), what is the length of  \\overline{PT} ?"
+    },
+    {
+     "idx": 885,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "From external point  P , segment  \\overline{PT}  is tangent to the circle with center  O  at  T  (so  \\overline{PT}\\perp\\overline{OT} ). If the radius is  3  and  OP = 5  (shown), what is the length of  \\overline{PT} ?"
+    }
+   ]
+  },
+  {
+   "kind": "context",
+   "size": 3,
+   "span": "insight-gen",
+   "members": [
+    {
+     "idx": 879,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "In the circle with center  O  shown,  \\overline{AB}  is a diameter and  C  lies on the circle. If  m\\angle BAC = 46^\\circ , what is the measure, in degrees, of  \\angle ABC ?"
+    },
+    {
+     "idx": 882,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "In the circle with center  O  shown,  \\overline{AB}  is a diameter and  C  lies on the circle. If  m\\angle BAC = 59^\\circ , what is the measure, in degrees, of  \\angle ABC ?"
+    },
+    {
+     "idx": 888,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "composite_figures",
+     "source": "test-117",
+     "stem": "In the circle with center  O  shown,  \\overline{AB}  is a diameter and  C  lies on the circle. If  m\\angle BAC = 43^\\circ , what is the measure, in degrees, of  \\angle ABC ?"
+    }
+   ]
+  },
+  {
+   "kind": "context",
+   "size": 3,
+   "span": "insight-gen",
+   "members": [
+    {
+     "idx": 893,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "circle_figures",
+     "source": "test-116",
+     "stem": "In circle  O  shown,  \\overline{CA}  and  \\overline{CB}  are chords and the central angle  \\angle AOB  is marked. What is the measure, in degrees, of the inscribed angle  \\angle ACB  (marked  x^\\circ )?"
+    },
+    {
+     "idx": 898,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "circle_figures",
+     "source": "test-116",
+     "stem": "In circle  O  shown,  \\overline{CA}  and  \\overline{CB}  are chords and the central angle  \\angle AOB  is marked. What is the measure, in degrees, of the inscribed angle  \\angle ACB  (marked  x^\\circ )?"
+    },
+    {
+     "idx": 899,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "circle_figures",
+     "source": "test-116",
+     "stem": "In circle  O  shown,  \\overline{CA}  and  \\overline{CB}  are chords and the central angle  \\angle AOB  is marked. What is the measure, in degrees, of the inscribed angle  \\angle ACB  (marked  x^\\circ )?"
+    }
+   ]
+  },
+  {
+   "kind": "context",
+   "size": 3,
+   "span": "insight-gen",
+   "members": [
+    {
+     "idx": 894,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "circle_figures",
+     "source": "test-116",
+     "stem": "In the circle shown with center  O , the marked central angle subtends the bold arc, and the radius is marked. The length of the bold arc is  k\\pi . What is the value of  k ?"
+    },
+    {
+     "idx": 897,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "circle_figures",
+     "source": "test-116",
+     "stem": "In the circle shown with center  O , the marked central angle subtends the bold arc, and the radius is marked. The length of the bold arc is  k\\pi . What is the value of  k ?"
+    },
+    {
+     "idx": 900,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "circle_figures",
+     "source": "test-116",
+     "stem": "In the circle shown with center  O , the marked central angle subtends the bold arc, and the radius is marked. The length of the bold arc is  k\\pi . What is the value of  k ?"
+    }
+   ]
+  },
+  {
+   "kind": "context",
+   "size": 3,
+   "span": "insight-gen",
+   "members": [
+    {
+     "idx": 895,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "circle_figures",
+     "source": "test-116",
+     "stem": "In the circle shown with center  O , the shaded sector has the marked central angle and radius. The area of the shaded sector is  k\\pi . What is the value of  k ?"
+    },
+    {
+     "idx": 896,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "circle_figures",
+     "source": "test-116",
+     "stem": "In the circle shown with center  O , the shaded sector has the marked central angle and radius. The area of the shaded sector is  k\\pi . What is the value of  k ?"
+    },
+    {
+     "idx": 901,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "circle_figures",
+     "source": "test-116",
+     "stem": "In the circle shown with center  O , the shaded sector has the marked central angle and radius. The area of the shaded sector is  k\\pi . What is the value of  k ?"
     }
    ]
   },
@@ -473,6 +2552,29 @@
    "span": "insight-gen",
    "members": [
     {
+     "idx": 33,
+     "origin": "insight-gen",
+     "domain": "advanced_math",
+     "skill": "nonlinear_system",
+     "source": "test-02",
+     "stem": "What is the sum of the solutions to the equation  x^2 - 3x - 28 = 0 ?"
+    },
+    {
+     "idx": 690,
+     "origin": "insight-gen",
+     "domain": "advanced_math",
+     "skill": "quadratic_equations",
+     "source": "test-108",
+     "stem": "What is the sum of the solutions to the equation  (4x+28)(3x-9)=0 ?"
+    }
+   ]
+  },
+  {
+   "kind": "context",
+   "size": 2,
+   "span": "insight-gen",
+   "members": [
+    {
      "idx": 58,
      "origin": "insight-gen",
      "domain": "algebra",
@@ -510,6 +2612,52 @@
      "skill": "open_nonlinear_equations_systems_1",
      "source": "test-75",
      "stem": "The solutions to the equation  (x-2)(x-9)=0  are  p  and  q , where  p<q . What is the value of  q-p ?"
+    }
+   ]
+  },
+  {
+   "kind": "context",
+   "size": 2,
+   "span": "insight-gen",
+   "members": [
+    {
+     "idx": 140,
+     "origin": "insight-gen",
+     "domain": "advanced_math",
+     "skill": "quad_factored",
+     "source": "test-81",
+     "stem": "What is the positive solution to the equation  (2x-3)(x+4)=0 ?"
+    },
+    {
+     "idx": 697,
+     "origin": "insight-gen",
+     "domain": "advanced_math",
+     "skill": "quadratic_equations",
+     "source": "test-108",
+     "stem": "What is the positive solution to the equation  2h^2 - 9h - 18 = 0 ?"
+    }
+   ]
+  },
+  {
+   "kind": "context",
+   "size": 2,
+   "span": "insight-gen",
+   "members": [
+    {
+     "idx": 217,
+     "origin": "insight-gen",
+     "domain": "advanced_math",
+     "skill": "nonlinear_functions_models",
+     "source": "test-105",
+     "stem": "The function  g  is defined by  g(p) = 2p^2 - 5p + 8 . What is the value of  g(-3) ?"
+    },
+    {
+     "idx": 693,
+     "origin": "insight-gen",
+     "domain": "advanced_math",
+     "skill": "nonlinear_functions_models",
+     "source": "test-108",
+     "stem": "The function  f  is defined by  f(t) = 5 \\cdot 3^{t} . What is the value of  f(4) ?"
     }
    ]
   },
@@ -878,6 +3026,75 @@
      "skill": "inequality_feasible",
      "source": "mod2/test-17",
      "stem": "Consider the system of inequalities  \\begin{cases} y > \\tfrac{1}{2}x + 1 \\\\ y \\le -2x + 10. \\end{cases}  The table lists four candidate points. Which point is a solution to the system?"
+    }
+   ]
+  },
+  {
+   "kind": "context",
+   "size": 2,
+   "span": "insight-gen",
+   "members": [
+    {
+     "idx": 726,
+     "origin": "insight-gen",
+     "domain": "advanced_math",
+     "skill": "nonlinear_graphs",
+     "source": "test-109",
+     "stem": "The graph shown models the height of a diver above the water,  y , in feet,  x  seconds after it is released from the board. What is the best interpretation of the vertex of the graph?"
+    },
+    {
+     "idx": 731,
+     "origin": "insight-gen",
+     "domain": "advanced_math",
+     "skill": "nonlinear_graphs",
+     "source": "test-109",
+     "stem": "The graph shown models the height of a diver above the water,  y , in feet,  x  seconds after it is released from the board. What is the best interpretation of the vertex of the graph?"
+    }
+   ]
+  },
+  {
+   "kind": "context",
+   "size": 2,
+   "span": "insight-gen",
+   "members": [
+    {
+     "idx": 779,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "area_volume",
+     "source": "test-113",
+     "stem": "A rectangle has length  17  and width  12 . What is the area of the rectangle?"
+    },
+    {
+     "idx": 821,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "area_volume",
+     "source": "test-114",
+     "stem": "A rectangle has length  7  and height  h = 4\\sqrt{3} . What is the area of the rectangle?"
+    }
+   ]
+  },
+  {
+   "kind": "context",
+   "size": 2,
+   "span": "insight-gen",
+   "members": [
+    {
+     "idx": 783,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "lines_angles_triangles",
+     "source": "test-113",
+     "stem": "Parallel lines  \\ell  and  m  are cut by transversal  t . Two interior angles lie on the same side of  t : one measures  73^\\circ  and the other measures  y^\\circ . What is the value of  y ?"
+    },
+    {
+     "idx": 830,
+     "origin": "insight-gen",
+     "domain": "geometry_trig",
+     "skill": "lines_angles_triangles",
+     "source": "test-114",
+     "stem": "Parallel lines  m  and  n  are cut by a transversal. Two interior angles lie on the same side of the transversal: one measures  137^\\circ , and the other measures  y^\\circ . What is the value of  y ?"
     }
    ]
   }
