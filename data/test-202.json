@@ -6,9 +6,9 @@
       "id": 1,
       "program": "SAT",
       "domain": "geometry_trig",
-      "band": "B4",
-      "target_band": "B4",
-      "statementId": null,
+      "band": "B1",
+      "target_band": "B1",
+      "statementId": "GEO.B1.s1",
       "skill": "solid_figures",
       "type": "spr",
       "stem": [
@@ -62,15 +62,20 @@
         "3d"
       ],
       "_familyId": "fam_4f3d4a92b3",
-      "_variantId": "fam_4f3d4a92b3#003d84ce"
+      "_variantId": "fam_4f3d4a92b3#003d84ce",
+      "difficulty": {
+        "scalePoint": 340,
+        "band": "B1",
+        "method": "rubric_prior"
+      }
     },
     {
       "id": 2,
       "program": "SAT",
       "domain": "geometry_trig",
-      "band": "B4",
-      "target_band": "B4",
-      "statementId": null,
+      "band": "B6",
+      "target_band": "B6",
+      "statementId": "GEO.B6.s1",
       "skill": "solid_figures",
       "type": "spr",
       "stem": [
@@ -146,15 +151,20 @@
         "3d"
       ],
       "_familyId": "fam_771904c643",
-      "_variantId": "fam_771904c643#a0a1189c"
+      "_variantId": "fam_771904c643#a0a1189c",
+      "difficulty": {
+        "scalePoint": 645,
+        "band": "B6",
+        "method": "rubric_prior"
+      }
     },
     {
       "id": 3,
       "program": "SAT",
       "domain": "geometry_trig",
-      "band": "B5",
-      "target_band": "B5",
-      "statementId": null,
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "GEO.B7.s3",
       "skill": "circle_figures",
       "type": "spr",
       "stem": [
@@ -238,15 +248,20 @@
         "2d"
       ],
       "_familyId": "fam_957b06d804",
-      "_variantId": "fam_957b06d804#024062e8"
+      "_variantId": "fam_957b06d804#024062e8",
+      "difficulty": {
+        "scalePoint": 740,
+        "band": "B7",
+        "method": "rubric_prior"
+      }
     },
     {
       "id": 4,
       "program": "SAT",
       "domain": "geometry_trig",
-      "band": "B6",
-      "target_band": "B6",
-      "statementId": null,
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "GEO.B7.s3",
       "skill": "circle_figures",
       "type": "spr",
       "stem": [
@@ -350,15 +365,20 @@
         "2d"
       ],
       "_familyId": "fam_6dcc4ab426",
-      "_variantId": "fam_6dcc4ab426#3a166105"
+      "_variantId": "fam_6dcc4ab426#3a166105",
+      "difficulty": {
+        "scalePoint": 740,
+        "band": "B7",
+        "method": "rubric_prior"
+      }
     },
     {
       "id": 5,
       "program": "SAT",
       "domain": "geometry_trig",
-      "band": "B5",
-      "target_band": "B5",
-      "statementId": null,
+      "band": "B7",
+      "target_band": "B7",
+      "statementId": "GEO.B7.s3",
       "skill": "composite_figures",
       "type": "spr",
       "stem": [
@@ -517,7 +537,12 @@
         "2d"
       ],
       "_familyId": "fam_365519ea75",
-      "_variantId": "fam_365519ea75#78243b6c"
+      "_variantId": "fam_365519ea75#78243b6c",
+      "difficulty": {
+        "scalePoint": 740,
+        "band": "B7",
+        "method": "rubric_prior"
+      }
     }
   ]
 }
