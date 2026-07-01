@@ -24,11 +24,19 @@ export function make(inputs, r) {
   const rr = a * x + q * y;
   const ref = inputs.pt.ref || { segs: [tx("the given point")], prose: "the given point" };
   const refSegs = ref.segs.map((s, i) => (i === 0 && s.t === "text" ? { ...s, v: s.v.charAt(0).toUpperCase() + s.v.slice(1) } : s));
+  // phrasing: keep C1's proven "…is (x, y). If ax+qy=rr…" ONLY when the upstream point
+  // is literally named (x, y) (a system's solution); otherwise "…lies on the graph of…"
+  // (the "(x, y)" naming collides with the plane's variables for e.g. an x-intercept —
+  // an authenticity tell the distribution judge flagged).
+  const isSolutionRef = /solution/.test(ref.prose);
+  const stemSegs = isSolutionRef
+    ? [par(...refSegs, tx(" is "), mt("(x, y)"), tx(". If "), mt(`ax ${yt(q)} = ${rr}`), tx(", what is the value of "), mt("a"), tx("?"))]
+    : [par(...refSegs, tx(" lies on the graph of "), mt(`ax ${yt(q)} = ${rr}`), tx(", where "), mt("a"), tx(" is a constant. What is the value of "), mt("a"), tx("?"))];
   return {
     params: { q, rr },
     outputs: { a: qty("value", a) },
-    stemSegs: [par(...refSegs, tx(" is "), mt("(x, y)"), tx(". If "), mt(`ax ${yt(q)} = ${rr}`), tx(", what is the value of "), mt("a"), tx("?"))],
-    prose: `${ref.prose} is (x, y) and satisfies ax ${q < 0 ? "−" : "+"} ${Math.abs(q)}y = ${rr} for a constant a; find a`,
+    stemSegs,
+    prose: `${ref.prose} lies on ax ${q < 0 ? "−" : "+"} ${Math.abs(q)}y = ${rr} for a constant a; find a`,
     solutionSegs: [par(tx("Substitute the solution into "), mt(`ax ${yt(q)} = ${rr}`), tx(":  "), mt(`a = ${a}`), tx("."))],
     _secret: { a },
   };
