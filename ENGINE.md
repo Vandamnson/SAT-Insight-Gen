@@ -35,6 +35,8 @@ _Branch `engine` · 2026-06-24 · Mission: a **cheap, excellent SAT resource for
 - **Grammar map is coarse** (32 released items) → `grammar.mjs targets` lists under-occupied in-distribution cells; `data/engine/released-ingest.jsonl` is the ingestion path for corpus growth.
 - **Misconception tags**: author contract now emits per-wrong-choice tags (optional field); chains are SPR (no distractors). Full deterministic tagging for harness MCQs is future work.
 
+- **SCALE TEST (n=50, SCALE-TEST-50.md)**: 5 mutually-blind clean-room agents × 10 GEO items. Correctness 50/50 (blind solve), surface novelty held (0 dup-level pairs) — but two failure modes appeared that the n=10 pilot hid: **skill-canon convergence** (5/5 agents wrote prism-volume; ~20/50 items in 6 repeated skill groups = undeclared family variants — v1's collapse one level up) and **authenticity dispersion** (sample mean 6.6 vs pilot 7.9; items as low as 3). Empirically grounds the inverted architecture: solo agents author; the engine's ledger, floors, independent verification, and parameterizer industrialize.
+
 ## Run it
 ```bash
 node engine/verify/selftest.mjs            # the hard gate: steps + chains (exit code)
