@@ -1,0 +1,609 @@
+[
+ {
+  "group": "prism-volume-forward",
+  "members": [
+   "a1#1",
+   "a2#1",
+   "a3#1",
+   "a4#1",
+   "a5#1",
+   "pilot#1"
+  ],
+  "kinOf": "prism_volume_fig",
+  "subdomain": "area_volume",
+  "note": "multiply three given edge lengths for rectangular-prism volume"
+ },
+ {
+  "group": "parallel-lines-transversal-single-angle",
+  "members": [
+   "a1#2",
+   "a2#2",
+   "a3#2",
+   "a4#2",
+   "a5#2",
+   "pilot#2"
+  ],
+  "kinOf": null,
+  "subdomain": "lines_angles_triangles",
+  "note": "one parallel-line angle relationship (equal or supplementary) solves x in a single step"
+ },
+ {
+  "group": "pythagorean-find-hypotenuse",
+  "members": [
+   "a1#3",
+   "a3#3",
+   "a5#3",
+   "pilot#3"
+  ],
+  "kinOf": null,
+  "subdomain": "right_triangles_trig",
+  "note": "two legs given; Pythagorean theorem forward to find the hypotenuse"
+ },
+ {
+  "group": "similar-triangles-parallel-segment-find-base",
+  "members": [
+   "a1#4",
+   "a2#7",
+   "a3#7",
+   "a5#4",
+   "pilot#4"
+  ],
+  "kinOf": null,
+  "subdomain": "lines_angles_triangles",
+  "note": "DE parallel BC nested triangles; proportion (AD+DB)/AD = BC/DE to find BC"
+ },
+ {
+  "group": "circle-equation-from-center-and-point",
+  "members": [
+   "a1#5",
+   "a2#5",
+   "a3#5",
+   "a4#5",
+   "a5#5"
+  ],
+  "kinOf": null,
+  "subdomain": "circles",
+  "note": "radius = distance(center, on-circle point); write the standard circle equation"
+ },
+ {
+  "group": "trig-ratio-find-missing-side-then-ratio",
+  "members": [
+   "a1#6",
+   "a5#6",
+   "pilot#6"
+  ],
+  "kinOf": null,
+  "subdomain": "right_triangles_trig",
+  "note": "two sides given; Pythagorean for the third side, then form the requested trig ratio"
+ },
+ {
+  "group": "composite-area-rectangle-plus-semicircle",
+  "members": [
+   "a1#7"
+  ],
+  "kinOf": null,
+  "subdomain": "area_volume",
+  "note": "add rectangle area and semicircle area (Norman-window)"
+ },
+ {
+  "group": "tangent-plus-radius-then-near-secant-segment",
+  "members": [
+   "a1#8"
+  ],
+  "kinOf": null,
+  "subdomain": "circles",
+  "note": "inverse-Pythagorean for radius, then subtract radius from external distance for near segment PB"
+ },
+ {
+  "group": "composite-cylinder-hemisphere-volume-inverse",
+  "members": [
+   "a1#9"
+  ],
+  "kinOf": null,
+  "subdomain": "area_volume",
+  "note": "set cylinder+hemisphere volume equal to given, solve for cylinder height"
+ },
+ {
+  "group": "altitude-to-hypotenuse-trig-ratio-from-segments",
+  "members": [
+   "a1#10",
+   "a3#9"
+  ],
+  "kinOf": null,
+  "subdomain": "right_triangles_trig",
+  "note": "altitude to hypotenuse; from the two hypotenuse segments find a base-angle trig ratio (length step then ratio)"
+ },
+ {
+  "group": "triangle-exterior-angle",
+  "members": [
+   "a2#3"
+  ],
+  "kinOf": null,
+  "subdomain": "lines_angles_triangles",
+  "note": "exterior angle equals the sum of the two remote interior angles, single step"
+ },
+ {
+  "group": "special-right-30-60-90-leg-to-hypotenuse",
+  "members": [
+   "a2#4"
+  ],
+  "kinOf": null,
+  "subdomain": "right_triangles_trig",
+  "note": "30-60-90 ratio: given a leg, find the hypotenuse"
+ },
+ {
+  "group": "composite-perimeter-rectangle-plus-semicircle",
+  "members": [
+   "a2#6"
+  ],
+  "kinOf": null,
+  "subdomain": "area_volume",
+  "note": "add the straight sides and the semicircular arc for the perimeter"
+ },
+ {
+  "group": "tangent-tangent-vertex-angle-to-minor-arc",
+  "members": [
+   "a2#8",
+   "a5#8"
+  ],
+  "kinOf": null,
+  "subdomain": "circles",
+  "note": "two tangents; minor arc (central angle) = 180 minus the vertex angle at P"
+ },
+ {
+  "group": "composite-cylinder-hemisphere-volume-forward",
+  "members": [
+   "a2#9"
+  ],
+  "kinOf": null,
+  "subdomain": "area_volume",
+  "note": "sum cylinder and hemisphere volumes (deduce cylinder height from total height)"
+ },
+ {
+  "group": "altitude-config-angle-transfer-trig-from-legs",
+  "members": [
+   "a2#10"
+  ],
+  "kinOf": null,
+  "subdomain": "right_triangles_trig",
+  "note": "altitude to hypotenuse; angle at foot equals a base angle, read tan from the given legs"
+ },
+ {
+  "group": "triangle-angle-sum-with-cevian-split-angle",
+  "members": [
+   "a3#4"
+  ],
+  "kinOf": null,
+  "subdomain": "lines_angles_triangles",
+  "note": "sum the cevian-split vertex angle, then triangle angle sum for the third angle"
+ },
+ {
+  "group": "prism-surface-area-inverse-solve-dimension",
+  "members": [
+   "a3#6"
+  ],
+  "kinOf": null,
+  "subdomain": "area_volume",
+  "note": "set rectangular-prism surface-area formula equal to given, solve for the missing height"
+ },
+ {
+  "group": "inscribed-angle-then-arc-length",
+  "members": [
+   "a3#8"
+  ],
+  "kinOf": null,
+  "subdomain": "circles",
+  "note": "double the inscribed angle for the central angle, then arc length by proportion"
+ },
+ {
+  "group": "cone-volume-inverse-solve-dimension",
+  "members": [
+   "a3#10"
+  ],
+  "kinOf": null,
+  "subdomain": "area_volume",
+  "note": "set cone volume equal to given (height known), solve for radius/diameter"
+ },
+ {
+  "group": "triangle-angle-sum-then-vertical-angle",
+  "members": [
+   "a4#3"
+  ],
+  "kinOf": null,
+  "subdomain": "lines_angles_triangles",
+  "note": "triangle angle sum for the apex, then vertical-angle equality gives x (two steps)"
+ },
+ {
+  "group": "special-right-30-60-90-hypotenuse-to-short-leg",
+  "members": [
+   "a4#4"
+  ],
+  "kinOf": null,
+  "subdomain": "right_triangles_trig",
+  "note": "30-60-90 ratio: given the hypotenuse, find the short leg"
+ },
+ {
+  "group": "cylinder-volume-inverse-solve-dimension",
+  "members": [
+   "a4#6"
+  ],
+  "kinOf": null,
+  "subdomain": "area_volume",
+  "note": "set cylinder volume equal to given (radius known), solve for the height"
+ },
+ {
+  "group": "trig-ratio-all-sides-given-direct",
+  "members": [
+   "a4#7"
+  ],
+  "kinOf": null,
+  "subdomain": "right_triangles_trig",
+  "note": "all three sides labeled; read the requested trig ratio directly, single step"
+ },
+ {
+  "group": "tangent-radius-inverse-pythagorean-find-radius",
+  "members": [
+   "a4#8"
+  ],
+  "kinOf": "tangent_length_fig",
+  "subdomain": "circles",
+  "note": "right triangle OAP (tangent perp radius); given tangent and OP, find the remaining leg (radius) via inverse Pythagorean"
+ },
+ {
+  "group": "altitude-to-hypotenuse-geometric-mean-length",
+  "members": [
+   "a4#9",
+   "a5#9"
+  ],
+  "kinOf": "right_triangle_altitude_fig",
+  "subdomain": "right_triangles_trig",
+  "note": "altitude to hypotenuse; altitude length = geometric mean of the two hypotenuse segments"
+ },
+ {
+  "group": "prism-volume-inverse-then-surface-area",
+  "members": [
+   "a5#7",
+   "pilot#7"
+  ],
+  "kinOf": null,
+  "subdomain": "area_volume",
+  "note": "solve prism volume for a dimension, then compute the surface area (two steps)"
+ },
+ {
+  "group": "rectilinear-composite-area-decomposition",
+  "members": [
+   "pilot#5"
+  ],
+  "kinOf": null,
+  "subdomain": "area_volume",
+  "note": "decompose an L-shaped rectilinear region into rectangles and sum the areas"
+ },
+ {
+  "group": "arc-length-inverse-find-radius",
+  "members": [
+   "pilot#8"
+  ],
+  "kinOf": null,
+  "subdomain": "circles",
+  "note": "given arc length and central angle, solve the proportion for the radius"
+ },
+ {
+  "group": "similarity-transfers-trig-ratio",
+  "members": [
+   "pilot#9",
+   "s35#35"
+  ],
+  "kinOf": null,
+  "subdomain": "right_triangles_trig",
+  "note": "two similar right triangles; transfer a trig ratio to the corresponding angle"
+ },
+ {
+  "group": "pyramid-surface-area-forward",
+  "members": [
+   "pilot#10"
+  ],
+  "kinOf": null,
+  "subdomain": "area_volume",
+  "note": "square-pyramid surface area = base + 4 triangular faces (slant height via Pythagorean)"
+ },
+ {
+  "group": "triangle-area-half-base-times-height",
+  "members": [
+   "s35#1",
+   "s35#3",
+   "s35#5"
+  ],
+  "kinOf": null,
+  "subdomain": "area_volume",
+  "note": "area = half base times height from two given perpendicular lengths"
+ },
+ {
+  "group": "rectangle-area-forward",
+  "members": [
+   "s35#2",
+   "s35#4"
+  ],
+  "kinOf": null,
+  "subdomain": "area_volume",
+  "note": "area = length times width"
+ },
+ {
+  "group": "composite-outline-perimeter-congruent-sides",
+  "members": [
+   "s35#6"
+  ],
+  "kinOf": null,
+  "subdomain": "area_volume",
+  "note": "transfer equal side lengths (square + equilateral) and sum the solid outline segments"
+ },
+ {
+  "group": "angles-around-a-point",
+  "members": [
+   "s35#7"
+  ],
+  "kinOf": null,
+  "subdomain": "lines_angles_triangles",
+  "note": "four angles about a point sum to 360; subtract the knowns for x"
+ },
+ {
+  "group": "kite-perimeter-from-congruence-marks",
+  "members": [
+   "s35#8"
+  ],
+  "kinOf": null,
+  "subdomain": "area_volume",
+  "note": "two marked pairs of equal sides; perimeter = 2a + 2b"
+ },
+ {
+  "group": "coordinate-horizontal-distance",
+  "members": [
+   "s35#9"
+  ],
+  "kinOf": null,
+  "subdomain": "lines_angles_triangles",
+  "note": "equal y-coordinates; length = difference of x-coordinates"
+ },
+ {
+  "group": "rectangle-perimeter-from-inferred-dimensions",
+  "members": [
+   "s35#10"
+  ],
+  "kinOf": null,
+  "subdomain": "area_volume",
+  "note": "infer rectangle dimensions from the two squares, then perimeter = 2(l+w)"
+ },
+ {
+  "group": "circumference-forward",
+  "members": [
+   "s35#11"
+  ],
+  "kinOf": null,
+  "subdomain": "circles",
+  "note": "one-revolution rolling distance = circumference = pi times diameter"
+ },
+ {
+  "group": "isosceles-triangle-base-angle",
+  "members": [
+   "s35#12"
+  ],
+  "kinOf": null,
+  "subdomain": "lines_angles_triangles",
+  "note": "isosceles: base angle = (180 minus apex)/2"
+ },
+ {
+  "group": "triangle-area-from-coordinates",
+  "members": [
+   "s35#13"
+  ],
+  "kinOf": null,
+  "subdomain": "area_volume",
+  "note": "identify base on the axis and height from coordinates, area = half base times height"
+ },
+ {
+  "group": "perimeter-comparison-two-rectangles",
+  "members": [
+   "s35#14"
+  ],
+  "kinOf": null,
+  "subdomain": "area_volume",
+  "note": "compute both perimeters and take the difference"
+ },
+ {
+  "group": "quadrilateral-angle-sum",
+  "members": [
+   "s35#15"
+  ],
+  "kinOf": null,
+  "subdomain": "lines_angles_triangles",
+  "note": "four interior angles sum to 360; subtract the three knowns"
+ },
+ {
+  "group": "hemisphere-volume-forward",
+  "members": [
+   "s35#16"
+  ],
+  "kinOf": null,
+  "subdomain": "area_volume",
+  "note": "volume = (2/3) pi r^3 from the given radius"
+ },
+ {
+  "group": "semicircle-area-from-diameter",
+  "members": [
+   "s35#17"
+  ],
+  "kinOf": null,
+  "subdomain": "circles",
+  "note": "radius = diameter/2, area = half pi r^2"
+ },
+ {
+  "group": "similar-triangles-shadow-proportion",
+  "members": [
+   "s35#18"
+  ],
+  "kinOf": null,
+  "subdomain": "lines_angles_triangles",
+  "note": "height/shadow proportion between two similar right triangles, solve for height"
+ },
+ {
+  "group": "composite-area-rectangle-plus-triangle",
+  "members": [
+   "s35#19"
+  ],
+  "kinOf": null,
+  "subdomain": "area_volume",
+  "note": "decompose the trapezoid into a rectangle plus a right triangle and sum areas"
+ },
+ {
+  "group": "coordinate-right-triangle-perimeter",
+  "members": [
+   "s35#20"
+  ],
+  "kinOf": null,
+  "subdomain": "right_triangles_trig",
+  "note": "legs from coordinates, hypotenuse via Pythagorean, sum for the perimeter"
+ },
+ {
+  "group": "complementary-cofunction-sin-cos",
+  "members": [
+   "s35#21"
+  ],
+  "kinOf": null,
+  "subdomain": "right_triangles_trig",
+  "note": "complementary angles: sin y = cos x, single step"
+ },
+ {
+  "group": "degrees-to-radians-rotation",
+  "members": [
+   "s35#22"
+  ],
+  "kinOf": null,
+  "subdomain": "circles",
+  "note": "fraction of a full revolution times 2 pi for the radian measure"
+ },
+ {
+  "group": "hemisphere-volume-inverse-solve-dimension",
+  "members": [
+   "s35#23"
+  ],
+  "kinOf": null,
+  "subdomain": "area_volume",
+  "note": "set hemisphere volume equal to given, solve for radius/diameter"
+ },
+ {
+  "group": "area-by-subtraction-square-minus-quarter-circle",
+  "members": [
+   "s35#24"
+  ],
+  "kinOf": null,
+  "subdomain": "area_volume",
+  "note": "square area minus quarter-circle area"
+ },
+ {
+  "group": "parallel-lines-plus-triangle-two-step-chain",
+  "members": [
+   "s35#25"
+  ],
+  "kinOf": null,
+  "subdomain": "lines_angles_triangles",
+  "note": "alternate angle from parallels, then triangle angle sum for x (two steps)"
+ },
+ {
+  "group": "area-scale-factor-percent",
+  "members": [
+   "s35#26"
+  ],
+  "kinOf": null,
+  "subdomain": "area_volume",
+  "note": "multiply the two percent scale factors for the resulting area percent"
+ },
+ {
+  "group": "trig-set-up-side-expression-depression",
+  "members": [
+   "s35#27"
+  ],
+  "kinOf": null,
+  "subdomain": "right_triangles_trig",
+  "note": "given angle and one side, choose the tangent expression for the other side"
+ },
+ {
+  "group": "isosceles-triangle-area-via-constructed-altitude",
+  "members": [
+   "s35#28"
+  ],
+  "kinOf": null,
+  "subdomain": "area_volume",
+  "note": "half-base plus Pythagorean for the altitude, then area = half base times altitude"
+ },
+ {
+  "group": "cylinder-surface-area-inverse-solve-dimension",
+  "members": [
+   "s35#29"
+  ],
+  "kinOf": null,
+  "subdomain": "area_volume",
+  "note": "set cylinder surface-area formula equal to given (radius known), solve for the height"
+ },
+ {
+  "group": "similar-solids-scale-cubed-partial-fill",
+  "members": [
+   "s35#30"
+  ],
+  "kinOf": null,
+  "subdomain": "area_volume",
+  "note": "linear scale 1/2 gives volume ratio (1/2)^3 = 1/8"
+ },
+ {
+  "group": "thales-right-angle-then-pythagorean-radius",
+  "members": [
+   "s35#31"
+  ],
+  "kinOf": null,
+  "subdomain": "circles",
+  "note": "diameter gives right angle at C (Thales), Pythagorean for the diameter, radius = half"
+ },
+ {
+  "group": "inscribed-angle-intersecting-chords-angle-chase",
+  "members": [
+   "s35#32"
+  ],
+  "kinOf": null,
+  "subdomain": "circles",
+  "note": "triangle angle sum at the chord intersection, then equal inscribed angles on the same arc for x"
+ },
+ {
+  "group": "sector-area-inverse-find-central-angle",
+  "members": [
+   "s35#33"
+  ],
+  "kinOf": null,
+  "subdomain": "circles",
+  "note": "set sector-area proportion equal to given (radius known), solve for the central angle"
+ },
+ {
+  "group": "tangent-tangent-central-angle-to-vertex-angle",
+  "members": [
+   "s35#34"
+  ],
+  "kinOf": null,
+  "subdomain": "circles",
+  "note": "quadrilateral OAPB with two right angles; vertex angle P = 180 minus the central angle"
+ },
+ {
+  "group": "composite-cylinder-cone-volume-inverse",
+  "members": [
+   "a5#10"
+  ],
+  "kinOf": null,
+  "subdomain": "area_volume",
+  "note": "set cylinder+cone volume equal to given, solve for the cone height"
+ },
+ {
+  "group": "composite-cylinder-cone-volume-forward",
+  "members": [
+   "a4#10"
+  ],
+  "kinOf": null,
+  "subdomain": "area_volume",
+  "note": "sum cylinder and cone volumes (deduce cylinder height from total height)"
+ }
+]

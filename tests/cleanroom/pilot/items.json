@@ -1,0 +1,92 @@
+[
+  {
+    "n": 1,
+    "band": "B1",
+    "type": "mcq",
+    "skill": "volume of rectangular prism",
+    "stem": "What is the volume, in cubic centimeters, of the right rectangular prism shown? The figure is a right rectangular prism with edges labeled 8 cm, 5 cm, and 3 cm. Choices: A) 16 B) 40 C) 120 D) 158",
+    "figure": "Right rectangular prism drawn in 3D with hidden edges dashed; edges labeled 8 cm, 3 cm, and 5 cm.",
+    "answer": "C (120)"
+  },
+  {
+    "n": 2,
+    "band": "B2",
+    "type": "mcq",
+    "skill": "parallel lines and transversal angles",
+    "stem": "In the figure, line ℓ is parallel to line m. What is the value of x? The figure shows two parallel lines ℓ (upper) and m (lower) cut by a transversal; an angle of 118° is marked at the upper intersection and the angle x° is marked at the lower intersection. Figure not drawn to scale. Choices: A) 28 B) 62 C) 118 D) 152",
+    "figure": "Two parallel lines cut by a transversal; 118° at the upper intersection, x° at the lower intersection.",
+    "answer": "B (62)"
+  },
+  {
+    "n": 3,
+    "band": "B3",
+    "type": "spr",
+    "skill": "Pythagorean theorem (find hypotenuse)",
+    "stem": "For the right triangle shown, what is the value of x? The right triangle has legs labeled 12 (bottom) and 9 (left/vertical), with the hypotenuse labeled x.",
+    "figure": "Right triangle with legs 9 and 12 and hypotenuse x, small square marking the right angle.",
+    "answer": "15"
+  },
+  {
+    "n": 4,
+    "band": "B4",
+    "type": "mcq",
+    "skill": "similar triangles / parallel segment proportion",
+    "stem": "In triangle ABC shown, DE is parallel to BC. What is the length of BC? In the figure, triangle ABC has apex A at top with base BC at bottom (B left, C right); segment DE is drawn parallel to BC with D on side AB and E on side AC. AD = 6, DB = 4, and DE = 9. Choices: A) 5.4 B) 6 C) 13 D) 15",
+    "figure": "Triangle ABC with segment DE parallel to base BC; AD = 6, DB = 4, DE = 9, parallel-tick marks on DE and BC.",
+    "answer": "D (15)"
+  },
+  {
+    "n": 5,
+    "band": "B5",
+    "type": "spr",
+    "skill": "composite figure area",
+    "stem": "The figure shows the floor plan of a storage room. All angles of the floor are right angles. What is the area, in square meters, of the floor? The L-shaped floor plan has a bottom side of 14 m, a left side of 10 m, a top side of 6 m, and a right side of 4 m (two unlabeled sides complete the L-shape).",
+    "figure": "L-shaped floor plan with right-angle marks; labeled sides bottom 14 m, left 10 m, top 6 m, right 4 m.",
+    "answer": "92"
+  },
+  {
+    "n": 6,
+    "band": "B6",
+    "type": "mcq",
+    "skill": "right-triangle trigonometry (cosine)",
+    "stem": "In right triangle ABC shown, what is the value of cos A? The right triangle ABC has the right angle at C, with vertex A at top, C at bottom-left, and B at bottom-right; leg AC = 16 and leg BC = 12. Choices: A) 3/5 B) 4/5 C) 5/4 D) 4/3",
+    "figure": "Right triangle ABC with right angle at C, leg AC = 16 (vertical), leg BC = 12 (horizontal), angle A marked at top.",
+    "answer": "B (4/5)"
+  },
+  {
+    "n": 7,
+    "band": "B6",
+    "type": "mcq",
+    "skill": "prism volume to surface area",
+    "stem": "The volume of the right rectangular prism shown is 336 cubic inches. What is the surface area, in square inches, of the prism? The prism has a base of 8 in by 6 in and an unknown height labeled h. Choices: A) 146 B) 196 C) 244 D) 292",
+    "figure": "Right rectangular prism drawn in 3D with hidden edges dashed; base labeled 8 in and 6 in, vertical edge labeled h.",
+    "answer": "D (292)"
+  },
+  {
+    "n": 8,
+    "band": "B7",
+    "type": "spr",
+    "skill": "circle arc length (find radius)",
+    "stem": "The circle shown has center O. The length of minor arc AB is 4π centimeters. What is the radius, in centimeters, of the circle? The figure shows a circle with center O and radii OA and OB forming a central angle of 40°.",
+    "figure": "Circle with center O, radii OA and OB forming a 40° central angle marked at O.",
+    "answer": "18"
+  },
+  {
+    "n": 9,
+    "band": "B7",
+    "type": "mcq",
+    "skill": "similarity and trigonometric ratio (tangent)",
+    "stem": "In the figure, triangle DEF is similar to triangle ABC, where D, E, and F correspond to A, B, and C, respectively. What is the value of tan D? The figure shows right triangle ABC with the right angle at C, AC = 21, BC = 20, and AB = 29, alongside a smaller similar right triangle DEF with the right angle at F (no side lengths labeled on DEF). Choices: A) 21/29 B) 20/21 C) 21/20 D) 29/21",
+    "figure": "Two similar right triangles: larger ABC with right angle at C (AC 21, BC 20, AB 29) and smaller DEF with right angle at F.",
+    "answer": "B (20/21)"
+  },
+  {
+    "n": 10,
+    "band": "B7",
+    "type": "spr",
+    "skill": "surface area of a square pyramid",
+    "stem": "The solid shown is a right pyramid with a square base. What is the total surface area, in square centimeters, of the pyramid? The figure shows a right square pyramid with base edge 12 cm and height 8 cm.",
+    "figure": "Right square pyramid drawn in 3D with hidden edges dashed; base edge labeled 12 cm and vertical height labeled 8 cm.",
+    "answer": "384"
+  }
+]

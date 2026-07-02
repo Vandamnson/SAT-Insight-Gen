@@ -23,6 +23,9 @@ const toQuestion = (v, id) => ({ id, ...v.item, _familyId: v.familyId, _variantI
 export function mockModule({ n = 22, testNum = 200, title, bands = null, includeRecordMode = false } = {}) {
   const fams = Object.fromEntries(loadFamilies().map((f) => [f.familyId, f]));
   let vars = loadVariants().filter((v) => fams[v.familyId] && v.item);
+  // harvested clean-room variants are plain-text format (no render schema yet) —
+  // they serve the ledger/steering; modules skip them until a render adapter exists
+  vars = vars.filter((v) => v.realization?.format !== "cleanroom-text-v0");
   if (bands) vars = vars.filter((v) => bands.includes(fams[v.familyId].difficulty?.band));
   // FLOORS RESPECTED: families that failed the strict band-pass ship in drills only,
   // never in a mock module (unless explicitly overridden).
@@ -59,8 +62,8 @@ export function mockModule({ n = 22, testNum = 200, title, bands = null, include
 /** drillLadder(familyId, {k, testNum, title}) → writes data/test-NN.json with k
  *  variants of ONE family (practice ladder). */
 export function drillLadder(familyId, { k = 5, testNum = 201, title } = {}) {
-  const vars = loadVariants().filter((v) => v.familyId === familyId && v.item).slice(0, k);
-  if (!vars.length) throw new Error(`no variants for family ${familyId}`);
+  const vars = loadVariants().filter((v) => v.familyId === familyId && v.item && v.realization?.format !== "cleanroom-text-v0").slice(0, k);
+  if (!vars.length) throw new Error(`no variants for family ${familyId} (cleanroom-text variants need a render adapter first)`);
   const questions = vars.map((v, i) => toQuestion(v, i + 1));
   const nn = String(testNum).padStart(2, "0");
   const fp = join(ROOT, "data", `test-${nn}.json`);

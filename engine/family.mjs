@@ -42,16 +42,26 @@ export const loadFamilies = () => loadJsonl(FAMILIES);
 export const loadVariants = () => loadJsonl(VARIANTS);
 
 /* ---- verification requirements (the structural gate) ---- */
+const ACCEPTED_METHODS = ["llm-judge", "curated", "lltm_chain_v1", "rubric_prior", "expert_blind_calibration"];
 function assertFamilyVerified(f) {
   const errs = [];
   if (!f.generator || !f.spec) errs.push("missing generator/spec");
-  const st = f.selftest;
-  if (!st || !(st.draws >= 20)) errs.push("selftest.draws < 20");
-  if (!st || st.mismatches !== 0) errs.push("selftest.mismatches !== 0");
-  if (!st || st.trivial !== 0) errs.push("selftest.trivial !== 0");
+  if (f.generator === "authored") {
+    // AUTHORED tier (clean-room harvest, STEERED-35.md): there is no draw loop, so
+    // verification is MEASURED, never faked — cross-model blind solve + per-item
+    // absolute-judge authenticity + banding per the operative instrument.
+    const v = f.verification;
+    if (!v?.blindSolve || v.blindSolve.agreement !== true || !(v.blindSolve.solvers >= 2)) errs.push("authored: needs blindSolve {agreement:true, solvers>=2}");
+    if (!v?.provenance?.set) errs.push("authored: missing provenance.set");
+  } else {
+    const st = f.selftest;
+    if (!st || !(st.draws >= 20)) errs.push("selftest.draws < 20");
+    if (!st || st.mismatches !== 0) errs.push("selftest.mismatches !== 0");
+    if (!st || st.trivial !== 0) errs.push("selftest.trivial !== 0");
+  }
   const d = f.difficulty;
   if (!d || !d.band || !Number.isFinite(d.scalePoint)) errs.push("missing judge/curated difficulty");
-  if (d && !["llm-judge", "curated", "lltm_chain_v1", "rubric_prior", "expert_blind_calibration"].includes(d.method)) errs.push(`difficulty.method '${d?.method}' not accepted`);
+  if (d && !ACCEPTED_METHODS.includes(d.method)) errs.push(`difficulty.method '${d?.method}' not accepted`);
   // rubric_prior is sanctioned ONLY where the judge is uncalibrated (currently GEO — 0 anchors; see ENGINE.md)
   if (["rubric_prior","expert_blind_calibration"].includes(d?.method) && f.domain !== "geometry_trig") errs.push(d.method+" only sanctioned for geometry_trig (judge uncalibrated there)");
   if (!f.bandpass || typeof f.bandpass !== "object") errs.push("missing bandpass record (scores or {mode:'record'})");
@@ -64,7 +74,8 @@ function assertVariantVerified(v) {
   if (!vd) errs.push("missing verdicts");
   else {
     if (vd.resolver && vd.resolver.ok !== true) errs.push("resolver verdict not ok");
-    if (!vd.resolver && !(vd.prove && vd.prove.keep === true)) errs.push("needs resolver.ok or prove.keep");
+    const blindOk = vd.blindSolve && vd.blindSolve.agreement === true && vd.blindSolve.solvers >= 2;
+    if (!vd.resolver && !(vd.prove && vd.prove.keep === true) && !blindOk) errs.push("needs resolver.ok, prove.keep, or blindSolve {agreement:true, solvers>=2}");
     if (vd.answerPin === false) errs.push("answer-pin failed");
   }
   if (!v.answer) errs.push("missing answer");
