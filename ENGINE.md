@@ -36,6 +36,7 @@ _Branch `engine` · 2026-06-24 · Mission: a **cheap, excellent SAT resource for
 - **Misconception tags**: author contract now emits per-wrong-choice tags (optional field); chains are SPR (no distractors). Full deterministic tagging for harness MCQs is future work.
 
 - **SCALE TEST (n=50, SCALE-TEST-50.md)**: 5 mutually-blind clean-room agents × 10 GEO items. Correctness 50/50 (blind solve), surface novelty held (0 dup-level pairs) — but two failure modes appeared that the n=10 pilot hid: **skill-canon convergence** (5/5 agents wrote prism-volume; ~20/50 items in 6 repeated skill groups = undeclared family variants — v1's collapse one level up) and **authenticity dispersion** (sample mean 6.6 vs pilot 7.9; items as low as 3). Empirically grounds the inverted architecture: solo agents author; the engine's ledger, floors, independent verification, and parameterizer industrialize.
+- **STEERED-35 (n=35, STEERED-35.md)**: the controlled fix for failure mode #1 — same clean-room conditions, ONE Fable author, novelty put IN the objective (14 banned modal structures, name-the-modal-then-avoid procedure, disclosed scoring). Result: **canon hits 20/50 → 0/35; nearest-corpus sim 0.46 → 0.23** (0.17 vs the prior 50); authenticity ROSE (6.6 → 7.06 mean; tradeoff only in the tail, 2/35 pushed out-of-voice); correctness **35/35 cross-model** (2 blind Opus solvers); blind Opus band audit 35/35 within ±1 (B7 5/5 exact — the geo banding guide transfers across models). First live run of the **lighter harness: Fable authors ~3.5k tok/item, all gates Opus/deterministic** (scanner: `engine/verify/cleanroom-scan.mjs`). Untested: cross-session convergence under a STATIC packet — production needs dynamic avoid-lists from the ledger.
 
 ## Run it
 ```bash
@@ -47,6 +48,7 @@ node engine/cli.mjs variants 3             # 3 variants per family
 node engine/cli.mjs module 200 22          # mock module, ≤1 per family
 node engine/cli.mjs ladder <famId> 201 5   # drill ladder
 node engine/grammar.mjs                    # occupancy map + generation targets
+node engine/verify/cleanroom-scan.mjs <setDir> [--prior a1,..] [--emit <dir>]  # clean-room set scanner
 node engine/importer.mjs                   # v1 import PROPOSALS (writes nothing)
 node build/render.mjs data/test-200.json   # render through the unchanged v1 viewer
 ```

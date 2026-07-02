@@ -76,7 +76,7 @@
  },
  {
   "id": "a2#6",
-  "answer": "A (32+4π)",
+  "answer": "A (32+4\u03c0)",
   "band": "B5"
  },
  {
@@ -247,6 +247,181 @@
  {
   "id": "a5#10",
   "answer": "5",
+  "band": "B7"
+ },
+ {
+  "id": "s35#1",
+  "answer": "B) 20",
+  "band": "B1"
+ },
+ {
+  "id": "s35#2",
+  "answer": "36",
+  "band": "B1"
+ },
+ {
+  "id": "s35#3",
+  "answer": "B) 27",
+  "band": "B1"
+ },
+ {
+  "id": "s35#4",
+  "answer": "B) 15",
+  "band": "B1"
+ },
+ {
+  "id": "s35#5",
+  "answer": "20",
+  "band": "B1"
+ },
+ {
+  "id": "s35#6",
+  "answer": "C) 30",
+  "band": "B2"
+ },
+ {
+  "id": "s35#7",
+  "answer": "85",
+  "band": "B2"
+ },
+ {
+  "id": "s35#8",
+  "answer": "28",
+  "band": "B2"
+ },
+ {
+  "id": "s35#9",
+  "answer": "8",
+  "band": "B2"
+ },
+ {
+  "id": "s35#10",
+  "answer": "C) 24",
+  "band": "B2"
+ },
+ {
+  "id": "s35#11",
+  "answer": "C) 0.7pi",
+  "band": "B3"
+ },
+ {
+  "id": "s35#12",
+  "answer": "B) 70",
+  "band": "B3"
+ },
+ {
+  "id": "s35#13",
+  "answer": "24",
+  "band": "B3"
+ },
+ {
+  "id": "s35#14",
+  "answer": "B) 2",
+  "band": "B3"
+ },
+ {
+  "id": "s35#15",
+  "answer": "B) 80",
+  "band": "B3"
+ },
+ {
+  "id": "s35#16",
+  "answer": "C) 144pi",
+  "band": "B4"
+ },
+ {
+  "id": "s35#17",
+  "answer": "A) 2pi",
+  "band": "B4"
+ },
+ {
+  "id": "s35#18",
+  "answer": "3.75 (or 15/4)",
+  "band": "B4"
+ },
+ {
+  "id": "s35#19",
+  "answer": "32",
+  "band": "B4"
+ },
+ {
+  "id": "s35#20",
+  "answer": "12",
+  "band": "B4"
+ },
+ {
+  "id": "s35#21",
+  "answer": "C) 0.8",
+  "band": "B5"
+ },
+ {
+  "id": "s35#22",
+  "answer": "C) 2pi/3",
+  "band": "B5"
+ },
+ {
+  "id": "s35#23",
+  "answer": "6",
+  "band": "B5"
+ },
+ {
+  "id": "s35#24",
+  "answer": "C) 100 - 25pi",
+  "band": "B5"
+ },
+ {
+  "id": "s35#25",
+  "answer": "C) 71",
+  "band": "B5"
+ },
+ {
+  "id": "s35#26",
+  "answer": "C) 100%",
+  "band": "B6"
+ },
+ {
+  "id": "s35#27",
+  "answer": "B) 6 / tan 15 degrees",
+  "band": "B6"
+ },
+ {
+  "id": "s35#28",
+  "answer": "60",
+  "band": "B6"
+ },
+ {
+  "id": "s35#29",
+  "answer": "5",
+  "band": "B6"
+ },
+ {
+  "id": "s35#30",
+  "answer": "A) 1/8",
+  "band": "B6"
+ },
+ {
+  "id": "s35#31",
+  "answer": "13",
+  "band": "B7"
+ },
+ {
+  "id": "s35#32",
+  "answer": "B) 56",
+  "band": "B7"
+ },
+ {
+  "id": "s35#33",
+  "answer": "150",
+  "band": "B7"
+ },
+ {
+  "id": "s35#34",
+  "answer": "A) 50",
+  "band": "B7"
+ },
+ {
+  "id": "s35#35",
+  "answer": "D) 15/8",
   "band": "B7"
  }
 ]
