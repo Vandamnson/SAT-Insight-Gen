@@ -1,0 +1,92 @@
+[
+  {
+    "n": 1,
+    "band": "B1",
+    "type": "mcq",
+    "skill": "Volume of a right rectangular prism",
+    "stem": "A right rectangular prism has edges of length 8 cm, 5 cm, and 3 cm, as labeled in the figure. What is the volume, in cubic centimeters, of the prism? Options: A) 16 B) 40 C) 120 D) 158",
+    "figure": "Oblique drawing of a rectangular box with visible and dashed hidden edges, labeled 8 cm (length), 5 cm (depth), 3 cm (height).",
+    "answer": "120 (choice C)"
+  },
+  {
+    "n": 2,
+    "band": "B2",
+    "type": "mcq",
+    "skill": "Parallel lines cut by a transversal",
+    "stem": "Line l is parallel to line m, and a transversal crosses both. The angle below line l on the left side of the transversal measures 118 degrees; the angle above line m on the same (left) side of the transversal measures x degrees. These are same-side interior angles. What is the value of x? (Figure not drawn to scale.) Options: A) 28 B) 62 C) 72 D) 118",
+    "figure": "Two horizontal parallel lines l and m cut by a slanted transversal; 118 degrees marked at the upper intersection (interior, left of transversal), x degrees at the lower intersection (interior, left of transversal).",
+    "answer": "62 (choice B)"
+  },
+  {
+    "n": 3,
+    "band": "B3",
+    "type": "spr",
+    "skill": "Triangle angle sum and vertical angles",
+    "stem": "Two lines cross at the apex of a triangle whose base lies on a third line; the two base angles of the triangle measure 52 degrees and 61 degrees. The angle marked x degrees lies above the apex, between the extensions of the two crossing lines (the vertical angle to the triangle's apex angle). What is the value of x?",
+    "figure": "A horizontal line forms a triangle base with angles 52 and 61 degrees; the slanted sides extend past their intersection at the apex, and x degrees is marked in the vertical-angle region above the apex.",
+    "answer": "67"
+  },
+  {
+    "n": 4,
+    "band": "B4",
+    "type": "mcq",
+    "skill": "30-60-90 special right triangle",
+    "stem": "In right triangle ABC, the right angle is at C and the angle at A measures 60 degrees. The hypotenuse AB has length 14, and side AC (opposite the 30-degree angle at B) is labeled x. What is the value of x? Options: A) 7 B) 7*sqrt(2) C) 7*sqrt(3) D) 14*sqrt(3)",
+    "figure": "Right triangle with right-angle mark at C, a 60-degree arc at A, hypotenuse labeled 14, and the shorter leg AC labeled x.",
+    "answer": "7 (choice A)"
+  },
+  {
+    "n": 5,
+    "band": "B5",
+    "type": "mcq",
+    "skill": "Equation of a circle in the xy-plane",
+    "stem": "The graph of a circle in the xy-plane is shown; its center is at the marked point (3, -2), and the marked point (7, 1) lies on the circle. Which equation defines the circle? Options: A) (x+3)^2+(y-2)^2=25 B) (x-3)^2+(y+2)^2=5 C) (x-3)^2+(y+2)^2=25 D) (x-7)^2+(y-1)^2=25",
+    "figure": "Unit-gridded coordinate plane with a circle of radius 5; the center dot is labeled (3, -2) and an on-circle dot is labeled (7, 1).",
+    "answer": "(x-3)^2+(y+2)^2=25 (choice C)"
+  },
+  {
+    "n": 6,
+    "band": "B6",
+    "type": "spr",
+    "skill": "Cylinder volume, solve for a dimension",
+    "stem": "A right circular cylinder has a volume of 288*pi cubic centimeters. Its base radius, labeled in the figure, is 4 centimeters, and its height is labeled h. What is the value of h?",
+    "figure": "A cylinder with a dashed radius labeled 4 on the top face and the vertical height labeled h.",
+    "answer": "18"
+  },
+  {
+    "n": 7,
+    "band": "B6",
+    "type": "mcq",
+    "skill": "Right-triangle trigonometric ratio (tangent)",
+    "stem": "In right triangle ABC, the right angle is at C; leg AC = 21, leg BC = 20, and hypotenuse AB = 29, as labeled in the figure. What is the value of tan A? Options: A) 20/29 B) 21/29 C) 21/20 D) 20/21",
+    "figure": "Right triangle with right-angle mark at C, horizontal leg AC labeled 21, vertical leg BC labeled 20, hypotenuse labeled 29.",
+    "answer": "20/21 (choice D)"
+  },
+  {
+    "n": 8,
+    "band": "B7",
+    "type": "spr",
+    "skill": "Circle theorem: tangent perpendicular to radius",
+    "stem": "Segment PA is tangent at point A to the circle with center O. As labeled in the figure, PA = 24 and OP = 26. What is the length of radius OA?",
+    "figure": "A circle with center O, tangent segment PA touching at A with a right-angle mark, radius OA drawn, and segment OP labeled 26 with PA labeled 24.",
+    "answer": "10"
+  },
+  {
+    "n": 9,
+    "band": "B7",
+    "type": "spr",
+    "skill": "Similar right triangles (altitude to hypotenuse)",
+    "stem": "In triangle ABC, angle ABC is a right angle, and BD is perpendicular to hypotenuse AC at point D. As labeled in the figure, AD = 4 and DC = 9. What is the length of BD?",
+    "figure": "Right triangle ABC with right angle at B; altitude BD drawn to hypotenuse AC, with AD labeled 4 and DC labeled 9 and right-angle marks at B and D.",
+    "answer": "6"
+  },
+  {
+    "n": 10,
+    "band": "B7",
+    "type": "mcq",
+    "skill": "Volume of a composite solid (cylinder + cone)",
+    "stem": "A grain silo is modeled by a right circular cylinder topped by a right circular cone sharing its base. As labeled in the figure, the shared base radius is 3 ft, the cone's height is 6 ft, and the total height from the base of the cylinder to the apex of the cone is 14 ft. What is the volume, in cubic feet, of the silo? Options: A) 72*pi B) 90*pi C) 108*pi D) 144*pi",
+    "figure": "A silo drawn as a cylinder with a cone on top; dashed radius labeled 3 ft, dashed cone-height labeled 6 ft, and an overall height dimension line labeled 14 ft.",
+    "answer": "90*pi (choice B)"
+  }
+]

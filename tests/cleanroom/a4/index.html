@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Geometry &amp; Trigonometry — 10 Figure Items · Digital SAT Style</title>
+<style>
+  :root{
+    --paper:#faf7f0;
+    --card:#fffdf8;
+    --ink:#1c2430;
+    --ink-soft:#4b5563;
+    --rule:#d8d2c4;
+    --accent:#0f4c81;
+    --b12:#1a7a4a;  --b12-bg:#e3f2e9;
+    --b34:#0f4c81;  --b34-bg:#e2edf7;
+    --b56:#b45309;  --b56-bg:#fdf0dd;
+    --b7:#9f1d35;   --b7-bg:#fbe7ea;
+    --fig-line:#26303c;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{background:var(--paper)}
+  body{
+    font-family:Charter,"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+    color:var(--ink);
+    line-height:1.55;
+    background:
+      repeating-linear-gradient(0deg,transparent 0 34px, rgba(28,36,48,.018) 34px 35px),
+      var(--paper);
+    padding:0 16px 90px;
+  }
+  header.masthead{
+    max-width:860px;margin:0 auto;padding:54px 0 26px;
+    border-bottom:3px double var(--rule);
+  }
+  .kicker{
+    font-family:"Avenir Next",Avenir,"Gill Sans","Trebuchet MS",sans-serif;
+    font-size:12px;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--accent);font-weight:600;margin-bottom:10px;
+  }
+  h1{font-size:clamp(28px,4.5vw,40px);font-weight:700;letter-spacing:-.01em;line-height:1.12}
+  .sub{margin-top:12px;color:var(--ink-soft);font-size:15.5px;max-width:62ch}
+  .legend{
+    max-width:860px;margin:18px auto 0;display:flex;flex-wrap:wrap;gap:8px;align-items:center;
+    font-family:"Avenir Next",Avenir,"Gill Sans","Trebuchet MS",sans-serif;font-size:12px;color:var(--ink-soft);
+  }
+  main{max-width:860px;margin:34px auto 0;display:grid;gap:30px}
+
+  article.item{
+    background:var(--card);
+    border:1px solid var(--rule);
+    border-radius:4px;
+    box-shadow:0 1px 0 rgba(28,36,48,.06), 0 10px 28px -18px rgba(28,36,48,.25);
+    padding:26px 30px 22px;
+    position:relative;
+  }
+  article.item::before{
+    content:"";position:absolute;left:0;top:0;bottom:0;width:4px;border-radius:4px 0 0 4px;background:var(--edge,var(--accent));
+  }
+  .meta{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px;margin-bottom:14px}
+  .num{
+    font-family:"Avenir Next",Avenir,"Gill Sans","Trebuchet MS",sans-serif;
+    font-weight:700;font-size:20px;color:var(--ink);
+  }
+  .chip{
+    font-family:"Avenir Next",Avenir,"Gill Sans","Trebuchet MS",sans-serif;
+    font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+    padding:3px 10px;border-radius:999px;
+  }
+  .chip.band-b12{background:var(--b12-bg);color:var(--b12)}
+  .chip.band-b34{background:var(--b34-bg);color:var(--b34)}
+  .chip.band-b56{background:var(--b56-bg);color:var(--b56)}
+  .chip.band-b7 {background:var(--b7-bg); color:var(--b7)}
+  .chip.type{background:#eef0f3;color:var(--ink-soft)}
+  .skill{
+    font-family:"Avenir Next",Avenir,"Gill Sans","Trebuchet MS",sans-serif;
+    font-size:12.5px;color:var(--ink-soft);letter-spacing:.02em;
+  }
+  .stem{font-size:17.5px;margin-bottom:6px}
+  .stem em{font-style:italic}
+  figure.sat-fig{
+    margin:16px auto 6px;max-width:380px;text-align:center;
+  }
+  figure.sat-fig svg{width:100%;height:auto;max-width:360px;display:block;margin:0 auto}
+  figcaption.notdrawn{
+    font-size:13px;font-style:italic;color:var(--ink-soft);margin-top:4px;
+  }
+  ol.opts{list-style:none;margin:14px 0 4px;display:grid;gap:8px}
+  ol.opts li{
+    display:flex;gap:12px;align-items:baseline;
+    border:1px solid var(--rule);border-radius:4px;padding:8px 14px;background:#fff;
+    font-size:16.5px;
+  }
+  ol.opts li b.letter{
+    font-family:"Avenir Next",Avenir,"Gill Sans","Trebuchet MS",sans-serif;
+    font-weight:700;color:var(--accent);font-size:14px;
+  }
+  .sprnote{
+    margin:14px 0 4px;font-size:14px;color:var(--ink-soft);font-style:italic;
+    border-left:3px solid var(--rule);padding-left:12px;
+  }
+  details{
+    margin-top:16px;border-top:1px dashed var(--rule);padding-top:12px;
+  }
+  details summary{
+    cursor:pointer;list-style:none;
+    font-family:"Avenir Next",Avenir,"Gill Sans","Trebuchet MS",sans-serif;
+    font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);
+  }
+  details summary::before{content:"▸ ";transition:transform .15s}
+  details[open] summary::before{content:"▾ "}
+  details summary::-webkit-details-marker{display:none}
+  .ans{margin:12px 0 8px;font-size:16.5px}
+  .ans b{background:#fdf3d0;padding:1px 7px;border-radius:3px}
+  .sol{font-size:15.5px;color:var(--ink);margin-bottom:8px}
+  .dis{font-size:14px;color:var(--ink-soft);margin-bottom:8px}
+  .rp{
+    font-size:13.5px;color:var(--ink-soft);
+    background:#f4f1e9;border-radius:4px;padding:8px 12px;
+  }
+  .rp b{color:var(--ink)}
+  footer{
+    max-width:860px;margin:44px auto 0;padding-top:18px;border-top:3px double var(--rule);
+    font-family:"Avenir Next",Avenir,"Gill Sans","Trebuchet MS",sans-serif;
+    font-size:12px;color:var(--ink-soft);letter-spacing:.04em;
+  }
+  /* SVG figure text */
+  svg text{
+    font-family:Charter,"Iowan Old Style",Georgia,serif;
+    font-size:16px;fill:var(--fig-line);
+  }
+  svg text.vlab{font-style:italic}
+  svg text.small{font-size:13px}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="kicker">Digital SAT · Math · Geometry &amp; Trigonometry</div>
+  <h1>Ten Original Figure Items, Banded by Skills&#8209;Insight</h1>
+  <p class="sub">Every item requires its figure. Bands B1–B7 follow the College Board RP67 placement rule: an item sits in the lowest band whose students answer it correctly with probability ≥ 0.67. Difficulty spread: 2 × B1–B2, 2 × B3–B4, 3 × B5–B6, 3 × B7. Six multiple-choice, four student-produced response.</p>
+  <div class="legend">
+    <span class="chip band-b12">B1–B2</span><span class="chip band-b34">B3–B4</span>
+    <span class="chip band-b56">B5–B6</span><span class="chip band-b7">B7</span>
+    <span>· open “Answer &amp; Solution” on each card for the key, worked solution, and RP67 placement note</span>
+  </div>
+</header>
+
+<main>
+
+<!-- ═══════════════ ITEM 1 · B1 · prism volume ═══════════════ -->
+<article class="item" style="--edge:var(--b12)">
+  <div class="meta">
+    <span class="num">1</span>
+    <span class="chip band-b12">Band B1</span>
+    <span class="chip type">MCQ</span>
+    <span class="skill">Volume of a right rectangular prism</span>
+  </div>
+  <p class="stem">What is the volume, in cubic centimeters, of the right rectangular prism shown?</p>
+  <figure class="sat-fig">
+    <svg viewBox="-16 0 361 240" role="img" aria-label="A right rectangular prism with edges labeled 8 cm, 5 cm, and 3 cm">
+      <!-- hidden edges -->
+      <g stroke="var(--fig-line)" stroke-width="1.4" stroke-dasharray="5 5" fill="none">
+        <path d="M 38 195 L 100 147 L 100 72"/>
+        <path d="M 100 147 L 300 147"/>
+      </g>
+      <!-- visible edges -->
+      <g stroke="var(--fig-line)" stroke-width="2" fill="none" stroke-linejoin="round">
+        <rect x="38" y="120" width="200" height="75"/>
+        <path d="M 38 120 L 100 72 L 300 72 L 238 120"/>
+        <path d="M 300 72 L 300 147 L 238 195"/>
+      </g>
+      <text x="138" y="216" text-anchor="middle">8 cm</text>
+      <text x="30" y="163" text-anchor="end">3 cm</text>
+      <text x="280" y="180" text-anchor="start">5 cm</text>
+    </svg>
+  </figure>
+  <ol class="opts">
+    <li><b class="letter">A</b><span>16</span></li>
+    <li><b class="letter">B</b><span>40</span></li>
+    <li><b class="letter">C</b><span>120</span></li>
+    <li><b class="letter">D</b><span>158</span></li>
+  </ol>
+  <details>
+    <summary>Answer &amp; Solution</summary>
+    <p class="ans">Answer: <b>C — 120</b></p>
+    <p class="sol">V = ℓwh = 8 · 5 · 3 = 120 cubic centimeters. All three edge lengths are read directly off the figure.</p>
+    <p class="dis">Distractors: A sums the three edges (8 + 5 + 3); B is the base area only (8 · 5); D is the surface area, 2(40 + 24 + 15) = 158.</p>
+    <p class="rp"><b>RP67 (B1):</b> On-sheet formula (V = ℓwh is on the reference sheet), single forward substitution of labeled edges — the lowest-band volume gate; B1 students clear it at ≥ 0.67.</p>
+  </details>
+</article>
+
+<!-- ═══════════════ ITEM 2 · B2 · parallel lines ═══════════════ -->
+<article class="item" style="--edge:var(--b12)">
+  <div class="meta">
+    <span class="num">2</span>
+    <span class="chip band-b12">Band B2</span>
+    <span class="chip type">MCQ</span>
+    <span class="skill">Parallel lines cut by a transversal</span>
+  </div>
+  <p class="stem">In the figure, line ℓ is parallel to line <em>m</em>. What is the value of <em>x</em>?</p>
+  <figure class="sat-fig">
+    <svg viewBox="0 0 320 235" role="img" aria-label="Two parallel horizontal lines l and m cut by a transversal; an angle of 118 degrees is marked below line l on the left of the transversal, and an angle of x degrees is marked above line m on the left of the transversal">
+      <defs>
+        <marker id="m2a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+          <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--fig-line)"/>
+        </marker>
+      </defs>
+      <g stroke="var(--fig-line)" stroke-width="2" fill="none">
+        <line x1="18" y1="70" x2="302" y2="70" marker-start="url(#m2a)" marker-end="url(#m2a)"/>
+        <line x1="18" y1="170" x2="302" y2="170" marker-start="url(#m2a)" marker-end="url(#m2a)"/>
+        <line x1="98" y1="24" x2="243" y2="217" marker-start="url(#m2a)" marker-end="url(#m2a)"/>
+      </g>
+      <text class="vlab" x="306" y="64" text-anchor="start">ℓ</text>
+      <text class="vlab" x="306" y="164" text-anchor="start"><tspan font-style="italic">m</tspan></text>
+      <text x="97" y="97" text-anchor="middle">118°</text>
+      <text x="172" y="163" text-anchor="middle"><tspan font-style="italic">x</tspan>°</text>
+    </svg>
+    <figcaption class="notdrawn">Figure not drawn to scale.</figcaption>
+  </figure>
+  <ol class="opts">
+    <li><b class="letter">A</b><span>28</span></li>
+    <li><b class="letter">B</b><span>62</span></li>
+    <li><b class="letter">C</b><span>72</span></li>
+    <li><b class="letter">D</b><span>118</span></li>
+  </ol>
+  <details>
+    <summary>Answer &amp; Solution</summary>
+    <p class="ans">Answer: <b>B — 62</b></p>
+    <p class="sol">The 118° angle and the <em>x</em>° angle are same-side (co-interior) angles between the parallel lines, so they are supplementary: <em>x</em> = 180 − 118 = 62.</p>
+    <p class="dis">Distractors: D treats the pair as alternate interior (congruent) angles; A subtracts from 90 instead of 180 (118 − 90 = 28); C is a common arithmetic slip on 180 − 118.</p>
+    <p class="rp"><b>RP67 (B2):</b> One transversal theorem plus one subtraction — the explicit B2 parallel-lines gate; no formula sheet, no chain.</p>
+  </details>
+</article>
+
+<!-- ═══════════════ ITEM 3 · B3 · angle chain ═══════════════ -->
+<article class="item" style="--edge:var(--b34)">
+  <div class="meta">
+    <span class="num">3</span>
+    <span class="chip band-b34">Band B3</span>
+    <span class="chip type">SPR</span>
+    <span class="skill">Triangle angle sum · vertical angles</span>
+  </div>
+  <p class="stem">In the figure, two lines intersect at the top vertex of a triangle whose other two angles measure 52° and 61°, as shown. What is the value of <em>x</em>?</p>
+  <figure class="sat-fig">
+    <svg viewBox="0 0 320 250" role="img" aria-label="A horizontal line forms the base of a triangle with base angles 52 degrees and 61 degrees; the two slanted sides are full lines that cross at the apex and extend beyond it, and the angle x degrees is marked between the extensions above the apex">
+      <defs>
+        <marker id="m3a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+          <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--fig-line)"/>
+        </marker>
+      </defs>
+      <g stroke="var(--fig-line)" stroke-width="2" fill="none">
+        <line x1="25" y1="210" x2="295" y2="210" marker-start="url(#m3a)" marker-end="url(#m3a)"/>
+        <line x1="41" y1="234" x2="212" y2="15" marker-start="url(#m3a)" marker-end="url(#m3a)"/>
+        <line x1="274" y1="236" x2="152" y2="15" marker-start="url(#m3a)" marker-end="url(#m3a)"/>
+      </g>
+      <g stroke="var(--fig-line)" stroke-width="1.3" fill="none">
+        <path d="M 86 210 A 26 26 0 0 0 76 189.5"/>
+        <path d="M 234 210 A 26 26 0 0 1 247.4 187.3"/>
+        <path d="M 189.3 44.2 A 20 20 0 0 0 167.3 42.5"/>
+      </g>
+      <text x="106" y="199" text-anchor="middle" class="small">52°</text>
+      <text x="219" y="197" text-anchor="middle" class="small">61°</text>
+      <text x="181" y="30" text-anchor="middle" class="small"><tspan font-style="italic">x</tspan>°</text>
+    </svg>
+  </figure>
+  <p class="sprnote">Student-produced response — enter your answer.</p>
+  <details>
+    <summary>Answer &amp; Solution</summary>
+    <p class="ans">Answer: <b>67</b></p>
+    <p class="sol">The apex angle of the triangle measures 180 − 52 − 61 = 67°. The angle marked <em>x</em>° is the vertical angle to the apex angle formed by the two intersecting lines, so <em>x</em> = 67.</p>
+    <p class="rp"><b>RP67 (B3):</b> A two-theorem chain (triangle angle sum, then vertical angles), all off the reference sheet — the first band that reliably clears multi-theorem angle chains is B3.</p>
+  </details>
+</article>
+
+<!-- ═══════════════ ITEM 4 · B4 · special right triangle ═══════════════ -->
+<article class="item" style="--edge:var(--b34)">
+  <div class="meta">
+    <span class="num">4</span>
+    <span class="chip band-b34">Band B4</span>
+    <span class="chip type">MCQ</span>
+    <span class="skill">30°-60°-90° special right triangle</span>
+  </div>
+  <p class="stem">In right triangle <em>ABC</em> shown, what is the value of <em>x</em>?</p>
+  <figure class="sat-fig">
+    <svg viewBox="0 0 320 240" role="img" aria-label="Right triangle ABC with the right angle at C; the angle at A measures 60 degrees, the hypotenuse AB is labeled 14, and the vertical side AC is labeled x">
+      <g stroke="var(--fig-line)" stroke-width="2" fill="none" stroke-linejoin="round">
+        <path d="M 70 100 L 70 205 L 252 205 Z"/>
+      </g>
+      <path d="M 70 193 L 82 193 L 82 205" stroke="var(--fig-line)" stroke-width="1.4" fill="none"/>
+      <path d="M 70 124 A 24 24 0 0 0 90.8 112" stroke="var(--fig-line)" stroke-width="1.3" fill="none"/>
+      <text x="92" y="140" text-anchor="middle" class="small">60°</text>
+      <text class="vlab" x="64" y="92" text-anchor="middle">A</text>
+      <text class="vlab" x="58" y="221" text-anchor="middle">C</text>
+      <text class="vlab" x="262" y="221" text-anchor="middle">B</text>
+      <text x="176" y="142" text-anchor="start">14</text>
+      <text x="58" y="160" text-anchor="end"><tspan font-style="italic">x</tspan></text>
+    </svg>
+  </figure>
+  <ol class="opts">
+    <li><b class="letter">A</b><span>7</span></li>
+    <li><b class="letter">B</b><span>7√2</span></li>
+    <li><b class="letter">C</b><span>7√3</span></li>
+    <li><b class="letter">D</b><span>14√3</span></li>
+  </ol>
+  <details>
+    <summary>Answer &amp; Solution</summary>
+    <p class="ans">Answer: <b>A — 7</b></p>
+    <p class="sol">Angle A = 60° and angle C = 90°, so angle B = 30°. Side <em>x</em> = AC is opposite the 30° angle, and in a 30°-60°-90° triangle the side opposite 30° is half the hypotenuse: <em>x</em> = 14 ÷ 2 = 7.</p>
+    <p class="dis">Distractors: C picks the leg opposite 60° (7√3); B applies the 45°-45°-90° ratio; D multiplies the hypotenuse by √3 instead of halving it.</p>
+    <p class="rp"><b>RP67 (B4):</b> The 30-60-90 ratios are on the reference sheet, but selecting which leg is opposite 30° (after inferring the unmarked 30° angle) is the B4 special-right-triangle gate.</p>
+  </details>
+</article>
+
+<!-- ═══════════════ ITEM 5 · B5 · circle equation ═══════════════ -->
+<article class="item" style="--edge:var(--b56)">
+  <div class="meta">
+    <span class="num">5</span>
+    <span class="chip band-b56">Band B5</span>
+    <span class="chip type">MCQ</span>
+    <span class="skill">Equation of a circle in the xy-plane</span>
+  </div>
+  <p class="stem">The graph of a circle in the <em>xy</em>-plane is shown. Which of the following is an equation of the circle?</p>
+  <figure class="sat-fig">
+    <svg viewBox="0 0 340 280" role="img" aria-label="Coordinate grid showing a circle centered at the point (3, negative 2), which is marked, passing through the marked point (7, 1)">
+      <defs>
+        <marker id="m5a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+          <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--fig-line)"/>
+        </marker>
+      </defs>
+      <!-- gridlines -->
+      <g stroke="#cfc9ba" stroke-width="1">
+        <path d="M30 20V260 M50 20V260 M70 20V260 M90 20V260 M130 20V260 M150 20V260 M170 20V260 M190 20V260 M210 20V260 M230 20V260 M250 20V260 M270 20V260 M290 20V260 M310 20V260"/>
+        <path d="M30 20H310 M30 40H310 M30 60H310 M30 80H310 M30 120H310 M30 140H310 M30 160H310 M30 180H310 M30 200H310 M30 220H310 M30 240H310 M30 260H310"/>
+      </g>
+      <!-- axes -->
+      <g stroke="var(--fig-line)" stroke-width="1.8">
+        <line x1="22" y1="100" x2="318" y2="100" marker-start="url(#m5a)" marker-end="url(#m5a)"/>
+        <line x1="110" y1="268" x2="110" y2="12" marker-start="url(#m5a)" marker-end="url(#m5a)"/>
+      </g>
+      <text class="vlab small" x="322" y="94" text-anchor="middle">x</text>
+      <text class="vlab small" x="121" y="16" text-anchor="middle">y</text>
+      <text class="small" x="210" y="114" text-anchor="middle">5</text>
+      <text class="small" x="116" y="205" text-anchor="start">−5</text>
+      <!-- circle -->
+      <circle cx="170" cy="140" r="100" fill="none" stroke="var(--accent)" stroke-width="2.4"/>
+      <circle cx="170" cy="140" r="3.5" fill="var(--fig-line)"/>
+      <circle cx="250" cy="80" r="3.5" fill="var(--fig-line)"/>
+      <text class="small" x="178" y="159" text-anchor="start">(3, −2)</text>
+      <text class="small" x="257" y="74" text-anchor="start">(7, 1)</text>
+    </svg>
+  </figure>
+  <ol class="opts">
+    <li><b class="letter">A</b><span>(<em>x</em> + 3)² + (<em>y</em> − 2)² = 25</span></li>
+    <li><b class="letter">B</b><span>(<em>x</em> − 3)² + (<em>y</em> + 2)² = 5</span></li>
+    <li><b class="letter">C</b><span>(<em>x</em> − 3)² + (<em>y</em> + 2)² = 25</span></li>
+    <li><b class="letter">D</b><span>(<em>x</em> − 7)² + (<em>y</em> − 1)² = 25</span></li>
+  </ol>
+  <details>
+    <summary>Answer &amp; Solution</summary>
+    <p class="ans">Answer: <b>C — (x − 3)² + (y + 2)² = 25</b></p>
+    <p class="sol">The center is (3, −2) and the circle passes through (7, 1), so r² = (7 − 3)² + (1 − (−2))² = 16 + 9 = 25. Standard form gives (x − 3)² + (y + 2)² = 25.</p>
+    <p class="dis">Distractors: A flips the signs of the center; B writes r instead of r²; D uses the on-circle point as the center.</p>
+    <p class="rp"><b>RP67 (B5):</b> Radius must be constructed from center + on-circle point (distance formula) and then encoded in standard form — exactly the circle-equation capability the rubric places at B5.</p>
+  </details>
+</article>
+
+<!-- ═══════════════ ITEM 6 · B6 · cylinder dimension ═══════════════ -->
+<article class="item" style="--edge:var(--b56)">
+  <div class="meta">
+    <span class="num">6</span>
+    <span class="chip band-b56">Band B6</span>
+    <span class="chip type">SPR</span>
+    <span class="skill">Volume of a cylinder — solve for a dimension</span>
+  </div>
+  <p class="stem">The right circular cylinder shown has a volume of 288π cubic centimeters. Based on the figure, what is the value of <em>h</em>? (Lengths shown are in centimeters.)</p>
+  <figure class="sat-fig">
+    <svg viewBox="0 0 320 270" role="img" aria-label="A right circular cylinder with base radius labeled 4 and height labeled h">
+      <g stroke="var(--fig-line)" stroke-width="2" fill="none">
+        <ellipse cx="160" cy="50" rx="40" ry="11"/>
+        <line x1="120" y1="50" x2="120" y2="230"/>
+        <line x1="200" y1="50" x2="200" y2="230"/>
+        <path d="M 120 230 A 40 11 0 0 0 200 230"/>
+      </g>
+      <path d="M 120 230 A 40 11 0 0 1 200 230" stroke="var(--fig-line)" stroke-width="1.4" stroke-dasharray="5 5" fill="none"/>
+      <line x1="160" y1="50" x2="200" y2="50" stroke="var(--fig-line)" stroke-width="1.4" stroke-dasharray="4 4"/>
+      <circle cx="160" cy="50" r="2.6" fill="var(--fig-line)"/>
+      <text x="182" y="33" text-anchor="middle">4</text>
+      <text class="vlab" x="212" y="146" text-anchor="start">h</text>
+    </svg>
+  </figure>
+  <p class="sprnote">Student-produced response — enter your answer.</p>
+  <details>
+    <summary>Answer &amp; Solution</summary>
+    <p class="ans">Answer: <b>18</b></p>
+    <p class="sol">V = πr²h, so 288π = π(4)²h = 16πh. Dividing both sides by 16π gives h = 288 ⁄ 16 = 18.</p>
+    <p class="rp"><b>RP67 (B6):</b> The formula πr²h is on the sheet, but it must be run in the inverse direction — recovering a dimension from a given volume is the B6 gate, one step past B5's forward formula use.</p>
+  </details>
+</article>
+
+<!-- ═══════════════ ITEM 7 · B6 · trig ratio ═══════════════ -->
+<article class="item" style="--edge:var(--b56)">
+  <div class="meta">
+    <span class="num">7</span>
+    <span class="chip band-b56">Band B6</span>
+    <span class="chip type">MCQ</span>
+    <span class="skill">Right-triangle trigonometric ratio</span>
+  </div>
+  <p class="stem">In right triangle <em>ABC</em> shown, what is the value of tan <em>A</em>?</p>
+  <figure class="sat-fig">
+    <svg viewBox="0 0 320 240" role="img" aria-label="Right triangle ABC with the right angle at C; leg AC is labeled 21, leg BC is labeled 20, and hypotenuse AB is labeled 29">
+      <g stroke="var(--fig-line)" stroke-width="2" fill="none" stroke-linejoin="round">
+        <path d="M 70 45 L 70 205 L 238 205 Z"/>
+      </g>
+      <path d="M 70 193 L 82 193 L 82 205" stroke="var(--fig-line)" stroke-width="1.4" fill="none"/>
+      <text class="vlab" x="64" y="37" text-anchor="middle">B</text>
+      <text class="vlab" x="58" y="221" text-anchor="middle">C</text>
+      <text class="vlab" x="248" y="221" text-anchor="middle">A</text>
+      <text x="154" y="226" text-anchor="middle">21</text>
+      <text x="60" y="130" text-anchor="end">20</text>
+      <text x="164" y="115" text-anchor="start">29</text>
+    </svg>
+  </figure>
+  <ol class="opts">
+    <li><b class="letter">A</b><span>20⁄29</span></li>
+    <li><b class="letter">B</b><span>21⁄29</span></li>
+    <li><b class="letter">C</b><span>21⁄20</span></li>
+    <li><b class="letter">D</b><span>20⁄21</span></li>
+  </ol>
+  <details>
+    <summary>Answer &amp; Solution</summary>
+    <p class="ans">Answer: <b>D — 20⁄21</b></p>
+    <p class="sol">From vertex A, the opposite leg is BC = 20 and the adjacent leg is AC = 21 (and indeed 20² + 21² = 841 = 29²). So tan A = opposite ⁄ adjacent = 20⁄21.</p>
+    <p class="dis">Distractors: A is sin A; B is cos A; C is the reciprocal (tan of angle B).</p>
+    <p class="rp"><b>RP67 (B6):</b> SOH-CAH-TOA is off-sheet recall, and opposite vs. adjacent must be identified from the figure relative to vertex A — the rubric's B6 right-triangle-trig gate.</p>
+  </details>
+</article>
+
+<!-- ═══════════════ ITEM 8 · B7 · tangent to circle ═══════════════ -->
+<article class="item" style="--edge:var(--b7)">
+  <div class="meta">
+    <span class="num">8</span>
+    <span class="chip band-b7">Band B7</span>
+    <span class="chip type">SPR</span>
+    <span class="skill">Circle theorems — tangent ⊥ radius</span>
+  </div>
+  <p class="stem">In the figure, segment <em>PA</em> is tangent to the circle with center <em>O</em> at point <em>A</em>. What is the length of radius <em>OA</em>?</p>
+  <figure class="sat-fig">
+    <svg viewBox="0 0 320 200" role="img" aria-label="A circle with center O; segment PA of length 24 is tangent to the circle at point A, and segment OP of length 26 joins the center to the external point P; a right-angle mark appears at A">
+      <circle cx="85" cy="120" r="55" fill="none" stroke="var(--fig-line)" stroke-width="2"/>
+      <g stroke="var(--fig-line)" stroke-width="2">
+        <line x1="85" y1="120" x2="106.2" y2="69.2"/>
+        <line x1="106.2" y1="69.2" x2="228" y2="120"/>
+        <line x1="85" y1="120" x2="228" y2="120"/>
+      </g>
+      <path d="M 102.7 77.5 L 111 81 L 114.5 72.7" stroke="var(--fig-line)" stroke-width="1.3" fill="none"/>
+      <circle cx="85" cy="120" r="3" fill="var(--fig-line)"/>
+      <circle cx="106.2" cy="69.2" r="3" fill="var(--fig-line)"/>
+      <circle cx="228" cy="120" r="3" fill="var(--fig-line)"/>
+      <text class="vlab" x="76" y="137" text-anchor="middle">O</text>
+      <text class="vlab" x="101" y="58" text-anchor="middle">A</text>
+      <text class="vlab" x="238" y="126" text-anchor="start">P</text>
+      <text x="172" y="82" text-anchor="middle">24</text>
+      <text x="157" y="139" text-anchor="middle">26</text>
+    </svg>
+  </figure>
+  <p class="sprnote">Student-produced response — enter your answer.</p>
+  <details>
+    <summary>Answer &amp; Solution</summary>
+    <p class="ans">Answer: <b>10</b></p>
+    <p class="sol">A tangent is perpendicular to the radius drawn to the point of tangency, so triangle <em>OAP</em> is right-angled at A with hypotenuse OP = 26. Then OA = √(26² − 24²) = √(676 − 576) = √100 = 10.</p>
+    <p class="rp"><b>RP67 (B7):</b> The tangent-perpendicular-to-radius theorem is pure off-sheet recall and must be chained into an inverse Pythagorean step — circle-theorem chains are the rubric's B7 territory.</p>
+  </details>
+</article>
+
+<!-- ═══════════════ ITEM 9 · B7 · similarity / geometric mean ═══════════════ -->
+<article class="item" style="--edge:var(--b7)">
+  <div class="meta">
+    <span class="num">9</span>
+    <span class="chip band-b7">Band B7</span>
+    <span class="chip type">SPR</span>
+    <span class="skill">Similar right triangles — altitude to the hypotenuse</span>
+  </div>
+  <p class="stem">In triangle <em>ABC</em> shown, angle <em>ABC</em> is a right angle, and <em>BD</em> is perpendicular to <em>AC</em>. What is the length of <em>BD</em>?</p>
+  <figure class="sat-fig">
+    <svg viewBox="0 0 340 250" role="img" aria-label="Triangle ABC with a right angle at B; point D lies on side AC with BD perpendicular to AC; segment AD is labeled 4 and segment DC is labeled 9">
+      <g stroke="var(--fig-line)" stroke-width="2" fill="none" stroke-linejoin="round">
+        <path d="M 40 215 L 120 95 L 300 215 Z"/>
+        <line x1="120" y1="95" x2="120" y2="215"/>
+      </g>
+      <path d="M 120 205 L 130 205 L 130 215" stroke="var(--fig-line)" stroke-width="1.3" fill="none"/>
+      <path d="M 115 102.5 L 122.5 107.5 L 127.5 100" stroke="var(--fig-line)" stroke-width="1.3" fill="none"/>
+      <text class="vlab" x="30" y="230" text-anchor="middle">A</text>
+      <text class="vlab" x="114" y="84" text-anchor="middle">B</text>
+      <text class="vlab" x="310" y="230" text-anchor="middle">C</text>
+      <text class="vlab" x="122" y="233" text-anchor="middle">D</text>
+      <text x="78" y="233" text-anchor="middle">4</text>
+      <text x="212" y="233" text-anchor="middle">9</text>
+    </svg>
+  </figure>
+  <p class="sprnote">Student-produced response — enter your answer.</p>
+  <details>
+    <summary>Answer &amp; Solution</summary>
+    <p class="ans">Answer: <b>6</b></p>
+    <p class="sol">The altitude to the hypotenuse creates triangles <em>ADB</em> and <em>BDC</em> that are similar to each other (each is similar to triangle <em>ABC</em>). From △ADB ∼ △BDC: AD⁄BD = BD⁄DC, so BD² = AD · DC = 4 · 9 = 36, giving BD = 6.</p>
+    <p class="rp"><b>RP67 (B7):</b> Requires recognizing the three-similar-triangles structure hidden in the figure and extracting the geometric-mean proportion — a multi-step similarity chain, the rubric's B7 similar-triangles gate.</p>
+  </details>
+</article>
+
+<!-- ═══════════════ ITEM 10 · B7 · composite solid ═══════════════ -->
+<article class="item" style="--edge:var(--b7)">
+  <div class="meta">
+    <span class="num">10</span>
+    <span class="chip band-b7">Band B7</span>
+    <span class="chip type">MCQ</span>
+    <span class="skill">Volume of a composite solid (3-D modeling)</span>
+  </div>
+  <p class="stem">The figure shows a model of a grain silo consisting of a right circular cylinder topped by a right circular cone that shares its base with the cylinder. Based on the figure, what is the volume, in cubic feet, of the silo?</p>
+  <figure class="sat-fig">
+    <svg viewBox="0 0 320 240" role="img" aria-label="A silo made of a cylinder with a cone on top; the shared base radius is labeled 3 feet, the height of the cone is labeled 6 feet, and the total height from the base of the cylinder to the apex of the cone is labeled 14 feet">
+      <defs>
+        <marker id="m10a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+          <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--fig-line)"/>
+        </marker>
+      </defs>
+      <!-- cone -->
+      <g stroke="var(--fig-line)" stroke-width="2" fill="none">
+        <path d="M 94 100 L 130 28 L 166 100"/>
+        <path d="M 94 100 A 36 10 0 0 0 166 100"/>
+        <line x1="94" y1="100" x2="94" y2="196"/>
+        <line x1="166" y1="100" x2="166" y2="196"/>
+        <path d="M 94 196 A 36 10 0 0 0 166 196"/>
+      </g>
+      <path d="M 94 196 A 36 10 0 0 1 166 196" stroke="var(--fig-line)" stroke-width="1.3" stroke-dasharray="5 5" fill="none"/>
+      <!-- cone height -->
+      <line x1="130" y1="28" x2="130" y2="100" stroke="var(--fig-line)" stroke-width="1.3" stroke-dasharray="4 4"/>
+      <text class="small" x="136" y="88" text-anchor="start">6 ft</text>
+      <!-- radius -->
+      <circle cx="130" cy="100" r="2.4" fill="var(--fig-line)"/>
+      <line x1="130" y1="100" x2="166" y2="100" stroke="var(--fig-line)" stroke-width="1.3" stroke-dasharray="4 4"/>
+      <text class="small" x="147" y="120" text-anchor="middle">3 ft</text>
+      <!-- overall height dimension -->
+      <g stroke="#8b8574" stroke-width="1" stroke-dasharray="3 3">
+        <line x1="140" y1="28" x2="202" y2="28"/>
+        <line x1="172" y1="196" x2="202" y2="196"/>
+      </g>
+      <line x1="196" y1="30" x2="196" y2="194" stroke="var(--fig-line)" stroke-width="1.3" marker-start="url(#m10a)" marker-end="url(#m10a)"/>
+      <text class="small" x="204" y="118" text-anchor="start">14 ft</text>
+    </svg>
+  </figure>
+  <ol class="opts">
+    <li><b class="letter">A</b><span>72π</span></li>
+    <li><b class="letter">B</b><span>90π</span></li>
+    <li><b class="letter">C</b><span>108π</span></li>
+    <li><b class="letter">D</b><span>144π</span></li>
+  </ol>
+  <details>
+    <summary>Answer &amp; Solution</summary>
+    <p class="ans">Answer: <b>B — 90π</b></p>
+    <p class="sol">The cylinder's height is not given directly: it is 14 − 6 = 8 ft. Then V = πr²h + ⅓πr²h<sub>cone</sub> = π(3²)(8) + ⅓π(3²)(6) = 72π + 18π = 90π cubic feet.</p>
+    <p class="dis">Distractors: A is the cylinder alone; C treats the cone as a cylinder (72π + 36π); D uses the full 14 ft as the cylinder height and then adds the cone (126π + 18π).</p>
+    <p class="rp"><b>RP67 (B7):</b> Decomposing a modeled solid, deriving the hidden cylinder height (14 − 6), and chaining two sheet formulas — multi-formula 3-D modeling is the rubric's B7 gate.</p>
+  </details>
+</article>
+
+</main>
+
+<footer>
+  10 original items · authored to Digital SAT Geometry &amp; Trigonometry Skills-Insight bands (RP67 placement) · all answers independently verified by computation · figures drawn to honest proportion except where noted.
+</footer>
+
+</body>
+</html>

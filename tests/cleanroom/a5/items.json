@@ -1,0 +1,92 @@
+[
+  {
+    "n": 1,
+    "band": "B1",
+    "type": "mcq",
+    "skill": "volume of right rectangular prism",
+    "stem": "The figure shows a right rectangular prism with edge lengths of 8 centimeters, 5 centimeters, and 3 centimeters. What is the volume, in cubic centimeters, of the prism? Options: 16, 64, 120, 158.",
+    "figure": "Oblique drawing of a rectangular prism with edges labeled 8 cm, 5 cm, and 3 cm; hidden edges dashed.",
+    "answer": "C (120)"
+  },
+  {
+    "n": 2,
+    "band": "B2",
+    "type": "mcq",
+    "skill": "parallel lines cut by a transversal",
+    "stem": "Line l is parallel to line m, and line t intersects both. The angle below line l on the right side of the transversal measures 118 degrees; the angle above line m on the same side of the transversal (its same-side interior partner) measures x degrees. What is the value of x? Options: 28, 62, 118, 242.",
+    "figure": "Two horizontal parallel lines l and m cut by transversal t; 118-degree angle marked at the upper intersection and x-degree angle marked at the lower intersection, both interior on the right of t.",
+    "answer": "B (62)"
+  },
+  {
+    "n": 3,
+    "band": "B3",
+    "type": "spr",
+    "skill": "Pythagorean theorem (hypotenuse)",
+    "stem": "The figure shows a right triangle with legs of length 20 and 21 and hypotenuse of length x. What is the value of x?",
+    "figure": "Right triangle with vertical leg 20, horizontal leg 21, right-angle mark between them, hypotenuse labeled x.",
+    "answer": "29"
+  },
+  {
+    "n": 4,
+    "band": "B4",
+    "type": "mcq",
+    "skill": "triangle similarity / scale factor",
+    "stem": "In triangle ABC, D lies on side AB and E lies on side AC, with segment DE parallel to segment BC. AD = 6, DB = 4, and DE = 9. What is the length of BC? Options: 6, 13, 15, 22.5. (Figure not drawn to scale.)",
+    "figure": "Triangle ABC with apex A; cross-segment DE parallel to base BC (parallel chevrons marked); labels 6 on AD, 4 on DB, 9 on DE.",
+    "answer": "C (15)"
+  },
+  {
+    "n": 5,
+    "band": "B5",
+    "type": "mcq",
+    "skill": "equation of a circle in the xy-plane",
+    "stem": "The graph of a circle in the xy-plane is shown; its center is at (3, -1) and it passes through the point (7, 2). Which equation defines the circle? Options: (x-3)^2+(y+1)^2=25; (x-3)^2+(y+1)^2=5; (x+3)^2+(y-1)^2=25; (x+3)^2+(y-1)^2=5.",
+    "figure": "Coordinate grid with axes; circle of radius 5 with center dot labeled (3, -1) and a marked point on the circle labeled (7, 2).",
+    "answer": "A ((x-3)^2+(y+1)^2=25)"
+  },
+  {
+    "n": 6,
+    "band": "B6",
+    "type": "spr",
+    "skill": "right-triangle trigonometric ratios",
+    "stem": "In right triangle ABC, the right angle is at C, hypotenuse AB has length 20, and leg BC has length 12; leg AC is unlabeled. What is the value of tan A?",
+    "figure": "Right triangle ABC drawn with right-angle mark at C, hypotenuse labeled 20, leg BC labeled 12, leg AC unlabeled.",
+    "answer": "3/4 (.75)"
+  },
+  {
+    "n": 7,
+    "band": "B6",
+    "type": "mcq",
+    "skill": "prism volume to surface area (inverse)",
+    "stem": "A right rectangular prism has base edges of length w and 2w and height 6 inches, as labeled in the figure. The volume of the prism is 300 cubic inches. What is the surface area, in square inches, of the prism? Options: 180, 230, 280, 300.",
+    "figure": "Oblique drawing of a rectangular prism with front base edge labeled 2w, receding base edge labeled w, and vertical edge labeled 6.",
+    "answer": "C (280)"
+  },
+  {
+    "n": 8,
+    "band": "B7",
+    "type": "mcq",
+    "skill": "tangent lines and arcs of a circle",
+    "stem": "Segments PA and PB are tangent to a circle with center O at points A and B, respectively, and the measure of angle APB is 42 degrees. What is the measure, in degrees, of minor arc AB? Options: 42, 84, 138, 222.",
+    "figure": "Circle with center O; external point P at left with two tangent segments touching the circle at A (upper) and B (lower); 42-degree angle marked at P.",
+    "answer": "C (138)"
+  },
+  {
+    "n": 9,
+    "band": "B7",
+    "type": "spr",
+    "skill": "altitude on hypotenuse / geometric mean",
+    "stem": "In right triangle ABC, angle ACB is a right angle and segment CD is the altitude to hypotenuse AB, with AD = 9 and DB = 16. What is the length of segment CD? (Figure not drawn to scale.)",
+    "figure": "Right triangle ABC with horizontal hypotenuse AB, right angle at C, altitude CD to AB with right-angle mark at D; AD labeled 9 and DB labeled 16.",
+    "answer": "12"
+  },
+  {
+    "n": 10,
+    "band": "B7",
+    "type": "spr",
+    "skill": "composite solid volume (cylinder + cone)",
+    "stem": "A solid consists of a right circular cylinder and a right circular cone that share a base of radius 3 centimeters; the cylinder has height 8 centimeters and the cone has height h centimeters. The volume of the solid is 87*pi cubic centimeters. What is the value of h?",
+    "figure": "Cone of height h (dashed axis) sitting atop a cylinder of height 8; shared base radius 3 drawn on the bottom ellipse.",
+    "answer": "5"
+  }
+]

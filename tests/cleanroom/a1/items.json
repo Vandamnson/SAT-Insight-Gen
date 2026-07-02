@@ -1,0 +1,92 @@
+[
+  {
+    "n": 1,
+    "band": "B1",
+    "type": "mcq",
+    "skill": "volume of right rectangular prism",
+    "stem": "What is the volume, in cubic centimeters, of the right rectangular prism shown? The figure labels the three edges as 5 cm, 4 cm, and 3 cm. Choices: A) 12  B) 20  C) 60  D) 94",
+    "figure": "Oblique drawing of a right rectangular prism with edges labeled 5 cm (length), 4 cm (depth), 3 cm (height); hidden edges dashed.",
+    "answer": "C (60)"
+  },
+  {
+    "n": 2,
+    "band": "B2",
+    "type": "mcq",
+    "skill": "parallel lines cut by a transversal",
+    "stem": "In the figure, line l is parallel to line m, and line t intersects both lines. The angle marked 124 degrees and the angle marked x degrees are same-side interior angles (both between the parallel lines, on the same side of the transversal). What is the value of x? Choices: A) 34  B) 56  C) 66  D) 124",
+    "figure": "Two horizontal parallel lines l (top) and m (bottom) cut by a rising transversal t; 124-degree angle marked below l and x-degree angle marked above m, both to the right of t.",
+    "answer": "B (56)"
+  },
+  {
+    "n": 3,
+    "band": "B3",
+    "type": "spr",
+    "skill": "Pythagorean theorem (hypotenuse)",
+    "stem": "In the right triangle shown, the two legs measure 9 and 12 and the hypotenuse is labeled x. What is the value of x?",
+    "figure": "Right triangle with right-angle mark at the corner joining the legs of lengths 9 (vertical) and 12 (horizontal); hypotenuse labeled x.",
+    "answer": "15"
+  },
+  {
+    "n": 4,
+    "band": "B4",
+    "type": "mcq",
+    "skill": "triangle similarity (parallel segment)",
+    "stem": "In triangle ABC shown, point D lies on side AB, point E lies on side AC, and segment DE is parallel to segment BC. If AD = 6, DB = 4, and DE = 9, what is the length of BC? (Figure not drawn to scale.) Choices: A) 6  B) 13  C) 15  D) 22.5",
+    "figure": "Triangle ABC with apex A; segment DE drawn parallel to base BC, with D on AB (AD = 6 above, DB = 4 below) and E on AC; DE labeled 9.",
+    "answer": "C (15)"
+  },
+  {
+    "n": 5,
+    "band": "B5",
+    "type": "mcq",
+    "skill": "equation of a circle in the xy-plane",
+    "stem": "The circle shown in the xy-plane has center (3, -2), and the point (7, 1) lies on the circle. Which of the following is an equation of the circle? Choices: A) (x-3)^2+(y+2)^2=25  B) (x+3)^2+(y-2)^2=25  C) (x-3)^2+(y+2)^2=5  D) (x-7)^2+(y-1)^2=25",
+    "figure": "Unit-gridded xy-plane with axes; a circle of radius 5 centered at the labeled point (3, -2), passing through the labeled point (7, 1).",
+    "answer": "A ((x-3)^2+(y+2)^2=25)"
+  },
+  {
+    "n": 6,
+    "band": "B6",
+    "type": "spr",
+    "skill": "right-triangle trigonometric ratio",
+    "stem": "In right triangle ABC shown, the right angle is at C, AC = 21, and AB = 29. Angle B is marked in the figure; side BC is unlabeled. What is the value of tan B?",
+    "figure": "Right triangle ABC with right-angle mark at C (bottom-left), vertical leg AC labeled 21, hypotenuse AB labeled 29, angle arc at B (bottom-right); horizontal leg BC unlabeled.",
+    "answer": "21/20 (or 1.05)"
+  },
+  {
+    "n": 7,
+    "band": "B5",
+    "type": "mcq",
+    "skill": "composite area (multistep)",
+    "stem": "The figure shows the design of a window consisting of a rectangle and a semicircle whose diameter is the top side of the rectangle. The rectangle is 40 cm wide and 60 cm tall. What is the area, in square centimeters, of the window? Choices: A) 2400+20pi  B) 2400+200pi  C) 2400+400pi  D) 2400+800pi",
+    "figure": "Norman-window outline: a 40 cm by 60 cm rectangle topped by a semicircle of diameter 40 cm; dimension lines mark 40 cm (width) and 60 cm (rectangle height).",
+    "answer": "B (2400+200pi)"
+  },
+  {
+    "n": 8,
+    "band": "B7",
+    "type": "spr",
+    "skill": "circle theorems (tangent and radius)",
+    "stem": "In the figure, segment PA is tangent to the circle with center O at point A, and point B is the intersection of segment PO with the circle. If PA = 24 and PO = 26, what is the length of PB? (Figure not drawn to scale.)",
+    "figure": "Circle with center O; external point P at left; tangent segment PA touching the circle at A (upper left of circle); segment PO drawn with B marked where it crosses the circle; radius OA drawn.",
+    "answer": "16"
+  },
+  {
+    "n": 9,
+    "band": "B7",
+    "type": "spr",
+    "skill": "3-D composite volume (inverse solve)",
+    "stem": "The grain silo shown is formed by a right circular cylinder and a hemisphere on top. The cylinder and the hemisphere both have a radius of 6 meters. If the total volume of the silo is 864*pi cubic meters, what is the value of h, the height, in meters, of the cylindrical part?",
+    "figure": "Silo: cylinder with dashed elliptical junction where a hemispherical dome sits on top; radius segment labeled 6 m at the junction; dimension line labeled h along the cylindrical side.",
+    "answer": "20"
+  },
+  {
+    "n": 10,
+    "band": "B7",
+    "type": "mcq",
+    "skill": "similarity to trig ratio (altitude to hypotenuse)",
+    "stem": "In the figure, triangle ABC has a right angle at C, and D lies on side AB such that segment CD is perpendicular to segment AB. If AD = 9 and DB = 16, what is the value of cos B? (Figure not drawn to scale.) Choices: A) 3/5  B) 16/25  C) 3/4  D) 4/5",
+    "figure": "Right triangle ABC with the right angle at apex C and altitude CD drawn to hypotenuse AB; right-angle marks at C and D; AD labeled 9 and DB labeled 16 along the base.",
+    "answer": "D (4/5)"
+  }
+]

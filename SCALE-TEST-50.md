@@ -47,5 +47,4 @@ Neither side wins alone. The inverted architecture is now empirically grounded e
   $0 variants, ladders, and diagnostics — amortizing the ~8k-token authoring cost across unlimited
   practice volume.
 
-Artifacts: `scratchpad/scale/a1..a5/` (5 HTML sets + items.json), `solve-1/2.json` + key,
-analysis in `scale-analyze.mjs`. Pilot set: `scratchpad/freshgeo/`.
+Artifacts (preserved in-repo): `tests/cleanroom/pilot/` (the n=10 pilot) and `tests/cleanroom/a1..a5/` (the five scale sets, each index.html + items.json) + `tests/cleanroom/key.json`.

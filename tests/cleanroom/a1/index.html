@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Digital SAT — Geometry &amp; Trigonometry: 10 Figure Items</title>
+<style>
+  :root{
+    --ink:#1a1e26; --muted:#5b6472; --line:#d9dee6; --card:#ffffff; --bg:#f2f4f7;
+    --b12:#2e7d46; --b34:#1d6fb8; --b56:#b26a00; --b7:#a03050;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font-family:Georgia,"Times New Roman",serif;line-height:1.5}
+  header{max-width:840px;margin:0 auto;padding:34px 20px 8px}
+  header h1{font-size:26px;margin:0 0 6px}
+  header p{color:var(--muted);margin:0;font-family:"Helvetica Neue",Arial,sans-serif;font-size:14px}
+  main{max-width:840px;margin:0 auto;padding:12px 20px 60px}
+  .item{background:var(--card);border:1px solid var(--line);border-radius:10px;
+        padding:22px 26px;margin:22px 0;box-shadow:0 1px 3px rgba(20,30,50,.06)}
+  .meta{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:12px;
+        font-family:"Helvetica Neue",Arial,sans-serif}
+  .meta .num{font-weight:700;font-size:15px;margin-right:2px}
+  .chip{font-size:11.5px;font-weight:700;letter-spacing:.04em;padding:3px 10px;
+        border-radius:999px;color:#fff;text-transform:uppercase}
+  .chip.type{background:#66707e}
+  .chip.skill{background:#eef1f5;color:#3c4552;font-weight:600;text-transform:none;letter-spacing:0}
+  .b12{background:var(--b12)} .b34{background:var(--b34)} .b56{background:var(--b56)} .b7{background:var(--b7)}
+  .stem{font-size:17px;margin:6px 0 4px}
+  .fig{display:flex;flex-direction:column;align-items:center;margin:14px 0 6px}
+  .fig svg{max-width:340px;width:100%;height:auto}
+  .nts{font-style:italic;color:var(--muted);font-size:13px;margin-top:4px}
+  ol.choices{list-style:none;margin:12px 0 4px;padding:0;font-size:16.5px}
+  ol.choices li{padding:5px 0 5px 4px}
+  ol.choices .L{display:inline-block;width:26px;font-weight:700;font-family:"Helvetica Neue",Arial,sans-serif}
+  .spr-note{color:var(--muted);font-size:14px;font-family:"Helvetica Neue",Arial,sans-serif;margin-top:10px}
+  details{margin-top:14px;border-top:1px dashed var(--line);padding-top:10px}
+  summary{cursor:pointer;font-family:"Helvetica Neue",Arial,sans-serif;font-weight:700;
+          font-size:14px;color:#20507e}
+  summary:hover{color:#0f3a63}
+  .sol{margin-top:10px;font-size:15.5px}
+  .sol .ans{font-weight:700}
+  .sol p{margin:8px 0}
+  .rp{margin-top:10px;padding:9px 12px;background:#f6f2e9;border-left:3px solid #c9a24a;
+      font-size:13.5px;font-family:"Helvetica Neue",Arial,sans-serif;color:#4d4632}
+  .dis{margin-top:8px;font-size:13.5px;color:var(--muted);font-family:"Helvetica Neue",Arial,sans-serif}
+  svg text{font-family:"Helvetica Neue",Arial,sans-serif;font-size:15px;fill:#1a1e26}
+  svg .it{font-style:italic;font-family:Georgia,serif}
+  svg .sm{font-size:13px}
+</style>
+</head>
+<body>
+<header>
+  <h1>Digital SAT Math — Geometry &amp; Trigonometry</h1>
+  <p>10 original figure-based items · band-indexed to the Skills-Insight rubric (RP67 placement) · 2 at B1–B2, 2 at B3–B4, 3 at B5–B6, 3 at B7 · 6 multiple-choice, 4 student-produced response</p>
+</header>
+<main>
+
+<!-- ============================= ITEM 1 ============================= -->
+<section class="item">
+  <div class="meta"><span class="num">Problem 1</span>
+    <span class="chip b12">Band B1</span><span class="chip type">Multiple Choice</span>
+    <span class="chip skill">Volume of a right rectangular prism</span></div>
+  <p class="stem">What is the volume, in cubic centimeters, of the right rectangular prism shown?</p>
+  <div class="fig">
+    <svg viewBox="0 0 320 240" role="img" aria-label="Right rectangular prism with edges 5, 4, and 3 centimeters">
+      <!-- hidden edges -->
+      <path d="M60,195 L118,153 M118,153 L273,153 M118,153 L118,63" fill="none" stroke="#8a93a1" stroke-width="1.4" stroke-dasharray="5 4"/>
+      <!-- visible faces -->
+      <path d="M60,195 L215,195 L215,105 L60,105 Z" fill="#eef3fa" stroke="#2b3442" stroke-width="2"/>
+      <path d="M60,105 L118,63 L273,63 L215,105 Z" fill="#dde7f4" stroke="#2b3442" stroke-width="2"/>
+      <path d="M215,195 L273,153 L273,63 L215,105 Z" fill="#cfdcee" stroke="#2b3442" stroke-width="2"/>
+      <text x="137" y="217" text-anchor="middle">5 cm</text>
+      <text x="46" y="155" text-anchor="end">3 cm</text>
+      <text x="254" y="185">4 cm</text>
+    </svg>
+  </div>
+  <ol class="choices">
+    <li><span class="L">A)</span>12</li>
+    <li><span class="L">B)</span>20</li>
+    <li><span class="L">C)</span>60</li>
+    <li><span class="L">D)</span>94</li>
+  </ol>
+  <details><summary>Answer &amp; Solution</summary>
+    <div class="sol">
+      <p class="ans">Answer: C) 60</p>
+      <p>The reference-sheet formula gives <em>V</em> = ℓ·w·h = 5 · 4 · 3 = 60 cubic centimeters. All three edge lengths are read directly from the figure.</p>
+      <p class="dis">Distractors: A) adds the three edges (5+4+3); B) multiplies only two dimensions (5·4); D) is the surface area, 2(20+15+12) = 94.</p>
+      <div class="rp">RP67 — B1: single on-sheet formula (V = ℓwh), one forward substitution, no chain; this is the Band-1 descriptor verbatim.</div>
+    </div>
+  </details>
+</section>
+
+<!-- ============================= ITEM 2 ============================= -->
+<section class="item">
+  <div class="meta"><span class="num">Problem 2</span>
+    <span class="chip b12">Band B2</span><span class="chip type">Multiple Choice</span>
+    <span class="chip skill">Parallel lines cut by a transversal</span></div>
+  <p class="stem">In the figure, line ℓ is parallel to line <em>m</em>, and line <em>t</em> intersects both lines. What is the value of <em>x</em>?</p>
+  <div class="fig">
+    <svg viewBox="0 0 320 240" role="img" aria-label="Two parallel lines cut by a transversal; the angle of 124 degrees and angle x degrees are same-side interior angles">
+      <defs>
+        <marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+          <path d="M0,0 L10,5 L0,10 Z" fill="#2b3442"/>
+        </marker>
+      </defs>
+      <line x1="22" y1="85" x2="296" y2="85" stroke="#2b3442" stroke-width="2" marker-start="url(#ah)" marker-end="url(#ah)"/>
+      <line x1="22" y1="175" x2="296" y2="175" stroke="#2b3442" stroke-width="2" marker-start="url(#ah)" marker-end="url(#ah)"/>
+      <line x1="98" y1="228" x2="238" y2="20" stroke="#2b3442" stroke-width="2" marker-start="url(#ah)" marker-end="url(#ah)"/>
+      <path d="M224.3,85 A30,30 0 0 1 177.5,109.9" fill="none" stroke="#a03050" stroke-width="1.6"/>
+      <path d="M159.7,175 A26,26 0 0 0 148.2,153.4" fill="none" stroke="#a03050" stroke-width="1.6"/>
+      <text x="221" y="124">124°</text>
+      <text x="168" y="158" class="it">x°</text>
+      <text x="304" y="90" class="it">ℓ</text>
+      <text x="304" y="180" class="it">m</text>
+      <text x="246" y="24" class="it">t</text>
+    </svg>
+  </div>
+  <ol class="choices">
+    <li><span class="L">A)</span>34</li>
+    <li><span class="L">B)</span>56</li>
+    <li><span class="L">C)</span>66</li>
+    <li><span class="L">D)</span>124</li>
+  </ol>
+  <details><summary>Answer &amp; Solution</summary>
+    <div class="sol">
+      <p class="ans">Answer: B) 56</p>
+      <p>The 124° angle and the <em>x</em>° angle are same-side (co-interior) angles between the parallel lines, so they are supplementary: <em>x</em> = 180 − 124 = 56.</p>
+      <p class="dis">Distractors: A) uses the complement, 90 − 56; C) subtraction slip (180 − 124 miscomputed); D) treats the angles as congruent (corresponding/alternate confusion).</p>
+      <div class="rp">RP67 — B2: one named parallel-line theorem applied in a single forward step (off-sheet but Band-2 core knowledge; the B2 descriptor verbatim).</div>
+    </div>
+  </details>
+</section>
+
+<!-- ============================= ITEM 3 ============================= -->
+<section class="item">
+  <div class="meta"><span class="num">Problem 3</span>
+    <span class="chip b34">Band B3</span><span class="chip type">Student-Produced Response</span>
+    <span class="chip skill">Pythagorean theorem — hypotenuse</span></div>
+  <p class="stem">In the right triangle shown, what is the value of <em>x</em>?</p>
+  <div class="fig">
+    <svg viewBox="0 0 320 230" role="img" aria-label="Right triangle with legs 12 and 9 and hypotenuse x">
+      <path d="M70,195 L250,195 L70,60 Z" fill="#eef3fa" stroke="#2b3442" stroke-width="2"/>
+      <path d="M70,181 L84,181 L84,195" fill="none" stroke="#2b3442" stroke-width="1.6"/>
+      <text x="160" y="216" text-anchor="middle">12</text>
+      <text x="56" y="132" text-anchor="end">9</text>
+      <text x="172" y="114" class="it">x</text>
+    </svg>
+  </div>
+  <p class="spr-note">Enter your answer in the grid.</p>
+  <details><summary>Answer &amp; Solution</summary>
+    <div class="sol">
+      <p class="ans">Answer: 15</p>
+      <p>The right-angle mark in the figure identifies 9 and 12 as the legs, so <em>x</em>² = 9² + 12² = 81 + 144 = 225, and <em>x</em> = 15.</p>
+      <div class="rp">RP67 — B3: forward Pythagorean solve for the hypotenuse given both legs — the B3 descriptor verbatim; one universally-drilled formula, one step, no inverse work.</div>
+    </div>
+  </details>
+</section>
+
+<!-- ============================= ITEM 4 ============================= -->
+<section class="item">
+  <div class="meta"><span class="num">Problem 4</span>
+    <span class="chip b34">Band B4</span><span class="chip type">Multiple Choice</span>
+    <span class="chip skill">Triangle similarity — parallel segment</span></div>
+  <p class="stem">In triangle <em>ABC</em> shown, point <em>D</em> lies on side <em>AB</em>, point <em>E</em> lies on side <em>AC</em>, and segment <em>DE</em> is parallel to segment <em>BC</em>. If <em>AD</em> = 6, <em>DB</em> = 4, and <em>DE</em> = 9, what is the length of <em>BC</em>?</p>
+  <div class="fig">
+    <svg viewBox="0 0 320 230" role="img" aria-label="Triangle ABC with segment DE parallel to base BC; AD is 6, DB is 4, DE is 9">
+      <path d="M160,28 L56,198 L276,198 Z" fill="#eef3fa" stroke="#2b3442" stroke-width="2"/>
+      <line x1="97.6" y1="130" x2="229.6" y2="130" stroke="#2b3442" stroke-width="2"/>
+      <text x="160" y="20" text-anchor="middle" class="it">A</text>
+      <text x="44" y="212" class="it">B</text>
+      <text x="282" y="212" class="it">C</text>
+      <text x="83" y="134" text-anchor="end" class="it">D</text>
+      <text x="238" y="134" class="it">E</text>
+      <text x="114" y="80" text-anchor="end">6</text>
+      <text x="62" y="164" text-anchor="end">4</text>
+      <text x="163" y="122" text-anchor="middle">9</text>
+    </svg>
+    <p class="nts">Note: Figure not drawn to scale.</p>
+  </div>
+  <ol class="choices">
+    <li><span class="L">A)</span>6</li>
+    <li><span class="L">B)</span>13</li>
+    <li><span class="L">C)</span>15</li>
+    <li><span class="L">D)</span>22.5</li>
+  </ol>
+  <details><summary>Answer &amp; Solution</summary>
+    <div class="sol">
+      <p class="ans">Answer: C) 15</p>
+      <p>Because <em>DE</em> ∥ <em>BC</em>, triangles <em>ADE</em> and <em>ABC</em> are similar (AA). The figure shows <em>D</em> between <em>A</em> and <em>B</em>, so <em>AB</em> = <em>AD</em> + <em>DB</em> = 10. Then BC = DE · (AB/AD) = 9 · (10/6) = 15.</p>
+      <p class="dis">Distractors: A) uses the ratio DB/AD (9 · 4/6); B) adds DB to DE (additive misconception, 9 + 4); D) uses AB/DB instead of AB/AD (9 · 10/4).</p>
+      <div class="rp">RP67 — B4: one similarity setup plus one forward proportion; the scale-factor gate (whole side AB vs. sub-segment DB) is exactly the B4 descriptor.</div>
+    </div>
+  </details>
+</section>
+
+<!-- ============================= ITEM 5 ============================= -->
+<section class="item">
+  <div class="meta"><span class="num">Problem 5</span>
+    <span class="chip b56">Band B5</span><span class="chip type">Multiple Choice</span>
+    <span class="chip skill">Equation of a circle in the xy-plane</span></div>
+  <p class="stem">The circle shown in the <em>xy</em>-plane has center (3, −2), and the point (7, 1) lies on the circle. Which of the following is an equation of the circle?</p>
+  <div class="fig">
+    <svg viewBox="0 0 320 300" role="img" aria-label="Circle in the xy-plane centered at (3, negative 2) passing through the point (7, 1)">
+      <defs>
+        <marker id="ah5" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+          <path d="M0,0 L10,5 L0,10 Z" fill="#444c58"/>
+        </marker>
+      </defs>
+      <g stroke="#dde2e9" stroke-width="1">
+        <line x1="40" y1="16" x2="40" y2="280"/><line x1="62" y1="16" x2="62" y2="280"/>
+        <line x1="84" y1="16" x2="84" y2="280"/><line x1="128" y1="16" x2="128" y2="280"/>
+        <line x1="150" y1="16" x2="150" y2="280"/><line x1="172" y1="16" x2="172" y2="280"/>
+        <line x1="194" y1="16" x2="194" y2="280"/><line x1="216" y1="16" x2="216" y2="280"/>
+        <line x1="238" y1="16" x2="238" y2="280"/><line x1="260" y1="16" x2="260" y2="280"/>
+        <line x1="282" y1="16" x2="282" y2="280"/><line x1="304" y1="16" x2="304" y2="280"/>
+        <line x1="40" y1="16" x2="304" y2="16"/><line x1="40" y1="38" x2="304" y2="38"/>
+        <line x1="40" y1="60" x2="304" y2="60"/><line x1="40" y1="82" x2="304" y2="82"/>
+        <line x1="40" y1="126" x2="304" y2="126"/><line x1="40" y1="148" x2="304" y2="148"/>
+        <line x1="40" y1="170" x2="304" y2="170"/><line x1="40" y1="192" x2="304" y2="192"/>
+        <line x1="40" y1="214" x2="304" y2="214"/><line x1="40" y1="236" x2="304" y2="236"/>
+        <line x1="40" y1="258" x2="304" y2="258"/><line x1="40" y1="280" x2="304" y2="280"/>
+      </g>
+      <line x1="34" y1="104" x2="310" y2="104" stroke="#444c58" stroke-width="1.8" marker-end="url(#ah5)"/>
+      <line x1="106" y1="288" x2="106" y2="10" stroke="#444c58" stroke-width="1.8" marker-end="url(#ah5)"/>
+      <circle cx="172" cy="148" r="110" fill="none" stroke="#1d6fb8" stroke-width="2.4"/>
+      <circle cx="172" cy="148" r="4" fill="#1a1e26"/>
+      <circle cx="260" cy="82" r="4" fill="#1a1e26"/>
+      <text x="180" y="168" class="sm">(3, −2)</text>
+      <text x="266" y="74" class="sm">(7, 1)</text>
+      <text x="312" y="98" class="it">x</text>
+      <text x="96" y="14" class="it">y</text>
+      <text x="96" y="120" class="sm">O</text>
+    </svg>
+  </div>
+  <ol class="choices">
+    <li><span class="L">A)</span>(<em>x</em> − 3)² + (<em>y</em> + 2)² = 25</li>
+    <li><span class="L">B)</span>(<em>x</em> + 3)² + (<em>y</em> − 2)² = 25</li>
+    <li><span class="L">C)</span>(<em>x</em> − 3)² + (<em>y</em> + 2)² = 5</li>
+    <li><span class="L">D)</span>(<em>x</em> − 7)² + (<em>y</em> − 1)² = 25</li>
+  </ol>
+  <details><summary>Answer &amp; Solution</summary>
+    <div class="sol">
+      <p class="ans">Answer: A) (x − 3)² + (y + 2)² = 25</p>
+      <p>The radius is the distance from (3, −2) to (7, 1): r² = (7 − 3)² + (1 − (−2))² = 16 + 9 = 25. The standard form with center (h, k) = (3, −2) gives (x − 3)² + (y + 2)² = 25.</p>
+      <p class="dis">Distractors: B) flips the signs of the center; C) puts r = 5 rather than r² = 25 on the right side; D) uses the on-circle point as the center.</p>
+      <div class="rp">RP67 — B5: off-sheet recall of the circle standard form chained with one distance computation (center + point → equation) — the B5 descriptor verbatim.</div>
+    </div>
+  </details>
+</section>
+
+<!-- ============================= ITEM 6 ============================= -->
+<section class="item">
+  <div class="meta"><span class="num">Problem 6</span>
+    <span class="chip b56">Band B6</span><span class="chip type">Student-Produced Response</span>
+    <span class="chip skill">Right-triangle trigonometric ratio</span></div>
+  <p class="stem">In right triangle <em>ABC</em> shown, the right angle is at <em>C</em>, <em>AC</em> = 21, and <em>AB</em> = 29. What is the value of tan <em>B</em>?</p>
+  <div class="fig">
+    <svg viewBox="0 0 320 230" role="img" aria-label="Right triangle ABC with right angle at C, vertical leg AC equal to 21, hypotenuse AB equal to 29, and angle B marked">
+      <path d="M80,195 L200,195 L80,69 Z" fill="#eef3fa" stroke="#2b3442" stroke-width="2"/>
+      <path d="M80,181 L94,181 L94,195" fill="none" stroke="#2b3442" stroke-width="1.6"/>
+      <path d="M176,195 A24,24 0 0 1 183.4,177.6" fill="none" stroke="#a03050" stroke-width="1.6"/>
+      <text x="72" y="62" text-anchor="middle" class="it">A</text>
+      <text x="212" y="202" class="it">B</text>
+      <text x="66" y="208" class="it">C</text>
+      <text x="66" y="136" text-anchor="end">21</text>
+      <text x="150" y="120">29</text>
+    </svg>
+  </div>
+  <p class="spr-note">Enter your answer in the grid.</p>
+  <details><summary>Answer &amp; Solution</summary>
+    <div class="sol">
+      <p class="ans">Answer: 21/20 (equivalently 1.05)</p>
+      <p>First find the missing leg: BC = √(29² − 21²) = √(841 − 441) = √400 = 20. For angle <em>B</em>, the opposite side is <em>AC</em> = 21 and the adjacent side is <em>BC</em> = 20, so tan B = 21/20 = 1.05. The figure is needed to place the sides relative to angle <em>B</em>.</p>
+      <div class="rp">RP67 — B6: two-link chain — inverse Pythagorean step for the unlabeled leg, then off-sheet trig-ratio recall with correct opposite/adjacent placement — matching the B6 right-triangle-trigonometry descriptor.</div>
+    </div>
+  </details>
+</section>
+
+<!-- ============================= ITEM 7 ============================= -->
+<section class="item">
+  <div class="meta"><span class="num">Problem 7</span>
+    <span class="chip b56">Band B5</span><span class="chip type">Multiple Choice</span>
+    <span class="chip skill">Composite area (multistep)</span></div>
+  <p class="stem">The figure shows the design of a window consisting of a rectangle and a semicircle whose diameter is the top side of the rectangle. Based on the dimensions in the figure, what is the area, in square centimeters, of the window?</p>
+  <div class="fig">
+    <svg viewBox="0 0 320 260" role="img" aria-label="Window made of a rectangle 40 centimeters wide and 60 centimeters tall topped by a semicircle of diameter 40 centimeters">
+      <path d="M116,218 L116,86 A44,44 0 0 1 204,86 L204,218 Z" fill="#e7f0fa" stroke="#2b3442" stroke-width="2.2"/>
+      <line x1="116" y1="86" x2="204" y2="86" stroke="#8a93a1" stroke-width="1.2" stroke-dasharray="5 4"/>
+      <g stroke="#66707e" stroke-width="1.2">
+        <line x1="116" y1="224" x2="116" y2="242"/><line x1="204" y1="224" x2="204" y2="242"/>
+        <line x1="116" y1="236" x2="204" y2="236"/>
+        <line x1="210" y1="86" x2="228" y2="86"/><line x1="210" y1="218" x2="228" y2="218"/>
+        <line x1="222" y1="86" x2="222" y2="218"/>
+      </g>
+      <text x="160" y="255" text-anchor="middle" class="sm">40 cm</text>
+      <text x="232" y="156" class="sm">60 cm</text>
+    </svg>
+  </div>
+  <ol class="choices">
+    <li><span class="L">A)</span>2,400 + 20π</li>
+    <li><span class="L">B)</span>2,400 + 200π</li>
+    <li><span class="L">C)</span>2,400 + 400π</li>
+    <li><span class="L">D)</span>2,400 + 800π</li>
+  </ol>
+  <details><summary>Answer &amp; Solution</summary>
+    <div class="sol">
+      <p class="ans">Answer: B) 2,400 + 200π</p>
+      <p>Rectangle: 40 · 60 = 2,400. The semicircle's diameter is 40, so its radius is 20, and its area is ½·π·20² = 200π. Total area: 2,400 + 200π square centimeters.</p>
+      <p class="dis">Distractors: A) uses half the circumference (½ · 2π · 20) instead of area; C) uses a full circle; D) uses the 40-cm diameter as the radius.</p>
+      <div class="rp">RP67 — B5: multistep composite-area decomposition with on-sheet formulas; the chain (decompose, halve diameter, halve circle) rather than recall is the gate — the B5 multistep-area descriptor.</div>
+    </div>
+  </details>
+</section>
+
+<!-- ============================= ITEM 8 ============================= -->
+<section class="item">
+  <div class="meta"><span class="num">Problem 8</span>
+    <span class="chip b7">Band B7</span><span class="chip type">Student-Produced Response</span>
+    <span class="chip skill">Circle theorems — tangent and radius</span></div>
+  <p class="stem">In the figure, segment <em>PA</em> is tangent to the circle with center <em>O</em> at point <em>A</em>, and point <em>B</em> is the intersection of segment <em>PO</em> with the circle. If <em>PA</em> = 24 and <em>PO</em> = 26, what is the length of <em>PB</em>?</p>
+  <div class="fig">
+    <svg viewBox="0 0 320 200" role="img" aria-label="Circle with center O; tangent segment from external point P touching the circle at A; segment PO crosses the circle at B">
+      <circle cx="215" cy="110" r="70" fill="#eef3fa" stroke="#2b3442" stroke-width="2"/>
+      <line x1="33" y1="110" x2="215" y2="110" stroke="#2b3442" stroke-width="2"/>
+      <line x1="33" y1="110" x2="188.1" y2="45.4" stroke="#2b3442" stroke-width="2"/>
+      <line x1="215" y1="110" x2="188.1" y2="45.4" stroke="#2b3442" stroke-width="2"/>
+      <circle cx="33" cy="110" r="3.5" fill="#1a1e26"/>
+      <circle cx="188.1" cy="45.4" r="3.5" fill="#1a1e26"/>
+      <circle cx="145" cy="110" r="3.5" fill="#1a1e26"/>
+      <circle cx="215" cy="110" r="3.5" fill="#1a1e26"/>
+      <text x="24" y="102" text-anchor="end" class="it">P</text>
+      <text x="187" y="34" text-anchor="middle" class="it">A</text>
+      <text x="143" y="130" text-anchor="middle" class="it">B</text>
+      <text x="223" y="128" class="it">O</text>
+    </svg>
+    <p class="nts">Note: Figure not drawn to scale.</p>
+  </div>
+  <p class="spr-note">Enter your answer in the grid.</p>
+  <details><summary>Answer &amp; Solution</summary>
+    <div class="sol">
+      <p class="ans">Answer: 16</p>
+      <p>A tangent is perpendicular to the radius at the point of tangency, so triangle <em>OAP</em> has a right angle at <em>A</em>. Then OA = √(PO² − PA²) = √(676 − 576) = √100 = 10, so the radius is 10. Since <em>B</em> lies on segment <em>PO</em> and on the circle, OB = 10, so PB = PO − OB = 26 − 10 = 16.</p>
+      <div class="rp">RP67 — B7: the tangent-perpendicular-to-radius theorem is unstated off-sheet recall, chained through an inverse Pythagorean step and a segment subtraction — a three-link chain with a circle-theorem gate (B7 descriptor: tangents, radii).</div>
+    </div>
+  </details>
+</section>
+
+<!-- ============================= ITEM 9 ============================= -->
+<section class="item">
+  <div class="meta"><span class="num">Problem 9</span>
+    <span class="chip b7">Band B7</span><span class="chip type">Student-Produced Response</span>
+    <span class="chip skill">3-D composite volume — inverse solve</span></div>
+  <p class="stem">The grain silo shown is formed by a right circular cylinder and a hemisphere on top. The cylinder and the hemisphere both have a radius of 6 meters. If the total volume of the silo is 864π cubic meters, what is the value of <em>h</em>, the height, in meters, of the cylindrical part?</p>
+  <div class="fig">
+    <svg viewBox="0 0 320 260" role="img" aria-label="Silo made of a cylinder of radius 6 meters and height h topped by a hemisphere of radius 6 meters">
+      <path d="M98,100 A62,62 0 0 1 222,100" fill="#eef3fa" stroke="#2b3442" stroke-width="2"/>
+      <rect x="98" y="100" width="124" height="110" fill="#eef3fa" stroke="none"/>
+      <line x1="98" y1="100" x2="98" y2="210" stroke="#2b3442" stroke-width="2"/>
+      <line x1="222" y1="100" x2="222" y2="210" stroke="#2b3442" stroke-width="2"/>
+      <ellipse cx="160" cy="100" rx="62" ry="14" fill="none" stroke="#8a93a1" stroke-width="1.3" stroke-dasharray="5 4"/>
+      <path d="M98,210 A62,14 0 0 0 222,210" fill="none" stroke="#2b3442" stroke-width="2"/>
+      <path d="M98,210 A62,14 0 0 1 222,210" fill="none" stroke="#8a93a1" stroke-width="1.3" stroke-dasharray="5 4"/>
+      <circle cx="160" cy="100" r="3" fill="#1a1e26"/>
+      <line x1="160" y1="100" x2="222" y2="100" stroke="#1a1e26" stroke-width="1.6"/>
+      <text x="184" y="92" class="sm">6 m</text>
+      <g stroke="#66707e" stroke-width="1.2">
+        <line x1="228" y1="100" x2="252" y2="100"/><line x1="228" y1="210" x2="252" y2="210"/>
+        <line x1="246" y1="100" x2="246" y2="210"/>
+      </g>
+      <text x="256" y="160" class="it">h</text>
+    </svg>
+  </div>
+  <p class="spr-note">Enter your answer in the grid.</p>
+  <details><summary>Answer &amp; Solution</summary>
+    <div class="sol">
+      <p class="ans">Answer: 20</p>
+      <p>Cylinder volume: π(6²)h = 36πh. Hemisphere volume: ½ · (4/3)π(6³) = (2/3)π(216) = 144π. So 36πh + 144π = 864π, which gives 36h = 720 and h = 20 meters.</p>
+      <div class="rp">RP67 — B7: sheet formulas, but the item requires decomposing a composite solid, halving the sphere formula, and solving inversely for a dimension from total volume — a long inverse chain (B7 modeling descriptor).</div>
+    </div>
+  </details>
+</section>
+
+<!-- ============================= ITEM 10 ============================= -->
+<section class="item">
+  <div class="meta"><span class="num">Problem 10</span>
+    <span class="chip b7">Band B7</span><span class="chip type">Multiple Choice</span>
+    <span class="chip skill">Similarity → trigonometric ratio (altitude to hypotenuse)</span></div>
+  <p class="stem">In the figure, triangle <em>ABC</em> has a right angle at <em>C</em>, and <em>D</em> lies on side <em>AB</em> such that segment <em>CD</em> is perpendicular to segment <em>AB</em>. If <em>AD</em> = 9 and <em>DB</em> = 16, what is the value of cos <em>B</em>?</p>
+  <div class="fig">
+    <svg viewBox="0 0 340 240" role="img" aria-label="Right triangle ABC with right angle at C and altitude CD to hypotenuse AB; AD is 9 and DB is 16">
+      <path d="M40,205 L290,205 L130,85 Z" fill="#eef3fa" stroke="#2b3442" stroke-width="2"/>
+      <line x1="130" y1="85" x2="130" y2="205" stroke="#2b3442" stroke-width="2"/>
+      <path d="M130,193 L142,193 L142,205" fill="none" stroke="#2b3442" stroke-width="1.6"/>
+      <path d="M123.4,93.8 L132.2,100.4 L138.8,91.6" fill="none" stroke="#2b3442" stroke-width="1.6"/>
+      <text x="30" y="219" class="it">A</text>
+      <text x="298" y="219" class="it">B</text>
+      <text x="130" y="74" text-anchor="middle" class="it">C</text>
+      <text x="133" y="221" class="it">D</text>
+      <text x="85" y="222" text-anchor="middle">9</text>
+      <text x="212" y="222" text-anchor="middle">16</text>
+    </svg>
+    <p class="nts">Note: Figure not drawn to scale.</p>
+  </div>
+  <ol class="choices">
+    <li><span class="L">A)</span>3/5</li>
+    <li><span class="L">B)</span>16/25</li>
+    <li><span class="L">C)</span>3/4</li>
+    <li><span class="L">D)</span>4/5</li>
+  </ol>
+  <details><summary>Answer &amp; Solution</summary>
+    <div class="sol">
+      <p class="ans">Answer: D) 4/5</p>
+      <p>The altitude to the hypotenuse creates triangles <em>ACD</em>, <em>CBD</em>, and <em>ABC</em>, all similar to one another. By the geometric-mean relation, CD² = AD · DB = 9 · 16 = 144, so CD = 12. In right triangle <em>CDB</em>: BC = √(12² + 16²) = √400 = 20. With AB = 9 + 16 = 25, cos B = BC/AB = 20/25 = 4/5. (Check inside triangle <em>CDB</em>: cos B = DB/BC = 16/20 = 4/5. ✓)</p>
+      <p class="dis">Distractors: A) is sin B (= cos A); B) uses the segment DB over AB, 16/25 (which equals cos²B — the similarity trap); C) is tan B (= 15/20).</p>
+      <div class="rp">RP67 — B7: the similarity structure of the altitude-on-hypotenuse configuration is unstated off-sheet recall, chained through a geometric-mean step, a Pythagorean step, and a trig-ratio read-off — the B7 "use similarity to calculate values of trigonometric ratios" descriptor.</div>
+    </div>
+  </details>
+</section>
+
+</main>
+</body>
+</html>

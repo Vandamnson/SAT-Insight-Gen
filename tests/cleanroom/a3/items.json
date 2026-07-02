@@ -1,0 +1,92 @@
+[
+  {
+    "n": 1,
+    "band": "B1",
+    "type": "mcq",
+    "skill": "volume of right rectangular prism",
+    "stem": "The figure shows a right rectangular prism with edge lengths of 8 centimeters, 5 centimeters, and 3 centimeters. What is the volume, in cubic centimeters, of the prism? A) 16 B) 40 C) 120 D) 158",
+    "figure": "Right rectangular prism in cabinet projection; edges labeled 8 cm, 5 cm, 3 cm; hidden edges dashed.",
+    "answer": "C) 120"
+  },
+  {
+    "n": 2,
+    "band": "B2",
+    "type": "mcq",
+    "skill": "parallel lines & transversal angles",
+    "stem": "In the figure, line l is parallel to line m, and a transversal crosses both lines. At line l the acute angle above the line on the right side of the transversal measures 41 degrees; at line m the interior angle above the line on the left side of the transversal is marked x degrees. What is the value of x? A) 41 B) 49 C) 131 D) 139",
+    "figure": "Two horizontal parallel lines l and m cut by a rising transversal; 41-degree angle marked at l, x-degree angle marked at m on the opposite side of the transversal.",
+    "answer": "D) 139"
+  },
+  {
+    "n": 3,
+    "band": "B3",
+    "type": "spr",
+    "skill": "Pythagorean theorem (hypotenuse)",
+    "stem": "The figure shows a right triangle with legs of length 20 and 21 and hypotenuse of length x. What is the value of x?",
+    "figure": "Right triangle with right-angle mark at the vertex joining legs labeled 20 (vertical) and 21 (horizontal); hypotenuse labeled x.",
+    "answer": "29"
+  },
+  {
+    "n": 4,
+    "band": "B4",
+    "type": "mcq",
+    "skill": "triangle angle sum with cevian",
+    "stem": "In triangle ABC, point D lies on side BC and segment AD is drawn. Angle B measures 40 degrees, angle BAD measures 35 degrees, angle DAC measures 45 degrees, and angle C is marked x degrees. What is the value of x? A) 60 B) 75 C) 100 D) 105",
+    "figure": "Triangle ABC with cevian AD to side BC; arcs mark 40 deg at B, 35 deg and 45 deg at A (split by AD), and x deg at C; drawn true to scale.",
+    "answer": "A) 60"
+  },
+  {
+    "n": 5,
+    "band": "B5",
+    "type": "mcq",
+    "skill": "equation of circle in xy-plane",
+    "stem": "A circle graphed in the xy-plane has its center labeled C at (-3, 4) and passes through the labeled point (1, 1). Which of the following is an equation of the circle? A) (x - 3)^2 + (y + 4)^2 = 25 B) (x + 3)^2 + (y - 4)^2 = 25 C) (x - 3)^2 + (y + 4)^2 = 5 D) (x + 3)^2 + (y - 4)^2 = 5",
+    "figure": "Circle in the xy-plane on a unit grid; center dot labeled C(-3, 4); a dot on the circle labeled (1, 1); axes with scale ticks at 5.",
+    "answer": "B) (x + 3)^2 + (y - 4)^2 = 25"
+  },
+  {
+    "n": 6,
+    "band": "B6",
+    "type": "spr",
+    "skill": "prism surface area (solve for dimension)",
+    "stem": "The figure shows a right rectangular prism with a square base whose edges are labeled 5 inches and 5 inches, and whose height is labeled h. The surface area of the prism is 210 square inches. What is the value of h?",
+    "figure": "Tall right rectangular prism in cabinet projection; two base edges labeled 5 in, vertical edge labeled h; hidden edges dashed.",
+    "answer": "8"
+  },
+  {
+    "n": 7,
+    "band": "B6",
+    "type": "mcq",
+    "skill": "triangle similarity (segment parallel to a side)",
+    "stem": "In triangle ABC, point D lies on side AB and point E lies on side AC, with segment DE parallel to side BC. AD = 6, DB = 3, and DE = 8. What is the length of BC? (Figure not drawn to scale.) A) 4 B) 11 C) 12 D) 16",
+    "figure": "Triangle ABC with segment DE parallel to BC (matching arrow marks); AD labeled 6, DB labeled 3, DE labeled 8; marked not drawn to scale.",
+    "answer": "C) 12"
+  },
+  {
+    "n": 8,
+    "band": "B7",
+    "type": "mcq",
+    "skill": "inscribed angle & arc length",
+    "stem": "Points A, B, and C lie on a circle with center O and radius 18. The inscribed angle ACB measures 35 degrees and subtends minor arc AB, which is highlighted in the figure. What is the length of minor arc AB? A) 7pi/2 B) 7pi C) 14pi D) 63pi",
+    "figure": "Circle with center dot O; chords CA and CB from point C at the top to points A and B on the lower arc; 35-degree angle marked at C; minor arc AB drawn with a thick highlight.",
+    "answer": "B) 7pi"
+  },
+  {
+    "n": 9,
+    "band": "B7",
+    "type": "spr",
+    "skill": "right-triangle similarity to trig ratio",
+    "stem": "In triangle ACB, angle ACB is a right angle, and the altitude CD is perpendicular to hypotenuse AB, meeting it at D. AD = 9 and DB = 16. What is the value of tan A?",
+    "figure": "Right triangle with hypotenuse AB horizontal, right angle at apex C, altitude CD to AB with right-angle marks at C and D; AD labeled 9, DB labeled 16; drawn true to scale.",
+    "answer": "4/3"
+  },
+  {
+    "n": 10,
+    "band": "B7",
+    "type": "spr",
+    "skill": "cone volume (solve for dimension)",
+    "stem": "The inside of a paper cup is in the shape of a right circular cone with a height of 8 centimeters, shown with its apex pointing down and the diameter of its circular top labeled d. The cup can hold a maximum of 96pi cubic centimeters of water. What is the value of d, the diameter, in centimeters, of the top of the cup?",
+    "figure": "Cone with apex down; dashed vertical axis labeled 8 cm; dashed double-arrow across the elliptical rim labeled d; drawn in true 6:8 radius-to-height proportion.",
+    "answer": "12"
+  }
+]

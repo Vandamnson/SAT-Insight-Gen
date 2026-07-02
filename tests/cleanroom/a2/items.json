@@ -1,0 +1,92 @@
+[
+  {
+    "n": 1,
+    "band": "B1",
+    "type": "mcq",
+    "skill": "Volume of a right rectangular prism",
+    "stem": "The figure shows a right rectangular prism with edge lengths 8 centimeters, 5 centimeters, and 3 centimeters. What is the volume, in cubic centimeters, of the prism? A) 16  B) 40  C) 120  D) 158",
+    "figure": "Oblique drawing of a rectangular box with edges labeled 8 cm (length), 5 cm (depth), and 3 cm (height), hidden edges dashed.",
+    "answer": "C (120)"
+  },
+  {
+    "n": 2,
+    "band": "B2",
+    "type": "mcq",
+    "skill": "Parallel lines cut by a transversal",
+    "stem": "In the figure, line l is parallel to line m, and line t intersects both. At the intersection of t and l, the interior angle on the left side of t measures 118 degrees; at the intersection of t and m, the interior angle on the left side of t (its same-side interior angle) measures x degrees. What is the value of x? A) 28  B) 62  C) 72  D) 118",
+    "figure": "Two horizontal parallel lines l and m cut by transversal t (drawn at a true 62-degree angle); 118 degrees marked at the upper intersection, x degrees at the lower intersection, both on the interior left side.",
+    "answer": "B (62)"
+  },
+  {
+    "n": 3,
+    "band": "B3",
+    "type": "mcq",
+    "skill": "Triangle angle sum / exterior angle",
+    "stem": "In triangle ABC, side BC is extended through C to point D. The angle at B measures 65 degrees, the angle at A measures x degrees, and exterior angle ACD measures 142 degrees. (Figure not drawn to scale.) What is the value of x? A) 38  B) 65  C) 77  D) 103",
+    "figure": "Triangle ABC with base BC extended by a ray through C to D; 65 degrees marked at B, x degrees at apex A, 142 degrees marked in the exterior wedge ACD.",
+    "answer": "C (77)"
+  },
+  {
+    "n": 4,
+    "band": "B4",
+    "type": "spr",
+    "skill": "Special right triangle (30-60-90)",
+    "stem": "In right triangle ABC, the right angle is at C, the measure of angle A is 30 degrees, and leg AC (adjacent to angle A) has length 5*sqrt(3). The hypotenuse AB has length x. What is the value of x?",
+    "figure": "Right triangle drawn to true 30-60-90 proportions: right-angle mark at C, 30 degrees at A, horizontal leg AC labeled 5√3, hypotenuse AB labeled x.",
+    "answer": "10"
+  },
+  {
+    "n": 5,
+    "band": "B5",
+    "type": "mcq",
+    "skill": "Equation of a circle from its graph",
+    "stem": "The graph of a circle in the xy-plane is shown. The center of the circle is at (3, -2), and the circle passes through the point (7, 1). Which of the following equations defines the circle? A) (x-3)^2+(y+2)^2=5  B) (x-3)^2+(y+2)^2=25  C) (x+3)^2+(y-2)^2=5  D) (x+3)^2+(y-2)^2=25",
+    "figure": "Gridded xy-plane with a circle of radius 5 centered at a dot labeled (3, -2); a second labeled dot at (7, 1) lies on the circle.",
+    "answer": "B ((x-3)^2+(y+2)^2=25)"
+  },
+  {
+    "n": 6,
+    "band": "B5",
+    "type": "mcq",
+    "skill": "Multistep perimeter of a composite figure",
+    "stem": "The figure shows the floor plan of a patio formed by a 12-meter-by-8-meter rectangle and a semicircle whose diameter is the 8-meter right side of the rectangle. What is the perimeter, in meters, of the patio? A) 32+4pi  B) 40+4pi  C) 32+8pi  D) 96+8pi",
+    "figure": "Shaded region: rectangle labeled 12 m by 8 m with a semicircle bulging from its right side; the shared 8 m diameter is drawn dashed (interior).",
+    "answer": "A (32+4π)"
+  },
+  {
+    "n": 7,
+    "band": "B6",
+    "type": "spr",
+    "skill": "Triangle similarity (parallel-line proportionality)",
+    "stem": "In triangle ABC, point D lies on side AB and point E lies on side AC such that segment DE is parallel to side BC. AD = 6, DB = 4, and DE = 9. What is the length of segment BC?",
+    "figure": "Triangle ABC with interior segment DE parallel to base BC (chevron marks on both); AD labeled 6, DB labeled 4, DE labeled 9; drawn to the true 3:5 ratio.",
+    "answer": "15"
+  },
+  {
+    "n": 8,
+    "band": "B7",
+    "type": "mcq",
+    "skill": "Circle theorems: tangents, central angles, arcs",
+    "stem": "Segments PA and PB are tangent to a circle with center O at points A and B, respectively, and the measure of angle APB is 40 degrees. What is the measure, in degrees, of minor arc AB? A) 40  B) 70  C) 140  D) 220",
+    "figure": "Circle with center O; external point P at left with two tangent segments touching the circle at A (top) and B (bottom), radii OA and OB drawn, 40-degree angle arc at P; drawn to true tangent geometry.",
+    "answer": "C (140)"
+  },
+  {
+    "n": 9,
+    "band": "B7",
+    "type": "spr",
+    "skill": "Volume of a composite solid (cylinder + hemisphere)",
+    "stem": "A water storage tank is formed by a right circular cylinder topped by a hemisphere. The cylinder and hemisphere both have radius 3 meters, and the total height of the tank is 10 meters. The volume of the tank is k*pi cubic meters, where k is a constant. What is the value of k?",
+    "figure": "Silhouette of a cylinder with a hemispherical cap: dashed junction ellipse, radius segment labeled 3 m at the base, and a side dimension line labeled 10 m for the total height.",
+    "answer": "81"
+  },
+  {
+    "n": 10,
+    "band": "B7",
+    "type": "spr",
+    "skill": "Right-triangle trig via similarity (altitude to hypotenuse)",
+    "stem": "Triangle ABC has a right angle at C, with AC = 8 and BC = 6. Point D lies on hypotenuse AB such that segment CD is perpendicular to AB. What is the value of tan(angle DCB)?",
+    "figure": "Right triangle ABC with hypotenuse AB horizontal at the bottom, right-angle mark at apex C, altitude CD drawn to AB with a right-angle mark at D; AC labeled 8, BC labeled 6; drawn to true 6-8-10 proportions.",
+    "answer": "3/4 (accept .75)"
+  }
+]

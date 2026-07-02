@@ -1,0 +1,252 @@
+[
+ {
+  "id": "a1#1",
+  "answer": "C (60)",
+  "band": "B1"
+ },
+ {
+  "id": "a1#2",
+  "answer": "B (56)",
+  "band": "B2"
+ },
+ {
+  "id": "a1#3",
+  "answer": "15",
+  "band": "B3"
+ },
+ {
+  "id": "a1#4",
+  "answer": "C (15)",
+  "band": "B4"
+ },
+ {
+  "id": "a1#5",
+  "answer": "A ((x-3)^2+(y+2)^2=25)",
+  "band": "B5"
+ },
+ {
+  "id": "a1#6",
+  "answer": "21/20 (or 1.05)",
+  "band": "B6"
+ },
+ {
+  "id": "a1#7",
+  "answer": "B (2400+200pi)",
+  "band": "B5"
+ },
+ {
+  "id": "a1#8",
+  "answer": "16",
+  "band": "B7"
+ },
+ {
+  "id": "a1#9",
+  "answer": "20",
+  "band": "B7"
+ },
+ {
+  "id": "a1#10",
+  "answer": "D (4/5)",
+  "band": "B7"
+ },
+ {
+  "id": "a2#1",
+  "answer": "C (120)",
+  "band": "B1"
+ },
+ {
+  "id": "a2#2",
+  "answer": "B (62)",
+  "band": "B2"
+ },
+ {
+  "id": "a2#3",
+  "answer": "C (77)",
+  "band": "B3"
+ },
+ {
+  "id": "a2#4",
+  "answer": "10",
+  "band": "B4"
+ },
+ {
+  "id": "a2#5",
+  "answer": "B ((x-3)^2+(y+2)^2=25)",
+  "band": "B5"
+ },
+ {
+  "id": "a2#6",
+  "answer": "A (32+4π)",
+  "band": "B5"
+ },
+ {
+  "id": "a2#7",
+  "answer": "15",
+  "band": "B6"
+ },
+ {
+  "id": "a2#8",
+  "answer": "C (140)",
+  "band": "B7"
+ },
+ {
+  "id": "a2#9",
+  "answer": "81",
+  "band": "B7"
+ },
+ {
+  "id": "a2#10",
+  "answer": "3/4 (accept .75)",
+  "band": "B7"
+ },
+ {
+  "id": "a3#1",
+  "answer": "C) 120",
+  "band": "B1"
+ },
+ {
+  "id": "a3#2",
+  "answer": "D) 139",
+  "band": "B2"
+ },
+ {
+  "id": "a3#3",
+  "answer": "29",
+  "band": "B3"
+ },
+ {
+  "id": "a3#4",
+  "answer": "A) 60",
+  "band": "B4"
+ },
+ {
+  "id": "a3#5",
+  "answer": "B) (x + 3)^2 + (y - 4)^2 = 25",
+  "band": "B5"
+ },
+ {
+  "id": "a3#6",
+  "answer": "8",
+  "band": "B6"
+ },
+ {
+  "id": "a3#7",
+  "answer": "C) 12",
+  "band": "B6"
+ },
+ {
+  "id": "a3#8",
+  "answer": "B) 7pi",
+  "band": "B7"
+ },
+ {
+  "id": "a3#9",
+  "answer": "4/3",
+  "band": "B7"
+ },
+ {
+  "id": "a3#10",
+  "answer": "12",
+  "band": "B7"
+ },
+ {
+  "id": "a4#1",
+  "answer": "120 (choice C)",
+  "band": "B1"
+ },
+ {
+  "id": "a4#2",
+  "answer": "62 (choice B)",
+  "band": "B2"
+ },
+ {
+  "id": "a4#3",
+  "answer": "67",
+  "band": "B3"
+ },
+ {
+  "id": "a4#4",
+  "answer": "7 (choice A)",
+  "band": "B4"
+ },
+ {
+  "id": "a4#5",
+  "answer": "(x-3)^2+(y+2)^2=25 (choice C)",
+  "band": "B5"
+ },
+ {
+  "id": "a4#6",
+  "answer": "18",
+  "band": "B6"
+ },
+ {
+  "id": "a4#7",
+  "answer": "20/21 (choice D)",
+  "band": "B6"
+ },
+ {
+  "id": "a4#8",
+  "answer": "10",
+  "band": "B7"
+ },
+ {
+  "id": "a4#9",
+  "answer": "6",
+  "band": "B7"
+ },
+ {
+  "id": "a4#10",
+  "answer": "90*pi (choice B)",
+  "band": "B7"
+ },
+ {
+  "id": "a5#1",
+  "answer": "C (120)",
+  "band": "B1"
+ },
+ {
+  "id": "a5#2",
+  "answer": "B (62)",
+  "band": "B2"
+ },
+ {
+  "id": "a5#3",
+  "answer": "29",
+  "band": "B3"
+ },
+ {
+  "id": "a5#4",
+  "answer": "C (15)",
+  "band": "B4"
+ },
+ {
+  "id": "a5#5",
+  "answer": "A ((x-3)^2+(y+1)^2=25)",
+  "band": "B5"
+ },
+ {
+  "id": "a5#6",
+  "answer": "3/4 (.75)",
+  "band": "B6"
+ },
+ {
+  "id": "a5#7",
+  "answer": "C (280)",
+  "band": "B6"
+ },
+ {
+  "id": "a5#8",
+  "answer": "C (138)",
+  "band": "B7"
+ },
+ {
+  "id": "a5#9",
+  "answer": "12",
+  "band": "B7"
+ },
+ {
+  "id": "a5#10",
+  "answer": "5",
+  "band": "B7"
+ }
+]
