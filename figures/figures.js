@@ -1118,5 +1118,10 @@ function thinFactor(count, px) { const need = count * 26; return Math.max(1, Mat
 function niceMax(v) { if (v <= 0) return 1; const pow = Math.pow(10, Math.floor(Math.log10(v))); const c = [1, 1.5, 2, 2.5, 3, 4, 5, 6, 8, 10].map(k => k * pow); return c.find(k => k >= v) || pow * 10; }
 function niceLabel(n) { const r = Math.round(n * 100) / 100; return (Object.is(r, -0) ? 0 : r).toString(); }
 
-export const FIGURES = { coordPlane, scatter, dotPlot, histogram, barChart, triangle, polygon, rectangle, parallelLines, parallelBend, parallelogram, circle, table };
+/* raw — passthrough for pre-authored inline SVG (clean-room harvested items).
+   The SVG was drawn by the item's author and audited (STEERED-35.md figure audit);
+   this fn only serves it, never modifies it. */
+export function raw(spec) { return spec && typeof spec.svg === "string" ? spec.svg : ""; }
+
+export const FIGURES = { coordPlane, scatter, dotPlot, histogram, barChart, triangle, polygon, rectangle, parallelLines, parallelBend, parallelogram, circle, table, raw };
 export default FIGURES;

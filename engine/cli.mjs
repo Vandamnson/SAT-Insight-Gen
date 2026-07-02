@@ -120,6 +120,22 @@ async function main() {
   }
   if (cmd === "module") { const r = mockModule({ testNum: Number(args[0] || 200), n: Number(args[1] || 22) }); console.log(`module: ${r.count} items from ${r.families} families → ${r.fp}`); return; }
   if (cmd === "ladder") { const r = drillLadder(args[0], { testNum: Number(args[1] || 201), k: Number(args[2] || 5) }); console.log(`ladder: ${r.count} items → ${r.fp}`); return; }
-  console.log("usage: node engine/cli.mjs status|mint-chains|mint-capstones|variants|module|ladder");
+  if (cmd === "suite") {
+    const { assembleSuite, renderSuite } = await import("./suite.mjs");
+    const { loadSeen } = await import("./prescribe.mjs");
+    const id = args[0] || "001";
+    const sIdx = args.indexOf("--student");
+    const seen = sIdx >= 0 ? loadSeen(args[sIdx + 1]) : new Set();
+    assembleSuite({ id, seen });
+    renderSuite(id);
+    return;
+  }
+  if (cmd === "prescribe") {
+    const { prescribe } = await import("./prescribe.mjs");
+    const sIdx = args.indexOf("--student");
+    await prescribe(args[0], { student: sIdx >= 0 ? args[sIdx + 1] : "anonymous", fillGaps: flag("--fill-gaps") });
+    return;
+  }
+  console.log("usage: node engine/cli.mjs status|mint-chains|mint-capstones|variants|module|ladder|suite <id> [--student <id>]|prescribe <results.json> --student <id> [--fill-gaps]");
 }
 main().catch((e) => { console.error("FATAL", e.message); process.exit(1); });

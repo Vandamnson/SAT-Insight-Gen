@@ -1,0 +1,22 @@
+/* suite.css — diagnostic-suite player chrome on top of theme/base. */
+.student-label { display: block; margin: 1rem 0; font-weight: 600; }
+.student-label input { display: block; margin-top: .4rem; padding: .5rem .7rem; font-size: 1rem; border: 1px solid #c8cdd4; border-radius: 8px; min-width: 16rem; }
+.suite-actions { margin: 2rem 0; display: flex; justify-content: center; }
+.btn.primary { background: #1d3f75; color: #fff; border-color: #1d3f75; font-size: 1.05rem; padding: .6rem 1.6rem; }
+.module[data-locked] .opt, .module[data-locked] input { pointer-events: none; opacity: .85; }
+
+table.deficit { border-collapse: collapse; margin: 1.2rem 0 2rem; width: 100%; }
+table.deficit th, table.deficit td { border: 1px solid #d5dae1; padding: .45rem .6rem; text-align: center; font-size: .92rem; }
+table.deficit thead th { background: #f3f5f8; }
+table.deficit tbody th { text-align: left; font-weight: 600; background: #fafbfc; }
+td.dm-none { background: #fafbfc; }
+td.dm-good { background: #e2f2e4; }
+td.dm-mid { background: #fdf3d7; }
+td.dm-weak { background: #fbe3e1; font-weight: 700; }
+
+.rev { border: 1px solid #e2e6ea; border-radius: 10px; margin: .5rem 0; padding: .2rem .8rem; }
+.rev summary { cursor: pointer; padding: .45rem 0; }
+.rev .chip { display: inline-block; width: 1.5rem; text-align: center; border-radius: 6px; margin-right: .4rem; }
+.rev-ok .chip { background: #e2f2e4; }
+.rev-bad .chip { background: #fbe3e1; }
+.rev-sol { border-top: 1px dashed #d5dae1; padding: .6rem 0; }

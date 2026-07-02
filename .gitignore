@@ -15,3 +15,7 @@ venv/
 # scratch / sandbox
 .prove-sandbox/
 *.tmp
+
+# per-student mastery-loop state (local, private) + prescribed practice pages
+data/students/
+tests/practice-*/

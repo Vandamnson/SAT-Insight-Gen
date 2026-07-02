@@ -23,6 +23,7 @@ import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 import { familyKey, addFamily, addVariant, loadFamilies } from "./family.mjs";
 import { loadCorpus, nearestSurface } from "./distance.mjs";
+import { answersAgree } from "./answers.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const H = process.env.HARVEST_DIR, S = process.env.STEERED_DIR;
@@ -39,25 +40,8 @@ for (const set of ["a1", "a2", "a3", "a4", "a5", "pilot", "steered35"]) {
     items.set(`${pfx}#${it.n}`, { ...it, id: `${pfx}#${it.n}`, set });
 }
 
-/* ---- attach measured verdicts ---- */
-const norm = (a) => {
-  a = String(a).toLowerCase().replace(/π/g, "pi").replace(/\s|%|degrees|\*/g, "")
-    .replace(/\((choice[abcd]|or[^)]*|accept[^)]*)\)/g, "");
-  let letter = null;
-  const m = a.match(/^([abcd])[)(](.*)$/);
-  if (m) { letter = m[1]; a = m[2]; }
-  else if (/^[abcd]$/.test(a)) { letter = a; a = ""; }
-  a = a.replace(/\(\.?\d[^)]*\)$/, "").replace(/[()]/g, "");
-  return { letter, val: a };
-};
-const asNum = (s) => { const f = s.match(/^(-?\d+(?:\.\d+)?)\/(\d+(?:\.\d+)?)$/); if (f) return Number(f[1]) / Number(f[2]); const n = Number(s); return Number.isFinite(n) ? n : null; };
-const agree = (x, y) => {
-  const a = norm(x), b = norm(y);
-  if (a.letter && b.letter) return a.letter === b.letter;
-  if (a.val && a.val === b.val) return true;
-  const na = asNum(a.val ?? ""), nb = asNum(b.val ?? "");
-  return na != null && nb != null && Math.abs(na - nb) < 1e-9;
-};
+/* ---- attach measured verdicts (normalizer lives in engine/answers.mjs now) ---- */
+const agree = answersAgree;
 
 for (const o of J(join(H, "auth60.json"))) items.get(o.id).auth = o.score;
 for (const o of J(join(S, "work", "auth.json"))) items.get(o.id.replace("set#", "s35#")).auth = o.score;

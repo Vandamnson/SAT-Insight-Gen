@@ -1,0 +1,1234 @@
+{
+ "number": "m2e",
+ "title": "Suite 001 — M2E",
+ "questions": [
+  {
+   "id": 1,
+   "program": "SAT",
+   "domain": "geometry_trig",
+   "band": "B1",
+   "target_band": "B1",
+   "statementId": "GEO.B1.s1",
+   "skill": "solid_figures",
+   "type": "spr",
+   "stem": [
+    {
+     "t": "text",
+     "v": "The right rectangular prism shown has the edge lengths marked, in centimeters. What is the volume of the prism, in cubic centimeters?"
+    }
+   ],
+   "answer": {
+    "accept": [
+     "252"
+    ],
+    "tol": 0
+   },
+   "solution": [
+    {
+     "t": "text",
+     "v": "1. apply volume formula: "
+    },
+    {
+     "t": "math",
+     "v": "V = \\ell wh = 4\\cdot 7\\cdot 9 = 252"
+    },
+    {
+     "t": "text",
+     "v": "."
+    },
+    {
+     "t": "br"
+    }
+   ],
+   "figure": {
+    "fn": "prism",
+    "spec": {
+     "dims": {
+      "l": 4,
+      "w": 7,
+      "h": 9
+     },
+     "labels": {
+      "l": "4",
+      "w": "7",
+      "h": "9"
+     }
+    }
+   },
+   "fingerprint": [
+    "solid_fig",
+    "prism_volume",
+    "4x7x9",
+    "3d"
+   ],
+   "difficulty": {
+    "scalePoint": 340,
+    "band": "B1",
+    "method": "expert_blind_calibration"
+   },
+   "_variantId": "fam_4f3d4a92b3#003d84ce",
+   "_familyId": "fam_4f3d4a92b3",
+   "_subdomain": "area_volume"
+  },
+  {
+   "id": 2,
+   "type": "spr",
+   "domain": "geometry_trig",
+   "band": "B1",
+   "skill": "rectangle area",
+   "_variantId": "fam_624dd45d94#s35#2",
+   "_familyId": "fam_624dd45d94",
+   "_subdomain": "area_volume",
+   "_solutionHtml": "<div class=\"sol\"><strong>36.</strong> The plot spans 9 grid squares across and 4 down, so its area is 9 × 4 = 36 square meters.</div>\n    <div class=\"meta\">Banding: B1 — one step, forward, sheet formula (A = lw); dimensions read directly by counting unit squares.<br>Modal avoided: rectangle with side lengths labeled ℓ and w, “find the area.”</div>",
+   "figure": {
+    "fn": "raw",
+    "spec": {
+     "svg": "<svg viewBox=\"0 0 290 170\" role=\"img\" aria-label=\"Rectangle on a unit grid\">\n    <g stroke=\"#c6cdd6\" stroke-width=\"1\">\n      <path d=\"M13 13 H277 M13 37 H277 M13 61 H277 M13 85 H277 M13 109 H277 M13 133 H277 M13 157 H277\"/>\n      <path d=\"M13 13 V157 M37 13 V157 M61 13 V157 M85 13 V157 M109 13 V157 M133 13 V157 M157 13 V157 M181 13 V157 M205 13 V157 M229 13 V157 M253 13 V157 M277 13 V157\"/>\n    </g>\n    <rect x=\"37\" y=\"37\" width=\"216\" height=\"96\" fill=\"#dcead9\" stroke=\"#2f5d31\" stroke-width=\"2\"/>\n  </svg>"
+    }
+   },
+   "stem": [
+    {
+     "t": "p",
+     "segs": [
+      {
+       "t": "text",
+       "v": "The figure shows a rectangular garden plot drawn on a grid in which each small square represents 1 square meter. What is the area, in square meters, of the garden plot?"
+      }
+     ]
+    }
+   ],
+   "answer": {
+    "accept": [
+     "36"
+    ]
+   }
+  },
+  {
+   "id": 3,
+   "type": "mcq",
+   "domain": "geometry_trig",
+   "band": "B2",
+   "skill": "perimeter of composite outline",
+   "_variantId": "fam_2175b18959#s35#6",
+   "_familyId": "fam_2175b18959",
+   "_subdomain": "area_volume",
+   "_solutionHtml": "<div class=\"sol\"><strong>C) 30.</strong> The square makes every side 6 m, and the equilateral triangle shares a 6 m side, so its two slanted sides are also 6 m. The outline consists of 5 segments of length 6: the bottom, two vertical sides, and two roof sides, so 5(6) = 30. (B counts only the square’s sides; D wrongly includes the shared dashed side.)</div>\n    <div class=\"meta\">Banding: B2 — one fact (perimeter = sum of sides) with a congruence read from the figure and one addition setup.<br>Modal avoided: rectangle with labeled length and width, “find the perimeter.”</div>",
+   "figure": {
+    "fn": "raw",
+    "spec": {
+     "svg": "<svg viewBox=\"0 0 330 245\" role=\"img\" aria-label=\"Square with equilateral triangle roof\">\n    <path d=\"M110 110 L165 15 L220 110\" stroke=\"#222\" fill=\"none\" stroke-width=\"1.8\"/>\n    <path d=\"M110 110 L110 220 L220 220 L220 110\" stroke=\"#222\" fill=\"none\" stroke-width=\"1.8\"/>\n    <line x1=\"110\" y1=\"110\" x2=\"220\" y2=\"110\" stroke=\"#777\" stroke-width=\"1.4\" stroke-dasharray=\"5 4\"/>\n    <g stroke=\"#222\" stroke-width=\"1.4\">\n      <line x1=\"162\" y1=\"215\" x2=\"168\" y2=\"225\"/>\n      <line x1=\"105\" y1=\"168\" x2=\"115\" y2=\"162\"/>\n      <line x1=\"215\" y1=\"162\" x2=\"225\" y2=\"168\"/>\n      <line x1=\"133\" y1=\"65\" x2=\"143\" y2=\"60\"/>\n      <line x1=\"187\" y1=\"60\" x2=\"197\" y2=\"65\"/>\n    </g>\n    <text x=\"165\" y=\"240\" text-anchor=\"middle\">6 m</text>\n  </svg>"
+    }
+   },
+   "stem": [
+    {
+     "t": "p",
+     "segs": [
+      {
+       "t": "text",
+       "v": "The figure shows the outline of the front of a storage shed, formed by a square and an equilateral triangle that share the dashed side. The bottom edge of the outline is 6 meters long. What is the perimeter, in meters, of the outline (the solid segments)?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "key": "A",
+     "seg": [
+      {
+       "t": "text",
+       "v": "18"
+      }
+     ]
+    },
+    {
+     "key": "B",
+     "seg": [
+      {
+       "t": "text",
+       "v": "24"
+      }
+     ]
+    },
+    {
+     "key": "C",
+     "seg": [
+      {
+       "t": "text",
+       "v": "30"
+      }
+     ]
+    },
+    {
+     "key": "D",
+     "seg": [
+      {
+       "t": "text",
+       "v": "36"
+      }
+     ]
+    }
+   ],
+   "answer": {
+    "correct": "C"
+   }
+  },
+  {
+   "id": 4,
+   "type": "spr",
+   "domain": "geometry_trig",
+   "band": "B2",
+   "skill": "perimeter with congruence marks",
+   "_variantId": "fam_00592f4c84#s35#8",
+   "_familyId": "fam_00592f4c84",
+   "_subdomain": "area_volume",
+   "_solutionHtml": "<div class=\"sol\"><strong>28.</strong> The tick marks show two sides of length 5 and two of length 9, so the perimeter is 2(5) + 2(9) = 28 inches.</div>\n    <div class=\"meta\">Banding: B2 — one fact (perimeter = sum of sides) with congruence marks read from the figure.<br>Modal avoided: rectangle or triangle with every side labeled, “add the sides.”</div>",
+   "figure": {
+    "fn": "raw",
+    "spec": {
+     "svg": "<svg viewBox=\"0 0 320 265\" role=\"img\" aria-label=\"Kite with congruence tick marks\">\n    <path d=\"M160 55 L230 105 L160 243 L90 105 Z\" stroke=\"#222\" fill=\"#f0eef6\" stroke-width=\"1.8\"/>\n    <g stroke=\"#222\" stroke-width=\"1.4\">\n      <line x1=\"192\" y1=\"74\" x2=\"198\" y2=\"86\"/>\n      <line x1=\"122\" y1=\"86\" x2=\"128\" y2=\"74\"/>\n      <line x1=\"189\" y1=\"172\" x2=\"201\" y2=\"176\"/>\n      <line x1=\"186\" y1=\"178\" x2=\"198\" y2=\"182\"/>\n      <line x1=\"119\" y1=\"176\" x2=\"131\" y2=\"172\"/>\n      <line x1=\"122\" y1=\"182\" x2=\"134\" y2=\"178\"/>\n    </g>\n    <text x=\"219\" y=\"70\">5 in</text>\n    <text x=\"216\" y=\"192\">9 in</text>\n  </svg>"
+    }
+   },
+   "stem": [
+    {
+     "t": "p",
+     "segs": [
+      {
+       "t": "text",
+       "v": "In the kite-shaped design shown, sides marked alike have equal length. One upper side is 5 inches long, and one lower side is 9 inches long. What is the perimeter, in inches, of the design?"
+      }
+     ]
+    }
+   ],
+   "answer": {
+    "accept": [
+     "28"
+    ]
+   }
+  },
+  {
+   "id": 5,
+   "type": "spr",
+   "domain": "geometry_trig",
+   "band": "B2",
+   "skill": "angles around a point",
+   "_variantId": "fam_e8a27c0d2f#s35#7",
+   "_familyId": "fam_e8a27c0d2f",
+   "_subdomain": "lines_angles_triangles",
+   "_solutionHtml": "<div class=\"sol\"><strong>85.</strong> The four angles around the point sum to 360°: x = 360 − (110 + 90 + 75) = 360 − 275 = 85.</div>\n    <div class=\"meta\">Banding: B2 — one fact (angles about a point total 360°) plus one subtraction setup.<br>Modal avoided: two intersecting lines with one labeled angle, “find the vertical angle.”</div>",
+   "figure": {
+    "fn": "raw",
+    "spec": {
+     "svg": "<svg viewBox=\"0 0 320 235\" role=\"img\" aria-label=\"Four rays from a point forming four angles\">\n    <g stroke=\"#222\" stroke-width=\"1.8\">\n      <line x1=\"160\" y1=\"120\" x2=\"255\" y2=\"120\"/>\n      <line x1=\"160\" y1=\"120\" x2=\"127\" y2=\"31\"/>\n      <line x1=\"160\" y1=\"120\" x2=\"71\" y2=\"153\"/>\n      <line x1=\"160\" y1=\"120\" x2=\"168\" y2=\"215\"/>\n    </g>\n    <circle cx=\"160\" cy=\"120\" r=\"3\" fill=\"#222\"/>\n    <text x=\"196\" y=\"80\" text-anchor=\"middle\">110°</text>\n    <text x=\"115\" y=\"105\" text-anchor=\"middle\">90°</text>\n    <text x=\"131\" y=\"171\" text-anchor=\"middle\">75°</text>\n    <text x=\"203\" y=\"163\" text-anchor=\"middle\">x°</text>\n  </svg>"
+    }
+   },
+   "stem": [
+    {
+     "t": "p",
+     "segs": [
+      {
+       "t": "text",
+       "v": "Four straight walking paths meet at the center of a plaza, as shown, forming four angles. The measures of three of the angles are 110°, 90°, and 75°. What is the value of x?"
+      }
+     ]
+    }
+   ],
+   "answer": {
+    "accept": [
+     "85"
+    ]
+   }
+  },
+  {
+   "id": 6,
+   "type": "spr",
+   "domain": "geometry_trig",
+   "band": "B3",
+   "skill": "triangle area from coordinates",
+   "_variantId": "fam_7d11069afc#s35#13",
+   "_familyId": "fam_7d11069afc",
+   "_subdomain": "area_volume",
+   "_solutionHtml": "<div class=\"sol\"><strong>24.</strong> Side PQ lies on the x-axis with length 8, and the height of R above that base is its y-coordinate, 6. Area = ½(8)(6) = 24.</div>\n    <div class=\"meta\">Banding: B3 — sheet formula (½bh) forward with one embedded op (extracting base and height from coordinates).<br>Modal avoided: triangle with base and height labeled directly, “find the area.”</div>",
+   "figure": {
+    "fn": "raw",
+    "spec": {
+     "svg": "<svg viewBox=\"0 0 290 225\" role=\"img\" aria-label=\"Triangle on a coordinate grid\">\n    <g stroke=\"#d5dae1\" stroke-width=\"1\">\n      <path d=\"M20 20 H260 M20 44 H260 M20 68 H260 M20 92 H260 M20 116 H260 M20 140 H260 M20 164 H260 M20 188 H260 M20 212 H260\"/>\n      <path d=\"M20 20 V212 M44 20 V212 M68 20 V212 M92 20 V212 M116 20 V212 M140 20 V212 M164 20 V212 M188 20 V212 M212 20 V212 M236 20 V212 M260 20 V212\"/>\n    </g>\n    <line x1=\"20\" y1=\"188\" x2=\"260\" y2=\"188\" stroke=\"#555\" stroke-width=\"1.6\"/>\n    <line x1=\"44\" y1=\"20\" x2=\"44\" y2=\"212\" stroke=\"#555\" stroke-width=\"1.6\"/>\n    <text x=\"266\" y=\"192\">x</text>\n    <text x=\"50\" y=\"30\">y</text>\n    <path d=\"M44 188 L236 188 L116 44 Z\" stroke=\"#1d3f75\" fill=\"rgba(29,63,117,.08)\" stroke-width=\"2\"/>\n    <text x=\"36\" y=\"205\" text-anchor=\"end\">P</text>\n    <text x=\"228\" y=\"208\" text-anchor=\"middle\">Q(8, 0)</text>\n    <text x=\"116\" y=\"36\" text-anchor=\"middle\">R(3, 6)</text>\n  </svg>"
+    }
+   },
+   "stem": [
+    {
+     "t": "p",
+     "segs": [
+      {
+       "t": "text",
+       "v": "Triangle PQR is shown in the xy-plane, with vertices P(0, 0), Q(8, 0), and R(3, 6). What is the area of triangle PQR?"
+      }
+     ]
+    }
+   ],
+   "answer": {
+    "accept": [
+     "24"
+    ]
+   }
+  },
+  {
+   "id": 7,
+   "type": "spr",
+   "domain": "geometry_trig",
+   "band": "B3",
+   "skill": "Pythagorean theorem (find hypotenuse)",
+   "_variantId": "fam_ade02c7dfd#pilot#3",
+   "_familyId": "fam_ade02c7dfd",
+   "_subdomain": "right_triangles_trig",
+   "_solutionHtml": "<div class=\"sol\">\n        <p><span class=\"ans\">Answer: 15</span></p>\n        <p><var>x</var>² = 9² + 12² = 81 + 144 = 225, so <var>x</var> = 15.</p>\n        <div class=\"rp\">RP67 · B3: forward Pythagorean theorem for a hypotenuse from two given legs — the explicit B3 descriptor; one squaring-and-root chain, no setup decisions.</div>\n      </div>",
+   "figure": {
+    "fn": "raw",
+    "spec": {
+     "svg": "<svg viewBox=\"0 0 320 230\" role=\"img\" aria-label=\"Right triangle with legs 9 and 12 and hypotenuse x\">\n          <title>Right triangle with legs 9 and 12</title>\n          <g fill=\"none\" stroke=\"#26221b\" stroke-width=\"1.7\" stroke-linejoin=\"round\">\n            <path d=\"M64,192 L244,192 L64,57 Z\"/>\n            <path d=\"M64,178 L78,178 L78,192\" stroke-width=\"1.3\"/>\n          </g>\n          <g font-size=\"15\" fill=\"#26221b\" text-anchor=\"middle\">\n            <text x=\"154\" y=\"214\">12</text>\n            <text x=\"48\" y=\"130\">9</text>\n            <text x=\"164\" y=\"116\" font-style=\"italic\">x</text>\n          </g>\n        </svg>"
+    }
+   },
+   "stem": [
+    {
+     "t": "p",
+     "segs": [
+      {
+       "t": "text",
+       "v": "For the right triangle shown, what is the value of x? The right triangle has legs labeled 12 (bottom) and 9 (left/vertical), with the hypotenuse labeled x."
+      }
+     ]
+    }
+   ],
+   "answer": {
+    "accept": [
+     "15"
+    ]
+   }
+  },
+  {
+   "id": 8,
+   "type": "mcq",
+   "domain": "geometry_trig",
+   "band": "B3",
+   "skill": "isosceles triangle + angle sum",
+   "_variantId": "fam_c8ce7b829f#s35#12",
+   "_familyId": "fam_c8ce7b829f",
+   "_subdomain": "lines_angles_triangles",
+   "_solutionHtml": "<div class=\"sol\"><strong>B) 70.</strong> The frame is an isosceles triangle (equal beams marked), so its base angles are equal. The angle sum gives 40 + 2x = 180, so x = 70. (D forgets to halve; A assumes the base angle equals the apex angle.)</div>\n    <div class=\"meta\">Banding: B3 — famous fact (triangle angle sum) forward with one embedded op (isosceles base-angles-equal read from the tick marks, then halving).<br>Modal avoided: triangle with two numeric angles given, “find the third angle.”</div>",
+   "figure": {
+    "fn": "raw",
+    "spec": {
+     "svg": "<svg viewBox=\"0 0 320 225\" role=\"img\" aria-label=\"Isosceles roof truss\">\n    <path d=\"M55 200 L160 40 L265 200 Z\" stroke=\"#222\" fill=\"none\" stroke-width=\"1.8\"/>\n    <g stroke=\"#222\" stroke-width=\"1.4\">\n      <line x1=\"103\" y1=\"117\" x2=\"113\" y2=\"123\"/>\n      <line x1=\"207\" y1=\"123\" x2=\"217\" y2=\"117\"/>\n    </g>\n    <text x=\"160\" y=\"80\" text-anchor=\"middle\">40°</text>\n    <text x=\"228\" y=\"193\" text-anchor=\"middle\">x°</text>\n  </svg>"
+    }
+   },
+   "stem": [
+    {
+     "t": "p",
+     "segs": [
+      {
+       "t": "text",
+       "v": "The figure shows the triangular frame of a roof truss. The two slanted beams have the same length and meet at an angle of 40°. What is the value of x, the measure in degrees of the base angle? (Figure not drawn to scale.)"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "key": "A",
+     "seg": [
+      {
+       "t": "text",
+       "v": "40"
+      }
+     ]
+    },
+    {
+     "key": "B",
+     "seg": [
+      {
+       "t": "text",
+       "v": "70"
+      }
+     ]
+    },
+    {
+     "key": "C",
+     "seg": [
+      {
+       "t": "text",
+       "v": "110"
+      }
+     ]
+    },
+    {
+     "key": "D",
+     "seg": [
+      {
+       "t": "text",
+       "v": "140"
+      }
+     ]
+    }
+   ],
+   "answer": {
+    "correct": "B"
+   }
+  },
+  {
+   "id": 9,
+   "type": "mcq",
+   "domain": "geometry_trig",
+   "band": "B3",
+   "skill": "quadrilateral angle sum",
+   "_variantId": "fam_6216f6dc30#s35#15",
+   "_familyId": "fam_6216f6dc30",
+   "_subdomain": "lines_angles_triangles",
+   "_solutionHtml": "<div class=\"sol\"><strong>B) 80.</strong> The interior angles of a quadrilateral sum to 360°: x = 360 − (95 + 75 + 110) = 360 − 280 = 80. (D is the sum of the three given angles; A and C are arithmetic slips.)</div>\n    <div class=\"meta\">Banding: B3 — one famous off-sheet fact (quadrilateral angle sum, 360°) forward with one subtraction setup.<br>Modal avoided: triangle with two angles given, “find the third” (triangle angle-sum chase).</div>",
+   "figure": {
+    "fn": "raw",
+    "spec": {
+     "svg": "<svg viewBox=\"0 0 320 235\" role=\"img\" aria-label=\"Quadrilateral with three labeled angles\">\n    <path d=\"M70 45 L275 75 L235 205 L45 165 Z\" stroke=\"#222\" fill=\"#f2f4ec\" stroke-width=\"1.8\"/>\n    <text x=\"90\" y=\"68\">95°</text>\n    <text x=\"243\" y=\"88\" text-anchor=\"middle\">75°</text>\n    <text x=\"222\" y=\"187\" text-anchor=\"middle\">110°</text>\n    <text x=\"72\" y=\"160\">x°</text>\n  </svg>"
+    }
+   },
+   "stem": [
+    {
+     "t": "p",
+     "segs": [
+      {
+       "t": "text",
+       "v": "The figure shows a four-sided plot of land. Three of its interior angles measure 95, 75, and 110°. What is the value of x, the measure in degrees of the fourth interior angle? (Figure not drawn to scale.)"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "key": "A",
+     "seg": [
+      {
+       "t": "text",
+       "v": "60"
+      }
+     ]
+    },
+    {
+     "key": "B",
+     "seg": [
+      {
+       "t": "text",
+       "v": "80"
+      }
+     ]
+    },
+    {
+     "key": "C",
+     "seg": [
+      {
+       "t": "text",
+       "v": "100"
+      }
+     ]
+    },
+    {
+     "key": "D",
+     "seg": [
+      {
+       "t": "text",
+       "v": "280"
+      }
+     ]
+    }
+   ],
+   "answer": {
+    "correct": "B"
+   }
+  },
+  {
+   "id": 10,
+   "type": "mcq",
+   "domain": "geometry_trig",
+   "band": "B4",
+   "skill": "triangle similarity (segment parallel to a side)",
+   "_variantId": "fam_2f36d6aeb0#a3#7",
+   "_familyId": "fam_2f36d6aeb0",
+   "_subdomain": "lines_angles_triangles",
+   "_solutionHtml": "<div class=\"sol\">\n      <p class=\"ans\">Answer: C) 12</p>\n      <p>Since <i>DE</i> &#8741; <i>BC</i>, triangle <i>ADE</i> ~ triangle <i>ABC</i>. The ratio uses the <em>whole</em> side: AD/AB = 6/(6+3) = 2/3. So DE/BC = 2/3, giving BC = 8 · 3/2 = 12.</p>\n      <p class=\"dis\">Distractors: A) sets DE/BC = AD/DB inverted (8 · 3/6); B) adds DB to DE (8 + 3); D) uses the part-to-part ratio AD/DB as the scale factor (8 · 6/3).</p>\n      <p class=\"rp\"><b>B6 / RP67:</b> similarity with the part-whole trap — the solver must reject the tempting AD/DB proportion, derive AB = AD + DB, then set the correct correspondence; that non-obvious setup step is what lifts it past B4&#8217;s direct-scale-factor items.</p>\n    </div>",
+   "figure": {
+    "fn": "raw",
+    "spec": {
+     "svg": "<svg viewBox=\"0 0 320 235\" role=\"img\" aria-label=\"Triangle ABC with segment DE parallel to BC; AD is 6, DB is 3, DE is 8\">\n      <polygon points=\"140,30 40,210 280,210\" fill=\"#f8fafc\" stroke=\"#1e293b\" stroke-width=\"1.8\" stroke-linejoin=\"round\"/>\n      <line x1=\"85\" y1=\"129\" x2=\"217\" y2=\"129\" stroke=\"#1e293b\" stroke-width=\"1.6\"/>\n      <!-- parallel marks -->\n      <path d=\"M 158 123 L 168 129 L 158 135\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"1.7\"/>\n      <path d=\"M 158 204 L 168 210 L 158 216\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"1.7\"/>\n      <text class=\"lbl it\" x=\"140\" y=\"19\" text-anchor=\"middle\">A</text>\n      <text class=\"lbl it\" x=\"29\" y=\"223\" text-anchor=\"middle\">B</text>\n      <text class=\"lbl it\" x=\"291\" y=\"223\" text-anchor=\"middle\">C</text>\n      <text class=\"lbl it\" x=\"71\" y=\"133\" text-anchor=\"end\">D</text>\n      <text class=\"lbl it\" x=\"230\" y=\"133\" text-anchor=\"start\">E</text>\n      <text class=\"lbl halo\" x=\"100\" y=\"82\" text-anchor=\"middle\">6</text>\n      <text class=\"lbl halo\" x=\"50\" y=\"170\" text-anchor=\"middle\">3</text>\n      <text class=\"lbl halo\" x=\"151\" y=\"121\" text-anchor=\"middle\">8</text>\n    </svg>"
+    }
+   },
+   "stem": [
+    {
+     "t": "p",
+     "segs": [
+      {
+       "t": "text",
+       "v": "In triangle ABC, point D lies on side AB and point E lies on side AC, with segment DE parallel to side BC. AD = 6, DB = 3, and DE = 8. What is the length of BC? (Figure not drawn to scale.)"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "key": "A",
+     "seg": [
+      {
+       "t": "text",
+       "v": "4"
+      }
+     ]
+    },
+    {
+     "key": "B",
+     "seg": [
+      {
+       "t": "text",
+       "v": "11"
+      }
+     ]
+    },
+    {
+     "key": "C",
+     "seg": [
+      {
+       "t": "text",
+       "v": "12"
+      }
+     ]
+    },
+    {
+     "key": "D",
+     "seg": [
+      {
+       "t": "text",
+       "v": "16"
+      }
+     ]
+    }
+   ],
+   "answer": {
+    "correct": "C"
+   }
+  },
+  {
+   "id": 11,
+   "type": "mcq",
+   "domain": "geometry_trig",
+   "band": "B4",
+   "skill": "hemisphere volume",
+   "_variantId": "fam_5e7f851140#s35#16",
+   "_familyId": "fam_5e7f851140",
+   "_subdomain": "area_volume",
+   "_solutionHtml": "<div class=\"sol\"><strong>C) 144π.</strong> A full sphere of radius 6 has volume (4/3)π(6³) = 288π; the dome is half of that, 144π cubic meters. (D forgets to halve; B uses r² instead of r³; A makes both errors.)</div>\n    <div class=\"meta\">Banding: B4 — sheet formula (sphere volume) plus a fractional-factor demand (the ½ for the hemisphere) and a cube.<br>Modal avoided: sphere with labeled radius, “find the volume” direct plug-in.</div>",
+   "figure": {
+    "fn": "raw",
+    "spec": {
+     "svg": "<svg viewBox=\"0 0 320 200\" role=\"img\" aria-label=\"Hemispherical dome with radius\">\n    <line x1=\"15\" y1=\"155\" x2=\"305\" y2=\"155\" stroke=\"#555\" stroke-width=\"2\"/>\n    <path d=\"M55 155 A105 105 0 0 1 265 155\" stroke=\"#222\" fill=\"#eef3f9\" stroke-width=\"1.8\"/>\n    <path d=\"M55 155 A105 20 0 0 0 265 155\" stroke=\"#222\" fill=\"none\" stroke-width=\"1.4\"/>\n    <path d=\"M55 155 A105 20 0 0 1 265 155\" stroke=\"#999\" fill=\"none\" stroke-width=\"1.2\" stroke-dasharray=\"5 4\"/>\n    <line x1=\"160\" y1=\"155\" x2=\"265\" y2=\"155\" stroke=\"#222\" stroke-width=\"1.4\"/>\n    <circle cx=\"160\" cy=\"155\" r=\"2.5\" fill=\"#222\"/>\n    <text x=\"208\" y=\"147\" text-anchor=\"middle\">6 m</text>\n  </svg>"
+    }
+   },
+   "stem": [
+    {
+     "t": "p",
+     "segs": [
+      {
+       "t": "text",
+       "v": "An observatory dome has the shape of a hemisphere with a radius of 6 meters, as shown. What is the volume, in cubic meters, of the space enclosed by the dome?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "key": "A",
+     "seg": [
+      {
+       "t": "text",
+       "v": "24pi"
+      }
+     ]
+    },
+    {
+     "key": "B",
+     "seg": [
+      {
+       "t": "text",
+       "v": "48pi"
+      }
+     ]
+    },
+    {
+     "key": "C",
+     "seg": [
+      {
+       "t": "text",
+       "v": "144pi"
+      }
+     ]
+    },
+    {
+     "key": "D",
+     "seg": [
+      {
+       "t": "text",
+       "v": "288pi"
+      }
+     ]
+    }
+   ],
+   "answer": {
+    "correct": "C"
+   }
+  },
+  {
+   "id": 12,
+   "type": "spr",
+   "domain": "geometry_trig",
+   "band": "B4",
+   "skill": "composite area (decomposition)",
+   "_variantId": "fam_6a6b175a2b#s35#19",
+   "_familyId": "fam_6a6b175a2b",
+   "_subdomain": "area_volume",
+   "_solutionHtml": "<div class=\"sol\"><strong>32.</strong> The rectangle is 6 by 4, area 24. The right triangle has base 10 − 6 = 4 and height 4, area ½(4)(4) = 8. Total: 24 + 8 = 32 square meters.</div>\n    <div class=\"meta\">Banding: B4 — two sheet formulas with an extra demand: the triangle’s base (10 − 6 = 4) must be constructed from the figure, then areas summed.<br>Modal avoided: trapezoid with the formula A = ½(b₁ + b₂)h applied directly to labeled bases and height.</div>",
+   "figure": {
+    "fn": "raw",
+    "spec": {
+     "svg": "<svg viewBox=\"0 0 375 205\" role=\"img\" aria-label=\"Right trapezoid split into rectangle and right triangle\">\n    <path d=\"M40 50 L220 50 L340 170 L40 170 Z\" stroke=\"#222\" fill=\"#f0ece4\" stroke-width=\"1.8\"/>\n    <line x1=\"220\" y1=\"50\" x2=\"220\" y2=\"170\" stroke=\"#777\" stroke-width=\"1.4\" stroke-dasharray=\"5 4\"/>\n    <rect x=\"40\" y=\"50\" width=\"12\" height=\"12\" fill=\"none\" stroke=\"#222\" stroke-width=\"1.1\"/>\n    <rect x=\"40\" y=\"158\" width=\"12\" height=\"12\" fill=\"none\" stroke=\"#222\" stroke-width=\"1.1\"/>\n    <rect x=\"208\" y=\"158\" width=\"12\" height=\"12\" fill=\"none\" stroke=\"#222\" stroke-width=\"1.1\"/>\n    <text x=\"130\" y=\"40\" text-anchor=\"middle\">6 m</text>\n    <text x=\"28\" y=\"115\" text-anchor=\"end\">4 m</text>\n    <text x=\"190\" y=\"190\" text-anchor=\"middle\">10 m</text>\n  </svg>"
+    }
+   },
+   "stem": [
+    {
+     "t": "p",
+     "segs": [
+      {
+       "t": "text",
+       "v": "The figure shows the floor plan of a deck, consisting of a rectangle and a right triangle separated by a dashed segment. The top edge is 6 meters, the left edge is 4 meters, and the bottom edge is 10 meters. What is the area, in square meters, of the deck?"
+      }
+     ]
+    }
+   ],
+   "answer": {
+    "accept": [
+     "32"
+    ]
+   }
+  },
+  {
+   "id": 13,
+   "program": "SAT",
+   "domain": "geometry_trig",
+   "band": "B4",
+   "target_band": "B4",
+   "statementId": "GEO.B4.s1",
+   "skill": "solid_figures",
+   "type": "spr",
+   "stem": [
+    {
+     "t": "text",
+     "v": "The right rectangular pyramid shown has the base edge lengths and height marked, in centimeters. What is the volume of the pyramid, in cubic centimeters?"
+    }
+   ],
+   "answer": {
+    "accept": [
+     "70"
+    ],
+    "tol": 0
+   },
+   "solution": [
+    {
+     "t": "text",
+     "v": "1. apply volume formula: "
+    },
+    {
+     "t": "math",
+     "v": "V = \\tfrac13\\ell wh = \\tfrac13\\cdot 5\\cdot 7\\cdot 6 = 70"
+    },
+    {
+     "t": "text",
+     "v": "."
+    },
+    {
+     "t": "br"
+    }
+   ],
+   "figure": {
+    "fn": "pyramid",
+    "spec": {
+     "dims": {
+      "l": 5,
+      "w": 7,
+      "h": 6
+     },
+     "labels": {
+      "l": "5",
+      "w": "7",
+      "h": "6"
+     }
+    }
+   },
+   "fingerprint": [
+    "solid_fig",
+    "pyramid_volume",
+    "5x7x6",
+    "3d"
+   ],
+   "difficulty": {
+    "scalePoint": 485,
+    "band": "B4",
+    "method": "expert_blind_calibration"
+   },
+   "_variantId": "fam_f5163fb7c8#500714e5",
+   "_familyId": "fam_f5163fb7c8",
+   "_subdomain": "area_volume"
+  },
+  {
+   "id": 14,
+   "type": "spr",
+   "domain": "geometry_trig",
+   "band": "B4",
+   "skill": "Special right triangle (30-60-90)",
+   "_variantId": "fam_5daf951d0a#a2#4",
+   "_familyId": "fam_5daf951d0a",
+   "_subdomain": "right_triangles_trig",
+   "_solutionHtml": "<p class=\"ans\">Answer: <b>10</b></p>\n    <p>In a 30&#8211;60&#8211;90 triangle the sides opposite the 30&#176;, 60&#176;, and 90&#176; angles are <em>s</em>, <em>s</em>&#8730;3, and 2<em>s</em>. Leg <em>AC</em> is opposite the 60&#176; angle at <em>B</em>, so <em>s</em>&#8730;3 = 5&#8730;3, giving <em>s</em> = 5. The hypotenuse is <em>x</em> = 2<em>s</em> = 10. Check: <em>BC</em> = 5 and 5&#178; + (5&#8730;3)&#178; = 25 + 75 = 100 = 10&#178;. &#10003;</p>\n    <p class=\"rp\">RP67: reference-sheet special-right-triangle fact, but the student must match 5&#8730;3 to the <em>s</em>&#8730;3 leg and invert to the hypotenuse — Band 4's special-right gate (SPR removes answer-matching help).</p>",
+   "figure": {
+    "fn": "raw",
+    "spec": {
+     "svg": "<svg viewBox=\"0 0 300 225\" role=\"img\" aria-label=\"Right triangle with right angle at C, 30 degree angle at A, leg AC of length 5 root 3, hypotenuse AB labeled x\">\n      <polygon points=\"60,190 233.2,190 60,90\" fill=\"none\" stroke=\"#1a1a1a\" stroke-width=\"1.8\"/>\n      <polyline points=\"60,178 72,178 72,190\" fill=\"none\" stroke=\"#1a1a1a\" stroke-width=\"1.4\"/>\n      <text x=\"245\" y=\"196\" font-size=\"15\" font-style=\"italic\">A</text>\n      <text x=\"52\"  y=\"84\"  font-size=\"15\" font-style=\"italic\" text-anchor=\"middle\">B</text>\n      <text x=\"46\"  y=\"200\" font-size=\"15\" font-style=\"italic\" text-anchor=\"end\">C</text>\n      <text x=\"183\" y=\"185\" font-size=\"13.5\" text-anchor=\"middle\">30&#176;</text>\n      <text x=\"146\" y=\"210\" font-size=\"14\" text-anchor=\"middle\">5&#8730;3</text>\n      <text x=\"158\" y=\"130\" font-size=\"14\" font-style=\"italic\">x</text>\n    </svg>"
+    }
+   },
+   "stem": [
+    {
+     "t": "p",
+     "segs": [
+      {
+       "t": "text",
+       "v": "In right triangle ABC, the right angle is at C, the measure of angle A is 30°, and leg AC (adjacent to angle A) has length 5*sqrt(3). The hypotenuse AB has length x. What is the value of x?"
+      }
+     ]
+    }
+   ],
+   "answer": {
+    "accept": [
+     "10"
+    ]
+   }
+  },
+  {
+   "id": 15,
+   "type": "spr",
+   "domain": "geometry_trig",
+   "band": "B5",
+   "skill": "hemisphere volume inverse",
+   "_variantId": "fam_a3b3b3de27#s35#23",
+   "_familyId": "fam_a3b3b3de27",
+   "_subdomain": "area_volume",
+   "_solutionHtml": "<div class=\"sol\"><strong>6.</strong> Half a sphere: ½ · (4/3)πr³ = 18π, so (2/3)r³ = 18 and r³ = 27, giving r = 3. The rim is a full circle of the sphere, so d = 2r = 6 inches.</div>\n    <div class=\"meta\">Banding: B5 — one-step inverse on a sheet formula (volume → radius, with the ½ hemisphere factor), plus the trivial d = 2r finish.<br>Modal avoided: cylinder/prism volume with one missing dimension, “solve for h” (and sphere forward plug-in).</div>",
+   "figure": {
+    "fn": "raw",
+    "spec": {
+     "svg": "<svg viewBox=\"0 0 320 175\" role=\"img\" aria-label=\"Hemispherical bowl with rim diameter d\">\n    <path d=\"M55 60 A105 105 0 0 0 265 60\" stroke=\"#222\" fill=\"#eef3f9\" stroke-width=\"1.8\"/>\n    <ellipse cx=\"160\" cy=\"60\" rx=\"105\" ry=\"18\" stroke=\"#222\" fill=\"none\" stroke-width=\"1.4\"/>\n    <line x1=\"55\" y1=\"60\" x2=\"265\" y2=\"60\" stroke=\"#333\" stroke-width=\"1.3\"/>\n    <circle cx=\"55\" cy=\"60\" r=\"2.5\" fill=\"#333\"/>\n    <circle cx=\"265\" cy=\"60\" r=\"2.5\" fill=\"#333\"/>\n    <text x=\"160\" y=\"50\" text-anchor=\"middle\" font-style=\"italic\">d</text>\n  </svg>"
+    }
+   },
+   "stem": [
+    {
+     "t": "p",
+     "segs": [
+      {
+       "t": "text",
+       "v": "The inside of a mixing bowl has the shape of a hemisphere, as shown. When completely full, the bowl holds a volume of 18pi cubic inches. What is the diameter d, in inches, of the circular rim of the bowl?"
+      }
+     ]
+    }
+   ],
+   "answer": {
+    "accept": [
+     "6"
+    ]
+   }
+  },
+  {
+   "id": 16,
+   "type": "mcq",
+   "domain": "geometry_trig",
+   "band": "B5",
+   "skill": "Multistep perimeter of a composite figure",
+   "_variantId": "fam_25667ec5de#a2#6",
+   "_familyId": "fam_25667ec5de",
+   "_subdomain": "area_volume",
+   "_solutionHtml": "<p class=\"ans\">Answer: <b>A) 32 + 4&#960;</b></p>\n    <p>The boundary consists of the top and bottom sides (12 + 12), the left side (8), and the semicircular arc. The semicircle has diameter 8, so radius 4 and arc length &#189;(2&#960; &#183; 4) = 4&#960;. The dashed 8 m segment is interior, not part of the boundary. Perimeter = 12 + 12 + 8 + 4&#960; = 32 + 4&#960; &#8776; 44.57 m.</p>\n    <ul>\n      <li>B) 40 + 4&#960; wrongly includes the interior 8 m diameter segment.</li>\n      <li>C) 32 + 8&#960; uses the full circle's circumference instead of half.</li>\n      <li>D) 96 + 8&#960; computes the area (96 + 8&#960;), not the perimeter.</li>\n    </ul>\n    <p class=\"rp\">RP67: multistep perimeter chaining two sheet formulas (rectangle sides + half a circumference) while suppressing the interior edge — Band 5's multistep area/perimeter gate.</p>",
+   "figure": {
+    "fn": "raw",
+    "spec": {
+     "svg": "<svg viewBox=\"0 0 300 235\" role=\"img\" aria-label=\"Rectangle 12 meters by 8 meters with a semicircle of diameter 8 meters attached to its right side\">\n      <path d=\"M40,60 L220,60 A60,60 0 0 1 220,180 L40,180 Z\" fill=\"#e8eef7\" stroke=\"#1a1a1a\" stroke-width=\"1.8\"/>\n      <line x1=\"220\" y1=\"60\" x2=\"220\" y2=\"180\" stroke=\"#1a1a1a\" stroke-width=\"1.3\" stroke-dasharray=\"5,4\"/>\n      <text x=\"130\" y=\"48\" font-size=\"14\" text-anchor=\"middle\">12 m</text>\n      <text x=\"24\" y=\"124\" font-size=\"14\" text-anchor=\"middle\" transform=\"rotate(-90 24 124)\">8 m</text>\n    </svg>"
+    }
+   },
+   "stem": [
+    {
+     "t": "p",
+     "segs": [
+      {
+       "t": "text",
+       "v": "The figure shows the floor plan of a patio formed by a 12-meter-by-8-meter rectangle and a semicircle whose diameter is the 8-meter right side of the rectangle. What is the perimeter, in meters, of the patio?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "key": "A",
+     "seg": [
+      {
+       "t": "text",
+       "v": "32+4pi"
+      }
+     ]
+    },
+    {
+     "key": "B",
+     "seg": [
+      {
+       "t": "text",
+       "v": "40+4pi"
+      }
+     ]
+    },
+    {
+     "key": "C",
+     "seg": [
+      {
+       "t": "text",
+       "v": "32+8pi"
+      }
+     ]
+    },
+    {
+     "key": "D",
+     "seg": [
+      {
+       "t": "text",
+       "v": "96+8pi"
+      }
+     ]
+    }
+   ],
+   "answer": {
+    "correct": "A"
+   }
+  },
+  {
+   "id": 17,
+   "type": "spr",
+   "domain": "geometry_trig",
+   "band": "B5",
+   "skill": "composite figure area",
+   "_variantId": "fam_6fa323eacf#pilot#5",
+   "_familyId": "fam_6fa323eacf",
+   "_subdomain": "area_volume",
+   "_solutionHtml": "<div class=\"sol\">\n        <p><span class=\"ans\">Answer: 92</span></p>\n        <p>The two unlabeled sides are 14 − 6 = 8 m and 10 − 4 = 6 m. The floor is the 14 × 10 rectangle minus the 8 × 6 notch: 140 − 48 = 92 square meters. (Equivalently, 14 · 4 + 6 · 6 = 56 + 36 = 92.)</p>\n        <div class=\"rp\">RP67 · B5: multistep area — two unlabeled sides must first be derived from the figure, then the region decomposed; a three-step forward chain on sheet formulas.</div>\n      </div>",
+   "figure": {
+    "fn": "raw",
+    "spec": {
+     "svg": "<svg viewBox=\"0 0 320 250\" role=\"img\" aria-label=\"L-shaped floor plan: bottom side 14 m, left side 10 m, top side 6 m, right side 4 m\">\n          <title>L-shaped floor plan</title>\n          <g fill=\"none\" stroke=\"#26221b\" stroke-width=\"1.7\" stroke-linejoin=\"round\">\n            <path d=\"M50,220 L232,220 L232,168 L128,168 L128,90 L50,90 Z\"/>\n          </g>\n          <g fill=\"none\" stroke=\"#26221b\" stroke-width=\"1.1\">\n            <path d=\"M50,207 L63,207 L63,220\"/>\n            <path d=\"M232,207 L219,207 L219,220\"/>\n            <path d=\"M219,168 L219,181 L232,181\"/>\n            <path d=\"M50,103 L63,103 L63,90\"/>\n            <path d=\"M128,103 L115,103 L115,90\"/>\n          </g>\n          <g font-size=\"14\" fill=\"#26221b\" text-anchor=\"middle\">\n            <text x=\"141\" y=\"240\">14 m</text>\n            <text x=\"26\" y=\"160\">10 m</text>\n            <text x=\"89\" y=\"78\">6 m</text>\n            <text x=\"258\" y=\"199\">4 m</text>\n          </g>\n        </svg>"
+    }
+   },
+   "stem": [
+    {
+     "t": "p",
+     "segs": [
+      {
+       "t": "text",
+       "v": "The figure shows the floor plan of a storage room. All angles of the floor are right angles. What is the area, in square meters, of the floor? The L-shaped floor plan has a bottom side of 14 m, a left side of 10 m, a top side of 6 m, and a right side of 4 m (two unlabeled sides complete the L-shape)."
+      }
+     ]
+    }
+   ],
+   "answer": {
+    "accept": [
+     "92"
+    ]
+   }
+  },
+  {
+   "id": 18,
+   "type": "mcq",
+   "domain": "geometry_trig",
+   "band": "B5",
+   "skill": "composite area (multistep)",
+   "_variantId": "fam_7c895bdcf9#a1#7",
+   "_familyId": "fam_7c895bdcf9",
+   "_subdomain": "area_volume",
+   "_solutionHtml": "<div class=\"sol\">\n      <p class=\"ans\">Answer: B) 2,400 + 200π</p>\n      <p>Rectangle: 40 · 60 = 2,400. The semicircle's diameter is 40, so its radius is 20, and its area is ½·π·20² = 200π. Total area: 2,400 + 200π square centimeters.</p>\n      <p class=\"dis\">Distractors: A) uses half the circumference (½ · 2π · 20) instead of area; C) uses a full circle; D) uses the 40-cm diameter as the radius.</p>\n      <div class=\"rp\">RP67 — B5: multistep composite-area decomposition with on-sheet formulas; the chain (decompose, halve diameter, halve circle) rather than recall is the gate — the B5 multistep-area descriptor.</div>\n    </div>",
+   "figure": {
+    "fn": "raw",
+    "spec": {
+     "svg": "<svg viewBox=\"0 0 320 260\" role=\"img\" aria-label=\"Window made of a rectangle 40 centimeters wide and 60 centimeters tall topped by a semicircle of diameter 40 centimeters\">\n      <path d=\"M116,218 L116,86 A44,44 0 0 1 204,86 L204,218 Z\" fill=\"#e7f0fa\" stroke=\"#2b3442\" stroke-width=\"2.2\"/>\n      <line x1=\"116\" y1=\"86\" x2=\"204\" y2=\"86\" stroke=\"#8a93a1\" stroke-width=\"1.2\" stroke-dasharray=\"5 4\"/>\n      <g stroke=\"#66707e\" stroke-width=\"1.2\">\n        <line x1=\"116\" y1=\"224\" x2=\"116\" y2=\"242\"/><line x1=\"204\" y1=\"224\" x2=\"204\" y2=\"242\"/>\n        <line x1=\"116\" y1=\"236\" x2=\"204\" y2=\"236\"/>\n        <line x1=\"210\" y1=\"86\" x2=\"228\" y2=\"86\"/><line x1=\"210\" y1=\"218\" x2=\"228\" y2=\"218\"/>\n        <line x1=\"222\" y1=\"86\" x2=\"222\" y2=\"218\"/>\n      </g>\n      <text x=\"160\" y=\"255\" text-anchor=\"middle\" class=\"sm\">40 cm</text>\n      <text x=\"232\" y=\"156\" class=\"sm\">60 cm</text>\n    </svg>"
+    }
+   },
+   "stem": [
+    {
+     "t": "p",
+     "segs": [
+      {
+       "t": "text",
+       "v": "The figure shows the design of a window consisting of a rectangle and a semicircle whose diameter is the top side of the rectangle. The rectangle is 40 cm wide and 60 cm tall. What is the area, in square centimeters, of the window? Choices:"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "key": "A",
+     "seg": [
+      {
+       "t": "text",
+       "v": "2400+20pi"
+      }
+     ]
+    },
+    {
+     "key": "B",
+     "seg": [
+      {
+       "t": "text",
+       "v": "2400+200pi"
+      }
+     ]
+    },
+    {
+     "key": "C",
+     "seg": [
+      {
+       "t": "text",
+       "v": "2400+400pi"
+      }
+     ]
+    },
+    {
+     "key": "D",
+     "seg": [
+      {
+       "t": "text",
+       "v": "2400+800pi"
+      }
+     ]
+    }
+   ],
+   "answer": {
+    "correct": "B"
+   }
+  },
+  {
+   "id": 19,
+   "type": "spr",
+   "domain": "geometry_trig",
+   "band": "B6",
+   "skill": "isosceles area via constructed altitude",
+   "_variantId": "fam_4399fdb7db#s35#28",
+   "_familyId": "fam_4399fdb7db",
+   "_subdomain": "area_volume",
+   "_solutionHtml": "<div class=\"sol\"><strong>60.</strong> Drop the altitude from the peak to the midpoint of the base (the triangle is isosceles). Each half is a right triangle with hypotenuse 13 and leg 5, so the altitude is √(13² − 5²) = √144 = 12. Area = ½(10)(12) = 60 square meters.</div>\n    <div class=\"meta\">Banding: B6 — 3-link chain in which the first link (construct the altitude and halve the base) must be RECOGNIZED, followed by an inverse Pythagorean link and the area formula.<br>Modal avoided: right triangle with two sides labeled, “find the third side” (Pythagorean main event).</div>",
+   "figure": {
+    "fn": "raw",
+    "spec": {
+     "svg": "<svg viewBox=\"0 0 320 220\" role=\"img\" aria-label=\"Isosceles triangle gable, sides 13 and base 10\">\n    <path d=\"M90 195 L160 27 L230 195 Z\" stroke=\"#222\" fill=\"#f0ece4\" stroke-width=\"1.8\"/>\n    <g stroke=\"#222\" stroke-width=\"1.4\">\n      <line x1=\"120\" y1=\"112\" x2=\"130\" y2=\"108\"/>\n      <line x1=\"190\" y1=\"108\" x2=\"200\" y2=\"112\"/>\n    </g>\n    <text x=\"98\" y=\"105\" text-anchor=\"end\">13 m</text>\n    <text x=\"222\" y=\"105\">13 m</text>\n    <text x=\"160\" y=\"213\" text-anchor=\"middle\">10 m</text>\n  </svg>"
+    }
+   },
+   "stem": [
+    {
+     "t": "p",
+     "segs": [
+      {
+       "t": "text",
+       "v": "The figure shows the triangular gable end of a barn. The two slanted edges are each 13 meters long, and the base is 10 meters long. What is the area, in square meters, of the gable?"
+      }
+     ]
+    }
+   ],
+   "answer": {
+    "accept": [
+     "60"
+    ]
+   }
+  },
+  {
+   "id": 20,
+   "type": "mcq",
+   "domain": "geometry_trig",
+   "band": "B6",
+   "skill": "scale factors on area (percent)",
+   "_variantId": "fam_122dae0d06#s35#26",
+   "_familyId": "fam_122dae0d06",
+   "_subdomain": "area_volume",
+   "_solutionHtml": "<div class=\"sol\"><strong>C) 100%.</strong> The area of B is (1.25ℓ)(0.80w) = 1.00ℓw — exactly the area of A, so 100%. (D adds the percent changes, 25 − 20 = +5; B subtracts “about 5%”; A uses only the width change.)</div>\n    <div class=\"meta\">Banding: B6 — the multiplicative effect of scale factors on area must be RECOGNIZED (percent changes combine by multiplication, not addition); rubric places scale-factor impact on area at B6.<br>Modal avoided: “each side of a square is tripled; the area is multiplied by what?”</div>",
+   "figure": {
+    "fn": "raw",
+    "spec": {
+     "svg": "<svg viewBox=\"0 0 350 190\" role=\"img\" aria-label=\"Rectangle A and modified rectangle B\">\n    <rect x=\"30\" y=\"70\" width=\"120\" height=\"75\" stroke=\"#222\" fill=\"none\" stroke-width=\"1.8\"/>\n    <text x=\"90\" y=\"62\" text-anchor=\"middle\" font-style=\"italic\">ℓ</text>\n    <text x=\"20\" y=\"112\" text-anchor=\"end\" font-style=\"italic\">w</text>\n    <text x=\"90\" y=\"165\" text-anchor=\"middle\" font-style=\"italic\">A</text>\n    <rect x=\"185\" y=\"85\" width=\"150\" height=\"60\" stroke=\"#222\" fill=\"none\" stroke-width=\"1.8\"/>\n    <text x=\"260\" y=\"77\" text-anchor=\"middle\" font-size=\"12\">25% longer</text>\n    <text x=\"260\" y=\"165\" text-anchor=\"middle\" font-style=\"italic\">B</text>\n  </svg>"
+    }
+   },
+   "stem": [
+    {
+     "t": "p",
+     "segs": [
+      {
+       "t": "text",
+       "v": "Rectangle B is formed from rectangle A by increasing the length of A by 25 percent and decreasing the width of A by 20 percent, as shown. The area of rectangle B is what percent of the area of rectangle A?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "key": "A",
+     "seg": [
+      {
+       "t": "text",
+       "v": "80%"
+      }
+     ]
+    },
+    {
+     "key": "B",
+     "seg": [
+      {
+       "t": "text",
+       "v": "95%"
+      }
+     ]
+    },
+    {
+     "key": "C",
+     "seg": [
+      {
+       "t": "text",
+       "v": "100%"
+      }
+     ]
+    },
+    {
+     "key": "D",
+     "seg": [
+      {
+       "t": "text",
+       "v": "105%"
+      }
+     ]
+    }
+   ],
+   "answer": {
+    "correct": "C"
+   }
+  },
+  {
+   "id": 21,
+   "type": "mcq",
+   "domain": "geometry_trig",
+   "band": "B6",
+   "skill": "similar solids / scale cubed (partial fill)",
+   "_variantId": "fam_d62ea70bd7#s35#30",
+   "_familyId": "fam_d62ea70bd7",
+   "_subdomain": "area_volume",
+   "_solutionHtml": "<div class=\"sol\"><strong>A) 1/8.</strong> The water forms a cone similar to the full cup with scale factor ½ (half the depth, so half the radius as well). Volume scales as the cube of the scale factor: (½)³ = 1/8. (D assumes volume scales with depth; C squares instead of cubes; B splits the difference.)</div>\n    <div class=\"meta\">Banding: B6 — the similar-cone-within-a-cone and the scale³ effect on volume must both be RECOGNIZED (nothing to plug in); rubric places scale-factor impact on volume at B6.<br>Modal avoided: cone volume plug-in from radius and height (banned realization).</div>",
+   "figure": {
+    "fn": "raw",
+    "spec": {
+     "svg": "<svg viewBox=\"0 0 340 245\" role=\"img\" aria-label=\"Inverted cone cup filled to half its depth\">\n    <ellipse cx=\"150\" cy=\"45\" rx=\"85\" ry=\"15\" stroke=\"#222\" fill=\"none\" stroke-width=\"1.8\"/>\n    <line x1=\"65\" y1=\"45\" x2=\"150\" y2=\"220\" stroke=\"#222\" stroke-width=\"1.8\"/>\n    <line x1=\"235\" y1=\"45\" x2=\"150\" y2=\"220\" stroke=\"#222\" stroke-width=\"1.8\"/>\n    <path d=\"M107.5 132.5 L150 220 L192.5 132.5\" fill=\"#cfe3f0\"/>\n    <ellipse cx=\"150\" cy=\"132.5\" rx=\"42.5\" ry=\"8\" stroke=\"#4a7fa5\" fill=\"#cfe3f0\" stroke-width=\"1.4\"/>\n    <g stroke=\"#333\" stroke-width=\"1.2\">\n      <line x1=\"258\" y1=\"45\" x2=\"258\" y2=\"220\"/>\n      <path d=\"M258 45 l-5 8 M258 45 l5 8 M258 220 l-5 -8 M258 220 l5 -8\" fill=\"none\"/>\n      <line x1=\"300\" y1=\"132.5\" x2=\"300\" y2=\"220\"/>\n      <path d=\"M300 132.5 l-5 8 M300 132.5 l5 8 M300 220 l-5 -8 M300 220 l5 -8\" fill=\"none\"/>\n      <line x1=\"235\" y1=\"45\" x2=\"308\" y2=\"45\" stroke-dasharray=\"3 3\"/>\n      <line x1=\"192.5\" y1=\"132.5\" x2=\"308\" y2=\"132.5\" stroke-dasharray=\"3 3\"/>\n      <line x1=\"150\" y1=\"220\" x2=\"308\" y2=\"220\" stroke-dasharray=\"3 3\"/>\n    </g>\n    <text x=\"246\" y=\"137\" text-anchor=\"end\" font-style=\"italic\">d</text>\n    <text x=\"311\" y=\"181\" font-style=\"italic\">½d</text>\n  </svg>"
+    }
+   },
+   "stem": [
+    {
+     "t": "p",
+     "segs": [
+      {
+       "t": "text",
+       "v": "A cup has the shape of a right circular cone with its vertex pointing down, as shown. Water fills the cup to exactly half of the cup's depth. The volume of the water is what fraction of the volume the cup can hold when completely full?"
+      }
+     ]
+    }
+   ],
+   "options": [
+    {
+     "key": "A",
+     "seg": [
+      {
+       "t": "text",
+       "v": "1/8"
+      }
+     ]
+    },
+    {
+     "key": "B",
+     "seg": [
+      {
+       "t": "text",
+       "v": "1/6"
+      }
+     ]
+    },
+    {
+     "key": "C",
+     "seg": [
+      {
+       "t": "text",
+       "v": "1/4"
+      }
+     ]
+    },
+    {
+     "key": "D",
+     "seg": [
+      {
+       "t": "text",
+       "v": "1/2"
+      }
+     ]
+    }
+   ],
+   "answer": {
+    "correct": "A"
+   }
+  },
+  {
+   "id": 22,
+   "program": "SAT",
+   "domain": "algebra",
+   "band": "B7",
+   "target_band": "B7",
+   "statementId": "ALG.B7.s1",
+   "type": "spr",
+   "tier": "cross-skill",
+   "difficulty": {
+    "scalePoint": 750,
+    "band": "B7",
+    "method": "curated"
+   },
+   "verify": {
+    "tier": "cross-skill",
+    "correctness": "construct-backward + sympy"
+   },
+   "chain": "C3",
+   "skill": "systems_of_linear_equations",
+   "scalePoint": 750,
+   "stem": [
+    {
+     "t": "p",
+     "segs": [
+      {
+       "t": "text",
+       "v": "At a book fair, hardcover books cost $8 each and paperback books cost $7 each. A total of "
+      },
+      {
+       "t": "math",
+       "v": "26"
+      },
+      {
+       "t": "text",
+       "v": " were sold for $197. How many more hardcover books than paperback books were sold?"
+      }
+     ]
+    }
+   ],
+   "answer": {
+    "accept": [
+     "4"
+    ],
+    "tol": 0
+   },
+   "solution": [
+    {
+     "t": "p",
+     "segs": [
+      {
+       "t": "text",
+       "v": "Let the counts be "
+      },
+      {
+       "t": "math",
+       "v": "x"
+      },
+      {
+       "t": "text",
+       "v": " and "
+      },
+      {
+       "t": "math",
+       "v": "y"
+      },
+      {
+       "t": "text",
+       "v": ". System:  "
+      },
+      {
+       "t": "math",
+       "v": "x + y = 26"
+      },
+      {
+       "t": "text",
+       "v": ",  "
+      },
+      {
+       "t": "math",
+       "v": "8x + 7y = 197"
+      },
+      {
+       "t": "text",
+       "v": "."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "segs": [
+      {
+       "t": "text",
+       "v": "Solve: "
+      },
+      {
+       "t": "math",
+       "v": "x = 15"
+      },
+      {
+       "t": "text",
+       "v": ", "
+      },
+      {
+       "t": "math",
+       "v": "y = 11"
+      },
+      {
+       "t": "text",
+       "v": ".  The difference is  "
+      },
+      {
+       "t": "math",
+       "v": "x - y = 4"
+      },
+      {
+       "t": "text",
+       "v": "."
+      }
+     ]
+    }
+   ],
+   "fingerprint": [
+    "cross_skill",
+    "C3",
+    "model-system-derived"
+   ],
+   "_p": {
+    "kind": "C3",
+    "p1": 8,
+    "p2": 7,
+    "T": 26,
+    "R": 197,
+    "x": 15,
+    "y": 11,
+    "ans": 4
+   },
+   "_variantId": "fam_edd67cfb39#5aa02895",
+   "_familyId": "fam_edd67cfb39",
+   "_subdomain": "systems_of_linear_equations"
+  }
+ ]
+}

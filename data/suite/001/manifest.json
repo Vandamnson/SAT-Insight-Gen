@@ -1,0 +1,18 @@
+{
+ "id": "001",
+ "threshold": 0.6,
+ "createdAt": "2026-07-02T16:57:19.455Z",
+ "coverage": "geometry_trig + algebra (current bank coverage — no PSDA/Advanced Math yet)",
+ "relaxations": {
+  "m1": [],
+  "m2e": [
+   "B1: filled with record-mode fam_624dd45d94#s35#2",
+   "B2: filled with record-mode fam_00592f4c84#s35#8",
+   "B2: filled with record-mode fam_e8a27c0d2f#s35#7",
+   "B4: filled with record-mode fam_5daf951d0a#a2#4"
+  ],
+  "m2h": [
+   "B6: filled with record-mode fam_6cf64dc127#a4#6"
+  ]
+ }
+}
