@@ -126,7 +126,7 @@ async function main() {
     const id = args[0] || "001";
     const sIdx = args.indexOf("--student");
     const seen = sIdx >= 0 ? loadSeen(args[sIdx + 1]) : new Set();
-    assembleSuite({ id, seen });
+    await assembleSuite({ id, seen });
     renderSuite(id);
     return;
   }

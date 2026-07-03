@@ -1,0 +1,3434 @@
+{
+ "number": "m1",
+ "title": "Suite 002 — M1",
+ "questions": [
+  {
+   "_key": "56d55f62785f9e397c3c55f135233c2750c6a69c",
+   "savedAt": "2026-06-23T04:32:20.543Z",
+   "source": "test-01",
+   "id": 1,
+   "program": "SAT",
+   "domain": "algebra",
+   "band": "B1",
+   "target_band": "B2",
+   "statementId": "ALG.B1.s2",
+   "skill": "alg1_twostep_solve",
+   "type": "spr",
+   "stem": [
+    {
+     "t": "text",
+     "v": "A bakery packs the same number of muffins into each of 8 boxes, using 96 muffins in all. The number of muffins in each box, "
+    },
+    {
+     "t": "math",
+     "v": "x"
+    },
+    {
+     "t": "text",
+     "v": ", satisfies the equation "
+    },
+    {
+     "t": "math",
+     "v": "8x = 96"
+    },
+    {
+     "t": "text",
+     "v": ". What is the value of "
+    },
+    {
+     "t": "math",
+     "v": "x"
+    },
+    {
+     "t": "text",
+     "v": "?"
+    }
+   ],
+   "solution": [
+    {
+     "t": "text",
+     "v": "To solve for "
+    },
+    {
+     "t": "math",
+     "v": "x"
+    },
+    {
+     "t": "text",
+     "v": ", divide both sides of the equation by 8:"
+    },
+    {
+     "t": "mathblock",
+     "v": "x = \\frac{96}{8} = 12"
+    },
+    {
+     "t": "text",
+     "v": "So each box contains 12 muffins."
+    }
+   ],
+   "answer": {
+    "accept": [
+     "12"
+    ],
+    "tol": 0
+   },
+   "figure": null,
+   "params": {
+    "a": 8,
+    "b": 0,
+    "c": 96
+   },
+   "tier": "band-targeted",
+   "cellId": "ef1812025236cef5",
+   "difficulty": {
+    "scalePoint": 350,
+    "band": "B1",
+    "se_scale": 45,
+    "band_ambiguous": true,
+    "method": "llm-judge",
+    "rp67_statement": "A student scoring ~350 has ~67% chance correct (Band 1).",
+    "signals": {
+     "judge": {
+      "scale": 350,
+      "se": 45,
+      "perBand": {
+       "B2": 0.82,
+       "B3": 0.92,
+       "B4": 0.96,
+       "B5": 0.98,
+       "B6": 0.99,
+       "B7": 0.99
+      },
+      "rp50Scale": 350,
+      "n": 1
+     }
+    }
+   },
+   "verify": {
+    "leash": "pass",
+    "deepVerdict": "PASS",
+    "independentAnswer": "12",
+    "figureVerify": {
+     "ok": true
+    }
+   },
+   "_variantId": "v1:56d55f62",
+   "_familyId": "legacy:alg1_twostep_solve:a,b,c",
+   "_subdomain": "alg1_twostep_solve"
+  },
+  {
+   "_key": "95a12f71f3d9ae40f2b55c221b5c4f37a2580a78",
+   "savedAt": "2026-06-23T04:32:20.588Z",
+   "source": "test-92",
+   "id": 2,
+   "program": "SAT",
+   "domain": "algebra",
+   "band": "B2",
+   "target_band": "B2",
+   "statementId": "ALG.B2.s1",
+   "skill": "linear_equations_two_variables",
+   "type": "spr",
+   "stem": [
+    {
+     "t": "text",
+     "v": "A line passes through the points "
+    },
+    {
+     "t": "math",
+     "v": "(-1, 9)"
+    },
+    {
+     "t": "text",
+     "v": " and "
+    },
+    {
+     "t": "math",
+     "v": "(0, 12)"
+    },
+    {
+     "t": "text",
+     "v": ". What is the slope of the line?"
+    }
+   ],
+   "answer": {
+    "accept": [
+     "3"
+    ],
+    "tol": 0
+   },
+   "solution": [
+    {
+     "t": "text",
+     "v": "1. slope formula: "
+    },
+    {
+     "t": "text",
+     "v": "Recall the slope formula: "
+    },
+    {
+     "t": "math",
+     "v": "m = \\dfrac{y_2 - y_1}{x_2 - x_1}"
+    },
+    {
+     "t": "text",
+     "v": ". Label "
+    },
+    {
+     "t": "math",
+     "v": "(x_1, y_1) = (-1, 9)"
+    },
+    {
+     "t": "text",
+     "v": " and "
+    },
+    {
+     "t": "math",
+     "v": "(x_2, y_2) = (0, 12)"
+    },
+    {
+     "t": "text",
+     "v": "."
+    },
+    {
+     "t": "br"
+    },
+    {
+     "t": "text",
+     "v": "2. substitute: "
+    },
+    {
+     "t": "text",
+     "v": "Substitute into the formula: "
+    },
+    {
+     "t": "math",
+     "v": "m = \\dfrac{12 - 9}{0 - (-1)} = \\dfrac{3}{1}"
+    },
+    {
+     "t": "text",
+     "v": "."
+    },
+    {
+     "t": "br"
+    },
+    {
+     "t": "text",
+     "v": "3. compute slope: "
+    },
+    {
+     "t": "text",
+     "v": "Simplify: "
+    },
+    {
+     "t": "math",
+     "v": "m = 3"
+    },
+    {
+     "t": "text",
+     "v": "."
+    },
+    {
+     "t": "br"
+    }
+   ],
+   "figure": null,
+   "difficulty": {
+    "scalePoint": 402,
+    "band": "B2",
+    "method": "llm-judge"
+   },
+   "verify": {
+    "tier": "A",
+    "correctness": "prove:pass"
+   },
+   "radicals": {
+    "task": "find_slope",
+    "has_fraction": false,
+    "from_context": false
+   },
+   "fingerprint": [
+    "slope_formula",
+    "substitute",
+    "compute_slope"
+   ],
+   "reskinDistance": 1,
+   "tier": "build-spec",
+   "_variantId": "v1:95a12f71",
+   "_familyId": "cell:linear_equations_two_variables:find_slope",
+   "_subdomain": "linear_equations_two_variables"
+  },
+  {
+   "_key": "66f9ffe29cad646462cd137483f4c28ec377eeac",
+   "savedAt": "2026-06-23T04:32:20.569Z",
+   "source": "test-73",
+   "id": 3,
+   "program": "SAT",
+   "domain": "geometry_trig",
+   "band": "B2",
+   "target_band": "B1",
+   "statementId": "GEO.B1.s1",
+   "skill": "geo_prism_volume",
+   "type": "spr",
+   "stem": [
+    {
+     "t": "text",
+     "v": "A right rectangular prism has a length of 8 inches, a width of 5 inches, and a height of 3 inches. Using the formula "
+    },
+    {
+     "t": "math",
+     "v": "V=\\ell wh"
+    },
+    {
+     "t": "text",
+     "v": ", what is the volume, in cubic inches, of the prism?"
+    }
+   ],
+   "solution": [
+    {
+     "t": "text",
+     "v": "Substitute the three edge lengths into the volume formula "
+    },
+    {
+     "t": "math",
+     "v": "V=\\ell wh"
+    },
+    {
+     "t": "text",
+     "v": ", where "
+    },
+    {
+     "t": "math",
+     "v": "\\ell=8"
+    },
+    {
+     "t": "text",
+     "v": ", "
+    },
+    {
+     "t": "math",
+     "v": "w=5"
+    },
+    {
+     "t": "text",
+     "v": ", and "
+    },
+    {
+     "t": "math",
+     "v": "h=3"
+    },
+    {
+     "t": "text",
+     "v": "."
+    },
+    {
+     "t": "mathblock",
+     "v": "V=8\\times 5\\times 3=120"
+    },
+    {
+     "t": "text",
+     "v": "The volume of the prism is 120 cubic inches."
+    }
+   ],
+   "answer": {
+    "accept": [
+     "120"
+    ],
+    "tol": 0
+   },
+   "figure": null,
+   "params": {
+    "shape": "prism",
+    "l": 8,
+    "w": 5,
+    "h": 3
+   },
+   "tier": "band-targeted",
+   "cellId": "f65c57c0672a9a40",
+   "difficulty": {
+    "scalePoint": 418,
+    "band": "B2",
+    "se_scale": 45,
+    "band_ambiguous": true,
+    "method": "llm-judge",
+    "rp67_statement": "A student scoring ~418 has ~67% chance correct (Band 2).",
+    "signals": {
+     "judge": {
+      "scale": 418,
+      "se": 45,
+      "perBand": {
+       "B2": 0.58,
+       "B3": 0.74,
+       "B4": 0.88,
+       "B5": 0.93,
+       "B6": 0.97,
+       "B7": 0.99
+      },
+      "rp50Scale": 350,
+      "n": 1
+     }
+    }
+   },
+   "verify": {
+    "leash": "pass",
+    "deepVerdict": "PASS",
+    "independentAnswer": "120",
+    "figureVerify": {
+     "ok": true
+    }
+   },
+   "_variantId": "v1:66f9ffe2",
+   "_familyId": "legacy:geo_prism_volume:h,l,shape,w",
+   "_subdomain": "geo_prism_volume"
+  },
+  {
+   "_key": "d8da60382a38601a63eb3c4e89fb4ee240bedefb",
+   "savedAt": "2026-06-23T04:32:20.543Z",
+   "source": "test-01",
+   "id": 4,
+   "program": "SAT",
+   "domain": "advanced_math",
+   "band": "B3",
+   "target_band": "B3",
+   "statementId": "ADV.B3.s2",
+   "skill": "adv_solve_for_variable",
+   "type": "mcq",
+   "stem": [
+    {
+     "t": "text",
+     "v": "A plumber's total charge "
+    },
+    {
+     "t": "math",
+     "v": "C"
+    },
+    {
+     "t": "text",
+     "v": ", in dollars, for a repair is given by "
+    },
+    {
+     "t": "math",
+     "v": "C = rh"
+    },
+    {
+     "t": "text",
+     "v": ", where "
+    },
+    {
+     "t": "math",
+     "v": "r"
+    },
+    {
+     "t": "text",
+     "v": " is the hourly rate, in dollars per hour, and "
+    },
+    {
+     "t": "math",
+     "v": "h"
+    },
+    {
+     "t": "text",
+     "v": " is the number of hours worked. For one repair, the total charge was "
+    },
+    {
+     "t": "money",
+     "v": "$120"
+    },
+    {
+     "t": "text",
+     "v": " and the hourly rate was "
+    },
+    {
+     "t": "money",
+     "v": "$40"
+    },
+    {
+     "t": "text",
+     "v": " per hour. How many hours were worked?"
+    }
+   ],
+   "solution": [
+    {
+     "t": "text",
+     "v": "Start with the formula "
+    },
+    {
+     "t": "math",
+     "v": "C = rh"
+    },
+    {
+     "t": "text",
+     "v": " and solve for the number of hours "
+    },
+    {
+     "t": "math",
+     "v": "h"
+    },
+    {
+     "t": "text",
+     "v": " by dividing both sides by "
+    },
+    {
+     "t": "math",
+     "v": "r"
+    },
+    {
+     "t": "text",
+     "v": ", which gives "
+    },
+    {
+     "t": "math",
+     "v": "h = \\dfrac{C}{r}"
+    },
+    {
+     "t": "text",
+     "v": ". Substituting the given values "
+    },
+    {
+     "t": "math",
+     "v": "C = 120"
+    },
+    {
+     "t": "text",
+     "v": " and "
+    },
+    {
+     "t": "math",
+     "v": "r = 40"
+    },
+    {
+     "t": "text",
+     "v": " gives "
+    },
+    {
+     "t": "math",
+     "v": "h = \\dfrac{120}{40} = 3"
+    },
+    {
+     "t": "text",
+     "v": ". So 3 hours were worked. (Dividing in the wrong order gives the reciprocal "
+    },
+    {
+     "t": "math",
+     "v": "\\tfrac{1}{3}"
+    },
+    {
+     "t": "text",
+     "v": ", a common error.)"
+    }
+   ],
+   "answer": {
+    "correct": "A"
+   },
+   "options": [
+    {
+     "key": "A",
+     "seg": [
+      {
+       "t": "math",
+       "v": "3"
+      }
+     ]
+    },
+    {
+     "key": "B",
+     "seg": [
+      {
+       "t": "math",
+       "v": "\\dfrac{1}{3}"
+      }
+     ]
+    },
+    {
+     "key": "C",
+     "seg": [
+      {
+       "t": "math",
+       "v": "80"
+      }
+     ]
+    },
+    {
+     "key": "D",
+     "seg": [
+      {
+       "t": "math",
+       "v": "160"
+      }
+     ]
+    }
+   ],
+   "figure": null,
+   "params": {
+    "equation": "C = r*h",
+    "solve_for": "h",
+    "givens": {
+     "C": 120,
+     "r": 40
+    },
+    "report": "value"
+   },
+   "tier": "band-targeted",
+   "cellId": "23586c5f5854dc98",
+   "difficulty": {
+    "scalePoint": 428,
+    "band": "B3",
+    "se_scale": 45,
+    "band_ambiguous": true,
+    "method": "llm-judge",
+    "rp67_statement": "A student scoring ~428 has ~67% chance correct (Band 3).",
+    "signals": {
+     "judge": {
+      "scale": 428,
+      "se": 45,
+      "perBand": {
+       "B2": 0.58,
+       "B3": 0.7,
+       "B4": 0.82,
+       "B5": 0.9,
+       "B6": 0.94,
+       "B7": 0.97
+      },
+      "rp50Scale": 350,
+      "n": 1
+     }
+    }
+   },
+   "verify": {
+    "leash": "deferred-to-deep-verify",
+    "deepVerdict": "PASS",
+    "independentAnswer": "A",
+    "figureVerify": {
+     "ok": true
+    }
+   },
+   "_variantId": "v1:d8da6038",
+   "_familyId": "legacy:adv_solve_for_variable:equation,givens,report,solve_for",
+   "_subdomain": "adv_solve_for_variable"
+  },
+  {
+   "_key": "e2f2752dff24f05625d67089a5517e1128948eb2",
+   "savedAt": "2026-06-23T04:32:20.564Z",
+   "source": "test-70",
+   "id": 5,
+   "program": "SAT",
+   "domain": "algebra",
+   "band": "B3",
+   "target_band": "B3",
+   "statementId": "ALG.B3.s1",
+   "skill": "lin_combine_solve",
+   "type": "spr",
+   "stem": [
+    {
+     "t": "text",
+     "v": "Each week, a tutor works with "
+    },
+    {
+     "t": "math",
+     "v": "x"
+    },
+    {
+     "t": "text",
+     "v": " students. For every student, the tutor spends 8 minutes preparing materials and 4 minutes grading work. Including 10 minutes of fixed setup time each week, the tutor spends a total of 94 minutes. This situation is represented by the equation "
+    },
+    {
+     "t": "mathblock",
+     "v": "8x + 10 + 4x = 94."
+    },
+    {
+     "t": "text",
+     "v": " What is the value of "
+    },
+    {
+     "t": "math",
+     "v": "x"
+    },
+    {
+     "t": "text",
+     "v": "?"
+    }
+   ],
+   "solution": [
+    {
+     "t": "text",
+     "v": "First combine the like terms on the left side. Because "
+    },
+    {
+     "t": "math",
+     "v": "8x + 4x = 12x"
+    },
+    {
+     "t": "text",
+     "v": ", the equation becomes "
+    },
+    {
+     "t": "mathblock",
+     "v": "12x + 10 = 94."
+    },
+    {
+     "t": "text",
+     "v": "Subtract 10 from both sides: "
+    },
+    {
+     "t": "mathblock",
+     "v": "12x = 84."
+    },
+    {
+     "t": "text",
+     "v": "Then divide both sides by 12: "
+    },
+    {
+     "t": "mathblock",
+     "v": "x = 7."
+    },
+    {
+     "t": "text",
+     "v": "So the tutor works with 7 students each week."
+    }
+   ],
+   "answer": {
+    "accept": [
+     "7"
+    ],
+    "tol": 0
+   },
+   "figure": null,
+   "params": {
+    "a": 12,
+    "b": 10,
+    "c": 94
+   },
+   "tier": "band-targeted",
+   "cellId": "e44cedfc6c5741e0",
+   "difficulty": {
+    "scalePoint": 453,
+    "band": "B3",
+    "se_scale": 45,
+    "band_ambiguous": true,
+    "method": "llm-judge",
+    "rp67_statement": "A student scoring ~453 has ~67% chance correct (Band 3).",
+    "signals": {
+     "judge": {
+      "scale": 453,
+      "se": 45,
+      "perBand": {
+       "B2": 0.46,
+       "B3": 0.64,
+       "B4": 0.79,
+       "B5": 0.88,
+       "B6": 0.93,
+       "B7": 0.97
+      },
+      "rp50Scale": 401,
+      "n": 1
+     }
+    }
+   },
+   "verify": {
+    "leash": "pass",
+    "deepVerdict": "PASS",
+    "independentAnswer": "7",
+    "figureVerify": {
+     "ok": true
+    }
+   },
+   "_variantId": "v1:e2f2752d",
+   "_familyId": "legacy:lin_combine_solve:a,b,c",
+   "_subdomain": "lin_combine_solve"
+  },
+  {
+   "_key": "500f33cabc6d2c19ad08bd0cd0909025aa795fef",
+   "savedAt": "2026-06-23T04:32:20.576Z",
+   "source": "test-80",
+   "id": 6,
+   "program": "SAT",
+   "domain": "algebra",
+   "band": "B3",
+   "target_band": "B2",
+   "statementId": "ALG.B2.s1",
+   "skill": "lin_solve_value",
+   "type": "spr",
+   "stem": [
+    {
+     "t": "text",
+     "v": "The equation below relates two quantities."
+    },
+    {
+     "t": "mathblock",
+     "v": "4x + 5 = 29"
+    },
+    {
+     "t": "text",
+     "v": "What is the value of "
+    },
+    {
+     "t": "math",
+     "v": "x"
+    },
+    {
+     "t": "text",
+     "v": "?"
+    }
+   ],
+   "solution": [
+    {
+     "t": "text",
+     "v": "Start with the given equation."
+    },
+    {
+     "t": "mathblock",
+     "v": "4x + 5 = 29"
+    },
+    {
+     "t": "text",
+     "v": "Subtract 5 from both sides to isolate the term with "
+    },
+    {
+     "t": "math",
+     "v": "x"
+    },
+    {
+     "t": "text",
+     "v": "."
+    },
+    {
+     "t": "mathblock",
+     "v": "4x = 24"
+    },
+    {
+     "t": "text",
+     "v": "Divide both sides by 4."
+    },
+    {
+     "t": "mathblock",
+     "v": "x = 6"
+    }
+   ],
+   "answer": {
+    "accept": [
+     "6"
+    ],
+    "tol": 0
+   },
+   "figure": null,
+   "params": {
+    "a": 4,
+    "b": 5,
+    "c": 29
+   },
+   "tier": "band-targeted",
+   "cellId": "26a3014bf158f592",
+   "difficulty": {
+    "scalePoint": 422,
+    "band": "B3",
+    "method": "llm-judge"
+   },
+   "verify": {
+    "leash": "pass",
+    "deepVerdict": "PASS",
+    "independentAnswer": "6",
+    "figureVerify": {
+     "ok": true
+    }
+   },
+   "_variantId": "v1:500f33ca",
+   "_familyId": "legacy:lin_solve_value:a,b,c",
+   "_subdomain": "lin_solve_value"
+  },
+  {
+   "_key": "ef449a65c322bdf2178913cf64607c92478b9ced",
+   "savedAt": "2026-06-23T04:32:20.554Z",
+   "source": "test-02",
+   "id": 7,
+   "program": "SAT",
+   "domain": "psda",
+   "band": "B4",
+   "target_band": "B4",
+   "statementId": "PSDA.B4.s1",
+   "skill": "ratio_rate",
+   "type": "spr",
+   "stem": [
+    {
+     "t": "text",
+     "v": "A bottling machine fills containers at a constant rate. The machine fills "
+    },
+    {
+     "t": "math",
+     "v": "18"
+    },
+    {
+     "t": "text",
+     "v": " containers every "
+    },
+    {
+     "t": "math",
+     "v": "4"
+    },
+    {
+     "t": "text",
+     "v": " minutes. At this rate, how many containers does the machine fill in "
+    },
+    {
+     "t": "math",
+     "v": "2"
+    },
+    {
+     "t": "text",
+     "v": " hours?"
+    }
+   ],
+   "solution": [
+    {
+     "t": "text",
+     "v": "First convert the time to minutes: "
+    },
+    {
+     "t": "math",
+     "v": "2 \\times 60 = 120"
+    },
+    {
+     "t": "text",
+     "v": " minutes. The machine fills containers at a rate of "
+    },
+    {
+     "t": "math",
+     "v": "\\frac{18}{4} = 4.5"
+    },
+    {
+     "t": "text",
+     "v": " containers per minute. Multiply the rate by the total time: "
+    },
+    {
+     "t": "math",
+     "v": "4.5 \\times 120 = 540"
+    },
+    {
+     "t": "text",
+     "v": " containers. (A common error is to use "
+    },
+    {
+     "t": "math",
+     "v": "2"
+    },
+    {
+     "t": "text",
+     "v": " instead of converting to "
+    },
+    {
+     "t": "math",
+     "v": "120"
+    },
+    {
+     "t": "text",
+     "v": " minutes.)"
+    }
+   ],
+   "answer": {
+    "accept": [
+     "540"
+    ],
+    "tol": 0
+   },
+   "figure": null,
+   "params": {
+    "a": 18,
+    "b": 4,
+    "scale": 120
+   },
+   "tier": "band-targeted",
+   "cellId": "4dc313a124724997",
+   "difficulty": {
+    "scalePoint": 520,
+    "band": "B4",
+    "se_scale": 45,
+    "band_ambiguous": true,
+    "method": "llm-judge",
+    "rp67_statement": "A student scoring ~520 has ~67% chance correct (Band 4).",
+    "signals": {
+     "judge": {
+      "scale": 520,
+      "se": 45,
+      "perBand": {
+       "B2": 0.34,
+       "B3": 0.47,
+       "B4": 0.64,
+       "B5": 0.78,
+       "B6": 0.88,
+       "B7": 0.94
+      },
+      "rp50Scale": 451,
+      "n": 1
+     }
+    }
+   },
+   "verify": {
+    "leash": "deferred-to-deep-verify",
+    "deepVerdict": "PASS",
+    "independentAnswer": "540",
+    "figureVerify": {
+     "ok": true
+    }
+   },
+   "_variantId": "v1:ef449a65",
+   "_familyId": "legacy:ratio_rate:a,b,scale",
+   "_subdomain": "ratio_rate"
+  },
+  {
+   "_key": "ef783f0ce85505acc63c90946bfa1e4e53521b13",
+   "savedAt": "2026-06-23T04:32:20.558Z",
+   "source": "test-101",
+   "id": 8,
+   "program": "SAT",
+   "domain": "algebra",
+   "band": "B4",
+   "target_band": "B5",
+   "statementId": "ALG.B5.s1",
+   "skill": "linear_equations_two_variables",
+   "type": "mcq",
+   "stem": [
+    {
+     "t": "text",
+     "v": "The shaded region in the "
+    },
+    {
+     "t": "math",
+     "v": "xy"
+    },
+    {
+     "t": "text",
+     "v": "-plane is the graph of which inequality?"
+    }
+   ],
+   "options": [
+    {
+     "key": "A",
+     "seg": [
+      {
+       "t": "math",
+       "v": "y < -2x + 4"
+      }
+     ]
+    },
+    {
+     "key": "B",
+     "seg": [
+      {
+       "t": "math",
+       "v": "y < 2x - 4"
+      }
+     ]
+    },
+    {
+     "key": "C",
+     "seg": [
+      {
+       "t": "math",
+       "v": "y > 2x + 4"
+      }
+     ]
+    },
+    {
+     "key": "D",
+     "seg": [
+      {
+       "t": "math",
+       "v": "y < 2x + 4"
+      }
+     ]
+    }
+   ],
+   "answer": {
+    "correct": "D"
+   },
+   "solution": [
+    {
+     "t": "text",
+     "v": "1. read region: "
+    },
+    {
+     "t": "text",
+     "v": "Boundary "
+    },
+    {
+     "t": "math",
+     "v": "y = 2x + 4"
+    },
+    {
+     "t": "text",
+     "v": " (dashed → strict); the shaded side is below it."
+    },
+    {
+     "t": "br"
+    }
+   ],
+   "figure": {
+    "fn": "coordPlane",
+    "spec": {
+     "xRange": [
+      -6,
+      6
+     ],
+     "yRange": [
+      -6,
+      6
+     ],
+     "xStep": 1,
+     "yStep": 1,
+     "origin": true,
+     "axisLabels": [
+      "x",
+      "y"
+     ],
+     "curves": [
+      {
+       "type": "line",
+       "m": 2,
+       "b": 4,
+       "dash": true
+      }
+     ],
+     "shaded": {
+      "m": 2,
+      "b": 4,
+      "ineq": "<"
+     }
+    }
+   },
+   "difficulty": {
+    "scalePoint": 529,
+    "band": "B4",
+    "method": "llm-judge"
+   },
+   "verify": {
+    "tier": "C",
+    "correctness": "prove:pass"
+   },
+   "radicals": {
+    "task": "inequality_region"
+   },
+   "fingerprint": [
+    "inequality_region",
+    "pos_int",
+    "below",
+    "strict"
+   ],
+   "reskinDistance": 1,
+   "tier": "build-spec",
+   "_variantId": "v1:ef783f0c",
+   "_familyId": "cell:linear_equations_two_variables:inequality_region",
+   "_subdomain": "linear_equations_two_variables"
+  },
+  {
+   "_key": "98678663dac341e40c63951e7ce89598e895ae75",
+   "savedAt": "2026-06-23T20:09:49.964Z",
+   "source": "test-105",
+   "id": 9,
+   "program": "SAT",
+   "domain": "advanced_math",
+   "band": "B4",
+   "target_band": "B3",
+   "statementId": "ADV.B3.s1",
+   "skill": "radical_rational_equations",
+   "type": "mcq",
+   "stem": [
+    {
+     "t": "text",
+     "v": "What value of "
+    },
+    {
+     "t": "math",
+     "v": "k"
+    },
+    {
+     "t": "text",
+     "v": " satisfies the equation "
+    },
+    {
+     "t": "math",
+     "v": "\\sqrt{2k + 10} + 6 = 14"
+    },
+    {
+     "t": "text",
+     "v": "?"
+    }
+   ],
+   "options": [
+    {
+     "key": "A",
+     "seg": [
+      {
+       "t": "math",
+       "v": "k = 3"
+      }
+     ]
+    },
+    {
+     "key": "B",
+     "seg": [
+      {
+       "t": "math",
+       "v": "k = 27"
+      }
+     ]
+    },
+    {
+     "key": "C",
+     "seg": [
+      {
+       "t": "math",
+       "v": "k = 37"
+      }
+     ]
+    },
+    {
+     "key": "D",
+     "seg": [
+      {
+       "t": "math",
+       "v": "k = 93"
+      }
+     ]
+    }
+   ],
+   "answer": {
+    "correct": "B"
+   },
+   "solution": [
+    {
+     "t": "text",
+     "v": "1. isolate radical: "
+    },
+    {
+     "t": "text",
+     "v": "Subtract 6 from both sides: "
+    },
+    {
+     "t": "math",
+     "v": "\\sqrt{2k + 10} = 8"
+    },
+    {
+     "t": "text",
+     "v": "."
+    },
+    {
+     "t": "br"
+    },
+    {
+     "t": "text",
+     "v": "2. square both sides: "
+    },
+    {
+     "t": "text",
+     "v": "Square both sides: "
+    },
+    {
+     "t": "math",
+     "v": "2k + 10 = 64"
+    },
+    {
+     "t": "text",
+     "v": "."
+    },
+    {
+     "t": "br"
+    },
+    {
+     "t": "text",
+     "v": "3. isolate variable: "
+    },
+    {
+     "t": "text",
+     "v": "Subtract 10: "
+    },
+    {
+     "t": "math",
+     "v": "2k = 54"
+    },
+    {
+     "t": "text",
+     "v": ", then divide by 2: "
+    },
+    {
+     "t": "math",
+     "v": "k = 27"
+    },
+    {
+     "t": "text",
+     "v": ". Check: "
+    },
+    {
+     "t": "math",
+     "v": "\\sqrt{2(27)+10}+6=\\sqrt{64}+6=8+6=14"
+    },
+    {
+     "t": "text",
+     "v": "."
+    },
+    {
+     "t": "br"
+    }
+   ],
+   "figure": null,
+   "difficulty": {
+    "scalePoint": 508,
+    "band": "B4",
+    "method": "llm-judge"
+   },
+   "verify": {
+    "tier": "A",
+    "correctness": "prove:pass"
+   },
+   "radicals": {
+    "task": "solve_radical",
+    "extraneous_check": false,
+    "from_context": false
+   },
+   "fingerprint": [
+    "isolate_radical",
+    "square_both_sides",
+    "isolate_variable"
+   ],
+   "reskinDistance": 0.333,
+   "tier": "build-spec",
+   "_variantId": "v1:98678663",
+   "_familyId": "cell:radical_rational_equations:solve_radical",
+   "_subdomain": "radical_rational_equations"
+  },
+  {
+   "_key": "bc1a9c20f0bf9f1582775cf1936982d90bdd9eb1",
+   "savedAt": "2026-06-23T04:32:20.574Z",
+   "source": "test-75",
+   "id": 10,
+   "program": "SAT",
+   "domain": "advanced_math",
+   "band": "B4",
+   "target_band": "B4",
+   "statementId": "ADV.B4.s2",
+   "skill": "open_nonlinear_equations_systems_3",
+   "type": "mcq",
+   "stem": [
+    {
+     "t": "text",
+     "v": "The product of two consecutive positive odd integers is 143. What is the larger of the two integers?"
+    }
+   ],
+   "solution": [
+    {
+     "t": "text",
+     "v": "Let the smaller odd integer be "
+    },
+    {
+     "t": "math",
+     "v": "n"
+    },
+    {
+     "t": "text",
+     "v": ", so the next consecutive odd integer is "
+    },
+    {
+     "t": "math",
+     "v": "n+2"
+    },
+    {
+     "t": "text",
+     "v": ". Their product is 143, which gives the equation"
+    },
+    {
+     "t": "mathblock",
+     "v": "n(n+2)=143 \\;\\Rightarrow\\; n^2+2n-143=0."
+    },
+    {
+     "t": "text",
+     "v": "Factor the quadratic:"
+    },
+    {
+     "t": "mathblock",
+     "v": "(n-11)(n+13)=0,"
+    },
+    {
+     "t": "text",
+     "v": "so "
+    },
+    {
+     "t": "math",
+     "v": "n=11"
+    },
+    {
+     "t": "text",
+     "v": " or "
+    },
+    {
+     "t": "math",
+     "v": "n=-13"
+    },
+    {
+     "t": "text",
+     "v": ". Because the integers are positive, "
+    },
+    {
+     "t": "math",
+     "v": "n=11"
+    },
+    {
+     "t": "text",
+     "v": ", and the two integers are 11 and 13. The larger of the two is "
+    },
+    {
+     "t": "math",
+     "v": "13"
+    },
+    {
+     "t": "text",
+     "v": "."
+    }
+   ],
+   "answer": {
+    "correct": "C"
+   },
+   "options": [
+    {
+     "key": "A",
+     "seg": [
+      {
+       "t": "math",
+       "v": "11"
+      }
+     ]
+    },
+    {
+     "key": "B",
+     "seg": [
+      {
+       "t": "math",
+       "v": "12"
+      }
+     ]
+    },
+    {
+     "key": "C",
+     "seg": [
+      {
+       "t": "math",
+       "v": "13"
+      }
+     ]
+    },
+    {
+     "key": "D",
+     "seg": [
+      {
+       "t": "math",
+       "v": "15"
+      }
+     ]
+    }
+   ],
+   "figure": null,
+   "params": {},
+   "tier": "band-targeted",
+   "cellId": "11306a01854e605b",
+   "difficulty": {
+    "scalePoint": 544,
+    "band": "B4",
+    "se_scale": 25,
+    "band_ambiguous": true,
+    "method": "llm-judge",
+    "rp67_statement": "A student scoring ~544 has ~67% chance correct (Band 4).",
+    "signals": {
+     "judge": {
+      "scale": 544,
+      "se": 25,
+      "perBand": {
+       "B2": 0.29,
+       "B3": 0.42,
+       "B4": 0.59,
+       "B5": 0.73,
+       "B6": 0.84,
+       "B7": 0.92
+      },
+      "rp50Scale": 471,
+      "n": 3
+     }
+    }
+   },
+   "verify": {
+    "leash": "deferred-to-deep-verify",
+    "deepVerdict": "PASS",
+    "independentAnswer": "C",
+    "figureVerify": {
+     "ok": true
+    }
+   },
+   "_variantId": "v1:bc1a9c20",
+   "_familyId": "legacy:open_nonlinear_equations_systems_3:",
+   "_subdomain": "open_nonlinear_equations_systems_3"
+  },
+  {
+   "_key": "f1bcccc913a764e24a0866ec26a99d1e5adeab2a",
+   "savedAt": "2026-06-23T22:13:17.713Z",
+   "source": "mod2/test-15",
+   "program": "SAT",
+   "band": "B5",
+   "target_band": "B5",
+   "id": 11,
+   "domain": "psda",
+   "skill": "unit_conversion",
+   "type": "mcq",
+   "stem": [
+    {
+     "t": "text",
+     "v": "On a test track, a vehicle's speed increases by "
+    },
+    {
+     "t": "math",
+     "v": "45"
+    },
+    {
+     "t": "text",
+     "v": " miles per hour during each second of a timing run. To compare with a physics model, this rate must be expressed in feet per second squared. (Use "
+    },
+    {
+     "t": "math",
+     "v": "1"
+    },
+    {
+     "t": "text",
+     "v": " mile "
+    },
+    {
+     "t": "math",
+     "v": "=5280"
+    },
+    {
+     "t": "text",
+     "v": " feet and "
+    },
+    {
+     "t": "math",
+     "v": "1"
+    },
+    {
+     "t": "text",
+     "v": " hour "
+    },
+    {
+     "t": "math",
+     "v": "=3600"
+    },
+    {
+     "t": "text",
+     "v": " seconds.) What is the rate, in feet per second squared?"
+    }
+   ],
+   "solution": [
+    {
+     "t": "text",
+     "v": "The rate is "
+    },
+    {
+     "t": "math",
+     "v": "45\\,\\frac{\\text{mi/hr}}{\\text{s}}"
+    },
+    {
+     "t": "text",
+     "v": ". Convert the speed unit only (miles per hour to feet per second): "
+    },
+    {
+     "t": "math",
+     "v": "45\\times\\frac{5280\\text{ ft}}{3600\\text{ s}}=45\\times\\frac{22}{15}=66"
+    },
+    {
+     "t": "text",
+     "v": " feet per second squared."
+    }
+   ],
+   "options": [
+    {
+     "key": "A",
+     "seg": [
+      {
+       "t": "math",
+       "v": "30"
+      }
+     ]
+    },
+    {
+     "key": "B",
+     "seg": [
+      {
+       "t": "math",
+       "v": "44"
+      }
+     ]
+    },
+    {
+     "key": "C",
+     "seg": [
+      {
+       "t": "math",
+       "v": "66"
+      }
+     ]
+    },
+    {
+     "key": "D",
+     "seg": [
+      {
+       "t": "math",
+       "v": "99"
+      }
+     ]
+    }
+   ],
+   "answer": {
+    "correct": "C"
+   },
+   "difficulty": {
+    "scalePoint": 592,
+    "band": "B5",
+    "method": "llm-judge"
+   },
+   "_variantId": "v1:f1bcccc9",
+   "_familyId": "single:v1:f1bcccc9",
+   "_subdomain": "unit_conversion"
+  },
+  {
+   "_key": "564ded0daca89f23249c949dfff0364623232de7",
+   "savedAt": "2026-06-23T04:32:20.592Z",
+   "source": "test-93",
+   "id": 12,
+   "program": "SAT",
+   "domain": "algebra",
+   "band": "B5",
+   "target_band": "B7",
+   "statementId": "ALG.B7.s2",
+   "skill": "linear_equations_two_variables",
+   "type": "mcq",
+   "stem": [
+    {
+     "t": "text",
+     "v": "On recycling day, a line modeling the tons of material collected at a station passes through the points "
+    },
+    {
+     "t": "math",
+     "v": "(2, -3)"
+    },
+    {
+     "t": "text",
+     "v": " and "
+    },
+    {
+     "t": "math",
+     "v": "(5, -21)"
+    },
+    {
+     "t": "text",
+     "v": ". Which equation represents the line?"
+    }
+   ],
+   "options": [
+    {
+     "key": "A",
+     "seg": [
+      {
+       "t": "math",
+       "v": "y = 6x + 9"
+      }
+     ]
+    },
+    {
+     "key": "B",
+     "seg": [
+      {
+       "t": "math",
+       "v": "y = -6x + 9"
+      }
+     ]
+    },
+    {
+     "key": "C",
+     "seg": [
+      {
+       "t": "math",
+       "v": "y = -6x - 9"
+      }
+     ]
+    },
+    {
+     "key": "D",
+     "seg": [
+      {
+       "t": "math",
+       "v": "y = -6x - 3"
+      }
+     ]
+    }
+   ],
+   "answer": {
+    "correct": "B"
+   },
+   "solution": [
+    {
+     "t": "text",
+     "v": "1. interpret meaning: "
+    },
+    {
+     "t": "text",
+     "v": "Read the two ordered pairs from the context: (2, -3) and (5, -21)."
+    },
+    {
+     "t": "br"
+    },
+    {
+     "t": "text",
+     "v": "2. compute slope: "
+    },
+    {
+     "t": "text",
+     "v": "m = (-21 - (-3)) / (5 - 2) = -18/3 = -6."
+    },
+    {
+     "t": "br"
+    },
+    {
+     "t": "text",
+     "v": "3. find intercept: "
+    },
+    {
+     "t": "text",
+     "v": "Substitute (2, -3) into y = mx + b: -3 = -6(2) + b, so b = 9."
+    },
+    {
+     "t": "br"
+    },
+    {
+     "t": "text",
+     "v": "4. match representation: "
+    },
+    {
+     "t": "text",
+     "v": "Equation is y = -6x + 9; select choice B."
+    },
+    {
+     "t": "br"
+    }
+   ],
+   "figure": null,
+   "difficulty": {
+    "scalePoint": 556,
+    "band": "B5",
+    "method": "llm-judge"
+   },
+   "verify": {
+    "tier": "A",
+    "correctness": "prove:pass"
+   },
+   "radicals": {
+    "task": "create_from_pairs",
+    "has_fraction": true,
+    "from_context": true
+   },
+   "fingerprint": [
+    "interpret_meaning",
+    "compute_slope",
+    "find_intercept",
+    "match_representation"
+   ],
+   "reskinDistance": 0.5,
+   "tier": "build-spec",
+   "_variantId": "v1:564ded0d",
+   "_familyId": "cell:linear_equations_two_variables:create_from_pairs",
+   "_subdomain": "linear_equations_two_variables"
+  },
+  {
+   "_key": "63bae5a157b7c1315cec24ebe484b29392adec9b",
+   "savedAt": "2026-06-24T18:58:50.296Z",
+   "source": "test-108",
+   "id": 13,
+   "program": "SAT",
+   "domain": "advanced_math",
+   "band": "B5",
+   "target_band": "B5",
+   "statementId": "ADV.B5.s2",
+   "skill": "polynomial_expressions",
+   "type": "mcq",
+   "stem": [
+    {
+     "t": "text",
+     "v": "Which of the following expressions is equivalent to "
+    },
+    {
+     "t": "math",
+     "v": "-6y^2\\left(7y^4+9y^3\\right)"
+    },
+    {
+     "t": "text",
+     "v": "?"
+    }
+   ],
+   "options": [
+    {
+     "key": "A",
+     "seg": [
+      {
+       "t": "math",
+       "v": "-42y^8 - 54y^6"
+      }
+     ]
+    },
+    {
+     "key": "B",
+     "seg": [
+      {
+       "t": "math",
+       "v": "-42y^6 - 54y^5"
+      }
+     ]
+    },
+    {
+     "key": "C",
+     "seg": [
+      {
+       "t": "math",
+       "v": "-42y^6 + 54y^5"
+      }
+     ]
+    },
+    {
+     "key": "D",
+     "seg": [
+      {
+       "t": "math",
+       "v": "-42y^6 + 9y^3"
+      }
+     ]
+    }
+   ],
+   "answer": {
+    "correct": "B"
+   },
+   "solution": [
+    {
+     "t": "text",
+     "v": "1. distribute: "
+    },
+    {
+     "t": "text",
+     "v": "Split the product across the binomial: "
+    },
+    {
+     "t": "math",
+     "v": "-6y^2\\cdot 7y^4 + (-6y^2)\\cdot 9y^3"
+    },
+    {
+     "t": "text",
+     "v": "."
+    },
+    {
+     "t": "br"
+    },
+    {
+     "t": "text",
+     "v": "2. apply exponent rule: "
+    },
+    {
+     "t": "text",
+     "v": "First product: multiply coefficients "
+    },
+    {
+     "t": "math",
+     "v": "-6\\cdot 7=-42"
+    },
+    {
+     "t": "text",
+     "v": " and add exponents "
+    },
+    {
+     "t": "math",
+     "v": "y^{2+4}=y^6"
+    },
+    {
+     "t": "text",
+     "v": ", giving "
+    },
+    {
+     "t": "math",
+     "v": "-42y^6"
+    },
+    {
+     "t": "text",
+     "v": "."
+    },
+    {
+     "t": "br"
+    },
+    {
+     "t": "text",
+     "v": "3. apply exponent rule: "
+    },
+    {
+     "t": "text",
+     "v": "Second product: multiply coefficients "
+    },
+    {
+     "t": "math",
+     "v": "-6\\cdot 9=-54"
+    },
+    {
+     "t": "text",
+     "v": " and add exponents "
+    },
+    {
+     "t": "math",
+     "v": "y^{2+3}=y^5"
+    },
+    {
+     "t": "text",
+     "v": ", giving "
+    },
+    {
+     "t": "math",
+     "v": "-54y^5"
+    },
+    {
+     "t": "text",
+     "v": "."
+    },
+    {
+     "t": "br"
+    },
+    {
+     "t": "text",
+     "v": "4. rewrite equivalent: "
+    },
+    {
+     "t": "text",
+     "v": "Write the two terms as one polynomial in descending degree: "
+    },
+    {
+     "t": "math",
+     "v": "-42y^6 - 54y^5"
+    },
+    {
+     "t": "text",
+     "v": "."
+    },
+    {
+     "t": "br"
+    }
+   ],
+   "figure": null,
+   "difficulty": {
+    "scalePoint": 595,
+    "band": "B5",
+    "method": "apriori_v1",
+    "feature_vector": {
+     "task": "product_mono_bin",
+     "more_terms": true,
+     "has_fraction": false
+    }
+   },
+   "verify": {
+    "tier": "A",
+    "correctness": "prove:pass"
+   },
+   "radicals": {
+    "task": "product_mono_bin",
+    "more_terms": true,
+    "has_fraction": false
+   },
+   "fingerprint": [
+    "distribute",
+    "apply_exponent_rule",
+    "apply_exponent_rule",
+    "rewrite_equivalent"
+   ],
+   "reskinDistance": 1,
+   "tier": "build-spec",
+   "_variantId": "v1:63bae5a1",
+   "_familyId": "cell:polynomial_expressions:product_mono_bin",
+   "_subdomain": "polynomial_expressions"
+  },
+  {
+   "_key": "874b0acfa66427532e2f738a2a29e44a39691041",
+   "savedAt": "2026-06-23T04:32:20.566Z",
+   "source": "test-71",
+   "id": 14,
+   "program": "SAT",
+   "domain": "advanced_math",
+   "band": "B5",
+   "target_band": "B4",
+   "statementId": "ADV.B4.s1",
+   "skill": "adv_create_quadratic",
+   "type": "mcq",
+   "stem": [
+    {
+     "t": "text",
+     "v": "At one practice, each swimmer in a single lane of the Eastside swim team swims 4 more lengths of the pool than the number of swimmers in that lane. Altogether, the swimmers in that lane complete a total of 320 lengths. How many swimmers are in the lane?"
+    }
+   ],
+   "solution": [
+    {
+     "t": "text",
+     "v": "Let "
+    },
+    {
+     "t": "math",
+     "v": "s"
+    },
+    {
+     "t": "text",
+     "v": " be the number of swimmers in the lane. Each swimmer swims "
+    },
+    {
+     "t": "math",
+     "v": "s+4"
+    },
+    {
+     "t": "text",
+     "v": " lengths, so the total number of lengths is the product "
+    },
+    {
+     "t": "math",
+     "v": "s(s+4)"
+    },
+    {
+     "t": "text",
+     "v": ". Set this equal to the total of 320 lengths:"
+    },
+    {
+     "t": "mathblock",
+     "v": "s(s+4)=320"
+    },
+    {
+     "t": "text",
+     "v": "Expand and write the quadratic in standard form:"
+    },
+    {
+     "t": "mathblock",
+     "v": "s^2+4s-320=0"
+    },
+    {
+     "t": "text",
+     "v": "Factor the quadratic:"
+    },
+    {
+     "t": "mathblock",
+     "v": "(s-16)(s+20)=0"
+    },
+    {
+     "t": "text",
+     "v": "So "
+    },
+    {
+     "t": "math",
+     "v": "s=16"
+    },
+    {
+     "t": "text",
+     "v": " or "
+    },
+    {
+     "t": "math",
+     "v": "s=-20"
+    },
+    {
+     "t": "text",
+     "v": ". A count of swimmers cannot be negative, so "
+    },
+    {
+     "t": "math",
+     "v": "s=16"
+    },
+    {
+     "t": "text",
+     "v": ". (Note that "
+    },
+    {
+     "t": "math",
+     "v": "20"
+    },
+    {
+     "t": "text",
+     "v": " is the number of lengths each swimmer swims, not the number of swimmers.)"
+    }
+   ],
+   "answer": {
+    "correct": "A"
+   },
+   "options": [
+    {
+     "key": "A",
+     "seg": [
+      {
+       "t": "math",
+       "v": "16"
+      }
+     ]
+    },
+    {
+     "key": "B",
+     "seg": [
+      {
+       "t": "math",
+       "v": "20"
+      }
+     ]
+    },
+    {
+     "key": "C",
+     "seg": [
+      {
+       "t": "math",
+       "v": "36"
+      }
+     ]
+    },
+    {
+     "key": "D",
+     "seg": [
+      {
+       "t": "math",
+       "v": "80"
+      }
+     ]
+    }
+   ],
+   "figure": null,
+   "params": {
+    "a": 1,
+    "b": 4,
+    "c": -320
+   },
+   "tier": "band-targeted",
+   "cellId": "de68290c512eb013",
+   "difficulty": {
+    "scalePoint": 579,
+    "band": "B5",
+    "se_scale": 45,
+    "band_ambiguous": true,
+    "method": "llm-judge",
+    "rp67_statement": "A student scoring ~579 has ~67% chance correct (Band 5).",
+    "signals": {
+     "judge": {
+      "scale": 579,
+      "se": 45,
+      "perBand": {
+       "B2": 0.18,
+       "B3": 0.29,
+       "B4": 0.49,
+       "B5": 0.66,
+       "B6": 0.81,
+       "B7": 0.92
+      },
+      "rp50Scale": 509,
+      "n": 1
+     }
+    }
+   },
+   "verify": {
+    "leash": "deferred-to-deep-verify",
+    "deepVerdict": "PASS",
+    "independentAnswer": "A",
+    "figureVerify": {
+     "ok": true
+    }
+   },
+   "_variantId": "v1:874b0acf",
+   "_familyId": "legacy:adv_create_quadratic:a,b,c",
+   "_subdomain": "adv_create_quadratic"
+  },
+  {
+   "_key": "91eb727df5593e3efd1e773eb66d0805b927bd77",
+   "savedAt": "2026-06-23T22:13:17.626Z",
+   "source": "mod2/test-02",
+   "program": "SAT",
+   "band": "B6",
+   "target_band": "B6",
+   "id": 15,
+   "domain": "algebra",
+   "skill": "linear_from_data",
+   "type": "mcq",
+   "stem": [
+    {
+     "t": "text",
+     "v": "The table shows three values of the linear function "
+    },
+    {
+     "t": "math",
+     "v": "f"
+    },
+    {
+     "t": "text",
+     "v": ", where "
+    },
+    {
+     "t": "math",
+     "v": "a"
+    },
+    {
+     "t": "text",
+     "v": " is a constant. What is the value of "
+    },
+    {
+     "t": "math",
+     "v": "t"
+    },
+    {
+     "t": "text",
+     "v": "?"
+    }
+   ],
+   "solution": [
+    {
+     "t": "text",
+     "v": "Because "
+    },
+    {
+     "t": "math",
+     "v": "f"
+    },
+    {
+     "t": "text",
+     "v": " is linear, its slope is constant. Using the first two rows, the change in "
+    },
+    {
+     "t": "math",
+     "v": "x"
+    },
+    {
+     "t": "text",
+     "v": " is "
+    },
+    {
+     "t": "math",
+     "v": "(a+8)-a=8"
+    },
+    {
+     "t": "text",
+     "v": " and the change in "
+    },
+    {
+     "t": "math",
+     "v": "f(x)"
+    },
+    {
+     "t": "text",
+     "v": " is "
+    },
+    {
+     "t": "math",
+     "v": "14-4=10"
+    },
+    {
+     "t": "text",
+     "v": ", so the slope is "
+    },
+    {
+     "t": "math",
+     "v": "\\frac{10}{8}=\\frac{5}{4}"
+    },
+    {
+     "t": "text",
+     "v": ". (Notice the constant "
+    },
+    {
+     "t": "math",
+     "v": "a"
+    },
+    {
+     "t": "text",
+     "v": " cancels in every difference, so its value does not matter.) From the second row "
+    },
+    {
+     "t": "math",
+     "v": "(a+8,\\,14)"
+    },
+    {
+     "t": "text",
+     "v": " to the third row "
+    },
+    {
+     "t": "math",
+     "v": "(a+20,\\,t)"
+    },
+    {
+     "t": "text",
+     "v": ", the change in "
+    },
+    {
+     "t": "math",
+     "v": "x"
+    },
+    {
+     "t": "text",
+     "v": " is "
+    },
+    {
+     "t": "math",
+     "v": "(a+20)-(a+8)=12"
+    },
+    {
+     "t": "text",
+     "v": ". Therefore "
+    },
+    {
+     "t": "math",
+     "v": "t=14+\\frac{5}{4}(12)=14+15=29"
+    },
+    {
+     "t": "text",
+     "v": "."
+    }
+   ],
+   "figure": {
+    "fn": "table",
+    "spec": {
+     "kind": "value",
+     "caption": "Values of the linear function f",
+     "headers": [
+      "x",
+      "f(x)"
+     ],
+     "rows": [
+      [
+       "a",
+       "4"
+      ],
+      [
+       "a + 8",
+       "14"
+      ],
+      [
+       "a + 20",
+       "t"
+      ]
+     ]
+    }
+   },
+   "options": [
+    {
+     "key": "A",
+     "seg": [
+      {
+       "t": "math",
+       "v": "24"
+      }
+     ]
+    },
+    {
+     "key": "B",
+     "seg": [
+      {
+       "t": "math",
+       "v": "26"
+      }
+     ]
+    },
+    {
+     "key": "C",
+     "seg": [
+      {
+       "t": "math",
+       "v": "29"
+      }
+     ]
+    },
+    {
+     "key": "D",
+     "seg": [
+      {
+       "t": "math",
+       "v": "39"
+      }
+     ]
+    }
+   ],
+   "answer": {
+    "correct": "C"
+   },
+   "difficulty": {
+    "scalePoint": 621,
+    "band": "B6",
+    "method": "llm-judge"
+   },
+   "_variantId": "v1:91eb727d",
+   "_familyId": "single:v1:91eb727d",
+   "_subdomain": "linear_from_data"
+  },
+  {
+   "_key": "ce7a6274e51896ab4ab1868b042dc97d2ca54e04",
+   "savedAt": "2026-06-25",
+   "source": "test-115",
+   "id": 16,
+   "program": "SAT",
+   "domain": "geometry_trig",
+   "band": "B6",
+   "target_band": "B6",
+   "statementId": "GEO.B6.s1",
+   "skill": "solid_figures",
+   "type": "spr",
+   "stem": [
+    {
+     "t": "text",
+     "v": "The cylinder shown has the radius and height marked, in centimeters. The volume of the cylinder is "
+    },
+    {
+     "t": "math",
+     "v": "k\\pi"
+    },
+    {
+     "t": "text",
+     "v": " cubic centimeters. What is the value of "
+    },
+    {
+     "t": "math",
+     "v": "k"
+    },
+    {
+     "t": "text",
+     "v": "?"
+    }
+   ],
+   "answer": {
+    "accept": [
+     "28"
+    ],
+    "tol": 0
+   },
+   "solution": [
+    {
+     "t": "text",
+     "v": "1. apply volume formula: "
+    },
+    {
+     "t": "math",
+     "v": "V = \\pi r^2 h = \\pi\\cdot 2^2\\cdot 7 = 28\\pi"
+    },
+    {
+     "t": "text",
+     "v": ", so "
+    },
+    {
+     "t": "math",
+     "v": "k = 2^2\\cdot 7 = 28"
+    },
+    {
+     "t": "text",
+     "v": "."
+    },
+    {
+     "t": "br"
+    }
+   ],
+   "figure": {
+    "fn": "cylinder",
+    "spec": {
+     "dims": {
+      "r": 2,
+      "h": 7
+     },
+     "labels": {
+      "r": "2",
+      "h": "7"
+     }
+    }
+   },
+   "difficulty": {
+    "scalePoint": 645,
+    "band": "B6",
+    "method": "apriori_v1",
+    "feature_vector": {
+     "task": "cylinder_volume_fig"
+    }
+   },
+   "verify": {
+    "tier": "C",
+    "correctness": "prove:pass"
+   },
+   "radicals": {
+    "task": "cylinder_volume_fig"
+   },
+   "fingerprint": [
+    "solid_fig",
+    "cylinder_volume",
+    "2x7",
+    "3d"
+   ],
+   "reskinDistance": 1,
+   "tier": "build-spec",
+   "_variantId": "v1:ce7a6274",
+   "_familyId": "cell:solid_figures:cylinder_volume_fig",
+   "_subdomain": "solid_figures"
+  },
+  {
+   "_key": "7dc5d7f6fc0a8c3e12dedf08842e6bf674f2687d",
+   "savedAt": "2026-06-23T22:13:17.747Z",
+   "source": "mod2/test-19",
+   "program": "SAT",
+   "band": "B6",
+   "target_band": "B6",
+   "id": 17,
+   "domain": "geometry_trig",
+   "skill": "trig_radians",
+   "type": "spr",
+   "stem": [
+    {
+     "t": "text",
+     "v": "An angle measures "
+    },
+    {
+     "t": "math",
+     "v": "234^\\circ"
+    },
+    {
+     "t": "text",
+     "v": ". When this measure is rewritten in radians and expressed as "
+    },
+    {
+     "t": "math",
+     "v": "\\frac{a}{b}\\pi"
+    },
+    {
+     "t": "text",
+     "v": ", where "
+    },
+    {
+     "t": "math",
+     "v": "a"
+    },
+    {
+     "t": "text",
+     "v": " and "
+    },
+    {
+     "t": "math",
+     "v": "b"
+    },
+    {
+     "t": "text",
+     "v": " are positive integers with no common factor greater than 1, what is the value of "
+    },
+    {
+     "t": "math",
+     "v": "a + b"
+    },
+    {
+     "t": "text",
+     "v": "?"
+    }
+   ],
+   "solution": [
+    {
+     "t": "text",
+     "v": "To convert degrees to radians, multiply by "
+    },
+    {
+     "t": "math",
+     "v": "\\frac{\\pi}{180}"
+    },
+    {
+     "t": "text",
+     "v": ": "
+    },
+    {
+     "t": "math",
+     "v": "234 \\cdot \\frac{\\pi}{180} = \\frac{234}{180}\\pi"
+    },
+    {
+     "t": "text",
+     "v": ". Reduce the fraction by dividing numerator and denominator by 18: "
+    },
+    {
+     "t": "math",
+     "v": "\\frac{234}{180} = \\frac{13}{10}"
+    },
+    {
+     "t": "text",
+     "v": ". So the measure is "
+    },
+    {
+     "t": "math",
+     "v": "\\frac{13}{10}\\pi"
+    },
+    {
+     "t": "text",
+     "v": ", giving "
+    },
+    {
+     "t": "math",
+     "v": "a = 13"
+    },
+    {
+     "t": "text",
+     "v": " and "
+    },
+    {
+     "t": "math",
+     "v": "b = 10"
+    },
+    {
+     "t": "text",
+     "v": ". Therefore "
+    },
+    {
+     "t": "math",
+     "v": "a + b = 13 + 10 = 23"
+    },
+    {
+     "t": "text",
+     "v": "."
+    }
+   ],
+   "answer": {
+    "accept": [
+     "23"
+    ]
+   },
+   "difficulty": {
+    "scalePoint": 634,
+    "band": "B6",
+    "method": "llm-judge"
+   },
+   "_variantId": "v1:7dc5d7f6",
+   "_familyId": "single:v1:7dc5d7f6",
+   "_subdomain": "trig_radians"
+  },
+  {
+   "_key": "b767473da4633bfda6aa56f85465e769110225a7",
+   "savedAt": "2026-06-23T21:57:23.285Z",
+   "source": "test-106",
+   "id": 18,
+   "program": "SAT",
+   "domain": "advanced_math",
+   "band": "B6",
+   "target_band": "B7",
+   "statementId": "ADV.B7.s2",
+   "skill": "polynomial_expressions",
+   "type": "mcq",
+   "stem": [
+    {
+     "t": "text",
+     "v": "The function "
+    },
+    {
+     "t": "math",
+     "v": "f"
+    },
+    {
+     "t": "text",
+     "v": " is defined by "
+    },
+    {
+     "t": "math",
+     "v": "f(y)=2y^2-5y-3"
+    },
+    {
+     "t": "text",
+     "v": ". Which of the following equivalent forms of "
+    },
+    {
+     "t": "math",
+     "v": "f(y)"
+    },
+    {
+     "t": "text",
+     "v": " most clearly displays the minimum value of the function as a constant or coefficient?"
+    }
+   ],
+   "options": [
+    {
+     "key": "A",
+     "seg": [
+      {
+       "t": "math",
+       "v": "(2y+1)(y-3)"
+      }
+     ]
+    },
+    {
+     "key": "B",
+     "seg": [
+      {
+       "t": "math",
+       "v": "2\\left(y-\\frac{5}{4}\\right)^2-\\frac{49}{8}"
+      }
+     ]
+    },
+    {
+     "key": "C",
+     "seg": [
+      {
+       "t": "math",
+       "v": "2y^2-5y-3"
+      }
+     ]
+    },
+    {
+     "key": "D",
+     "seg": [
+      {
+       "t": "math",
+       "v": "2\\left(y-\\frac{5}{4}\\right)^2+\\frac{49}{8}"
+      }
+     ]
+    }
+   ],
+   "answer": {
+    "correct": "B"
+   },
+   "solution": [
+    {
+     "t": "text",
+     "v": "1. identify form: "
+    },
+    {
+     "t": "text",
+     "v": "The stated feature is the minimum value of f. The canonical form that exposes the extreme value is vertex form a(y-h)^2+k, where k is the minimum read off directly."
+    },
+    {
+     "t": "br"
+    },
+    {
+     "t": "text",
+     "v": "2. identify form: "
+    },
+    {
+     "t": "text",
+     "v": "Eliminate by form-type: standard form 2y^2-5y-3 (choice C) displays the y-intercept -3, and factored form (2y+1)(y-3) (choice A) displays the zeros y=-1/2 and y=3 — neither shows the minimum."
+    },
+    {
+     "t": "br"
+    },
+    {
+     "t": "text",
+     "v": "3. rewrite equivalent: "
+    },
+    {
+     "t": "text",
+     "v": "Complete the square: factor 2 from the y-terms, h=-b/(2a)=5/4, k=c-b^2/(4a)=-3-25/8=-49/8, giving 2(y-5/4)^2-49/8."
+    },
+    {
+     "t": "br"
+    },
+    {
+     "t": "text",
+     "v": "4. identify form: "
+    },
+    {
+     "t": "text",
+     "v": "Verify equivalence to reject the sign-slip decoy 2(y-5/4)^2+49/8 (choice D); the surviving form 2(y-5/4)^2-49/8 displays the minimum value -49/8 directly as k. Select B."
+    },
+    {
+     "t": "br"
+    }
+   ],
+   "figure": null,
+   "difficulty": {
+    "scalePoint": 662,
+    "band": "B6",
+    "method": "llm-judge"
+   },
+   "verify": {
+    "tier": "B",
+    "correctness": "consistency 5/4"
+   },
+   "radicals": {
+    "task": "choose_form",
+    "more_terms": false,
+    "has_fraction": true
+   },
+   "fingerprint": [
+    "identify_form",
+    "identify_form",
+    "rewrite_equivalent",
+    "identify_form"
+   ],
+   "reskinDistance": 1,
+   "tier": "build-spec",
+   "_variantId": "v1:b767473d",
+   "_familyId": "cell:polynomial_expressions:choose_form",
+   "_subdomain": "polynomial_expressions"
+  },
+  {
+   "program": "SAT",
+   "domain": "algebra",
+   "band": "B7",
+   "target_band": "B7",
+   "statementId": "ALG.B7.s1",
+   "type": "spr",
+   "tier": "cross-skill",
+   "difficulty": {
+    "scalePoint": 800,
+    "band": "B7",
+    "method": "curated"
+   },
+   "verify": {
+    "tier": "cross-skill",
+    "correctness": "construct-backward + sympy"
+   },
+   "chain": "C7",
+   "skill": "linear_inequalities",
+   "scalePoint": 800,
+   "stem": [
+    {
+     "t": "mathblock",
+     "v": "\\begin{cases} y \\ge 3x - 1 \\\\ y \\le 2x + k \\end{cases}"
+    },
+    {
+     "t": "p",
+     "segs": [
+      {
+       "t": "text",
+       "v": "In the given system of inequalities, "
+      },
+      {
+       "t": "math",
+       "v": "k"
+      },
+      {
+       "t": "text",
+       "v": " is a constant. The point "
+      },
+      {
+       "t": "math",
+       "v": "(2, 9)"
+      },
+      {
+       "t": "text",
+       "v": " is a solution to the system and lies on the line "
+      },
+      {
+       "t": "math",
+       "v": "y = 2x + k"
+      },
+      {
+       "t": "text",
+       "v": ". What is the greatest value of "
+      },
+      {
+       "t": "math",
+       "v": "x"
+      },
+      {
+       "t": "text",
+       "v": " for which the system has a solution?"
+      }
+     ]
+    }
+   ],
+   "answer": {
+    "accept": [
+     "6"
+    ],
+    "tol": 0
+   },
+   "solution": [
+    {
+     "t": "p",
+     "segs": [
+      {
+       "t": "text",
+       "v": "The point lies on the upper boundary:  "
+      },
+      {
+       "t": "math",
+       "v": "9 = 2(2) + k"
+      },
+      {
+       "t": "text",
+       "v": ",  so  "
+      },
+      {
+       "t": "math",
+       "v": "k = 5"
+      },
+      {
+       "t": "text",
+       "v": "."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "segs": [
+      {
+       "t": "text",
+       "v": "A solution exists only where the lower bound ≤ the upper bound:  "
+      },
+      {
+       "t": "math",
+       "v": "3x - 1 \\le 2x + 5"
+      },
+      {
+       "t": "text",
+       "v": ",  i.e.  "
+      },
+      {
+       "t": "math",
+       "v": "1x \\le 6"
+      },
+      {
+       "t": "text",
+       "v": ",  so  "
+      },
+      {
+       "t": "math",
+       "v": "x \\le 6"
+      },
+      {
+       "t": "text",
+       "v": ".  Greatest "
+      },
+      {
+       "t": "math",
+       "v": "x = 6"
+      },
+      {
+       "t": "text",
+       "v": "."
+      }
+     ]
+    }
+   ],
+   "fingerprint": [
+    "cross_skill",
+    "C7",
+    "ineq-system+varconst"
+   ],
+   "_p": {
+    "kind": "C7",
+    "m1": 3,
+    "m2": 2,
+    "b1": -1,
+    "k": 5,
+    "p": 2,
+    "q": 9,
+    "ans": 6
+   },
+   "_variantId": "fam_f7275db663#92e862ea",
+   "_familyId": "fam_f7275db663",
+   "_subdomain": "linear_inequalities",
+   "id": 19
+  },
+  {
+   "_key": "7b4e8f68fe595a77eb9ffd2a2c0a6d75d30c3953",
+   "savedAt": "2026-06-23T22:13:17.662Z",
+   "source": "mod2/test-08",
+   "program": "SAT",
+   "band": "B7",
+   "target_band": "B7",
+   "id": 20,
+   "domain": "psda",
+   "skill": "percent_chain",
+   "type": "spr",
+   "stem": [
+    {
+     "t": "text",
+     "v": "A store sets the price of a laptop by marking it up 40% above its cost. During a holiday sale, the store applies a single discount of "
+    },
+    {
+     "t": "math",
+     "v": "d\\%"
+    },
+    {
+     "t": "text",
+     "v": " to that marked-up price, leaving a final price that is 5% above the cost. What is the value of "
+    },
+    {
+     "t": "math",
+     "v": "d"
+    },
+    {
+     "t": "text",
+     "v": "?"
+    }
+   ],
+   "solution": [
+    {
+     "t": "text",
+     "v": "Let "
+    },
+    {
+     "t": "math",
+     "v": "C"
+    },
+    {
+     "t": "text",
+     "v": " be the cost. The marked-up price is "
+    },
+    {
+     "t": "math",
+     "v": "1.40C"
+    },
+    {
+     "t": "text",
+     "v": ". Applying the discount gives "
+    },
+    {
+     "t": "math",
+     "v": "1.40C\\left(1-\\frac{d}{100}\\right)"
+    },
+    {
+     "t": "text",
+     "v": ", and this equals "
+    },
+    {
+     "t": "math",
+     "v": "1.05C"
+    },
+    {
+     "t": "text",
+     "v": ". So "
+    },
+    {
+     "t": "math",
+     "v": "1.40\\left(1-\\frac{d}{100}\\right)=1.05"
+    },
+    {
+     "t": "text",
+     "v": ", giving "
+    },
+    {
+     "t": "math",
+     "v": "1-\\frac{d}{100}=\\frac{1.05}{1.40}=0.75"
+    },
+    {
+     "t": "text",
+     "v": ". Then "
+    },
+    {
+     "t": "math",
+     "v": "\\frac{d}{100}=0.25"
+    },
+    {
+     "t": "text",
+     "v": ", so "
+    },
+    {
+     "t": "math",
+     "v": "d=25"
+    },
+    {
+     "t": "text",
+     "v": ". Answer: 25."
+    }
+   ],
+   "answer": {
+    "accept": [
+     "25"
+    ]
+   },
+   "difficulty": {
+    "scalePoint": 700,
+    "band": "B7",
+    "method": "llm-judge"
+   },
+   "_variantId": "v1:7b4e8f68",
+   "_familyId": "single:v1:7b4e8f68",
+   "_subdomain": "percent_chain"
+  },
+  {
+   "_key": "0a7e7929b33b2b55c9e8331709a4a96e583d53fc",
+   "savedAt": "2026-06-23T22:13:17.747Z",
+   "source": "mod2/test-19",
+   "program": "SAT",
+   "band": "B7",
+   "target_band": "B7",
+   "id": 21,
+   "domain": "advanced_math",
+   "skill": "quad_from_table",
+   "type": "mcq",
+   "stem": [
+    {
+     "t": "text",
+     "v": "The table gives three values of the quadratic function "
+    },
+    {
+     "t": "math",
+     "v": "f"
+    },
+    {
+     "t": "text",
+     "v": ", where "
+    },
+    {
+     "t": "math",
+     "v": "f(t)=at^2+bt+c"
+    },
+    {
+     "t": "text",
+     "v": " and "
+    },
+    {
+     "t": "math",
+     "v": "a"
+    },
+    {
+     "t": "text",
+     "v": ", "
+    },
+    {
+     "t": "math",
+     "v": "b"
+    },
+    {
+     "t": "text",
+     "v": ", and "
+    },
+    {
+     "t": "math",
+     "v": "c"
+    },
+    {
+     "t": "text",
+     "v": " are constants. The equation "
+    },
+    {
+     "t": "math",
+     "v": "f(t)=0"
+    },
+    {
+     "t": "text",
+     "v": " has two real solutions. What is the smaller of the two solutions?"
+    }
+   ],
+   "solution": [
+    {
+     "t": "text",
+     "v": "Using the table: "
+    },
+    {
+     "t": "math",
+     "v": "a+b+c=-2"
+    },
+    {
+     "t": "text",
+     "v": ", "
+    },
+    {
+     "t": "math",
+     "v": "4a+2b+c=-3"
+    },
+    {
+     "t": "text",
+     "v": ", and "
+    },
+    {
+     "t": "math",
+     "v": "16a+4b+c=7"
+    },
+    {
+     "t": "text",
+     "v": ". Subtracting the first from the second gives "
+    },
+    {
+     "t": "math",
+     "v": "3a+b=-1"
+    },
+    {
+     "t": "text",
+     "v": "; subtracting the second from the third gives "
+    },
+    {
+     "t": "math",
+     "v": "12a+2b=10"
+    },
+    {
+     "t": "text",
+     "v": ", so "
+    },
+    {
+     "t": "math",
+     "v": "6a+b=5"
+    },
+    {
+     "t": "text",
+     "v": ". Subtracting these, "
+    },
+    {
+     "t": "math",
+     "v": "3a=6"
+    },
+    {
+     "t": "text",
+     "v": ", so "
+    },
+    {
+     "t": "math",
+     "v": "a=2"
+    },
+    {
+     "t": "text",
+     "v": ", "
+    },
+    {
+     "t": "math",
+     "v": "b=-7"
+    },
+    {
+     "t": "text",
+     "v": ", and "
+    },
+    {
+     "t": "math",
+     "v": "c=3"
+    },
+    {
+     "t": "text",
+     "v": ". Thus "
+    },
+    {
+     "t": "math",
+     "v": "f(t)=2t^2-7t+3=(2t-1)(t-3)"
+    },
+    {
+     "t": "text",
+     "v": ", giving solutions "
+    },
+    {
+     "t": "math",
+     "v": "t=\\frac{1}{2}"
+    },
+    {
+     "t": "text",
+     "v": " and "
+    },
+    {
+     "t": "math",
+     "v": "t=3"
+    },
+    {
+     "t": "text",
+     "v": ". The smaller solution is "
+    },
+    {
+     "t": "math",
+     "v": "\\frac{1}{2}"
+    },
+    {
+     "t": "text",
+     "v": "."
+    }
+   ],
+   "figure": {
+    "fn": "table",
+    "spec": {
+     "kind": "value",
+     "caption": "Values of f(t)",
+     "headers": [
+      "t",
+      "f(t)"
+     ],
+     "rows": [
+      [
+       "1",
+       "-2"
+      ],
+      [
+       "2",
+       "-3"
+      ],
+      [
+       "4",
+       "7"
+      ]
+     ]
+    }
+   },
+   "options": [
+    {
+     "key": "A",
+     "seg": [
+      {
+       "t": "math",
+       "v": "-\\dfrac{1}{2}"
+      }
+     ]
+    },
+    {
+     "key": "B",
+     "seg": [
+      {
+       "t": "math",
+       "v": "\\dfrac{1}{2}"
+      }
+     ]
+    },
+    {
+     "key": "C",
+     "seg": [
+      {
+       "t": "math",
+       "v": "\\dfrac{2}{3}"
+      }
+     ]
+    },
+    {
+     "key": "D",
+     "seg": [
+      {
+       "t": "math",
+       "v": "3"
+      }
+     ]
+    }
+   ],
+   "answer": {
+    "correct": "B"
+   },
+   "difficulty": {
+    "scalePoint": 682,
+    "band": "B7",
+    "method": "llm-judge"
+   },
+   "_variantId": "v1:0a7e7929",
+   "_familyId": "single:v1:0a7e7929",
+   "_subdomain": "quad_from_table"
+  },
+  {
+   "_key": "f483586a7955bad5cf9c733de7384a3f20814c9f",
+   "savedAt": "2026-06-23T22:13:17.616Z",
+   "source": "mod2/test-01",
+   "program": "SAT",
+   "band": "B7",
+   "target_band": "B7",
+   "id": 22,
+   "domain": "advanced_math",
+   "skill": "quad_vertex",
+   "type": "mcq",
+   "stem": [
+    {
+     "t": "text",
+     "v": "A ball is launched straight up from the edge of a platform. Its height above the ground, in feet, after "
+    },
+    {
+     "t": "math",
+     "v": "t"
+    },
+    {
+     "t": "text",
+     "v": " seconds is given by "
+    },
+    {
+     "t": "math",
+     "v": "h(t) = -16t^2 + vt + c"
+    },
+    {
+     "t": "text",
+     "v": ", where "
+    },
+    {
+     "t": "math",
+     "v": "v"
+    },
+    {
+     "t": "text",
+     "v": " and "
+    },
+    {
+     "t": "math",
+     "v": "c"
+    },
+    {
+     "t": "text",
+     "v": " are positive constants representing the initial upward speed and the platform height, respectively. In terms of "
+    },
+    {
+     "t": "math",
+     "v": "v"
+    },
+    {
+     "t": "text",
+     "v": " and "
+    },
+    {
+     "t": "math",
+     "v": "c"
+    },
+    {
+     "t": "text",
+     "v": ", what is the maximum height, in feet, reached by the ball?"
+    }
+   ],
+   "solution": [
+    {
+     "t": "text",
+     "v": "The maximum occurs at the vertex time "
+    },
+    {
+     "t": "math",
+     "v": "t = -\\frac{b}{2a} = -\\frac{v}{2(-16)} = \\frac{v}{32}"
+    },
+    {
+     "t": "text",
+     "v": ". Substituting: "
+    },
+    {
+     "t": "math",
+     "v": "h\\!\\left(\\frac{v}{32}\\right) = -16\\left(\\frac{v}{32}\\right)^2 + v\\left(\\frac{v}{32}\\right) + c = -16 \\cdot \\frac{v^2}{1024} + \\frac{v^2}{32} + c = -\\frac{v^2}{64} + \\frac{2v^2}{64} + c = c + \\frac{v^2}{64}"
+    },
+    {
+     "t": "text",
+     "v": ". The maximum height is "
+    },
+    {
+     "t": "math",
+     "v": "c + \\dfrac{v^2}{64}"
+    },
+    {
+     "t": "text",
+     "v": "."
+    }
+   ],
+   "options": [
+    {
+     "key": "A",
+     "seg": [
+      {
+       "t": "math",
+       "v": "c + \\dfrac{v^2}{64}"
+      }
+     ]
+    },
+    {
+     "key": "B",
+     "seg": [
+      {
+       "t": "math",
+       "v": "c + \\dfrac{v^2}{32}"
+      }
+     ]
+    },
+    {
+     "key": "C",
+     "seg": [
+      {
+       "t": "math",
+       "v": "c + \\dfrac{v^2}{16}"
+      }
+     ]
+    },
+    {
+     "key": "D",
+     "seg": [
+      {
+       "t": "math",
+       "v": "c + \\dfrac{v}{32}"
+      }
+     ]
+    }
+   ],
+   "answer": {
+    "correct": "A"
+   },
+   "difficulty": {
+    "scalePoint": 694,
+    "band": "B7",
+    "method": "llm-judge"
+   },
+   "_variantId": "v1:f483586a",
+   "_familyId": "single:v1:f483586a",
+   "_subdomain": "quad_vertex"
+  }
+ ]
+}

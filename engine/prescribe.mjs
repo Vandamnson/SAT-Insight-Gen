@@ -8,7 +8,7 @@
      recent = last 4 in-cell attempts (chronological across all sessions)
      MASTERED   = ≥3 recent attempts AND ≥75% of recent correct
      DEFICIENT  = ≥2 attempts AND <50% of recent correct
-     THIN       = anything measured in between → schedule more measurement
+     REVIEW/OK  = see assessCells — errors are chased, lone correct answers are not
    The AI-assist seam: when a deficient cell has no unseen bank supply,
    --fill-gaps emits a STEERING PACKET (target cell + banned-structure avoid-list
    computed from the live bank) ready for a steered clean-room author run.
@@ -35,7 +35,13 @@ export function loadHistory(student) {
   return existsSync(p) ? readFileSync(p, "utf8").trim().split("\n").filter(Boolean).map(JSON.parse) : [];
 }
 
-/* ---- the mastery model ---- */
+/* ---- the mastery model ----
+   MASTERED  ≥3 recent attempts, ≥75% correct — evidence of mastery
+   DEFICIENT ≥2 attempts, <50% recent — drill it
+   REVIEW    has at least one error but neither of the above — chase to evidence
+   OK        all attempts correct so far but <3 — passing; confirm lightly, NEVER blocks
+   (blocking set = DEFICIENT ∪ REVIEW: errors are always chased; single correct
+   answers are not drilled to exhaustion — kept in sync with assets/suite.js) */
 export function assessCells(history) {
   const byCell = {};
   for (const row of history) (byCell[`${row.subdomain}|${row.band}`] ||= []).push(row);
@@ -43,8 +49,13 @@ export function assessCells(history) {
   for (const [key, rows] of Object.entries(byCell)) {
     const recent = rows.slice(-4);
     const rate = recent.filter((r) => r.isCorrect).length / recent.length;
-    const status = recent.length >= 3 && rate >= 0.75 ? "MASTERED"
-      : rows.length >= 2 && rate < 0.5 ? "DEFICIENT" : "THIN";
+    const errors = rows.filter((r) => !r.isCorrect).length;
+    // recovered = an error followed by ≥2 consecutive correct (standard tutoring bar;
+    // also what 3-item cell supply can actually evidence)
+    const recovered = rows.length >= 3 && rows.slice(-2).every((r) => r.isCorrect);
+    const status = (recent.length >= 3 && rate >= 0.75) || recovered ? "MASTERED"
+      : rows.length >= 2 && rate < 0.5 ? "DEFICIENT"
+      : errors > 0 ? "REVIEW" : "OK";
     const [subdomain, band] = key.split("|");
     cells[key] = { subdomain, band, attempts: rows.length, recentRate: +rate.toFixed(2), status,
       missedFamilies: [...new Set(rows.filter((r) => !r.isCorrect).map((r) => r.familyId))] };
@@ -90,12 +101,13 @@ export async function prescribe(resultsPath, { student = "anonymous", fillGaps =
   for (const c of list.sort((a, b) => a.subdomain.localeCompare(b.subdomain) || a.band.localeCompare(b.band)))
     console.log(`  ${c.status.padEnd(9)} ${c.subdomain} ${c.band} — ${c.attempts} attempts, recent ${Math.round(c.recentRate * 100)}%`);
   const deficient = list.filter((c) => c.status === "DEFICIENT");
-  const thin = list.filter((c) => c.status === "THIN");
+  const review = list.filter((c) => c.status === "REVIEW");
+  const okCells = list.filter((c) => c.status === "OK");
   writeFileSync(join(sdir(student), "mastery.json"), JSON.stringify({ updatedAt: stamp, cells }, null, 1));
 
-  if (!deficient.length && !thin.length) {
+  if (!deficient.length && !review.length) {
     saveSeen(student, seen);
-    console.log("\nMASTERY ACHIEVED — every measured cell is mastered. No practice set emitted.");
+    console.log("\nMASTERY ACHIEVED — no deficient or review cells remain (OK cells are passing on all evidence). No practice set emitted.");
     return { mastered: true, cells };
   }
 
@@ -106,10 +118,10 @@ export async function prescribe(resultsPath, { student = "anonymous", fillGaps =
   const takeCell = (cell, { fromFamilies = null, n = 1, allowUsedFam = false } = {}) => {
     let got = 0;
     for (let i = 0; i < n; i++) {
-      const c = pool.find((p) => p.subdomain === cell.subdomain && p.band === cell.band
+      const c = pool.find((p) => p.row === cell.subdomain && p.band === cell.band
         && (!fromFamilies || fromFamilies.includes(p.familyId))
         && (allowUsedFam || !usedFams.has(p.familyId))
-        && !questions.some((q) => q._variantId === p.variantId));
+        && !questions.some((q) => q._variantId === p.id));
       if (!c) break;
       usedFams.add(c.familyId);
       questions.push({ ...c.q, _cellStatus: cell.status });
@@ -129,8 +141,8 @@ export async function prescribe(resultsPath, { student = "anonymous", fillGaps =
       if (added >= k) break;
       try {
         const minted = await mintVariants(fam, k - added);
-        for (const v of minted.filter((m) => !seen.has(m.variantId) && !pool.some((p) => p.variantId === m.variantId))) {
-          pool.push({ q: { ...v.item, _variantId: v.variantId, _familyId: fam.familyId, _subdomain: cell.subdomain }, band: cell.band, familyId: fam.familyId, variantId: v.variantId, subdomain: cell.subdomain, strict: true });
+        for (const v of minted.filter((m) => !seen.has(m.variantId) && !pool.some((p) => p.id === m.variantId))) {
+          pool.push({ q: { ...v.item, _variantId: v.variantId, _familyId: fam.familyId, _subdomain: cell.subdomain }, band: cell.band, familyId: fam.familyId, id: v.variantId, row: cell.subdomain, domain: "geometry_trig", grouped: true, strict: true, src: "engine" });
           added++;
         }
       } catch { /* llm-gated family without CLI available — skip */ }
@@ -146,11 +158,13 @@ export async function prescribe(resultsPath, { student = "anonymous", fillGaps =
     if (!transfer && (await mintForCell(cell, 1))) transfer = takeCell(cell, { n: 1, allowUsedFam: true });
     if (drills + transfer === 0) unsupplied.push(cell);
   }
-  for (const cell of thin) {
-    let got = takeCell(cell, { n: 1 });
-    if (!got && (await mintForCell(cell, 1))) got = takeCell(cell, { n: 1, allowUsedFam: true });
+  for (const cell of review) {
+    let got = takeCell(cell, { n: 2, allowUsedFam: true }) || takeCell(cell, { n: 1 });
+    if (!got && (await mintForCell(cell, 2))) got = takeCell(cell, { n: 2, allowUsedFam: true });
     if (!got) unsupplied.push(cell);
   }
+  // light confirmation on OK cells — never blocking, max 3 per set
+  for (const cell of okCells.slice(0, 3)) takeCell(cell, { n: 1 });
 
   // 4. gaps → steering packets (the AI-assist seam)
   for (const cell of unsupplied) {
@@ -166,24 +180,24 @@ export async function prescribe(resultsPath, { student = "anonymous", fillGaps =
     saveSeen(student, seen);
     // honest terminal state: targets remain but the bank has nothing unseen for them —
     // NOT mastery; surfaces the exact cells needing new authoring
-    console.log(`\nno practice set emitted — ${deficient.length + thin.length} target cell(s) have no unseen supply. Cells: ` +
-      [...deficient, ...thin].map((c) => `${c.subdomain} ${c.band}`).join(", "));
-    return { mastered: false, blocked: [...deficient, ...thin], cells, emitted: null };
+    console.log(`\nno practice set emitted — ${deficient.length + review.length} target cell(s) have no unseen supply. Cells: ` +
+      [...deficient, ...review].map((c) => `${c.subdomain} ${c.band}`).join(", "));
+    return { mastered: false, blocked: [...deficient, ...review], cells, emitted: null };
   }
 
   // 5. emit + render (single-module player page); emitted items are marked seen NOW
   const n = loadHistory(student).length; // monotone counter for file naming
   const setId = `${student}-${String(n).padStart(4, "0")}`;
   const dir = sdir(student);
-  writeFileSync(join(dir, "p1.json"), JSON.stringify({ number: "p1", title: `Targeted practice — ${setId}`, questions: questions.map((q, i) => ({ id: i + 1, ...q })) }, null, 1));
+  writeFileSync(join(dir, "p1.json"), JSON.stringify({ number: "p1", title: `Targeted practice — ${setId}`, questions: questions.map((q, i) => ({ ...q, id: i + 1 })) }, null, 1));
   questions.forEach((q) => seen.add(q._variantId));
   saveSeen(student, seen);
   const page = renderPlayerPage({
-    id: setId, dir, outDirName: `practice-${setId}`, keys: ["p1"], first: "p1",
+    id: setId, dir, outDirName: `practice-${setId}`, keys: ["p1"], first: "p1", includePool: false,
     threshold: 1, coverage: "targeted at your deficit cells",
     heading: `Targeted Practice — ${student}`,
     sub: `${questions.length} questions chosen from your deficit map: drills on the structures you missed, plus transfer questions on unseen structures in the same cells.`,
   });
-  console.log(`\npractice set: ${questions.length} items (${deficient.length} deficient, ${thin.length} thin cells) → ${page}`);
+  console.log(`\npractice set: ${questions.length} items (${deficient.length} deficient, ${review.length} review cells) → ${page}`);
   return { mastered: false, cells, emitted: page };
 }

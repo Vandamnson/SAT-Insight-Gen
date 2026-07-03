@@ -1,0 +1,13 @@
+{
+ "id": "002",
+ "threshold": 0.6,
+ "createdAt": "2026-07-03T00:06:57.420Z",
+ "coverage": "algebra 24 · geometry_trig 9 · advanced_math 24 · psda 9 · practice pool 936",
+ "caveats": [
+  "advanced_math bands carry the known judge drift (~+1); recorded, not corrected",
+  "ungrouped v1 items have no family identity — guarded by the pairwise surface floor"
+ ],
+ "relaxations": [
+  "psda B3: borrowed B2"
+ ]
+}
